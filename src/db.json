@@ -1,7 +1,7 @@
 {
   "breeds": [
     {
-      "names": ["Foxterrier"],
+      "names": ["Foxterrier", "Fox Terrier"],
       "variants": [
         {
           "names": ["Glatthaar", "Kurzhaar"],
@@ -10,7 +10,7 @@
             "section": 1,
             "standardNumber": 12
           },
-          "image": "fox_terrier_smooth"
+          "image": "fox_terrier/smooth"
         },
         {
           "names": ["Drahthaar", "Rauhaar", "Rauhhaar"],
@@ -19,7 +19,7 @@
             "section": 1,
             "standardNumber": 169
           },
-          "image": "fox_terrier_wire"
+          "image": "fox_terrier/wire"
         }
       ],
       "podcast": [
@@ -41,15 +41,15 @@
       "variants": [
         {
           "names": ["Kurzhaar"],
-          "image": "dutch_shepherd_short"
+          "image": "dutch_shepherd/short"
         },
         {
           "names": ["Langhaar"],
-          "image": "dutch_shepherd_long"
+          "image": "dutch_shepherd/long"
         },
         {
           "names": ["Rauhhaar"],
-          "image": "dutch_shepherd_rough"
+          "image": "dutch_shepherd/rough"
         }
       ],
       "fci": {
@@ -63,7 +63,6 @@
           "url": "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-4-koerper-kraeftig-aber-nicht-ohne-adel-zjwmcmhv4vzuh"
         }
       ],
-      "image": "fox_terrier_wire",
       "wikipedia": {
         "url": "https://de.wikipedia.org/wiki/Hollandse_Herdershond"
       }
