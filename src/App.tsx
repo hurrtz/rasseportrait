@@ -1,16 +1,28 @@
 import React from "react";
-import styled from "styled-components";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 24px;
-`;
+const App: React.FC = () => (
+  <Grid container spacing={2}>
+    <Grid item xs={0} md={3}></Grid>
+    <Grid item xs={12} md={6}>
+      <Typography variant="h1" gutterBottom>
+        Rasseportrait
+      </Typography>
+    </Grid>
+    <Grid item xs={0} md={3}></Grid>
 
-const App: React.FC = () => {
-  return <Container>Hello, World!</Container>;
-};
+    <Grid item xs={0} md={3}></Grid>
+    <Grid item xs={12} md={6}>
+      <Typography variant="body1" gutterBottom>
+        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+        blanditiis tenetur unde suscipit, quam beatae rerum inventore
+        consectetur, neque doloribus, cupiditate numquam dignissimos laborum
+        fugiat deleniti? Eum quasi quidem quibusdam.
+      </Typography>
+    </Grid>
+    <Grid item xs={0} md={3}></Grid>
+  </Grid>
+);
 
 export default App;
