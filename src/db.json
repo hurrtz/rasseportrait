@@ -2,34 +2,30 @@
   "breeds": [
     {
       "names": ["Foxterrier"],
-      "variants": ["Glatthaar", "Kurzhaar"],
-      "fci": {
-        "group": 3,
-        "section": 1,
-        "standardNumber": 12
-      },
+      "variants": [
+        {
+          "names": ["Glatthaar", "Kurzhaar"],
+          "fci": {
+            "group": 3,
+            "section": 1,
+            "standardNumber": 12
+          },
+          "image": "fox_terrier_smooth"
+        },
+        {
+          "names": ["Drahthaar", "Rauhaar", "Rauhhaar"],
+          "fci": {
+            "group": 3,
+            "section": 1,
+            "standardNumber": 169
+          },
+          "image": "fox_terrier_wire"
+        }
+      ],
       "podcast": {
         "episode": "Summer Edition #5: Grausame Natur",
         "url": "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-5-grausame-natur-2cmtu8gbfflgx"
       },
-      "image": "fox_terrier_smooth",
-      "wikipedia": {
-        "url": "https://de.wikipedia.org/wiki/Foxterrier"
-      }
-    },
-    {
-      "names": ["Foxterrier"],
-      "variants": ["Drahthaar", "Rauhaar", "Rauhhaar"],
-      "fci": {
-        "group": 3,
-        "section": 1,
-        "standardNumber": 169
-      },
-      "podcast": {
-        "episode": "Summer Edition #5: Grausame Natur",
-        "url": "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-5-grausame-natur-2cmtu8gbfflgx"
-      },
-      "image": "fox_terrier_wire",
       "wikipedia": {
         "url": "https://de.wikipedia.org/wiki/Foxterrier"
       }
