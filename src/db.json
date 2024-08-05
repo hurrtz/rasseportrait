@@ -22,12 +22,50 @@
           "image": "fox_terrier_wire"
         }
       ],
-      "podcast": {
-        "episode": "Summer Edition #5: Grausame Natur",
-        "url": "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-5-grausame-natur-2cmtu8gbfflgx"
-      },
+      "podcast": [
+        {
+          "episode": "Summer Edition #3: Martins Solo-Folge",
+          "url": "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-3-martins-solo-folge-tfmv41s6tzg65"
+        },
+        {
+          "episode": "Summer Edition #5: Grausame Natur",
+          "url": "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-5-grausame-natur-2cmtu8gbfflgx"
+        }
+      ],
       "wikipedia": {
         "url": "https://de.wikipedia.org/wiki/Foxterrier"
+      }
+    },
+    {
+      "names": ["Hollandse Herdershond", "Holländischer Schäferhund", "Herder"],
+      "variants": [
+        {
+          "names": ["Kurzhaar"],
+          "image": "dutch_shepherd_short"
+        },
+        {
+          "names": ["Langhaar"],
+          "image": "dutch_shepherd_long"
+        },
+        {
+          "names": ["Rauhhaar"],
+          "image": "dutch_shepherd_rough"
+        }
+      ],
+      "fci": {
+        "group": 1,
+        "section": 1,
+        "standardNumber": 223
+      },
+      "podcast": [
+        {
+          "episode": "Summer Edition #4: Körper kräftig, aber nicht ohne Adel!",
+          "url": "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-4-koerper-kraeftig-aber-nicht-ohne-adel-zjwmcmhv4vzuh"
+        }
+      ],
+      "image": "fox_terrier_wire",
+      "wikipedia": {
+        "url": "https://de.wikipedia.org/wiki/Hollandse_Herdershond"
       }
     }
   ]
