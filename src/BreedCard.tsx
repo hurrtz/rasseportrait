@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import type { Breed } from "../types/breed";
+import type { Breed, FCI } from "../types/breed";
 import { styled } from "@mui/material/styles";
 
 interface Props extends Breed {
@@ -20,6 +20,23 @@ const CardHeaderImage = styled(CardHeader)(
   }),
 );
 
+const FCIText = ({ fci }: { fci: FCI }) => {
+  if (fci && fci.standardNumber > 0) {
+    return (
+      <Typography variant="body2" color="text.secondary">
+        FCI: Gruppe {fci.group}, Sektion: {fci.section}, Standardnummer:{" "}
+        {fci.standardNumber}
+      </Typography>
+    );
+  }
+
+  return (
+    <Typography variant="body2" color="text.secondary">
+      —keine FCI-anerkannte Rasse—
+    </Typography>
+  );
+};
+
 export default ({ image, names, variants, fci }: Props) => (
   <Card>
     <CardHeaderImage image={image[0]} fallbackImage={image[1]} />
@@ -32,13 +49,7 @@ export default ({ image, names, variants, fci }: Props) => (
           {variants[0].names[0]}
         </Typography>
       )}
-      <Typography variant="body2" color="text.secondary">
-        FCI Gruppe: {fci.group}
-        <br />
-        FCI Sektion: {fci.section}
-        <br />
-        FCI Standardnumber: {fci.standardNumber}
-      </Typography>
+      <FCIText fci={fci} />
     </CardContent>
     <CardActions>
       <Button size="small">Share</Button>
