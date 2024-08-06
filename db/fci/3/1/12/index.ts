@@ -20,12 +20,12 @@ const breed: Breed = {
     {
       episode: "Summer Edition #3: Martins Solo-Folge",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-3-martins-solo-folge-tfmv41s6tzg65",
-      timecode: 123,
+      timecode: 0,
     },
     {
       episode: "Summer Edition #5: Grausame Natur",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-5-grausame-natur-2cmtu8gbfflgx",
-      timecode: 123,
+      timecode: 0,
     },
   ],
   furtherReading: [
