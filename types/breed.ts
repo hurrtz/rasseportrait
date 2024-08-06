@@ -6,7 +6,6 @@ export interface FCI {
 
 interface Variant {
   names: string[];
-  fci?: FCI;
   image: string;
 }
 
@@ -25,7 +24,7 @@ export interface Breed {
   names: string[];
   variants?: Variant[];
   image?: string;
-  fci?: FCI;
+  fci: FCI;
   podcast: Podcast[];
   furtherReading: FurtherReading[];
 }

@@ -12,10 +12,10 @@ const breed: Breed = {
   variants: [
     {
       names: ["Drahthaar", "Rauhaar", "Rauhhaar"],
-      fci,
       image: getBreedImagePath({ ...fci, variant: "wire" }),
     },
   ],
+  fci,
   podcast: [
     {
       episode: "Summer Edition #3: Martins Solo-Folge",

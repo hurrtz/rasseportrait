@@ -12,30 +12,26 @@ const breed: Breed = {
   variants: [
     {
       names: ["Pomeranian", "Zwergspitz"],
-      fci,
       image: getBreedImagePath({ ...fci, variant: "pomeranian" }),
     },
     {
       names: ["Kleinspitz"],
-      fci,
       image: getBreedImagePath({ ...fci, variant: "miniature" }),
     },
     {
       names: ["Mittelspitz"],
-      fci,
       image: getBreedImagePath({ ...fci, variant: "medium" }),
     },
     {
       names: ["Großspitz"],
-      fci,
       image: getBreedImagePath({ ...fci, variant: "large" }),
     },
     {
       names: ["Wolfsspitz", "Keeshond"],
-      fci,
       image: getBreedImagePath({ ...fci, variant: "keeshond" }),
     },
   ],
+  fci,
   podcast: [
     {
       episode: "",
