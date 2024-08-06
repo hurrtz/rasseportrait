@@ -18,7 +18,7 @@ const Breeds = ({ breeds }: Props) => (
       >
         <BreedCard
           {...breed}
-          image={breed.variants ? breed.variants[0].image : breed.image || ""}
+          image={breed.variants ? breed.variants[0].image : breed.image || []}
         />
       </Grid>
     ))}

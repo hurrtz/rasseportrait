@@ -1,12 +1,16 @@
 import type { Breed, FCI } from "../types/breed";
 
+const FALLBACK_IMAGES_COUNT = 20;
+
 export const getBreedImagePath = ({
   group,
   section,
   standardNumber,
   variant = "default",
-}: FCI & { variant?: string }) =>
-  `illustrations/fci/${group}/${section}/${standardNumber}/${variant}.jpeg`;
+}: FCI & { variant?: string }) => [
+  `illustrations/fci/${group}/${section}/${standardNumber}/${variant}.jpeg`,
+  `illustrations/fallbackImages/${Math.floor(Math.random() * FALLBACK_IMAGES_COUNT) + 1}.jpeg`,
+];
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */

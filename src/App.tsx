@@ -4,14 +4,14 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Fuse from "fuse.js";
-import breeds from "./breeds";
+import breedsList from "../db";
 import type { Breed } from "../types/breed";
 import BreedCards from "./BreedCards";
 import { flattenBreedVariants } from "./utils";
 
-const fciBreeds = Object.values(breeds);
-const fciBreedsWithVariants = flattenBreedVariants(fciBreeds);
-const sortedFCIBreedsWithVariants = fciBreedsWithVariants.sort(
+const breeds = Object.values(breedsList);
+const breedsWithVariants = flattenBreedVariants(breeds);
+const sortedBreedsWithVariants = breedsWithVariants.sort(
   ({ fci: fci1 }, { fci: fciB }) => fci1.standardNumber - fciB.standardNumber,
 );
 
@@ -38,12 +38,12 @@ const fuseOptions = {
   ],
 };
 
-const fuse = new Fuse(sortedFCIBreedsWithVariants, fuseOptions);
+const fuse = new Fuse(sortedBreedsWithVariants, fuseOptions);
 
 const App = () => {
   const [searchValue, setSearchValue] = useState("");
 
-  let results = sortedFCIBreedsWithVariants;
+  let results = sortedBreedsWithVariants;
 
   const filteredBreeds = fuse.search(searchValue);
 
