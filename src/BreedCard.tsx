@@ -24,11 +24,11 @@ export default ({ image, names, variants, fci }: Props) => (
         </Typography>
       )}
       <Typography variant="body2" color="text.secondary">
-        FCI Group: {fci.group}
+        FCI Gruppe: {fci.group}
         <br />
-        FCI Section: {fci.section}
+        FCI Sektion: {fci.section}
         <br />
-        FCI Standard Number: {fci.standardNumber}
+        FCI Standardnumber: {fci.standardNumber}
       </Typography>
     </CardContent>
     <CardActions>

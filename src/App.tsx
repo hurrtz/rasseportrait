@@ -61,13 +61,23 @@ const App = () => {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs={0} md={3}></Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={0} md={2}></Grid>
+      <Grid item xs={12} md={8}>
         <Typography variant="h1" gutterBottom>
-          Title
+          Tierisch menschlich
         </Typography>
 
-        <Box component="form" noValidate autoComplete="off" mt={8} mb={8}>
+        <Typography variant="h2" gutterBottom>
+          Rasseportrait
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Du wolltest noch einmal ein Rasseportrait anhören? Oder du wolltest
+          wissen, ob eine Rasse überhaupt schon einmal besprochen wurde? Suche
+          hier deine Rasse und finde die zugehörige Podcast-Episode!
+        </Typography>
+
+        <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
           <TextField
             label="Suche nach deinem Hund"
             variant="outlined"
@@ -78,7 +88,7 @@ const App = () => {
 
         <BreedCards breeds={results} />
       </Grid>
-      <Grid item xs={0} md={3}></Grid>
+      <Grid item xs={0} md={2}></Grid>
     </Grid>
   );
 };
