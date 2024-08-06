@@ -10,8 +10,13 @@ interface Props {
 const Breeds = ({ breeds }: Props) => (
   <Grid container spacing={2}>
     {breeds.map((breed) => (
-      <Grid item xs={12} md={6}>
-        <BreedCard key={breed.fci.standardNumber} {...breed} image="" />
+      <Grid
+        item
+        xs={12}
+        md={6}
+        key={`${breed.fci.standardNumber}-${breed.variants ? breed.variants[0].names[0] : breed.names[0]}`}
+      >
+        <BreedCard {...breed} image="" />
       </Grid>
     ))}
   </Grid>
