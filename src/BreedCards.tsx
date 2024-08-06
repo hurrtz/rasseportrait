@@ -16,7 +16,10 @@ const Breeds = ({ breeds }: Props) => (
         md={6}
         key={`${breed.fci.standardNumber}-${breed.variants ? breed.variants[0].names[0] : breed.names[0]}`}
       >
-        <BreedCard {...breed} image="" />
+        <BreedCard
+          {...breed}
+          image={breed.variants ? breed.variants[0].image : breed.image || ""}
+        />
       </Grid>
     ))}
   </Grid>

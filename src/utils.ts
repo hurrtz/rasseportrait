@@ -6,7 +6,7 @@ export const getBreedImagePath = ({
   standardNumber,
   variant = "default",
 }: FCI & { variant?: string }) =>
-  `assets/fci/${group}/${section}/${standardNumber}/${variant}.jpeg`;
+  `illustrations/fci/${group}/${section}/${standardNumber}/${variant}.jpeg`;
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
