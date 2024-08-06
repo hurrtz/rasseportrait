@@ -23,7 +23,8 @@ interface FurtherReading {
 
 export interface Breed {
   names: string[];
-  variants: Variant[];
+  variants?: Variant[];
+  image?: string;
   fci?: FCI;
   podcast: Podcast[];
   furtherReading: FurtherReading[];
