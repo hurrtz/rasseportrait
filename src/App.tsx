@@ -11,6 +11,9 @@ import { flattenBreedVariants } from "./utils";
 
 const fciBreeds = Object.values(breeds);
 const fciBreedsWithVariants = flattenBreedVariants(fciBreeds);
+const sortedFCIBreedsWithVariants = fciBreedsWithVariants.sort(
+  ({ fci: fci1 }, { fci: fciB }) => fci1.standardNumber - fciB.standardNumber,
+);
 
 const fuseOptions = {
   shouldSort: true,
@@ -34,12 +37,12 @@ const fuseOptions = {
   ],
 };
 
-const fuse = new Fuse(fciBreedsWithVariants, fuseOptions);
+const fuse = new Fuse(sortedFCIBreedsWithVariants, fuseOptions);
 
 const App = () => {
   const [searchValue, setSearchValue] = useState("");
 
-  let results = fciBreedsWithVariants;
+  let results = sortedFCIBreedsWithVariants;
 
   const filteredBreeds = fuse.search(searchValue);
 
