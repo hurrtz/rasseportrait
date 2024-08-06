@@ -1,5 +1,3 @@
-import * as fci from "../db/fci";
+import fci from "../db/fci";
 
-export default {
-  fci: [fci],
-};
+export default { ...fci };

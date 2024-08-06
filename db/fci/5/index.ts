@@ -1,3 +1,3 @@
-import * as Section4 from "./4";
+import Section4 from "./4";
 
-export { Section4 };
+export default { ...Section4 };

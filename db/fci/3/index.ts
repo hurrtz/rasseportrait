@@ -1,3 +1,3 @@
-import * as Section1 from "./1";
+import Section1 from "./1";
 
-export { Section1 };
+export default { ...Section1 };
