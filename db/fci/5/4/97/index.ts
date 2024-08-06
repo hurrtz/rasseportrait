@@ -28,7 +28,7 @@ const breed: Breed = {
     },
     {
       names: ["Wolfsspitz", "Keeshond"],
-      image: getBreedImagePath({ ...fci, variant: "keeshond" }),
+      image: getBreedImagePath({ ...fci, variant: "keeshound" }),
     },
   ],
   fci,

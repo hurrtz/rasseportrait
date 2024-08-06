@@ -18,6 +18,7 @@ const sortedFCIBreedsWithVariants = fciBreedsWithVariants.sort(
 const fuseOptions = {
   shouldSort: true,
   ignoreLocation: true,
+  threshold: 0.5,
   keys: [
     { name: "names", getFn: ({ names }: Breed) => names.join("|") },
     {
