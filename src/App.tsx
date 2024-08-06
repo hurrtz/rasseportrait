@@ -4,8 +4,11 @@ import Typography from "@mui/material/Typography";
 import Fuse from "fuse.js";
 import breeds from "./breeds";
 import type { Breed } from "../types/breed";
+import BreedCards from "./BreedCards";
+import { flattenBreedVariants } from "./utils";
 
 const fciBreeds = Object.values(breeds);
+const fciBreedsWithVariants = flattenBreedVariants(fciBreeds);
 
 const fuseOptions = {
   shouldSort: true,
@@ -15,16 +18,11 @@ const fuseOptions = {
     {
       name: "variantNames",
       getFn: ({ variants }: Breed) =>
-        variants.map((variant) => variant.names).join("|"),
+        variants?.map((variant) => variant.names).join("|") || "",
     },
     {
       name: "standardNumber",
       getFn: ({ fci }: Breed) => String(fci?.standardNumber || ""),
-    },
-    {
-      name: "variantStandardNumbers",
-      getFn: ({ variants }: Breed) =>
-        variants.map((variant) => variant.fci?.standardNumber).join("|"),
     },
     {
       name: "episode",
@@ -34,10 +32,15 @@ const fuseOptions = {
   ],
 };
 
-const fuse = new Fuse(fciBreeds, fuseOptions);
+const fuse = new Fuse(fciBreedsWithVariants, fuseOptions);
 
-// Change the pattern
-const searchPattern = "223";
+let results = fciBreedsWithVariants;
+
+const filteredBreeds = fuse.search("herder");
+
+if (filteredBreeds.length > 0) {
+  results = filteredBreeds.map((filteredBreed) => filteredBreed.item);
+}
 
 const App: React.FC = () => (
   <Grid container spacing={2}>
@@ -51,12 +54,7 @@ const App: React.FC = () => (
 
     <Grid item xs={0} md={3}></Grid>
     <Grid item xs={12} md={6}>
-      <Typography variant="body1" gutterBottom>
-        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-        blanditiis tenetur unde suscipit, quam beatae rerum inventore
-        consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-        fugiat deleniti? Eum quasi quidem quibusdam.
-      </Typography>
+      <BreedCards breeds={results} />
     </Grid>
     <Grid item xs={0} md={3}></Grid>
   </Grid>
