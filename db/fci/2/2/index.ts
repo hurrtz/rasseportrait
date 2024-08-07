@@ -5,6 +5,7 @@ import Hovawart from "./190";
 import Landseer from "./226";
 import DogoArgentino from "./292";
 import Broholmer from "./315";
+import CaneCorsoItaliano from "./343";
 
 export default {
   PyreneanMountainDog,
@@ -14,4 +15,5 @@ export default {
   Landseer,
   DogoArgentino,
   Broholmer,
+  CaneCorsoItaliano,
 };
