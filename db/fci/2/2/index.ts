@@ -1,5 +1,6 @@
 import PyreneanMountainDog from "./137";
 import Boxer from "./144";
+import Leonberger from "./145";
 import Rottweiler from "./147";
 import Hovawart from "./190";
 import Landseer from "./226";
@@ -10,6 +11,7 @@ import CaneCorsoItaliano from "./343";
 export default {
   PyreneanMountainDog,
   Boxer,
+  Leonberger,
   Rottweiler,
   Hovawart,
   Landseer,
