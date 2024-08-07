@@ -5,6 +5,7 @@ import Leonberger from "./145";
 import Rottweiler from "./147";
 import Hovawart from "./190";
 import Landseer from "./226";
+import TibetanMastiff from "./230";
 import DogoArgentino from "./292";
 import Broholmer from "./315";
 import CaneCorsoItaliano from "./343";
@@ -17,6 +18,7 @@ export default {
   Rottweiler,
   Hovawart,
   Landseer,
+  TibetanMastiff,
   DogoArgentino,
   Broholmer,
   CaneCorsoItaliano,
