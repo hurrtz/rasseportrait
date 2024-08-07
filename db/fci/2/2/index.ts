@@ -3,6 +3,7 @@ import Boxer from "./144";
 import Rottweiler from "./147";
 import Landseer from "./226";
 import DogoArgentino from "./292";
+import Broholmer from "./315";
 
 export default {
   PyreneanMountainDog,
@@ -10,4 +11,5 @@ export default {
   Rottweiler,
   Landseer,
   DogoArgentino,
+  Broholmer,
 };
