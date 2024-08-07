@@ -4,7 +4,7 @@ import { getBreedImagePath } from "../../../../../src/utils";
 const fci: FCI = {
   group: 5,
   section: 7,
-  standardNumber: 329,
+  standardNumber: 89,
 };
 
 const breed: Breed = {
