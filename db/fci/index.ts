@@ -5,6 +5,7 @@ import Group4 from "./4";
 import Group5 from "./5";
 import Group6 from "./6";
 import Group7 from "./7";
+import Group8 from "./8";
 import Group9 from "./9";
 import Group10 from "./10";
 
@@ -16,6 +17,7 @@ export default {
   ...Group5,
   ...Group6,
   ...Group7,
+  ...Group8,
   ...Group9,
   ...Group10,
 };
