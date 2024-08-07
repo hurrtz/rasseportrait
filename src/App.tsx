@@ -63,11 +63,11 @@ const App = () => {
     <Grid container spacing={2}>
       <Grid item xs={0} md={2}></Grid>
       <Grid item xs={12} md={8}>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h2" gutterBottom>
           Tierisch menschlich
         </Typography>
 
-        <Typography variant="h2" gutterBottom>
+        <Typography variant="h3" gutterBottom>
           Rasseportrait
         </Typography>
 
