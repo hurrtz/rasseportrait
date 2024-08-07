@@ -7,8 +7,11 @@ export const getBreedImagePath = ({
   section,
   standardNumber,
   variant = "default",
-}: FCI & { variant?: string }) => [
-  `illustrations/fci/${group}/${section}/${standardNumber}/${variant}.jpeg`,
+  breedName,
+}: FCI & { variant?: string; breedName?: string }) => [
+  standardNumber >= 0
+    ? `illustrations/fci/${group}/${section}/${standardNumber}/${variant}.jpeg`
+    : `illustrations/${breedName}/${variant}.jpeg`,
   `illustrations/fallbackImages/${Math.floor(Math.random() * FALLBACK_IMAGES_COUNT) + 1}.jpeg`,
 ];
 

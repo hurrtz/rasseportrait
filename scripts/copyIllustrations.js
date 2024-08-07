@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-const sourceDir = "db/fci";
-const destinationDir = "dist/illustrations/fci";
+const sourceDir = "db";
+const destinationDir = "dist/illustrations";
 
 if (!fs.existsSync(destinationDir)) {
   fs.mkdirSync(destinationDir, { recursive: true });
