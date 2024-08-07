@@ -34,9 +34,9 @@ const breed: Breed = {
   fci,
   podcast: [
     {
-      episode: "",
-      url: "",
-      timecode: 0,
+      episode: "Der Spitz, Zwingerhaltung & Puddingmatten",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/49-der-spitz-zwingerhaltung-puddingmatten-7hsefpcuadjr7",
+      timecode: 924,
     },
   ],
   furtherReading: [
