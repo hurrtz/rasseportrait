@@ -18,7 +18,7 @@ const sortedBreedsWithVariants = breedsWithVariants.sort(
 const fuseOptions = {
   shouldSort: true,
   ignoreLocation: true,
-  threshold: 0.5,
+  threshold: 0.1,
   keys: [
     { name: "names", getFn: ({ names }: Breed) => names.join("|") },
     {
@@ -29,11 +29,6 @@ const fuseOptions = {
     {
       name: "standardNumber",
       getFn: ({ fci }: Breed) => String(fci?.standardNumber || ""),
-    },
-    {
-      name: "episode",
-      getFn: ({ podcast: podcasts }: Breed) =>
-        podcasts.map((podcast) => podcast.episode).join("|"),
     },
   ],
 };
@@ -79,7 +74,7 @@ const App = () => {
 
         <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
           <TextField
-            label="Suche nach deinem Hund"
+            label="Suche nach deinem Hund oder der FCI Standardnummer"
             variant="outlined"
             fullWidth
             onChange={handleSearchChange}
