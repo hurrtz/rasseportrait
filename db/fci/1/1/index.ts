@@ -3,6 +3,7 @@ import Bobtail from "./16";
 import Beauceron from "./44";
 import Komondor from "./53";
 import Kuvasz from "./54";
+import Pumi from "./56";
 import GermanShepherd from "./166";
 import DutchShepherd from "./223";
 import AustralianKelpie from "./293";
@@ -13,6 +14,7 @@ export default {
   Beauceron,
   Komondor,
   Kuvasz,
+  Pumi,
   GermanShepherd,
   DutchShepherd,
   AustralianKelpie,
