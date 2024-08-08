@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 124,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: [
     "Irish Water Spaniel",
     "Irischer Wasserspaniel",

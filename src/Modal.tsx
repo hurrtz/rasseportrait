@@ -17,8 +17,8 @@ const style = {
 };
 
 interface Props {
-  breed?: number;
-  setBreed: Dispatch<SetStateAction<number | undefined>>;
+  breed?: number | string;
+  setBreed: Dispatch<SetStateAction<number | string | undefined>>;
 }
 
 export default ({ breed, setBreed }: Props) => {

@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 218,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Chihuahua", "Techichi", "Chihuahueño"],
   fci,
   variants: [

@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 82,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Petit Brabançon", "Kleiner Brabanter", "Brabanter Griffon"],
   fci,
   image: getBreedImagePath({ ...fci }),

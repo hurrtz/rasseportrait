@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 343,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Cane Corso Italiano"],
   fci,
   image: getBreedImagePath({ ...fci }),

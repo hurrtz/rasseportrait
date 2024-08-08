@@ -38,7 +38,9 @@ const fuse = new Fuse(sortedBreedsWithVariants, fuseOptions);
 
 const App = () => {
   const [searchValue, setSearchValue] = useState("");
-  const [selectedBreed, setSelectedBreed] = useState<number | undefined>();
+  const [selectedBreed, setSelectedBreed] = useState<
+    number | string | undefined
+  >();
 
   let results = sortedBreedsWithVariants;
 

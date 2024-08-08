@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 94,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Podengo Português", "Portugiesischer Podengo", "Warren Hound"],
   fci,
   image: getBreedImagePath({ ...fci }),

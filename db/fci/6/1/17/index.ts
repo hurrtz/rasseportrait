@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 17,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Griffon Nivernais"],
   fci,
   image: getBreedImagePath({ ...fci }),

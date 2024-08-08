@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 239,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: [
     "Drahthaariger Ungarischer Vorstehhund",
     "Drótszőrű magyar vizsla",

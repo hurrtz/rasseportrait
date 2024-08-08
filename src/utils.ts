@@ -27,6 +27,7 @@ export const flattenBreedVariants = (breeds: Breed[]) => {
     if (breed.variants && breed.variants.length > 1) {
       breed.variants.forEach((variant) => {
         flattenedBreedVariants.push({
+          id: breed.id,
           names: breed.names,
           variants: [variant],
           fci: breed.fci,

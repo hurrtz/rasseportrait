@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 293,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: [
     "Australian Kelpie",
     "Kelpie",

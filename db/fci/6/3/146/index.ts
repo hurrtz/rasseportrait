@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 146,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Rhodesian Ridgeback"],
   image: getBreedImagePath({ ...fci }),
   fci,

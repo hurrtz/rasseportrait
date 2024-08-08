@@ -10,7 +10,7 @@ import type { Breed, FCI } from "../types/breed";
 
 interface Props extends Breed {
   image: string[];
-  handleCardClick: Dispatch<SetStateAction<number | undefined>>;
+  handleCardClick: Dispatch<SetStateAction<number | string | undefined>>;
 }
 
 const CardHeaderImage = styled(CardHeader)(
@@ -38,9 +38,16 @@ const FCIText = ({ fci }: { fci: FCI }) => {
   );
 };
 
-export default ({ image, names, variants, fci, handleCardClick }: Props) => {
+export default ({
+  id,
+  image,
+  names,
+  variants,
+  fci,
+  handleCardClick,
+}: Props) => {
   const onClick = () => {
-    handleCardClick(fci.standardNumber);
+    handleCardClick(id);
   };
 
   return (

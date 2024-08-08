@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 99,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Weimaraner"],
   variants: [
     {

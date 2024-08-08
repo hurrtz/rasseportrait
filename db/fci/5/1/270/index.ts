@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 270,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Syberian Husky", "Siberischer Husky"],
   fci,
   image: getBreedImagePath({ ...fci }),

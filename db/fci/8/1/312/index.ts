@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 312,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Nova Scotia Duck Tolling Retriever"],
   fci,
   image: getBreedImagePath({ ...fci }),

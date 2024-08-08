@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 217,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Bayerischer Gebirgsschweißhund"],
   fci,
   image: getBreedImagePath({ ...fci }),

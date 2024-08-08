@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 103,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Deutscher Jagdterrier"],
   fci,
   image: getBreedImagePath({ ...fci }),

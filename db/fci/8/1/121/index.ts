@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 121,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: [
     "Flat Coated Retriever",
     "Retriever à poil plat",

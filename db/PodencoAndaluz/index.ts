@@ -8,6 +8,7 @@ const fci: FCI = {
 };
 
 const breed: Breed = {
+  id: "podenco_andaluz",
   names: ["Podenco Andaluz"],
   image: getBreedImagePath({ ...fci, breedName: "PodencoAndaluz" }),
   fci,

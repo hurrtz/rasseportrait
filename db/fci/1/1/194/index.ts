@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 194,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: [
     "Bergamasker Hirtenhund",
     "Berger de bergame",

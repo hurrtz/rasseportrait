@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 47,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Entlebucher Sennenhund"],
   fci,
   image: getBreedImagePath({ ...fci }),

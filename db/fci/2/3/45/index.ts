@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 45,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: [
     "Berner Sennenhund",
     "Dürrbächler",

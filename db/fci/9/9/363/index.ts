@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 363,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Prager Rattler", "Pražský krysařík"],
   fci,
   image: getBreedImagePath({ ...fci }),

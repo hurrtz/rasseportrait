@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 192,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Kromfohrländer"],
   variants: [
     {

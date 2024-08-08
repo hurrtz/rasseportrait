@@ -8,6 +8,7 @@ const fci: FCI = {
 };
 
 const breed: Breed = {
+  id: "turnspit",
   names: [
     "Turnspit",
     "Turnspit Dog",

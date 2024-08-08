@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 329,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Podenco Canario", "Kanarischer Podenco"],
   fci,
   image: getBreedImagePath({ ...fci }),

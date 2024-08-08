@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 285,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Galgo Español", "Galgo", "Spanischer Windhund"],
   fci,
   image: getBreedImagePath({ ...fci }),

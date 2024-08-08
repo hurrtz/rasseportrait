@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 137,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Chien de Montagne des Pyrénées", "Pyrenäenberghund", "Patou"],
   fci,
   image: getBreedImagePath({ ...fci }),

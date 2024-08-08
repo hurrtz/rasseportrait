@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 298,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: [
     "Lagotto Romagnolo",
     "Wasserhund der Romagna",

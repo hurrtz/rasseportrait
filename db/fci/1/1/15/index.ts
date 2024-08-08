@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 15,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Belgischer Schäferhund"],
   variants: [
     {

@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 88,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Shetland Sheepdog"],
   fci,
   image: getBreedImagePath({ ...fci }),

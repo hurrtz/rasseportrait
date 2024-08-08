@@ -7,7 +7,10 @@ const fci: FCI = {
   standardNumber: 300,
 };
 
+const { standardNumber: id } = fci;
+
 const breed: Breed = {
+  id,
   names: ["Black and Tan Coonhound", "Schwarz-roter Waschbärenhund"],
   fci,
   image: getBreedImagePath({ ...fci }),
