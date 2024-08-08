@@ -6,6 +6,9 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
 import { styled } from "@mui/material/styles";
 import type { Breed, FCI } from "../types/breed";
 
@@ -74,21 +77,35 @@ export default ({ breed }: Props) => {
                 {variants[0].names[0]}
               </Typography>
             )}
+
             <FCIText fci={fci} />
-            <Typography gutterBottom variant="subtitle2" component="div" mt={2}>
-              Podcast-Episode
-              <br />
-              <strong>{podcast[0].episode}</strong> (ab Minute{" "}
-              {Math.floor(podcast[0].timecode / 60)}, Sekunde{" "}
-              {podcast[0].timecode % 60})
-            </Typography>
+
+            <List>
+              <ListItem disablePadding>
+                <ListItemText
+                  primary={podcast[0].episode}
+                  secondary={`Minute ${Math.floor(podcast[0].timecode / 60)}, Sekunde ${podcast[0].timecode % 60}`}
+                />
+              </ListItem>
+            </List>
           </CardContent>
           <CardActions>
-            <Button size="small" type="button" onClick={openPodcast}>
+            <Button
+              size="small"
+              type="button"
+              onClick={openPodcast}
+              variant="contained"
+              color="primary"
+            >
               Zum Podcast
             </Button>
-            <Button size="small" type="button" onClick={openReadMore}>
-              Lese mehr
+            <Button
+              size="small"
+              type="button"
+              onClick={openReadMore}
+              color="secondary"
+            >
+              Erfahre mehr
             </Button>
           </CardActions>
         </Card>
