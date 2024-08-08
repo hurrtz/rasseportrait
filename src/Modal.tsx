@@ -1,46 +1,33 @@
-import React, { useState, type Dispatch, type SetStateAction } from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import React, { type Dispatch, type SetStateAction } from "react";
 import Modal from "@mui/material/Modal";
-
-const style = {
-  position: "absolute" as "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+import breedsList from "../db";
+import { flattenBreedVariants } from "./utils";
+import BreedDetails from "./BreedDetails";
 
 interface Props {
-  breed?: number | string;
+  breedId?: number | string;
   setBreed: Dispatch<SetStateAction<number | string | undefined>>;
 }
 
-export default ({ breed, setBreed }: Props) => {
+export default ({ breedId, setBreed }: Props) => {
   const handleBackgroundClick = () => {
     setBreed(undefined);
   };
 
+  const breeds = Object.values(breedsList);
+  const breedsWithVariants = flattenBreedVariants(breeds);
+  const selectedBreed = breedsWithVariants.filter(
+    (breed) => breed.id === breedId,
+  );
+
   return (
     <Modal
-      open={breed !== undefined}
+      open={breedId !== undefined}
       onClose={handleBackgroundClick}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={style}>
-        <Typography id="modal-modal-title" variant="h6" component="h2">
-          {breed}
-        </Typography>
-        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-          Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        </Typography>
-      </Box>
+      <BreedDetails breed={selectedBreed ? selectedBreed[0] : undefined} />
     </Modal>
   );
 };
