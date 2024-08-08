@@ -1,6 +1,6 @@
 import type { Breed, FCI } from "../types/breed";
 
-const FALLBACK_IMAGES_COUNT = 20;
+const FALLBACK_IMAGES_COUNT = 12;
 
 export const getBreedImagePath = ({
   group,
