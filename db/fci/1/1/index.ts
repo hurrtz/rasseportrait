@@ -6,6 +6,7 @@ import Kuvasz from "./54";
 import Pumi from "./56";
 import ShetlandSheepdog from "./88";
 import Briard from "./113";
+import BergamascoShepherdDog from "./194";
 import GermanShepherd from "./166";
 import DutchShepherd from "./223";
 import AustralianKelpie from "./293";
@@ -19,6 +20,7 @@ export default {
   Pumi,
   ShetlandSheepdog,
   Briard,
+  BergamascoShepherdDog,
   GermanShepherd,
   DutchShepherd,
   AustralianKelpie,
