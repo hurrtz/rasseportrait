@@ -1,13 +1,14 @@
-import React from "react";
+import React, { type Dispatch, type SetStateAction } from "react";
 import type { Breed } from "../types/breed";
 import BreedCard from "./BreedCard";
 import Grid from "@mui/material/Grid";
 
 interface Props {
   breeds: Breed[];
+  handleCardClick: Dispatch<SetStateAction<number | undefined>>;
 }
 
-const Breeds = ({ breeds }: Props) => (
+const Breeds = ({ breeds, handleCardClick }: Props) => (
   <Grid container spacing={2}>
     {breeds.map((breed) => (
       <Grid
@@ -21,6 +22,7 @@ const Breeds = ({ breeds }: Props) => (
         <BreedCard
           {...breed}
           image={breed.variants ? breed.variants[0].image : breed.image || []}
+          handleCardClick={handleCardClick}
         />
       </Grid>
     ))}

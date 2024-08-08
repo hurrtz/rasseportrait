@@ -1,15 +1,16 @@
-import React from "react";
+import React, { type Dispatch, type SetStateAction } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import type { Breed, FCI } from "../types/breed";
 import { styled } from "@mui/material/styles";
+import type { Breed, FCI } from "../types/breed";
 
 interface Props extends Breed {
   image: string[];
+  handleCardClick: Dispatch<SetStateAction<number | undefined>>;
 }
 
 const CardHeaderImage = styled(CardHeader)(
@@ -37,23 +38,29 @@ const FCIText = ({ fci }: { fci: FCI }) => {
   );
 };
 
-export default ({ image, names, variants, fci }: Props) => (
-  <Card>
-    <CardHeaderImage image={image[0]} fallbackImage={image[1]} />
-    <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
-        {names[0]}
-      </Typography>
-      {variants && variants.length > 0 && (
-        <Typography gutterBottom variant="h6" component="div">
-          {variants[0].names[0]}
+export default ({ image, names, variants, fci, handleCardClick }: Props) => {
+  const onClick = () => {
+    handleCardClick(fci.standardNumber);
+  };
+
+  return (
+    <Card onClick={onClick}>
+      <CardHeaderImage image={image[0]} fallbackImage={image[1]} />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {names[0]}
         </Typography>
-      )}
-      <FCIText fci={fci} />
-    </CardContent>
-    <CardActions>
-      <Button size="small">Share</Button>
-      <Button size="small">Learn More</Button>
-    </CardActions>
-  </Card>
-);
+        {variants && variants.length > 0 && (
+          <Typography gutterBottom variant="h6" component="div">
+            {variants[0].names[0]}
+          </Typography>
+        )}
+        <FCIText fci={fci} />
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+  );
+};

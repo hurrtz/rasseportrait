@@ -8,6 +8,7 @@ import breedsList from "../db";
 import type { Breed } from "../types/breed";
 import BreedCards from "./BreedCards";
 import { flattenBreedVariants } from "./utils";
+import Modal from "./Modal";
 
 const breeds = Object.values(breedsList);
 const breedsWithVariants = flattenBreedVariants(breeds);
@@ -37,6 +38,7 @@ const fuse = new Fuse(sortedBreedsWithVariants, fuseOptions);
 
 const App = () => {
   const [searchValue, setSearchValue] = useState("");
+  const [selectedBreed, setSelectedBreed] = useState<number | undefined>();
 
   let results = sortedBreedsWithVariants;
 
@@ -55,36 +57,39 @@ const App = () => {
   };
 
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={0} md={2}></Grid>
-      <Grid item xs={12} md={8}>
-        <Typography variant="h2" gutterBottom>
-          Tierisch menschlich
-        </Typography>
+    <>
+      <Modal breed={selectedBreed} setBreed={setSelectedBreed} />
+      <Grid container spacing={2}>
+        <Grid item xs={0} md={2}></Grid>
+        <Grid item xs={12} md={8}>
+          <Typography variant="h2" gutterBottom>
+            Tierisch menschlich
+          </Typography>
 
-        <Typography variant="h3" gutterBottom>
-          Rasseportrait
-        </Typography>
+          <Typography variant="h3" gutterBottom>
+            Rasseportrait
+          </Typography>
 
-        <Typography variant="body1" gutterBottom>
-          Du wolltest noch einmal ein Rasseportrait anhören? Oder du wolltest
-          wissen, ob eine Rasse überhaupt schon einmal besprochen wurde? Suche
-          hier deine Rasse und finde die zugehörige Podcast-Episode!
-        </Typography>
+          <Typography variant="body1" gutterBottom>
+            Du wolltest noch einmal ein Rasseportrait anhören? Oder du wolltest
+            wissen, ob eine Rasse überhaupt schon einmal besprochen wurde? Suche
+            hier deine Rasse und finde die zugehörige Podcast-Episode!
+          </Typography>
 
-        <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
-          <TextField
-            label="Suche nach deinem Hund oder der FCI Standardnummer"
-            variant="outlined"
-            fullWidth
-            onChange={handleSearchChange}
-          />
-        </Box>
+          <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
+            <TextField
+              label="Suche nach deinem Hund oder der FCI Standardnummer"
+              variant="outlined"
+              fullWidth
+              onChange={handleSearchChange}
+            />
+          </Box>
 
-        <BreedCards breeds={results} />
+          <BreedCards breeds={results} handleCardClick={setSelectedBreed} />
+        </Grid>
+        <Grid item xs={0} md={2}></Grid>
       </Grid>
-      <Grid item xs={0} md={2}></Grid>
-    </Grid>
+    </>
   );
 };
 
