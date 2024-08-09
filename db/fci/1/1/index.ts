@@ -10,6 +10,7 @@ import BergamascoShepherdDog from "./194";
 import GermanShepherd from "./166";
 import DutchShepherd from "./223";
 import AustralianKelpie from "./293";
+import MajorcaShepherdDog from "./321";
 
 export default {
   Malinois,
@@ -24,4 +25,5 @@ export default {
   GermanShepherd,
   DutchShepherd,
   AustralianKelpie,
+  MajorcaShepherdDog,
 };
