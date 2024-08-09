@@ -2,16 +2,16 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import PodcastsIcon from "@mui/icons-material/Podcasts";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import type { Breed, FCI, Podcast } from "../types/breed";
 import { getImageFromBreed } from "./utils";
@@ -88,8 +88,8 @@ export default ({ breed }: Props) => {
       window.open(url, "_blank");
     };
 
-    const openReadMore = () => {
-      window.open(furtherReading[0].url, "_blank");
+    const openReadMore = (url: string) => {
+      window.open(url, "_blank");
     };
 
     return (
@@ -142,17 +142,23 @@ export default ({ breed }: Props) => {
                 </ListItem>
               ))}
             </List>
+
+            <Typography gutterBottom variant="body2" component="div">
+              Weitere Infos:
+            </Typography>
+
+            <Stack direction="row" spacing={1}>
+              {breed.furtherReading.map((furtherReading) => (
+                <Chip
+                  key={furtherReading.url}
+                  label={furtherReading.name}
+                  variant="outlined"
+                  size="small"
+                  onClick={() => openReadMore(furtherReading.url)}
+                />
+              ))}
+            </Stack>
           </CardContent>
-          <CardActions>
-            <Button
-              size="small"
-              type="button"
-              onClick={openReadMore}
-              color="secondary"
-            >
-              Erfahre mehr
-            </Button>
-          </CardActions>
         </Card>
       </Box>
     );
