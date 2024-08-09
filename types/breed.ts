@@ -9,7 +9,7 @@ interface Variant {
   image: string;
 }
 
-interface Podcast {
+export interface Podcast {
   episode: string;
   url: string;
   timecode: number;

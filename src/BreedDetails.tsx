@@ -9,17 +9,19 @@ import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import PodcastsIcon from "@mui/icons-material/Podcasts";
 import { styled } from "@mui/material/styles";
-import type { Breed, FCI } from "../types/breed";
+import type { Breed, FCI, Podcast } from "../types/breed";
 import { getImageFromBreed } from "./utils";
 
 const style = {
-  position: "absolute" as "absolute",
+  position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: "background.paper",
   boxShadow: 24,
   borderRadius: 5,
 };
@@ -47,17 +49,43 @@ const FCIText = ({ fci }: { fci: FCI }) => {
   );
 };
 
+const getTime = ({ podcast: { timecode } }: { podcast: Podcast }) => {
+  const hours = Math.floor(timecode / 3600);
+  const minutes = Math.floor((timecode % 3600) / 60);
+  const seconds = timecode % 60;
+
+  return [hours, minutes, seconds];
+};
+
+const getTimeCopy = ({ podcast }: { podcast: Podcast }) => {
+  const time = getTime({ podcast });
+  const out = [];
+
+  if (time[0]) {
+    out.push(`Stunde ${time[0]}`);
+  }
+
+  if (time[1]) {
+    out.push(`Minute ${time[1]}`);
+  }
+
+  if (time[2]) {
+    out.push(`Sekunde ${time[2]}`);
+  }
+
+  return out.join(", ");
+};
+
 interface Props {
   breed?: Breed;
 }
 
 export default ({ breed }: Props) => {
   if (breed) {
-    console.log(breed);
-    const { names, variants, fci, podcast, furtherReading } = breed;
+    const { names, variants, fci, podcast: podcasts, furtherReading } = breed;
 
-    const openPodcast = () => {
-      window.open(podcast[0].url, "_blank");
+    const openPodcast = (url: string) => {
+      window.open(url, "_blank");
     };
 
     const openReadMore = () => {
@@ -80,25 +108,42 @@ export default ({ breed }: Props) => {
 
             <FCIText fci={fci} />
 
-            <List>
-              <ListItem disablePadding>
-                <ListItemText
-                  primary={podcast[0].episode}
-                  secondary={`Minute ${Math.floor(podcast[0].timecode / 60)}, Sekunde ${podcast[0].timecode % 60}`}
-                />
-              </ListItem>
+            <List dense>
+              {podcasts.map((podcast) => (
+                <ListItem
+                  disablePadding
+                  key={podcast.episode}
+                  sx={{
+                    backgroundColor: "#e3f2fd",
+                    marginTop: 1,
+                    marginBottom: 1,
+                    borderRadius: 2,
+                  }}
+                >
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <PodcastsIcon />
+                    </ListItemIcon>
+                    <ListItemText
+                      key={podcast.episode}
+                      primary={podcast.episode}
+                      secondary={getTimeCopy({ podcast })}
+                      primaryTypographyProps={{
+                        sx: {
+                          whiteSpace: "nowrap",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          width: "100%",
+                        },
+                      }}
+                      onClick={() => openPodcast(podcast.url)}
+                    />
+                  </ListItemButton>
+                </ListItem>
+              ))}
             </List>
           </CardContent>
           <CardActions>
-            <Button
-              size="small"
-              type="button"
-              onClick={openPodcast}
-              variant="contained"
-              color="primary"
-            >
-              Zum Podcast
-            </Button>
             <Button
               size="small"
               type="button"
