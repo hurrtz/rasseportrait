@@ -29,3 +29,10 @@ export interface Breed {
   podcast: Podcast[];
   furtherReading: FurtherReading[];
 }
+
+export type BreedIdentifier =
+  | {
+      id: string | number;
+      variantName?: string;
+    }
+  | undefined;

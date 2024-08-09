@@ -1,12 +1,12 @@
 import React, { type Dispatch, type SetStateAction } from "react";
-import type { Breed } from "../types/breed";
+import type { Breed, BreedIdentifier } from "../types/breed";
 import BreedCard from "./BreedCard";
 import Grid from "@mui/material/Grid";
 import { getImageFromBreed } from "./utils";
 
 interface Props {
   breeds: Breed[];
-  handleCardClick: Dispatch<SetStateAction<number | string | undefined>>;
+  handleCardClick: Dispatch<SetStateAction<BreedIdentifier>>;
 }
 
 const Breeds = ({ breeds, handleCardClick }: Props) => (

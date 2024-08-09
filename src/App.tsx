@@ -5,7 +5,7 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Fuse from "fuse.js";
 import breedsList from "../db";
-import type { Breed } from "../types/breed";
+import type { Breed, BreedIdentifier } from "../types/breed";
 import BreedCards from "./BreedCards";
 import { flattenBreedVariants } from "./utils";
 import Modal from "./Modal";
@@ -38,9 +38,7 @@ const fuse = new Fuse(sortedBreedsWithVariants, fuseOptions);
 
 const App = () => {
   const [searchValue, setSearchValue] = useState("");
-  const [selectedBreed, setSelectedBreed] = useState<
-    number | string | undefined
-  >();
+  const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
 
   let results = sortedBreedsWithVariants;
 
@@ -60,7 +58,10 @@ const App = () => {
 
   return (
     <>
-      <Modal breedId={selectedBreed} setBreed={setSelectedBreed} />
+      <Modal
+        selectedBreed={selectedBreed}
+        setSelectedBreed={setSelectedBreed}
+      />
       <Grid container spacing={2}>
         <Grid item xs={0} md={2}></Grid>
         <Grid item xs={12} md={8}>

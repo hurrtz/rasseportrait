@@ -3,11 +3,11 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardActionArea from "@mui/material/CardActionArea";
 import { styled } from "@mui/material/styles";
-import type { Breed } from "../types/breed";
+import type { Breed, BreedIdentifier } from "../types/breed";
 
 interface Props extends Breed {
   image: string;
-  handleCardClick: Dispatch<SetStateAction<number | string | undefined>>;
+  handleCardClick: Dispatch<SetStateAction<BreedIdentifier>>;
 }
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
@@ -16,9 +16,15 @@ const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   backgroundSize: "cover",
 }));
 
-export default ({ id, image, handleCardClick }: Props) => {
+export default ({ id, variants, image, handleCardClick }: Props) => {
   const onClick = () => {
-    handleCardClick(id);
+    const payload: BreedIdentifier = { id };
+
+    if (variants) {
+      payload.variantName = variants[0].names[0];
+    }
+
+    handleCardClick(payload);
   };
 
   return (
