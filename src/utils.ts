@@ -1,19 +1,15 @@
 import type { Breed, FCI } from "../types/breed";
 
-const FALLBACK_IMAGES_COUNT = 12;
-
 export const getBreedImagePath = ({
   group,
   section,
   standardNumber,
   variant = "default",
   breedName,
-}: FCI & { variant?: string; breedName?: string }) => [
+}: FCI & { variant?: string; breedName?: string }) =>
   standardNumber >= 0
     ? `illustrations/fci/${group}/${section}/${standardNumber}/${variant}.jpeg`
-    : `illustrations/${breedName}/${variant}.jpeg`,
-  `illustrations/fallbackImages/${Math.floor(Math.random() * FALLBACK_IMAGES_COUNT) + 1}.jpeg`,
-];
+    : `illustrations/${breedName}/${variant}.jpeg`;
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
@@ -31,6 +27,7 @@ export const flattenBreedVariants = (breeds: Breed[]) => {
           names: breed.names,
           variants: [variant],
           fci: breed.fci,
+          image: breed.image,
           podcast: breed.podcast,
           furtherReading: breed.furtherReading,
         });
@@ -39,4 +36,13 @@ export const flattenBreedVariants = (breeds: Breed[]) => {
   });
 
   return flattenedBreedVariants;
+};
+
+export const getImageFromBreed = (breed: Breed) => {
+  if (breed.variants) {
+    return breed.variants[0].image;
+  }
+
+  // if there's no variant then there's always an image
+  return breed.image!;
 };

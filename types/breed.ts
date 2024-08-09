@@ -6,7 +6,7 @@ export interface FCI {
 
 interface Variant {
   names: string[];
-  image: string[];
+  image: string;
 }
 
 interface Podcast {
@@ -24,7 +24,7 @@ export interface Breed {
   id: number | string;
   names: string[];
   variants?: Variant[];
-  image?: string[];
+  image?: string;
   fci: FCI;
   podcast: Podcast[];
   furtherReading: FurtherReading[];

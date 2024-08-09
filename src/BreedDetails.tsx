@@ -11,6 +11,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { styled } from "@mui/material/styles";
 import type { Breed, FCI } from "../types/breed";
+import { getImageFromBreed } from "./utils";
 
 const style = {
   position: "absolute" as "absolute",
@@ -23,13 +24,11 @@ const style = {
   borderRadius: 5,
 };
 
-const CardHeaderImage = styled(CardHeader)(
-  ({ image, fallbackImage }: { image: string; fallbackImage: string }) => ({
-    height: 400,
-    background: `url(${image}), url(${fallbackImage}) no-repeat center center transparent`,
-    backgroundSize: "cover",
-  }),
-);
+const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
+  height: 400,
+  background: `url(${image}) no-repeat center center transparent`,
+  backgroundSize: "cover",
+}));
 
 const FCIText = ({ fci }: { fci: FCI }) => {
   if (fci && fci.standardNumber > 0) {
@@ -54,7 +53,7 @@ interface Props {
 
 export default ({ breed }: Props) => {
   if (breed) {
-    const { image = [], names, variants, fci, podcast, furtherReading } = breed;
+    const { names, variants, fci, podcast, furtherReading } = breed;
 
     const openPodcast = () => {
       window.open(podcast[0].url, "_blank");
@@ -67,7 +66,7 @@ export default ({ breed }: Props) => {
     return (
       <Box sx={style}>
         <Card>
-          <CardHeaderImage image={image[0]} fallbackImage={image[1]} />
+          <CardHeaderImage image={getImageFromBreed(breed)} />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {names[0]}
