@@ -10,6 +10,7 @@ import DogoArgentino from "./292";
 import Broholmer from "./315";
 import CaneCorsoItaliano from "./343";
 import PresaCanario from "./346";
+import TransmontanoMastiff from "./368";
 
 export default {
   DogueDeBordeaux,
@@ -24,4 +25,5 @@ export default {
   Broholmer,
   CaneCorsoItaliano,
   PresaCanario,
+  TransmontanoMastiff,
 };
