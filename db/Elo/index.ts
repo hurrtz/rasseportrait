@@ -10,7 +10,7 @@ const fci: FCI = {
 const breed: Breed = {
   id: "elo",
   names: ["Elo"],
-  image: getBreedImagePath({ ...fci, breedName: "elo" }),
+  image: getBreedImagePath({ ...fci, breedName: "Elo" }),
   fci,
   podcast: [
     {

@@ -19,7 +19,7 @@ const breed: Breed = {
     "Vernepator",
     "Küchenhund",
   ],
-  image: getBreedImagePath({ ...fci, breedName: "turnspit" }),
+  image: getBreedImagePath({ ...fci, breedName: "Turnspit" }),
   fci,
   podcast: [
     {
