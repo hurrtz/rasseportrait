@@ -1,12 +1,9 @@
 import React, { type Dispatch, type SetStateAction } from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import CardActionArea from "@mui/material/CardActionArea";
 import { styled } from "@mui/material/styles";
-import type { Breed, FCI } from "../types/breed";
+import type { Breed } from "../types/breed";
 
 interface Props extends Breed {
   image: string;
@@ -19,23 +16,6 @@ const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   backgroundSize: "cover",
 }));
 
-const FCIText = ({ fci }: { fci: FCI }) => {
-  if (fci && fci.standardNumber > 0) {
-    return (
-      <Typography variant="body2" color="text.secondary">
-        FCI: Gruppe {fci.group}, Sektion: {fci.section}, Standardnummer:{" "}
-        {fci.standardNumber}
-      </Typography>
-    );
-  }
-
-  return (
-    <Typography variant="body2" color="text.secondary">
-      —keine FCI-anerkannte Rasse—
-    </Typography>
-  );
-};
-
 export default ({ id, image, handleCardClick }: Props) => {
   const onClick = () => {
     handleCardClick(id);
@@ -43,7 +23,9 @@ export default ({ id, image, handleCardClick }: Props) => {
 
   return (
     <Card onClick={onClick}>
-      <CardHeaderImage image={image} />
+      <CardActionArea sx={{ opacity: 1, "&:hover": { opacity: 0.75 } }}>
+        <CardHeaderImage image={image} />
+      </CardActionArea>
     </Card>
   );
 };
