@@ -39,6 +39,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Ca_de_Bestiar",
     },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/MALLORCA-SCHAFERHUND-321.html",
+    },
+    {
+      name: "VDH",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/perro-de-pastor-mallorquin",
+    },
   ],
 };
 
