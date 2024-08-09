@@ -1,113 +1,41 @@
-import React, { useState, type ChangeEvent } from "react";
+import React, { useState } from "react";
 import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
-import Fuse from "fuse.js";
-import breedsList from "../db";
-import type { Breed, BreedIdentifier } from "../types/breed";
-import BreedCards from "./BreedCards";
-import { flattenBreedVariants } from "./utils";
-import Modal from "./Modal";
-
-const breeds = Object.values(breedsList);
-const breedsWithVariants = flattenBreedVariants(breeds);
-const sortedBreedsWithVariants = breedsWithVariants.sort(
-  ({ fci: fci1 }, { fci: fciB }) => fci1.standardNumber - fciB.standardNumber,
-);
-
-// temporary: remove all breeds that are incomplete
-const reducedBreeds = sortedBreedsWithVariants.filter((breed) => {
-  if (!breed.podcast[0].episode) {
-    console.log("no podcast name", breed);
-    return undefined;
-  }
-
-  if (!breed.podcast[0].url) {
-    console.log("no podcast url", breed);
-    return undefined;
-  }
-
-  if (!breed.podcast[0].timecode) {
-    console.log("no podcast timecode", breed);
-    return undefined;
-  }
-
-  return breed.podcast[0].timecode > 0;
-});
-
-const fuseOptions = {
-  shouldSort: true,
-  ignoreLocation: true,
-  threshold: 0.1,
-  keys: [
-    { name: "names", getFn: ({ names }: Breed) => names.join("|") },
-    {
-      name: "variantNames",
-      getFn: ({ variants }: Breed) =>
-        variants?.map((variant) => variant.names).join("|") || "",
-    },
-    {
-      name: "standardNumber",
-      getFn: ({ fci }: Breed) => String(fci?.standardNumber || ""),
-    },
-  ],
-};
-
-const fuse = new Fuse(reducedBreeds, fuseOptions);
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
+import PetsIcon from "@mui/icons-material/Pets";
+import PageBreedList from "./PageBreedList";
+import PageImprint from "./PageImprint";
 
 const App = () => {
-  const [searchValue, setSearchValue] = useState("");
-  const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
-  const [bottomNavigationValue, setBottomNavigationValue] = useState(0);
-
-  let results = reducedBreeds;
-
-  const filteredBreeds = fuse.search(searchValue);
-
-  if (filteredBreeds.length > 0) {
-    results = filteredBreeds.map((filteredBreed) => filteredBreed.item);
-  }
-
-  const handleSearchChange = (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    if (event && event.target) {
-      setSearchValue(event.target.value);
-    }
-  };
+  const [bottomNavigationValue, setBottomNavigationValue] =
+    useState("breeds_list");
 
   return (
     <Container>
-      <Modal
-        selectedBreed={selectedBreed}
-        setSelectedBreed={setSelectedBreed}
-      />
+      {bottomNavigationValue === "breeds_list" && <PageBreedList />}
 
-      <Typography variant="h2" gutterBottom>
-        Tierisch menschlich
-      </Typography>
+      {bottomNavigationValue === "imprint" && <PageImprint />}
 
-      <Typography variant="h3" gutterBottom>
-        Rasseportrait
-      </Typography>
-
-      <Typography variant="body1" gutterBottom>
-        Du wolltest noch einmal ein Rasseportrait anhören? Oder du wolltest
-        wissen, ob eine Rasse überhaupt schon einmal besprochen wurde? Suche
-        hier deine Rasse und finde die zugehörige Podcast-Episode!
-      </Typography>
-
-      <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
-        <TextField
-          label="Suche nach deinem Hund oder der FCI Standardnummer"
-          variant="outlined"
-          fullWidth
-          onChange={handleSearchChange}
+      <BottomNavigation
+        showLabels
+        value={bottomNavigationValue}
+        onChange={(event, newValue) => {
+          setBottomNavigationValue(newValue);
+        }}
+        sx={{ marginTop: 5 }}
+      >
+        <BottomNavigationAction
+          label="Hunderassen"
+          icon={<PetsIcon />}
+          value="breeds_list"
         />
-      </Box>
-
-      <BreedCards breeds={results} handleCardClick={setSelectedBreed} />
+        <BottomNavigationAction
+          label="Impressum"
+          icon={<ContactPhoneIcon />}
+          value="imprint"
+        />
+      </BottomNavigation>
     </Container>
   );
 };
