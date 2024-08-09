@@ -14,8 +14,20 @@ const breed: Breed = {
   names: ["Belgischer Schäferhund"],
   variants: [
     {
+      names: ["Groenendael"],
+      image: getBreedImagePath({ ...fci, variant: "groenendael" }),
+    },
+    {
+      names: ["Laekenois"],
+      image: getBreedImagePath({ ...fci, variant: "laekenois" }),
+    },
+    {
       names: ["Malinois", "Mechelaar"],
       image: getBreedImagePath({ ...fci, variant: "malinois" }),
+    },
+    {
+      names: ["Tervueren"],
+      image: getBreedImagePath({ ...fci, variant: "tervueren" }),
     },
   ],
   fci,
@@ -29,7 +41,7 @@ const breed: Breed = {
   furtherReading: [
     {
       name: "Wikipedia",
-      url: "https://de.wikipedia.org/wiki/Malinois",
+      url: "https://de.wikipedia.org/wiki/Belgischer_Sch%C3%A4ferhund",
     },
   ],
 };

@@ -15,9 +15,7 @@ export const getBreedImagePath = ({
   that the variants, if existent, will be treated as its own breed */
 export const flattenBreedVariants = (breeds: Breed[]) => {
   // get all breeds with no variants or only one variant entry
-  const flattenedBreedVariants = breeds.filter(
-    ({ variants }) => !variants || (variants && variants.length <= 1),
-  );
+  const flattenedBreedVariants = breeds.filter(({ variants }) => !variants);
 
   breeds.forEach((breed) => {
     if (breed.variants && breed.variants.length > 1) {

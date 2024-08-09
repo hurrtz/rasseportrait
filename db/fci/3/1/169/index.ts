@@ -11,14 +11,9 @@ const { standardNumber: id } = fci;
 
 const breed: Breed = {
   id,
-  names: ["Foxterrier", "Fox Terrier"],
-  variants: [
-    {
-      names: ["Drahthaar", "Rauhaar", "Rauhhaar"],
-      image: getBreedImagePath({ ...fci, variant: "wire" }),
-    },
-  ],
+  names: ["Foxterrier (Drahthaar)", "Foxterrier (Rauhaar)", "Wire Fox Terrier"],
   fci,
+  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       episode: "Summer Edition #3: Martins Solo-Folge",

@@ -11,14 +11,9 @@ const { standardNumber: id } = fci;
 
 const breed: Breed = {
   id,
-  names: ["Schnauzer"],
-  variants: [
-    {
-      names: ["Standard-Schnauzer", "Mittel-Schnauzer"],
-      image: getBreedImagePath({ ...fci }),
-    },
-  ],
+  names: ["Schnauzer", "Standard-Schnauzer", "Mittel-Schnauzer"],
   fci,
+  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       episode: "Welpenhändler, Zerrspiele & Spartipps Teil 2",

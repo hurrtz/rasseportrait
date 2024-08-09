@@ -53,6 +53,7 @@ interface Props {
 
 export default ({ breed }: Props) => {
   if (breed) {
+    console.log(breed);
     const { names, variants, fci, podcast, furtherReading } = breed;
 
     const openPodcast = () => {
