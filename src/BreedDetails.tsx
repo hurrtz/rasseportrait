@@ -82,7 +82,13 @@ interface Props {
 
 export default ({ breed }: Props) => {
   if (breed) {
-    const { names, variants, fci, podcast: podcasts, furtherReading } = breed;
+    const {
+      names,
+      variants,
+      fci,
+      podcast: podcasts,
+      furtherReading: furtherReadings,
+    } = breed;
 
     const openPodcast = (url: string) => {
       window.open(url, "_blank");
@@ -148,13 +154,13 @@ export default ({ breed }: Props) => {
             </Typography>
 
             <Stack direction="row" spacing={1}>
-              {breed.furtherReading.map((furtherReading) => (
+              {furtherReadings.map(({ url, name }) => (
                 <Chip
-                  key={furtherReading.url}
-                  label={furtherReading.name}
+                  key={url}
+                  label={name}
                   variant="outlined"
                   size="small"
-                  onClick={() => openReadMore(furtherReading.url)}
+                  onClick={() => openReadMore(url)}
                 />
               ))}
             </Stack>
