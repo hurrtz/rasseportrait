@@ -33,8 +33,6 @@ export default ({ selectedBreed, setSelectedBreed }: Props) => {
     return selectedBreed?.id === breed.id;
   });
 
-  console.log(foundBreed);
-
   return (
     <Modal
       open={selectedBreed !== undefined}
@@ -42,7 +40,9 @@ export default ({ selectedBreed, setSelectedBreed }: Props) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <BreedDetails breed={foundBreed ? foundBreed[0] : undefined} />
+      <>
+        <BreedDetails breed={foundBreed ? foundBreed[0] : undefined} />
+      </>
     </Modal>
   );
 };
