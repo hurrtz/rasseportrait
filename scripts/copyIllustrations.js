@@ -1,53 +1,56 @@
-const fs = require("fs");
+const sharp = require("sharp");
+const fs = require("fs-extra");
 const path = require("path");
 
-const sourceDir = "db";
-const destinationDir = "dist/illustrations";
-
-if (!fs.existsSync(destinationDir)) {
-  fs.mkdirSync(destinationDir, { recursive: true });
-}
-
-const copyImages = (currentSourceDir) => {
-  fs.readdir(currentSourceDir, (err, files) => {
-    if (err) {
-      return console.error("Unable to scan directory: " + err);
-    }
-
-    files.forEach((file) => {
-      const sourceFilePath = path.join(currentSourceDir, file);
-
-      fs.stat(sourceFilePath, (err, stats) => {
-        if (err) {
-          return console.error("Error reading file stats: " + err);
-        }
-
-        if (stats.isDirectory()) {
-          // Recursively copy images from subdirectory
-          copyImages(sourceFilePath);
-        } else if (/\.(jpg|jpeg|png|gif|bmp)$/.test(file.toLowerCase())) {
-          const relativePath = path.relative(sourceDir, sourceFilePath);
-          const destinationFilePath = path.join(destinationDir, relativePath);
-
-          // Ensure the destination subdirectory exists
-          const destinationSubDir = path.dirname(destinationFilePath);
-
-          if (!fs.existsSync(destinationSubDir)) {
-            fs.mkdirSync(destinationSubDir, { recursive: true });
-          }
-
-          // Copy the file
-          fs.copyFile(sourceFilePath, destinationFilePath, (err) => {
-            if (err) {
-              console.error("Error copying file:", err);
-            } else {
-              console.log(`Copied: ${relativePath}`);
-            }
-          });
-        }
-      });
-    });
-  });
+const createThumbnail = async (
+  inputPath,
+  outputPath,
+  width = 300,
+  height = 300,
+) => {
+  try {
+    await sharp(inputPath).resize(width, height).toFile(outputPath);
+    console.log(`Thumbnail created!`);
+  } catch (error) {
+    console.error("Error creating thumbnail:", error);
+  }
 };
 
-copyImages(sourceDir);
+const processImages = async (sourceDir, targetDir) => {
+  try {
+    await fs.ensureDir(targetDir);
+
+    const files = await fs.readdir(sourceDir);
+
+    for (const file of files) {
+      const fullPath = path.join(sourceDir, file);
+      const stat = await fs.stat(fullPath);
+
+      if (stat.isDirectory()) {
+        await processImages(fullPath, path.join(targetDir, file));
+      } else if (/\.(jpg|jpeg|png|gif)$/i.test(file)) {
+        const targetPath = path.join(targetDir, file);
+        const thumbnailPath = path.join(
+          targetDir,
+          path.parse(file).name + "_thumbnail" + path.extname(file),
+        );
+
+        console.log(`Processing "${fullPath}"...`);
+
+        await fs.copy(fullPath, targetPath);
+        console.log(`Copied!`);
+
+        await createThumbnail(targetPath, thumbnailPath);
+
+        console.log();
+      }
+    }
+  } catch (error) {
+    console.error("Error processing images:", error);
+  }
+};
+
+const SOURCE_FOLDER = path.join(__dirname, "../db");
+const DESTINATION_FOLDER = path.join(__dirname, "../dist/illustrations");
+
+processImages(SOURCE_FOLDER, DESTINATION_FOLDER);

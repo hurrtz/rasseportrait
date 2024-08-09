@@ -12,7 +12,7 @@ interface Props extends Breed {
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   height: 300,
-  background: `url(${image}) no-repeat center center transparent`,
+  background: `url(${image.replace(".jpeg", "_thumbnail.jpeg")}) no-repeat center center transparent`,
   backgroundSize: "cover",
 }));
 
