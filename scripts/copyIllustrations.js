@@ -9,7 +9,10 @@ const createThumbnail = async (
   height = 300,
 ) => {
   try {
-    await sharp(inputPath).resize(width, height).toFile(outputPath);
+    await sharp(inputPath)
+      .resize(width, height)
+      .jpeg({ quality: 50 })
+      .toFile(outputPath);
     console.log(`Thumbnail created!`);
   } catch (error) {
     console.error("Error creating thumbnail:", error);
