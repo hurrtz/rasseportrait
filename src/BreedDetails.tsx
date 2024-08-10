@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
@@ -79,9 +79,10 @@ const getTimeCopy = (timecode: Podcast["timecode"]) => {
 
 interface Props {
   breed?: Breed;
+  children?: ReactNode;
 }
 
-export default ({ breed }: Props) => {
+export default ({ breed, children }: Props) => {
   if (breed) {
     const {
       names,
@@ -177,6 +178,8 @@ export default ({ breed }: Props) => {
             </Stack>
           </CardContent>
         </Card>
+
+        {children}
       </Box>
     );
   }
