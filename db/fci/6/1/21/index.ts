@@ -37,11 +37,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/GASCON-SAINTONGEOIS-21.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/gascon-saintongeois",
     },
   ],
 };

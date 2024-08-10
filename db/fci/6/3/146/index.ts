@@ -29,11 +29,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/RHODESIAN-RIDGEBACK-146.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/rhodesian-ridgeback",
     },
   ],
 };

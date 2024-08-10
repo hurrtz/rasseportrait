@@ -35,11 +35,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/SPANISCHER-WASSERHUND-336.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/perro-de-agua-espanol",
     },
   ],
 };

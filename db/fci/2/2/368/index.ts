@@ -32,11 +32,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/TRANSMONTANO-HIRTENHUND-368.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/cao-de-gado-transmontano",
     },
   ],
 };

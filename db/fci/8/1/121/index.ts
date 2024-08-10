@@ -32,11 +32,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/FLAT-COATED-RETRIEVER-121.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/flat-coated-retriever",
     },
   ],
 };

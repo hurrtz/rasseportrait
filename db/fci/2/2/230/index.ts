@@ -11,7 +11,7 @@ const { standardNumber: id } = fci;
 
 const breed: Breed = {
   id,
-  names: ["Tibetanische Dogge", "Do Khyi", "Tibetdogge", "Tibetmastiff"],
+  names: ["Do Khyi", "Tibetanische Dogge", "Tibetdogge", "Tibetmastiff"],
   fci,
   image: getBreedImagePath({ ...fci }),
   podcast: [
@@ -28,11 +28,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/DO-KHYI-230.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/do-khyi",
     },
   ],
 };

@@ -28,11 +28,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/LANDSEER-EUROPAISCH-KONTINENTALER-TYP-226.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/landseer",
     },
   ],
 };

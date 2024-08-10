@@ -34,11 +34,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/BERGAMASKER-HIRTENHUND-194.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/bergamasker-hirtenhund",
     },
   ],
 };

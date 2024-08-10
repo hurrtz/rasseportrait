@@ -38,11 +38,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/DANISCH-SCHWEDISCHER-FARMHUND-356.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/danish-swedish-farmdog",
     },
   ],
 };

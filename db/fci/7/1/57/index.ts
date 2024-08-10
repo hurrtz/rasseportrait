@@ -32,11 +32,11 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/KURZHAARIGER-UNGARISCHER-VORSTEHHUND-VIZSLA-57.html",
     },
     {
       name: "VDH",
-      url: "",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/magyar-vizsla-kurzhaar",
     },
   ],
 };
