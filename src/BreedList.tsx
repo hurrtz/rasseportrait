@@ -11,26 +11,6 @@ const sortedBreedsWithVariants = breedsWithVariants.sort(
   ({ fci: fci1 }, { fci: fciB }) => fci1.standardNumber - fciB.standardNumber,
 );
 
-// temporary: remove all breeds that are incomplete
-const reducedBreeds = sortedBreedsWithVariants.filter((breed) => {
-  if (!breed.podcast[0].episode) {
-    console.log("no podcast name", breed);
-    return undefined;
-  }
-
-  if (!breed.podcast[0].url) {
-    console.log("no podcast url", breed);
-    return undefined;
-  }
-
-  if (!breed.podcast[0].timecode) {
-    console.log("no podcast timecode", breed);
-    return undefined;
-  }
-
-  return breed.podcast[0].timecode > 0;
-});
-
 const fuseOptions = {
   shouldSort: true,
   ignoreLocation: true,
@@ -49,7 +29,7 @@ const fuseOptions = {
   ],
 };
 
-const fuse = new Fuse(reducedBreeds, fuseOptions);
+const fuse = new Fuse(sortedBreedsWithVariants, fuseOptions);
 
 interface Props {
   searchValue?: string;
@@ -57,7 +37,7 @@ interface Props {
 }
 
 const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
-  let results = reducedBreeds;
+  let results = sortedBreedsWithVariants;
 
   const filteredBreeds = fuse.search(searchValue);
 
