@@ -30,6 +30,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Lagotto_Romagnolo",
     },
+    {
+      name: "FCI",
+      url: "",
+    },
+    {
+      name: "VDH",
+      url: "",
+    },
   ],
 };
 

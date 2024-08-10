@@ -31,6 +31,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Karelischer_B%C3%A4renhund",
     },
+    {
+      name: "FCI",
+      url: "",
+    },
+    {
+      name: "VDH",
+      url: "",
+    },
   ],
 };
 

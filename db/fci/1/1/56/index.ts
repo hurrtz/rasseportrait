@@ -26,6 +26,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Pumi_(Hunderasse)",
     },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/PUMI-56.html",
+    },
+    {
+      name: "VDH",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/pumi",
+    },
   ],
 };
 

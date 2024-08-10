@@ -26,6 +26,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Wetterhoun",
     },
+    {
+      name: "FCI",
+      url: "",
+    },
+    {
+      name: "VDH",
+      url: "",
+    },
   ],
 };
 

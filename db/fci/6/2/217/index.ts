@@ -26,6 +26,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Bayerischer_Gebirgsschwei%C3%9Fhund",
     },
+    {
+      name: "FCI",
+      url: "",
+    },
+    {
+      name: "VDH",
+      url: "",
+    },
   ],
 };
 

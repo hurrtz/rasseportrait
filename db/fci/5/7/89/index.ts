@@ -35,6 +35,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Podenco_Ibicenco",
     },
+    {
+      name: "FCI",
+      url: "",
+    },
+    {
+      name: "VDH",
+      url: "",
+    },
   ],
 };
 

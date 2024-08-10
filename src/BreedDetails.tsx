@@ -156,15 +156,17 @@ export default ({ breed }: Props) => {
             </Typography>
 
             <Stack direction="row" spacing={1}>
-              {furtherReadings.map(({ url, name }) => (
-                <Chip
-                  key={url}
-                  label={name}
-                  variant="outlined"
-                  size="small"
-                  onClick={() => openReadMore(url)}
-                />
-              ))}
+              {furtherReadings
+                .filter(({ url }) => url)
+                .map(({ url, name }) => (
+                  <Chip
+                    key={url}
+                    label={name}
+                    variant="outlined"
+                    size="small"
+                    onClick={() => openReadMore(url)}
+                  />
+                ))}
             </Stack>
           </CardContent>
         </Card>

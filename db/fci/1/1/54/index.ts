@@ -26,6 +26,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Kuvasz",
     },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/KUVASZ-54.html",
+    },
+    {
+      name: "VDH",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/kuvasz",
+    },
   ],
 };
 

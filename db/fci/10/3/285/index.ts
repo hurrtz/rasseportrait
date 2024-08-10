@@ -27,6 +27,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Galgo_Espa%C3%B1ol",
     },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/SPANISCHER-WINDHUND-285.html",
+    },
+    {
+      name: "VDH",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/galgo-espanol",
+    },
   ],
 };
 

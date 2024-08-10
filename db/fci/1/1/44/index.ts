@@ -26,6 +26,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Beauceron",
     },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/BEAUCERON-44.html",
+    },
+    {
+      name: "VDH",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/berger-de-beauce",
+    },
   ],
 };
 

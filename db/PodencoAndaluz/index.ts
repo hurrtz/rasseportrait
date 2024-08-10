@@ -24,6 +24,10 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Podenco_Andaluz",
     },
+    {
+      name: "VDH",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/podenco-andaluz-nationale-rasse",
+    },
   ],
 };
 

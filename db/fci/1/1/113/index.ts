@@ -11,7 +11,7 @@ const { standardNumber: id } = fci;
 
 const breed: Breed = {
   id,
-  names: ["Briard"],
+  names: ["Berger de Brie", "Briard"],
   fci,
   image: getBreedImagePath({ ...fci }),
   podcast: [
@@ -25,6 +25,14 @@ const breed: Breed = {
     {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Briard",
+    },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/BERGER-DE-BRIE-113.html",
+    },
+    {
+      name: "VDH",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/berger-de-brie",
     },
   ],
 };

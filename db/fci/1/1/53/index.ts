@@ -26,6 +26,14 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Komondor",
     },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/KOMONDOR-53.html",
+    },
+    {
+      name: "VDH",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/komondor",
+    },
   ],
 };
 

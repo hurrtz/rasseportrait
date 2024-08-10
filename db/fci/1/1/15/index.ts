@@ -43,6 +43,10 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Belgischer_Sch%C3%A4ferhund",
     },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/BELGISCHER-SCHAFERHUND-15.html",
+    },
   ],
 };
 
