@@ -18,7 +18,7 @@ const breed: Breed = {
     {
       episode: "Wichtige Updates",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/169-wichtige-updates-jbd8afdfpby1s",
-      timecode: 0,
+      timecode: 2290,
     },
   ],
   furtherReading: [
