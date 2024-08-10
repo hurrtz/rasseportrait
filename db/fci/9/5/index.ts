@@ -1,3 +1,4 @@
+import ShiTsu from "./208";
 import TibetanTerrier from "./209";
 
-export default { TibetanTerrier };
+export default { ShiTsu, TibetanTerrier };
