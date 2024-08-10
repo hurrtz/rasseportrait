@@ -150,6 +150,7 @@ export default ({ breed }: Props) => {
                         },
                       }}
                       onClick={() => openPodcast(url)}
+                      title={url}
                     />
                   </ListItemButton>
                 </ListItem>
@@ -170,6 +171,7 @@ export default ({ breed }: Props) => {
                     variant="outlined"
                     size="small"
                     onClick={() => openReadMore(url)}
+                    title={url}
                   />
                 ))}
             </Stack>
