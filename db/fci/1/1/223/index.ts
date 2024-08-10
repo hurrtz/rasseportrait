@@ -31,13 +31,21 @@ const breed: Breed = {
     {
       episode: "Summer Edition #4: Körper kräftig, aber nicht ohne Adel!",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-4-koerper-kraeftig-aber-nicht-ohne-adel-zjwmcmhv4vzuh",
-      timecode: 0,
+      timecode: 1502,
     },
   ],
   furtherReading: [
     {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Hollandse_Herdershond",
+    },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/HOLLANDISCHER-SCHAFERHUND-223.html",
+    },
+    {
+      name: "herdershond.ch",
+      url: "https://www.herdershond.ch/rasse/",
     },
   ],
 };
