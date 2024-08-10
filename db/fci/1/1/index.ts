@@ -8,6 +8,7 @@ import ShetlandSheepdog from "./88";
 import Briard from "./113";
 import BergamascoShepherdDog from "./194";
 import GermanShepherd from "./166";
+import BergerPicard from "./176";
 import DutchShepherd from "./223";
 import AustralianKelpie from "./293";
 import MajorcaShepherdDog from "./321";
@@ -23,6 +24,7 @@ export default {
   Briard,
   BergamascoShepherdDog,
   GermanShepherd,
+  BergerPicard,
   DutchShepherd,
   AustralianKelpie,
   MajorcaShepherdDog,
