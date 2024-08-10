@@ -10,6 +10,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import PodcastsIcon from "@mui/icons-material/Podcasts";
+import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
@@ -49,7 +50,7 @@ const FCIText = ({ fci }: { fci: FCI }) => {
   );
 };
 
-const getTime = ({ podcast: { timecode } }: { podcast: Podcast }) => {
+const getTime = (timecode: Podcast["timecode"]) => {
   const hours = Math.floor(timecode / 3600);
   const minutes = Math.floor((timecode % 3600) / 60);
   const seconds = timecode % 60;
@@ -57,8 +58,8 @@ const getTime = ({ podcast: { timecode } }: { podcast: Podcast }) => {
   return [hours, minutes, seconds];
 };
 
-const getTimeCopy = ({ podcast }: { podcast: Podcast }) => {
-  const time = getTime({ podcast });
+const getTimeCopy = (timecode: Podcast["timecode"]) => {
+  const time = getTime(timecode);
   const out = [];
 
   if (time[0]) {
@@ -115,10 +116,10 @@ export default ({ breed }: Props) => {
             <FCIText fci={fci} />
 
             <List dense>
-              {podcasts.map((podcast) => (
+              {podcasts.map(({ episode, url, timecode, type = "audio" }) => (
                 <ListItem
                   disablePadding
-                  key={podcast.episode}
+                  key={episode}
                   sx={{
                     backgroundColor: "#e3f2fd",
                     marginTop: 1,
@@ -128,12 +129,13 @@ export default ({ breed }: Props) => {
                 >
                   <ListItemButton>
                     <ListItemIcon>
-                      <PodcastsIcon />
+                      {type === "audio" && <PodcastsIcon />}
+                      {type === "video" && <OndemandVideoIcon />}
                     </ListItemIcon>
                     <ListItemText
-                      key={podcast.episode}
-                      primary={podcast.episode}
-                      secondary={getTimeCopy({ podcast })}
+                      key={episode}
+                      primary={episode}
+                      secondary={getTimeCopy(timecode)}
                       primaryTypographyProps={{
                         sx: {
                           whiteSpace: "nowrap",
@@ -142,7 +144,7 @@ export default ({ breed }: Props) => {
                           width: "100%",
                         },
                       }}
-                      onClick={() => openPodcast(podcast.url)}
+                      onClick={() => openPodcast(url)}
                     />
                   </ListItemButton>
                 </ListItem>

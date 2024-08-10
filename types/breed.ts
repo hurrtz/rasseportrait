@@ -13,6 +13,7 @@ export interface Podcast {
   episode: string;
   url: string;
   timecode: number;
+  type?: string;
 }
 
 interface FurtherReading {
