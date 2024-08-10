@@ -7,6 +7,7 @@ export interface FCI {
 interface Variant {
   names: string[];
   image: string;
+  furtherReading?: FurtherReading[];
 }
 
 export interface Podcast {

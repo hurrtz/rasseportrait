@@ -17,10 +17,22 @@ const breed: Breed = {
     {
       names: ["kurzhaarig"],
       image: getBreedImagePath({ ...fci, variant: "short" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chihuahua-kurzhaar",
+        },
+      ],
     },
     {
       names: ["langhaarig"],
       image: getBreedImagePath({ ...fci, variant: "long" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chihuahua-langhaar",
+        },
+      ],
     },
   ],
   podcast: [
@@ -37,11 +49,7 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
-    },
-    {
-      name: "VDH",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/CHIHUAHUA-218.html",
     },
   ],
 };

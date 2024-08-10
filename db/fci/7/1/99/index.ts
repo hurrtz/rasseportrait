@@ -14,12 +14,24 @@ const breed: Breed = {
   names: ["Weimaraner"],
   variants: [
     {
-      names: ["Kurhaarig"],
+      names: ["Kurzhaar"],
       image: getBreedImagePath({ ...fci, variant: "short" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/weimaraner-kurzhaar",
+        },
+      ],
     },
     {
-      names: ["Langhaarig"],
+      names: ["Langhaar"],
       image: getBreedImagePath({ ...fci, variant: "long" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/weimaraner-langhaar",
+        },
+      ],
     },
   ],
   fci,
@@ -37,11 +49,7 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
-    },
-    {
-      name: "VDH",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/WEIMARANER-99.html",
     },
   ],
 };

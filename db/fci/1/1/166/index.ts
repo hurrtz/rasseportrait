@@ -16,10 +16,22 @@ const breed: Breed = {
     {
       names: ["Stockhaar"],
       image: getBreedImagePath({ ...fci, variant: "short" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/deutscher-schaeferhund-stockhaar",
+        },
+      ],
     },
     {
       names: ["Langstockhaar"],
       image: getBreedImagePath({ ...fci, variant: "long" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/deutscher-schaeferhund-langstockhaar",
+        },
+      ],
     },
   ],
   fci,
@@ -39,14 +51,6 @@ const breed: Breed = {
     {
       name: "FCI",
       url: "https://www.fci.be/de/nomenclature/DEUTSCHER-SCHAEFERHUND-166.html",
-    },
-    {
-      name: "VDH",
-      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/deutscher-schaeferhund-langstockhaar",
-    },
-    {
-      name: "VDH",
-      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/deutscher-schaeferhund-stockhaar",
     },
   ],
 };

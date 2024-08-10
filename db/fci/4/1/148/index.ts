@@ -16,14 +16,32 @@ const breed: Breed = {
     {
       names: ["Kurzhaar"],
       image: getBreedImagePath({ ...fci, variant: "short" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/teckel-kurzhaar",
+        },
+      ],
     },
     {
       names: ["Langhaar"],
       image: getBreedImagePath({ ...fci, variant: "long" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/teckel-langhaar",
+        },
+      ],
     },
     {
       names: ["Rauhaar"],
       image: getBreedImagePath({ ...fci, variant: "wire" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/teckel-rauhhaar",
+        },
+      ],
     },
   ],
   fci,
@@ -41,11 +59,7 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
-    },
-    {
-      name: "VDH",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/DACHSHUND-148.html",
     },
   ],
 };

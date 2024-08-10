@@ -88,8 +88,13 @@ export default ({ breed }: Props) => {
       variants,
       fci,
       podcast: podcasts,
-      furtherReading: furtherReadings,
+      furtherReading: mainFurtherReadings,
     } = breed;
+
+    const furtherReadings = [
+      ...mainFurtherReadings,
+      ...(variants ? variants[0].furtherReading || [] : []),
+    ];
 
     const openPodcast = (url: string) => {
       window.open(url, "_blank");

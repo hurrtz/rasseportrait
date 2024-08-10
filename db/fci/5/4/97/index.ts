@@ -16,22 +16,52 @@ const breed: Breed = {
     {
       names: ["Pomeranian", "Zwergspitz"],
       image: getBreedImagePath({ ...fci, variant: "pomeranian" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/zwergspitz",
+        },
+      ],
     },
     {
       names: ["Kleinspitz"],
       image: getBreedImagePath({ ...fci, variant: "miniature" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/kleinspitz",
+        },
+      ],
     },
     {
       names: ["Mittelspitz"],
       image: getBreedImagePath({ ...fci, variant: "medium" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/mittelspitz",
+        },
+      ],
     },
     {
       names: ["Großspitz"],
       image: getBreedImagePath({ ...fci, variant: "large" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/grossspitz",
+        },
+      ],
     },
     {
       names: ["Wolfsspitz", "Keeshond"],
       image: getBreedImagePath({ ...fci, variant: "keeshound" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/wolfsspitz",
+        },
+      ],
     },
   ],
   fci,
@@ -49,11 +79,7 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
-    },
-    {
-      name: "VDH",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/DEUTSCHER-SPITZ-97.html",
     },
   ],
 };

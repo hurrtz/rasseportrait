@@ -16,18 +16,42 @@ const breed: Breed = {
     {
       names: ["Großpudel"],
       image: getBreedImagePath({ ...fci, variant: "standard" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/grosspudel",
+        },
+      ],
     },
     {
       names: ["Kleinpudel"],
       image: getBreedImagePath({ ...fci, variant: "medium" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/kleinpudel",
+        },
+      ],
     },
     {
       names: ["Zwergpudel"],
       image: getBreedImagePath({ ...fci, variant: "small" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chihuahua-kurzhaar",
+        },
+      ],
     },
     {
       names: ["Toy-Pudel"],
       image: getBreedImagePath({ ...fci, variant: "toy" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chihuahua-kurzhaar",
+        },
+      ],
     },
   ],
   fci,
@@ -50,11 +74,7 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
-    },
-    {
-      name: "VDH",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/PUDEL-172.html",
     },
   ],
 };

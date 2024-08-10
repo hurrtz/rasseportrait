@@ -16,10 +16,22 @@ const breed: Breed = {
     {
       names: ["Haarlos"],
       image: getBreedImagePath({ ...fci, variant: "hairless" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chinese-crested-dog-hairless",
+        },
+      ],
     },
     {
-      names: ["Powder Puff"],
+      names: ["Powderpuff"],
       image: getBreedImagePath({ ...fci, variant: "powderpuff" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chinese-crested-dog-powderpuff",
+        },
+      ],
     },
   ],
   fci,
@@ -37,11 +49,7 @@ const breed: Breed = {
     },
     {
       name: "FCI",
-      url: "",
-    },
-    {
-      name: "VDH",
-      url: "",
+      url: "https://www.fci.be/de/nomenclature/CHINESISCHER-SCHOPFHUND-288.html",
     },
   ],
 };

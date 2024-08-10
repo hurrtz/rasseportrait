@@ -16,18 +16,42 @@ const breed: Breed = {
     {
       names: ["Groenendael"],
       image: getBreedImagePath({ ...fci, variant: "groenendael" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/groenendael",
+        },
+      ],
     },
     {
       names: ["Laekenois"],
       image: getBreedImagePath({ ...fci, variant: "laekenois" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/laekenois",
+        },
+      ],
     },
     {
       names: ["Malinois", "Mechelaar"],
       image: getBreedImagePath({ ...fci, variant: "malinois" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/malinois",
+        },
+      ],
     },
     {
       names: ["Tervueren"],
       image: getBreedImagePath({ ...fci, variant: "tervueren" }),
+      furtherReading: [
+        {
+          name: "VDH",
+          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/tervueren",
+        },
+      ],
     },
   ],
   fci,
