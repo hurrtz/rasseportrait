@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardActionArea from "@mui/material/CardActionArea";
 import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
 import { styled } from "@mui/material/styles";
 import type { Breed, BreedIdentifier } from "../types/breed";
 
@@ -73,14 +72,6 @@ export default ({
                 {variants[0].names[0]}
               </Typography>
             )}
-            <Divider
-              sx={{ borderColor: "rgba(255, 255, 255, 0.25)", margin: "10px" }}
-            />
-            <Typography sx={{}} variant="caption" component="div">
-              {fci.standardNumber > 0 &&
-                `FCI Standardnummer ${fci.standardNumber}`}
-              {fci.standardNumber <= 0 && "—keine FCI-anerkannte Rasse—"}
-            </Typography>
           </Box>
         </Box>
       </CardActionArea>
