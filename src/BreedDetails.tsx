@@ -33,12 +33,11 @@ const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   backgroundSize: "cover",
 }));
 
-const FCIText = ({ fci }: { fci: FCI }) => {
-  if (fci && fci.standardNumber > 0) {
+const FCIText = ({ fci: { standardNumber, group, section } }: { fci: FCI }) => {
+  if (standardNumber > 0) {
     return (
       <Typography variant="body2" color="text.secondary">
-        FCI: Gruppe {fci.group}, Sektion: {fci.section}, Standardnummer:{" "}
-        {fci.standardNumber}
+        FCI: Standardnummer {standardNumber} (Gruppe {group}, Sektion {section})
       </Typography>
     );
   }
