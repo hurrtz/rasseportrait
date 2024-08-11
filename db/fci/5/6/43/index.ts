@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 59,
       episode: "Religionskriege bei Facebook, vegane Hunde und kleine Ritter",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/58-religionskriege-bei-facebook-vegane-hunde-und-kleine-ritter-u6g77nktkpqi2",
       timecode: 1157,

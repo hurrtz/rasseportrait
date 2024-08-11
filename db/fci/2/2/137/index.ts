@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 63,
       episode: "Hundepension, Katzenfänger & Let´s Dance",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/63-hundepension-katzenfaenger-lets-dance-dl5as9b3mwwhh",
       timecode: 2786,

@@ -11,6 +11,7 @@ interface Variant {
 }
 
 export interface Podcast {
+  number: number | string;
   episode: string;
   url: string;
   timecode: number;

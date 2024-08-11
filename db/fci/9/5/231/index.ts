@@ -22,7 +22,8 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
-      episode: "Summer Edition #6: Junger Mann zum Mitreisen gesucht!",
+      number: "Summer Edition #6",
+      episode: "Junger Mann zum Mitreisen gesucht!",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-6-junger-mann-zum-mitreisen-gesucht-oxv9o45d8w0ad",
       timecode: 1089,
     },

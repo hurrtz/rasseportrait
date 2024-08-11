@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 126,
       episode: "Podcast live: Entenschnabelmaulkorb",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/126-podcast-live-entenschnabelmaulkorb-b61210fz1bl75",
       timecode: 4408,

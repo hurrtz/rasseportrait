@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 82,
       episode: "Schönheit, Wahn & arme Schweine",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/82-schoenheit-wahn-arme-schweine-a9icwiyr0ey7v",
       timecode: 2869,

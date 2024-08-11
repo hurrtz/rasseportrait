@@ -16,7 +16,8 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
-      episode: "Summer Edition #7: Hobby Horsing for Olympia!",
+      number: "Summer Edition #7",
+      episode: "Hobby Horsing for Olympia!",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
       timecode: 1075,
     },

@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 64,
       episode:
         "Giftige Nüsse, Chihuahua im Rettungsdienst & Rütter als Lakritzfigur",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/64-giftige-nuesse-chihuahua-im-rettungsdienst-ruetter-als-lakritzfigur-1al7eu52bnser",

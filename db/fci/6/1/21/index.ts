@@ -25,6 +25,7 @@ const breed: Breed = {
   fci,
   podcast: [
     {
+      number: 129,
       episode: "Einfach mal sitzen",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/129-einfach-mal-sitzen-dbc2cl161xydt",
       timecode: 1132,

@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 111,
       episode: '"Hundjes", Schreckreiz & Italopop',
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/111-hundjes-schreckreiz-italopop-ba9cvkn3rq8je",
       timecode: 2505,

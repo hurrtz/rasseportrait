@@ -29,6 +29,7 @@ const breed: Breed = {
   fci,
   podcast: [
     {
+      number: 166,
       episode: "Zwingerclub",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/166-zwingerclub-2ok8zkm2k969d",
       timecode: 2947,

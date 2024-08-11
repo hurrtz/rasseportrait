@@ -22,6 +22,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 69,
       episode: "Hunde bei Wärme im Auto, Freiwilligendienst & leckere Häppchen",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/69-hunde-bei-waerme-im-auto-freiwilligendienst-leckere-haeppchen-f6rev34kklaku",
       timecode: 2276,

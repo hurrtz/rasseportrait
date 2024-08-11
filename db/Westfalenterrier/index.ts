@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci, breedName: "Westfalenterrier" }),
   podcast: [
     {
+      number: "Exklusiv #2",
       episode: "Live-Podcast Delbrück: Therapie-Schafe & Schnaps-Hasen",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-delbrueck-therapie-schafe-schnaps-hasen-l8amf2kemppre",
       timecode: 4151,

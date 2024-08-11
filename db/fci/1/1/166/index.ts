@@ -37,6 +37,7 @@ const breed: Breed = {
   fci,
   podcast: [
     {
+      number: 55,
       episode:
         "Hundetraining aus der Sprühflasche, Maulkorb & der Deutsche Schäferhund",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/55-hundetraining-aus-der-spruehflasche-maulkorb-der-deutsche-schaeferhund-v2o7yjc6mh4we",

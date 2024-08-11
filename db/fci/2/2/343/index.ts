@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 97,
       episode: "Blue Monday, warme Omas & Karnevalspferde",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/97-blue-monday-warme-omas-karnevalspferde-izivqxtjko9uh",
       timecode: 702,

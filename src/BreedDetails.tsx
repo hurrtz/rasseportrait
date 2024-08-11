@@ -121,40 +121,42 @@ export default ({ breed, children }: Props) => {
             <FCIText fci={fci} />
 
             <List dense>
-              {podcasts.map(({ episode, url, timecode, type = "audio" }) => (
-                <ListItem
-                  disablePadding
-                  key={episode}
-                  sx={{
-                    backgroundColor: "#e3f2fd",
-                    marginTop: 1,
-                    marginBottom: 1,
-                    borderRadius: 2,
-                  }}
-                >
-                  <ListItemButton>
-                    <ListItemIcon>
-                      {type === "audio" && <PodcastsIcon />}
-                      {type === "video" && <OndemandVideoIcon />}
-                    </ListItemIcon>
-                    <ListItemText
-                      key={episode}
-                      primary={episode}
-                      secondary={getTimeCopy(timecode)}
-                      primaryTypographyProps={{
-                        sx: {
-                          whiteSpace: "nowrap",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                          width: "100%",
-                        },
-                      }}
-                      onClick={() => openPodcast(url)}
-                      title={url}
-                    />
-                  </ListItemButton>
-                </ListItem>
-              ))}
+              {podcasts.map(
+                ({ number, episode, url, timecode, type = "audio" }) => (
+                  <ListItem
+                    disablePadding
+                    key={number}
+                    sx={{
+                      backgroundColor: "#e3f2fd",
+                      marginTop: 1,
+                      marginBottom: 1,
+                      borderRadius: 2,
+                    }}
+                  >
+                    <ListItemButton>
+                      <ListItemIcon>
+                        {type === "audio" && <PodcastsIcon />}
+                        {type === "video" && <OndemandVideoIcon />}
+                      </ListItemIcon>
+                      <ListItemText
+                        key={episode}
+                        primary={episode}
+                        secondary={`Folge ${number} — ${getTimeCopy(timecode)}`}
+                        primaryTypographyProps={{
+                          sx: {
+                            whiteSpace: "nowrap",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            width: "100%",
+                          },
+                        }}
+                        onClick={() => openPodcast(url)}
+                        title={url}
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                ),
+              )}
             </List>
 
             <Typography gutterBottom variant="body2" component="div">

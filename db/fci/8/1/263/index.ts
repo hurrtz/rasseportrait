@@ -16,12 +16,14 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: "Exklusiv #1",
       episode:
         "Live-Podcast Arnsberg: Katzen-Content, Special-Effects und Tierschutz",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-arnsberg-katzen-content-special-effects-und-tierschutz-wl2e731548ug8",
       timecode: 4179,
     },
     {
+      number: "Exklusiv #1",
       episode:
         "Live-Podcast Arnsberg: Katzen-Content, Special-Effects und Tierschutz",
       url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-1-live-podcast-arnsberg-katzen-content-special-effects-und-tierschutz-1007833",

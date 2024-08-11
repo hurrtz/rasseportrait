@@ -16,7 +16,8 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
-      episode: "Summer Edition #2: Sommernostalgie und Bahnärger",
+      number: "Summer Edition #2",
+      episode: "Sommernostalgie und Bahnärger",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-2-sommernostalgie-und-bahnaerger-0fne38y8v7soe",
       timecode: 1416,
     },

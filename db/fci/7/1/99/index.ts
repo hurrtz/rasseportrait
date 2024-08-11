@@ -37,6 +37,7 @@ const breed: Breed = {
   fci,
   podcast: [
     {
+      number: 52,
       episode: "Richtig Helfen, fliegende Kotbeutel & der Weimaraner",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/52-richtig-helfen-fliegende-kotbeutel-der-weimaraner-m5dz64ld7wmvh",
       timecode: 2427,

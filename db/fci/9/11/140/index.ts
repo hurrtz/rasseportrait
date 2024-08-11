@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 160,
       episode: "Wettkampfdruck & Dackelverbot",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/160-wettkampfdruck-dackelverbot-u55fefrt71llx",
       timecode: 3220,

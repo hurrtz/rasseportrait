@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 121,
       episode: "Morbus Bahlsen & Acoustic Kitty",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/121-morbus-bahlsen-acoustic-kitty-qdz3pnuu3ngfr",
       timecode: 4346,

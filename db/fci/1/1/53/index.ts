@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 127,
       episode: "Podcast live II: Achterbahn der Feelings",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/127-podcast-live-ii-achterbahn-der-feelings-kk19bjk32yh1x",
       timecode: 985,

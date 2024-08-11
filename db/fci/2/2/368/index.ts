@@ -20,6 +20,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 164,
       episode: "Sofafolge",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/164-sofafolge-k911jyp1xsjm0",
       timecode: 1917,

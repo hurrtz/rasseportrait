@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 147,
       episode: "Braunes Rauschen & veganes Futter",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/147-braunes-rauschen-veganes-futter-rq1a38523a8db",
       timecode: 2865,

@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 136,
       episode: "Positive Verstärkung, Männergrippe & Zurückrudern",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/136-positive-verstaerkung-maennergrippe-zurueckrudern-pcewcbc9hru3t",
       timecode: 1380,

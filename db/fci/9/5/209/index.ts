@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 61,
       episode: "Ein Helm für Chihuahuas, Kack-Typen & Mähroboter",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/61-ein-helm-fuer-chihuahuas-kack-typen-maehroboter-jd7qib7z8uurv",
       timecode: 2589,

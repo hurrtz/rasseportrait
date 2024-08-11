@@ -16,6 +16,7 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
+      number: 70,
       episode:
         "Martin wird Katzenprofi, Hitzetipps kompakt & gläserne Hundekoffer",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/70-martin-wird-katzenprofi-hitzetipps-kompakt-glaeserne-hundekoffer-ot6914r1cd1bo",

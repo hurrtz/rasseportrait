@@ -29,7 +29,8 @@ const breed: Breed = {
   fci,
   podcast: [
     {
-      episode: "Summer Edition #4: Körper kräftig, aber nicht ohne Adel!",
+      number: "Summer Edition #4",
+      episode: "Körper kräftig, aber nicht ohne Adel!",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-4-koerper-kraeftig-aber-nicht-ohne-adel-zjwmcmhv4vzuh",
       timecode: 1502,
     },
