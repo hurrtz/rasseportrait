@@ -4,15 +4,19 @@ export const getBreedImagePath = ({
   standardNumber,
   variant = "default",
   breedName,
-  artStyle = "artsy",
+  artStyle = "realistic",
 }: FCI & {
   variant?: string;
   breedName?: string;
   artStyle?: "artsy" | "realistic";
-}) =>
-  standardNumber >= 0
-    ? `illustrations/fci/${standardNumber}/illustration/${artStyle}/${variant}.jpeg`
-    : `illustrations/${breedName}/illustration/${artStyle}/${variant}.jpeg`;
+}) => {
+  console.log(window.sessionStorage.getItem("artStyle"));
+  const currentArtStyle = window.sessionStorage.getItem("artStyle") || artStyle;
+
+  return standardNumber >= 0
+    ? `illustrations/fci/${standardNumber}/illustration/${currentArtStyle}/${variant}.jpeg`
+    : `illustrations/${breedName}/illustration/${currentArtStyle}/${variant}.jpeg`;
+};
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
