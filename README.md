@@ -16,4 +16,4 @@ When a pull request is merged, I shall push the change into the github pages bra
 
 ### Current status
 
-The list should be well and about till **episode 157** (inclusive).
+The list is **up to date** and includes all episodes till **Summer Edition #7: Hobby Horsing for Olympia!** (inclusive).
