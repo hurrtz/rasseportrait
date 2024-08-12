@@ -1,14 +1,12 @@
 import type { Breed, FCI } from "../types/breed";
 
 export const getBreedImagePath = ({
-  group,
-  section,
   standardNumber,
   variant = "default",
   breedName,
 }: FCI & { variant?: string; breedName?: string }) =>
   standardNumber >= 0
-    ? `illustrations/fci/${group}/${section}/${standardNumber}/${variant}.jpeg`
+    ? `illustrations/fci/${standardNumber}/${variant}.jpeg`
     : `illustrations/${breedName}/${variant}.jpeg`;
 
 /* takes the list of all breeds with their variants and makes it so

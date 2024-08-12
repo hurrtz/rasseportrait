@@ -1,17 +1,41 @@
-import Section1 from "./1";
-import Section2 from "./2";
-import Section3 from "./3";
-import Section4 from "./4";
-import Section5 from "./5";
-import Section6 from "./6";
-import Section7 from "./7";
+import type { Breed, FCI } from "../../../types/breed";
+import { getBreedImagePath } from "../../../src/utils";
 
-export default {
-  ...Section1,
-  ...Section2,
-  ...Section3,
-  ...Section4,
-  ...Section5,
-  ...Section6,
-  ...Section7,
+const fci: FCI = {
+  group: 8,
+  section: 2,
+  standardNumber: 5,
 };
+
+const { standardNumber: id } = fci;
+
+const breed: Breed = {
+  id,
+  names: ["English Cocker Spaniel"],
+  fci,
+  image: getBreedImagePath({ ...fci }),
+  podcast: [
+    {
+      number: 113,
+      episode: "Welpenhandel, Wolfsbegegnung & Ölkäfer",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/113-welpenhandel-wolfsbegegnung-oelkaefer-05xtswrnw6hnb",
+      timecode: 2298,
+    },
+  ],
+  furtherReading: [
+    {
+      name: "Wikipedia",
+      url: "https://de.wikipedia.org/wiki/English_Cocker_Spaniel",
+    },
+    {
+      name: "FCI",
+      url: "https://www.fci.be/de/nomenclature/ENGLISH-COCKER-SPANIEL-5.html",
+    },
+    {
+      name: "VDH",
+      url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/english-cocker-spaniel",
+    },
+  ],
+};
+
+export default breed;
