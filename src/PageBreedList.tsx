@@ -14,6 +14,7 @@ const PageBreedList = () => {
   const [searchValue, setSearchValue] = useState("");
   const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
   const isArtStyleRealistic =
+    window.sessionStorage.getItem("artStyle") === null ||
     window.sessionStorage.getItem("artStyle") === "realistic";
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {

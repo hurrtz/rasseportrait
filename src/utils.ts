@@ -4,14 +4,16 @@ export const getBreedImagePath = ({
   standardNumber,
   variant = "default",
   breedName,
-  artStyle = "realistic",
 }: FCI & {
   variant?: string;
   breedName?: string;
   artStyle?: "artsy" | "realistic";
 }) => {
-  console.log(window.sessionStorage.getItem("artStyle"));
-  const currentArtStyle = window.sessionStorage.getItem("artStyle") || artStyle;
+  const storedArtStyleIsRealistic =
+    window.sessionStorage.getItem("artStyle") === null ||
+    window.sessionStorage.getItem("artStyle") === "realistic";
+
+  const currentArtStyle = storedArtStyleIsRealistic ? "realistic" : "artsy";
 
   return standardNumber >= 0
     ? `illustrations/fci/${standardNumber}/illustration/${currentArtStyle}/${variant}.jpeg`
