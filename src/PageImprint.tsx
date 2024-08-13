@@ -40,13 +40,13 @@ const Imprint = () => (
       </a>{" "}
       von Martin Rütter und Katharina Adick. Es enthält eine nicht verbindliche
       kuratierte Liste aller Episoden, die ein Rasseportrait enthalten. Dieses
-      Projekt ist in keiner Weise beauftragt von RTL oder einer teilnehmenden
-      oder dem Podcast assoziierten Personen.
+      Projekt ist in keiner Weise beauftragt von RTL oder einer der
+      teilnehmenden oder der Produktion des Podcasts mitwirkenden Personen.
     </Typography>
 
     <Typography variant="body2" gutterBottom>
       Bei Problemen, Änderungswünschen oder sonstigem Feedback wenden Sie sich
-      gern an die unten stehenden Kontaktmöglichkeiten.
+      gern an die unten stehende Kontaktmöglichkeit.
     </Typography>
 
     <Typography variant="h3" gutterBottom>
