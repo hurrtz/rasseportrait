@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "copyIllustrations": "node scripts/copyIllustrations.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "node scripts/copyIllustrations.js",
+    "prestart": "npm run copyIllustrations",
     "start": "webpack serve --open",
-    "prebuild": "",
+    "prebuild": "npm run copyIllustrations",
     "build": "webpack",
     "prepare": "husky"
   },
