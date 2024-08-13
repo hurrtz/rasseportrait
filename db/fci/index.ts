@@ -77,6 +77,7 @@ import FCI_Standardnumber_249 from "./249";
 import FCI_Standardnumber_255 from "./255";
 import FCI_Standardnumber_262 from "./262";
 import FCI_Standardnumber_263 from "./263";
+import FCI_Standardnumber_270 from "./270";
 import FCI_Standardnumber_283 from "./283";
 import FCI_Standardnumber_285 from "./285";
 import FCI_Standardnumber_286 from "./286";
@@ -181,6 +182,7 @@ export default {
   FCI_Standardnumber_255,
   FCI_Standardnumber_262,
   FCI_Standardnumber_263,
+  FCI_Standardnumber_270,
   FCI_Standardnumber_283,
   FCI_Standardnumber_285,
   FCI_Standardnumber_286,
