@@ -16,11 +16,10 @@ const breed: Breed = {
   image: getBreedImagePath({ ...fci }),
   podcast: [
     {
-      number: 65,
-      episode:
-        "Ein Keks mit Folgen, Körpersprache für Hunde & schöne Geschenke",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/65-ein-keks-mit-folgen-koerpersprache-fuer-hunde-schoene-geschenke-362zgzakgwpmb",
-      timecode: 2331,
+      number: 103,
+      episode: "Feindliche Natur, Jagdverhalten & Hundehomöopathie",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/103-feindliche-natur-jagdverhalten-hundehomoeopathie-w2n7ys2hcqab2",
+      timecode: 2280,
     },
   ],
   furtherReading: [
