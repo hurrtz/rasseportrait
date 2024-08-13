@@ -4,17 +4,20 @@ import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
-import HomeIcon from "@mui/icons-material/Home";
 import BadgeIcon from "@mui/icons-material/Badge";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const handleMailClick = () => {
-  window.open("mailto:info@tobiaswinkler.berlin", "_blank");
+  window.open("mailto:rasseportrait@tobiaswinkler.berlin", "_blank");
+};
+
+const handleURLClick = (url: string) => {
+  window.open(url, "_blank");
 };
 
 const Imprint = () => (
@@ -59,14 +62,6 @@ const Imprint = () => (
         </ListItemAvatar>
         <ListItemText primary="Tobias Winkler" />
       </ListItem>
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>
-            <HomeIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Zeuschelstraße 97, 13127 Berlin" />
-      </ListItem>
       <ListItem disablePadding>
         <ListItemButton>
           <ListItemAvatar>
@@ -75,18 +70,40 @@ const Imprint = () => (
             </Avatar>
           </ListItemAvatar>
           <ListItemText
-            primary="info@tobiaswinkler.berlin"
+            primary="rasseportrait@tobiaswinkler.berlin"
             onClick={handleMailClick}
           />
         </ListItemButton>
       </ListItem>
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>
-            <PhoneIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="+491635460791" />
+      <ListItem disablePadding>
+        <ListItemButton>
+          <ListItemAvatar>
+            <Avatar>
+              <LinkedInIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary="LinkedIn"
+            onClick={() =>
+              handleURLClick(
+                "https://www.linkedin.com/in/tobias-winkler-87a08210b/",
+              )
+            }
+          />
+        </ListItemButton>
+      </ListItem>
+      <ListItem disablePadding>
+        <ListItemButton>
+          <ListItemAvatar>
+            <Avatar>
+              <GitHubIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary="Github"
+            onClick={() => handleURLClick("https://github.com/hurrtz")}
+          />
+        </ListItemButton>
       </ListItem>
     </List>
   </Box>
