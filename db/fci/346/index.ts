@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Giftwarnung, Zeckenspray & Hühner-Hacks",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/141-giftwarnung-zeckenspray-huehner-hacks-gds039ru762p9",
       timecode: 2594,
+      airDateTimestamp: 1700701200000,
     },
   ],
   furtherReading: [

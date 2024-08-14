@@ -16,6 +16,7 @@ export interface Podcast {
   url: string;
   timecode: number;
   type?: string;
+  airDateTimestamp: number;
 }
 
 interface FurtherReading {

@@ -19,6 +19,7 @@ const breed: Breed = {
         "Live-Podcast Arnsberg: Katzen-Content, Special-Effects und Tierschutz",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-arnsberg-katzen-content-special-effects-und-tierschutz-wl2e731548ug8",
       timecode: 4179,
+      airDateTimestamp: 1718240400000,
     },
     {
       number: "Exklusiv #1",
@@ -27,6 +28,7 @@ const breed: Breed = {
       url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-1-live-podcast-arnsberg-katzen-content-special-effects-und-tierschutz-1007833",
       timecode: 4133,
       type: "video",
+      airDateTimestamp: 1718240400000,
     },
   ],
   furtherReading: [

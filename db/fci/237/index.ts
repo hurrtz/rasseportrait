@@ -24,6 +24,7 @@ const breed: Breed = {
       episode: "Jahresrückblick (mit Conny Sporrer)",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/146-jahresrueckblick-mit-conny-sporrer-8m1rnr25r4dam",
       timecode: 2024,
+      airDateTimestamp: 1703725200000,
     },
   ],
   furtherReading: [

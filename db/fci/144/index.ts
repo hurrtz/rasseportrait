@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Ticketbetrug, Fakeprofile & Schadstoffe im Hundespielzeug",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/80-ticketbetrug-fakeprofile-schadstoffe-im-hundespielzeug-3s90k5fnxokpg",
       timecode: 2742,
+      airDateTimestamp: 1663808400000,
     },
   ],
   furtherReading: [

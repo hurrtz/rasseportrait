@@ -23,6 +23,7 @@ const breed: Breed = {
       episode: "Funkstille, Fliegen & Hochstaplersyndrom",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/132-funkstille-fliegen-hochstaplersyndrom-vw7v85dyj5wp9",
       timecode: 2264,
+      airDateTimestamp: 1695258000000,
     },
   ],
   furtherReading: [

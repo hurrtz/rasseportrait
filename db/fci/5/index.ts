@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Welpenhandel, Wolfsbegegnung & Ölkäfer",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/113-welpenhandel-wolfsbegegnung-oelkaefer-05xtswrnw6hnb",
       timecode: 2298,
+      airDateTimestamp: 1683766800000,
     },
   ],
   furtherReading: [

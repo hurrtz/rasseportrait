@@ -19,6 +19,7 @@ const breed: Breed = {
         "Giftige Nüsse, Chihuahua im Rettungsdienst & Rütter als Lakritzfigur",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/64-giftige-nuesse-chihuahua-im-rettungsdienst-ruetter-als-lakritzfigur-1al7eu52bnser",
       timecode: 2551,
+      airDateTimestamp: 1654131600000,
     },
   ],
   furtherReading: [

@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Otterjagd & Dackelkatzen",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/157-otterjagd-dackelkatzen-jfhrn0c2yrt91",
       timecode: 2238,
+      airDateTimestamp: 1710378000000,
     },
   ],
   furtherReading: [

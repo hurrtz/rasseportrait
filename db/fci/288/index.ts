@@ -40,6 +40,7 @@ const breed: Breed = {
       episode: "Oh, wie schön ist Panama",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/123-oh-wie-schoen-ist-panama-92aq873dx2z0n",
       timecode: 1907,
+      airDateTimestamp: 1689814800000,
     },
   ],
   furtherReading: [

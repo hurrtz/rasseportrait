@@ -37,16 +37,19 @@ const App = () => {
   });
   const sortedBreeds = enrichedBreedsWithVariants.sort(
     ({ fci: fciA, podcast: podcastA }, { fci: fciB, podcast: podcastB }) => {
-      if (settings.sortOrder === "fci-standard-number") {
-        return fciA?.standardNumber - fciB?.standardNumber;
+      if (settings.sortDirection === "asc") {
+        if (settings.sortOrder === "fci-standard-number") {
+          return fciA?.standardNumber - fciB?.standardNumber;
+        }
+
+        return podcastA[0].airDateTimestamp - podcastB[0].airDateTimestamp;
       }
 
-      const episodeNumberA =
-        typeof podcastA[0].number === "number" ? podcastA[0].number : Infinity;
-      const episodeNumberB =
-        typeof podcastB[0].number === "number" ? podcastB[0].number : Infinity;
+      if (settings.sortOrder === "fci-standard-number") {
+        return fciB?.standardNumber - fciA?.standardNumber;
+      }
 
-      return episodeNumberA - episodeNumberB;
+      return podcastB[0].airDateTimestamp - podcastA[0].airDateTimestamp;
     },
   );
 
@@ -63,12 +66,16 @@ const App = () => {
     setSettings(newSettings);
   };
 
-  const handleChangeSortOrder = () => {
-    const newSortOrder =
-      settings.sortOrder === "fci-standard-number"
-        ? "episode-number"
-        : "fci-standard-number";
-    const newSettings: Settings = { ...settings, sortOrder: newSortOrder };
+  const handleChangeSortOrder = (newSortOrder: Settings["sortOrder"]) => {
+    let newSettings: Settings = { ...settings };
+
+    // same sort order => toggle sort direction
+    if (settings.sortOrder === newSortOrder) {
+      newSettings.sortDirection =
+        newSettings.sortDirection === "asc" ? "desc" : "asc";
+    }
+
+    newSettings.sortOrder = newSortOrder;
 
     storeSettings(newSettings);
     setSettings(newSettings);
@@ -76,7 +83,11 @@ const App = () => {
 
   return (
     <SettingsContext.Provider
-      value={{ sortOrder: settings.sortOrder, artStyle: settings.artStyle }}
+      value={{
+        sortOrder: settings.sortOrder,
+        artStyle: settings.artStyle,
+        sortDirection: settings.sortDirection,
+      }}
     >
       <Container>
         {bottomNavigationValue === "breeds_list" && (

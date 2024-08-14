@@ -19,6 +19,7 @@ const breed: Breed = {
         "Das traurige Schicksal der Galgos, Conny Reimann & Mythos Wildfutter",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/47-das-traurige-schicksal-der-galgos-conny-reimann-mythos-wildfutter-qqta8btva9n8i",
       timecode: 1115,
+      airDateTimestamp: 1643850000000,
     },
   ],
   furtherReading: [

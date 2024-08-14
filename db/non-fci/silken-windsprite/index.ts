@@ -16,6 +16,7 @@ const breed: Breed = {
       episode: "Biber & Bark Date",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/165-biber-bark-date-qfe8t7gfo7siq",
       timecode: 2178,
+      airDateTimestamp: 1715216400000,
     },
   ],
   furtherReading: [

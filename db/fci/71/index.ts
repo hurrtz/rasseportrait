@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Rattenfänger",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/158-rattenfaenger-2gvydqa8svsq9",
       timecode: 2985,
+      airDateTimestamp: 1710982800000,
     },
   ],
   furtherReading: [

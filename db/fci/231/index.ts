@@ -24,6 +24,7 @@ const breed: Breed = {
       episode: "Junger Mann zum Mitreisen gesucht!",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-6-junger-mann-zum-mitreisen-gesucht-oxv9o45d8w0ad",
       timecode: 1089,
+      airDateTimestamp: 1722474000000,
     },
   ],
   furtherReading: [

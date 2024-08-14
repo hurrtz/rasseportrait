@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Jubiläumsfolge live aus dem Walfisch",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/101-jubilaeumsfolge-live-aus-dem-walfisch-du0ci4j36ofr2",
       timecode: 2983,
+      airDateTimestamp: 1676509200000,
     },
   ],
   furtherReading: [

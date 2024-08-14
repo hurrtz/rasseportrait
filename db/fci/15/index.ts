@@ -60,6 +60,7 @@ const breed: Breed = {
       episode: "Tierschutzhundeverordnung, Strohhalmtest & Zwingerhaltung",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/62-tierschutzhundeverordnung-strohhalmtest-zwingerhaltung-vbf1lpiq5foqn",
       timecode: 3729,
+      airDateTimestamp: 1652922000000,
     },
   ],
   furtherReading: [

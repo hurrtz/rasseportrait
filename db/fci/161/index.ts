@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "ASMR, Beagle und Wombatkacke",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/45-asmr-beagle-und-wombatkacke-iesctegwj6jg6",
       timecode: 1009,
+      airDateTimestamp: 1642640400000,
     },
   ],
   furtherReading: [

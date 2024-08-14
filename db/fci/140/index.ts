@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Wettkampfdruck & Dackelverbot",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/160-wettkampfdruck-dackelverbot-u55fefrt71llx",
       timecode: 3220,
+      airDateTimestamp: 1712192400000,
     },
   ],
   furtherReading: [

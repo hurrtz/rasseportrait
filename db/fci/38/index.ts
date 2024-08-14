@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Hundeparfüm, „Die Unvermittelbaren“ & der Corgi",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/50-hundeparfuem-die-unvermittelbaren-der-corgi-fkny11pjvlp4x",
       timecode: 2925,
+      airDateTimestamp: 1645664400000,
     },
   ],
   furtherReading: [

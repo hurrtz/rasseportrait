@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "New York, Husumer Protestschwein, Kupierte Ohren",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/81-new-york-husumer-protestschwein-kupierte-ohren-exok0jysekhyi",
       timecode: 2776,
+      airDateTimestamp: 1664413200000,
     },
   ],
   furtherReading: [

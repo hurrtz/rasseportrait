@@ -28,6 +28,7 @@ const breed: Breed = {
       episode: "Ebay, Aquadom & Frohe Weihnachten",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/93-ebay-aquadom-frohe-weihnachten-vunq6bh8makya",
       timecode: 1733,
+      airDateTimestamp: 1671670800000,
     },
   ],
   furtherReading: [

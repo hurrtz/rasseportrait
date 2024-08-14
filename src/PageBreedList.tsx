@@ -1,6 +1,7 @@
 import React, { useState, type ChangeEvent } from "react";
 import InsertPhotoIcon from "@mui/icons-material/InsertPhoto";
-import SortIcon from "@mui/icons-material/Sort";
+import FormatListNumberedIcon from "@mui/icons-material/FormatListNumbered";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
@@ -9,17 +10,27 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import type { BreedIdentifier } from "../types/breed";
+import type { Settings } from "../types/settings";
 import BreedList from "./BreedList";
 import Modal from "./Modal";
 
 const settingsActions = [
-  { icon: <InsertPhotoIcon />, name: "Bildstil" },
-  { icon: <SortIcon />, name: "Sortierung" },
+  { icon: <InsertPhotoIcon />, name: "Bildstil", id: "artstyle" },
+  {
+    icon: <FormatListNumberedIcon />,
+    name: "Sortierung: FCI-Nummern",
+    id: "sort_fci",
+  },
+  {
+    icon: <CalendarMonthIcon />,
+    name: "Sortierung: Ausstrahlungsdatum",
+    id: "sort_date",
+  },
 ];
 
 interface Props {
   onChangeArtStyle: () => void;
-  onChangeSortOrder: () => void;
+  onChangeSortOrder: (sortOrder: Settings["sortOrder"]) => void;
 }
 
 const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
@@ -53,6 +64,9 @@ const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
           ".MuiSpeedDial-fab": {
             backgroundColor: "#666",
           },
+          ".MuiSpeedDial-actions": {
+            whiteSpace: "nowrap",
+          },
         }}
         icon={<SettingsIcon />}
         onClose={handleSettingsModalClose}
@@ -62,15 +76,17 @@ const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
       >
         {settingsActions.map((action) => (
           <SpeedDialAction
-            key={action.name}
+            key={action.id}
             icon={action.icon}
             tooltipTitle={action.name}
             tooltipOpen
             onClick={() => {
-              if (action.name === "Bildstil") {
+              if (action.id === "artstyle") {
                 onChangeArtStyle();
-              } else if (action.name === "Sortierung") {
-                onChangeSortOrder();
+              } else if (action.id === "sort_fci") {
+                onChangeSortOrder("fci-standard-number");
+              } else if (action.id === "sort_date") {
+                onChangeSortOrder("airDate");
               }
 
               handleSettingsModalClose();

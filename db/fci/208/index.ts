@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Sommernostalgie und Bahnärger",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-2-sommernostalgie-und-bahnaerger-0fne38y8v7soe",
       timecode: 1416,
+      airDateTimestamp: 1720054800000,
     },
   ],
   furtherReading: [

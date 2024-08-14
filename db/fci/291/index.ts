@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Lost in the Sauerland, Boris Becker & Hunderassen-Studie",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/60-lost-in-the-sauerland-boris-becker-hunderassen-studie-qgpee4hjubcmh",
       timecode: 2079,
+      airDateTimestamp: 1651712400000,
     },
   ],
   furtherReading: [

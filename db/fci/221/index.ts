@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Ein bisschen Paloma",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/133-ein-bisschen-paloma-189d70agws5z3",
       timecode: 2628,
+      airDateTimestamp: 1695862800000,
     },
   ],
   furtherReading: [

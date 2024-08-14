@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Hobby Horsing for Olympia!",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
       timecode: 1075,
+      airDateTimestamp: 1723078800000,
     },
   ],
   furtherReading: [

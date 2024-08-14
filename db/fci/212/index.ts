@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Wolfskralle, dicke Hunde & sprechende Pflanzen",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/100-wolfskralle-dicke-hunde-sprechende-pflanzen-wat87q06xwqct",
       timecode: 1891,
+      airDateTimestamp: 1675904400000,
     },
   ],
   furtherReading: [

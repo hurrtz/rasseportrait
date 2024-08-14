@@ -18,6 +18,7 @@ const breed: Breed = {
       episode: "Beef, vegane Wurst & Schutzhund-Training mit Nebenwirkungen",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/84-beef-vegane-wurst-schutzhund-training-mit-nebenwirkungen-dtn7aqb2nwlal",
       timecode: 2314,
+      airDateTimestamp: 1666227600000,
     },
   ],
   furtherReading: [
