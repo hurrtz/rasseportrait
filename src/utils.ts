@@ -16,7 +16,7 @@ export const getBreedImagePath = ({
 }) =>
   standardNumber > 0
     ? `illustrations/fci/${standardNumber}/illustration/${artStyle}/${variant}.jpeg`
-    : `illustrations/${id}/illustration/${artStyle}/${variant}.jpeg`;
+    : `illustrations/non-fci/${id}/illustration/${artStyle}/${variant}.jpeg`;
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
