@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useContext,
-  type ChangeEvent,
-  type Dispatch,
-  type SetStateAction,
-} from "react";
+import React, { useState, useContext, type ChangeEvent } from "react";
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -13,13 +7,12 @@ import Switch from "@mui/material/Switch";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import type { BreedIdentifier } from "../types/breed";
-import type { Settings } from "../types/settings";
 import { SettingsContext } from "./contexts/Settings";
 import BreedList from "./BreedList";
 import Modal from "./Modal";
 
 interface Props {
-  onChangeArtStyle: Dispatch<SetStateAction<Settings["artStyle"]>>;
+  onChangeArtStyle: () => void;
 }
 
 const PageBreedList = ({ onChangeArtStyle }: Props) => {
@@ -63,11 +56,7 @@ const PageBreedList = ({ onChangeArtStyle }: Props) => {
               label={`Bildstil: ${isArtStyleRealistic ? "Realistisch" : "Künstlerisch"}`}
               labelPlacement="end"
               checked={!isArtStyleRealistic}
-              onChange={(value: any) =>
-                onChangeArtStyle(
-                  value.currentTarget.checked ? "artsy" : "realistic",
-                )
-              }
+              onChange={onChangeArtStyle}
             />
           </FormGroup>
         </FormControl>

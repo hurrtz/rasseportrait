@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -12,26 +12,51 @@ import { SettingsContext } from "./contexts/Settings";
 import { flattenAndEnrichBreedVariants } from "./utils";
 import type { Settings } from "../types/settings";
 
+const DEFAULT_SETTINGS: Settings = {
+  artStyle: "realistic",
+};
+
+const storedSettings = window.localStorage.getItem("settings");
+
 const App = () => {
-  const [artStyle, setArtStyle] = useState<Settings["artStyle"]>("realistic");
+  const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
+
+  useEffect(() => {
+    if (storedSettings) {
+      try {
+        const settings = JSON.parse(storedSettings) as Settings;
+        setSettings(settings);
+      } catch {}
+    }
+  }, [storedSettings]);
+
   const [bottomNavigationValue, setBottomNavigationValue] =
     useState("breeds_list");
 
   const breeds = Object.values(breedsList);
   const enrichedBreedsWithVariants = flattenAndEnrichBreedVariants({
     breeds,
-    artStyle,
+    artStyle: settings.artStyle,
   });
   const sortedBreeds = enrichedBreedsWithVariants.sort(
     ({ fci: fci1 }, { fci: fciB }) => fci1.standardNumber - fciB.standardNumber,
   );
 
+  const handleChangeArtStyle = () => {
+    const newArtStyle =
+      settings.artStyle === "realistic" ? "artsy" : "realistic";
+    const newSettings: Settings = { ...settings, artStyle: newArtStyle };
+
+    window.localStorage.setItem("settings", JSON.stringify(newSettings));
+    setSettings(newSettings);
+  };
+
   return (
-    <SettingsContext.Provider value={{ artStyle }}>
+    <SettingsContext.Provider value={{ artStyle: settings.artStyle }}>
       <Container>
         {bottomNavigationValue === "breeds_list" && (
           <BreedsContext.Provider value={sortedBreeds}>
-            <PageBreedList onChangeArtStyle={setArtStyle} />
+            <PageBreedList onChangeArtStyle={handleChangeArtStyle} />
           </BreedsContext.Provider>
         )}
 
