@@ -1,25 +1,37 @@
-import React, { useState, useContext, type ChangeEvent } from "react";
+import React, { useContext, useState, type ChangeEvent } from "react";
+import InsertPhotoIcon from "@mui/icons-material/InsertPhoto";
+import SortIcon from "@mui/icons-material/Sort";
+import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
-import FormControl from "@mui/material/FormControl";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormGroup from "@mui/material/FormGroup";
-import Switch from "@mui/material/Switch";
+import SpeedDial from "@mui/material/SpeedDial";
+import SpeedDialAction from "@mui/material/SpeedDialAction";
+import SettingsIcon from "@mui/icons-material/Settings";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import type { BreedIdentifier } from "../types/breed";
-import { SettingsContext } from "./contexts/Settings";
 import BreedList from "./BreedList";
+import { SettingsContext } from "./contexts/Settings";
 import Modal from "./Modal";
+
+const settingsActions = [
+  { icon: <InsertPhotoIcon />, name: "Bildstil" },
+  { icon: <SortIcon />, name: "Sortierung" },
+];
 
 interface Props {
   onChangeArtStyle: () => void;
+  onChangeSortOrder: () => void;
 }
 
-const PageBreedList = ({ onChangeArtStyle }: Props) => {
-  const { artStyle } = useContext(SettingsContext);
+const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
+  const { sortOrder, artStyle } = useContext(SettingsContext);
   const [searchValue, setSearchValue] = useState("");
   const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
   const isArtStyleRealistic = artStyle === "realistic";
+
+  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
+  const handleSettingsModalOpen = () => setIsSettingsModalOpen(true);
+  const handleSettingsModalClose = () => setIsSettingsModalOpen(false);
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event && event.target) {
@@ -34,6 +46,42 @@ const PageBreedList = ({ onChangeArtStyle }: Props) => {
         setSelectedBreed={setSelectedBreed}
       />
 
+      <Backdrop open={isSettingsModalOpen} />
+      <SpeedDial
+        ariaLabel="Settings speed dial"
+        sx={{
+          position: "absolute",
+          top: 25,
+          right: 25,
+          ".MuiSpeedDial-fab": {
+            backgroundColor: "#666",
+          },
+        }}
+        icon={<SettingsIcon />}
+        onClose={handleSettingsModalClose}
+        onOpen={handleSettingsModalOpen}
+        open={isSettingsModalOpen}
+        direction="down"
+      >
+        {settingsActions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            tooltipOpen
+            onClick={() => {
+              if (action.name === "Bildstil") {
+                onChangeArtStyle();
+              } else if (action.name === "Sortierung") {
+                onChangeSortOrder();
+              }
+
+              handleSettingsModalClose();
+            }}
+          />
+        ))}
+      </SpeedDial>
+
       <Typography variant="h2" gutterBottom>
         Tierisch menschlich
       </Typography>
@@ -47,20 +95,6 @@ const PageBreedList = ({ onChangeArtStyle }: Props) => {
         wissen, ob eine Rasse überhaupt schon einmal besprochen wurde? Suche
         hier deine Rasse und finde die zugehörige Podcast-Episode!
       </Typography>
-
-      <Box display="flex" justifyContent="flex-end" mt={2}>
-        <FormControl component="fieldset">
-          <FormGroup aria-label="position" row>
-            <FormControlLabel
-              control={<Switch color="primary" />}
-              label={`Bildstil: ${isArtStyleRealistic ? "Realistisch" : "Künstlerisch"}`}
-              labelPlacement="end"
-              checked={!isArtStyleRealistic}
-              onChange={onChangeArtStyle}
-            />
-          </FormGroup>
-        </FormControl>
-      </Box>
 
       <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
         <TextField

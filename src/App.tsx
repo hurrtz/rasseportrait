@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Container from "@mui/material/Container";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -12,14 +12,11 @@ import { SettingsContext } from "./contexts/Settings";
 import { flattenAndEnrichBreedVariants } from "./utils";
 import type { Settings } from "../types/settings";
 
-const DEFAULT_SETTINGS: Settings = {
-  artStyle: "realistic",
-};
-
 const storedSettings = window.localStorage.getItem("settings");
 
 const App = () => {
-  const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
+  const settingsContext = useContext(SettingsContext);
+  const [settings, setSettings] = useState<Settings>(settingsContext);
 
   useEffect(() => {
     if (storedSettings) {
@@ -42,21 +39,41 @@ const App = () => {
     ({ fci: fci1 }, { fci: fciB }) => fci1.standardNumber - fciB.standardNumber,
   );
 
+  const storeSettings = (newSettings: Settings) => {
+    window.localStorage.setItem("settings", JSON.stringify(newSettings));
+  };
+
   const handleChangeArtStyle = () => {
     const newArtStyle =
       settings.artStyle === "realistic" ? "artsy" : "realistic";
     const newSettings: Settings = { ...settings, artStyle: newArtStyle };
 
-    window.localStorage.setItem("settings", JSON.stringify(newSettings));
+    storeSettings(newSettings);
+    setSettings(newSettings);
+  };
+
+  const handleChangeSortOrder = () => {
+    const newSortOrder =
+      settings.sortOrder === "fci-standard-number"
+        ? "episode-number"
+        : "fci-standard-number";
+    const newSettings: Settings = { ...settings, sortOrder: newSortOrder };
+
+    storeSettings(newSettings);
     setSettings(newSettings);
   };
 
   return (
-    <SettingsContext.Provider value={{ artStyle: settings.artStyle }}>
+    <SettingsContext.Provider
+      value={{ sortOrder: settings.sortOrder, artStyle: settings.artStyle }}
+    >
       <Container>
         {bottomNavigationValue === "breeds_list" && (
           <BreedsContext.Provider value={sortedBreeds}>
-            <PageBreedList onChangeArtStyle={handleChangeArtStyle} />
+            <PageBreedList
+              onChangeArtStyle={handleChangeArtStyle}
+              onChangeSortOrder={handleChangeSortOrder}
+            />
           </BreedsContext.Provider>
         )}
 
