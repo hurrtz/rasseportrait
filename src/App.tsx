@@ -36,7 +36,18 @@ const App = () => {
     artStyle: settings.artStyle,
   });
   const sortedBreeds = enrichedBreedsWithVariants.sort(
-    ({ fci: fci1 }, { fci: fciB }) => fci1.standardNumber - fciB.standardNumber,
+    ({ fci: fciA, podcast: podcastA }, { fci: fciB, podcast: podcastB }) => {
+      if (settings.sortOrder === "fci-standard-number") {
+        return fciA?.standardNumber - fciB?.standardNumber;
+      }
+
+      const episodeNumberA =
+        typeof podcastA[0].number === "number" ? podcastA[0].number : Infinity;
+      const episodeNumberB =
+        typeof podcastB[0].number === "number" ? podcastB[0].number : Infinity;
+
+      return episodeNumberA - episodeNumberB;
+    },
   );
 
   const storeSettings = (newSettings: Settings) => {

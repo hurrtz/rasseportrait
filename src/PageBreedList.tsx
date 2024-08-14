@@ -1,4 +1,4 @@
-import React, { useContext, useState, type ChangeEvent } from "react";
+import React, { useState, type ChangeEvent } from "react";
 import InsertPhotoIcon from "@mui/icons-material/InsertPhoto";
 import SortIcon from "@mui/icons-material/Sort";
 import Backdrop from "@mui/material/Backdrop";
@@ -10,7 +10,6 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import type { BreedIdentifier } from "../types/breed";
 import BreedList from "./BreedList";
-import { SettingsContext } from "./contexts/Settings";
 import Modal from "./Modal";
 
 const settingsActions = [
@@ -24,10 +23,8 @@ interface Props {
 }
 
 const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
-  const { sortOrder, artStyle } = useContext(SettingsContext);
   const [searchValue, setSearchValue] = useState("");
   const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
-  const isArtStyleRealistic = artStyle === "realistic";
 
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const handleSettingsModalOpen = () => setIsSettingsModalOpen(true);
