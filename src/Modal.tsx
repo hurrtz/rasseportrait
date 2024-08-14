@@ -1,9 +1,8 @@
-import React, { type Dispatch, type SetStateAction } from "react";
+import React, { type Dispatch, type SetStateAction, useContext } from "react";
 import Modal from "@mui/material/Modal";
 import CloseIcon from "@mui/icons-material/Close";
-import breedsList from "../db";
-import { flattenBreedVariants } from "./utils";
 import BreedDetails from "./BreedDetails";
+import { BreedsContext } from "./contexts/Breeds";
 import type { BreedIdentifier } from "../types/breed";
 
 interface Props {
@@ -15,13 +14,13 @@ interface Props {
 }
 
 export default ({ selectedBreed, setSelectedBreed }: Props) => {
+  const breeds = useContext(BreedsContext);
+
   const handleBackgroundClick = () => {
     setSelectedBreed(undefined);
   };
 
-  const breeds = Object.values(breedsList);
-  const breedsWithVariants = flattenBreedVariants(breeds);
-  const foundBreed = breedsWithVariants.filter((breed) => {
+  const foundBreed = breeds.filter((breed) => {
     if (selectedBreed) {
       if (selectedBreed.variantName && breed.variants) {
         return (

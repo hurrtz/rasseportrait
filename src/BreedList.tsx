@@ -1,35 +1,8 @@
-import React, { type Dispatch, type SetStateAction } from "react";
+import React, { type Dispatch, type SetStateAction, useContext } from "react";
 import Fuse from "fuse.js";
-import breedsList from "../db";
 import type { Breed, BreedIdentifier } from "../types/breed";
+import { BreedsContext } from "./contexts/Breeds";
 import BreedCards from "./BreedCards";
-import { flattenBreedVariants } from "./utils";
-
-const breeds = Object.values(breedsList);
-const breedsWithVariants = flattenBreedVariants(breeds);
-const sortedBreedsWithVariants = breedsWithVariants.sort(
-  ({ fci: fci1 }, { fci: fciB }) => fci1.standardNumber - fciB.standardNumber,
-);
-
-const fuseOptions = {
-  shouldSort: true,
-  ignoreLocation: true,
-  threshold: 0.1,
-  keys: [
-    { name: "names", getFn: ({ names }: Breed) => names.join("|") },
-    {
-      name: "variantNames",
-      getFn: ({ variants }: Breed) =>
-        variants?.map((variant) => variant.names).join("|") || "",
-    },
-    {
-      name: "standardNumber",
-      getFn: ({ fci }: Breed) => String(fci?.standardNumber || ""),
-    },
-  ],
-};
-
-const fuse = new Fuse(sortedBreedsWithVariants, fuseOptions);
 
 interface Props {
   searchValue?: string;
@@ -37,7 +10,28 @@ interface Props {
 }
 
 const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
-  let results = sortedBreedsWithVariants;
+  const breeds = useContext(BreedsContext);
+  const fuseOptions = {
+    shouldSort: true,
+    ignoreLocation: true,
+    threshold: 0.1,
+    keys: [
+      { name: "names", getFn: ({ names }: Breed) => names.join("|") },
+      {
+        name: "variantNames",
+        getFn: ({ variants }: Breed) =>
+          variants?.map((variant) => variant.names).join("|") || "",
+      },
+      {
+        name: "standardNumber",
+        getFn: ({ fci }: Breed) => String(fci?.standardNumber || ""),
+      },
+    ],
+  };
+
+  const fuse = new Fuse(breeds, fuseOptions);
+
+  let results = breeds;
 
   const filteredBreeds = fuse.search(searchValue);
 

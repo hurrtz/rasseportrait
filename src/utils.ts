@@ -1,28 +1,30 @@
-import type { Breed, FCI } from "../types/breed";
+import type { Breed, EnrichedBreed, FCI } from "../types/breed";
+import type { Settings } from "../types/settings";
 
 export const getBreedImagePath = ({
   standardNumber,
   variant = "default",
   breedName,
-}: FCI & {
+  artStyle,
+}: {
+  standardNumber: FCI["standardNumber"];
   variant?: string;
   breedName?: string;
   artStyle?: "artsy" | "realistic";
-}) => {
-  const storedArtStyleIsRealistic =
-    window.sessionStorage.getItem("artStyle") === null ||
-    window.sessionStorage.getItem("artStyle") === "realistic";
-
-  const currentArtStyle = storedArtStyleIsRealistic ? "realistic" : "artsy";
-
-  return standardNumber >= 0
-    ? `illustrations/fci/${standardNumber}/illustration/${currentArtStyle}/${variant}.jpeg`
-    : `illustrations/${breedName}/illustration/${currentArtStyle}/${variant}.jpeg`;
-};
+}) =>
+  standardNumber > 0
+    ? `illustrations/fci/${standardNumber}/illustration/${artStyle}/${variant}.jpeg`
+    : `illustrations/${breedName}/illustration/${artStyle}/${variant}.jpeg`;
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
-export const flattenBreedVariants = (breeds: Breed[]) => {
+export const flattenAndEnrichBreedVariants = ({
+  breeds,
+  artStyle,
+}: {
+  breeds: Breed[];
+  artStyle: Settings["artStyle"];
+}) => {
   // get all breeds with no variants or only one variant entry
   const flattenedBreedVariants = breeds.filter(({ variants }) => !variants);
 
@@ -34,7 +36,6 @@ export const flattenBreedVariants = (breeds: Breed[]) => {
           names: breed.names,
           variants: [variant],
           fci: breed.fci,
-          image: breed.image,
           podcast: breed.podcast,
           furtherReading: breed.furtherReading,
         });
@@ -42,10 +43,22 @@ export const flattenBreedVariants = (breeds: Breed[]) => {
     }
   });
 
-  return flattenedBreedVariants;
+  // enrich the breeds with the image path
+  return flattenedBreedVariants.map(
+    (breed) =>
+      ({
+        ...breed,
+        image: getBreedImagePath({
+          standardNumber: breed.fci.standardNumber,
+          variant: breed.variants ? breed.variants[0].names[0] : "default",
+          breedName: breed.names[0],
+          artStyle,
+        }),
+      }) as EnrichedBreed,
+  );
 };
 
-export const getImageFromBreed = (breed: Breed) => {
+export const getImageFromBreed = (breed: EnrichedBreed) => {
   if (breed.variants) {
     return breed.variants[0].image;
   }

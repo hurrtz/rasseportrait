@@ -14,7 +14,7 @@ import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
-import type { Breed, FCI, Podcast } from "../types/breed";
+import type { EnrichedBreed, FCI, Podcast } from "../types/breed";
 import { getImageFromBreed } from "./utils";
 
 const style = {
@@ -77,7 +77,7 @@ const getTimeCopy = (timecode: Podcast["timecode"]) => {
 };
 
 interface Props {
-  breed?: Breed;
+  breed?: EnrichedBreed;
   children?: ReactNode;
 }
 

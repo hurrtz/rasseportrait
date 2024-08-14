@@ -1,3 +1,4 @@
+import React, { useState, type ChangeEvent, useContext } from "react";
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -5,17 +6,16 @@ import FormGroup from "@mui/material/FormGroup";
 import Switch from "@mui/material/Switch";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import React, { useState, type ChangeEvent } from "react";
 import type { BreedIdentifier } from "../types/breed";
+import { SettingsContext } from "./contexts/Settings";
 import BreedList from "./BreedList";
 import Modal from "./Modal";
 
 const PageBreedList = () => {
+  const { artStyle } = useContext(SettingsContext);
   const [searchValue, setSearchValue] = useState("");
   const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
-  const isArtStyleRealistic =
-    window.sessionStorage.getItem("artStyle") === null ||
-    window.sessionStorage.getItem("artStyle") === "realistic";
+  const isArtStyleRealistic = artStyle === "realistic";
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event && event.target) {

@@ -25,12 +25,16 @@ interface FurtherReading {
 
 export interface Breed {
   id: number | string;
+  image?: any;
   names: string[];
   variants?: Variant[];
-  image?: string;
   fci: FCI;
   podcast: Podcast[];
   furtherReading: FurtherReading[];
+}
+
+export interface EnrichedBreed extends Breed {
+  image: string;
 }
 
 export type BreedIdentifier =
