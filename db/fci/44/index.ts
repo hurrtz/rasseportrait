@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Beauceron", "Berger de Beauce", "Chien de Beauce", "Bas-Rouge"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 120,

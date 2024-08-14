@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Irischer Wolfshund", "Irish Wolfhound"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 75,

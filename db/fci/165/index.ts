@@ -18,7 +18,6 @@ const breed: Breed = {
     "Italian Griffon",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: "Summer Edition #1",

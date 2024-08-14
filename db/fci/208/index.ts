@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Shih Tzu", "獅子狗 / 狮子狗", "Shīzigǒu", "Löwenhund"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: "Summer Edition #2",

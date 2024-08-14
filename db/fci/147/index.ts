@@ -12,7 +12,6 @@ const { standardNumber: id } = fci;
 const breed: Breed = {
   id,
   names: ["Rottweiler"],
-  image: getBreedImagePath({ ...fci }),
   fci,
   podcast: [
     {

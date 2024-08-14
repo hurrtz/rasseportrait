@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Griffon Bruxellois", "Brüsseler Griffon"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 156,

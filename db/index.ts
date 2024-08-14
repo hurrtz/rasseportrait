@@ -1,10 +1,10 @@
 import FCIBreeds from "./fci";
-import Catalburun from "./Catalburun";
-import Elo from "./Elo";
-import PodencoAndaluz from "./PodencoAndaluz";
-import SilkenWindsprite from "./SilkenWindsprite";
-import Turnspit from "./Turnspit";
-import Westfalenterrier from "./Westfalenterrier";
+import Catalburun from "./catalburun";
+import Elo from "./elo";
+import PodencoAndaluz from "./podenco-andaluz";
+import SilkenWindsprite from "./silken-windsprite";
+import Turnspit from "./turnspit";
+import Westfalenterrier from "./westfalenterrier";
 
 export default {
   ...FCIBreeds,

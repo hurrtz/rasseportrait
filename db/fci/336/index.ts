@@ -20,7 +20,6 @@ const breed: Breed = {
     "Andalusischer Türke",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 85,

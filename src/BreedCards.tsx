@@ -2,7 +2,6 @@ import React, { type Dispatch, type SetStateAction } from "react";
 import type { EnrichedBreed, BreedIdentifier } from "../types/breed";
 import BreedCard from "./BreedCard";
 import Grid from "@mui/material/Grid";
-import { getImageFromBreed } from "./utils";
 
 interface Props {
   breeds: EnrichedBreed[];
@@ -22,7 +21,7 @@ const Breeds = ({ breeds, handleCardClick }: Props) => (
       >
         <BreedCard
           {...breed}
-          image={getImageFromBreed(breed)}
+          image={breed.image}
           handleCardClick={handleCardClick}
         />
       </Grid>

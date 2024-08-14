@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Syberian Husky", "Siberischer Husky"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 70,

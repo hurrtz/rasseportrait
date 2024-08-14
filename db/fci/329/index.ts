@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Podenco Canario", "Kanarischer Podenco"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 59,

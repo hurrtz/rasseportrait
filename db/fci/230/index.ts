@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Do Khyi", "Tibetanische Dogge", "Tibetdogge", "Tibetmastiff"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 118,

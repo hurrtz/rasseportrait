@@ -17,7 +17,6 @@ const breed: Breed = {
     "Drahthaar Vizsla",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 53,

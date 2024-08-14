@@ -19,7 +19,6 @@ const breed: Breed = {
     "Perro Boyero de montaña Bernés",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 69,

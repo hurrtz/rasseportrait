@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["English Cocker Spaniel"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 113,

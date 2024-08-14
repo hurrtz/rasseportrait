@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Black and Tan Coonhound", "Schwarz-roter Waschbärenhund"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 155,

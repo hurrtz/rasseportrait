@@ -2,11 +2,13 @@ import type { Breed, EnrichedBreed, FCI } from "../types/breed";
 import type { Settings } from "../types/settings";
 
 export const getBreedImagePath = ({
+  id,
   standardNumber,
   variant = "default",
   breedName,
   artStyle,
 }: {
+  id: Breed["id"];
   standardNumber: FCI["standardNumber"];
   variant?: string;
   breedName?: string;
@@ -14,7 +16,7 @@ export const getBreedImagePath = ({
 }) =>
   standardNumber > 0
     ? `illustrations/fci/${standardNumber}/illustration/${artStyle}/${variant}.jpeg`
-    : `illustrations/${breedName}/illustration/${artStyle}/${variant}.jpeg`;
+    : `illustrations/${id}/illustration/${artStyle}/${variant}.jpeg`;
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
@@ -49,20 +51,12 @@ export const flattenAndEnrichBreedVariants = ({
       ({
         ...breed,
         image: getBreedImagePath({
+          id: breed.id,
           standardNumber: breed.fci.standardNumber,
-          variant: breed.variants ? breed.variants[0].names[0] : "default",
+          variant: breed.variants ? breed.variants[0].id : "default",
           breedName: breed.names[0],
           artStyle,
         }),
       }) as EnrichedBreed,
   );
-};
-
-export const getImageFromBreed = (breed: EnrichedBreed) => {
-  if (breed.variants) {
-    return breed.variants[0].image;
-  }
-
-  // if there's no variant then there's always an image
-  return breed.image!;
 };

@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Nova Scotia Duck Tolling Retriever"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 136,

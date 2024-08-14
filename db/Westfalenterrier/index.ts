@@ -7,13 +7,10 @@ const fci: FCI = {
   standardNumber: -1,
 };
 
-const { standardNumber: id } = fci;
-
 const breed: Breed = {
-  id,
+  id: "westfalenterrier",
   names: ["Westfalenterrier"],
   fci,
-  image: getBreedImagePath({ ...fci, breedName: "Westfalenterrier" }),
   podcast: [
     {
       number: "Exklusiv #2",

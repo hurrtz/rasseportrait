@@ -19,7 +19,6 @@ const breed: Breed = {
     "Spaniel del Tibet",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: "Summer Edition #6",

@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Presa Canario", "Kanarische Dogge", "Dogo Canario"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 141,

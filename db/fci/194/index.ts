@@ -19,7 +19,6 @@ const breed: Breed = {
     "Perro de pastor Bergamasco",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 154,

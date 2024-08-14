@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Akita", "Akita-Inu", "Japanischer Akita", "Akita Ken", "秋田犬"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: "Summer Edition #7",

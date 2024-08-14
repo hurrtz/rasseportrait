@@ -15,7 +15,7 @@ const breed: Breed = {
   variants: [
     {
       names: ["Kurzhaar"],
-      image: getBreedImagePath({ ...fci, variant: "short" }),
+      id: "short",
       furtherReading: [
         {
           name: "VDH",
@@ -25,7 +25,7 @@ const breed: Breed = {
     },
     {
       names: ["Langhaar"],
-      image: getBreedImagePath({ ...fci, variant: "long" }),
+      id: "long",
       furtherReading: [
         {
           name: "VDH",

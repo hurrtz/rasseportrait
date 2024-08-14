@@ -18,7 +18,6 @@ const breed: Breed = {
     "sällskapshund",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 87,

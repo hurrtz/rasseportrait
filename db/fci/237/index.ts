@@ -19,7 +19,6 @@ const breed: Breed = {
     "Buhund norvégien",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 146,

@@ -25,7 +25,6 @@ const breed: Breed = {
     "Çatalburun Pointer",
     "Pointer de Turquía",
   ],
-  image: getBreedImagePath({ ...fci, breedName: "Catalburun" }),
   fci,
   podcast: [
     {

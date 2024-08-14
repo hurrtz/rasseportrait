@@ -17,7 +17,6 @@ const breed: Breed = {
     "Italienischer Trüffelhund",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 138,

@@ -17,7 +17,6 @@ const breed: Breed = {
     "Transmontano Mastiff",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 164,

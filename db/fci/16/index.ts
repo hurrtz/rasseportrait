@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Bobtail", "Old English Sheepdog", "Altenglischer Schäferhund"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 112,

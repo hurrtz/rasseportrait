@@ -12,7 +12,6 @@ const { standardNumber: id } = fci;
 const breed: Breed = {
   id,
   names: ["Welsh Corgi Cardigan"],
-  image: getBreedImagePath({ ...fci }),
   fci,
   podcast: [
     {

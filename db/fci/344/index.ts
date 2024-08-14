@@ -17,7 +17,6 @@ const breed: Breed = {
     "Großer Japanischer Hund",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: "Summer Edition #7",

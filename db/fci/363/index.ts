@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Prager Rattler", "Pražský krysařík"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 115,

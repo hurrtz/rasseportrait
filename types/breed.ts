@@ -5,8 +5,8 @@ export interface FCI {
 }
 
 interface Variant {
+  id: string;
   names: string[];
-  image: string;
   furtherReading?: FurtherReading[];
 }
 

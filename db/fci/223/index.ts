@@ -15,15 +15,15 @@ const breed: Breed = {
   variants: [
     {
       names: ["Kurzhaar"],
-      image: getBreedImagePath({ ...fci, variant: "short" }),
+      id: "short",
     },
     {
       names: ["Langhaar"],
-      image: getBreedImagePath({ ...fci, variant: "long" }),
+      id: "long",
     },
     {
       names: ["Rauhhaar"],
-      image: getBreedImagePath({ ...fci, variant: "rough" }),
+      id: "rough",
     },
   ],
   fci,

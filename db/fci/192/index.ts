@@ -15,11 +15,11 @@ const breed: Breed = {
   variants: [
     {
       names: ["Rauhhaar"],
-      image: getBreedImagePath({ ...fci, variant: "wire" }),
+      id: "wire",
     },
     {
       names: ["Glatthaar"],
-      image: getBreedImagePath({ ...fci, variant: "smooth" }),
+      id: "smooth",
     },
   ],
   fci,

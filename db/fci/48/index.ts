@@ -18,7 +18,6 @@ const breed: Breed = {
     "Hund der Zyrianer",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 132,

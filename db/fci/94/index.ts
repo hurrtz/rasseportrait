@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Podengo Português", "Portugiesischer Podengo", "Warren Hound"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 59,

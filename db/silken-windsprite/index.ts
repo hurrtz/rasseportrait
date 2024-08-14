@@ -11,7 +11,6 @@ const breed: Breed = {
   id: "silken-windsprite",
   names: ["Silken Windsprite", "Longhaired Whippet", "Langhaar Whippet"],
   fci,
-  image: getBreedImagePath({ ...fci, breedName: "SilkenWindsprite" }),
   podcast: [
     {
       number: 165,

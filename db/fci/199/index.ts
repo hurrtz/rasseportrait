@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Cirneco dell’Etna"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 110,

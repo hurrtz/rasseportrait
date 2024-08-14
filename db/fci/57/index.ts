@@ -17,7 +17,6 @@ const breed: Breed = {
     "Magyar Vizsla Kurzhaar",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 53,

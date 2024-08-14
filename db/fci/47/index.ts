@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Entlebucher Sennenhund"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 147,

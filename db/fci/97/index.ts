@@ -15,7 +15,7 @@ const breed: Breed = {
   variants: [
     {
       names: ["Pomeranian", "Zwergspitz"],
-      image: getBreedImagePath({ ...fci, variant: "pomeranian" }),
+      id: "pomeranian",
       furtherReading: [
         {
           name: "VDH",
@@ -25,7 +25,7 @@ const breed: Breed = {
     },
     {
       names: ["Kleinspitz"],
-      image: getBreedImagePath({ ...fci, variant: "miniature" }),
+      id: "miniature",
       furtherReading: [
         {
           name: "VDH",
@@ -35,7 +35,7 @@ const breed: Breed = {
     },
     {
       names: ["Mittelspitz"],
-      image: getBreedImagePath({ ...fci, variant: "medium" }),
+      id: "medium",
       furtherReading: [
         {
           name: "VDH",
@@ -45,7 +45,7 @@ const breed: Breed = {
     },
     {
       names: ["Großspitz"],
-      image: getBreedImagePath({ ...fci, variant: "large" }),
+      id: "large",
       furtherReading: [
         {
           name: "VDH",
@@ -55,7 +55,7 @@ const breed: Breed = {
     },
     {
       names: ["Wolfsspitz", "Keeshond"],
-      image: getBreedImagePath({ ...fci, variant: "keeshound" }),
+      id: "keeshound",
       furtherReading: [
         {
           name: "VDH",

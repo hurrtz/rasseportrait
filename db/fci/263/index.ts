@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Chesapeake Bay Retriever", "Retriever de la baie de Chesapeake"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: "Exklusiv #1",

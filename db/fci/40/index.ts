@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Irish Soft Coated Wheaten Terrier"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 159,

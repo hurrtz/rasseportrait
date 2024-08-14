@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Chien de Montagne des Pyrénées", "Pyrenäenberghund", "Patou"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 63,

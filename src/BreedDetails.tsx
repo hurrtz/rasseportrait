@@ -15,7 +15,6 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import type { EnrichedBreed, FCI, Podcast } from "../types/breed";
-import { getImageFromBreed } from "./utils";
 
 const style = {
   position: "absolute",
@@ -89,6 +88,7 @@ export default ({ breed, children }: Props) => {
       fci,
       podcast: podcasts,
       furtherReading: mainFurtherReadings,
+      image,
     } = breed;
 
     const furtherReadings = [
@@ -107,7 +107,7 @@ export default ({ breed, children }: Props) => {
     return (
       <Box sx={style}>
         <Card>
-          <CardHeaderImage image={getImageFromBreed(breed)} />
+          <CardHeaderImage image={image} />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {names[0]}

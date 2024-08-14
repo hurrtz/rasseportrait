@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Otterhund"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 157,

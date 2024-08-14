@@ -19,7 +19,6 @@ const breed: Breed = {
     "Mallorca Mastiff",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 167,

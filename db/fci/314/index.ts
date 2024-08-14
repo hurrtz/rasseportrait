@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Nederlandse Kooikerhondje"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 73,

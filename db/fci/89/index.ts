@@ -22,7 +22,6 @@ const breed: Breed = {
     "Balearen-Hund",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 59,

@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Großer Münsterländer"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 134,

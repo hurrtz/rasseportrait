@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Japan-Spitz", "日本スピッツ", "Nihon Supittsu", "Japanischer Spitz"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 168,

@@ -17,7 +17,6 @@ const breed: Breed = {
     "Cobrador de pelo liso",
   ],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 68,

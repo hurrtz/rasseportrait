@@ -15,7 +15,7 @@ const breed: Breed = {
   variants: [
     {
       names: ["Haarlos"],
-      image: getBreedImagePath({ ...fci, variant: "hairless" }),
+      id: "hairless",
       furtherReading: [
         {
           name: "VDH",
@@ -25,7 +25,7 @@ const breed: Breed = {
     },
     {
       names: ["Powderpuff"],
-      image: getBreedImagePath({ ...fci, variant: "powderpuff" }),
+      id: "powderpuff",
       furtherReading: [
         {
           name: "VDH",

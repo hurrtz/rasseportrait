@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Galgo Español", "Galgo", "Spanischer Windhund"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 47,

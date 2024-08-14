@@ -13,7 +13,6 @@ const breed: Breed = {
   id,
   names: ["Dandie Dinmont Terrier"],
   fci,
-  image: getBreedImagePath({ ...fci }),
   podcast: [
     {
       number: 139,

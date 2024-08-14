@@ -15,7 +15,7 @@ const breed: Breed = {
   variants: [
     {
       names: ["Großpudel"],
-      image: getBreedImagePath({ ...fci, variant: "standard" }),
+      id: "standard",
       furtherReading: [
         {
           name: "VDH",
@@ -25,7 +25,7 @@ const breed: Breed = {
     },
     {
       names: ["Kleinpudel"],
-      image: getBreedImagePath({ ...fci, variant: "medium" }),
+      id: "medium",
       furtherReading: [
         {
           name: "VDH",
@@ -35,7 +35,7 @@ const breed: Breed = {
     },
     {
       names: ["Zwergpudel"],
-      image: getBreedImagePath({ ...fci, variant: "small" }),
+      id: "small",
       furtherReading: [
         {
           name: "VDH",
@@ -45,7 +45,7 @@ const breed: Breed = {
     },
     {
       names: ["Toy-Pudel"],
-      image: getBreedImagePath({ ...fci, variant: "toy" }),
+      id: "toy",
       furtherReading: [
         {
           name: "VDH",

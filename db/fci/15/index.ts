@@ -15,7 +15,7 @@ const breed: Breed = {
   variants: [
     {
       names: ["Groenendael"],
-      image: getBreedImagePath({ ...fci, variant: "groenendael" }),
+      id: "groenendael",
       furtherReading: [
         {
           name: "VDH",
@@ -25,7 +25,7 @@ const breed: Breed = {
     },
     {
       names: ["Laekenois"],
-      image: getBreedImagePath({ ...fci, variant: "laekenois" }),
+      id: "laekenois",
       furtherReading: [
         {
           name: "VDH",
@@ -35,7 +35,7 @@ const breed: Breed = {
     },
     {
       names: ["Malinois", "Mechelaar"],
-      image: getBreedImagePath({ ...fci, variant: "malinois" }),
+      id: "malinois",
       furtherReading: [
         {
           name: "VDH",
@@ -45,7 +45,7 @@ const breed: Breed = {
     },
     {
       names: ["Tervueren"],
-      image: getBreedImagePath({ ...fci, variant: "tervueren" }),
+      id: "tervueren",
       furtherReading: [
         {
           name: "VDH",
