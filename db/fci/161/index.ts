@@ -1,5 +1,4 @@
 import type { Breed, FCI } from "../../../types/breed";
-import { getBreedImagePath } from "../../../src/utils";
 
 const fci: FCI = {
   group: 6,
