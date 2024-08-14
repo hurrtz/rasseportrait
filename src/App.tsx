@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -10,9 +10,10 @@ import PageImprint from "./PageImprint";
 import { BreedsContext } from "./contexts/Breeds";
 import { SettingsContext } from "./contexts/Settings";
 import { flattenAndEnrichBreedVariants } from "./utils";
+import type { Settings } from "../types/settings";
 
 const App = () => {
-  const { artStyle } = useContext(SettingsContext);
+  const [artStyle, setArtStyle] = useState<Settings["artStyle"]>("realistic");
   const [bottomNavigationValue, setBottomNavigationValue] =
     useState("breeds_list");
 
@@ -26,11 +27,11 @@ const App = () => {
   );
 
   return (
-    <SettingsContext.Provider value={{ artStyle: "realistic" }}>
+    <SettingsContext.Provider value={{ artStyle }}>
       <Container>
         {bottomNavigationValue === "breeds_list" && (
           <BreedsContext.Provider value={sortedBreeds}>
-            <PageBreedList />
+            <PageBreedList onChangeArtStyle={setArtStyle} />
           </BreedsContext.Provider>
         )}
 

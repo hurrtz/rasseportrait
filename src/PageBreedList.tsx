@@ -1,4 +1,10 @@
-import React, { useState, type ChangeEvent, useContext } from "react";
+import React, {
+  useState,
+  useContext,
+  type ChangeEvent,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -7,11 +13,16 @@ import Switch from "@mui/material/Switch";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import type { BreedIdentifier } from "../types/breed";
+import type { Settings } from "../types/settings";
 import { SettingsContext } from "./contexts/Settings";
 import BreedList from "./BreedList";
 import Modal from "./Modal";
 
-const PageBreedList = () => {
+interface Props {
+  onChangeArtStyle: Dispatch<SetStateAction<Settings["artStyle"]>>;
+}
+
+const PageBreedList = ({ onChangeArtStyle }: Props) => {
   const { artStyle } = useContext(SettingsContext);
   const [searchValue, setSearchValue] = useState("");
   const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
@@ -21,14 +32,6 @@ const PageBreedList = () => {
     if (event && event.target) {
       setSearchValue(event.target.value);
     }
-  };
-
-  const handleArtStyleChange = () => {
-    window.sessionStorage.setItem(
-      "artStyle",
-      isArtStyleRealistic ? "artsy" : "realistic",
-    );
-    window.location.reload();
   };
 
   return (
@@ -60,7 +63,11 @@ const PageBreedList = () => {
               label={`Bildstil: ${isArtStyleRealistic ? "Realistisch" : "Künstlerisch"}`}
               labelPlacement="end"
               checked={!isArtStyleRealistic}
-              onChange={handleArtStyleChange}
+              onChange={(value: any) =>
+                onChangeArtStyle(
+                  value.currentTarget.checked ? "artsy" : "realistic",
+                )
+              }
             />
           </FormGroup>
         </FormControl>
