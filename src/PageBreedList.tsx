@@ -87,15 +87,9 @@ const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
         Rasseportrait
       </Typography>
 
-      <Typography variant="body1" gutterBottom>
-        Du wolltest noch einmal ein Rasseportrait anhören? Oder du wolltest
-        wissen, ob eine Rasse überhaupt schon einmal besprochen wurde? Suche
-        hier deine Rasse und finde die zugehörige Podcast-Episode!
-      </Typography>
-
       <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
         <TextField
-          label="Suche nach deinem Hund oder der FCI Standardnummer"
+          label="Suche einer Rasse oder der FCI Standardnummer"
           variant="outlined"
           fullWidth
           onChange={handleSearchChange}

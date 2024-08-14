@@ -6,7 +6,6 @@
   "scripts": {
     "copyIllustrations": "node scripts/copyIllustrations.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "npm run copyIllustrations",
     "start": "webpack serve --open",
     "prebuild": "npm run copyIllustrations",
     "build": "webpack",
