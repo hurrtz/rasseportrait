@@ -9,6 +9,7 @@ import SpeedDialAction from "@mui/material/SpeedDialAction";
 import SettingsIcon from "@mui/icons-material/Settings";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import type { BreedIdentifier } from "../../types/breed";
 import type { Settings } from "../../types/settings";
 import BreedList from "../BreedList";
@@ -33,7 +34,46 @@ interface Props {
   onChangeSortOrder: (sortOrder: Settings["sortOrder"]) => void;
 }
 
+const HeaderSection = ({
+  isDesktop,
+  isMobile,
+}: {
+  isDesktop: boolean;
+  isMobile: boolean;
+}) => {
+  if (isDesktop) {
+    return (
+      <>
+        <Typography variant="h2" gutterBottom>
+          Tierisch menschlich
+        </Typography>
+
+        <Typography variant="h3" gutterBottom>
+          Rasseportrait
+        </Typography>
+      </>
+    );
+  }
+
+  if (isMobile) {
+    return (
+      <>
+        <Typography variant="h4" gutterBottom>
+          Tierisch menschlich
+        </Typography>
+
+        <Typography variant="h5" gutterBottom>
+          Rasseportrait
+        </Typography>
+      </>
+    );
+  }
+
+  return null;
+};
+
 const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
+  const isPlatformPhone = useMediaQuery("(max-width: 480px");
   const [searchValue, setSearchValue] = useState("");
   const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
 
@@ -95,13 +135,7 @@ const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
         ))}
       </SpeedDial>
 
-      <Typography variant="h2" gutterBottom>
-        Tierisch menschlich
-      </Typography>
-
-      <Typography variant="h3" gutterBottom>
-        Rasseportrait
-      </Typography>
+      <HeaderSection isDesktop={!isPlatformPhone} isMobile={isPlatformPhone} />
 
       <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
         <TextField
