@@ -1,6 +1,5 @@
 import React, { type Dispatch, type SetStateAction, useContext } from "react";
 import Modal from "@mui/material/Modal";
-import CloseIcon from "@mui/icons-material/Close";
 import BreedDetails from "./BreedDetails";
 import { BreedsContext } from "./contexts/Breeds";
 import type { BreedIdentifier } from "../types/breed";
@@ -39,20 +38,15 @@ export default ({ selectedBreed, setSelectedBreed }: Props) => {
       onClose={handleBackgroundClick}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
+      sx={{
+        maxHeight: "100vh",
+        overflow: "auto",
+      }}
     >
-      <BreedDetails breed={foundBreed ? foundBreed[0] : undefined}>
-        <CloseIcon
-          sx={{
-            position: "absolute",
-            top: 0,
-            right: 0,
-            color: "#FFF",
-            padding: 2,
-            cursor: "pointer",
-          }}
-          onClick={handleBackgroundClick}
-        />
-      </BreedDetails>
+      <BreedDetails
+        breed={foundBreed ? foundBreed[0] : undefined}
+        triggerModalClose={handleBackgroundClick}
+      />
     </Modal>
   );
 };

@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
@@ -11,6 +11,8 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import PodcastsIcon from "@mui/icons-material/Podcasts";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+import Fab from "@mui/material/Fab";
+import CloseIcon from "@mui/icons-material/Close";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
@@ -21,9 +23,6 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
-  boxShadow: 24,
-  borderRadius: 5,
 };
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
@@ -77,10 +76,10 @@ const getTimeCopy = (timecode: Podcast["timecode"]) => {
 
 interface Props {
   breed?: EnrichedBreed;
-  children?: ReactNode;
+  triggerModalClose: () => void;
 }
 
-export default ({ breed, children }: Props) => {
+export default ({ breed, triggerModalClose }: Props) => {
   if (breed) {
     const {
       names,
@@ -106,7 +105,26 @@ export default ({ breed, children }: Props) => {
 
     return (
       <Box sx={style}>
-        <Card>
+        <Card
+          sx={{
+            maxHeight: "100vh",
+            overflow: "auto",
+            width: 400,
+            maxWidth: "100vw",
+          }}
+        >
+          <Fab
+            aria-label="add"
+            size="medium"
+            sx={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+            }}
+            onClick={triggerModalClose}
+          >
+            <CloseIcon />
+          </Fab>
           <CardHeaderImage image={image} />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
@@ -179,8 +197,6 @@ export default ({ breed, children }: Props) => {
             </Stack>
           </CardContent>
         </Card>
-
-        {children}
       </Box>
     );
   }
