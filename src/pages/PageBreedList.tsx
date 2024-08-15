@@ -9,10 +9,10 @@ import SpeedDialAction from "@mui/material/SpeedDialAction";
 import SettingsIcon from "@mui/icons-material/Settings";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import type { BreedIdentifier } from "../types/breed";
-import type { Settings } from "../types/settings";
-import BreedList from "./BreedList";
-import Modal from "./Modal";
+import type { BreedIdentifier } from "../../types/breed";
+import type { Settings } from "../../types/settings";
+import BreedList from "../BreedList";
+import Modal from "../Modal";
 
 const settingsActions = [
   { icon: <InsertPhotoIcon />, name: "Bildstil", id: "artstyle" },
