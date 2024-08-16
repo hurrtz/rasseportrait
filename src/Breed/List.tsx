@@ -1,6 +1,6 @@
 import React, { type Dispatch, type SetStateAction, useContext } from "react";
 import Fuse from "fuse.js";
-import type { Breed, BreedIdentifier } from "../../types/breed";
+import type { Breed, EnrichedBreed, BreedIdentifier } from "../../types/breed";
 import { BreedsContext } from "../contexts/Breeds";
 import BreedCards from "./Cards";
 
@@ -31,12 +31,16 @@ const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
 
   const fuse = new Fuse(breeds, fuseOptions);
 
-  let results = breeds;
+  let results: EnrichedBreed[] = [];
 
   const filteredBreeds = fuse.search(searchValue);
 
   if (filteredBreeds.length > 0) {
     results = filteredBreeds.map((filteredBreed) => filteredBreed.item);
+  }
+
+  if (!searchValue) {
+    results = breeds;
   }
 
   return <BreedCards breeds={results} handleCardClick={setSelectedBreed} />;
