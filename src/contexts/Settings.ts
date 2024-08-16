@@ -5,4 +5,5 @@ export const SettingsContext = createContext<Settings>({
   artStyle: "realistic",
   sortOrder: "fci-standard-number",
   sortDirection: "desc",
+  showBreedVariants: false,
 });

@@ -18,13 +18,7 @@ export const getBreedImagePath = ({
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
-export const flattenAndEnrichBreedVariants = ({
-  breeds,
-  artStyle,
-}: {
-  breeds: Breed[];
-  artStyle: Settings["artStyle"];
-}) => {
+export const flattenBreedVariants = ({ breeds }: { breeds: Breed[] }) => {
   // get all breeds with no variants or only one variant entry
   const flattenedBreedVariants = breeds.filter(({ variants }) => !variants);
 
@@ -43,8 +37,17 @@ export const flattenAndEnrichBreedVariants = ({
     }
   });
 
-  // enrich the breeds with the image path
-  return flattenedBreedVariants.map(
+  return flattenedBreedVariants;
+};
+
+export const enrichBreedsWithIllustrations = ({
+  breeds,
+  artStyle,
+}: {
+  breeds: Breed[];
+  artStyle: Settings["artStyle"];
+}) =>
+  breeds.map(
     (breed) =>
       ({
         ...breed,
@@ -56,4 +59,3 @@ export const flattenAndEnrichBreedVariants = ({
         }),
       }) as EnrichedBreed,
   );
-};

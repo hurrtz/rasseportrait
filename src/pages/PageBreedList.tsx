@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 import SettingsIcon from "@mui/icons-material/Settings";
+import PetsIcon from "@mui/icons-material/Pets";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -18,6 +19,7 @@ import type { Settings } from "../../types/settings";
 interface Props {
   onChangeArtStyle: () => void;
   onChangeSortOrder: (sortOrder: Settings["sortOrder"]) => void;
+  onChangeShowBreedVariants: () => void;
 }
 
 const HeaderSection = ({ isMobile }: { isMobile: boolean }) => (
@@ -38,13 +40,12 @@ const SettingsUI = ({
   handleSettingsModalClose,
   onChangeArtStyle,
   onChangeSortOrder,
+  onChangeShowBreedVariants,
 }: {
   isSettingsModalOpen: boolean;
   handleSettingsModalOpen: () => void;
   handleSettingsModalClose: () => void;
-  onChangeArtStyle: () => void;
-  onChangeSortOrder: (sortOrder: Settings["sortOrder"]) => void;
-}) => (
+} & Props) => (
   <>
     <Backdrop open={isSettingsModalOpen} />
     <SpeedDial
@@ -69,6 +70,11 @@ const SettingsUI = ({
       {[
         { icon: <InsertPhotoIcon />, name: "Bildstil", id: "artstyle" },
         {
+          icon: <PetsIcon />,
+          name: "Rassevarianten anzeigen",
+          id: "collapse_variants",
+        },
+        {
           icon: <FormatListNumberedIcon />,
           name: "Sortierung: FCI-Nummern",
           id: "sort_fci",
@@ -91,6 +97,8 @@ const SettingsUI = ({
               onChangeSortOrder("fci-standard-number");
             } else if (action.id === "sort_date") {
               onChangeSortOrder("airDate");
+            } else if (action.id === "collapse_variants") {
+              onChangeShowBreedVariants();
             }
 
             handleSettingsModalClose();
@@ -101,7 +109,11 @@ const SettingsUI = ({
   </>
 );
 
-const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
+const PageBreedList = ({
+  onChangeArtStyle,
+  onChangeSortOrder,
+  onChangeShowBreedVariants,
+}: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
   const [searchValue, setSearchValue] = useState("");
   const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
@@ -129,6 +141,7 @@ const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
         handleSettingsModalClose={handleSettingsModalClose}
         onChangeArtStyle={onChangeArtStyle}
         onChangeSortOrder={onChangeSortOrder}
+        onChangeShowBreedVariants={onChangeShowBreedVariants}
       />
 
       <HeaderSection isMobile={isMobile} />

@@ -1,10 +1,11 @@
-import React, { type Dispatch, type SetStateAction } from "react";
+import React, { useContext, type Dispatch, type SetStateAction } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardActionArea from "@mui/material/CardActionArea";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
+import { SettingsContext } from "../contexts/Settings";
 import type { Breed, BreedIdentifier } from "../../types/breed";
 
 interface Props extends Breed {
@@ -19,6 +20,8 @@ const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
 }));
 
 export default ({ id, variants, image, handleCardClick, names }: Props) => {
+  const settings = useContext(SettingsContext);
+
   const onClick = () => {
     const payload: BreedIdentifier = { id };
 
@@ -59,11 +62,13 @@ export default ({ id, variants, image, handleCardClick, names }: Props) => {
           >
             <Typography variant="h6">{names[0]}</Typography>
 
-            {variants && variants.length > 0 && (
-              <Typography variant="subtitle1">
-                {variants[0].names[0]}
-              </Typography>
-            )}
+            {settings.showBreedVariants === true &&
+              variants &&
+              variants.length > 0 && (
+                <Typography variant="subtitle1">
+                  {variants[0].names[0]}
+                </Typography>
+              )}
           </Box>
         </Box>
       </CardActionArea>

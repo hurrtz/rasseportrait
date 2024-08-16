@@ -9,7 +9,7 @@ import PageBreedList from "./pages/PageBreedList";
 import PageImprint from "./pages/PageImprint";
 import { BreedsContext } from "./contexts/Breeds";
 import { SettingsContext } from "./contexts/Settings";
-import { flattenAndEnrichBreedVariants } from "./utils";
+import { flattenBreedVariants, enrichBreedsWithIllustrations } from "./utils";
 import type { Settings } from "../types/settings";
 
 const storedSettings = window.localStorage.getItem("settings");
@@ -31,8 +31,15 @@ const App = () => {
     useState("breeds_list");
 
   const breeds = Object.values(breedsList);
-  const enrichedBreedsWithVariants = flattenAndEnrichBreedVariants({
-    breeds,
+
+  let breedsWithVariants = breeds;
+
+  if (settings.showBreedVariants) {
+    breedsWithVariants = flattenBreedVariants({ breeds });
+  }
+
+  const enrichedBreedsWithVariants = enrichBreedsWithIllustrations({
+    breeds: breedsWithVariants,
     artStyle: settings.artStyle,
   });
   const sortedBreeds = enrichedBreedsWithVariants.sort(
@@ -81,12 +88,23 @@ const App = () => {
     setSettings(newSettings);
   };
 
+  const handleChangeShowBreedVariants = () => {
+    let newSettings: Settings = {
+      ...settings,
+      showBreedVariants: !settings.showBreedVariants,
+    };
+
+    storeSettings(newSettings);
+    setSettings(newSettings);
+  };
+
   return (
     <SettingsContext.Provider
       value={{
         sortOrder: settings.sortOrder,
         artStyle: settings.artStyle,
         sortDirection: settings.sortDirection,
+        showBreedVariants: settings.showBreedVariants,
       }}
     >
       <Container>
@@ -95,6 +113,7 @@ const App = () => {
             <PageBreedList
               onChangeArtStyle={handleChangeArtStyle}
               onChangeSortOrder={handleChangeSortOrder}
+              onChangeShowBreedVariants={handleChangeShowBreedVariants}
             />
           </BreedsContext.Provider>
         )}

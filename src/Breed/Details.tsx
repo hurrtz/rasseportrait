@@ -18,6 +18,7 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import { BreedsContext } from "../contexts/Breeds";
+import { SettingsContext } from "../contexts/Settings";
 import type { FCI, Podcast, BreedIdentifier } from "../../types/breed";
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
@@ -77,6 +78,7 @@ interface Props {
 export default ({ breedIdentifier, closeUI }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
   const breeds = useContext(BreedsContext);
+  const settings = useContext(SettingsContext);
 
   const [breed] = breeds.filter((breed) => {
     if (breedIdentifier) {
@@ -143,11 +145,13 @@ export default ({ breedIdentifier, closeUI }: Props) => {
             <Typography gutterBottom variant="h5" component="div">
               {names[0]}
             </Typography>
-            {variants && variants.length > 0 && (
-              <Typography gutterBottom variant="h6" component="div">
-                {variants[0].names[0]}
-              </Typography>
-            )}
+            {settings.showBreedVariants === true &&
+              variants &&
+              variants.length > 0 && (
+                <Typography gutterBottom variant="h6" component="div">
+                  {variants[0].names[0]}
+                </Typography>
+              )}
 
             <FCIText fci={fci} />
 
