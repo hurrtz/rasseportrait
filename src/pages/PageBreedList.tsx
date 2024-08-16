@@ -50,8 +50,8 @@ const SettingsUI = ({
     <SpeedDial
       ariaLabel="Settings speed dial"
       sx={{
-        position: "absolute",
-        top: 25,
+        position: "fixed",
+        top: 16,
         right: 25,
         ".MuiSpeedDial-fab": {
           backgroundColor: "#666",
