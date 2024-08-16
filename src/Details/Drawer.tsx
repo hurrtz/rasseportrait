@@ -25,8 +25,8 @@ const Drawer = ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
       onClose={toggleDrawer(false)}
       onOpen={toggleDrawer(true)}
       sx={{
-        ".MuiSwipeableDrawer-paper": {
-          borderRadius: "8px 8px 0 0",
+        ".MuiCard-root": {
+          borderRadius: 0,
         },
       }}
     >
