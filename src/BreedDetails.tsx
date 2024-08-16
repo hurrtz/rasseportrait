@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
@@ -10,20 +10,15 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import PodcastsIcon from "@mui/icons-material/Podcasts";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import Fab from "@mui/material/Fab";
 import CloseIcon from "@mui/icons-material/Close";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
-import type { EnrichedBreed, FCI, Podcast } from "../types/breed";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-};
+import type { FCI, Podcast, BreedIdentifier } from "../types/breed";
+import { BreedsContext } from "./contexts/Breeds";
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   height: 400,
@@ -75,11 +70,27 @@ const getTimeCopy = (timecode: Podcast["timecode"]) => {
 };
 
 interface Props {
-  breed?: EnrichedBreed;
-  triggerModalClose: () => void;
+  breedIdentifier: BreedIdentifier;
+  closeUI: () => void;
 }
 
-export default ({ breed, triggerModalClose }: Props) => {
+export default ({ breedIdentifier, closeUI }: Props) => {
+  const isMobile = useMediaQuery("(max-width: 480px");
+  const breeds = useContext(BreedsContext);
+
+  const [breed] = breeds.filter((breed) => {
+    if (breedIdentifier) {
+      if (breedIdentifier.variantName && breed.variants) {
+        return (
+          breedIdentifier.variantName === breed.variants[0].names[0] &&
+          breedIdentifier.id === breed.id
+        );
+      }
+    }
+
+    return breedIdentifier?.id === breed.id;
+  });
+
   if (breed) {
     const {
       names,
@@ -104,27 +115,29 @@ export default ({ breed, triggerModalClose }: Props) => {
     };
 
     return (
-      <Box sx={style}>
+      <Box>
         <Card
           sx={{
             maxHeight: "100vh",
             overflow: "auto",
-            width: 400,
+            width: isMobile ? "100%" : 400,
             maxWidth: "100vw",
           }}
         >
-          <Fab
-            aria-label="add"
-            size="medium"
-            sx={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-            }}
-            onClick={triggerModalClose}
-          >
-            <CloseIcon />
-          </Fab>
+          {isMobile === false && (
+            <Fab
+              aria-label="add"
+              size="medium"
+              sx={{
+                position: "absolute",
+                top: "10px",
+                right: "10px",
+              }}
+              onClick={closeUI}
+            >
+              <CloseIcon />
+            </Fab>
+          )}
           <CardHeaderImage image={image} />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
