@@ -2,7 +2,8 @@ import React, { type Dispatch, type SetStateAction } from "react";
 import type { EnrichedBreed, BreedIdentifier } from "../../types/breed";
 import BreedCard from "./Card";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 
@@ -14,29 +15,22 @@ interface Props {
 const Breeds = ({ breeds, handleCardClick }: Props) => {
   if (breeds.length === 0) {
     return (
-      <Paper variant="outlined" sx={{ padding: "8px 24px" }}>
-        <Typography variant="h6" align="center">
-          keine Ergebnisse
-        </Typography>
+      <Card>
+        <CardContent>
+          <Typography variant="h6" align="center">
+            Keine Rasse gefunden
+          </Typography>
 
-        <Divider sx={{ margin: "8px 0" }} />
-
-        <Typography variant="body2" align="center">
-          bitte versuche einen anderen Suchbegriff
-        </Typography>
-      </Paper>
+          <Typography variant="body2" align="center" mt={1}>
+            bitte versuche einen anderen Suchbegriff
+          </Typography>
+        </CardContent>
+      </Card>
     );
   }
 
   return (
     <Grid container spacing={2}>
-      {breeds.length === 0 && (
-        <Paper>
-          <Typography variant="h6" align="center">
-            keine Ergebnisse gefunden
-          </Typography>
-        </Paper>
-      )}
       {breeds.map((breed) => (
         <Grid
           item
