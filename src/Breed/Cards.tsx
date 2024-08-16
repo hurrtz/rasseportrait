@@ -4,7 +4,6 @@ import BreedCard from "./Card";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 
 interface Props {
