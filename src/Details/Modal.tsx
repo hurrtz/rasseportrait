@@ -1,14 +1,9 @@
-import React, { type Dispatch, type SetStateAction } from "react";
+import React from "react";
 import Modal from "@mui/material/Modal";
-import BreedDetails from "./Breed/Details";
-import type { BreedIdentifier } from "../types/breed";
+import BreedDetails from "../Breed/Details";
+import type { BreedDetailsProps } from "./types";
 
-interface Props {
-  selectedBreed?: BreedIdentifier;
-  setSelectedBreed: Dispatch<SetStateAction<BreedIdentifier>>;
-}
-
-export default ({ selectedBreed, setSelectedBreed }: Props) => {
+export default ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
   const handleBackgroundClick = () => {
     setSelectedBreed(undefined);
   };
@@ -17,8 +12,6 @@ export default ({ selectedBreed, setSelectedBreed }: Props) => {
     <Modal
       open={selectedBreed !== undefined}
       onClose={handleBackgroundClick}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
       sx={{
         maxHeight: "100vh",
         overflow: "auto",

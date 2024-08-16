@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  type ChangeEvent,
-  type KeyboardEvent,
-  type MouseEvent,
-  type Dispatch,
-  type SetStateAction,
-} from "react";
+import React, { useState, type ChangeEvent } from "react";
 import InsertPhotoIcon from "@mui/icons-material/InsertPhoto";
 import FormatListNumberedIcon from "@mui/icons-material/FormatListNumbered";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
@@ -16,11 +9,9 @@ import SpeedDialAction from "@mui/material/SpeedDialAction";
 import SettingsIcon from "@mui/icons-material/Settings";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import BreedList from "../Breed/List";
-import BreedDetails from "../Breed/Details";
-import Modal from "../Modal";
+import Details from "../Details";
 import type { BreedIdentifier } from "../../types/breed";
 import type { Settings } from "../../types/settings";
 
@@ -40,55 +31,6 @@ const HeaderSection = ({ isMobile }: { isMobile: boolean }) => (
     </Typography>
   </>
 );
-
-const BreedDetailInformationUI = ({
-  isMobile,
-  selectedBreed,
-  setSelectedBreed,
-}: {
-  isMobile: boolean;
-  selectedBreed: BreedIdentifier;
-  setSelectedBreed: Dispatch<SetStateAction<BreedIdentifier>>;
-}) => {
-  if (isMobile) {
-    const toggleDrawer =
-      (open: boolean) => (event: KeyboardEvent | MouseEvent) => {
-        if (
-          event &&
-          event.type === "keydown" &&
-          ((event as KeyboardEvent).key === "Tab" ||
-            (event as KeyboardEvent).key === "Shift")
-        ) {
-          return;
-        }
-
-        setSelectedBreed(open ? selectedBreed : undefined);
-      };
-
-    return (
-      <SwipeableDrawer
-        anchor="bottom"
-        open={!!selectedBreed}
-        onClose={toggleDrawer(false)}
-        onOpen={toggleDrawer(true)}
-        sx={{
-          ".MuiSwipeableDrawer-paper": {
-            borderRadius: "8px 8px 0 0",
-          },
-        }}
-      >
-        <BreedDetails
-          breedIdentifier={selectedBreed}
-          closeUI={() => setSelectedBreed(undefined)}
-        />
-      </SwipeableDrawer>
-    );
-  }
-
-  return (
-    <Modal selectedBreed={selectedBreed} setSelectedBreed={setSelectedBreed} />
-  );
-};
 
 const SettingsUI = ({
   isSettingsModalOpen,
@@ -176,8 +118,7 @@ const PageBreedList = ({ onChangeArtStyle, onChangeSortOrder }: Props) => {
 
   return (
     <>
-      <BreedDetailInformationUI
-        isMobile={isMobile}
+      <Details
         selectedBreed={selectedBreed}
         setSelectedBreed={setSelectedBreed}
       />
