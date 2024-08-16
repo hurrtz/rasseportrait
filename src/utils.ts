@@ -5,13 +5,11 @@ export const getBreedImagePath = ({
   id,
   standardNumber,
   variant = "default",
-  breedName,
   artStyle,
 }: {
   id: Breed["id"];
   standardNumber: FCI["standardNumber"];
   variant?: string;
-  breedName?: string;
   artStyle?: "artsy" | "realistic";
 }) =>
   standardNumber > 0
@@ -54,7 +52,6 @@ export const flattenAndEnrichBreedVariants = ({
           id: breed.id,
           standardNumber: breed.fci.standardNumber,
           variant: breed.variants ? breed.variants[0].id : "default",
-          breedName: breed.names[0],
           artStyle,
         }),
       }) as EnrichedBreed,

@@ -1,8 +1,8 @@
 import React, { type Dispatch, type SetStateAction, useContext } from "react";
 import Fuse from "fuse.js";
-import type { Breed, BreedIdentifier } from "../types/breed";
-import { BreedsContext } from "./contexts/Breeds";
-import BreedCards from "./BreedCards";
+import type { Breed, BreedIdentifier } from "../../types/breed";
+import { BreedsContext } from "../contexts/Breeds";
+import BreedCards from "./Cards";
 
 interface Props {
   searchValue?: string;

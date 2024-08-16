@@ -5,7 +5,7 @@ import CardHeader from "@mui/material/CardHeader";
 import CardActionArea from "@mui/material/CardActionArea";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
-import type { Breed, BreedIdentifier } from "../types/breed";
+import type { Breed, BreedIdentifier } from "../../types/breed";
 
 interface Props extends Breed {
   image: string;

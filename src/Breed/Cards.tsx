@@ -1,6 +1,6 @@
 import React, { type Dispatch, type SetStateAction } from "react";
-import type { EnrichedBreed, BreedIdentifier } from "../types/breed";
-import BreedCard from "./BreedCard";
+import type { EnrichedBreed, BreedIdentifier } from "../../types/breed";
+import BreedCard from "./Card";
 import Grid from "@mui/material/Grid";
 
 interface Props {

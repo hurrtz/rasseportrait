@@ -1,6 +1,6 @@
 import React, { type Dispatch, type SetStateAction } from "react";
 import Modal from "@mui/material/Modal";
-import BreedDetails from "./BreedDetails";
+import BreedDetails from "./Breed/Details";
 import type { BreedIdentifier } from "../types/breed";
 
 interface Props {
