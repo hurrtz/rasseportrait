@@ -57,11 +57,10 @@ export default ({ id, variants, image, handleCardClick, names }: Props) => {
               width: "100%",
             }}
           >
-            <Typography sx={{}} variant="h6">
-              {names[0]}
-            </Typography>
-            {variants && (
-              <Typography sx={{}} variant="subtitle1">
+            <Typography variant="h6">{names[0]}</Typography>
+
+            {variants && variants.length > 0 && (
+              <Typography variant="subtitle1">
                 {variants[0].names[0]}
               </Typography>
             )}

@@ -17,8 +17,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
-import type { FCI, Podcast, BreedIdentifier } from "../../types/breed";
 import { BreedsContext } from "../contexts/Breeds";
+import type { FCI, Podcast, BreedIdentifier } from "../../types/breed";
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   height: 400,

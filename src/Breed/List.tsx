@@ -1,7 +1,7 @@
 import React, { type Dispatch, type SetStateAction, useContext } from "react";
 import Fuse from "fuse.js";
-import type { Breed, EnrichedBreed, BreedIdentifier } from "../../types/breed";
 import { BreedsContext } from "../contexts/Breeds";
+import type { Breed, EnrichedBreed, BreedIdentifier } from "../../types/breed";
 import BreedCards from "./Cards";
 
 interface Props {
