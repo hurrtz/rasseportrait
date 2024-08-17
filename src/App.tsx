@@ -5,8 +5,8 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import PetsIcon from "@mui/icons-material/Pets";
 import breedsList from "../db";
-import PageBreedList from "./pages/PageBreedList";
-import PageImprint from "./pages/PageImprint";
+import PageBreedList from "./pages/BreedList";
+import PageImprint from "./pages/Imprint";
 import { BreedsContext } from "./contexts/Breeds";
 import { SettingsContext } from "./contexts/Settings";
 import { flattenBreedVariants, enrichBreedsWithIllustrations } from "./utils";
@@ -42,6 +42,7 @@ const App = () => {
     breeds: breedsWithVariants,
     artStyle: settings.artStyle,
   });
+
   const sortedBreeds = enrichedBreedsWithVariants.sort(
     ({ fci: fciA, podcast: podcastA }, { fci: fciB, podcast: podcastB }) => {
       if (settings.sortDirection === "asc") {
