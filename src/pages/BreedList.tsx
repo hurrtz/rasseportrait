@@ -1,4 +1,4 @@
-import React, { useState, type ChangeEvent } from "react";
+import React, { useState, useContext, type ChangeEvent } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -8,6 +8,7 @@ import type { BreedIdentifier } from "../../types/breed";
 import type { Settings } from "../../types/settings";
 import HeaderSection from "../components/HeaderSection";
 import SettingsFAB from "../components/SettingsFAB";
+import { SettingsContext } from "../contexts/Settings";
 
 interface Props {
   onChangeArtStyle: () => void;
@@ -21,6 +22,7 @@ const PageBreedList = ({
   onChangeShowBreedVariants,
 }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
+  const settings = useContext(SettingsContext);
   const [searchValue, setSearchValue] = useState("");
   const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
 
@@ -48,6 +50,11 @@ const PageBreedList = ({
         onChangeArtStyle={onChangeArtStyle}
         onChangeSortOrder={onChangeSortOrder}
         onChangeShowBreedVariants={onChangeShowBreedVariants}
+        isArtStyleEnabled={settings.artStyle === "artsy"}
+        isBreedVariantsEnabled={settings.showBreedVariants}
+        isSortOrderFCIEnabled={settings.sortOrder === "fci-standard-number"}
+        isSortOrderAirDateEnabled={settings.sortOrder === "air-date"}
+        isSortDirectionAsc={settings.sortDirection === "asc"}
       />
 
       <HeaderSection isMobile={isMobile} />
