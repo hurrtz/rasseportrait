@@ -18,7 +18,7 @@ export const getBreedImagePath = ({
 }) => {
   let imageName = variant;
 
-  if (isVariantsCollapsed && hasVariants) {
+  if (isVariantsCollapsed && hasVariants && artStyle === "realistic") {
     imageName = "general";
   }
 
