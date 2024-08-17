@@ -34504,7 +34504,7 @@ try {
         t.SettingsContext = (0, r.createContext)({
           artStyle: "realistic",
           sortOrder: "fci-standard-number",
-          sortDirection: "desc",
+          sortDirection: "asc",
           showBreedVariants: !1,
         });
       },
