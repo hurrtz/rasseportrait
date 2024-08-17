@@ -28,7 +28,7 @@ const getFabActionObject = ({
   isActive,
   isSortDirectionAsc,
 }: {
-  id: "art_style" | "collapse_variants" | "sort_fci" | "sort_date";
+  id: "artStyle" | "collapse_variants" | "sort_fci" | "sort_date";
   isActive: boolean;
   isSortDirectionAsc?: boolean;
 }) => {
@@ -40,7 +40,7 @@ const getFabActionObject = ({
   }
 
   switch (id) {
-    case "art_style":
+    case "artStyle":
       out = {
         id,
         name: "alternativer Bildstil",
@@ -113,7 +113,7 @@ export default ({
       direction="down"
     >
       {[
-        getFabActionObject({ id: "art_style", isActive: isArtStyleEnabled }),
+        getFabActionObject({ id: "artStyle", isActive: isArtStyleEnabled }),
         getFabActionObject({
           id: "collapse_variants",
           isActive: isBreedVariantsEnabled,
@@ -135,7 +135,7 @@ export default ({
           tooltipTitle={action.name}
           tooltipOpen
           onClick={() => {
-            if (action.id === "artstyle") {
+            if (action.id === "artStyle") {
               onChangeArtStyle();
             } else if (action.id === "sort_fci") {
               onChangeSortOrder("fci-standard-number");

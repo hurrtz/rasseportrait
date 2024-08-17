@@ -41,6 +41,7 @@ const App = () => {
   const enrichedBreedsWithVariants = enrichBreedsWithIllustrations({
     breeds: breedsWithVariants,
     artStyle: settings.artStyle,
+    isVariantsCollapsed: !settings.showBreedVariants,
   });
 
   const sortedBreeds = enrichedBreedsWithVariants.sort(
