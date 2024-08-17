@@ -7,7 +7,6 @@ import SpeedDial from "@mui/material/SpeedDial";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 import SettingsIcon from "@mui/icons-material/Settings";
 import PetsIcon from "@mui/icons-material/Pets";
-import PetsIconOutlined from "@mui/icons-material/PetsOutlined";
 import type { Settings } from "../../types/settings";
 
 interface Props {
