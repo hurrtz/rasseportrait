@@ -42,10 +42,9 @@ module.exports = {
     minimize: true,
     minimizer: [
       new TerserPlugin({
-        terserOptions: {
-          compress: true,
-          mangle: true,
-        },
+        minify: TerserPlugin.uglifyJsMinify,
+        terserOptions: {},
+        extractComments: false,
       }),
     ],
   },
