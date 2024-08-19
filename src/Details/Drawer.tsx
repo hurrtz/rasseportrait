@@ -1,7 +1,24 @@
 import React, { type KeyboardEvent, type MouseEvent } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import { styled } from "@mui/material/styles";
 import BreedDetails from "../Breed/Details";
 import type { BreedDetailsProps } from "./types";
+
+const Puller = styled("div")(() => ({
+  width: 30,
+  height: 6,
+  backgroundColor: "grey",
+  borderRadius: 3,
+}));
+
+const PullerBox = styled("div")(() => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: "100%",
+  height: "30px",
+  backgroundColor: "#fff",
+}));
 
 const Drawer = ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
   const toggleDrawer =
@@ -28,12 +45,19 @@ const Drawer = ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
         ".MuiCard-root": {
           borderRadius: 0,
         },
+        ".MuiPaper-root": {
+          borderRadius: "8px 8px 0 0",
+        },
       }}
     >
       <BreedDetails
         breedIdentifier={selectedBreed}
         closeUI={() => setSelectedBreed(undefined)}
-      />
+      >
+        <PullerBox>
+          <Puller />
+        </PullerBox>
+      </BreedDetails>
     </SwipeableDrawer>
   );
 };

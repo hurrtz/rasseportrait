@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, type ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
@@ -73,9 +73,10 @@ const getTimeCopy = (timecode: Podcast["timecode"]) => {
 interface Props {
   breedIdentifier: BreedIdentifier;
   closeUI: () => void;
+  children?: ReactNode;
 }
 
-export default ({ breedIdentifier, closeUI }: Props) => {
+export default ({ breedIdentifier, closeUI, children }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
   const breeds = useContext(BreedsContext);
   const settings = useContext(SettingsContext);
@@ -126,6 +127,7 @@ export default ({ breedIdentifier, closeUI }: Props) => {
             maxWidth: "100vw",
           }}
         >
+          {children}
           {isMobile === false && (
             <Fab
               aria-label="add"
