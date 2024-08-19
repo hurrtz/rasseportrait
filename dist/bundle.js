@@ -33950,36 +33950,36 @@ try {
               return e && e.__esModule ? e : { default: e };
             };
         Object.defineProperty(t, "__esModule", { value: !0 });
-        let d = i(r(6540)),
-          c = o(r(5805)),
-          p = o(r(4604)),
-          f = o(r(2385)),
-          m = o(r(4068));
+        let c = i(r(6540)),
+          p = o(r(5805)),
+          f = o(r(4604)),
+          m = o(r(2385)),
+          h = o(r(4068));
         i = o(r(4157));
-        let h = o(r(401)),
-          g = o(r(6698)),
-          v = o(r(3159)),
-          b = o(r(2308)),
-          y = o(r(5721)),
-          w = o(r(3800)),
-          k = o(r(477)),
-          A = o(r(7884)),
-          S = o(r(8938)),
-          x = o(r(9781)),
-          C = o(r(9814)),
-          E = o(r(5358));
+        let g = o(r(401)),
+          v = o(r(6698)),
+          b = o(r(3159)),
+          y = o(r(2308)),
+          w = o(r(5721)),
+          k = o(r(3800)),
+          A = o(r(477)),
+          S = o(r(7884)),
+          x = o(r(8938)),
+          C = o(r(9781)),
+          E = o(r(9814)),
+          _ = o(r(5358));
         o = r(5725);
-        let _ = r(8002),
-          R = r(9332),
-          P = (0, o.styled)(i.default)(({ image: e }) => ({
+        let R = r(8002),
+          P = r(9332),
+          M = (0, o.styled)(i.default)(({ image: e }) => ({
             height: 400,
             background: `url(${e}) no-repeat center center transparent`,
             backgroundSize: "cover",
           })),
-          M = ({ fci: { standardNumber: e, group: t, section: r } }) =>
+          N = ({ fci: { standardNumber: e, group: t, section: r } }) =>
             0 < e
-              ? d.default.createElement(
-                  p.default,
+              ? c.default.createElement(
+                  f.default,
                   { variant: "body2", color: "text.secondary" },
                   "FCI: Standardnummer ",
                   e,
@@ -33989,81 +33989,82 @@ try {
                   r,
                   ")",
                 )
-              : d.default.createElement(
-                  p.default,
+              : c.default.createElement(
+                  f.default,
                   { variant: "body2", color: "text.secondary" },
                   "—keine FCI-anerkannte Rasse—",
                 ),
-          N = (e) => [
+          O = (e) => [
             Math.floor(e / 3600),
             Math.floor((e % 3600) / 60),
             e % 60,
           ];
-        t.default = ({ breedIdentifier: t, closeUI: e }) => {
-          var r = (0, k.default)("(max-width: 480px"),
-            n = (0, d.useContext)(_.BreedsContext),
-            a = (0, d.useContext)(R.SettingsContext),
-            [n] = n.filter((e) =>
+        t.default = ({ breedIdentifier: t, closeUI: e, children: r }) => {
+          var n = (0, A.default)("(max-width: 480px"),
+            a = (0, c.useContext)(R.BreedsContext),
+            i = (0, c.useContext)(P.SettingsContext),
+            [a] = a.filter((e) =>
               t && t.variantName && e.variants
                 ? t.variantName === e.variants[0].names[0] && t.id === e.id
                 : (null == t ? void 0 : t.id) === e.id,
             );
-          if (n) {
+          if (a) {
             var {
-                names: n,
-                variants: i,
-                fci: o,
-                podcast: l,
-                furtherReading: s,
-                image: u,
-              } = n,
-              s = [...s, ...((i && i[0].furtherReading) || [])];
-            return d.default.createElement(
-              c.default,
+                names: a,
+                variants: o,
+                fci: l,
+                podcast: s,
+                furtherReading: u,
+                image: d,
+              } = a,
+              u = [...u, ...((o && o[0].furtherReading) || [])];
+            return c.default.createElement(
+              p.default,
               null,
-              d.default.createElement(
-                f.default,
+              c.default.createElement(
+                m.default,
                 {
                   sx: {
                     maxHeight: "100vh",
                     overflow: "auto",
-                    width: r ? "100%" : 400,
+                    width: n ? "100%" : 400,
                     maxWidth: "100vw",
                   },
                 },
-                !1 === r &&
-                  d.default.createElement(
-                    S.default,
+                r,
+                !1 === n &&
+                  c.default.createElement(
+                    x.default,
                     {
                       "aria-label": "add",
                       size: "medium",
                       sx: { position: "absolute", top: "10px", right: "10px" },
                       onClick: e,
                     },
-                    d.default.createElement(x.default, null),
+                    c.default.createElement(C.default, null),
                   ),
-                d.default.createElement(P, { image: u }),
-                d.default.createElement(
-                  m.default,
+                c.default.createElement(M, { image: d }),
+                c.default.createElement(
+                  h.default,
                   null,
-                  d.default.createElement(
-                    p.default,
+                  c.default.createElement(
+                    f.default,
                     { gutterBottom: !0, variant: "h5", component: "div" },
-                    n[0],
+                    a[0],
                   ),
-                  !0 === a.showBreedVariants &&
-                    i &&
-                    0 < i.length &&
-                    d.default.createElement(
-                      p.default,
+                  !0 === i.showBreedVariants &&
+                    o &&
+                    0 < o.length &&
+                    c.default.createElement(
+                      f.default,
                       { gutterBottom: !0, variant: "h6", component: "div" },
-                      i[0].names[0],
+                      o[0].names[0],
                     ),
-                  d.default.createElement(M, { fci: o }),
-                  d.default.createElement(
-                    h.default,
+                  c.default.createElement(N, { fci: l }),
+                  c.default.createElement(
+                    g.default,
                     { dense: !0 },
-                    l.map(
+                    s.map(
                       ({
                         number: e,
                         episode: t,
@@ -34071,8 +34072,8 @@ try {
                         timecode: n,
                         type: a = "audio",
                       }) =>
-                        d.default.createElement(
-                          g.default,
+                        c.default.createElement(
+                          v.default,
                           {
                             disablePadding: !0,
                             key: e,
@@ -34083,24 +34084,24 @@ try {
                               borderRadius: 2,
                             },
                           },
-                          d.default.createElement(
-                            b.default,
+                          c.default.createElement(
+                            y.default,
                             null,
-                            d.default.createElement(
-                              y.default,
+                            c.default.createElement(
+                              w.default,
                               null,
                               "audio" === a &&
-                                d.default.createElement(w.default, null),
+                                c.default.createElement(k.default, null),
                               "video" === a &&
-                                d.default.createElement(A.default, null),
+                                c.default.createElement(S.default, null),
                             ),
-                            d.default.createElement(v.default, {
+                            c.default.createElement(b.default, {
                               key: t,
                               primary: t,
                               secondary:
                                 `Folge ${e} — ` +
                                 ((a = n),
-                                (a = N(a)),
+                                (a = O(a)),
                                 (t = []),
                                 a[0] && t.push("Stunde " + a[0]),
                                 a[1] && t.push("Minute " + a[1]),
@@ -34123,18 +34124,18 @@ try {
                         ),
                     ),
                   ),
-                  d.default.createElement(
-                    p.default,
+                  c.default.createElement(
+                    f.default,
                     { gutterBottom: !0, variant: "body2", component: "div" },
                     "Weitere Infos:",
                   ),
-                  d.default.createElement(
-                    E.default,
+                  c.default.createElement(
+                    _.default,
                     { direction: "row", spacing: 1 },
-                    s
+                    u
                       .filter(({ url: e }) => e)
                       .map(({ url: e, name: t }) =>
-                        d.default.createElement(C.default, {
+                        c.default.createElement(E.default, {
                           key: e,
                           label: t,
                           variant: "outlined",
@@ -34267,8 +34268,23 @@ try {
           };
         Object.defineProperty(t, "__esModule", { value: !0 });
         let a = n(r(6540)),
-          i = n(r(4646)),
-          o = n(r(1621));
+          i = n(r(4646));
+        var o = r(5725);
+        let l = n(r(1621)),
+          s = (0, o.styled)("div")(() => ({
+            width: 30,
+            height: 6,
+            backgroundColor: "grey",
+            borderRadius: 3,
+          })),
+          u = (0, o.styled)("div")(() => ({
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+            height: "30px",
+            backgroundColor: "#fff",
+          }));
         t.default = ({ selectedBreed: r, setSelectedBreed: n }) => {
           var e = (t) => (e) => {
             (e &&
@@ -34283,12 +34299,20 @@ try {
               open: !!r,
               onClose: e(!1),
               onOpen: e(!0),
-              sx: { ".MuiCard-root": { borderRadius: 0 } },
+              sx: {
+                ".MuiCard-root": { borderRadius: 0 },
+                ".MuiPaper-root": { borderRadius: "8px 8px 0 0" },
+              },
             },
-            a.default.createElement(o.default, {
-              breedIdentifier: r,
-              closeUI: () => n(void 0),
-            }),
+            a.default.createElement(
+              l.default,
+              { breedIdentifier: r, closeUI: () => n(void 0) },
+              a.default.createElement(
+                u,
+                null,
+                a.default.createElement(s, null),
+              ),
+            ),
           );
         };
       },
