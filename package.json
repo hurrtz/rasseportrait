@@ -6,8 +6,8 @@
   "scripts": {
     "copyIllustrations": "node scripts/copyIllustrations.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open",
-    "build": "webpack",
+    "start": "webpack serve --open --config webpack.dev.config.js",
+    "build": "webpack --config webpack.prod.config.js",
     "prepare": "husky"
   },
   "repository": {
@@ -59,6 +59,7 @@
     "uglify-js": "^3.19.2",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^6.0.1"
   }
 }
