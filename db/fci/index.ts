@@ -17,6 +17,7 @@ import FCI_Standardnumber_53 from "./53";
 import FCI_Standardnumber_54 from "./54";
 import FCI_Standardnumber_56 from "./56";
 import FCI_Standardnumber_57 from "./57";
+import FCI_Standardnumber_62 from "./62";
 import FCI_Standardnumber_71 from "./71";
 import FCI_Standardnumber_73 from "./73";
 import FCI_Standardnumber_80 from "./80";
@@ -126,6 +127,7 @@ export default {
   FCI_Standardnumber_54,
   FCI_Standardnumber_56,
   FCI_Standardnumber_57,
+  FCI_Standardnumber_62,
   FCI_Standardnumber_71,
   FCI_Standardnumber_73,
   FCI_Standardnumber_80,
