@@ -3,7 +3,7 @@ import type { Settings } from "../../types/settings";
 
 export const SettingsContext = createContext<Settings>({
   artStyle: "realistic",
-  sortOrder: "fci-standard-number",
+  sortOrder: "air-date",
   sortDirection: "asc",
   showBreedVariants: false,
 });
