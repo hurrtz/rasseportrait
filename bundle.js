@@ -30532,6 +30532,13 @@ try {
               timecode: 1733,
               airDateTimestamp: 16716708e5,
             },
+            {
+              number: "Summer Edition #10",
+              episode: "Stabile Typen",
+              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+              timecode: 1106,
+              airDateTimestamp: 17248896e5,
+            },
           ],
           furtherReading: [
             {
@@ -31224,7 +31231,7 @@ try {
             {
               number: "Summer Edition #7",
               episode: "Hobby Horsing for Olympia!",
-              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-7-hobby-horsing-for-olympia-7pbpazh2zvi72",
               timecode: 1075,
               airDateTimestamp: 17230788e5,
             },
@@ -31939,6 +31946,39 @@ try {
           ],
         };
       },
+      476: (e, t) => {
+        Object.defineProperty(t, "__esModule", { value: !0 });
+        var r = { group: 5, section: 7, standardNumber: 338 },
+          n = r.standardNumber;
+        t.default = {
+          id: n,
+          names: ["Thai Ridgeback"],
+          fci: r,
+          podcast: [
+            {
+              number: "Summer Edition #10",
+              episode: "Stabile Typen",
+              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+              timecode: 1008,
+              airDateTimestamp: 17248896e5,
+            },
+          ],
+          furtherReading: [
+            {
+              name: "Wikipedia",
+              url: "https://de.wikipedia.org/wiki/Thai_Ridgeback",
+            },
+            {
+              name: "FCI",
+              url: "https://www.fci.be/de/nomenclature/THAILAND-RIDGEBACK-338.html",
+            },
+            {
+              name: "VDH",
+              url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/thai-ridgeback-dog",
+            },
+          ],
+        };
+      },
       8595: (e, t) => {
         Object.defineProperty(t, "__esModule", { value: !0 });
         var r = { group: 3, section: 1, standardNumber: 339 },
@@ -32021,7 +32061,7 @@ try {
             {
               number: "Summer Edition #7",
               episode: "Hobby Horsing for Olympia!",
-              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-7-hobby-horsing-for-olympia-7pbpazh2zvi72",
               timecode: 1075,
               airDateTimestamp: 17230788e5,
             },
@@ -32647,7 +32687,7 @@ try {
             {
               number: "Summer Edition #9",
               episode: "Katzengefühle",
-              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-9-katzengefuehle-57gluk24bflht",
               timecode: 2044,
               airDateTimestamp: 17242884e5,
             },
@@ -33219,12 +33259,13 @@ try {
           qe = r(t(2850)),
           Xe = r(t(2522)),
           Ye = r(t(1178)),
-          Qe = r(t(8595)),
-          Ze = r(t(4062)),
-          Je = r(t(5447)),
-          et = r(t(5945)),
-          tt = r(t(8784)),
-          rt = r(t(2484)),
+          Qe = r(t(476)),
+          Ze = r(t(8595)),
+          Je = r(t(4062)),
+          et = r(t(5447)),
+          tt = r(t(5945)),
+          rt = r(t(8784)),
+          nt = r(t(2484)),
           r = r(t(8965));
         e.default = {
           FCI_Standardnumber_5: n.default,
@@ -33328,12 +33369,13 @@ try {
           FCI_Standardnumber_321: qe.default,
           FCI_Standardnumber_329: Xe.default,
           FCI_Standardnumber_336: Ye.default,
-          FCI_Standardnumber_339: Qe.default,
-          FCI_Standardnumber_343: Ze.default,
-          FCI_Standardnumber_344: Je.default,
-          FCI_Standardnumber_346: et.default,
-          FCI_Standardnumber_356: tt.default,
-          FCI_Standardnumber_363: rt.default,
+          FCI_Standardnumber_338: Qe.default,
+          FCI_Standardnumber_339: Ze.default,
+          FCI_Standardnumber_343: Je.default,
+          FCI_Standardnumber_344: et.default,
+          FCI_Standardnumber_346: tt.default,
+          FCI_Standardnumber_356: rt.default,
+          FCI_Standardnumber_363: nt.default,
           FCI_Standardnumber_368: r.default,
         };
       },
@@ -33358,7 +33400,7 @@ try {
             {
               number: "Summer Edition #8",
               episode: "Die schlauesten Tiere der Welt",
-              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+              url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-8-die-schlauesten-tiere-der-welt-febovvjxrpps9",
               timecode: 1030,
               airDateTimestamp: 17236836e5,
             },
