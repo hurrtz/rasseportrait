@@ -30,6 +30,13 @@ const breed: Breed = {
       timecode: 1733,
       airDateTimestamp: 1671670800000,
     },
+    {
+      number: "Summer Edition #10",
+      episode: "Stabile Typen",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+      timecode: 1106,
+      airDateTimestamp: 1724889600000,
+    },
   ],
   furtherReading: [
     {
