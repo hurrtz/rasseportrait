@@ -77,3 +77,16 @@ export const enrichBreedsWithIllustrations = ({
         }),
       }) as EnrichedBreed,
   );
+
+export const getWindowLocationSearch = ({
+  name,
+  value,
+}: {
+  name: string;
+  value: string;
+}) => {
+  const search = new URLSearchParams(window.location.search);
+  search.set(name, value);
+
+  return search.toString();
+};

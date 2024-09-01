@@ -9,6 +9,7 @@ import type { Settings } from "../../types/settings";
 import HeaderSection from "../components/HeaderSection";
 import SettingsFAB from "../components/SettingsFAB";
 import { SettingsContext } from "../contexts/Settings";
+import { getWindowLocationSearch } from "../utils";
 
 interface Props {
   onChangeArtStyle: () => void;
@@ -34,7 +35,11 @@ const PageBreedList = ({
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event && event.target) {
-      window.history.replaceState({}, "", `?s=${event.target.value}`);
+      window.history.replaceState(
+        {},
+        "",
+        `?${getWindowLocationSearch({ name: "s", value: event.target.value })}`,
+      );
       setSearchValue(event.target.value);
     }
   };
