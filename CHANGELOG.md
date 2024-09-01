@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.6](https://github.com/hurrtz/rasseportrait/compare/v1.3.5...v1.3.6) (2024-09-01)
+
+
+### Bug Fixes
+
+* empty url no longer shows backdrop ([d8c44d9](https://github.com/hurrtz/rasseportrait/commit/d8c44d9b3bb0339d9cd16f6d302cc9e62e09d474))
+
 ### [1.3.5](https://github.com/hurrtz/rasseportrait/compare/v1.3.4...v1.3.5) (2024-09-01)
 
 ### [1.3.4](https://github.com/hurrtz/rasseportrait/compare/v1.3.3...v1.3.4) (2024-09-01)
