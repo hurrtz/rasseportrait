@@ -203,34 +203,35 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
               Weitere Infos:
             </Typography>
 
-            <Stack direction="row" spacing={1}>
-              {furtherReadings
-                .filter(({ url }) => url)
-                .map(({ url, name }) => (
-                  <Chip
-                    key={url}
-                    label={name}
-                    variant="outlined"
-                    size="small"
-                    onClick={() => openReadMore(url)}
-                    title={url}
-                  />
-                ))}
-            </Stack>
+            <Stack direction="row" justifyContent="space-between">
+              <Stack direction="row" spacing={1}>
+                {furtherReadings
+                  .filter(({ url }) => url)
+                  .map(({ url, name }) => (
+                    <Chip
+                      key={url}
+                      label={name}
+                      variant="outlined"
+                      size="small"
+                      onClick={() => openReadMore(url)}
+                      title={url}
+                    />
+                  ))}
+              </Stack>
 
-            {recognitions.map((recognition) => (
-              <Tooltip title={recognition}>
-                <FavoriteIcon
-                  sx={{
-                    color: "rgba(255, 0, 0, 0.75)",
-                    transform: "rotate(28deg)",
-                    position: "absolute",
-                    right: "16px",
-                    bottom: "18px",
-                  }}
-                />
-              </Tooltip>
-            ))}
+              <Stack direction="row" spacing={1}>
+                {recognitions.map((recognition) => (
+                  <Tooltip title={recognition}>
+                    <FavoriteIcon
+                      sx={{
+                        color: "rgba(255, 0, 0, 0.75)",
+                        transform: "rotate(28deg)",
+                      }}
+                    />
+                  </Tooltip>
+                ))}
+              </Stack>
+            </Stack>
           </CardContent>
         </Card>
       </Box>
