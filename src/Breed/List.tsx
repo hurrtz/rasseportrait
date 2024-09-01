@@ -1,4 +1,4 @@
-import React, { type Dispatch, type SetStateAction, useContext } from "react";
+import React, { useContext } from "react";
 import Fuse from "fuse.js";
 import { BreedsContext } from "../contexts/Breeds";
 import type { Breed, EnrichedBreed, BreedIdentifier } from "../../types/breed";
@@ -6,7 +6,7 @@ import BreedCards from "./Cards";
 
 interface Props {
   searchValue?: string;
-  setSelectedBreed: Dispatch<SetStateAction<BreedIdentifier>>;
+  setSelectedBreed: (breedIdentifier: BreedIdentifier) => void;
 }
 
 const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {

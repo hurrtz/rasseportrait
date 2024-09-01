@@ -1,4 +1,4 @@
-import React, { useContext, type Dispatch, type SetStateAction } from "react";
+import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -11,7 +11,7 @@ import { getWindowLocationSearch } from "../utils";
 
 interface Props extends Breed {
   image: string;
-  handleCardClick: Dispatch<SetStateAction<BreedIdentifier>>;
+  handleCardClick: (breedIdentifier: BreedIdentifier) => void;
 }
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({

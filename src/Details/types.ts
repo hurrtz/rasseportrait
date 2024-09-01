@@ -3,5 +3,5 @@ import type { BreedIdentifier } from "../../types/breed";
 
 export interface BreedDetailsProps {
   selectedBreed: BreedIdentifier;
-  setSelectedBreed: Dispatch<SetStateAction<BreedIdentifier>>;
+  setSelectedBreed: (breedIdentifier: BreedIdentifier) => void;
 }

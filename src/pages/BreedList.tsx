@@ -30,10 +30,29 @@ const PageBreedList = ({
     searchParams.get("search") || "",
   );
 
-  const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>({
-    id: String(searchParams.get("breed")),
-    variantName: searchParams.get("variant") || undefined,
-  });
+  const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>(
+    searchParams.get("breed")
+      ? {
+          id: String(searchParams.get("breed")),
+          variantName: searchParams.get("variant") || undefined,
+        }
+      : undefined,
+  );
+
+  const augmentedSetSelectedBreed = (breedIdentifier?: BreedIdentifier) => {
+    setSelectedBreed(breedIdentifier);
+    window.history.replaceState(
+      {},
+      "",
+      `?${getWindowLocationSearch([
+        {
+          name: "breed",
+          value: breedIdentifier?.id ? String(breedIdentifier.id) : undefined,
+        },
+        { name: "variant", value: breedIdentifier?.variantName },
+      ])}`,
+    );
+  };
 
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const handleSettingsModalOpen = () => setIsSettingsModalOpen(true);
@@ -54,7 +73,7 @@ const PageBreedList = ({
     <>
       <Details
         selectedBreed={selectedBreed}
-        setSelectedBreed={setSelectedBreed}
+        setSelectedBreed={augmentedSetSelectedBreed}
       />
 
       <SettingsFAB
@@ -85,7 +104,7 @@ const PageBreedList = ({
 
       <BreedList
         searchValue={searchValue}
-        setSelectedBreed={setSelectedBreed}
+        setSelectedBreed={augmentedSetSelectedBreed}
       />
     </>
   );
