@@ -100,12 +100,12 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
       if (breedIdentifier.variantName && breed.variants) {
         return (
           breedIdentifier.variantName === breed.variants[0].names[0] &&
-          breedIdentifier.id === breed.id
+          String(breedIdentifier.id) === String(breed.id)
         );
       }
     }
 
-    return breedIdentifier?.id === breed.id;
+    return String(breedIdentifier?.id) === String(breed.id);
   });
 
   if (breed) {

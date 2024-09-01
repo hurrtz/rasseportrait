@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import { SettingsContext } from "../contexts/Settings";
 import type { Breed, BreedIdentifier } from "../../types/breed";
+import { getWindowLocationSearch } from "../utils";
 
 interface Props extends Breed {
   image: string;
@@ -31,11 +32,20 @@ export default ({
 
   const onClick = () => {
     const payload: BreedIdentifier = { id };
+    const variant = variants && variants[0] ? variants[0].names[0] : undefined;
 
     if (variants) {
-      payload.variantName = variants[0].names[0];
+      payload.variantName = variant;
     }
 
+    window.history.replaceState(
+      {},
+      "",
+      `?${getWindowLocationSearch([
+        { name: "breed", value: String(id) },
+        { name: "variant", value: variant },
+      ])}`,
+    );
     handleCardClick(payload);
   };
 

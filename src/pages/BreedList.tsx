@@ -24,10 +24,16 @@ const PageBreedList = ({
 }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
   const settings = useContext(SettingsContext);
+  const searchParams = new URLSearchParams(location.search);
+
   const [searchValue, setSearchValue] = useState(
-    new URL(location.href).searchParams.get("s") || "",
+    searchParams.get("search") || "",
   );
-  const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
+
+  const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>({
+    id: String(searchParams.get("breed")),
+    variantName: searchParams.get("variant") || undefined,
+  });
 
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const handleSettingsModalOpen = () => setIsSettingsModalOpen(true);
@@ -38,7 +44,7 @@ const PageBreedList = ({
       window.history.replaceState(
         {},
         "",
-        `?${getWindowLocationSearch({ name: "s", value: event.target.value })}`,
+        `?${getWindowLocationSearch([{ name: "search", value: event.target.value }])}`,
       );
       setSearchValue(event.target.value);
     }
