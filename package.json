@@ -9,7 +9,7 @@
     "start": "webpack serve --open --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
     "prepare": "husky && husky install",
-    "prepareRelease": "npm run build && npm run copyIllustrations",
+    "prepareRelease": "npm run build && npm run copyIllustrations && scripts/prepareRelease.sh",
     "release": "standard-version",
     "prerelease": "npm run prepareRelease",
     "release:minor": "standard-version --release-as minor",
