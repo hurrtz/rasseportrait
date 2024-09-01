@@ -1,4 +1,4 @@
-import React, { useContext, type ReactNode } from "react";
+import React, { useState, useContext, type ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
@@ -14,11 +14,13 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Fab from "@mui/material/Fab";
+import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { BreedsContext } from "../contexts/Breeds";
 import { SettingsContext } from "../contexts/Settings";
 import type { FCI, Podcast, BreedIdentifier } from "../../types/breed";
@@ -82,6 +84,16 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
   const breeds = useContext(BreedsContext);
   const settings = useContext(SettingsContext);
+
+  const [isTooltipOpen, setIsTooltipOpen] = useState(false);
+
+  const handleTooltipClose = () => {
+    setIsTooltipOpen(false);
+  };
+
+  const handleTooltipOpen = () => {
+    setIsTooltipOpen(true);
+  };
 
   const [breed] = breeds.filter((breed) => {
     if (breedIdentifier) {
@@ -219,16 +231,40 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                   ))}
               </Stack>
 
-              <Stack direction="row" spacing={1}>
+              <Stack
+                direction="row"
+                spacing={1}
+                sx={{
+                  [".MuiButtonBase-root"]: {
+                    marginTop: "-8px",
+                    marginRight: "-8px",
+                  },
+                }}
+              >
                 {recognitions.map((recognition) => (
-                  <Tooltip title={recognition}>
-                    <FavoriteIcon
-                      sx={{
-                        color: "rgba(255, 0, 0, 0.75)",
-                        transform: "rotate(28deg)",
+                  <ClickAwayListener onClickAway={handleTooltipClose}>
+                    <Tooltip
+                      title={recognition}
+                      disableInteractive
+                      PopperProps={{
+                        disablePortal: true,
                       }}
-                    />
-                  </Tooltip>
+                      onClose={handleTooltipClose}
+                      open={isTooltipOpen}
+                      disableFocusListener
+                      disableHoverListener
+                      disableTouchListener
+                    >
+                      <IconButton onClick={handleTooltipOpen}>
+                        <FavoriteIcon
+                          sx={{
+                            color: "rgba(255, 0, 0, 0.75)",
+                            transform: "rotate(28deg)",
+                          }}
+                        />
+                      </IconButton>
+                    </Tooltip>
+                  </ClickAwayListener>
                 ))}
               </Stack>
             </Stack>
