@@ -19,7 +19,14 @@ const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   backgroundSize: "cover",
 }));
 
-export default ({ id, variants, image, handleCardClick, names }: Props) => {
+export default ({
+  id,
+  variants,
+  image,
+  handleCardClick,
+  names,
+  fci: { standardNumber },
+}: Props) => {
   const settings = useContext(SettingsContext);
 
   const onClick = () => {
@@ -69,6 +76,14 @@ export default ({ id, variants, image, handleCardClick, names }: Props) => {
                   {variants[0].names[0]}
                 </Typography>
               )}
+
+            {settings.sortOrder === "fci-standard-number" && (
+              <Typography variant="subtitle1">
+                {standardNumber && standardNumber > 0
+                  ? `FCI Standardnummer ${standardNumber}`
+                  : "— keine FCI-anerkannte Rasse —"}
+              </Typography>
+            )}
           </Box>
         </Box>
       </CardActionArea>
