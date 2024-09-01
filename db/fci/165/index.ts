@@ -29,7 +29,7 @@ const breed: Breed = {
   furtherReading: [
     {
       name: "Wikipedia",
-      url: "https://de.wikipedia.org/wiki/Berger_de_Picardie",
+      url: "https://de.wikipedia.org/wiki/Spinone_Italiano",
     },
     {
       name: "FCI",
