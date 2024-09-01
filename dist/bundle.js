@@ -3936,6 +3936,112 @@
           );
         });
       },
+      3483: (e, t, r) => {
+        r.r(t),
+          r.d(t, {
+            default: () =>
+              function (e) {
+                let {
+                    children: n,
+                    disableReactTree: i = !1,
+                    mouseEvent: r = "onClick",
+                    onClickAway: o,
+                    touchEvent: a = "onTouchEnd",
+                  } = e,
+                  l = m.useRef(!1),
+                  s = m.useRef(null),
+                  u = m.useRef(!1),
+                  d = m.useRef(!1),
+                  t =
+                    (m.useEffect(
+                      () => (
+                        setTimeout(() => {
+                          u.current = !0;
+                        }, 0),
+                        () => {
+                          u.current = !1;
+                        }
+                      ),
+                      [],
+                    ),
+                    (0, h.A)(n.ref, s)),
+                  c = (0, g.A)((t) => {
+                    var e,
+                      r,
+                      n = d.current,
+                      a = ((d.current = !1), v.A)(s.current);
+                    if (
+                      u.current &&
+                      s.current &&
+                      !(
+                        "clientX" in t &&
+                        ((e = t),
+                        (r = a).documentElement.clientWidth < e.clientX ||
+                          r.documentElement.clientHeight < e.clientY)
+                      )
+                    )
+                      if (l.current) l.current = !1;
+                      else {
+                        let e;
+                        (e = t.composedPath
+                          ? -1 < t.composedPath().indexOf(s.current)
+                          : !a.documentElement.contains(t.target) ||
+                            s.current.contains(t.target)) ||
+                          (!i && n) ||
+                          o(t);
+                      }
+                  }),
+                  p = (r) => (e) => {
+                    d.current = !0;
+                    var t = n.props[r];
+                    t && t(e);
+                  },
+                  f = { ref: t };
+                !1 !== a && (f[a] = p(a));
+                m.useEffect(() => {
+                  if (!1 !== a) {
+                    let e = y(a),
+                      t = (0, v.A)(s.current),
+                      r = () => {
+                        l.current = !0;
+                      };
+                    return (
+                      t.addEventListener(e, c),
+                      t.addEventListener("touchmove", r),
+                      () => {
+                        t.removeEventListener(e, c),
+                          t.removeEventListener("touchmove", r);
+                      }
+                    );
+                  }
+                }, [c, a]),
+                  !1 !== r && (f[r] = p(r));
+                return (
+                  m.useEffect(() => {
+                    if (!1 !== r) {
+                      let e = y(r),
+                        t = (0, v.A)(s.current);
+                      return (
+                        t.addEventListener(e, c),
+                        () => {
+                          t.removeEventListener(e, c);
+                        }
+                      );
+                    }
+                  }, [c, r]),
+                  (0, b.jsx)(m.Fragment, { children: m.cloneElement(n, f) })
+                );
+              },
+          });
+        var m = r(6540),
+          h = r(1523),
+          g = r(1547),
+          v = r(2325),
+          b = r(4848);
+        function y(e) {
+          return e.substring(2).toLowerCase();
+        }
+      },
       4351: (e, t, r) => {
         r.r(t),
           r.d(t, {
@@ -4866,6 +4972,189 @@
         });
         t.muiSupportAuto = !0;
         let n = t;
+      },
+      721: (e, t, r) => {
+        r.r(t),
+          r.d(t, {
+            default: () => u,
+            getIconButtonUtilityClass: () => g,
+            iconButtonClasses: () => s,
+          });
+        var d = r(8587),
+          c = r(8168),
+          t = r(6540),
+          p = r(4164),
+          f = r(5659),
+          n = r(771),
+          a = r(1848),
+          m = r(5669),
+          i = r(6606),
+          h = r(8466),
+          o = r(8413),
+          l = r(1609);
+        function g(e) {
+          return (0, l.Ay)("MuiIconButton", e);
+        }
+        let s = (0, o.A)("MuiIconButton", [
+          "root",
+          "disabled",
+          "colorInherit",
+          "colorPrimary",
+          "colorSecondary",
+          "colorError",
+          "colorInfo",
+          "colorSuccess",
+          "colorWarning",
+          "edgeStart",
+          "edgeEnd",
+          "sizeSmall",
+          "sizeMedium",
+          "sizeLarge",
+        ]);
+        var v = r(4848);
+        let b = [
+            "edge",
+            "children",
+            "className",
+            "color",
+            "disabled",
+            "disableFocusRipple",
+            "size",
+          ],
+          y = (0, a.Ay)(i.A, {
+            name: "MuiIconButton",
+            slot: "Root",
+            overridesResolver: (e, t) => {
+              e = e.ownerState;
+              return [
+                t.root,
+                "default" !== e.color && t["color" + (0, h.A)(e.color)],
+                e.edge && t["edge" + (0, h.A)(e.edge)],
+                t["size" + (0, h.A)(e.size)],
+              ];
+            },
+          })(
+            ({ theme: e, ownerState: t }) =>
+              (0, c.A)(
+                {
+                  textAlign: "center",
+                  flex: "0 0 auto",
+                  fontSize: e.typography.pxToRem(24),
+                  padding: 8,
+                  borderRadius: "50%",
+                  overflow: "visible",
+                  color: (e.vars || e).palette.action.active,
+                  transition: e.transitions.create("background-color", {
+                    duration: e.transitions.duration.shortest,
+                  }),
+                },
+                !t.disableRipple && {
+                  "&:hover": {
+                    backgroundColor: e.vars
+                      ? `rgba(${e.vars.palette.action.activeChannel} / ${e.vars.palette.action.hoverOpacity})`
+                      : (0, n.X4)(
+                          e.palette.action.active,
+                          e.palette.action.hoverOpacity,
+                        ),
+                    "@media (hover: none)": { backgroundColor: "transparent" },
+                  },
+                },
+                "start" === t.edge && {
+                  marginLeft: "small" === t.size ? -3 : -12,
+                },
+                "end" === t.edge && {
+                  marginRight: "small" === t.size ? -3 : -12,
+                },
+              ),
+            ({ theme: e, ownerState: t }) => {
+              var r = null == (r = (e.vars || e).palette) ? void 0 : r[t.color];
+              return (0, c.A)(
+                {},
+                "inherit" === t.color && { color: "inherit" },
+                "inherit" !== t.color &&
+                  "default" !== t.color &&
+                  (0, c.A)(
+                    { color: null == r ? void 0 : r.main },
+                    !t.disableRipple && {
+                      "&:hover": (0, c.A)(
+                        {},
+                        r && {
+                          backgroundColor: e.vars
+                            ? `rgba(${r.mainChannel} / ${e.vars.palette.action.hoverOpacity})`
+                            : (0, n.X4)(r.main, e.palette.action.hoverOpacity),
+                        },
+                        {
+                          "@media (hover: none)": {
+                            backgroundColor: "transparent",
+                          },
+                        },
+                      ),
+                    },
+                  ),
+                "small" === t.size && {
+                  padding: 5,
+                  fontSize: e.typography.pxToRem(18),
+                },
+                "large" === t.size && {
+                  padding: 12,
+                  fontSize: e.typography.pxToRem(28),
+                },
+                {
+                  ["&." + s.disabled]: {
+                    backgroundColor: "transparent",
+                    color: (e.vars || e).palette.action.disabled,
+                  },
+                },
+              );
+            },
+          ),
+          u = t.forwardRef(function (e, t) {
+            var e = (0, m.b)({ props: e, name: "MuiIconButton" }),
+              {
+                edge: r = !1,
+                children: n,
+                className: a,
+                color: i = "default",
+                disabled: o = !1,
+                disableFocusRipple: l = !1,
+                size: s = "medium",
+              } = e,
+              u = (0, d.A)(e, b),
+              e = (0, c.A)({}, e, {
+                edge: r,
+                color: i,
+                disabled: o,
+                disableFocusRipple: l,
+                size: s,
+              }),
+              r = ((e) => {
+                var { classes: e, disabled: t, color: r, edge: n, size: a } = e,
+                  t = {
+                    root: [
+                      "root",
+                      t && "disabled",
+                      "default" !== r && "color" + (0, h.A)(r),
+                      n && "edge" + (0, h.A)(n),
+                      "size" + (0, h.A)(a),
+                    ],
+                  };
+                return (0, f.A)(t, g, e);
+              })(e);
+            return (0, v.jsx)(
+              y,
+              (0, c.A)(
+                {
+                  className: (0, p.A)(r.root, a),
+                  centerRipple: !0,
+                  focusRipple: !l,
+                  disabled: o,
+                  ref: t,
+                },
+                u,
+                { ownerState: e, children: n },
+              ),
+            );
+          });
       },
       7465: (e, t, r) => {
         r.d(t, { A: () => n });
@@ -34081,38 +34370,40 @@ try {
               return e && e.__esModule ? e : { default: e };
             };
         Object.defineProperty(t, "__esModule", { value: !0 });
-        let p = i(r(6540)),
-          f = o(r(5805)),
-          m = o(r(4604)),
-          h = o(r(2385)),
-          g = o(r(4068));
+        let g = i(r(6540)),
+          v = o(r(5805)),
+          b = o(r(4604)),
+          y = o(r(2385)),
+          w = o(r(4068));
         i = o(r(4157));
-        let v = o(r(401)),
-          b = o(r(6698)),
-          y = o(r(3159)),
-          w = o(r(2308)),
-          k = o(r(5721)),
-          A = o(r(3800)),
-          S = o(r(477)),
-          x = o(r(7884)),
-          C = o(r(6869)),
-          E = o(r(8938)),
-          _ = o(r(9781)),
-          R = o(r(9814)),
-          P = o(r(5358));
+        let k = o(r(401)),
+          A = o(r(6698)),
+          S = o(r(3159)),
+          x = o(r(2308)),
+          C = o(r(5721)),
+          E = o(r(3800)),
+          _ = o(r(477)),
+          R = o(r(7884)),
+          P = o(r(6869)),
+          M = o(r(8938)),
+          N = o(r(721)),
+          O = o(r(9781)),
+          T = o(r(9814)),
+          I = o(r(5358));
         var l = r(5725);
-        let M = o(r(6144)),
-          N = r(8002),
-          O = r(9332),
-          T = (0, l.styled)(i.default)(({ image: e }) => ({
+        let D = o(r(6144)),
+          j = o(r(3483)),
+          F = r(8002),
+          L = r(9332),
+          z = (0, l.styled)(i.default)(({ image: e }) => ({
             height: 400,
             background: `url(${e}) no-repeat center center transparent`,
             backgroundSize: "cover",
           })),
-          I = ({ fci: { standardNumber: e, group: t, section: r } }) =>
+          B = ({ fci: { standardNumber: e, group: t, section: r } }) =>
             0 < e
-              ? p.default.createElement(
-                  m.default,
+              ? g.default.createElement(
+                  b.default,
                   { variant: "body2", color: "text.secondary" },
                   "FCI: Standardnummer ",
                   e,
@@ -34122,41 +34413,48 @@ try {
                   r,
                   ")",
                 )
-              : p.default.createElement(
-                  m.default,
+              : g.default.createElement(
+                  b.default,
                   { variant: "body2", color: "text.secondary" },
                   "—keine FCI-anerkannte Rasse—",
                 ),
-          D = (e) => [
+          H = (e) => [
             Math.floor(e / 3600),
             Math.floor((e % 3600) / 60),
             e % 60,
           ];
         t.default = ({ breedIdentifier: t, closeUI: e, children: r }) => {
-          var n = (0, S.default)("(max-width: 480px"),
-            a = (0, p.useContext)(N.BreedsContext),
-            i = (0, p.useContext)(O.SettingsContext),
-            [a] = a.filter((e) =>
-              t && t.variantName && e.variants
-                ? t.variantName === e.variants[0].names[0] && t.id === e.id
-                : (null == t ? void 0 : t.id) === e.id,
-            );
+          var n = (0, _.default)("(max-width: 480px"),
+            a = (0, g.useContext)(F.BreedsContext),
+            i = (0, g.useContext)(L.SettingsContext);
+          let [o, l] = (0, g.useState)(!1),
+            s = () => {
+              l(!1);
+            },
+            u = () => {
+              l(!0);
+            };
+          var [a] = a.filter((e) =>
+            t && t.variantName && e.variants
+              ? t.variantName === e.variants[0].names[0] && t.id === e.id
+              : (null == t ? void 0 : t.id) === e.id,
+          );
           if (a) {
             var {
                 names: a,
-                variants: o,
-                fci: l,
-                podcast: s,
-                furtherReading: u,
-                image: d,
-                recognitions: c = [],
+                variants: d,
+                fci: c,
+                podcast: p,
+                furtherReading: f,
+                image: m,
+                recognitions: h = [],
               } = a,
-              u = [...u, ...((o && o[0].furtherReading) || [])];
-            return p.default.createElement(
-              f.default,
+              f = [...f, ...((d && d[0].furtherReading) || [])];
+            return g.default.createElement(
+              v.default,
               null,
-              p.default.createElement(
-                h.default,
+              g.default.createElement(
+                y.default,
                 {
                   sx: {
                     maxHeight: "100vh",
@@ -34167,38 +34465,38 @@ try {
                 },
                 r,
                 !1 === n &&
-                  p.default.createElement(
-                    E.default,
+                  g.default.createElement(
+                    M.default,
                     {
                       "aria-label": "add",
                       size: "medium",
                       sx: { position: "absolute", top: "10px", right: "10px" },
                       onClick: e,
                     },
-                    p.default.createElement(_.default, null),
+                    g.default.createElement(O.default, null),
                   ),
-                p.default.createElement(T, { image: d }),
-                p.default.createElement(
-                  g.default,
+                g.default.createElement(z, { image: m }),
+                g.default.createElement(
+                  w.default,
                   null,
-                  p.default.createElement(
-                    m.default,
+                  g.default.createElement(
+                    b.default,
                     { gutterBottom: !0, variant: "h5", component: "div" },
                     a[0],
                   ),
                   !0 === i.showBreedVariants &&
-                    o &&
-                    0 < o.length &&
-                    p.default.createElement(
-                      m.default,
+                    d &&
+                    0 < d.length &&
+                    g.default.createElement(
+                      b.default,
                       { gutterBottom: !0, variant: "h6", component: "div" },
-                      o[0].names[0],
+                      d[0].names[0],
                     ),
-                  p.default.createElement(I, { fci: l }),
-                  p.default.createElement(
-                    v.default,
+                  g.default.createElement(B, { fci: c }),
+                  g.default.createElement(
+                    k.default,
                     { dense: !0 },
-                    s.map(
+                    p.map(
                       ({
                         number: e,
                         episode: t,
@@ -34206,8 +34504,8 @@ try {
                         timecode: n,
                         type: a = "audio",
                       }) =>
-                        p.default.createElement(
-                          b.default,
+                        g.default.createElement(
+                          A.default,
                           {
                             disablePadding: !0,
                             key: e,
@@ -34218,24 +34516,24 @@ try {
                               borderRadius: 2,
                             },
                           },
-                          p.default.createElement(
-                            w.default,
+                          g.default.createElement(
+                            x.default,
                             null,
-                            p.default.createElement(
-                              k.default,
+                            g.default.createElement(
+                              C.default,
                               null,
                               "audio" === a &&
-                                p.default.createElement(A.default, null),
+                                g.default.createElement(E.default, null),
                               "video" === a &&
-                                p.default.createElement(x.default, null),
+                                g.default.createElement(R.default, null),
                             ),
-                            p.default.createElement(y.default, {
+                            g.default.createElement(S.default, {
                               key: t,
                               primary: t,
                               secondary:
                                 `Folge ${e} — ` +
                                 ((a = n),
-                                (a = D(a)),
+                                (a = H(a)),
                                 (t = []),
                                 a[0] && t.push("Stunde " + a[0]),
                                 a[1] && t.push("Minute " + a[1]),
@@ -34258,21 +34556,21 @@ try {
                         ),
                     ),
                   ),
-                  p.default.createElement(
-                    m.default,
+                  g.default.createElement(
+                    b.default,
                     { gutterBottom: !0, variant: "body2", component: "div" },
                     "Weitere Infos:",
                   ),
-                  p.default.createElement(
-                    P.default,
+                  g.default.createElement(
+                    I.default,
                     { direction: "row", justifyContent: "space-between" },
-                    p.default.createElement(
-                      P.default,
+                    g.default.createElement(
+                      I.default,
                       { direction: "row", spacing: 1 },
-                      u
+                      f
                         .filter(({ url: e }) => e)
                         .map(({ url: e, name: t }) =>
-                          p.default.createElement(R.default, {
+                          g.default.createElement(T.default, {
                             key: e,
                             label: t,
                             variant: "outlined",
@@ -34284,19 +34582,45 @@ try {
                           }),
                         ),
                     ),
-                    p.default.createElement(
-                      P.default,
-                      { direction: "row", spacing: 1 },
-                      c.map((e) =>
-                        p.default.createElement(
-                          M.default,
-                          { title: e },
-                          p.default.createElement(C.default, {
-                            sx: {
-                              color: "rgba(255, 0, 0, 0.75)",
-                              transform: "rotate(28deg)",
+                    g.default.createElement(
+                      I.default,
+                      {
+                        direction: "row",
+                        spacing: 1,
+                        sx: {
+                          ".MuiButtonBase-root": {
+                            marginTop: "-8px",
+                            marginRight: "-8px",
+                          },
+                        },
+                      },
+                      h.map((e) =>
+                        g.default.createElement(
+                          j.default,
+                          { onClickAway: s },
+                          g.default.createElement(
+                            D.default,
+                            {
+                              title: e,
+                              disableInteractive: !0,
+                              PopperProps: { disablePortal: !0 },
+                              onClose: s,
+                              open: o,
+                              disableFocusListener: !0,
+                              disableHoverListener: !0,
+                              disableTouchListener: !0,
                             },
-                          }),
+                            g.default.createElement(
+                              N.default,
+                              { onClick: u },
+                              g.default.createElement(P.default, {
+                                sx: {
+                                  color: "rgba(255, 0, 0, 0.75)",
+                                  transform: "rotate(28deg)",
+                                },
+                              }),
+                            ),
+                          ),
                         ),
                       ),
                     ),
