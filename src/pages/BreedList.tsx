@@ -23,7 +23,9 @@ const PageBreedList = ({
 }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
   const settings = useContext(SettingsContext);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState(
+    new URL(location.href).searchParams.get("s") || "",
+  );
   const [selectedBreed, setSelectedBreed] = useState<BreedIdentifier>();
 
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
@@ -32,6 +34,7 @@ const PageBreedList = ({
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event && event.target) {
+      window.history.replaceState({}, "", `?s=${event.target.value}`);
       setSearchValue(event.target.value);
     }
   };
@@ -65,6 +68,7 @@ const PageBreedList = ({
           variant="outlined"
           fullWidth
           onChange={handleSearchChange}
+          value={searchValue}
         />
       </Box>
 
