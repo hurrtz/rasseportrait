@@ -8,7 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 0",
     "start": "webpack serve --open --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
-    "prepare": "husky && husky install"
+    "prepare": "husky && husky install",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
   },
   "repository": {
     "type": "git",
@@ -55,6 +59,7 @@
     "lint-staged": "^15.2.8",
     "prettier": "3.3.3",
     "sharp": "^0.33.4",
+    "standard-version": "^9.5.0",
     "terser-webpack-plugin": "^5.3.10",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.4",
