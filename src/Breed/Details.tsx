@@ -12,11 +12,13 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import PodcastsIcon from "@mui/icons-material/Podcasts";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import Fab from "@mui/material/Fab";
 import CloseIcon from "@mui/icons-material/Close";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
+import Tooltip from "@mui/material/Tooltip";
 import { BreedsContext } from "../contexts/Breeds";
 import { SettingsContext } from "../contexts/Settings";
 import type { FCI, Podcast, BreedIdentifier } from "../../types/breed";
@@ -102,6 +104,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
       podcast: podcasts,
       furtherReading: mainFurtherReadings,
       image,
+      recognitions = [],
     } = breed;
 
     const furtherReadings = [
@@ -214,6 +217,20 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                   />
                 ))}
             </Stack>
+
+            {recognitions.map((recognition) => (
+              <Tooltip title={recognition}>
+                <FavoriteIcon
+                  sx={{
+                    color: "rgba(255, 0, 0, 0.75)",
+                    transform: "rotate(28deg)",
+                    position: "absolute",
+                    right: "16px",
+                    bottom: "18px",
+                  }}
+                />
+              </Tooltip>
+            ))}
           </CardContent>
         </Card>
       </Box>

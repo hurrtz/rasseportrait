@@ -32,6 +32,7 @@ export interface Breed {
   fci: FCI;
   podcast: Podcast[];
   furtherReading: FurtherReading[];
+  recognitions?: string[];
 }
 
 export interface EnrichedBreed extends Breed {

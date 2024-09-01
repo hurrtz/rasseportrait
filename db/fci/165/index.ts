@@ -40,6 +40,7 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/spinone-italiano",
     },
   ],
+  recognitions: ["Dorothee, für die Korrekturvorschläge beim Spinone! 🙂"],
 };
 
 export default breed;
