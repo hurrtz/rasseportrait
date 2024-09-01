@@ -34265,35 +34265,40 @@ try {
                   ),
                   p.default.createElement(
                     P.default,
-                    { direction: "row", spacing: 1 },
-                    u
-                      .filter(({ url: e }) => e)
-                      .map(({ url: e, name: t }) =>
-                        p.default.createElement(R.default, {
-                          key: e,
-                          label: t,
-                          variant: "outlined",
-                          size: "small",
-                          onClick: () => {
-                            window.open(e, "_blank");
-                          },
-                          title: e,
-                        }),
-                      ),
-                  ),
-                  c.map((e) =>
+                    { direction: "row", justifyContent: "space-between" },
                     p.default.createElement(
-                      M.default,
-                      { title: e },
-                      p.default.createElement(C.default, {
-                        sx: {
-                          color: "rgba(255, 0, 0, 0.75)",
-                          transform: "rotate(28deg)",
-                          position: "absolute",
-                          right: "16px",
-                          bottom: "18px",
-                        },
-                      }),
+                      P.default,
+                      { direction: "row", spacing: 1 },
+                      u
+                        .filter(({ url: e }) => e)
+                        .map(({ url: e, name: t }) =>
+                          p.default.createElement(R.default, {
+                            key: e,
+                            label: t,
+                            variant: "outlined",
+                            size: "small",
+                            onClick: () => {
+                              window.open(e, "_blank");
+                            },
+                            title: e,
+                          }),
+                        ),
+                    ),
+                    p.default.createElement(
+                      P.default,
+                      { direction: "row", spacing: 1 },
+                      c.map((e) =>
+                        p.default.createElement(
+                          M.default,
+                          { title: e },
+                          p.default.createElement(C.default, {
+                            sx: {
+                              color: "rgba(255, 0, 0, 0.75)",
+                              transform: "rotate(28deg)",
+                            },
+                          }),
+                        ),
+                      ),
                     ),
                   ),
                 ),
