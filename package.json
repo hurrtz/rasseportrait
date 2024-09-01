@@ -11,18 +11,10 @@
     "prepare": "husky && husky install",
     "prepareRelease": "npm run build && npm run copyIllustrations && scripts/prepareRelease.sh",
     "publish": "scripts/pushRelease.sh && scripts/publishRelease.sh",
-    "release": "standard-version",
-    "prerelease": "npm run prepareRelease",
-    "postrelease": "npm run publish",
-    "release:minor": "standard-version --release-as minor",
-    "prerelease:minor": "npm run prepareRelease",
-    "postrelease:minor": "npm run publish",
-    "release:patch": "standard-version --release-as patch",
-    "prerelease:patch": "npm run prepareRelease",
-    "postrelease:patch": "npm run publish",
-    "release:major": "standard-version --release-as major",
-    "prerelease:major": "npm run prepareRelease",
-    "postrelease:major": "npm run publish"
+    "release": "npm run prepareRelease && standard-version && npm run publish",
+    "release:minor": "npm run prepareRelease && standard-version --release-as minor && npm run publish",
+    "release:patch": "npm run prepareRelease && standard-version --release-as patch && npm run publish",
+    "release:major": "npm run prepareRelease && standard-version --release-as major && npm run publish"
   },
   "repository": {
     "type": "git",
