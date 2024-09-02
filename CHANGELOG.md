@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/hurrtz/rasseportrait/compare/v1.4.0...v1.5.0) (2024-09-02)
+
+
+### Features
+
+* provide specific tracking ([53b0d3f](https://github.com/hurrtz/rasseportrait/commit/53b0d3f10f1de6872242a2cafac340e0a21a0c82))
+
 ## [1.4.0](https://github.com/hurrtz/rasseportrait/compare/v1.3.6...v1.4.0) (2024-09-02)
 
 
