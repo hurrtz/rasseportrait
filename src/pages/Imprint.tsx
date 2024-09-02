@@ -1,4 +1,5 @@
 import React from "react";
+import * as amplitude from "@amplitude/analytics-browser";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
@@ -15,10 +16,12 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 
 const handleMailClick = () => {
+  amplitude.track("Imprint Click Mail");
   window.open("mailto:rasseportrait@tobiaswinkler.berlin", "_blank");
 };
 
 const handleURLClick = (url: string) => {
+  amplitude.track("Imprint Click URL", { value: url });
   window.open(url, "_blank");
 };
 

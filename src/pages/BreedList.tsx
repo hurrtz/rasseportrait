@@ -1,4 +1,5 @@
 import React, { useState, useContext, type ChangeEvent } from "react";
+import * as amplitude from "@amplitude/analytics-browser";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
@@ -43,6 +44,11 @@ const PageBreedList = ({
   );
 
   const augmentedSetSelectedBreed = (breedIdentifier?: BreedIdentifier) => {
+    amplitude.track("Breed Details", {
+      open: breedIdentifier?.id !== undefined,
+      breed: breedIdentifier?.id,
+      variant: breedIdentifier?.variantName,
+    });
     setSelectedBreed(breedIdentifier);
     window.history.replaceState(
       {},
@@ -62,6 +68,7 @@ const PageBreedList = ({
   const handleSettingsModalClose = () => setIsSettingsModalOpen(false);
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
+    amplitude.track("Search Breed", { value: event.target.value });
     if (event && event.target) {
       window.history.replaceState(
         {},

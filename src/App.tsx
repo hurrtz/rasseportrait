@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import * as amplitude from "@amplitude/analytics-browser";
 import Container from "@mui/material/Container";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -71,6 +72,8 @@ const App = () => {
       settings.artStyle === "realistic" ? "artsy" : "realistic";
     const newSettings: Settings = { ...settings, artStyle: newArtStyle };
 
+    amplitude.track("Settings: Change Art Style", { artStyle: newArtStyle });
+
     storeSettings(newSettings);
     setSettings(newSettings);
   };
@@ -86,6 +89,11 @@ const App = () => {
 
     newSettings.sortOrder = newSortOrder;
 
+    amplitude.track("Settings: Change Sort Order", {
+      sortOrder: newSortOrder,
+      sortDirection: newSettings.sortDirection,
+    });
+
     storeSettings(newSettings);
     setSettings(newSettings);
   };
@@ -95,6 +103,10 @@ const App = () => {
       ...settings,
       showBreedVariants: !settings.showBreedVariants,
     };
+
+    amplitude.track("Settings: Change Show Breed Variants", {
+      showBreedVariants: newSettings.showBreedVariants,
+    });
 
     storeSettings(newSettings);
     setSettings(newSettings);
@@ -126,6 +138,7 @@ const App = () => {
           showLabels
           value={bottomNavigationValue}
           onChange={(event, newValue) => {
+            amplitude.track("Page Select", { page: newValue });
             setBottomNavigationValue(newValue);
           }}
           sx={{ marginTop: 5 }}
