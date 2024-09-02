@@ -9,12 +9,12 @@
     "start": "webpack serve --open --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
     "prepare": "husky && husky install",
-    "prepareRelease": "npm run build && npm run copyIllustrations && scripts/prepareRelease.sh",
-    "publish": "scripts/pushRelease.sh && scripts/publishRelease.sh",
+    "prerelease": "npm run build && npm run copyIllustrations && scripts/prepareRelease.sh",
     "release": "npm run prepareRelease && standard-version && npm run publish",
-    "release:minor": "npm run prepareRelease && standard-version --release-as minor && npm run publish",
-    "release:patch": "npm run prepareRelease && standard-version --release-as patch && npm run publish",
-    "release:major": "npm run prepareRelease && standard-version --release-as major && npm run publish"
+    "postrelease": "scripts/pushRelease.sh && scripts/publishRelease.sh",
+    "release:minor": "npm run prerelease && standard-version --release-as minor && npm run postrelease",
+    "release:patch": "npm run prerelease && standard-version --release-as patch && npm run postrelease",
+    "release:major": "npm run prerelease && standard-version --release-as major && npm run postrelease"
   },
   "repository": {
     "type": "git",
