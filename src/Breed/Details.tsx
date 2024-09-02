@@ -1,4 +1,5 @@
 import React, { useState, useContext, type ReactNode } from "react";
+import * as amplitude from "@amplitude/analytics-browser";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
@@ -88,10 +89,20 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 
   const handleTooltipClose = () => {
+    amplitude.track("Recognition Opened", {
+      open: false,
+      breed: breedIdentifier?.id,
+      variant: breedIdentifier?.variantName,
+    });
     setIsTooltipOpen(false);
   };
 
   const handleTooltipOpen = () => {
+    amplitude.track("Recognition Opened", {
+      open: true,
+      breed: breedIdentifier?.id,
+      variant: breedIdentifier?.variantName,
+    });
     setIsTooltipOpen(true);
   };
 
@@ -125,10 +136,20 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
     ];
 
     const openPodcast = (url: string) => {
+      amplitude.track("Podcast Clicked", {
+        breed: breedIdentifier?.id,
+        variant: breedIdentifier?.variantName,
+        url,
+      });
       window.open(url, "_blank");
     };
 
     const openReadMore = (url: string) => {
+      amplitude.track("Additional Breed Info Clicked", {
+        breed: breedIdentifier?.id,
+        variant: breedIdentifier?.variantName,
+        url,
+      });
       window.open(url, "_blank");
     };
 
