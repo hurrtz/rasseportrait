@@ -27,6 +27,7 @@ const PageBreedList = ({
   onChangeShowBreedVariants,
 }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
+  const isDesktop = useMediaQuery("(min-width: 1200px");
   const settings = useContext(SettingsContext);
   const searchParams = new URLSearchParams(location.search);
 
@@ -102,45 +103,47 @@ const PageBreedList = ({
 
       <HeaderSection isMobile={isMobile} />
 
-      <Stack
-        direction="row"
-        alignItems="center"
-        mt={4}
-        sx={{ pointerEvents: "none" }}
-      >
-        <Button variant="outlined" size="small" sx={{ minHeight: "47px" }}>
-          <Typography align="left" textTransform="none" fontSize="small">
-            Psst! Bilder langweilig? Andere Sortierung gefällig? Klick aufs
-            Rädchen!
-          </Typography>
-        </Button>
+      {isDesktop === false && (
+        <Stack
+          direction="row"
+          alignItems="center"
+          mt={4}
+          sx={{ pointerEvents: "none" }}
+        >
+          <Button variant="outlined" size="small" sx={{ minHeight: "47px" }}>
+            <Typography align="left" textTransform="none" fontSize="small">
+              Psst! Bilder langweilig? Andere Sortierung gefällig? Klick aufs
+              Rädchen!
+            </Typography>
+          </Button>
 
-        <Box
-          sx={{
-            width: "100px",
-            height: "30px",
-            marginTop: "-30px",
-            borderBottom: "1px solid rgba(25, 118, 210, 0.5)",
-            borderRight: "1px solid rgba(25, 118, 210, 0.5)",
-            borderRadius: "0 0 25px",
-            marginRight: "28px",
-            position: "relative",
-            flex: "1 1 auto",
-            ["&::before"]: {
-              content: '""',
-              display: "block",
-              width: "0",
-              height: "0",
-              borderLeft: "10px solid transparent",
-              borderRight: "10px solid transparent",
-              borderBottom: "15px solid rgba(25, 118, 210, 0.5)",
-              position: "absolute",
-              top: "-14px",
-              right: "-10px",
-            },
-          }}
-        ></Box>
-      </Stack>
+          <Box
+            sx={{
+              width: "100px",
+              height: "30px",
+              marginTop: "-30px",
+              borderBottom: "1px solid rgba(25, 118, 210, 0.5)",
+              borderRight: "1px solid rgba(25, 118, 210, 0.5)",
+              borderRadius: "0 0 25px",
+              marginRight: "28px",
+              position: "relative",
+              flex: "1 1 auto",
+              ["&::before"]: {
+                content: '""',
+                display: "block",
+                width: "0",
+                height: "0",
+                borderLeft: "10px solid transparent",
+                borderRight: "10px solid transparent",
+                borderBottom: "15px solid rgba(25, 118, 210, 0.5)",
+                position: "absolute",
+                top: "-14px",
+                right: "-10px",
+              },
+            }}
+          ></Box>
+        </Stack>
+      )}
 
       <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
         <TextField
