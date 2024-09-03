@@ -4,19 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tierisch Menschlich — Rasseportrait</title>
-    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.9.3-min.js.gz"></script>
-    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.6.8-min.js.gz"></script>
-    <script src="https://cdn.amplitude.com/libs/plugin-autocapture-browser-1.0.0-min.js.gz"></script>
-    <script>
-      if (window.location.hostname !== "localhost") {
-        window.amplitude
-          .add(window.sessionReplay.plugin({ sampleRate: 1 }))
-          .promise.then(function () {
-            window.amplitude.add(window.amplitudeAutocapturePlugin.plugin());
-            window.amplitude.init("73172d06233b85ff451f0f15f016ec0b");
-          });
-      }
-    </script>
   </head>
   <body>
     <div id="root"></div>
