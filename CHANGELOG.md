@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/hurrtz/rasseportrait/compare/v1.7.0...v1.8.0) (2024-09-05)
+
+
+### Features
+
+* add Australian Shepherd ([ba7974b](https://github.com/hurrtz/rasseportrait/commit/ba7974b9b2405f8b06f79104fa7a841dc953d0ce))
+
 ## [1.7.0](https://github.com/hurrtz/rasseportrait/compare/v1.6.0...v1.7.0) (2024-09-03)
 
 ## [1.6.0](https://github.com/hurrtz/rasseportrait/compare/v1.5.0...v1.6.0) (2024-09-02)
