@@ -101,6 +101,7 @@ import FCI_Standardnumber_329 from "./329";
 import FCI_Standardnumber_336 from "./336";
 import FCI_Standardnumber_338 from "./338";
 import FCI_Standardnumber_339 from "./339";
+import FCI_Standardnumber_342 from "./342";
 import FCI_Standardnumber_343 from "./343";
 import FCI_Standardnumber_344 from "./344";
 import FCI_Standardnumber_346 from "./346";
@@ -212,6 +213,7 @@ export default {
   FCI_Standardnumber_336,
   FCI_Standardnumber_338,
   FCI_Standardnumber_339,
+  FCI_Standardnumber_342,
   FCI_Standardnumber_343,
   FCI_Standardnumber_344,
   FCI_Standardnumber_346,
