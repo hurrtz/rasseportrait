@@ -10,7 +10,7 @@ const { standardNumber: id } = fci;
 
 const breed: Breed = {
   id,
-  names: ["Australian Shepherd"],
+  names: ["Australian Shepherd", "Australischer Schäferhund"],
   fci,
   podcast: [
     {
