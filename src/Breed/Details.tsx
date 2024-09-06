@@ -122,7 +122,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
   if (breed) {
     const {
       names,
-      variants,
+      variants = [],
       fci,
       podcast: podcasts,
       furtherReading: mainFurtherReadings,
@@ -191,7 +191,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                 </Typography>
               )}
 
-            <FCIText fci={fci} />
+            <FCIText fci={fci ? fci! : variants[0].fci!} />
 
             <List dense>
               {podcasts.map(

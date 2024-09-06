@@ -22,11 +22,11 @@ const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
 
 export default ({
   id,
-  variants,
+  variants = [],
   image,
   handleCardClick,
   names,
-  fci: { standardNumber },
+  fci,
 }: Props) => {
   const settings = useContext(SettingsContext);
 
@@ -48,6 +48,9 @@ export default ({
     );
     handleCardClick(payload);
   };
+
+  const standardNumber =
+    fci?.standardNumber ?? variants[0]?.fci?.standardNumber;
 
   return (
     <Card onClick={onClick} sx={{ position: "relative" }}>

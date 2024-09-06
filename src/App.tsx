@@ -46,17 +46,34 @@ const App = () => {
   });
 
   const sortedBreeds = enrichedBreedsWithVariants.sort(
-    ({ fci: fciA, podcast: podcastA }, { fci: fciB, podcast: podcastB }) => {
+    (
+      { fci: fciA, podcast: podcastA, variants: variantsA = [] },
+      { fci: fciB, podcast: podcastB, variants: variantsB = [] },
+    ) => {
       if (settings.sortDirection === "asc") {
         if (settings.sortOrder === "fci-standard-number") {
-          return fciA?.standardNumber - fciB?.standardNumber;
+          const standardNumberA =
+            fciA?.standardNumber ?? variantsA[0]?.fci?.standardNumber ?? 0;
+          const standardNumberB =
+            fciB?.standardNumber ?? variantsB[0]?.fci?.standardNumber ?? 0;
+
+          return standardNumberA - standardNumberB;
         }
 
         return podcastA[0].airDateTimestamp - podcastB[0].airDateTimestamp;
       }
 
       if (settings.sortOrder === "fci-standard-number") {
-        return fciB?.standardNumber - fciA?.standardNumber;
+        const standardNumberA =
+          fciA?.standardNumber ??
+          variantsA[variantsA.length - 1]?.fci?.standardNumber ??
+          0;
+        const standardNumberB =
+          fciB?.standardNumber ??
+          variantsB[variantsB.length - 1]?.fci?.standardNumber ??
+          0;
+
+        return standardNumberB - standardNumberA;
       }
 
       return podcastB[0].airDateTimestamp - podcastA[0].airDateTimestamp;

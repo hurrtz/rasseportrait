@@ -38,6 +38,7 @@ import EnglishSpringerSpaniel from "./english_springer_spaniel";
 import EntlebucherMountainDog from "./entlebucher_mountain_dog";
 import Eurasier from "./eurasier";
 import FlatCoatedRetriever from "./flat_coated_retriever";
+import FoxTerrier from "./fox_terrier";
 import GermanBoxer from "./german_boxer";
 import GermanJagdterrier from "./german_jagdterrier";
 import GermanPinscher from "./german_pinscher";
@@ -140,6 +141,7 @@ export default {
   EntlebucherMountainDog,
   Eurasier,
   FlatCoatedRetriever,
+  FoxTerrier,
   GermanBoxer,
   GermanJagdterrier,
   GermanPinscher,
