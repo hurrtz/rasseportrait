@@ -3,14 +3,12 @@ import type { Settings } from "../types/settings";
 
 export const getBreedImagePath = ({
   id,
-  standardNumber,
   variant = "default",
   artStyle,
   hasVariants,
   isVariantsCollapsed,
 }: {
   id: Breed["id"];
-  standardNumber: FCI["standardNumber"];
   variant?: string;
   artStyle?: "artsy" | "realistic";
   hasVariants: boolean;
@@ -22,11 +20,7 @@ export const getBreedImagePath = ({
     imageName = "general";
   }
 
-  if (standardNumber > 0) {
-    return `illustrations/fci/${standardNumber}/illustration/${artStyle}/${imageName}.jpeg`;
-  }
-
-  return `illustrations/non-fci/${id}/illustration/${artStyle}/${imageName}.jpeg`;
+  return `illustrations/${id}/illustration/${artStyle}/${imageName}.jpeg`;
 };
 
 /* takes the list of all breeds with their variants and makes it so
@@ -68,7 +62,6 @@ export const enrichBreedsWithIllustrations = ({
         ...breed,
         image: getBreedImagePath({
           id: breed.id,
-          standardNumber: breed.fci.standardNumber,
           variant: breed.variants ? breed.variants[0].id : "default",
           artStyle,
           hasVariants:
