@@ -5,23 +5,11 @@ export const getBreedImagePath = ({
   id,
   variant = "default",
   artStyle,
-  hasVariants,
-  isVariantsCollapsed,
 }: {
   id: Breed["id"];
   variant?: string;
   artStyle?: "artsy" | "realistic";
-  hasVariants: boolean;
-  isVariantsCollapsed?: boolean;
-}) => {
-  let imageName = variant;
-
-  if (isVariantsCollapsed && hasVariants && artStyle === "realistic") {
-    imageName = "general";
-  }
-
-  return `illustrations/${id}/illustration/${artStyle}/${imageName}.jpeg`;
-};
+}) => `illustrations/${id}/illustration/${artStyle}/${variant}.jpeg`;
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
@@ -50,11 +38,9 @@ export const flattenBreedVariants = ({ breeds }: { breeds: Breed[] }) => {
 export const enrichBreedsWithIllustrations = ({
   breeds,
   artStyle,
-  isVariantsCollapsed,
 }: {
   breeds: Breed[];
   artStyle: Settings["artStyle"];
-  isVariantsCollapsed?: boolean;
 }) =>
   breeds.map(
     (breed) =>
@@ -64,9 +50,6 @@ export const enrichBreedsWithIllustrations = ({
           id: breed.id,
           variant: breed.variants ? breed.variants[0].id : "default",
           artStyle,
-          hasVariants:
-            breed.variants && breed.variants.length > 1 ? true : false,
-          isVariantsCollapsed,
         }),
       }) as EnrichedBreed,
   );
