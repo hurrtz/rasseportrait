@@ -98,6 +98,7 @@ import TibetanMastiff from "./tibetan_mastiff";
 import TibetanSpaniel from "./tibetan_spaniel";
 import TibetanTerrier from "./tibetan_terrier";
 import TransmontanoMastiff from "./transmontano_mastiff";
+import Viszla from "./viszla";
 import Weimaraner from "./weimaraner";
 import Wetterhoun from "./wetterhoun";
 import YorkshireTerrier from "./yorkshire_terrier";
@@ -202,6 +203,7 @@ export default {
   TibetanSpaniel,
   TibetanTerrier,
   TransmontanoMastiff,
+  Viszla,
   Weimaraner,
   Wetterhoun,
   YorkshireTerrier,
