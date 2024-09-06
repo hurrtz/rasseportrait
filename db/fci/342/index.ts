@@ -16,7 +16,7 @@ const breed: Breed = {
     {
       number: 182,
       episode: "Blümerle",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/182-bluemerle-wwapqiaojdbki",
       timecode: 2130,
       airDateTimestamp: 1725498000000,
     },
