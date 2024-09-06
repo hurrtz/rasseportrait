@@ -5,5 +5,5 @@ export const SettingsContext = createContext<Settings>({
   artStyle: "realistic",
   sortOrder: "air-date",
   sortDirection: "asc",
-  showBreedVariants: false,
+  collapseSimilarBreeds: true,
 });

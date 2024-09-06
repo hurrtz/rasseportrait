@@ -18,13 +18,13 @@ import { getWindowLocationSearch } from "../utils";
 interface Props {
   onChangeArtStyle: () => void;
   onChangeSortOrder: (sortOrder: Settings["sortOrder"]) => void;
-  onChangeShowBreedVariants: () => void;
+  onChangeCollapseSimilarBreeds: () => void;
 }
 
 const PageBreedList = ({
   onChangeArtStyle,
   onChangeSortOrder,
-  onChangeShowBreedVariants,
+  onChangeCollapseSimilarBreeds,
 }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
   const isDesktop = useMediaQuery("(min-width: 1200px");
@@ -93,9 +93,9 @@ const PageBreedList = ({
         handleSettingsModalClose={handleSettingsModalClose}
         onChangeArtStyle={onChangeArtStyle}
         onChangeSortOrder={onChangeSortOrder}
-        onChangeShowBreedVariants={onChangeShowBreedVariants}
+        onChangeCollapseSimilarBreeds={onChangeCollapseSimilarBreeds}
         isArtStyleEnabled={settings.artStyle === "artsy"}
-        isBreedVariantsEnabled={settings.showBreedVariants}
+        collapseSimilarBreeds={settings.collapseSimilarBreeds}
         isSortOrderFCIEnabled={settings.sortOrder === "fci-standard-number"}
         isSortOrderAirDateEnabled={settings.sortOrder === "air-date"}
         isSortDirectionAsc={settings.sortDirection === "asc"}

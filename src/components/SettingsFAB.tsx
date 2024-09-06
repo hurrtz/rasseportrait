@@ -15,9 +15,9 @@ interface Props {
   handleSettingsModalClose: () => void;
   onChangeArtStyle: () => void;
   onChangeSortOrder: (sortOrder: Settings["sortOrder"]) => void;
-  onChangeShowBreedVariants: () => void;
+  onChangeCollapseSimilarBreeds: () => void;
   isArtStyleEnabled: boolean;
-  isBreedVariantsEnabled: boolean;
+  collapseSimilarBreeds: boolean;
   isSortOrderFCIEnabled: boolean;
   isSortOrderAirDateEnabled: boolean;
   isSortDirectionAsc: boolean;
@@ -28,7 +28,7 @@ const getFabActionObject = ({
   isActive,
   isSortDirectionAsc,
 }: {
-  id: "artStyle" | "collapse_variants" | "sort_fci" | "sort_date";
+  id: "artStyle" | "collapse_similar_breeds" | "sort_fci" | "sort_date";
   isActive: boolean;
   isSortDirectionAsc?: boolean;
 }) => {
@@ -48,10 +48,10 @@ const getFabActionObject = ({
       };
       break;
 
-    case "collapse_variants":
+    case "collapse_similar_breeds":
       out = {
         id,
-        name: "Rassevarianten anzeigen",
+        name: "ähnliche Rassen zusammenfassen",
         icon: <PetsIcon color={isActive ? "primary" : "action"} />,
       };
       break;
@@ -84,9 +84,9 @@ export default ({
   handleSettingsModalClose,
   onChangeArtStyle,
   onChangeSortOrder,
-  onChangeShowBreedVariants,
+  onChangeCollapseSimilarBreeds,
   isArtStyleEnabled,
-  isBreedVariantsEnabled,
+  collapseSimilarBreeds,
   isSortOrderFCIEnabled,
   isSortOrderAirDateEnabled,
   isSortDirectionAsc,
@@ -115,8 +115,8 @@ export default ({
       {[
         getFabActionObject({ id: "artStyle", isActive: isArtStyleEnabled }),
         getFabActionObject({
-          id: "collapse_variants",
-          isActive: isBreedVariantsEnabled,
+          id: "collapse_similar_breeds",
+          isActive: collapseSimilarBreeds,
         }),
         getFabActionObject({
           id: "sort_fci",
@@ -141,8 +141,8 @@ export default ({
               onChangeSortOrder("fci-standard-number");
             } else if (action.id === "sort_date") {
               onChangeSortOrder("air-date");
-            } else if (action.id === "collapse_variants") {
-              onChangeShowBreedVariants();
+            } else if (action.id === "collapse_similar_breeds") {
+              onChangeCollapseSimilarBreeds();
             }
 
             handleSettingsModalClose();

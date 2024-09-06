@@ -79,7 +79,7 @@ export default ({
           >
             <Typography variant="h6">{names[0]}</Typography>
 
-            {settings.showBreedVariants === true &&
+            {!settings.collapseSimilarBreeds &&
               variants &&
               variants.length > 0 && (
                 <Typography variant="subtitle1">

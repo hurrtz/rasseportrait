@@ -183,7 +183,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
             <Typography gutterBottom variant="h5" component="div">
               {names[0]}
             </Typography>
-            {settings.showBreedVariants === true &&
+            {!settings.collapseSimilarBreeds &&
               variants &&
               variants.length > 0 && (
                 <Typography gutterBottom variant="h6" component="div">

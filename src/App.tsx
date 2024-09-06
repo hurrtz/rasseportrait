@@ -35,14 +35,14 @@ const App = () => {
 
   let breedsWithVariants = breeds;
 
-  if (settings.showBreedVariants) {
+  if (!settings.collapseSimilarBreeds) {
     breedsWithVariants = flattenBreedVariants({ breeds });
   }
 
   const enrichedBreedsWithVariants = enrichBreedsWithIllustrations({
     breeds: breedsWithVariants,
     artStyle: settings.artStyle,
-    isVariantsCollapsed: !settings.showBreedVariants,
+    isVariantsCollapsed: settings.collapseSimilarBreeds,
   });
 
   const sortedBreeds = enrichedBreedsWithVariants.sort(
@@ -98,14 +98,14 @@ const App = () => {
     setSettings(newSettings);
   };
 
-  const handleChangeShowBreedVariants = () => {
+  const handleChangeCollapseSimilarBreeds = () => {
     let newSettings: Settings = {
       ...settings,
-      showBreedVariants: !settings.showBreedVariants,
+      collapseSimilarBreeds: !settings.collapseSimilarBreeds,
     };
 
-    amplitude.track("Settings: Change Show Breed Variants", {
-      showBreedVariants: newSettings.showBreedVariants,
+    amplitude.track("Settings: Change Collapse Similar Breeds", {
+      collapseSimilarBreeds: newSettings.collapseSimilarBreeds,
     });
 
     storeSettings(newSettings);
@@ -118,7 +118,7 @@ const App = () => {
         sortOrder: settings.sortOrder,
         artStyle: settings.artStyle,
         sortDirection: settings.sortDirection,
-        showBreedVariants: settings.showBreedVariants,
+        collapseSimilarBreeds: settings.collapseSimilarBreeds,
       }}
     >
       <Container>
@@ -127,7 +127,7 @@ const App = () => {
             <PageBreedList
               onChangeArtStyle={handleChangeArtStyle}
               onChangeSortOrder={handleChangeSortOrder}
-              onChangeShowBreedVariants={handleChangeShowBreedVariants}
+              onChangeCollapseSimilarBreeds={handleChangeCollapseSimilarBreeds}
             />
           </BreedsContext.Provider>
         )}
