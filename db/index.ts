@@ -1,5 +1,3 @@
-import OldStuff from "./tbf";
-
 import Affenpinscher from "./affenpinscher";
 import Akita from "./akita";
 import AmericanAkita from "./american_akita";
@@ -76,6 +74,7 @@ import OldEnglishSheepdog from "./old_english_sheepdog";
 import Otterhound from "./otterhound";
 import ParsonRussellTerrier from "./parson_russell_terrier";
 import PetitBrabancon from "./petit_brabancon";
+import Podenco from "./podenco";
 import Poodle from "./poodle";
 import PragueRatter from "./prague_ratter";
 import PumiDog from "./pumi_dog";
@@ -104,7 +103,6 @@ import Wetterhoun from "./wetterhoun";
 import YorkshireTerrier from "./yorkshire_terrier";
 
 export default {
-  ...OldStuff,
   Affenpinscher,
   Akita,
   AmericanAkita,
@@ -181,6 +179,7 @@ export default {
   Otterhound,
   ParsonRussellTerrier,
   PetitBrabancon,
+  Podenco,
   Poodle,
   PragueRatter,
   PumiDog,
