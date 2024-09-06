@@ -1,15 +1,13 @@
-import type { Breed, FCI } from "../../../types/breed";
-
-const fci: FCI = {
-  group: -1,
-  section: -1,
-  standardNumber: -1,
-};
+import type { Breed } from "../../types/breed";
 
 const breed: Breed = {
-  id: "silken-windsprite",
+  id: "silken_windsprite",
   names: ["Silken Windsprite", "Longhaired Whippet", "Langhaar Whippet"],
-  fci,
+  fci: {
+    group: -1,
+    section: -1,
+    standardNumber: -1,
+  },
   podcast: [
     {
       number: 165,

@@ -1,10 +1,4 @@
-import type { Breed, FCI } from "../../../types/breed";
-
-const fci: FCI = {
-  group: -1,
-  section: -1,
-  standardNumber: -1,
-};
+import type { Breed } from "../../types/breed";
 
 const breed: Breed = {
   id: "catalburun",
@@ -24,7 +18,11 @@ const breed: Breed = {
     "Çatalburun Pointer",
     "Pointer de Turquía",
   ],
-  fci,
+  fci: {
+    group: -1,
+    section: -1,
+    standardNumber: -1,
+  },
   podcast: [
     {
       number: 152,

@@ -1,15 +1,13 @@
-import type { Breed, FCI } from "../../../types/breed";
-
-const fci: FCI = {
-  group: -1,
-  section: -1,
-  standardNumber: -1,
-};
+import type { Breed } from "../../types/breed";
 
 const breed: Breed = {
   id: "elo",
   names: ["Elo"],
-  fci,
+  fci: {
+    group: -1,
+    section: -1,
+    standardNumber: -1,
+  },
   podcast: [
     {
       number: 32,

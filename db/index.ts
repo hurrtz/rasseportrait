@@ -14,11 +14,13 @@ import BergerPicard from "./berger_picard";
 import BerneseMountainDog from "./bernese_mountain_dog";
 import BlackAndTanCoonhound from "./black_and_tan_coonhound";
 import BologneseDog from "./bolognese_dog";
+import BolonkaZwetna from "./bolonka_zwetna";
 import BordeauxMastiff from "./bordeaux_mastiff";
 import BostonTerrier from "./boston_terrier";
 import Briard from "./briard";
 import CanaryMastiff from "./canary_mastiff";
 import CaneCorso from "./cane_corso";
+import Catalburun from "./catalburun";
 import ChesapeakeBayRetriever from "./chesapeake_bay_retriever";
 import Chihuahua from "./chihuahua";
 import ChineseCrestedDog from "./chinese_crested_dog";
@@ -32,6 +34,7 @@ import DanishMastiff from "./danish_mastiff";
 import DanishSwedishFarmdog from "./danish_swedish_farmdog";
 import Dobermann from "./dobermann";
 import DutchShepherd from "./dutch_shepherd";
+import Elo from "./elo";
 import EnglishCockerSpaniel from "./english_cocker_spaniel";
 import EnglishSpringerSpaniel from "./english_springer_spaniel";
 import EntlebucherMountainDog from "./entlebucher_mountain_dog";
@@ -86,6 +89,7 @@ import SamoyedDog from "./samoyed_dog";
 import ScottishTerrier from "./scottish_terrier";
 import ShetlandSheepdog from "./shetland_sheepdog";
 import ShihTzu from "./shih_tzu";
+import SilkenWindsprite from "./silken_windsprite";
 import SpanishGalgo from "./spanish_galgo";
 import SpanishWaterDog from "./spanish_water_dog";
 import SpinoneItaliano from "./spinone_italiano";
@@ -97,8 +101,10 @@ import TibetanMastiff from "./tibetan_mastiff";
 import TibetanSpaniel from "./tibetan_spaniel";
 import TibetanTerrier from "./tibetan_terrier";
 import TransmontanoMastiff from "./transmontano_mastiff";
+import Turnspit from "./turnspit";
 import Viszla from "./viszla";
 import Weimaraner from "./weimaraner";
+import Westfalenterrier from "./westfalenterrier";
 import Wetterhoun from "./wetterhoun";
 import YorkshireTerrier from "./yorkshire_terrier";
 
@@ -119,11 +125,13 @@ export default {
   BerneseMountainDog,
   BlackAndTanCoonhound,
   BologneseDog,
+  BolonkaZwetna,
   BordeauxMastiff,
   BostonTerrier,
   Briard,
   CanaryMastiff,
   CaneCorso,
+  Catalburun,
   ChesapeakeBayRetriever,
   Chihuahua,
   ChineseCrestedDog,
@@ -137,6 +145,7 @@ export default {
   DanishSwedishFarmdog,
   Dobermann,
   DutchShepherd,
+  Elo,
   EnglishCockerSpaniel,
   EnglishSpringerSpaniel,
   EntlebucherMountainDog,
@@ -191,6 +200,7 @@ export default {
   ScottishTerrier,
   ShetlandSheepdog,
   ShihTzu,
+  SilkenWindsprite,
   SpanishGalgo,
   SpanishWaterDog,
   SpinoneItaliano,
@@ -202,8 +212,10 @@ export default {
   TibetanSpaniel,
   TibetanTerrier,
   TransmontanoMastiff,
+  Turnspit,
   Viszla,
   Weimaraner,
+  Westfalenterrier,
   Wetterhoun,
   YorkshireTerrier,
 };
