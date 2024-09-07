@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/hurrtz/rasseportrait/compare/v1.11.0...v1.12.0) (2024-09-07)
+
+
+### Bug Fixes
+
+* back to original naming ([aac206a](https://github.com/hurrtz/rasseportrait/commit/aac206a50377fe27c9fa9ba1893a85e60e997865))
+* rename Beauceron and Dachshund ([6fd1c9c](https://github.com/hurrtz/rasseportrait/commit/6fd1c9c7d4987fefdcb73d7564fa1c3430d8e630))
+
 ## [1.11.0](https://github.com/hurrtz/rasseportrait/compare/v1.10.0...v1.11.0) (2024-09-07)
 
 
