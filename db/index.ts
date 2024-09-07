@@ -7,7 +7,7 @@ import AustralianShepherd from "./australian_shepherd";
 import Basenji from "./basenji";
 import BavarianMountainHound from "./bavarian_mountain_hound";
 import Beagle from "./beagle";
-import Beauceron from "./beauceron";
+import BergerDeBeauce from "./berger_de_beauce";
 import BelgianShepherd from "./belgian_shepherd";
 import BergamascoShepherdDog from "./bergamasco_shepherd_dog";
 import BergerPicard from "./berger_picard";
@@ -27,7 +27,7 @@ import ChineseCrestedDog from "./chinese_crested_dog";
 import CirnecoDellEtna from "./cirneco_dell_etna";
 import Corgi from "./corgi";
 import CotonDeTulear from "./coton_de_tulear";
-import Dachshund from "./dachshund";
+import Dachshund from "./dackel";
 import DalmatianDog from "./dalmatian_dog";
 import DandieDinmontTerrier from "./dandie_dinmont_terrier";
 import DanishMastiff from "./danish_mastiff";
@@ -118,7 +118,7 @@ export default {
   Basenji,
   BavarianMountainHound,
   Beagle,
-  Beauceron,
+  BergerDeBeauce,
   BelgianShepherd,
   BergamascoShepherdDog,
   BergerPicard,
