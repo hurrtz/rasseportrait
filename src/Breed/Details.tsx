@@ -132,7 +132,9 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
 
     const furtherReadings = [
       ...mainFurtherReadings,
-      ...(variants ? variants[0].furtherReading || [] : []),
+      ...(variants && variants.length > 0
+        ? variants[0].furtherReading || []
+        : []),
     ];
 
     const openPodcast = (url: string) => {
@@ -191,7 +193,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                 </Typography>
               )}
 
-            <FCIText fci={fci ? fci! : variants[0].fci!} />
+            <FCIText fci={fci !== undefined ? fci! : variants[0].fci!} />
 
             <List dense>
               {podcasts.map(
