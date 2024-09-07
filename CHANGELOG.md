@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/hurrtz/rasseportrait/compare/v1.9.0...v1.10.0) (2024-09-07)
+
+
+### Features
+
+* foundation for collapsing similar breeds ([58aa9b8](https://github.com/hurrtz/rasseportrait/commit/58aa9b8e6e589d618797d4a9cc81d6e53063b4ab))
+* greatly simplify illustration paths logic ([d32c9ba](https://github.com/hurrtz/rasseportrait/commit/d32c9ba4a25a6959639cb81e40192249425433ae))
+* internally move breeds to new structure ([e488d9a](https://github.com/hurrtz/rasseportrait/commit/e488d9a4e3e2937e947972e2842bf50be50806a0))
+* internally renamed most dog breeds ([0adca52](https://github.com/hurrtz/rasseportrait/commit/0adca52ac9dcb4ece7524645831c0133f3957b9d))
+* migrate Corgi to new structure ([e78a1ce](https://github.com/hurrtz/rasseportrait/commit/e78a1ce34c04e1757dc94a745e36108e77c57d25))
+* migrate Foxterrier to new structure ([50b8a0a](https://github.com/hurrtz/rasseportrait/commit/50b8a0a1cb84fceb5f780373b7af7d96f4a37c46))
+* migrate Podenco to new structure ([6d561f7](https://github.com/hurrtz/rasseportrait/commit/6d561f7f3b4f192c59c97c01540558f83b6b2e29))
+* migrate Viszla to new structure ([fbf06b1](https://github.com/hurrtz/rasseportrait/commit/fbf06b1b43b582b08bd263585735d5ab0ccfdc0b))
+* provide correct fci numbers on combined breeds ([605741a](https://github.com/hurrtz/rasseportrait/commit/605741a799f4fa393d6810a073750da37dc99e76))
+* re-introduce non-fci breeds ([e6547f8](https://github.com/hurrtz/rasseportrait/commit/e6547f8e90b76f06c74383eb41395ac6b774f284))
+
+
+### Bug Fixes
+
+* remove critical bug in breed details ([13cec6a](https://github.com/hurrtz/rasseportrait/commit/13cec6ae8a0ecfc020fb91fd64ffe0178172b8f1))
+
 ## [1.9.0](https://github.com/hurrtz/rasseportrait/compare/v1.8.0...v1.9.0) (2024-09-05)
 
 ## [1.8.0](https://github.com/hurrtz/rasseportrait/compare/v1.7.0...v1.8.0) (2024-09-05)
