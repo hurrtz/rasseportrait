@@ -4,7 +4,7 @@ export interface FCI {
   standardNumber: number;
 }
 
-interface Variant {
+export interface Variant {
   id: string;
   names: string[];
   fci?: FCI;

@@ -24,7 +24,7 @@ import Tooltip from "@mui/material/Tooltip";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { BreedsContext } from "../contexts/Breeds";
 import { SettingsContext } from "../contexts/Settings";
-import type { FCI, Podcast, BreedIdentifier } from "../../types/breed";
+import type { FCI, Podcast, BreedIdentifier, Variant } from "../../types/breed";
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   height: 400,
@@ -32,11 +32,43 @@ const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   backgroundSize: "cover",
 }));
 
-const FCIText = ({ fci: { standardNumber, group, section } }: { fci: FCI }) => {
-  if (standardNumber > 0) {
+const FCIText = ({
+  fci,
+  variants = [],
+}: {
+  fci?: FCI;
+  variants: Variant[];
+}) => {
+  const firstCompleteFCIDataset = [
+    fci,
+    ...variants.map((variant) => variant.fci),
+  ].find(
+    (fciDataset) =>
+      fciDataset?.standardNumber !== undefined &&
+      fciDataset?.standardNumber > 0,
+  );
+
+  let standardNumber: number[] | undefined =
+    fci?.standardNumber && fci.standardNumber > 0
+      ? [fci.standardNumber]
+      : undefined;
+
+  if (!fci && variants && variants.length > 0) {
+    standardNumber = variants
+      .filter(
+        (variant) =>
+          variant.fci?.standardNumber !== undefined &&
+          variant.fci?.standardNumber > 0,
+      )
+      .map((variant) => variant.fci!.standardNumber);
+  }
+
+  if (standardNumber && standardNumber.length > 0) {
     return (
       <Typography variant="body2" color="text.secondary">
-        FCI: Standardnummer {standardNumber} (Gruppe {group}, Sektion {section})
+        FCI: {`Standardnummer${standardNumber.length === 1 ? "" : "n"}`}{" "}
+        {standardNumber.join(", ")} (Gruppe {firstCompleteFCIDataset?.group},
+        Sektion {firstCompleteFCIDataset?.section})
       </Typography>
     );
   }
@@ -193,7 +225,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                 </Typography>
               )}
 
-            <FCIText fci={fci !== undefined ? fci! : variants[0].fci!} />
+            <FCIText fci={fci} variants={variants} />
 
             <List dense>
               {podcasts.map(
