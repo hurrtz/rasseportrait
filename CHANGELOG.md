@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/hurrtz/rasseportrait/compare/v1.10.0...v1.11.0) (2024-09-07)
+
+
+### Features
+
+* provide zipped bundles ([5a3d1ec](https://github.com/hurrtz/rasseportrait/commit/5a3d1ecb172513f27e814590ef9969625ae9daf8))
+
 ## [1.10.0](https://github.com/hurrtz/rasseportrait/compare/v1.9.0...v1.10.0) (2024-09-07)
 
 
