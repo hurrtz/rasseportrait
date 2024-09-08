@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/hurrtz/rasseportrait/compare/v1.12.0...v1.13.0) (2024-09-08)
+
+
+### Features
+
+* migrate podcast dates to format YYYY-MM-DD ([a346868](https://github.com/hurrtz/rasseportrait/commit/a3468682912e4abc18f3898bf34bacd2904cad6b))
+
 ## [1.12.0](https://github.com/hurrtz/rasseportrait/compare/v1.11.0...v1.12.0) (2024-09-07)
 
 
