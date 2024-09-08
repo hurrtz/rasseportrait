@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Ferien, Strohmann-Argumente & eine rätselhafte Hunderasse",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/73-ferien-strohmann-argumente-eine-raetselhafte-hunderasse-1x9e06d6pxpnr",
       timecode: 2269,
-      airDateTimestamp: 1659574800000,
+      airDate: "2022-08-04",
     },
   ],
   furtherReading: [

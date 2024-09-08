@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Mischwesen & Cancelculture",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/134-mischwesen-cancelculture-v758khsqvx1l5",
       timecode: 4027,
-      airDateTimestamp: 1696467600000,
+      airDate: "2023-10-05",
     },
   ],
   furtherReading: [

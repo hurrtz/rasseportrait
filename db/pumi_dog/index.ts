@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Beamende Zecken, Kalsarikännit & Hundeduft",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/128-beamende-zecken-kalsarikaennit-hundeduft-6vu1gxku02uiq",
       timecode: 1803,
-      airDateTimestamp: 1692838800000,
+      airDate: "2023-08-24",
     },
   ],
   furtherReading: [

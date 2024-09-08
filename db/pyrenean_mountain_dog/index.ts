@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Hundepension, Katzenfänger & Let´s Dance",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/63-hundepension-katzenfaenger-lets-dance-dl5as9b3mwwhh",
       timecode: 2786,
-      airDateTimestamp: 1653526800000,
+      airDate: "2022-05-26",
     },
   ],
   furtherReading: [

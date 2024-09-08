@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Feindliche Natur, Jagdverhalten & Hundehomöopathie",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/103-feindliche-natur-jagdverhalten-hundehomoeopathie-w2n7ys2hcqab2",
       timecode: 2280,
-      airDateTimestamp: 1677718800000,
+      airDate: "2023-03-02",
     },
   ],
   furtherReading: [

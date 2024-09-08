@@ -29,7 +29,7 @@ const breed: Breed = {
       episode: "Leuchtspray für alle!",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/152-leuchtspray-fuer-alle-nd21vdwsoa26d",
       timecode: 2798,
-      airDateTimestamp: 1707354000000,
+      airDate: "2024-02-08",
     },
   ],
   furtherReading: [

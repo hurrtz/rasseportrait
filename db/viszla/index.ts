@@ -57,7 +57,7 @@ const breed: Breed = {
       episode: "Richtig Helfen, fliegende Kotbeutel & der Weimaraner",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/53-der-viszla-ein-weltrekord-gefahr-durch-magendrehung-u0o9xqbtbwfk3",
       timecode: 2414,
-      airDateTimestamp: 1647478800000,
+      airDate: "2022-03-17",
     },
   ],
   furtherReading: [],

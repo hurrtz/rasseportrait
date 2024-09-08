@@ -66,7 +66,7 @@ const breed: Breed = {
       episode: "Der Spitz, Zwingerhaltung & Puddingmatten",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/49-der-spitz-zwingerhaltung-puddingmatten-7hsefpcuadjr7",
       timecode: 924,
-      airDateTimestamp: 1645059600000,
+      airDate: "2022-02-17",
     },
   ],
   furtherReading: [

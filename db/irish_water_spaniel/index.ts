@@ -19,7 +19,7 @@ const breed: Breed = {
       episode: "Stark wie ein Regenwurm",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/144-stark-wie-ein-regenwurm-yz5nu29vkfm1o",
       timecode: 2909,
-      airDateTimestamp: 1702515600000,
+      airDate: "2023-12-14",
     },
   ],
   furtherReading: [

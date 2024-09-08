@@ -21,7 +21,7 @@ const breed: Breed = {
       episode: "Suppenattacke, Rudelbegegnung & 1 eiliger Aufruf!!",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/85-suppenattacke-rudelbegegnung-1-eiliger-aufruf-zyhm5ofxax4e1",
       timecode: 4006,
-      airDateTimestamp: 1666832400000,
+      airDate: "2022-10-27",
     },
   ],
   furtherReading: [

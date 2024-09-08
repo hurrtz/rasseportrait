@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Faultiere, Hitzschlag & Leben nach dem Tod",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/75-faultiere-hitzschlag-leben-nach-dem-tod-rqnqcr03z9fmo",
       timecode: 2544,
-      airDateTimestamp: 1660784400000,
+      airDate: "2022-08-18",
     },
   ],
   furtherReading: [

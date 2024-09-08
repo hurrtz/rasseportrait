@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Einfach mal sitzen",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/129-einfach-mal-sitzen-dbc2cl161xydt",
       timecode: 1132,
-      airDateTimestamp: 1693443600000,
+      airDate: "2023-08-31",
     },
   ],
   furtherReading: [

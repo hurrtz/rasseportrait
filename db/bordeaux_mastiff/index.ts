@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Einfach machen",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/114-einfach-machen-t8x681865vs1g",
       timecode: 3349,
-      airDateTimestamp: 1684371600000,
+      airDate: "2023-05-18",
     },
   ],
   furtherReading: [

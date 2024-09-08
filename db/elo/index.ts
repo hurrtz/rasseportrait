@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Elos, eckige Hühner & blutrünstige Nutrias",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/32-elos-eckige-huehner-blutruenstige-nutrias-cn96yspmq7wbu",
       timecode: 717,
-      airDateTimestamp: 1634605200000,
+      airDate: "2021-10-19",
     },
   ],
   furtherReading: [

@@ -6,10 +6,10 @@ import CardActionArea from "@mui/material/CardActionArea";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import { SettingsContext } from "../contexts/Settings";
-import type { Breed, BreedIdentifier } from "../../types/breed";
+import type { EnrichedBreed, BreedIdentifier } from "../../types/breed";
 import { getWindowLocationSearch } from "../utils";
 
-interface Props extends Breed {
+interface Props extends EnrichedBreed {
   image: string;
   handleCardClick: (breedIdentifier: BreedIdentifier) => void;
 }

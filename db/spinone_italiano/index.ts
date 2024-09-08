@@ -19,7 +19,7 @@ const breed: Breed = {
       episode: "Geburtstag & Good News",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-1-geburtstag-good-news-8jh3dh6u48lpr",
       timecode: 1530,
-      airDateTimestamp: 1719450000000,
+      airDate: "2024-06-27",
     },
   ],
   furtherReading: [

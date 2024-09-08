@@ -28,7 +28,7 @@ const breed: Breed = {
       episode: "Körper kräftig, aber nicht ohne Adel!",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-4-koerper-kraeftig-aber-nicht-ohne-adel-zjwmcmhv4vzuh",
       timecode: 1502,
-      airDateTimestamp: 1721264400000,
+      airDate: "2024-07-18",
     },
   ],
   furtherReading: [

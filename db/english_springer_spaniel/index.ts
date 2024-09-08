@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Fliewatüüt, Fettfilter & Ferien",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/109-fliewatueuet-fettfilter-ferien-u84xhk4aavxfa",
       timecode: 3328,
-      airDateTimestamp: 1681347600000,
+      airDate: "2023-04-13",
     },
   ],
   furtherReading: [

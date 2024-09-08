@@ -46,7 +46,7 @@ const breed: Breed = {
       episode: "Martin wird aufgemischt, krumme Dackelbeine & Spartipps Teil 1",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/56-martin-wird-aufgemischt-krumme-dackelbeine-spartipps-teil-1-6g11t4rkl512j",
       timecode: 1570,
-      airDateTimestamp: 1649293200000,
+      airDate: "2022-04-07",
     },
   ],
   furtherReading: [

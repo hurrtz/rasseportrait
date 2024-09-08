@@ -17,7 +17,11 @@ export interface Podcast {
   url: string;
   timecode: number;
   type?: string;
-  airDateTimestamp: number;
+  airDate: string;
+}
+
+export interface EnrichedPodcast extends Omit<Podcast, "airDate"> {
+  airDate: Date;
 }
 
 interface FurtherReading {
@@ -36,8 +40,9 @@ export interface Breed {
   recognitions?: string[];
 }
 
-export interface EnrichedBreed extends Breed {
+export interface EnrichedBreed extends Omit<Breed, "image" | "podcast"> {
   image: string;
+  podcast: EnrichedPodcast[];
 }
 
 export type BreedIdentifier =

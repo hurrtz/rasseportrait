@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Es ist zu warm",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/120-es-ist-zu-warm-02gkj0kij1nng",
       timecode: 2295,
-      airDateTimestamp: 1688000400000,
+      airDate: "2023-06-29",
     },
   ],
   furtherReading: [

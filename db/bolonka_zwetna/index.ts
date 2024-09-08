@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Die schlauesten Tiere der Welt",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-8-die-schlauesten-tiere-der-welt-febovvjxrpps9",
       timecode: 1030,
-      airDateTimestamp: 1723683600000,
+      airDate: "2024-08-15",
     },
   ],
   furtherReading: [

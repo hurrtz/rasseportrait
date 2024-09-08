@@ -20,7 +20,7 @@ const breed: Breed = {
       episode: "Kurioser Unfall, Katzenbegegnungen & Fledermausbomben",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/122-kurioser-unfall-katzenbegegnungen-fledermausbomben-vdy2nybu1xoqm",
       timecode: 2632,
-      airDateTimestamp: 1689210000000,
+      airDate: "2023-07-13",
     },
   ],
   furtherReading: [

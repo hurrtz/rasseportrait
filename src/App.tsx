@@ -59,7 +59,7 @@ const App = () => {
           return standardNumberA - standardNumberB;
         }
 
-        return podcastA[0].airDateTimestamp - podcastB[0].airDateTimestamp;
+        return podcastA[0].airDate.getTime() - podcastB[0].airDate.getTime();
       }
 
       if (settings.sortOrder === "fci-standard-number") {
@@ -75,7 +75,7 @@ const App = () => {
         return standardNumberB - standardNumberA;
       }
 
-      return podcastB[0].airDateTimestamp - podcastA[0].airDateTimestamp;
+      return podcastB[0].airDate.getTime() - podcastA[0].airDate.getTime();
     },
   );
 

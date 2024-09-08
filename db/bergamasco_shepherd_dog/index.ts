@@ -20,7 +20,7 @@ const breed: Breed = {
       episode: "Schnitzelbankabend & Kompetenzvermutung",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/154-schnitzelbankabend-kompetenzvermutung-k2ec0em6e8dt4",
       timecode: 568,
-      airDateTimestamp: 1708563600000,
+      airDate: "2024-02-22",
     },
   ],
   furtherReading: [

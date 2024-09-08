@@ -20,7 +20,7 @@ const breed: Breed = {
       episode: "Ameisen-Waschstraße",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/167-ameisen-waschstrasse-sctwq1mdogjpv",
       timecode: 2572,
-      airDateTimestamp: 1716426000000,
+      airDate: "2024-05-23",
     },
   ],
   furtherReading: [

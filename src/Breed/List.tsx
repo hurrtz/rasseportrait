@@ -16,15 +16,15 @@ const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
     ignoreLocation: true,
     threshold: 0.1,
     keys: [
-      { name: "names", getFn: ({ names }: Breed) => names.join("|") },
+      { name: "names", getFn: ({ names }: EnrichedBreed) => names.join("|") },
       {
         name: "variantNames",
-        getFn: ({ variants }: Breed) =>
+        getFn: ({ variants }: EnrichedBreed) =>
           variants?.map((variant) => variant.names).join("|") || "",
       },
       {
         name: "standardNumber",
-        getFn: ({ fci }: Breed) => String(fci?.standardNumber || ""),
+        getFn: ({ fci }: EnrichedBreed) => String(fci?.standardNumber || ""),
       },
     ],
   };

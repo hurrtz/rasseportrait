@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Schönheit, Wahn & arme Schweine",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/82-schoenheit-wahn-arme-schweine-a9icwiyr0ey7v",
       timecode: 2869,
-      airDateTimestamp: 1665018000000,
+      airDate: "2022-10-06",
     },
   ],
   furtherReading: [

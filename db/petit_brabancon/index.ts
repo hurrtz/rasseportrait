@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Garnelenfieber",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/156-garnelenfieber-xhvk5s6b64dc4",
       timecode: 1860,
-      airDateTimestamp: 1709773200000,
+      airDate: "2024-03-07",
     },
   ],
   furtherReading: [

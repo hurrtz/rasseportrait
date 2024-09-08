@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Herbstanfang",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/135-herbstanfang-mjmh2c8xp08jy",
       timecode: 2978,
-      airDateTimestamp: 1697072400000,
+      airDate: "2023-10-12",
     },
   ],
   furtherReading: [

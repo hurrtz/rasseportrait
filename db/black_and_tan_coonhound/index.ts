@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Biologisch logisch",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/155-biologisch-logisch-ssywwck5le064",
       timecode: 1245,
-      airDateTimestamp: 1709168400000,
+      airDate: "2024-02-29",
     },
   ],
   furtherReading: [

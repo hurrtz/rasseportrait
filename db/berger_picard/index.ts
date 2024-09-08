@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Abschied in die Sommerpause",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/171-abschied-in-die-sommerpause-sst637kxiu8ty",
       timecode: 2251,
-      airDateTimestamp: 1655686800000,
+      airDate: "2024-06-20",
     },
   ],
   furtherReading: [

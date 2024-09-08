@@ -18,7 +18,7 @@ const breed: Breed = {
       episode: "Einhoder, König der Kindsköpfe & verkohlte Hundepfoten",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/68-einhoder-koenig-der-kindskoepfe-verkohlte-hundepfoten-xyr6ciyqxhzcf",
       timecode: 2296,
-      airDateTimestamp: 1656550800000,
+      airDate: "2022-06-30",
     },
   ],
   furtherReading: [

@@ -51,6 +51,10 @@ export const enrichBreedsWithIllustrations = ({
           variant: breed.variants ? breed.variants[0].id : "default",
           artStyle,
         }),
+        podcast: breed.podcast.map((podcast) => ({
+          ...podcast,
+          airDate: new Date(podcast.airDate),
+        })),
       }) as EnrichedBreed,
   );
 

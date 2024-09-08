@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Kampf der Urzeitkrebse",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/125-kampf-der-urzeitkrebse-i8h9g7dvtu49g",
       timecode: 2081,
-      airDateTimestamp: 1691024400000,
+      airDate: "2023-08-03",
     },
   ],
   furtherReading: [

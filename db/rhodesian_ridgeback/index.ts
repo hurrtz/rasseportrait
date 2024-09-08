@@ -15,7 +15,7 @@ const breed: Breed = {
         "Geteiltes Sorgerecht für Tiere, falsches Mäusegulasch & Zwangspause für Polizeihunde",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/44-geteiltes-sorgerecht-fuer-tiere-falsches-maeusegulasch-zwangspause-fuer-polizeihunde-ioj5kmbkn4v7c",
       timecode: 3197,
-      airDateTimestamp: 1642035600000,
+      airDate: "2022-01-13",
     },
   ],
   furtherReading: [

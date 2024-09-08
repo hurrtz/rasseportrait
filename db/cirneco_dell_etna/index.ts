@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Bulette & Bier",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/110-bulette-bier-evkbrps47ac2f",
       timecode: 1555,
-      airDateTimestamp: 1681952400000,
+      airDate: "2023-04-20",
     },
   ],
   furtherReading: [

@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Katzengefühle",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-9-katzengefuehle-57gluk24bflht",
       timecode: 2044,
-      airDateTimestamp: 1724288400000,
+      airDate: "2024-08-22",
     },
   ],
   furtherReading: [

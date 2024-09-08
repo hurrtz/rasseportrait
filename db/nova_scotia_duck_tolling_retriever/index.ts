@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Positive Verstärkung, Männergrippe & Zurückrudern",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/136-positive-verstaerkung-maennergrippe-zurueckrudern-pcewcbc9hru3t",
       timecode: 1380,
-      airDateTimestamp: 1697677200000,
+      airDate: "2023-10-19",
     },
   ],
   furtherReading: [

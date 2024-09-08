@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Getreidefreie Folge",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/118-getreidefreie-folge-usumre6izvygu",
       timecode: 1499,
-      airDateTimestamp: 1686790800000,
+      airDate: "2023-06-15",
     },
   ],
   furtherReading: [

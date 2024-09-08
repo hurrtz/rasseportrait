@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Braunes Rauschen & veganes Futter",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/147-braunes-rauschen-veganes-futter-rq1a38523a8db",
       timecode: 2865,
-      airDateTimestamp: 1704330000000,
+      airDate: "2024-01-04",
     },
   ],
   furtherReading: [

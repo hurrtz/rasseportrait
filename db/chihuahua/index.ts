@@ -36,7 +36,7 @@ const breed: Breed = {
       episode: "Zuchtverbote, Eutrophierung & Helmpflicht für Chihuahuas",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/48-zuchtverbote-eutrophierung-helmpflicht-fuer-chihuahuas-532onwpr31v22",
       timecode: 2362,
-      airDateTimestamp: 1644454800000,
+      airDate: "2022-02-10",
     },
   ],
   furtherReading: [

@@ -14,7 +14,7 @@ const breed: Breed = {
       episode: "Podcast live II: Achterbahn der Feelings",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/127-podcast-live-ii-achterbahn-der-feelings-kk19bjk32yh1x",
       timecode: 985,
-      airDateTimestamp: 1692234000000,
+      airDate: "2023-08-17",
     },
   ],
   furtherReading: [
