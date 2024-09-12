@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/hurrtz/rasseportrait/compare/v1.13.0...v1.14.0) (2024-09-12)
+
+
+### Features
+
+* add additional information on Flat Coated Retriever ([fa6ef23](https://github.com/hurrtz/rasseportrait/commit/fa6ef23ba505ca592e01da8f55ece7134a6a02fe))
+* add Azawakah ([60163c0](https://github.com/hurrtz/rasseportrait/commit/60163c015951a37a76d709a59645d8b8834caad4))
+* add context info to podcasts, add information to Flat Coated Retriever ([88803a3](https://github.com/hurrtz/rasseportrait/commit/88803a30457b72ba1d653e0816a1635101ae3f4b))
+
 ## [1.13.0](https://github.com/hurrtz/rasseportrait/compare/v1.12.0...v1.13.0) (2024-09-08)
 
 
