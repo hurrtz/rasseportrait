@@ -18,6 +18,7 @@ export interface Podcast {
   timecode: number;
   type?: string;
   airDate: string;
+  context?: "Hörerfrage";
 }
 
 export interface EnrichedPodcast extends Omit<Podcast, "airDate"> {

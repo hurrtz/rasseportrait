@@ -229,7 +229,14 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
 
             <List dense>
               {podcasts.map(
-                ({ number, episode, url, timecode, type = "audio" }) => (
+                ({
+                  number,
+                  episode,
+                  url,
+                  timecode,
+                  type = "audio",
+                  context,
+                }) => (
                   <ListItem
                     disablePadding
                     key={number}
@@ -248,7 +255,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                       <ListItemText
                         key={episode}
                         primary={episode}
-                        secondary={`Folge ${number} — ${getTimeCopy(timecode)}`}
+                        secondary={`Folge ${number} — ${getTimeCopy(timecode)}${context ? `\n${context}` : ""}`}
                         primaryTypographyProps={{
                           sx: {
                             whiteSpace: "nowrap",
