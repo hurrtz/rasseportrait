@@ -20,6 +20,13 @@ const breed: Breed = {
       timecode: 2296,
       airDate: "2022-06-30",
     },
+    {
+      number: 183,
+      episode: "Schiebeflöte",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/183-schiebefloete-z8ui95rb5t0rv",
+      timecode: 694,
+      airDate: "2024-09-12",
+    },
   ],
   furtherReading: [
     {
