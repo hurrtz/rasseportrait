@@ -4,6 +4,7 @@ import AmericanAkita from "./american_akita";
 import AmericanStaffordshireTerrier from "./american_staffordshire_terrier";
 import AustralianKelpie from "./australian_kelpie";
 import AustralianShepherd from "./australian_shepherd";
+import Azawakh from "./azawakh";
 import Basenji from "./basenji";
 import BavarianMountainHound from "./bavarian_mountain_hound";
 import Beagle from "./beagle";
@@ -115,6 +116,7 @@ export default {
   AmericanStaffordshireTerrier,
   AustralianKelpie,
   AustralianShepherd,
+  Azawakh,
   Basenji,
   BavarianMountainHound,
   Beagle,
