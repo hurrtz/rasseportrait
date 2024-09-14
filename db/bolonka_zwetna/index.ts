@@ -27,6 +27,7 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/bolonka-zwetna-nationale-rasse",
     },
   ],
+  recognitions: ["Robin, für den Tipp, das Bild zu verbessern!"],
 };
 
 export default breed;
