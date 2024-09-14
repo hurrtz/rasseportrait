@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/hurrtz/rasseportrait/compare/v1.14.0...v1.15.0) (2024-09-14)
+
+
+### Features
+
+* update imagery on Bolonka Zwetna ([a374770](https://github.com/hurrtz/rasseportrait/commit/a374770ec5955b6b9360d872fd2abf5eab79d94c))
+
 ## [1.14.0](https://github.com/hurrtz/rasseportrait/compare/v1.13.0...v1.14.0) (2024-09-12)
 
 
