@@ -31,6 +31,7 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/steirische-rauhhaarbracke",
     },
   ],
+  recognitions: ["Danke an Dirk für das Feedback zum Bild!"],
 };
 
 export default breed;
