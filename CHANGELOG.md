@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.16.0](https://github.com/hurrtz/rasseportrait/compare/v1.15.0...v1.16.0) (2024-09-18)
+
+
+### Features
+
+* improve illustration for styrian coarse haired hound ([0de2e51](https://github.com/hurrtz/rasseportrait/commit/0de2e5110685c311d7ab67e9bd8b91cbbf334343))
+
 ## [1.15.0](https://github.com/hurrtz/rasseportrait/compare/v1.14.0...v1.15.0) (2024-09-14)
 
 
