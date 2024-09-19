@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.17.0](https://github.com/hurrtz/rasseportrait/compare/v1.16.0...v1.17.0) (2024-09-19)
+
+
+### Features
+
+* add Lancashire Heeler ([537501d](https://github.com/hurrtz/rasseportrait/commit/537501dd5c380506938a0ed228af5a09d410cc89))
+* add Miniature Pinscher ([5f6d260](https://github.com/hurrtz/rasseportrait/commit/5f6d2600a856f43ae90e42a8caf37f2c78fc1ee6))
+
 ## [1.16.0](https://github.com/hurrtz/rasseportrait/compare/v1.15.0...v1.16.0) (2024-09-18)
 
 
