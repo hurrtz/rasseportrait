@@ -64,6 +64,7 @@ import Kromfohrlaender from "./kromfohrlaender";
 import Kuvasz from "./kuvasz";
 import LabradorRetriever from "./labrador_retriever";
 import LagottoRomagnolo from "./lagotto_romagnolo";
+import LancashireHeeler from "./lancashire_heeler";
 import LandseerDog from "./landseer_dog";
 import LargeMuensterlaender from "./large_muensterlaender";
 import Leonberger from "./leonberger";
@@ -176,6 +177,7 @@ export default {
   Kuvasz,
   LabradorRetriever,
   LagottoRomagnolo,
+  LancashireHeeler,
   LandseerDog,
   LargeMuensterlaender,
   Leonberger,
