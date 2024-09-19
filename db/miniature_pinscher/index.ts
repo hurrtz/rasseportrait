@@ -18,9 +18,8 @@ const breed: Breed = {
   podcast: [
     {
       number: 184,
-      episode:
-        "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/184-wo-ist-wilma-7hen4hjz2wbam",
-      url: "",
+      episode: "Wo ist Wilma?",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/184-wo-ist-wilma-7hen4hjz2wbam",
       timecode: 3300,
       airDate: "2024-09-19",
     },
