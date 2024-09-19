@@ -71,6 +71,7 @@ import Leonberger from "./leonberger";
 import MajorcanMastiff from "./majorcan_mastiff";
 import MajorcaShepherdDog from "./majorca_shepherd_dog";
 import ManchesterTerrier from "./manchester_terrier";
+import MiniaturePinscher from "./miniature_pinscher";
 import MiniatureSchnauzer from "./miniature_schnauzer";
 import NederlandseKooikerhondje from "./nederlandse_kooikerhondje";
 import NorwegianBuhund from "./norwegian_buhund";
@@ -184,6 +185,7 @@ export default {
   MajorcanMastiff,
   MajorcaShepherdDog,
   ManchesterTerrier,
+  MiniaturePinscher,
   MiniatureSchnauzer,
   NederlandseKooikerhondje,
   NorwegianBuhund,
