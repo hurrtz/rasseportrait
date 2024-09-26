@@ -68,6 +68,7 @@ import LancashireHeeler from "./lancashire_heeler";
 import LandseerDog from "./landseer_dog";
 import LargeMuensterlaender from "./large_muensterlaender";
 import Leonberger from "./leonberger";
+import LouisianaCatahoulaLeopardDog from "./louisiana_catahoula_leopard_dog";
 import MajorcanMastiff from "./majorcan_mastiff";
 import MajorcaShepherdDog from "./majorca_shepherd_dog";
 import ManchesterTerrier from "./manchester_terrier";
@@ -182,6 +183,7 @@ export default {
   LandseerDog,
   LargeMuensterlaender,
   Leonberger,
+  LouisianaCatahoulaLeopardDog,
   MajorcanMastiff,
   MajorcaShepherdDog,
   ManchesterTerrier,
