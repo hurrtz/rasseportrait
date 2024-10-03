@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.19.0](https://github.com/hurrtz/rasseportrait/compare/v1.18.0...v1.19.0) (2024-10-03)
+
+
+### Features
+
+* add Tornjak ([d7088dd](https://github.com/hurrtz/rasseportrait/commit/d7088dda22be1c21b3be1f3e91471ffa7c515f08))
+
 ## [1.18.0](https://github.com/hurrtz/rasseportrait/compare/v1.17.1...v1.18.0) (2024-09-26)
 
 
