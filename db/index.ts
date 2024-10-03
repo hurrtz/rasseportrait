@@ -104,6 +104,7 @@ import ThaiRidgeback from "./thai_ridgeback";
 import TibetanMastiff from "./tibetan_mastiff";
 import TibetanSpaniel from "./tibetan_spaniel";
 import TibetanTerrier from "./tibetan_terrier";
+import Tornjak from "./tornjak";
 import TransmontanoMastiff from "./transmontano_mastiff";
 import Turnspit from "./turnspit";
 import Viszla from "./viszla";
@@ -219,6 +220,7 @@ export default {
   TibetanMastiff,
   TibetanSpaniel,
   TibetanTerrier,
+  Tornjak,
   TransmontanoMastiff,
   Turnspit,
   Viszla,
