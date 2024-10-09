@@ -59,6 +59,7 @@ import IrishWaterSpaniel from "./irish_water_spaniel";
 import IrishWolfhound from "./irish_wolfhound";
 import JapaneseSpitz from "./japanese_spitz";
 import KarelianBearDog from "./karelian_bear_dog";
+import Kokoni from "./kokoni";
 import Komondor from "./komondor";
 import Kromfohrlaender from "./kromfohrlaender";
 import Kuvasz from "./kuvasz";
@@ -175,6 +176,7 @@ export default {
   IrishWolfhound,
   JapaneseSpitz,
   KarelianBearDog,
+  Kokoni,
   Komondor,
   Kromfohrlaender,
   Kuvasz,
