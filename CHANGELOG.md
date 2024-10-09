@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/hurrtz/rasseportrait/compare/v1.19.0...v1.20.0) (2024-10-09)
+
+
+### Features
+
+* add Kokoni ([0f7b5e9](https://github.com/hurrtz/rasseportrait/commit/0f7b5e9b5aae22e67624e17cdd694947b0c4e716))
+
 ## [1.19.0](https://github.com/hurrtz/rasseportrait/compare/v1.18.0...v1.19.0) (2024-10-03)
 
 
