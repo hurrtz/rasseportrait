@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.21.0](https://github.com/hurrtz/rasseportrait/compare/v1.20.0...v1.21.0) (2024-10-17)
+
+
+### Features
+
+* add Bedlington Terrier ([2f51035](https://github.com/hurrtz/rasseportrait/commit/2f51035484bafd56a0039b7565f627daf62aaebb))
+
 ## [1.20.0](https://github.com/hurrtz/rasseportrait/compare/v1.19.0...v1.20.0) (2024-10-09)
 
 
