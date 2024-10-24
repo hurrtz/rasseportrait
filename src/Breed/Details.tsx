@@ -160,6 +160,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
       furtherReading: mainFurtherReadings,
       image,
       recognitions = [],
+      isOfficiallyPresented,
     } = breed;
 
     const furtherReadings = [
@@ -217,6 +218,18 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
             <Typography gutterBottom variant="h5" component="div">
               {names[0]}
             </Typography>
+            {isOfficiallyPresented === false && (
+              <Typography
+                gutterBottom
+                component="div"
+                sx={{
+                  textAlign: "center",
+                  border: "1px solid #F00",
+                }}
+              >
+                erst indirekt mit Amerikanischem Akita vorgestellt
+              </Typography>
+            )}
             {!settings.collapseSimilarBreeds &&
               variants &&
               variants.length > 0 && (

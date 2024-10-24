@@ -32,6 +32,7 @@ interface FurtherReading {
 
 export interface Breed {
   id: number | string;
+  isOfficiallyPresented?: boolean;
   image?: any;
   names: string[];
   variants?: Variant[];

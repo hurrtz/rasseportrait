@@ -22,6 +22,7 @@ const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
 
 export default ({
   id,
+  isOfficiallyPresented,
   variants = [],
   image,
   handleCardClick,
@@ -55,7 +56,13 @@ export default ({
   return (
     <Card onClick={onClick} sx={{ position: "relative" }}>
       <CardActionArea sx={{ opacity: 1, "&:hover": { opacity: 0.75 } }}>
-        <CardHeaderImage image={image} />
+        <CardHeaderImage
+          image={image}
+          sx={{
+            filter:
+              isOfficiallyPresented === false ? "grayscale(1) blur(3px)" : "",
+          }}
+        />
         <Box
           sx={{
             position: "absolute",

@@ -8,6 +8,7 @@ const breed: Breed = {
     section: 5,
     standardNumber: 255,
   },
+  isOfficiallyPresented: false,
   podcast: [
     {
       number: "Summer Edition #7",
