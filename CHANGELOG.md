@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.22.0](https://github.com/hurrtz/rasseportrait/compare/v1.21.0...v1.22.0) (2024-10-24)
+
+
+### Features
+
+* add Papillon ([341cb68](https://github.com/hurrtz/rasseportrait/commit/341cb68e67edcc0e0b757d6095dafaf853dcd32c))
+* indicate indirectly discussed dogs visually ([3e9cebd](https://github.com/hurrtz/rasseportrait/commit/3e9cebdef5197cb6ef53610534db050310eedca1))
+
 ## [1.21.0](https://github.com/hurrtz/rasseportrait/compare/v1.20.0...v1.21.0) (2024-10-17)
 
 
