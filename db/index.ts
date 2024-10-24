@@ -81,6 +81,7 @@ import NorwegianBuhund from "./norwegian_buhund";
 import NovaScotiaDuckTollingRetriever from "./nova_scotia_duck_tolling_retriever";
 import OldEnglishSheepdog from "./old_english_sheepdog";
 import Otterhound from "./otterhound";
+import Papillon from "./papillon";
 import ParsonRussellTerrier from "./parson_russell_terrier";
 import PetitBrabancon from "./petit_brabancon";
 import Podenco from "./podenco";
@@ -199,6 +200,7 @@ export default {
   NovaScotiaDuckTollingRetriever,
   OldEnglishSheepdog,
   Otterhound,
+  Papillon,
   ParsonRussellTerrier,
   PetitBrabancon,
   Podenco,
