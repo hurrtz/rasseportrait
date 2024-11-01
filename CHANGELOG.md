@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.23.0](https://github.com/hurrtz/rasseportrait/compare/v1.22.0...v1.23.0) (2024-11-01)
+
+
+### Features
+
+* add Dutch Smoushond ([ac05618](https://github.com/hurrtz/rasseportrait/commit/ac05618bcb710a2f8dde3601ef6c659e4188a541))
+
 ## [1.22.0](https://github.com/hurrtz/rasseportrait/compare/v1.21.0...v1.22.0) (2024-10-24)
 
 
