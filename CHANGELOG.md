@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.24.0](https://github.com/hurrtz/rasseportrait/compare/v1.23.0...v1.24.0) (2024-11-01)
+
+
+### Features
+
+* introduce stats section ([ffdeffa](https://github.com/hurrtz/rasseportrait/commit/ffdeffa79c880c0bc07bc104e912a9a3034ef145))
+* remove settings fab advertisement on mobile ([3becf2c](https://github.com/hurrtz/rasseportrait/commit/3becf2cdf8206fefdb1b3af32dfd15033bc2c341))
+
 ## [1.23.0](https://github.com/hurrtz/rasseportrait/compare/v1.22.0...v1.23.0) (2024-11-01)
 
 
