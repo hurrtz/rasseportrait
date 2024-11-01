@@ -12,6 +12,7 @@ import type { BreedIdentifier } from "../../types/breed";
 import type { Settings } from "../../types/settings";
 import HeaderSection from "../components/HeaderSection";
 import SettingsFAB from "../components/SettingsFAB";
+import ProgressFCIBreeds from "../components/ProgressFCIBreeds";
 import { SettingsContext } from "../contexts/Settings";
 import { getWindowLocationSearch } from "../utils";
 
@@ -102,6 +103,8 @@ const PageBreedList = ({
       />
 
       <HeaderSection isMobile={isMobile} />
+
+      <ProgressFCIBreeds />
 
       {isDesktop === false && (
         <Stack

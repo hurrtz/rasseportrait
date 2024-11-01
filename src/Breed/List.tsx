@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Fuse from "fuse.js";
 import { BreedsContext } from "../contexts/Breeds";
-import type { Breed, EnrichedBreed, BreedIdentifier } from "../../types/breed";
+import type { EnrichedBreed, BreedIdentifier } from "../../types/breed";
 import BreedCards from "./Cards";
 
 interface Props {
