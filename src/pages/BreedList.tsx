@@ -2,9 +2,6 @@ import React, { useState, useContext, type ChangeEvent } from "react";
 import * as amplitude from "@amplitude/analytics-browser";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import BreedList from "../Breed/List";
 import Details from "../Details";
@@ -105,48 +102,6 @@ const PageBreedList = ({
       <HeaderSection isMobile={isMobile} />
 
       <ProgressFCIBreeds />
-
-      {isDesktop === false && (
-        <Stack
-          direction="row"
-          alignItems="center"
-          mt={4}
-          sx={{ pointerEvents: "none" }}
-        >
-          <Button variant="outlined" size="small" sx={{ minHeight: "47px" }}>
-            <Typography align="left" textTransform="none" fontSize="small">
-              Psst! Bilder langweilig? Andere Sortierung gefällig? Klick aufs
-              Rädchen!
-            </Typography>
-          </Button>
-
-          <Box
-            sx={{
-              width: "100px",
-              height: "30px",
-              marginTop: "-30px",
-              borderBottom: "1px solid rgba(25, 118, 210, 0.5)",
-              borderRight: "1px solid rgba(25, 118, 210, 0.5)",
-              borderRadius: "0 0 25px",
-              marginRight: "28px",
-              position: "relative",
-              flex: "1 1 auto",
-              ["&::before"]: {
-                content: '""',
-                display: "block",
-                width: "0",
-                height: "0",
-                borderLeft: "10px solid transparent",
-                borderRight: "10px solid transparent",
-                borderBottom: "15px solid rgba(25, 118, 210, 0.5)",
-                position: "absolute",
-                top: "-14px",
-                right: "-10px",
-              },
-            }}
-          ></Box>
-        </Stack>
-      )}
 
       <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
         <TextField
