@@ -11,9 +11,12 @@ import ListItemText from "@mui/material/ListItemText";
 import { BreedsContext } from "../contexts/Breeds";
 import ProgressBar from "./LinearProgressBar";
 
-const AMOUNT_FCI_BREEDS = 359;
+const AMOUNT_FCI_BREEDS = 374;
+const AMOUNT_DELETED_FCI_BREEDS = 14;
+const AMOUNT_PROVISIONAL_FCI_BREEDS = 15;
 
-const normaliseValue = (value: number) => (value * 100) / AMOUNT_FCI_BREEDS;
+const normaliseValue = (value: number) =>
+  (value * 100) / (AMOUNT_FCI_BREEDS - AMOUNT_DELETED_FCI_BREEDS);
 
 export default () => {
   const breeds = useContext(BreedsContext);
@@ -32,6 +35,19 @@ export default () => {
       breed.fci.standardNumber > 0 &&
       breed.isOfficiallyPresented === false,
   ).length;
+  const stringifiedListOfBreedsOutsideFCIList = breeds
+    .filter((breed) => breed.fci?.standardNumber === -1)
+    .map((breed) => breed.names[0])
+    .join(", ");
+  const stringifiedListOfBreedsThatAreNotYetOfficiallyPresented = breeds
+    .filter(
+      (breed) =>
+        breed.fci?.standardNumber &&
+        breed.fci.standardNumber > 0 &&
+        breed.isOfficiallyPresented === false,
+    )
+    .map((breed) => breed.names[0])
+    .join(", ");
   const normalisedValue = ~~normaliseValue(amountFCIBreedsPresented);
 
   return (
@@ -59,12 +75,12 @@ export default () => {
                     <Typography fontSize="small">
                       Anzahl FCI-Rassen:{" "}
                       <Typography fontWeight="bold" component="span">
-                        {AMOUNT_FCI_BREEDS}
+                        {AMOUNT_FCI_BREEDS - AMOUNT_DELETED_FCI_BREEDS}
                       </Typography>
                     </Typography>
                   }
-                  secondary="abzüglich gestrichener Rassen, einschließlich
-              vorläufiger Rassen"
+                  secondary={`insgesamt ${AMOUNT_FCI_BREEDS} Rassen, abzüglich ${AMOUNT_DELETED_FCI_BREEDS} gestrichener Rassen, einschließlich
+              ${AMOUNT_PROVISIONAL_FCI_BREEDS} vorläufiger Rassen`}
                 />
               </ListItem>
               <ListItem divider disableGutters>
@@ -90,6 +106,7 @@ export default () => {
                       </Typography>
                     </Typography>
                   }
+                  secondary={stringifiedListOfBreedsOutsideFCIList}
                 />
               </ListItem>
               <ListItem disableGutters>
@@ -102,6 +119,9 @@ export default () => {
                         {amountFCIBreedsNotPresented}
                       </Typography>
                     </Typography>
+                  }
+                  secondary={
+                    stringifiedListOfBreedsThatAreNotYetOfficiallyPresented
                   }
                 />
               </ListItem>
