@@ -36,6 +36,7 @@ import DanishMastiff from "./danish_mastiff";
 import DanishSwedishFarmdog from "./danish_swedish_farmdog";
 import Dobermann from "./dobermann";
 import DutchShepherd from "./dutch_shepherd";
+import DutchSmoushond from "./dutch_smoushond";
 import Elo from "./elo";
 import EnglishCockerSpaniel from "./english_cocker_spaniel";
 import EnglishSpringerSpaniel from "./english_springer_spaniel";
@@ -155,6 +156,7 @@ export default {
   DanishSwedishFarmdog,
   Dobermann,
   DutchShepherd,
+  DutchSmoushond,
   Elo,
   EnglishCockerSpaniel,
   EnglishSpringerSpaniel,
