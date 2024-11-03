@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.26.0](https://github.com/hurrtz/rasseportrait/compare/v1.25.0...v1.26.0) (2024-11-03)
+
+
+### Features
+
+* track clicks on stats component ([c44adf2](https://github.com/hurrtz/rasseportrait/commit/c44adf212d7879d214bfc071f7c6cd272d44a80a))
+
 ## [1.25.0](https://github.com/hurrtz/rasseportrait/compare/v1.24.0...v1.25.0) (2024-11-01)
 
 ## [1.24.0](https://github.com/hurrtz/rasseportrait/compare/v1.23.0...v1.24.0) (2024-11-01)
