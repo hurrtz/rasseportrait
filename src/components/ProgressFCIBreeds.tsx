@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import * as amplitude from "@amplitude/analytics-browser";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Accordion from "@mui/material/Accordion";
@@ -55,8 +56,9 @@ export default () => {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1-content"
-          id="panel1-header"
+          onClick={() => {
+            amplitude.track("Statistics toggled");
+          }}
         >
           <Typography align="left" textTransform="none" fontSize="small">
             Fortschritt Vorstellung FCI-Rasseliste:{" "}
