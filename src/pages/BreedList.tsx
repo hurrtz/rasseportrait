@@ -83,18 +83,6 @@ const PageBreedList = ({
         setSelectedBreed={augmentedSetSelectedBreed}
       />
 
-      <SettingsFAB
-        isSettingsModalOpen={isSettingsModalOpen}
-        handleSettingsModalOpen={handleSettingsModalOpen}
-        handleSettingsModalClose={handleSettingsModalClose}
-        onChangeSortOrder={onChangeSortOrder}
-        onChangeCollapseSimilarBreeds={onChangeCollapseSimilarBreeds}
-        collapseSimilarBreeds={settings.collapseSimilarBreeds}
-        isSortOrderFCIEnabled={settings.sortOrder === "fci-standard-number"}
-        isSortOrderAirDateEnabled={settings.sortOrder === "air-date"}
-        isSortDirectionAsc={settings.sortDirection === "asc"}
-      />
-
       <HeaderSection isMobile={isMobile} />
 
       <ProgressFCIBreeds />
@@ -112,6 +100,18 @@ const PageBreedList = ({
       <BreedList
         searchValue={searchValue}
         setSelectedBreed={augmentedSetSelectedBreed}
+      />
+
+      <SettingsFAB
+        isSettingsModalOpen={isSettingsModalOpen}
+        handleSettingsModalOpen={handleSettingsModalOpen}
+        handleSettingsModalClose={handleSettingsModalClose}
+        onChangeSortOrder={onChangeSortOrder}
+        onChangeCollapseSimilarBreeds={onChangeCollapseSimilarBreeds}
+        collapseSimilarBreeds={settings.collapseSimilarBreeds}
+        isSortOrderFCIEnabled={settings.sortOrder === "fci-standard-number"}
+        isSortOrderAirDateEnabled={settings.sortOrder === "air-date"}
+        isSortDirectionAsc={settings.sortDirection === "asc"}
       />
     </>
   );
