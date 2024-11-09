@@ -8,10 +8,13 @@ interface BreedsState {
 }
 
 const useBreedsStore = create<BreedsState>()(
-  devtools((set) => ({
-    breeds: [],
-    set: (breeds) => set(() => ({ breeds })),
-  })),
+  devtools(
+    (set) => ({
+      breeds: [],
+      set: (breeds) => set(() => ({ breeds }), undefined, "setBreeds"),
+    }),
+    { name: "Rasseportrait: Breeds", store: "Rasseportrait" },
+  ),
 );
 
 export { useBreedsStore };

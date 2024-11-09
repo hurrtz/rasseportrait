@@ -8,15 +8,18 @@ interface SettingsState {
 }
 
 const useSettingsStore = create<SettingsState>()(
-  devtools((set) => ({
-    settings: {
-      artStyle: "realistic",
-      sortOrder: "air-date",
-      sortDirection: "asc",
-      collapseSimilarBreeds: true,
-    },
-    set: (settings) => set(() => ({ settings })),
-  })),
+  devtools(
+    (set) => ({
+      settings: {
+        artStyle: "realistic",
+        sortOrder: "air-date",
+        sortDirection: "asc",
+        collapseSimilarBreeds: true,
+      },
+      set: (settings) => set(() => ({ settings }), undefined, "setSettings"),
+    }),
+    { name: "Rasseportrait: Settings", store: "Rasseportrait" },
+  ),
 );
 
 export { useSettingsStore };

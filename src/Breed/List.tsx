@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import Fuse from "fuse.js";
 import { useBreedsStore } from "../stores/Breeds";
 import type { EnrichedBreed, BreedIdentifier } from "../../types/breed";

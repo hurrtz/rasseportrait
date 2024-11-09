@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import * as amplitude from "@amplitude/analytics-browser";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";

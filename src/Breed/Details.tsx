@@ -1,4 +1,4 @@
-import React, { useState, useContext, type ReactNode } from "react";
+import React, { useState, type ReactNode } from "react";
 import * as amplitude from "@amplitude/analytics-browser";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";

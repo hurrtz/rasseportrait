@@ -1,4 +1,4 @@
-import React, { useState, useContext, type ChangeEvent } from "react";
+import React, { useState, type ChangeEvent } from "react";
 import * as amplitude from "@amplitude/analytics-browser";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
