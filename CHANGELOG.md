@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.28.0](https://github.com/hurrtz/rasseportrait/compare/v1.27.0...v1.28.0) (2024-11-09)
+
+
+### Features
+
+* drop artsy images ([1864747](https://github.com/hurrtz/rasseportrait/commit/1864747809daf2a6ef4909a785a8532eceee75a4))
+
+
+### Bug Fixes
+
+* move FAB down hierachy ([e65d1fe](https://github.com/hurrtz/rasseportrait/commit/e65d1fecdc7fad4cc4955c3a0ed9427a3484e60f))
+* update breed list upon settings change ([7012a4c](https://github.com/hurrtz/rasseportrait/commit/7012a4cd277a06b20e71c1a38b3833c0fe6362c0))
+
 ## [1.27.0](https://github.com/hurrtz/rasseportrait/compare/v1.26.0...v1.27.0) (2024-11-09)
 
 
