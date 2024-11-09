@@ -22,8 +22,8 @@ import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import Tooltip from "@mui/material/Tooltip";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
-import { BreedsContext } from "../contexts/Breeds";
-import { SettingsContext } from "../contexts/Settings";
+import { useBreedsStore } from "../stores/Breeds";
+import { useSettingsStore } from "../stores/Settings";
 import type { FCI, Podcast, BreedIdentifier, Variant } from "../../types/breed";
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
@@ -115,8 +115,8 @@ interface Props {
 
 export default ({ breedIdentifier, closeUI, children }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
-  const breeds = useContext(BreedsContext);
-  const settings = useContext(SettingsContext);
+  const { breeds } = useBreedsStore();
+  const { settings } = useSettingsStore();
 
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
 

@@ -5,7 +5,7 @@ import CardHeader from "@mui/material/CardHeader";
 import CardActionArea from "@mui/material/CardActionArea";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
-import { SettingsContext } from "../contexts/Settings";
+import { useSettingsStore } from "../stores/Settings";
 import type { EnrichedBreed, BreedIdentifier } from "../../types/breed";
 import { getWindowLocationSearch } from "../utils";
 
@@ -29,7 +29,7 @@ export default ({
   names,
   fci,
 }: Props) => {
-  const settings = useContext(SettingsContext);
+  const { settings } = useSettingsStore();
 
   const onClick = () => {
     const payload: BreedIdentifier = { id };

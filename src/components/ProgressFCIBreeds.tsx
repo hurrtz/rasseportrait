@@ -9,7 +9,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import { BreedsContext } from "../contexts/Breeds";
+import { useBreedsStore } from "../stores/Breeds";
 import ProgressBar from "./LinearProgressBar";
 
 const AMOUNT_FCI_BREEDS = 374;
@@ -20,7 +20,7 @@ const normaliseValue = (value: number) =>
   (value * 100) / (AMOUNT_FCI_BREEDS - AMOUNT_DELETED_FCI_BREEDS);
 
 export default () => {
-  const breeds = useContext(BreedsContext);
+  const { breeds } = useBreedsStore();
   const amountFCIBreedsPresented = breeds.filter(
     (breed) =>
       breed.fci?.standardNumber &&

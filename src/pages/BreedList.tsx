@@ -10,7 +10,7 @@ import type { Settings } from "../../types/settings";
 import HeaderSection from "../components/HeaderSection";
 import SettingsFAB from "../components/SettingsFAB";
 import ProgressFCIBreeds from "../components/ProgressFCIBreeds";
-import { SettingsContext } from "../contexts/Settings";
+import { useSettingsStore } from "../stores/Settings";
 import { getWindowLocationSearch } from "../utils";
 
 interface Props {
@@ -25,8 +25,7 @@ const PageBreedList = ({
   onChangeCollapseSimilarBreeds,
 }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
-  const isDesktop = useMediaQuery("(min-width: 1200px");
-  const settings = useContext(SettingsContext);
+  const { settings } = useSettingsStore();
   const searchParams = new URLSearchParams(location.search);
 
   const [searchValue, setSearchValue] = useState(

@@ -8,22 +8,22 @@ import PetsIcon from "@mui/icons-material/Pets";
 import breedsList from "../db";
 import PageBreedList from "./pages/BreedList";
 import PageImprint from "./pages/Imprint";
-import { BreedsContext } from "./contexts/Breeds";
-import { SettingsContext } from "./contexts/Settings";
+import { useBreedsStore } from "./stores/Breeds";
+import { useSettingsStore } from "./stores/Settings";
 import { flattenBreedVariants, enrichBreedsWithIllustrations } from "./utils";
 import type { Settings } from "../types/settings";
 
 const storedSettings = window.localStorage.getItem("settings");
 
 const App = () => {
-  const settingsContext = useContext(SettingsContext);
-  const [settings, setSettings] = useState<Settings>(settingsContext);
+  const { settings, set: setSettings } = useSettingsStore();
+  const { set: setBreeds, breeds: storedBreeds } = useBreedsStore();
 
   useEffect(() => {
     if (storedSettings) {
       try {
-        const settings = JSON.parse(storedSettings) as Settings;
-        setSettings(settings);
+        const parsedSettings = JSON.parse(storedSettings) as Settings;
+        setSettings(parsedSettings);
       } catch {}
     }
   }, [storedSettings]);
@@ -128,50 +128,43 @@ const App = () => {
     setSettings(newSettings);
   };
 
+  if (!storedBreeds.length) {
+    setBreeds(sortedBreeds);
+  }
+
   return (
-    <SettingsContext.Provider
-      value={{
-        sortOrder: settings.sortOrder,
-        artStyle: settings.artStyle,
-        sortDirection: settings.sortDirection,
-        collapseSimilarBreeds: settings.collapseSimilarBreeds,
-      }}
-    >
-      <Container>
-        {bottomNavigationValue === "breeds_list" && (
-          <BreedsContext.Provider value={sortedBreeds}>
-            <PageBreedList
-              onChangeArtStyle={handleChangeArtStyle}
-              onChangeSortOrder={handleChangeSortOrder}
-              onChangeCollapseSimilarBreeds={handleChangeCollapseSimilarBreeds}
-            />
-          </BreedsContext.Provider>
-        )}
+    <Container>
+      {bottomNavigationValue === "breeds_list" && (
+        <PageBreedList
+          onChangeArtStyle={handleChangeArtStyle}
+          onChangeSortOrder={handleChangeSortOrder}
+          onChangeCollapseSimilarBreeds={handleChangeCollapseSimilarBreeds}
+        />
+      )}
 
-        {bottomNavigationValue === "imprint" && <PageImprint />}
+      {bottomNavigationValue === "imprint" && <PageImprint />}
 
-        <BottomNavigation
-          showLabels
-          value={bottomNavigationValue}
-          onChange={(event, newValue) => {
-            amplitude.track("Page Select", { page: newValue });
-            setBottomNavigationValue(newValue);
-          }}
-          sx={{ marginTop: 5 }}
-        >
-          <BottomNavigationAction
-            label="Hunderassen"
-            icon={<PetsIcon />}
-            value="breeds_list"
-          />
-          <BottomNavigationAction
-            label="Impressum"
-            icon={<ContactPhoneIcon />}
-            value="imprint"
-          />
-        </BottomNavigation>
-      </Container>
-    </SettingsContext.Provider>
+      <BottomNavigation
+        showLabels
+        value={bottomNavigationValue}
+        onChange={(event, newValue) => {
+          amplitude.track("Page Select", { page: newValue });
+          setBottomNavigationValue(newValue);
+        }}
+        sx={{ marginTop: 5 }}
+      >
+        <BottomNavigationAction
+          label="Hunderassen"
+          icon={<PetsIcon />}
+          value="breeds_list"
+        />
+        <BottomNavigationAction
+          label="Impressum"
+          icon={<ContactPhoneIcon />}
+          value="imprint"
+        />
+      </BottomNavigation>
+    </Container>
   );
 };
 

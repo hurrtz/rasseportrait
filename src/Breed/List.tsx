@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Fuse from "fuse.js";
-import { BreedsContext } from "../contexts/Breeds";
+import { useBreedsStore } from "../stores/Breeds";
 import type { EnrichedBreed, BreedIdentifier } from "../../types/breed";
 import BreedCards from "./Cards";
 
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
-  const breeds = useContext(BreedsContext);
+  const { breeds } = useBreedsStore();
   const fuseOptions = {
     shouldSort: true,
     ignoreLocation: true,
