@@ -26,6 +26,7 @@ const PageBreedList = ({
 }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
   const { settings } = useSettingsStore();
+
   const searchParams = new URLSearchParams(location.search);
 
   const [searchValue, setSearchValue] = useState(

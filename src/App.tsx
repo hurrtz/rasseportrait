@@ -5,6 +5,7 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import PetsIcon from "@mui/icons-material/Pets";
+import isEqual from "lodash.isequal";
 import breedsList from "../db";
 import PageBreedList from "./pages/BreedList";
 import PageImprint from "./pages/Imprint";
@@ -128,7 +129,7 @@ const App = () => {
     setSettings(newSettings);
   };
 
-  if (!storedBreeds.length) {
+  if (!isEqual(storedBreeds, sortedBreeds)) {
     setBreeds(sortedBreeds);
   }
 
