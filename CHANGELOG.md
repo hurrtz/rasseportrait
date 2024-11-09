@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.27.0](https://github.com/hurrtz/rasseportrait/compare/v1.26.0...v1.27.0) (2024-11-09)
+
+
+### Features
+
+* install zustand ([2894f71](https://github.com/hurrtz/rasseportrait/commit/2894f715aded96b1254c0e2dde599a1fcf0cc929))
+* migrate code to zustand ([2c762fc](https://github.com/hurrtz/rasseportrait/commit/2c762fc5ea3923b68060b5fc8598d2b6ba3f347b))
+* properly name zustand stores ([9faae82](https://github.com/hurrtz/rasseportrait/commit/9faae8284a65108f04c20c604177a646eedde42b))
+
 ## [1.26.0](https://github.com/hurrtz/rasseportrait/compare/v1.25.0...v1.26.0) (2024-11-03)
 
 
