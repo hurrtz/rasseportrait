@@ -42,7 +42,6 @@ const App = () => {
 
   const enrichedBreedsWithVariants = enrichBreedsWithIllustrations({
     breeds: breedsWithVariants,
-    artStyle: settings.artStyle,
   });
 
   const sortedBreeds = enrichedBreedsWithVariants.sort(
@@ -82,17 +81,6 @@ const App = () => {
 
   const storeSettings = (newSettings: Settings) => {
     window.localStorage.setItem("settings", JSON.stringify(newSettings));
-  };
-
-  const handleChangeArtStyle = () => {
-    const newArtStyle =
-      settings.artStyle === "realistic" ? "artsy" : "realistic";
-    const newSettings: Settings = { ...settings, artStyle: newArtStyle };
-
-    amplitude.track("Settings: Change Art Style", { artStyle: newArtStyle });
-
-    storeSettings(newSettings);
-    setSettings(newSettings);
   };
 
   const handleChangeSortOrder = (newSortOrder: Settings["sortOrder"]) => {
@@ -137,7 +125,6 @@ const App = () => {
     <Container>
       {bottomNavigationValue === "breeds_list" && (
         <PageBreedList
-          onChangeArtStyle={handleChangeArtStyle}
           onChangeSortOrder={handleChangeSortOrder}
           onChangeCollapseSimilarBreeds={handleChangeCollapseSimilarBreeds}
         />

@@ -14,13 +14,11 @@ import { useSettingsStore } from "../stores/Settings";
 import { getWindowLocationSearch } from "../utils";
 
 interface Props {
-  onChangeArtStyle: () => void;
   onChangeSortOrder: (sortOrder: Settings["sortOrder"]) => void;
   onChangeCollapseSimilarBreeds: () => void;
 }
 
 const PageBreedList = ({
-  onChangeArtStyle,
   onChangeSortOrder,
   onChangeCollapseSimilarBreeds,
 }: Props) => {
@@ -89,10 +87,8 @@ const PageBreedList = ({
         isSettingsModalOpen={isSettingsModalOpen}
         handleSettingsModalOpen={handleSettingsModalOpen}
         handleSettingsModalClose={handleSettingsModalClose}
-        onChangeArtStyle={onChangeArtStyle}
         onChangeSortOrder={onChangeSortOrder}
         onChangeCollapseSimilarBreeds={onChangeCollapseSimilarBreeds}
-        isArtStyleEnabled={settings.artStyle === "artsy"}
         collapseSimilarBreeds={settings.collapseSimilarBreeds}
         isSortOrderFCIEnabled={settings.sortOrder === "fci-standard-number"}
         isSortOrderAirDateEnabled={settings.sortOrder === "air-date"}

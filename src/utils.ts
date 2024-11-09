@@ -1,15 +1,4 @@
 import type { Breed, EnrichedBreed, FCI } from "../types/breed";
-import type { Settings } from "../types/settings";
-
-export const getBreedImagePath = ({
-  id,
-  variant = "default",
-  artStyle,
-}: {
-  id: Breed["id"];
-  variant?: string;
-  artStyle?: "artsy" | "realistic";
-}) => `illustrations/${id}/illustration/${artStyle}/${variant}.jpeg`;
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
@@ -37,20 +26,14 @@ export const flattenBreedVariants = ({ breeds }: { breeds: Breed[] }) => {
 
 export const enrichBreedsWithIllustrations = ({
   breeds,
-  artStyle,
 }: {
   breeds: Breed[];
-  artStyle: Settings["artStyle"];
 }) =>
   breeds.map(
     (breed) =>
       ({
         ...breed,
-        image: getBreedImagePath({
-          id: breed.id,
-          variant: breed.variants ? breed.variants[0].id : "default",
-          artStyle,
-        }),
+        image: `illustrations/${breed.id}/illustration${breed.variants ? `_${breed.variants[0].id}` : ""}.jpeg`,
         podcast: breed.podcast.map((podcast) => ({
           ...podcast,
           airDate: new Date(podcast.airDate),

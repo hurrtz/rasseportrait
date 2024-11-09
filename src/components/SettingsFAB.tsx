@@ -13,10 +13,8 @@ interface Props {
   isSettingsModalOpen: boolean;
   handleSettingsModalOpen: () => void;
   handleSettingsModalClose: () => void;
-  onChangeArtStyle: () => void;
   onChangeSortOrder: (sortOrder: Settings["sortOrder"]) => void;
   onChangeCollapseSimilarBreeds: () => void;
-  isArtStyleEnabled: boolean;
   collapseSimilarBreeds: boolean;
   isSortOrderFCIEnabled: boolean;
   isSortOrderAirDateEnabled: boolean;
@@ -82,10 +80,8 @@ export default ({
   isSettingsModalOpen,
   handleSettingsModalOpen,
   handleSettingsModalClose,
-  onChangeArtStyle,
   onChangeSortOrder,
   onChangeCollapseSimilarBreeds,
-  isArtStyleEnabled,
   collapseSimilarBreeds,
   isSortOrderFCIEnabled,
   isSortOrderAirDateEnabled,
@@ -113,7 +109,6 @@ export default ({
       direction="down"
     >
       {[
-        getFabActionObject({ id: "artStyle", isActive: isArtStyleEnabled }),
         getFabActionObject({
           id: "collapse_similar_breeds",
           isActive: collapseSimilarBreeds,
@@ -135,9 +130,7 @@ export default ({
           tooltipTitle={action.name}
           tooltipOpen
           onClick={() => {
-            if (action.id === "artStyle") {
-              onChangeArtStyle();
-            } else if (action.id === "sort_fci") {
+            if (action.id === "sort_fci") {
               onChangeSortOrder("fci-standard-number");
             } else if (action.id === "sort_date") {
               onChangeSortOrder("air-date");
