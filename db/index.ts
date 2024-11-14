@@ -50,6 +50,7 @@ import GermanPinscher from "./german_pinscher";
 import GermanRoughhairedPointer from "./german_roughhaired_pointer";
 import GermanShepherd from "./german_shepherd";
 import GermanSpitz from "./german_spitz";
+import GermanWirehairedPointer from "./german_wirehaired_pointer";
 import GiantSchnauzer from "./giant_schnauzer";
 import GoldenRetriever from "./golden_retriever";
 import GrandGasconSaintongeois from "./grand_gascon_saintongeois";
@@ -170,6 +171,7 @@ export default {
   GermanRoughhairedPointer,
   GermanShepherd,
   GermanSpitz,
+  GermanWirehairedPointer,
   GiantSchnauzer,
   GoldenRetriever,
   GrandGasconSaintongeois,
