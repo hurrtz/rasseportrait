@@ -33,6 +33,7 @@ interface FurtherReading {
 export interface Breed {
   id: number | string;
   isOfficiallyPresented?: boolean;
+  wasGuessedCorrectlyInPodcast?: boolean;
   image?: any;
   names: string[];
   variants?: Variant[];
