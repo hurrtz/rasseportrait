@@ -11,14 +11,14 @@ const breed: Breed = {
   wasGuessedCorrectlyInPodcast: true,
   podcast: [
     {
-      number: "Exklusiv #5",
+      number: "Exklusiv #6",
       episode: "Live-Podcast Euskirchen",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-euskirchen-xnzts3crxhjd5",
       timecode: 2438,
       airDate: "2024-11-13",
     },
     {
-      number: "Exklusiv #5",
+      number: "Exklusiv #6",
       episode: "Live-Podcast Euskirchen",
       url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-6-live-podcast-euskirchen-1013243",
       timecode: 2438,
