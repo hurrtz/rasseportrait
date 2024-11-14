@@ -11,16 +11,16 @@ const breed: Breed = {
   },
   podcast: [
     {
-      number: "Exklusiv #5",
+      number: "Exklusiv #4",
       episode: "Live-Podcast Würselen: Wildkatzen",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-unna-6u1dfm6uo2jq0",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-wuerselen-wildkatzen-fp3kwv8cghuui",
       timecode: 5840,
       airDate: "2024-10-09",
     },
     {
-      number: "Exklusiv #5",
+      number: "Exklusiv #4",
       episode: "Live-Podcast Würselen: Wildkatzen",
-      url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-5-live-podcast-unna-1013242",
+      url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-4-live-podcast-wuerselen-wildkatzen-1013241",
       timecode: 5840,
       type: "video",
       airDate: "2024-10-09",
