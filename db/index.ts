@@ -97,6 +97,7 @@ import Rottweiler from "./rottweiler";
 import SamoyedDog from "./samoyed_dog";
 import ScottishTerrier from "./scottish_terrier";
 import ShetlandSheepdog from "./shetland_sheepdog";
+import Shiba from "./shiba";
 import ShihTzu from "./shih_tzu";
 import SilkenWindsprite from "./silken_windsprite";
 import SpanishGalgo from "./spanish_galgo";
@@ -218,6 +219,7 @@ export default {
   SamoyedDog,
   ScottishTerrier,
   ShetlandSheepdog,
+  Shiba,
   ShihTzu,
   SilkenWindsprite,
   SpanishGalgo,
