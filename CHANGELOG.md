@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.29.0](https://github.com/hurrtz/rasseportrait/compare/v1.28.0...v1.29.0) (2024-11-14)
+
+
+### Features
+
+* add Appenzeller Sennenhund ([7903056](https://github.com/hurrtz/rasseportrait/commit/7903056ac33d17f52b54f39952e702af2916c9ee))
+* add flag to assign if breed was guessed in podcast ([4577da4](https://github.com/hurrtz/rasseportrait/commit/4577da4784cb6aa871a3388a3951c6000e6da3ee))
+* add German Wirehaired Pointer ([3b928b8](https://github.com/hurrtz/rasseportrait/commit/3b928b89e30ae40edafbb7ac3e6f6d677c5f3401))
+* add Shiba ([d76cf8a](https://github.com/hurrtz/rasseportrait/commit/d76cf8ab32453b2ddd44aea784af938216d23125))
+
 ## [1.28.0](https://github.com/hurrtz/rasseportrait/compare/v1.27.0...v1.28.0) (2024-11-09)
 
 
