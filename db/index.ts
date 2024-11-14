@@ -2,6 +2,7 @@ import Affenpinscher from "./affenpinscher";
 import Akita from "./akita";
 import AmericanAkita from "./american_akita";
 import AmericanStaffordshireTerrier from "./american_staffordshire_terrier";
+import AppenzellerSennenhund from "./appenzeller_sennenhund";
 import AustralianKelpie from "./australian_kelpie";
 import AustralianShepherd from "./australian_shepherd";
 import Azawakh from "./azawakh";
@@ -124,6 +125,7 @@ export default {
   Akita,
   AmericanAkita,
   AmericanStaffordshireTerrier,
+  AppenzellerSennenhund,
   AustralianKelpie,
   AustralianShepherd,
   Azawakh,
