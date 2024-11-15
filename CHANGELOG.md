@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.30.0](https://github.com/hurrtz/rasseportrait/compare/v1.29.0...v1.30.0) (2024-11-15)
+
+
+### Features
+
+* update imagery on several breeds ([5e99a89](https://github.com/hurrtz/rasseportrait/commit/5e99a89db8136500c251e638fc29400485709e3c))
+
 ## [1.29.0](https://github.com/hurrtz/rasseportrait/compare/v1.28.0...v1.29.0) (2024-11-14)
 
 
