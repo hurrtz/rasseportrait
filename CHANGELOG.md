@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.31.0](https://github.com/hurrtz/rasseportrait/compare/v1.30.0...v1.31.0) (2024-11-28)
+
+
+### Features
+
+* add Chow Chow ([5326e2f](https://github.com/hurrtz/rasseportrait/commit/5326e2f89e3c264ea109cdeb4ffa760ccfa5b36e))
+
 ## [1.30.0](https://github.com/hurrtz/rasseportrait/compare/v1.29.0...v1.30.0) (2024-11-15)
 
 
