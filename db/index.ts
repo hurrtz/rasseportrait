@@ -27,6 +27,7 @@ import Catalburun from "./catalburun";
 import ChesapeakeBayRetriever from "./chesapeake_bay_retriever";
 import Chihuahua from "./chihuahua";
 import ChineseCrestedDog from "./chinese_crested_dog";
+import ChowChow from "./chow_chow";
 import CirnecoDellEtna from "./cirneco_dell_etna";
 import Corgi from "./corgi";
 import CotonDeTulear from "./coton_de_tulear";
@@ -150,6 +151,7 @@ export default {
   ChesapeakeBayRetriever,
   Chihuahua,
   ChineseCrestedDog,
+  ChowChow,
   CirnecoDellEtna,
   Corgi,
   CotonDeTulear,
