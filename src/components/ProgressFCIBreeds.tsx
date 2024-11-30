@@ -173,7 +173,7 @@ export default () => {
                       </Typography>
                     </Typography>
                   }
-                  secondary={`${amountBreedsCorrectlyGuessed} von ${breeds.length} vorgestellten Rassen korrekt geraten (einschließlich Publikumserfolge)`}
+                  secondary={`${amountBreedsCorrectlyGuessed} von ${breeds.length} vorgestellten Rassen korrekt geraten (einschließlich Publikumserfolge, abzüglich initial direkt namentlich genannter Rassen)`}
                 />
               </ListItem>
             </List>
