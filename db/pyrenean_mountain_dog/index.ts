@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "pyrenean_mountain_dog",
   names: ["Chien de Montagne des Pyrénées", "Pyrenäenberghund", "Patou"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 2,
     section: 2,

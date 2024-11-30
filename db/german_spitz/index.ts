@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "german_spitz",
   names: ["Deutscher Spitz"],
+  wasGuessedCorrectlyInPodcast: "not_applicable",
   variants: [
     {
       names: ["Pomeranian", "Zwergspitz"],

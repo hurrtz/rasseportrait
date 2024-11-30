@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "cirneco_dell_etna",
   names: ["Cirneco dell'Etna"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 5,
     section: 7,

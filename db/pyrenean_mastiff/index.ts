@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "pyrenean_mastiff",
   names: ["Dogo Argentino"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 2,
     section: 2,

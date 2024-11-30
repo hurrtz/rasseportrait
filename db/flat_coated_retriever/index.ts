@@ -7,6 +7,7 @@ const breed: Breed = {
     "Retriever à poil plat",
     "Cobrador de pelo liso",
   ],
+  wasGuessedCorrectlyInPodcast: "not_applicable",
   fci: {
     group: 8,
     section: 1,

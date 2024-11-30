@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "rhodesian_ridgeback",
   names: ["Rhodesian Ridgeback"],
+  wasGuessedCorrectlyInPodcast: "not_applicable",
   fci: {
     group: 6,
     section: 3,
@@ -14,7 +15,7 @@ const breed: Breed = {
       episode:
         "Geteiltes Sorgerecht für Tiere, falsches Mäusegulasch & Zwangspause für Polizeihunde",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/44-geteiltes-sorgerecht-fuer-tiere-falsches-maeusegulasch-zwangspause-fuer-polizeihunde-ioj5kmbkn4v7c",
-      timecode: 3197,
+      timecode: 3136,
       airDate: "2022-01-13",
     },
   ],

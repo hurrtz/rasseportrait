@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "giant_schnauzer",
   names: ["Riesenschnauzer"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 2,
     section: 1,

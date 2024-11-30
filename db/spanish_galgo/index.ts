@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "spanish_galgo",
   names: ["Galgo Español", "Galgo", "Spanischer Windhund"],
+  wasGuessedCorrectlyInPodcast: "not_applicable",
   fci: {
     group: 10,
     section: 3,

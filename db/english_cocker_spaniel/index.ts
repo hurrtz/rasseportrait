@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "english_cocker_spaniel",
   names: ["English Cocker Spaniel"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 8,
     section: 2,

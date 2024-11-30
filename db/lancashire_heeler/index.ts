@@ -10,7 +10,7 @@ const breed: Breed = {
   },
   podcast: [
     {
-      number: "Exclusiv #3",
+      number: "Exklusiv #3",
       episode: "Live-Podcast Köln: Die große Überraschung",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-koeln-die-grosse-ueberraschung-fd8vbp81ih11w",
       timecode: 1586,

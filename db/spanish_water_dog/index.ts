@@ -10,6 +10,7 @@ const breed: Breed = {
     "Turco Andaluz",
     "Andalusischer Türke",
   ],
+  wasGuessedCorrectlyInPodcast: "not_applicable",
   fci: {
     group: 8,
     section: 3,

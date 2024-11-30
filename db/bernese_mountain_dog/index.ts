@@ -9,6 +9,7 @@ const breed: Breed = {
     "Bernese Mountain Dog",
     "Perro Boyero de montaña Bernés",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 2,
     section: 3,

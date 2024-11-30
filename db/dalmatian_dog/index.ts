@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "dalmatian_dog",
   names: ["Dalmatiner"],
+  wasGuessedCorrectlyInPodcast: "not_applicable",
   fci: {
     group: 6,
     section: 3,
@@ -13,7 +14,7 @@ const breed: Breed = {
       number: 12,
       episode: "Die ganze Wahrheit",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/12-die-ganze-wahrheit-kc3oyphk7j1ra",
-      timecode: 944,
+      timecode: 890,
       airDate: "2021-05-25",
     },
     {

@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "nova_scotia_duck_tolling_retriever",
   names: ["Nova Scotia Duck Tolling Retriever"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 8,
     section: 1,
