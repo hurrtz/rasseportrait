@@ -16,6 +16,7 @@ export const flattenBreedVariants = ({ breeds }: { breeds: Breed[] }) => {
           fci: variant.fci || breed.fci,
           podcast: breed.podcast,
           furtherReading: breed.furtherReading,
+          wasGuessedCorrectlyInPodcast: breed.wasGuessedCorrectlyInPodcast,
         });
       });
     }

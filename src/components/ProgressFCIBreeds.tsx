@@ -61,7 +61,10 @@ export default () => {
     .map((breed) => breed.names[0])
     .join(", ");
   const amountBreedsCorrectlyGuessed = breeds.filter(
-    (breed) => breed.wasGuessedCorrectlyInPodcast,
+    (breed) => breed.wasGuessedCorrectlyInPodcast === true,
+  ).length;
+  const amountBreedsGuessNotNeeded = breeds.filter(
+    (breed) => breed.wasGuessedCorrectlyInPodcast === "not_applicable",
   ).length;
   const percentAmountPresentedFCIBreeds = ~~getPercentValue(
     amountFCIBreedsPresented,
@@ -167,13 +170,13 @@ export default () => {
                       <Typography fontWeight="bold" component="span">
                         {getPercentValue(
                           amountBreedsCorrectlyGuessed,
-                          breeds.length,
+                          breeds.length - amountBreedsGuessNotNeeded,
                         ).toFixed(2)}
                         {`%`}
                       </Typography>
                     </Typography>
                   }
-                  secondary={`${amountBreedsCorrectlyGuessed} von ${breeds.length} vorgestellten Rassen korrekt geraten (einschließlich Publikumserfolge, abzüglich initial direkt namentlich genannter Rassen)`}
+                  secondary={`${amountBreedsCorrectlyGuessed} von ${breeds.length} vorgestellten Rassen korrekt geraten (abzüglich ${amountBreedsGuessNotNeeded} Rassen, die nicht geraten werden mussten und dem Spanischen Wasserhund)`}
                 />
               </ListItem>
             </List>
