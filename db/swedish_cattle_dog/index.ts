@@ -9,6 +9,7 @@ const breed: Breed = {
     "Swedish Cattle Dog",
     "Schwedischer Vallhund",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 5,
     section: 3,
