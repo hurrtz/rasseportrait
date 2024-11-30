@@ -12,6 +12,7 @@ const breed: Breed = {
     "Vernepator",
     "Küchenhund",
   ],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: -1,
     section: -1,
