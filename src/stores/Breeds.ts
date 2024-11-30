@@ -1,17 +1,23 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
-import type { EnrichedBreed } from "../../types/breed";
+import type { EnrichedBreed, Breed } from "../../types/breed";
 
 interface BreedsState {
-  breeds: EnrichedBreed[];
-  set: (breeds: EnrichedBreed[]) => void;
+  currentBreeds: EnrichedBreed[];
+  setCurrentBreeds: (breeds: EnrichedBreed[]) => void;
+  breedsWithVariants: EnrichedBreed[];
+  setBreedsWithVariants: (breeds: EnrichedBreed[]) => void;
 }
 
 const useBreedsStore = create<BreedsState>()(
   devtools(
     (set) => ({
-      breeds: [],
-      set: (breeds) => set(() => ({ breeds }), undefined, "setBreeds"),
+      currentBreeds: [],
+      breedsWithVariants: [],
+      setCurrentBreeds: (currentBreeds) =>
+        set(() => ({ currentBreeds }), undefined, "setBreeds"),
+      setBreedsWithVariants: (breedsWithVariants) =>
+        set(() => ({ breedsWithVariants }), undefined, "setBreedsWithVariants"),
     }),
     { name: "Rasseportrait: Breeds", store: "Rasseportrait" },
   ),

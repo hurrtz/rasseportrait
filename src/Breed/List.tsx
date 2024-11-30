@@ -10,7 +10,7 @@ interface Props {
 }
 
 const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
-  const { breeds } = useBreedsStore();
+  const { currentBreeds } = useBreedsStore();
   const fuseOptions = {
     shouldSort: true,
     ignoreLocation: true,
@@ -29,7 +29,7 @@ const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
     ],
   };
 
-  const fuse = new Fuse(breeds, fuseOptions);
+  const fuse = new Fuse(currentBreeds, fuseOptions);
 
   let results: EnrichedBreed[] = [];
 
@@ -40,7 +40,7 @@ const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
   }
 
   if (!searchValue) {
-    results = breeds;
+    results = currentBreeds;
   }
 
   return <BreedCards breeds={results} handleCardClick={setSelectedBreed} />;

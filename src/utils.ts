@@ -1,4 +1,4 @@
-import type { Breed, EnrichedBreed, FCI } from "../types/breed";
+import type { Breed, EnrichedBreed } from "../types/breed";
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
@@ -13,7 +13,7 @@ export const flattenBreedVariants = ({ breeds }: { breeds: Breed[] }) => {
           id: breed.id,
           names: breed.names,
           variants: [variant],
-          fci: breed.fci,
+          fci: variant.fci || breed.fci,
           podcast: breed.podcast,
           furtherReading: breed.furtherReading,
         });

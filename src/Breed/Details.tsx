@@ -115,7 +115,7 @@ interface Props {
 
 export default ({ breedIdentifier, closeUI, children }: Props) => {
   const isMobile = useMediaQuery("(max-width: 480px");
-  const { breeds } = useBreedsStore();
+  const { currentBreeds } = useBreedsStore();
   const { settings } = useSettingsStore();
 
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
@@ -138,7 +138,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
     setIsTooltipOpen(true);
   };
 
-  const [breed] = breeds.filter((breed) => {
+  const [breed] = currentBreeds.filter((breed) => {
     if (breedIdentifier) {
       if (breedIdentifier.variantName && breed.variants) {
         return (

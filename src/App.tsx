@@ -18,7 +18,11 @@ const storedSettings = window.localStorage.getItem("settings");
 
 const App = () => {
   const { settings, set: setSettings } = useSettingsStore();
-  const { set: setBreeds, breeds: storedBreeds } = useBreedsStore();
+  const {
+    setCurrentBreeds,
+    setBreedsWithVariants,
+    currentBreeds: storedBreeds,
+  } = useBreedsStore();
 
   useEffect(() => {
     if (storedSettings) {
@@ -118,7 +122,12 @@ const App = () => {
   };
 
   if (!isEqual(storedBreeds, sortedBreeds)) {
-    setBreeds(sortedBreeds);
+    setCurrentBreeds(sortedBreeds);
+    setBreedsWithVariants(
+      enrichBreedsWithIllustrations({
+        breeds: flattenBreedVariants({ breeds }),
+      }),
+    );
   }
 
   return (
