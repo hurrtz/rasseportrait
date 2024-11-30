@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "syberian_husky",
   names: ["Syberian Husky", "Siberischer Husky"],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 5,
     section: 1,
