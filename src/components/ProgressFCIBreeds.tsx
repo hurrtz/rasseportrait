@@ -80,7 +80,7 @@ export default () => {
           <Typography align="left" textTransform="none" fontSize="small">
             Fortschritt Vorstellung FCI-Rasseliste:{" "}
             <Typography fontWeight="bold" component="span">
-              {percentAmountPresentedFCIBreeds.toFixed(2)}%
+              {percentAmountPresentedFCIBreeds}%
             </Typography>
           </Typography>
         </AccordionSummary>
