@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "viszla",
   names: ["Viszla", "Ungarischer Vorstehhund"],
+  wasGuessedCorrectlyInPodcast: "not_applicable",
   variants: [
     {
       id: "short",
