@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "beauceron",
   names: ["Beauceron", "Berger de Beauce", "Chien de Beauce", "Bas-Rouge"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 1,
     section: 1,
