@@ -7,6 +7,7 @@ const breed: Breed = {
     "Great Japanese Dog",
     "Großer Japanischer Hund",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 5,
     section: 5,
