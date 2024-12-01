@@ -9,6 +9,7 @@ const breed: Breed = {
     "Bergamasco Shepherd Dog",
     "Perro de pastor Bergamasco",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 1,
     section: 1,
