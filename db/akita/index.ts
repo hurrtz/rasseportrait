@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "akita",
   names: ["Akita", "Akita-Inu", "Japanischer Akita", "Akita Ken", "秋田犬"],
+  wasGuessedCorrectlyInPodcast: "not_applicable",
   fci: {
     group: 5,
     section: 5,
