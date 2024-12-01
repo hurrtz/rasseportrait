@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "briard",
   names: ["Briard", "Berger de Brie"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 1,
     section: 1,
