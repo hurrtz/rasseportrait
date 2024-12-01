@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "canary_mastiff",
   names: ["Presa Canario", "Kanarische Dogge", "Dogo Canario"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 2,
     section: 2,
