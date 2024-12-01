@@ -111,6 +111,7 @@ const PageBreedList = ({
         collapseSimilarBreeds={settings.collapseSimilarBreeds}
         isSortOrderFCIEnabled={settings.sortOrder === "fci-standard-number"}
         isSortOrderAirDateEnabled={settings.sortOrder === "air-date"}
+        isSortOrderAlphabeticalEnabled={settings.sortOrder === "alphabetical"}
         isSortDirectionAsc={settings.sortDirection === "asc"}
       />
     </>

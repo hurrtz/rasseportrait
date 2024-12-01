@@ -1,11 +1,12 @@
-import React from "react";
-import InsertPhotoIcon from "@mui/icons-material/InsertPhoto";
+import React, { type ReactNode } from "react";
 import FormatListNumberedIcon from "@mui/icons-material/FormatListNumbered";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import Backdrop from "@mui/material/Backdrop";
 import SpeedDial from "@mui/material/SpeedDial";
+import Typography from "@mui/material/Typography";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 import SettingsIcon from "@mui/icons-material/Settings";
+import AbcIcon from "@mui/icons-material/Abc";
 import PetsIcon from "@mui/icons-material/Pets";
 import type { Settings } from "../../types/settings";
 
@@ -19,6 +20,7 @@ interface Props {
   isSortOrderFCIEnabled: boolean;
   isSortOrderAirDateEnabled: boolean;
   isSortDirectionAsc: boolean;
+  isSortOrderAlphabeticalEnabled: boolean;
 }
 
 const getFabActionObject = ({
@@ -26,30 +28,37 @@ const getFabActionObject = ({
   isActive,
   isSortDirectionAsc,
 }: {
-  id: "artStyle" | "collapse_similar_breeds" | "sort_fci" | "sort_date";
+  id:
+    | "collapse_similar_breeds"
+    | "sort_fci"
+    | "sort_date"
+    | "sort_alphabetical";
   isActive: boolean;
   isSortDirectionAsc?: boolean;
 }) => {
-  let out = { id: "", name: "", icon: <></> };
+  let out = { id: "", name: "", icon: <></> } as {
+    id: string;
+    name: ReactNode;
+    icon: ReactNode;
+  };
   let sortDirectionCopy = "";
 
-  if ((id === "sort_fci" || id === "sort_date") && isActive) {
+  if (
+    (id === "sort_fci" || id === "sort_date" || id === "sort_alphabetical") &&
+    isActive
+  ) {
     sortDirectionCopy = ` (${isSortDirectionAsc ? "aufsteigend" : "absteigend"})`;
   }
 
   switch (id) {
-    case "artStyle":
-      out = {
-        id,
-        name: "alternativer Bildstil",
-        icon: <InsertPhotoIcon color={isActive ? "primary" : "action"} />,
-      };
-      break;
-
     case "collapse_similar_breeds":
       out = {
         id,
-        name: "ähnliche Rassen zusammenfassen",
+        name: (
+          <Typography color={isActive ? "primary" : "action"}>
+            {"ähnliche Rassen zusammenfassen"}
+          </Typography>
+        ),
         icon: <PetsIcon color={isActive ? "primary" : "action"} />,
       };
       break;
@@ -57,7 +66,11 @@ const getFabActionObject = ({
     case "sort_fci":
       out = {
         id,
-        name: `Sortierung: FCI-Nummern${sortDirectionCopy}`,
+        name: (
+          <Typography
+            color={isActive ? "primary" : "action"}
+          >{`Sortierung: FCI-Nummern${sortDirectionCopy}`}</Typography>
+        ),
         icon: (
           <FormatListNumberedIcon color={isActive ? "primary" : "action"} />
         ),
@@ -67,8 +80,24 @@ const getFabActionObject = ({
     case "sort_date":
       out = {
         id,
-        name: `Sortierung: Ausstrahlungsdatum${sortDirectionCopy}`,
+        name: (
+          <Typography
+            color={isActive ? "primary" : "action"}
+          >{`Sortierung: Ausstrahlungsdatum${sortDirectionCopy}`}</Typography>
+        ),
         icon: <CalendarMonthIcon color={isActive ? "primary" : "action"} />,
+      };
+      break;
+
+    case "sort_alphabetical":
+      out = {
+        id,
+        name: (
+          <Typography
+            color={isActive ? "primary" : "action"}
+          >{`Sortierung: Alphabetisch${sortDirectionCopy}`}</Typography>
+        ),
+        icon: <AbcIcon color={isActive ? "primary" : "action"} />,
       };
       break;
   }
@@ -85,6 +114,7 @@ export default ({
   collapseSimilarBreeds,
   isSortOrderFCIEnabled,
   isSortOrderAirDateEnabled,
+  isSortOrderAlphabeticalEnabled,
   isSortDirectionAsc,
 }: Props) => (
   <>
@@ -114,6 +144,11 @@ export default ({
           isActive: collapseSimilarBreeds,
         }),
         getFabActionObject({
+          id: "sort_alphabetical",
+          isActive: isSortOrderAlphabeticalEnabled,
+          isSortDirectionAsc,
+        }),
+        getFabActionObject({
           id: "sort_fci",
           isActive: isSortOrderFCIEnabled,
           isSortDirectionAsc,
@@ -134,6 +169,8 @@ export default ({
               onChangeSortOrder("fci-standard-number");
             } else if (action.id === "sort_date") {
               onChangeSortOrder("air-date");
+            } else if (action.id === "sort_alphabetical") {
+              onChangeSortOrder("alphabetical");
             } else if (action.id === "collapse_similar_breeds") {
               onChangeCollapseSimilarBreeds();
             }

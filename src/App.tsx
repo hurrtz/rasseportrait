@@ -50,8 +50,18 @@ const App = () => {
 
   const sortedBreeds = enrichedBreedsWithVariants.sort(
     (
-      { fci: fciA, podcast: podcastA, variants: variantsA = [] },
-      { fci: fciB, podcast: podcastB, variants: variantsB = [] },
+      {
+        fci: fciA,
+        podcast: podcastA,
+        variants: variantsA = [],
+        names: namesA = [],
+      },
+      {
+        fci: fciB,
+        podcast: podcastB,
+        variants: variantsB = [],
+        names: namesB = [],
+      },
     ) => {
       if (settings.sortDirection === "asc") {
         if (settings.sortOrder === "fci-standard-number") {
@@ -61,6 +71,13 @@ const App = () => {
             fciB?.standardNumber ?? variantsB[0]?.fci?.standardNumber ?? 0;
 
           return standardNumberA - standardNumberB;
+        }
+
+        if (settings.sortOrder === "alphabetical") {
+          const nameA = namesA[0] ?? variantsA[0]?.names[0];
+          const nameB = namesB[0] ?? variantsB[0]?.names[0];
+
+          return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
         }
 
         return podcastA[0].airDate.getTime() - podcastB[0].airDate.getTime();
@@ -77,6 +94,13 @@ const App = () => {
           0;
 
         return standardNumberB - standardNumberA;
+      }
+
+      if (settings.sortOrder === "alphabetical") {
+        const nameA = namesA[0] ?? variantsA[0]?.names[0];
+        const nameB = namesB[0] ?? variantsB[0]?.names[0];
+
+        return nameA > nameB ? -1 : nameA < nameB ? 1 : 0;
       }
 
       return podcastB[0].airDate.getTime() - podcastA[0].airDate.getTime();
