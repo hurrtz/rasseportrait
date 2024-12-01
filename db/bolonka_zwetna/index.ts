@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "bolonka_zwetna",
   names: ["Bolonka Zwetna", "Tsvetnaya Bolonka"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: -1,
     section: -1,
@@ -25,6 +26,10 @@ const breed: Breed = {
     {
       name: "VDH",
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/bolonka-zwetna-nationale-rasse",
+    },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/ratgeber/rassekunde/bolonka-zwetna",
     },
   ],
   recognitions: ["Robin, für den Tipp, das Bild zu verbessern!"],
