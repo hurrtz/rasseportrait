@@ -18,6 +18,7 @@ const breed: Breed = {
     "Çatalburun Pointer",
     "Pointer de Turquía",
   ],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: -1,
     section: -1,
