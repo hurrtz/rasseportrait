@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "black_and_tan_coonhound",
   names: ["Black and Tan Coonhound", "Schwarz-roter Waschbärenhund"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 6,
     section: 1,
