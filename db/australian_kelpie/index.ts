@@ -9,6 +9,7 @@ const breed: Breed = {
     "Australian Sheepdog",
     "Barb",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 1,
     section: 1,
