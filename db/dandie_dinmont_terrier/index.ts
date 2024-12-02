@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "dandie_dinmont_terrier",
   names: ["Dandie Dinmont Terrier"],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 3,
     section: 2,
@@ -13,7 +14,7 @@ const breed: Breed = {
       number: 139,
       episode: "Co-Ownership & Knochen knacken",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/139-co-ownership-knochen-knacken-3ht5yygef4ypm",
-      timecode: 2909,
+      timecode: 2214,
       airDate: "2023-11-09",
     },
   ],
