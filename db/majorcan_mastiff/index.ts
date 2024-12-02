@@ -9,6 +9,7 @@ const breed: Breed = {
     "Mallorca-Dogge",
     "Mallorca Mastiff",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 2,
     section: 2,
