@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "dutch_smoushond",
   names: ["Hollandse Smoushond", "Holländischer Rattler"],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 2,
     section: 1,
