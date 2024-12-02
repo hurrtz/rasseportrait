@@ -7,6 +7,7 @@ const breed: Breed = {
     "Perro de pastor mallorquín",
     "Mallorca-Schäferhund",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   variants: [
     {
       names: ["Kurzhaar"],
