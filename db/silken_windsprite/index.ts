@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "silken_windsprite",
   names: ["Silken Windsprite", "Longhaired Whippet", "Langhaar Whippet"],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: -1,
     section: -1,
