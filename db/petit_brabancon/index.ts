@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "petit_brabancon",
   names: ["Petit Brabançon", "Kleiner Brabanter", "Brabanter Griffon"],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 9,
     section: 3,
