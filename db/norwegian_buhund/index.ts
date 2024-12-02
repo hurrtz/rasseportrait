@@ -9,6 +9,7 @@ const breed: Breed = {
     "Norwegian Buhund",
     "Buhund norvégien",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 5,
     section: 3,
