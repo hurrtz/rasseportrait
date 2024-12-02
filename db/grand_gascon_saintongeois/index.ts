@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "grand_gascon_saintongeois",
   names: ["Grand Gascon Saintongeois"],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 6,
     section: 1,
