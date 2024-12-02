@@ -7,6 +7,7 @@ const breed: Breed = {
     "Wasserhund der Romagna",
     "Italienischer Trüffelhund",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 8,
     section: 3,
