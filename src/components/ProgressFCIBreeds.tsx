@@ -176,7 +176,7 @@ export default () => {
                       </Typography>
                     </Typography>
                   }
-                  secondary={`${amountBreedsCorrectlyGuessed} von ${breeds.length} vorgestellten Rassen korrekt geraten (abzüglich ${amountBreedsGuessNotNeeded} Rassen, die nicht geraten werden mussten und dem Spanischen Wasserhund)`}
+                  secondary={`${amountBreedsCorrectlyGuessed} von ${breeds.length} vorgestellten Rassen korrekt geraten (abzüglich ${amountBreedsGuessNotNeeded} Rassen, die nicht geraten werden mussten, dem Spanischen Wasserhund und dem Foxterrier)`}
                 />
               </ListItem>
             </List>
