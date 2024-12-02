@@ -10,6 +10,7 @@ const breed: Breed = {
     "Minidoberman",
     "Rehrattler",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 2,
     section: 1,
