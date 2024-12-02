@@ -8,6 +8,7 @@ const breed: Breed = {
     "Rauhaariger italienischer Vorstehhund",
     "Italian Griffon",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 7,
     section: 1,
