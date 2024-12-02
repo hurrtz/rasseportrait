@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "irish_soft_coated_wheaten_terrier",
   names: ["Irish Soft Coated Wheaten Terrier"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 3,
     section: 1,
