@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "german_roughhaired_pointer",
   names: ["Deutsch Stichelhaar"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 7,
     section: 1,
