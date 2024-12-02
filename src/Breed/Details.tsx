@@ -227,7 +227,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                   border: "1px solid #F00",
                 }}
               >
-                erst indirekt mit Amerikanischem Akita vorgestellt
+                noch nicht offiziell besprochen
               </Typography>
             )}
             {!settings.collapseSimilarBreeds &&
@@ -268,7 +268,22 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                       <ListItemText
                         key={episode}
                         primary={episode}
-                        secondary={`Folge ${number} — ${getTimeCopy(timecode)}${context ? `\n${context}` : ""}`}
+                        secondary={
+                          <div>
+                            <span>
+                              Folge {number} — {getTimeCopy(timecode)}
+                            </span>
+                            {context && [
+                              <br key="context_linebreak" />,
+                              <span
+                                key="context"
+                                style={{ fontVariant: "small-caps" }}
+                              >
+                                {context ? context : ""}
+                              </span>,
+                            ]}
+                          </div>
+                        }
                         primaryTypographyProps={{
                           sx: {
                             whiteSpace: "nowrap",

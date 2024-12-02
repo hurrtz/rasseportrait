@@ -51,6 +51,7 @@ import GermanJagdterrier from "./german_jagdterrier";
 import GermanPinscher from "./german_pinscher";
 import GermanRoughhairedPointer from "./german_roughhaired_pointer";
 import GermanShepherd from "./german_shepherd";
+import GermanSpaniel from "./german_spaniel";
 import GermanSpitz from "./german_spitz";
 import GermanWirehairedPointer from "./german_wirehaired_pointer";
 import GiantSchnauzer from "./giant_schnauzer";
@@ -175,6 +176,7 @@ export default {
   GermanPinscher,
   GermanRoughhairedPointer,
   GermanShepherd,
+  GermanSpaniel,
   GermanSpitz,
   GermanWirehairedPointer,
   GiantSchnauzer,
