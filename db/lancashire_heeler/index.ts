@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "lancashire_heeler",
   names: ["Lancashire Heeler", "Ormskirk Heeler"],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 1,
     section: 1,
