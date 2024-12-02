@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.32.0](https://github.com/hurrtz/rasseportrait/compare/v1.31.0...v1.32.0) (2024-12-02)
+
+
+### Features
+
+* add alphabetical sort order ([8c0e51e](https://github.com/hurrtz/rasseportrait/commit/8c0e51e1f3aee682649cb54b987197fe79f26ff0))
+* add Deutscher Wachtelhund ([3e921cf](https://github.com/hurrtz/rasseportrait/commit/3e921cf600c8ce3d4201cbe0d591129db4005ae7))
+* improve UI on stats, add new successful guesses category ([4aee20d](https://github.com/hurrtz/rasseportrait/commit/4aee20d03c57555a6b45d42e90805f5acdb3dd82))
+* remove seconds from breed detail view ([3eadc49](https://github.com/hurrtz/rasseportrait/commit/3eadc49bebc27c5878f4f9e85a3eed80bcc5317b))
+* update imagery on American Staffordshire Terrier ([cb7ded6](https://github.com/hurrtz/rasseportrait/commit/cb7ded6292ab2bdf8760a5ef804b17ccc46c9b87))
+* update imagery on Danish Mastiff ([8ab17e5](https://github.com/hurrtz/rasseportrait/commit/8ab17e57a37512f193ff1480c3890e3ce7d7b5d0))
+* update imagery on Majorca Shepherd Dog ([5bc79f8](https://github.com/hurrtz/rasseportrait/commit/5bc79f84b45f8bd62b77e30ccbaf5e5ff9ae7af2))
+* update imagery on Majorcan Mastiff ([19bb65b](https://github.com/hurrtz/rasseportrait/commit/19bb65bbf9403ce4a47cba4b46ae084d8a16b828))
+* update imagery on Manchester Terrier ([c5d4dec](https://github.com/hurrtz/rasseportrait/commit/c5d4dec44067301623c52213fd97930756d2752f))
+* update imagery on Parson Russell Terrier ([cc2829b](https://github.com/hurrtz/rasseportrait/commit/cc2829b133dac094464bdffbfe49877633295c5c))
+* update imagery on Poodle ([642c091](https://github.com/hurrtz/rasseportrait/commit/642c0912ccf59a3e3a58e453e7ee91a4490ce013))
+* update imagery on Prague Ratter ([84053e2](https://github.com/hurrtz/rasseportrait/commit/84053e2decc54f97c484d2fde3d43cedfcacdddc))
+* update imagery on Pumi ([94dd47d](https://github.com/hurrtz/rasseportrait/commit/94dd47d7b8b2b7c3f28439b8fef0400120202d31))
+* update imagery on Shih Tzu ([39724fd](https://github.com/hurrtz/rasseportrait/commit/39724fdf17fb5b8cd72ca273f4f838ad0843c8d2))
+* update imagery on Styrian Coarse-Haired Hound ([e4bd230](https://github.com/hurrtz/rasseportrait/commit/e4bd2303a8d96e6aab2839a6ceaccb822efa5763))
+* update imagery on Westfalenterrier ([e417925](https://github.com/hurrtz/rasseportrait/commit/e41792597c35b0a46d21bd6868b50602d3cc3e22))
+* update information on Kromfohrlaender ([f199d4d](https://github.com/hurrtz/rasseportrait/commit/f199d4dbc5a7edf5acb6c4c45724c2b7b683f6c8))
+* update information on several breeds ([054f64a](https://github.com/hurrtz/rasseportrait/commit/054f64ac5f3e760a930152c00ad63e099c0877b9))
+
+
+### Bug Fixes
+
+* incorrect stats ([697dae0](https://github.com/hurrtz/rasseportrait/commit/697dae04e4d719679c955957b94205d72907f13b))
+
 ## [1.31.0](https://github.com/hurrtz/rasseportrait/compare/v1.30.0...v1.31.0) (2024-11-28)
 
 
