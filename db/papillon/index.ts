@@ -8,6 +8,7 @@ const breed: Breed = {
     "Phalène",
     "Schmetterlingshündchen",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 9,
     section: 9,
