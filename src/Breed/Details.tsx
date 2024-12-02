@@ -100,10 +100,6 @@ const getTimeCopy = (timecode: Podcast["timecode"]) => {
     out.push(`Minute ${time[1]}`);
   }
 
-  if (time[2]) {
-    out.push(`Sekunde ${time[2]}`);
-  }
-
   return out.join(", ");
 };
 
