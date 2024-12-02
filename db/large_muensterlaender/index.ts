@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "large_muensterlaender",
   names: ["Großer Münsterländer"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 7,
     section: 1,
