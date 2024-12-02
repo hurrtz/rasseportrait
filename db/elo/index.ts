@@ -23,6 +23,10 @@ const breed: Breed = {
       name: "Wikipedia",
       url: "https://de.wikipedia.org/wiki/Elo_(Hunderasse)",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/elo",
+    },
   ],
 };
 

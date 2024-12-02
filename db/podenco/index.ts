@@ -112,7 +112,12 @@ const breed: Breed = {
       airDate: "2022-04-28",
     },
   ],
-  furtherReading: [],
+  furtherReading: [
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/podenco",
+    },
+  ],
 };
 
 export default breed;

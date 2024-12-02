@@ -8,6 +8,12 @@ const breed: Breed = {
     {
       names: ["Kurzhaar"],
       id: "short",
+      furtherReading: [
+        {
+          name: "Martin Rütter",
+          url: "https://www.martinruetter.com/rassekunde/hollaendischer-schaeferhund-kurzhaar",
+        },
+      ],
     },
     {
       names: ["Langhaar"],

@@ -50,6 +50,10 @@ const breed: Breed = {
       name: "FCI",
       url: "https://www.fci.be/de/nomenclature/DEUTSCHER-SCHAEFERHUND-166.html",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/deutscher-schaeferhund",
+    },
   ],
 };
 

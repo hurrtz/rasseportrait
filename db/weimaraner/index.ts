@@ -49,6 +49,10 @@ const breed: Breed = {
       name: "FCI",
       url: "https://www.fci.be/de/nomenclature/WEIMARANER-99.html",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/weimaraner",
+    },
   ],
 };
 

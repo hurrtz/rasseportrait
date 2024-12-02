@@ -26,6 +26,10 @@ const breed: Breed = {
           name: "VDH",
           url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/magyar-vizsla-kurzhaar",
         },
+        {
+          name: "Martin Rütter",
+          url: "https://www.martinruetter.com/rassekunde/magyar-vizsla-kurzhaarig",
+        },
       ],
     },
     {

@@ -31,6 +31,10 @@ const breed: Breed = {
       name: "VDH",
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/english-cocker-spaniel",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/english-cocker-spaniel",
+    },
   ],
 };
 

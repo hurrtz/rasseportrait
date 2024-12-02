@@ -59,6 +59,10 @@ const breed: Breed = {
       name: "FCI",
       url: "https://www.fci.be/de/nomenclature/DACHSHUND-148.html",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/dackel-/-teckel",
+    },
   ],
 };
 

@@ -31,6 +31,10 @@ const breed: Breed = {
       name: "VDH",
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/cane-corso-italiano",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/cane-corso",
+    },
   ],
 };
 

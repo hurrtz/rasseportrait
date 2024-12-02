@@ -31,6 +31,10 @@ const breed: Breed = {
       name: "VDH",
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/golden-retriever",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/golden-retriever",
+    },
   ],
 };
 

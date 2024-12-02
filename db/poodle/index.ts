@@ -76,6 +76,10 @@ const breed: Breed = {
       name: "FCI",
       url: "https://www.fci.be/de/nomenclature/PUDEL-172.html",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/pudel",
+    },
   ],
 };
 

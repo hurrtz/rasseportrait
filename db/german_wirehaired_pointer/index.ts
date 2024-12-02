@@ -39,6 +39,10 @@ const breed: Breed = {
       name: "VDH",
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/deutsch-drahthaar",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/deutsch-drahthaar",
+    },
   ],
 };
 

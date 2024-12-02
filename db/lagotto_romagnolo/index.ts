@@ -35,6 +35,10 @@ const breed: Breed = {
       name: "VDH",
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/lagotto-romagnolo",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/lagotto-romagnolo",
+    },
   ],
 };
 
