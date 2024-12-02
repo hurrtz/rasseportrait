@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "shih_tzu",
   names: ["Shih Tzu", "獅子狗 / 狮子狗", "Shīzigǒu", "Löwenhund"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 9,
     section: 5,
