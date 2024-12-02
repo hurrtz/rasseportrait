@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "tornjak",
   names: ["Tornjak", "Bosnisch-herzegowinischer - kroatischer Schäferhund"],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 2,
     section: 2,
