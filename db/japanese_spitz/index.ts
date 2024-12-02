@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "japanese_spitz",
   names: ["Japan-Spitz", "日本スピッツ", "Nihon Supittsu", "Japanischer Spitz"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 5,
     section: 5,
