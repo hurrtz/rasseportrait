@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "styrian_coarse_haired_hound",
   names: ["Steirische Rauhhaarbracke", "Peintinger-Bracke"],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 6,
     section: 1,
