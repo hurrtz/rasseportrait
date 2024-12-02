@@ -7,6 +7,7 @@ const breed: Breed = {
     "Cão de Gado Trasmontano",
     "Transmontano Mastiff",
   ],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 2,
     section: 2,
