@@ -17,6 +17,7 @@ const breed: Breed = {
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-7-hobby-horsing-for-olympia-7pbpazh2zvi72",
       timecode: 1075,
       airDate: "2024-08-08",
+      context: "Vergleich mit American Akita",
     },
   ],
   furtherReading: [
