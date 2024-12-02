@@ -221,6 +221,9 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                 sx={{
                   textAlign: "center",
                   border: "1px solid #F00",
+                  borderRadius: "8px",
+                  lineHeight: "40px",
+                  fontVariant: "small-caps",
                 }}
               >
                 noch nicht offiziell besprochen
