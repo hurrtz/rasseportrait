@@ -8,6 +8,7 @@ const breed: Breed = {
     "Björnhund",
     "Hund der Zyrianer",
   ],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 5,
     section: 2,
