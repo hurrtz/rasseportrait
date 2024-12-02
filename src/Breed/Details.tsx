@@ -248,7 +248,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                   url,
                   timecode,
                   type = "audio",
-                  context,
+                  context = "Rasseportrait",
                 }) => (
                   <ListItem
                     disablePadding
@@ -273,15 +273,10 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                             <span>
                               Folge {number} — {getTimeCopy(timecode)}
                             </span>
-                            {context && [
-                              <br key="context_linebreak" />,
-                              <span
-                                key="context"
-                                style={{ fontVariant: "small-caps" }}
-                              >
-                                {context ? context : ""}
-                              </span>,
-                            ]}
+                            <br />
+                            <span style={{ fontVariant: "small-caps" }}>
+                              {context}
+                            </span>
                           </div>
                         }
                         primaryTypographyProps={{

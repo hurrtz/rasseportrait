@@ -33,6 +33,7 @@ const breed: Breed = {
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-10-stabile-typen-4s4s3dlg5jjyi",
       timecode: 1106,
       airDate: "2024-08-29",
+      context: "Persönliche Anekote",
     },
   ],
   furtherReading: [
