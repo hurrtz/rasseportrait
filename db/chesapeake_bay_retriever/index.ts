@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "chesapeake_bay_retriever",
   names: ["Chesapeake Bay Retriever", "Retriever de la baie de Chesapeake"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 8,
     section: 1,
