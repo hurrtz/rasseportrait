@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "dutch_shepherd",
   names: ["Hollandse Herdershond", "Holländischer Schäferhund", "Herder"],
+  wasGuessedCorrectlyInPodcast: true,
   variants: [
     {
       names: ["Kurzhaar"],
