@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "entlebucher_mountain_dog",
   names: ["Entlebucher Sennenhund"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 2,
     section: 3,
