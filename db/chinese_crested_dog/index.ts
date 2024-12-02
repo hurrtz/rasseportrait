@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "chinese_crested_dog",
   names: ["Chinesischer Schopfhund"],
+  wasGuessedCorrectlyInPodcast: true,
   variants: [
     {
       names: ["Haarlos"],
