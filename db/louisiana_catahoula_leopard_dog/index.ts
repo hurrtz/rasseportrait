@@ -3,6 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "louisiana_catahoula_leopard_dog",
   names: ["Louisiana Catahoula Leopard Dog"],
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: -1,
     section: -1,
