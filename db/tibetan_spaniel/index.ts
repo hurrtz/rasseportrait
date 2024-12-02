@@ -9,6 +9,7 @@ const breed: Breed = {
     "Spaniel tibetano",
     "Spaniel del Tibet",
   ],
+  wasGuessedCorrectlyInPodcast: false,
   fci: {
     group: 9,
     section: 5,
