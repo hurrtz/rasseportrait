@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.35.0](https://github.com/hurrtz/rasseportrait/compare/v1.34.0...v1.35.0) (2024-12-03)
+
+
+### Features
+
+* update variety of breed imagery ([e6cf6fa](https://github.com/hurrtz/rasseportrait/commit/e6cf6fa3b344d4e60933fb4d41c7599a0712d9c7))
+
+
+### Bug Fixes
+
+* correct data for poodle and dalmatian ([c615116](https://github.com/hurrtz/rasseportrait/commit/c615116f17446a11c779f15fdd9554c6b8ab07b5))
+
 ## [1.34.0](https://github.com/hurrtz/rasseportrait/compare/v1.33.0...v1.34.0) (2024-12-03)
 
 ## [1.33.0](https://github.com/hurrtz/rasseportrait/compare/v1.32.0...v1.33.0) (2024-12-03)
