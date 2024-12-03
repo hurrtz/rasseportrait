@@ -41,7 +41,7 @@ export default () => {
   const amountNonFCIBreedsPresented = breeds.filter(
     (breed) => breed.fci?.standardNumber === -1,
   ).length;
-  const amountFCIBreedsNotPresented = breeds.filter(
+  const amountBreedsNotPresented = breeds.filter(
     (breed) =>
       breed.fci?.standardNumber &&
       breed.fci.standardNumber > 0 &&
@@ -147,10 +147,10 @@ export default () => {
                 <ListItemText
                   primary={
                     <Typography fontSize="small">
-                      Erwähnte FCI-Rassen, die noch nicht offiziell vorgestellt
+                      Erwähnte Rassen, die noch nicht offiziell vorgestellt
                       wurden:{" "}
                       <Typography fontWeight="bold" component="span">
-                        {amountFCIBreedsNotPresented}
+                        {amountBreedsNotPresented}
                       </Typography>
                     </Typography>
                   }
