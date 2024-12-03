@@ -3,7 +3,7 @@ import type { Breed } from "../../types/breed";
 const breed: Breed = {
   id: "dalmatian_dog",
   names: ["Dalmatiner"],
-  wasGuessedCorrectlyInPodcast: "not_applicable",
+  wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: 6,
     section: 3,
