@@ -16,6 +16,7 @@ const breed: Breed = {
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/12-die-ganze-wahrheit-kc3oyphk7j1ra",
       timecode: 890,
       airDate: "2021-05-25",
+      context: "Erfahrungen mit der Rasse",
     },
     {
       number: 105,
