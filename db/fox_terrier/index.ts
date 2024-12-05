@@ -51,6 +51,7 @@ const breed: Breed = {
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-3-martins-solo-folge-tfmv41s6tzg65",
       timecode: 948,
       airDate: "2024-07-11",
+      context: "Anteasern des Rasseportraits in «Grausame Natur»",
     },
     {
       number: "Summer Edition #5",
