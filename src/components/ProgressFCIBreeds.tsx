@@ -10,8 +10,14 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import Link from "@mui/material/Link";
 import { useBreedsStore } from "../stores/Breeds";
 import ProgressBar from "./LinearProgressBar";
+import type { BreedIdentifier } from "../../types/breed";
+
+interface Props {
+  setSelectedBreed: (breedIdentifier: BreedIdentifier) => void;
+}
 
 const AMOUNT_FCI_BREEDS_ALL = 374;
 const AMOUNT_FCI_BREEDS_DELETED = 14;
@@ -30,7 +36,7 @@ const PointingFingerIcon = ({ isHighlight }: { isHighlight?: boolean }) => (
   </div>
 );
 
-export default () => {
+export default ({ setSelectedBreed }: Props) => {
   const { breedsWithVariants: breeds } = useBreedsStore();
   const amountFCIBreedsPresented = breeds.filter(
     (breed) =>
@@ -47,19 +53,37 @@ export default () => {
       breed.fci.standardNumber > 0 &&
       breed.isOfficiallyPresented === false,
   ).length;
-  const stringifiedListOfBreedsOutsideFCIList = breeds
+  const namedBreedsOutsideFCIList = breeds
     .filter((breed) => breed.fci?.standardNumber === -1)
-    .map((breed) => breed.names[0])
-    .join(", ");
-  const stringifiedListOfBreedsThatAreNotYetOfficiallyPresented = breeds
+    .map((breed, index) => [
+      index > 0 ? ", " : "",
+      <Link
+        key={breed.id}
+        underline="hover"
+        component="button"
+        onClick={() => setSelectedBreed({ id: breed.id })}
+      >
+        {breed.names[0]}
+      </Link>,
+    ]);
+  const namedBreedsThatAreNotYetOfficiallyPresented = breeds
     .filter(
       (breed) =>
         breed.fci?.standardNumber &&
         breed.fci.standardNumber > 0 &&
         breed.isOfficiallyPresented === false,
     )
-    .map((breed) => breed.names[0])
-    .join(", ");
+    .map((breed, index) => [
+      index > 0 ? ", " : "",
+      <Link
+        key={breed.id}
+        underline="hover"
+        component="button"
+        onClick={() => setSelectedBreed({ id: breed.id })}
+      >
+        {breed.names[0]}
+      </Link>,
+    ]);
   const amountBreedsCorrectlyGuessed = breeds.filter(
     (breed) => breed.wasGuessedCorrectlyInPodcast === true,
   ).length;
@@ -69,6 +93,25 @@ export default () => {
   const percentAmountPresentedFCIBreeds = ~~getPercentValue(
     amountFCIBreedsPresented,
     AMOUNT_FCI_BREEDS_ALL - AMOUNT_FCI_BREEDS_DELETED,
+  );
+
+  const namedBreedsExcludedFromGuessing = ["spanish_water_dog"].map(
+    (breed_id) => {
+      const breed = breeds.find((breed) => breed.id === breed_id);
+
+      if (breed) {
+        return (
+          <Link
+            key={breed.id}
+            underline="hover"
+            component="button"
+            onClick={() => setSelectedBreed({ id: breed.id })}
+          >
+            {breed.names[0]}
+          </Link>
+        );
+      }
+    },
   );
 
   return (
@@ -137,7 +180,7 @@ export default () => {
                       </Typography>
                     </Typography>
                   }
-                  secondary={stringifiedListOfBreedsOutsideFCIList}
+                  secondary={namedBreedsOutsideFCIList}
                 />
               </ListItem>
               <ListItem divider disableGutters>
@@ -154,9 +197,7 @@ export default () => {
                       </Typography>
                     </Typography>
                   }
-                  secondary={
-                    stringifiedListOfBreedsThatAreNotYetOfficiallyPresented
-                  }
+                  secondary={namedBreedsThatAreNotYetOfficiallyPresented}
                 />
               </ListItem>
               <ListItem disableGutters>
@@ -176,7 +217,11 @@ export default () => {
                       </Typography>
                     </Typography>
                   }
-                  secondary={`${amountBreedsCorrectlyGuessed} von ${breeds.length - amountBreedsGuessNotNeeded} erratbaren Rassen korrekt geraten (abgezogen: ${amountBreedsGuessNotNeeded} vorgegebene Rassen, der Spanische Wasserhund und der Foxterrier)`}
+                  secondary={[
+                    `${amountBreedsCorrectlyGuessed} von ${breeds.length - amountBreedsGuessNotNeeded} erratbaren Rassen korrekt geraten (abgezogen: ${amountBreedsGuessNotNeeded} vorgegebene Rassen und der `,
+                    ...namedBreedsExcludedFromGuessing,
+                    ")",
+                  ]}
                 />
               </ListItem>
             </List>

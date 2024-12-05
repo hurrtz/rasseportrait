@@ -85,7 +85,7 @@ const PageBreedList = ({
 
       <HeaderSection isMobile={isMobile} />
 
-      <ProgressFCIBreeds />
+      <ProgressFCIBreeds setSelectedBreed={augmentedSetSelectedBreed} />
 
       <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
         <TextField
