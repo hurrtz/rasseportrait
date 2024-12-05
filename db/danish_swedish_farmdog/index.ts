@@ -29,6 +29,7 @@ const breed: Breed = {
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/89-bitte-nicht-nachmachen-tt85sxkz7dhtd",
       timecode: 1756,
       airDate: "2022-11-24",
+      context: "Nachtrag zum «Tierisch menschlich auf dem Kilimandscharo»",
     },
   ],
   furtherReading: [
