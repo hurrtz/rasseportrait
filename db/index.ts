@@ -9,6 +9,7 @@ import Azawakh from "./azawakh";
 import Basenji from "./basenji";
 import BavarianMountainHound from "./bavarian_mountain_hound";
 import Beagle from "./beagle";
+import BeardedCollie from "./bearded_collie";
 import Beauceron from "./beauceron";
 import BedlingtonTerrier from "./bedlington_terrier";
 import BelgianShepherd from "./belgian_shepherd";
@@ -134,6 +135,7 @@ export default {
   Basenji,
   BavarianMountainHound,
   Beagle,
+  BeardedCollie,
   Beauceron,
   BedlingtonTerrier,
   BelgianShepherd,
