@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.36.0](https://github.com/hurrtz/rasseportrait/compare/v1.35.0...v1.36.0) (2024-12-05)
+
+
+### Features
+
+* add Bearded Collie ([37fa5ce](https://github.com/hurrtz/rasseportrait/commit/37fa5cea96f092104f710a6ef54cb82f15a8146b))
+* update batch of breed imagery ([65a8d19](https://github.com/hurrtz/rasseportrait/commit/65a8d190e8804ab8a2175185da5cc0ef3fc2bcb7))
+
 ## [1.35.0](https://github.com/hurrtz/rasseportrait/compare/v1.34.0...v1.35.0) (2024-12-03)
 
 
