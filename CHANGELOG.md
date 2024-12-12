@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.39.0](https://github.com/hurrtz/rasseportrait/compare/v1.38.0...v1.39.0) (2024-12-12)
+
+
+### Features
+
+* add Norfolk Terrier ([1951c53](https://github.com/hurrtz/rasseportrait/commit/1951c53a472e36e6c1b0d95f1b94299d628c41b3))
+* provide correctly sized breed images ([38b5967](https://github.com/hurrtz/rasseportrait/commit/38b5967b4b09dd25f6ef7db94ae65c6364e61751))
+
 ## [1.38.0](https://github.com/hurrtz/rasseportrait/compare/v1.37.0...v1.38.0) (2024-12-05)
 
 
