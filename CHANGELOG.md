@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.41.0](https://github.com/hurrtz/rasseportrait/compare/v1.40.0...v1.41.0) (2024-12-12)
+
+
+### Features
+
+* improved ui for breed names ([0442829](https://github.com/hurrtz/rasseportrait/commit/04428292662d4e1c20ce96a4f123685d84db17fb))
+
 ## [1.40.0](https://github.com/hurrtz/rasseportrait/compare/v1.39.0...v1.40.0) (2024-12-12)
 
 
