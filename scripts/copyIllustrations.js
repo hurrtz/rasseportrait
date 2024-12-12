@@ -2,18 +2,12 @@ const sharp = require("sharp");
 const fs = require("fs-extra");
 const path = require("path");
 
-const createThumbnail = async (
-  inputPath,
-  outputPath,
-  width = 300,
-  height = 300,
-) => {
+const createWebImage = async (inputPath, outputPath, width, height) => {
   try {
     await sharp(inputPath)
       .resize(width, height)
       .jpeg({ quality: 50 })
       .toFile(outputPath);
-    console.log(`Thumbnail created!`);
   } catch (error) {
     console.error("Error creating thumbnail:", error);
   }
@@ -32,19 +26,26 @@ const processImages = async (sourceDir, targetDir) => {
       if (stat.isDirectory()) {
         await processImages(fullPath, path.join(targetDir, file));
       } else if (/\.(jpg|jpeg|png|gif)$/i.test(file)) {
+        const originPath = path.join(sourceDir, file);
         const targetPath = path.join(targetDir, file);
-        const thumbnailPath = path.join(
+        const toImagePath = path.join(
           targetDir,
-          path.parse(file).name + "_thumbnail" + path.extname(file),
+          `${path.parse(file).name}.jpeg`,
+        );
+        const toThumbnailPath = path.join(
+          targetDir,
+          `${path.parse(file).name}_thumbnail.jpeg`,
         );
 
         console.log(`Processing "${fullPath}"...`);
 
-        await fs.copy(fullPath, targetPath);
-        console.log(`Copied!`);
+        await createWebImage(originPath, toImagePath, 2000, 2000);
 
-        await createThumbnail(targetPath, thumbnailPath);
+        console.log("Created full size image!");
 
+        await createWebImage(originPath, toThumbnailPath, 300, 300);
+
+        console.log("Created thumbnail!");
         console.log();
       }
     }
