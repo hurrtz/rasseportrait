@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardActionArea from "@mui/material/CardActionArea";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
 import { useSettingsStore } from "../stores/Settings";
 import type { EnrichedBreed, BreedIdentifier } from "../../types/breed";
 import { getWindowLocationSearch } from "../utils";
@@ -12,13 +11,8 @@ import { getWindowLocationSearch } from "../utils";
 interface Props extends EnrichedBreed {
   image: string;
   handleCardClick: (breedIdentifier: BreedIdentifier) => void;
+  isMobile?: boolean;
 }
-
-const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
-  height: 300,
-  background: `url(${image.replace(".jpeg", "_thumbnail.jpeg")}) no-repeat center center transparent`,
-  backgroundSize: "cover",
-}));
 
 export default ({
   id,
@@ -28,6 +22,7 @@ export default ({
   handleCardClick,
   names,
   fci,
+  isMobile,
 }: Props) => {
   const { settings } = useSettingsStore();
 
@@ -56,11 +51,13 @@ export default ({
   return (
     <Card onClick={onClick} sx={{ position: "relative" }}>
       <CardActionArea sx={{ opacity: 1, "&:hover": { opacity: 0.75 } }}>
-        <CardHeaderImage
-          image={image}
+        <CardHeader
           sx={{
             filter:
               isOfficiallyPresented === false ? "grayscale(1) blur(3px)" : "",
+            height: 300,
+            background: `url(${isMobile ? image.replace(".jpeg", "_thumbnail.jpeg") : image}) no-repeat center center transparent`,
+            backgroundSize: "cover",
           }}
         />
         <Box

@@ -2,11 +2,17 @@ const sharp = require("sharp");
 const fs = require("fs-extra");
 const path = require("path");
 
-const createWebImage = async (inputPath, outputPath, width, height) => {
+const createWebImage = async (
+  inputPath,
+  outputPath,
+  width = 1000,
+  height = 1000,
+  quality = 75,
+) => {
   try {
     await sharp(inputPath)
       .resize(width, height)
-      .jpeg({ quality: 50 })
+      .jpeg({ quality })
       .toFile(outputPath);
   } catch (error) {
     console.error("Error creating thumbnail:", error);
@@ -39,13 +45,9 @@ const processImages = async (sourceDir, targetDir) => {
 
         console.log(`Processing "${fullPath}"...`);
 
-        await createWebImage(originPath, toImagePath, 2000, 2000);
+        await createWebImage(originPath, toThumbnailPath, 500, 500);
+        await createWebImage(originPath, toImagePath);
 
-        console.log("Created full size image!");
-
-        await createWebImage(originPath, toThumbnailPath, 300, 300);
-
-        console.log("Created thumbnail!");
         console.log();
       }
     }

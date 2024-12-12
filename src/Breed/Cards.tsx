@@ -9,9 +9,10 @@ import Typography from "@mui/material/Typography";
 interface Props {
   breeds: EnrichedBreed[];
   handleCardClick: (breedIdentifier: BreedIdentifier) => void;
+  isMobile?: boolean;
 }
 
-const Breeds = ({ breeds, handleCardClick }: Props) => {
+const Breeds = ({ breeds, handleCardClick, isMobile }: Props) => {
   if (breeds.length === 0) {
     return (
       <Card>
@@ -43,6 +44,7 @@ const Breeds = ({ breeds, handleCardClick }: Props) => {
             {...breed}
             image={breed.image}
             handleCardClick={handleCardClick}
+            isMobile={isMobile}
           />
         </Grid>
       ))}

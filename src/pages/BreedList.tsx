@@ -22,7 +22,7 @@ const PageBreedList = ({
   onChangeSortOrder,
   onChangeCollapseSimilarBreeds,
 }: Props) => {
-  const isMobile = useMediaQuery("(max-width: 480px");
+  const isMobile = useMediaQuery("(max-width: 480px)");
   const { settings } = useSettingsStore();
 
   const searchParams = new URLSearchParams(location.search);
@@ -100,6 +100,7 @@ const PageBreedList = ({
       <BreedList
         searchValue={searchValue}
         setSelectedBreed={augmentedSetSelectedBreed}
+        isMobile={isMobile}
       />
 
       <SettingsFAB

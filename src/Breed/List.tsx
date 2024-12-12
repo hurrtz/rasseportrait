@@ -7,9 +7,10 @@ import BreedCards from "./Cards";
 interface Props {
   searchValue?: string;
   setSelectedBreed: (breedIdentifier: BreedIdentifier) => void;
+  isMobile?: boolean;
 }
 
-const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
+const BreedList = ({ searchValue = "", setSelectedBreed, isMobile }: Props) => {
   const { currentBreeds } = useBreedsStore();
   const fuseOptions = {
     shouldSort: true,
@@ -43,7 +44,13 @@ const BreedList = ({ searchValue = "", setSelectedBreed }: Props) => {
     results = currentBreeds;
   }
 
-  return <BreedCards breeds={results} handleCardClick={setSelectedBreed} />;
+  return (
+    <BreedCards
+      breeds={results}
+      handleCardClick={setSelectedBreed}
+      isMobile={isMobile}
+    />
+  );
 };
 
 export default BreedList;
