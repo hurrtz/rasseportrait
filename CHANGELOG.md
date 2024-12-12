@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.40.0](https://github.com/hurrtz/rasseportrait/compare/v1.39.0...v1.40.0) (2024-12-12)
+
+
+### Features
+
+* better image quality on mobile devices ([9cea503](https://github.com/hurrtz/rasseportrait/commit/9cea5032f5ad6088595fdab06e834343eb87a452))
+* new illustrations for all breeds ([4a70a1d](https://github.com/hurrtz/rasseportrait/commit/4a70a1dfbba8a73c490ca969435057ea21b9215f))
+
 ## [1.39.0](https://github.com/hurrtz/rasseportrait/compare/v1.38.0...v1.39.0) (2024-12-12)
 
 
