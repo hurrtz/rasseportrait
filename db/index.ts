@@ -83,6 +83,7 @@ import ManchesterTerrier from "./manchester_terrier";
 import MiniaturePinscher from "./miniature_pinscher";
 import MiniatureSchnauzer from "./miniature_schnauzer";
 import NederlandseKooikerhondje from "./nederlandse_kooikerhondje";
+import NorfolkTerrier from "./norfolk_terrier";
 import NorwegianBuhund from "./norwegian_buhund";
 import NovaScotiaDuckTollingRetriever from "./nova_scotia_duck_tolling_retriever";
 import OldEnglishSheepdog from "./old_english_sheepdog";
@@ -209,6 +210,7 @@ export default {
   MiniaturePinscher,
   MiniatureSchnauzer,
   NederlandseKooikerhondje,
+  NorfolkTerrier,
   NorwegianBuhund,
   NovaScotiaDuckTollingRetriever,
   OldEnglishSheepdog,
