@@ -13,10 +13,6 @@ const breed: Breed = {
       names: ["Kurzhaar"],
       id: "short",
     },
-    {
-      names: ["Langhaar"],
-      id: "long",
-    },
   ],
   fci: {
     group: 1,

@@ -15,26 +15,6 @@ const breed: Breed = {
         },
       ],
     },
-    {
-      names: ["Langhaar"],
-      id: "long",
-      furtherReading: [
-        {
-          name: "VDH",
-          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/teckel-langhaar",
-        },
-      ],
-    },
-    {
-      names: ["Rauhaar"],
-      id: "wire",
-      furtherReading: [
-        {
-          name: "VDH",
-          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/teckel-rauhhaar",
-        },
-      ],
-    },
   ],
   fci: {
     group: 4,

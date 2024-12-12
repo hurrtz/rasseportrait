@@ -6,26 +6,6 @@ const breed: Breed = {
   wasGuessedCorrectlyInPodcast: "not_applicable",
   variants: [
     {
-      names: ["Groenendael"],
-      id: "groenendael",
-      furtherReading: [
-        {
-          name: "VDH",
-          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/groenendael",
-        },
-      ],
-    },
-    {
-      names: ["Laekenois"],
-      id: "laekenois",
-      furtherReading: [
-        {
-          name: "VDH",
-          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/laekenois",
-        },
-      ],
-    },
-    {
       names: ["Malinois", "Mechelaar"],
       id: "malinois",
       furtherReading: [
@@ -36,16 +16,6 @@ const breed: Breed = {
         {
           name: "Martin Rütter",
           url: "https://www.martinruetter.com/rassekunde/malinois",
-        },
-      ],
-    },
-    {
-      names: ["Tervueren"],
-      id: "tervueren",
-      furtherReading: [
-        {
-          name: "VDH",
-          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/tervueren",
         },
       ],
     },

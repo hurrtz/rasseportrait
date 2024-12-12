@@ -15,14 +15,6 @@ const breed: Breed = {
         },
       ],
     },
-    {
-      names: ["Langhaar"],
-      id: "long",
-    },
-    {
-      names: ["Rauhhaar"],
-      id: "rough",
-    },
   ],
   fci: {
     group: 1,

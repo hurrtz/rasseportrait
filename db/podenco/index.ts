@@ -6,25 +6,6 @@ const breed: Breed = {
   wasGuessedCorrectlyInPodcast: true,
   variants: [
     {
-      id: "andaluz",
-      names: ["Podenco Andaluz"],
-      fci: {
-        group: -1,
-        section: -1,
-        standardNumber: -1,
-      },
-      furtherReading: [
-        {
-          name: "Wikipedia",
-          url: "https://de.wikipedia.org/wiki/Podenco_Andaluz",
-        },
-        {
-          name: "VDH",
-          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/podenco-andaluz-nationale-rasse",
-        },
-      ],
-    },
-    {
       id: "ibicenco",
       names: [
         "Podenco Ibicenco",
