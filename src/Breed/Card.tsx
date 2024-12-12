@@ -76,12 +76,16 @@ export default ({
         >
           <Box
             sx={{
-              color: "rgba(255, 255, 255, 1)",
               padding: "10px 20px",
-              backgroundColor: "rgba(60, 60, 60, .5)",
               borderRadius: "5px",
               margin: "15px 20px",
               width: "100%",
+              backgroundColor: "rgba(255, 255, 255, .25)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, .1)",
+              backdropFilter: "blur(4px)",
+              fontVariant: "small-caps",
+              "-webkit-font-smoothing": "antialiased",
+              "-moz-osx-font-smoothing": "grayscale",
             }}
           >
             <Typography variant="h6">{names[0]}</Typography>
@@ -95,7 +99,13 @@ export default ({
               )}
 
             {settings.sortOrder === "fci-standard-number" && (
-              <Typography variant="subtitle1">
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  fontVariant: "initial",
+                  borderTop: "1px solid rgba(0, 0, 0, .25)",
+                }}
+              >
                 {standardNumber && standardNumber > 0
                   ? `FCI Standardnummer ${standardNumber}`
                   : "— keine FCI-anerkannte Rasse —"}
