@@ -164,7 +164,9 @@ export default ({ setSelectedBreed }: Props) => {
                       </Typography>
                     </Typography>
                   }
-                  secondary="abzüglich Non-FCI-konformer Rassen"
+                  secondary={
+                    'Manche Rassen haben mehr als eine FCI-Nummer, beispielsweise der Corgi oder der Viszla. Es sind daher hier implizit mehr Rassen gelistet als explizit Rasseportraits stattgefunden haben. Für Details siehe Option "ähnliche Rassen zusammenfassen" im Optionsmenü oben rechts.'
+                  }
                 />
               </ListItem>
               <ListItem divider disableGutters>
