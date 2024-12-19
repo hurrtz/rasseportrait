@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.43.0](https://github.com/hurrtz/rasseportrait/compare/v1.42.0...v1.43.0) (2024-12-19)
+
+
+### Bug Fixes
+
+* typo in Kuhhund ([b498223](https://github.com/hurrtz/rasseportrait/commit/b4982231ee359fa46bfbd31722e085e2e811429b))
+
 ## [1.42.0](https://github.com/hurrtz/rasseportrait/compare/v1.41.0...v1.42.0) (2024-12-19)
 
 
