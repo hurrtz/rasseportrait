@@ -69,6 +69,7 @@ import KarelianBearDog from "./karelian_bear_dog";
 import Kokoni from "./kokoni";
 import Komondor from "./komondor";
 import Kromfohrlaender from "./kromfohrlaender";
+import Kuhhund from "./kuhhund";
 import Kuvasz from "./kuvasz";
 import LabradorRetriever from "./labrador_retriever";
 import LagottoRomagnolo from "./lagotto_romagnolo";
@@ -196,6 +197,7 @@ export default {
   Kokoni,
   Komondor,
   Kromfohrlaender,
+  Kuhhund,
   Kuvasz,
   LabradorRetriever,
   LagottoRomagnolo,
