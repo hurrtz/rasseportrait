@@ -2,7 +2,7 @@ import type { Breed } from "../../types/breed";
 
 const breed: Breed = {
   id: "kuhhund",
-  names: ["Kuhhhund", "Westerwälder Kuhhund", "Siegerländer Kuhhund"],
+  names: ["Kuhhund", "Westerwälder Kuhhund", "Siegerländer Kuhhund"],
   wasGuessedCorrectlyInPodcast: true,
   fci: {
     group: -1,
