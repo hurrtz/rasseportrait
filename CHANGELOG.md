@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.45.0](https://github.com/hurrtz/rasseportrait/compare/v1.44.0...v1.45.0) (2024-12-25)
+
+
+### Features
+
+* add Alaskan Malamute ([1bd8545](https://github.com/hurrtz/rasseportrait/commit/1bd8545988e58b4b75eb607bb517c0368c1dd468))
+
 ## [1.44.0](https://github.com/hurrtz/rasseportrait/compare/v1.43.0...v1.44.0) (2024-12-19)
 
 ## [1.43.0](https://github.com/hurrtz/rasseportrait/compare/v1.42.0...v1.43.0) (2024-12-19)
