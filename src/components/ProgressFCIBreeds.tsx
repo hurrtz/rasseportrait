@@ -25,6 +25,13 @@ const AMOUNT_FCI_BREEDS_PROVISIONAL = 15;
 
 const getPercentValue = (value: number, max: number) => (value * 100) / max;
 
+const toPercentString = (value: number) =>
+  value.toLocaleString(undefined, {
+    style: "percent",
+    maximumFractionDigits: 1,
+    minimumFractionDigits: 1,
+  });
+
 const PointingFingerIcon = ({ isHighlight }: { isHighlight?: boolean }) => (
   <div
     style={{
@@ -90,7 +97,7 @@ export default ({ setSelectedBreed }: Props) => {
   const amountBreedsGuessNotNeeded = breeds.filter(
     (breed) => breed.wasGuessedCorrectlyInPodcast === "not_applicable",
   ).length;
-  const percentAmountPresentedFCIBreeds = ~~getPercentValue(
+  const percentAmountPresentedFCIBreeds = getPercentValue(
     amountFCIBreedsPresented,
     AMOUNT_FCI_BREEDS_ALL - AMOUNT_FCI_BREEDS_DELETED,
   );
@@ -126,7 +133,7 @@ export default ({ setSelectedBreed }: Props) => {
           <Typography align="left" textTransform="none" fontSize="small">
             Fortschritt Vorstellung FCI-Rasseliste:{" "}
             <Typography fontWeight="bold" component="span">
-              {percentAmountPresentedFCIBreeds}%
+              {toPercentString(percentAmountPresentedFCIBreeds / 100)}
             </Typography>
           </Typography>
         </AccordionSummary>
@@ -211,16 +218,12 @@ export default ({ setSelectedBreed }: Props) => {
                     <Typography fontSize="small">
                       Erfolgsquote von Martin beim Raten der Rassen:{" "}
                       <Typography fontWeight="bold" component="span">
-                        {(
+                        {toPercentString(
                           getPercentValue(
                             amountBreedsCorrectlyGuessed,
                             breeds.length - amountBreedsGuessNotNeeded,
-                          ) / 100
-                        ).toLocaleString(undefined, {
-                          style: "percent",
-                          maximumFractionDigits: 2,
-                          minimumFractionDigits: 2,
-                        })}
+                          ) / 100,
+                        )}
                       </Typography>
                     </Typography>
                   }
