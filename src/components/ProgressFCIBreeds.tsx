@@ -211,11 +211,16 @@ export default ({ setSelectedBreed }: Props) => {
                     <Typography fontSize="small">
                       Erfolgsquote von Martin beim Raten der Rassen:{" "}
                       <Typography fontWeight="bold" component="span">
-                        {getPercentValue(
-                          amountBreedsCorrectlyGuessed,
-                          breeds.length - amountBreedsGuessNotNeeded,
-                        ).toFixed(2)}
-                        {`%`}
+                        {(
+                          getPercentValue(
+                            amountBreedsCorrectlyGuessed,
+                            breeds.length - amountBreedsGuessNotNeeded,
+                          ) / 100
+                        ).toLocaleString(undefined, {
+                          style: "percent",
+                          maximumFractionDigits: 2,
+                          minimumFractionDigits: 2,
+                        })}
                       </Typography>
                     </Typography>
                   }
