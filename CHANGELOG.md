@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.46.0](https://github.com/hurrtz/rasseportrait/compare/v1.45.0...v1.46.0) (2025-01-02)
+
+
+### Features
+
+* add Stabyhoun ([7f69d82](https://github.com/hurrtz/rasseportrait/commit/7f69d82c91f3d996bd1e5dfe2b9d4e0adae4ec6f))
+
 ## [1.45.0](https://github.com/hurrtz/rasseportrait/compare/v1.44.0...v1.45.0) (2024-12-25)
 
 
