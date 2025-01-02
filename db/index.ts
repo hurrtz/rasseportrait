@@ -110,6 +110,7 @@ import SilkenWindsprite from "./silken_windsprite";
 import SpanishGalgo from "./spanish_galgo";
 import SpanishWaterDog from "./spanish_water_dog";
 import SpinoneItaliano from "./spinone_italiano";
+import Stabyhoun from "./stabyhoun";
 import StyrianCoarseHairedHound from "./styrian_coarse_haired_hound";
 import SwedishCattleDog from "./swedish_cattle_dog";
 import SyberianHusky from "./syberian_husky";
@@ -239,6 +240,7 @@ export default {
   SpanishGalgo,
   SpanishWaterDog,
   SpinoneItaliano,
+  Stabyhoun,
   StyrianCoarseHairedHound,
   SwedishCattleDog,
   SyberianHusky,
