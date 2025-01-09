@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.49.0](https://github.com/hurrtz/rasseportrait/compare/v1.48.0...v1.49.0) (2025-01-09)
+
+
+### Features
+
+* add Clumber Spaniel ([36c59e8](https://github.com/hurrtz/rasseportrait/commit/36c59e8e2c8938af8152e318055d0aefde8b51e0))
+
 ## [1.48.0](https://github.com/hurrtz/rasseportrait/compare/v1.47.0...v1.48.0) (2025-01-02)
 
 ## [1.47.0](https://github.com/hurrtz/rasseportrait/compare/v1.46.0...v1.47.0) (2025-01-02)
