@@ -228,7 +228,7 @@ export default ({ setSelectedBreed }: Props) => {
                     </Typography>
                   }
                   secondary={[
-                    `${amountBreedsCorrectlyGuessed} von ${breeds.length - amountBreedsGuessNotNeeded} erratbaren Rassen korrekt geraten (abgezogen: ${amountBreedsGuessNotNeeded} vorgegebene Rassen und der `,
+                    `${amountBreedsCorrectlyGuessed} von ${breeds.length - amountBreedsGuessNotNeeded} erratbaren Rassen korrekt geraten (abgezogen: ${amountBreedsGuessNotNeeded} direkt benannte Rassen und der `,
                     ...namedBreedsExcludedFromGuessing,
                     ")",
                   ]}
