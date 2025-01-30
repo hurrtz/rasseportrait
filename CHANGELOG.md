@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.51.0](https://github.com/hurrtz/rasseportrait/compare/v1.50.0...v1.51.0) (2025-01-30)
+
+
+### Features
+
+* add Patterdale Terrier ([ac48d93](https://github.com/hurrtz/rasseportrait/commit/ac48d9396aeec1e9d0cddb138c4f1075fea274e0))
+
 ## [1.50.0](https://github.com/hurrtz/rasseportrait/compare/v1.49.0...v1.50.0) (2025-01-16)
 
 
