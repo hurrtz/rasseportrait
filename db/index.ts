@@ -94,6 +94,7 @@ import OldEnglishSheepdog from "./old_english_sheepdog";
 import Otterhound from "./otterhound";
 import Papillon from "./papillon";
 import ParsonRussellTerrier from "./parson_russell_terrier";
+import PatterdaleTerrier from "./patterdale_terrier";
 import PetitBrabancon from "./petit_brabancon";
 import Podenco from "./podenco";
 import Poodle from "./poodle";
@@ -226,6 +227,7 @@ export default {
   Otterhound,
   Papillon,
   ParsonRussellTerrier,
+  PatterdaleTerrier,
   PetitBrabancon,
   Podenco,
   Poodle,
