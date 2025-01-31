@@ -1,3 +1,5 @@
+import type { Podcast, EnrichedPodcast, FurtherReading } from "./general";
+
 export interface FCI {
   group: number;
   section: number;
@@ -9,25 +11,6 @@ export interface Variant {
   names: string[];
   fci?: FCI;
   furtherReading?: FurtherReading[];
-}
-
-export interface Podcast {
-  number: number | string;
-  episode: string;
-  url: string;
-  timecode: number;
-  type?: string;
-  airDate: string;
-  context?: "Hörerfrage" | "Persönliche Anekote" | "Rasseportrait" | string;
-}
-
-export interface EnrichedPodcast extends Omit<Podcast, "airDate"> {
-  airDate: Date;
-}
-
-interface FurtherReading {
-  name: string;
-  url: string;
 }
 
 export interface Breed {
