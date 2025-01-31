@@ -79,8 +79,9 @@ const PageBreedList = ({
   return (
     <>
       <Details
-        selectedBreed={selectedBreed}
-        setSelectedBreed={augmentedSetSelectedBreed}
+        selectedElement={selectedBreed}
+        setSelectedElement={augmentedSetSelectedBreed}
+        elementType="breeds"
       />
 
       <Typography variant={isMobile ? "h4" : "h2"} gutterBottom>

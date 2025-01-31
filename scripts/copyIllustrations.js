@@ -56,7 +56,16 @@ const processImages = async (sourceDir, targetDir) => {
   }
 };
 
-const SOURCE_FOLDER = path.join(__dirname, "../breeds");
-const DESTINATION_FOLDER = path.join(__dirname, "../dist/illustrations");
+const BREEDS_SOURCE_FOLDER = path.join(__dirname, "../breeds");
+const BREEDS_DESTINATION_FOLDER = path.join(
+  __dirname,
+  "../dist/illustrations/breeds",
+);
+const TOPICS_SOURCE_FOLDER = path.join(__dirname, "../topics");
+const TOPICS_DESTINATION_FOLDER = path.join(
+  __dirname,
+  "../dist/illustrations/topics",
+);
 
-processImages(SOURCE_FOLDER, DESTINATION_FOLDER);
+processImages(BREEDS_SOURCE_FOLDER, BREEDS_DESTINATION_FOLDER);
+processImages(TOPICS_SOURCE_FOLDER, TOPICS_DESTINATION_FOLDER);

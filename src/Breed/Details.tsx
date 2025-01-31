@@ -24,7 +24,8 @@ import Tooltip from "@mui/material/Tooltip";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { useBreedsStore } from "../stores/Breeds";
 import { useSettingsStore } from "../stores/Settings";
-import type { FCI, Podcast, BreedIdentifier, Variant } from "../../types/breed";
+import type { FCI, BreedIdentifier, Variant } from "../../types/breed";
+import type { Podcast } from "../../types/general";
 
 const CardHeaderImage = styled(CardHeader)(({ image }: { image: string }) => ({
   height: 400,

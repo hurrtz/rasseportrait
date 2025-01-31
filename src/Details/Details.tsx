@@ -2,17 +2,21 @@ import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Drawer from "./Drawer";
 import Modal from "./Modal";
-import type { BreedDetailsProps } from "./types";
+import type { ElementDetailsProps } from "./types";
 
-const Details = ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
+const Details = ({
+  selectedElement,
+  setSelectedElement,
+  elementType,
+}: ElementDetailsProps) => {
   const isMobile = useMediaQuery("(max-width: 480px)");
-  const commonProps = { selectedBreed, setSelectedBreed };
+  const commonProps = { selectedElement, setSelectedElement };
 
   if (isMobile) {
-    return <Drawer {...commonProps} />;
+    return <Drawer {...commonProps} elementType={elementType} />;
   }
 
-  return <Modal {...commonProps} />;
+  return <Modal {...commonProps} elementType={elementType} />;
 };
 
 export default Details;

@@ -1,8 +1,13 @@
-import React, { type KeyboardEvent, type MouseEvent } from "react";
+import React, {
+  type KeyboardEvent,
+  type MouseEvent,
+  type ReactNode,
+} from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import { styled } from "@mui/material/styles";
 import BreedDetails from "../Breed/Details";
-import type { BreedDetailsProps } from "./types";
+import TopicDetails from "../Topic/Details";
+import type { ElementDetailsProps } from "./types";
 
 const Puller = styled("div")(() => ({
   width: 30,
@@ -20,7 +25,11 @@ const PullerBox = styled("div")(() => ({
   backgroundColor: "#fff",
 }));
 
-const Drawer = ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
+const Drawer = ({
+  selectedElement,
+  setSelectedElement,
+  elementType,
+}: ElementDetailsProps) => {
   const toggleDrawer =
     (open: boolean) => (event: KeyboardEvent | MouseEvent) => {
       if (
@@ -32,13 +41,35 @@ const Drawer = ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
         return;
       }
 
-      setSelectedBreed(open ? selectedBreed : undefined);
+      setSelectedElement(open ? selectedElement : undefined);
     };
+
+  const ElementDetails = ({ children }: { children: ReactNode }) => {
+    if (elementType === "topics") {
+      return (
+        <TopicDetails
+          topicIdentifier={selectedElement}
+          closeUI={() => setSelectedElement(undefined)}
+        >
+          {children}
+        </TopicDetails>
+      );
+    }
+
+    return (
+      <BreedDetails
+        breedIdentifier={selectedElement}
+        closeUI={() => setSelectedElement(undefined)}
+      >
+        {children}
+      </BreedDetails>
+    );
+  };
 
   return (
     <SwipeableDrawer
       anchor="bottom"
-      open={!!selectedBreed}
+      open={!!selectedElement}
       onClose={toggleDrawer(false)}
       onOpen={toggleDrawer(true)}
       sx={{
@@ -50,14 +81,11 @@ const Drawer = ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
         },
       }}
     >
-      <BreedDetails
-        breedIdentifier={selectedBreed}
-        closeUI={() => setSelectedBreed(undefined)}
-      >
+      <ElementDetails>
         <PullerBox>
           <Puller />
         </PullerBox>
-      </BreedDetails>
+      </ElementDetails>
     </SwipeableDrawer>
   );
 };

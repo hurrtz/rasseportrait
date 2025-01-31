@@ -14,15 +14,15 @@ import DDDHWNBIcon from "@mui/icons-material/Sick";
 import ImprintIcon from "@mui/icons-material/Policy";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import breedsList from "../breeds";
-import PageBreedList from "./pages/BreedList";
-import PageImprint from "./pages/Imprint";
-import PageTipps from "./pages/Tipps";
-import PageDDDHWNB from "./pages/DDDHWNB";
-import PageTopics from "./pages/Topics";
+import topicsList from "../topics";
+import { BreedList, Topics, Tipps, DDDHWNB, Imprint } from "./pages";
 import { useBreedsStore } from "./stores/Breeds";
+import { useTopicsStore } from "./stores/Topics";
 import { useSettingsStore } from "./stores/Settings";
-import { flattenBreedVariants, enrichBreedsWithIllustrations } from "./utils";
+import { flattenBreedVariants, enrichWithIllustrations } from "./utils";
 import type { Settings } from "../types/settings";
+import type { EnrichedBreed } from "../types/breed";
+import type { EnrichedTopic } from "../types/topic";
 
 const storedSettings = window.localStorage.getItem("settings");
 
@@ -40,6 +40,7 @@ const App = () => {
     setBreedsWithVariants,
     currentBreeds: storedBreeds,
   } = useBreedsStore();
+  const { setCurrentTopics, currentTopics: storedTopics } = useTopicsStore();
 
   useEffect(() => {
     if (storedSettings) {
@@ -51,6 +52,7 @@ const App = () => {
   }, [storedSettings]);
 
   const breeds = Object.values(breedsList);
+  const topics = Object.values(topicsList);
 
   let breedsWithVariants = breeds;
 
@@ -58,9 +60,15 @@ const App = () => {
     breedsWithVariants = flattenBreedVariants({ breeds });
   }
 
-  const enrichedBreedsWithVariants = enrichBreedsWithIllustrations({
-    breeds: breedsWithVariants,
-  });
+  const enrichedBreedsWithVariants = enrichWithIllustrations({
+    elements: breedsWithVariants,
+    type: "breeds",
+  }) as EnrichedBreed[];
+
+  const enrichedTopics = enrichWithIllustrations({
+    elements: topics,
+    type: "topics",
+  }) as EnrichedTopic[];
 
   const sortedBreeds = enrichedBreedsWithVariants.sort(
     (
@@ -162,10 +170,15 @@ const App = () => {
   if (!isEqual(storedBreeds, sortedBreeds)) {
     setCurrentBreeds(sortedBreeds);
     setBreedsWithVariants(
-      enrichBreedsWithIllustrations({
-        breeds: flattenBreedVariants({ breeds }),
-      }),
+      enrichWithIllustrations({
+        elements: flattenBreedVariants({ breeds }),
+        type: "breeds",
+      }) as EnrichedBreed[],
     );
+  }
+
+  if (!isEqual(storedTopics, enrichedTopics)) {
+    setCurrentTopics(enrichedTopics);
   }
 
   return (
@@ -197,27 +210,27 @@ const App = () => {
             </TabList>
           </Box>
 
-          <TabPanel value="breedlist">
-            <PageBreedList
+          <TabPanel value="breedlist" sx={{ width: "100%" }}>
+            <BreedList
               onChangeSortOrder={handleChangeSortOrder}
               onChangeCollapseSimilarBreeds={handleChangeCollapseSimilarBreeds}
             />
           </TabPanel>
 
-          <TabPanel value="topics">
-            <PageTopics />
+          <TabPanel value="topics" sx={{ width: "100%" }}>
+            <Topics />
           </TabPanel>
 
-          <TabPanel value="tipps">
-            <PageTipps />
+          <TabPanel value="tipps" sx={{ width: "100%" }}>
+            <Tipps />
           </TabPanel>
 
-          <TabPanel value="dddhwnb">
-            <PageDDDHWNB />
+          <TabPanel value="dddhwnb" sx={{ width: "100%" }}>
+            <DDDHWNB />
           </TabPanel>
 
-          <TabPanel value="imprint">
-            <PageImprint />
+          <TabPanel value="imprint" sx={{ width: "100%" }}>
+            <Imprint />
           </TabPanel>
         </TabContext>
       </Box>

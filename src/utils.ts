@@ -1,4 +1,5 @@
 import type { Breed, EnrichedBreed } from "../types/breed";
+import type { Topic, EnrichedTopic } from "../types/topic";
 
 /* takes the list of all breeds with their variants and makes it so
   that the variants, if existent, will be treated as its own breed */
@@ -25,22 +26,30 @@ export const flattenBreedVariants = ({ breeds }: { breeds: Breed[] }) => {
   return flattenedBreedVariants;
 };
 
-export const enrichBreedsWithIllustrations = ({
-  breeds,
+export const enrichWithIllustrations = ({
+  elements,
+  type,
 }: {
-  breeds: Breed[];
+  elements: Breed[] | Topic[];
+  type: "breeds" | "topics";
 }) =>
-  breeds.map(
-    (breed) =>
-      ({
-        ...breed,
-        image: `illustrations/${breed.id}/illustration${breed.variants ? `_${breed.variants[0].id}` : ""}.jpeg`,
-        podcast: breed.podcast.map((podcast) => ({
-          ...podcast,
-          airDate: new Date(podcast.airDate),
-        })),
-      }) as EnrichedBreed,
-  );
+  elements.map((element) => {
+    let out: EnrichedBreed | EnrichedTopic = {
+      ...element,
+      image: `illustrations/${type}/${element.id}/illustration.jpeg`,
+      podcast: element.podcast.map((podcast) => ({
+        ...podcast,
+        airDate: new Date(podcast.airDate),
+      })),
+    };
+
+    if (type === "breeds") {
+      const variants = (element as Breed).variants;
+      out.image = `illustrations/${type}/${element.id}/illustration${variants ? `_${variants[0].id}` : ""}.jpeg`;
+    }
+
+    return out;
+  });
 
 export const getWindowLocationSearch = (
   payload: {

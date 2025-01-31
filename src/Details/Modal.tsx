@@ -1,16 +1,39 @@
 import React from "react";
 import Modal from "@mui/material/Modal";
 import BreedDetails from "../Breed/Details";
-import type { BreedDetailsProps } from "./types";
+import TopicDetails from "../Topic/Details";
+import type { ElementDetailsProps } from "./types";
 
-export default ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
+export default ({
+  selectedElement,
+  setSelectedElement,
+  elementType,
+}: ElementDetailsProps) => {
   const handleBackgroundClick = () => {
-    setSelectedBreed(undefined);
+    setSelectedElement(undefined);
+  };
+
+  const Details = () => {
+    if (elementType === "topics") {
+      return (
+        <TopicDetails
+          topicIdentifier={selectedElement}
+          closeUI={handleBackgroundClick}
+        />
+      );
+    }
+
+    return (
+      <BreedDetails
+        breedIdentifier={selectedElement}
+        closeUI={handleBackgroundClick}
+      />
+    );
   };
 
   return (
     <Modal
-      open={selectedBreed !== undefined}
+      open={selectedElement !== undefined}
       onClose={handleBackgroundClick}
       sx={{
         maxHeight: "100vh",
@@ -25,10 +48,7 @@ export default ({ selectedBreed, setSelectedBreed }: BreedDetailsProps) => {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <BreedDetails
-          breedIdentifier={selectedBreed}
-          closeUI={handleBackgroundClick}
-        />
+        <Details />
       </div>
     </Modal>
   );
