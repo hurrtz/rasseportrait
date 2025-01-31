@@ -34,7 +34,6 @@ export interface Breed {
   id: number | string;
   isOfficiallyPresented?: boolean;
   wasGuessedCorrectlyInPodcast: boolean | "not_applicable";
-  image?: any;
   names: string[];
   variants?: Variant[];
   fci?: FCI;
