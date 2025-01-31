@@ -1,14 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, type SyntheticEvent } from "react";
 import * as amplitude from "@amplitude/analytics-browser";
 import Container from "@mui/material/Container";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
-import PetsIcon from "@mui/icons-material/Pets";
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
 import isEqual from "lodash.isequal";
+import BreedListIcon from "@mui/icons-material/Pets";
+import TippsIcon from "@mui/icons-material/Lightbulb";
+import TopicIcon from "@mui/icons-material/Topic";
+import DDDHWNBIcon from "@mui/icons-material/Sick";
+import ImprintIcon from "@mui/icons-material/Policy";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import breedsList from "../db";
 import PageBreedList from "./pages/BreedList";
 import PageImprint from "./pages/Imprint";
+import PageTipps from "./pages/Tipps";
+import PageDDDHWNB from "./pages/DDDHWNB";
+import PageTopics from "./pages/Topics";
 import { useBreedsStore } from "./stores/Breeds";
 import { useSettingsStore } from "./stores/Settings";
 import { flattenBreedVariants, enrichBreedsWithIllustrations } from "./utils";
@@ -17,6 +27,13 @@ import type { Settings } from "../types/settings";
 const storedSettings = window.localStorage.getItem("settings");
 
 const App = () => {
+  const [tabState, setTabState] = React.useState("breedlist");
+  const isMobile = useMediaQuery("(max-width: 480px)");
+
+  const handleTabChange = (event: SyntheticEvent, newValue: string) => {
+    setTabState(newValue);
+  };
+
   const { settings, set: setSettings } = useSettingsStore();
   const {
     setCurrentBreeds,
@@ -32,9 +49,6 @@ const App = () => {
       } catch {}
     }
   }, [storedSettings]);
-
-  const [bottomNavigationValue, setBottomNavigationValue] =
-    useState("breeds_list");
 
   const breeds = Object.values(breedsList);
 
@@ -155,36 +169,58 @@ const App = () => {
   }
 
   return (
-    <Container>
-      {bottomNavigationValue === "breeds_list" && (
-        <PageBreedList
-          onChangeSortOrder={handleChangeSortOrder}
-          onChangeCollapseSimilarBreeds={handleChangeCollapseSimilarBreeds}
-        />
-      )}
-
-      {bottomNavigationValue === "imprint" && <PageImprint />}
-
-      <BottomNavigation
-        showLabels
-        value={bottomNavigationValue}
-        onChange={(event, newValue) => {
-          amplitude.track("Page Select", { page: newValue });
-          setBottomNavigationValue(newValue);
+    <Container sx={{ padding: isMobile ? 0 : undefined }}>
+      <Box
+        sx={{
+          flexGrow: 1,
+          display: isMobile ? "static" : "flex",
         }}
-        sx={{ marginTop: 5 }}
       >
-        <BottomNavigationAction
-          label="Hunderassen"
-          icon={<PetsIcon />}
-          value="breeds_list"
-        />
-        <BottomNavigationAction
-          label="Impressum"
-          icon={<ContactPhoneIcon />}
-          value="imprint"
-        />
-      </BottomNavigation>
+        <TabContext value={tabState}>
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <TabList
+              onChange={handleTabChange}
+              orientation={isMobile ? "horizontal" : "vertical"}
+              variant="scrollable"
+              scrollButtons="auto"
+              allowScrollButtonsMobile
+            >
+              <Tab
+                value="breedlist"
+                label="Rasseportrait"
+                icon={<BreedListIcon />}
+              />
+              <Tab value="topics" label="Themen" icon={<TopicIcon />} />
+              <Tab value="tipps" label="Tipps" icon={<TippsIcon />} />
+              <Tab value="dddhwnb" label="DDDHWNB" icon={<DDDHWNBIcon />} />
+              <Tab value="imprint" label="Impressum" icon={<ImprintIcon />} />
+            </TabList>
+          </Box>
+
+          <TabPanel value="breedlist">
+            <PageBreedList
+              onChangeSortOrder={handleChangeSortOrder}
+              onChangeCollapseSimilarBreeds={handleChangeCollapseSimilarBreeds}
+            />
+          </TabPanel>
+
+          <TabPanel value="topics">
+            <PageTopics />
+          </TabPanel>
+
+          <TabPanel value="tipps">
+            <PageTipps />
+          </TabPanel>
+
+          <TabPanel value="dddhwnb">
+            <PageDDDHWNB />
+          </TabPanel>
+
+          <TabPanel value="imprint">
+            <PageImprint />
+          </TabPanel>
+        </TabContext>
+      </Box>
     </Container>
   );
 };
