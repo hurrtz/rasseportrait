@@ -7,11 +7,11 @@ import BreedList from "../Breed/List";
 import Details from "../Details";
 import type { BreedIdentifier } from "../../types/breed";
 import type { Settings } from "../../types/settings";
-import HeaderSection from "../components/HeaderSection";
 import SettingsFAB from "../components/SettingsFAB";
 import ProgressFCIBreeds from "../components/ProgressFCIBreeds";
 import { useSettingsStore } from "../stores/Settings";
 import { getWindowLocationSearch } from "../utils";
+import Typography from "@mui/material/Typography";
 
 interface Props {
   onChangeSortOrder: (sortOrder: Settings["sortOrder"]) => void;
@@ -83,11 +83,13 @@ const PageBreedList = ({
         setSelectedBreed={augmentedSetSelectedBreed}
       />
 
-      <HeaderSection isMobile={isMobile} />
+      <Typography variant={isMobile ? "h4" : "h2"} gutterBottom>
+        Rasseportrait
+      </Typography>
 
       <ProgressFCIBreeds setSelectedBreed={augmentedSetSelectedBreed} />
 
-      <Box component="form" noValidate autoComplete="off" mt={4} mb={4}>
+      <Box mt={4} mb={4}>
         <TextField
           label="Suche nach einer Rasse oder der FCI Standardnummer"
           variant="standard"
