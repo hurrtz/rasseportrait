@@ -14,6 +14,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const handleMailClick = () => {
   amplitude.track("Imprint Click Mail");
@@ -25,102 +26,106 @@ const handleURLClick = (url: string) => {
   window.open(url, "_blank");
 };
 
-const Imprint = () => (
-  <Box>
-    <Typography variant="h2" gutterBottom>
-      Impressum
-    </Typography>
+const Imprint = () => {
+  const isMobile = useMediaQuery("(max-width: 480px)");
 
-    <Card>
-      <CardContent>
-        <Typography variant="h3" gutterBottom>
-          Zweck
-        </Typography>
+  return (
+    <Box>
+      <Typography variant={isMobile ? "h4" : "h2"} gutterBottom>
+        Impressum
+      </Typography>
 
-        <Typography variant="body2" gutterBottom>
-          Diese Website ist ein Fanprojekt zum Podcast{" "}
-          <a
-            href="https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv"
-            target="_blank"
-          >
-            Tierisch Menschlich
-          </a>{" "}
-          von Martin Rütter und Katharina Adick. Es enthält eine nicht
-          verbindliche kuratierte Liste aller Episoden, die ein Rasseportrait
-          enthalten. Dieses Projekt ist in keiner Weise beauftragt von RTL oder
-          einer der teilnehmenden oder der Produktion des Podcasts mitwirkenden
-          Personen.
-        </Typography>
+      <Card>
+        <CardContent>
+          <Typography variant="h3" gutterBottom>
+            Zweck
+          </Typography>
 
-        <Typography variant="body2" gutterBottom mt={2}>
-          Bei Problemen, Änderungswünschen oder sonstigem Feedback wenden Sie
-          sich gern an die unten stehende Kontaktmöglichkeit.
-        </Typography>
-      </CardContent>
-    </Card>
+          <Typography variant="body2" gutterBottom>
+            Diese Website ist ein Fanprojekt zum Podcast{" "}
+            <a
+              href="https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv"
+              target="_blank"
+            >
+              Tierisch Menschlich
+            </a>{" "}
+            von Martin Rütter und Katharina Adick. Es enthält eine nicht
+            verbindliche kuratierte Liste aller Episoden, die ein Rasseportrait
+            enthalten. Dieses Projekt ist in keiner Weise beauftragt von RTL
+            oder einer der teilnehmenden oder der Produktion des Podcasts
+            mitwirkenden Personen.
+          </Typography>
 
-    <Card sx={{ marginTop: 4 }}>
-      <CardContent>
-        <Typography variant="h3" gutterBottom>
-          Kontakt
-        </Typography>
+          <Typography variant="body2" gutterBottom mt={2}>
+            Bei Problemen, Änderungswünschen oder sonstigem Feedback wenden Sie
+            sich gern an die unten stehende Kontaktmöglichkeit.
+          </Typography>
+        </CardContent>
+      </Card>
 
-        <List>
-          <ListItem>
-            <ListItemAvatar>
-              <Avatar>
-                <BadgeIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText primary="Tobias Winkler" />
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
+      <Card sx={{ marginTop: 4 }}>
+        <CardContent>
+          <Typography variant="h3" gutterBottom>
+            Kontakt
+          </Typography>
+
+          <List>
+            <ListItem>
               <ListItemAvatar>
                 <Avatar>
-                  <EmailIcon />
+                  <BadgeIcon />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText
-                primary="rasseportrait@tobiaswinkler.berlin"
-                onClick={handleMailClick}
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemAvatar>
-                <Avatar>
-                  <LinkedInIcon />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                primary="LinkedIn"
-                onClick={() =>
-                  handleURLClick(
-                    "https://www.linkedin.com/in/tobias-winkler-87a08210b/",
-                  )
-                }
-              />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemAvatar>
-                <Avatar>
-                  <GitHubIcon />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                primary="Github"
-                onClick={() => handleURLClick("https://github.com/hurrtz")}
-              />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </CardContent>
-    </Card>
-  </Box>
-);
+              <ListItemText primary="Tobias Winkler" />
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemAvatar>
+                  <Avatar>
+                    <EmailIcon />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="rasseportrait@tobiaswinkler.berlin"
+                  onClick={handleMailClick}
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemAvatar>
+                  <Avatar>
+                    <LinkedInIcon />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="LinkedIn"
+                  onClick={() =>
+                    handleURLClick(
+                      "https://www.linkedin.com/in/tobias-winkler-87a08210b/",
+                    )
+                  }
+                />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemAvatar>
+                  <Avatar>
+                    <GitHubIcon />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText
+                  primary="Github"
+                  onClick={() => handleURLClick("https://github.com/hurrtz")}
+                />
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </CardContent>
+      </Card>
+    </Box>
+  );
+};
 
 export default Imprint;
