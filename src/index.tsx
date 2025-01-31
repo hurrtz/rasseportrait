@@ -1,4 +1,5 @@
 import React, { StrictMode } from "react";
+import CssBaseline from "@mui/material/CssBaseline";
 import * as amplitude from "@amplitude/analytics-browser";
 import { sessionReplayPlugin } from "@amplitude/plugin-session-replay-browser";
 import { createRoot } from "react-dom/client";
@@ -17,6 +18,7 @@ const root = createRoot(container!);
 
 root.render(
   <StrictMode>
+    <CssBaseline />
     <App />
   </StrictMode>,
 );
