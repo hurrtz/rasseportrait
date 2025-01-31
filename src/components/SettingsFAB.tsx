@@ -8,6 +8,7 @@ import SpeedDialAction from "@mui/material/SpeedDialAction";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AbcIcon from "@mui/icons-material/Abc";
 import PetsIcon from "@mui/icons-material/Pets";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import type { Settings } from "../../types/settings";
 
 interface Props {
@@ -116,69 +117,73 @@ export default ({
   isSortOrderAirDateEnabled,
   isSortOrderAlphabeticalEnabled,
   isSortDirectionAsc,
-}: Props) => (
-  <>
-    <Backdrop open={isSettingsModalOpen} />
-    <SpeedDial
-      ariaLabel="Settings speed dial"
-      sx={{
-        position: "fixed",
-        top: 16,
-        right: 25,
-        ".MuiSpeedDial-fab": {
-          backgroundColor: "#666",
-        },
-        ".MuiSpeedDial-actions": {
-          whiteSpace: "nowrap",
-        },
-      }}
-      icon={<SettingsIcon />}
-      onClose={handleSettingsModalClose}
-      onOpen={handleSettingsModalOpen}
-      open={isSettingsModalOpen}
-      direction="down"
-    >
-      {[
-        getFabActionObject({
-          id: "collapse_similar_breeds",
-          isActive: collapseSimilarBreeds,
-        }),
-        getFabActionObject({
-          id: "sort_alphabetical",
-          isActive: isSortOrderAlphabeticalEnabled,
-          isSortDirectionAsc,
-        }),
-        getFabActionObject({
-          id: "sort_fci",
-          isActive: isSortOrderFCIEnabled,
-          isSortDirectionAsc,
-        }),
-        getFabActionObject({
-          id: "sort_date",
-          isActive: isSortOrderAirDateEnabled,
-          isSortDirectionAsc,
-        }),
-      ].map((action) => (
-        <SpeedDialAction
-          key={action.id}
-          icon={action.icon}
-          tooltipTitle={action.name}
-          tooltipOpen
-          onClick={() => {
-            if (action.id === "sort_fci") {
-              onChangeSortOrder("fci-standard-number");
-            } else if (action.id === "sort_date") {
-              onChangeSortOrder("air-date");
-            } else if (action.id === "sort_alphabetical") {
-              onChangeSortOrder("alphabetical");
-            } else if (action.id === "collapse_similar_breeds") {
-              onChangeCollapseSimilarBreeds();
-            }
+}: Props) => {
+  const isMobile = useMediaQuery("(max-width: 480px)");
 
-            handleSettingsModalClose();
-          }}
-        />
-      ))}
-    </SpeedDial>
-  </>
-);
+  return (
+    <>
+      <Backdrop open={isSettingsModalOpen} />
+      <SpeedDial
+        ariaLabel="Settings speed dial"
+        sx={{
+          position: isMobile ? "absolute" : "fixed",
+          top: isMobile ? 89 : 16, // 16 from bottom of navigation bar
+          right: 16,
+          ".MuiSpeedDial-fab": {
+            backgroundColor: "#666",
+          },
+          ".MuiSpeedDial-actions": {
+            whiteSpace: "nowrap",
+          },
+        }}
+        icon={<SettingsIcon />}
+        onClose={handleSettingsModalClose}
+        onOpen={handleSettingsModalOpen}
+        open={isSettingsModalOpen}
+        direction="down"
+      >
+        {[
+          getFabActionObject({
+            id: "collapse_similar_breeds",
+            isActive: collapseSimilarBreeds,
+          }),
+          getFabActionObject({
+            id: "sort_alphabetical",
+            isActive: isSortOrderAlphabeticalEnabled,
+            isSortDirectionAsc,
+          }),
+          getFabActionObject({
+            id: "sort_fci",
+            isActive: isSortOrderFCIEnabled,
+            isSortDirectionAsc,
+          }),
+          getFabActionObject({
+            id: "sort_date",
+            isActive: isSortOrderAirDateEnabled,
+            isSortDirectionAsc,
+          }),
+        ].map((action) => (
+          <SpeedDialAction
+            key={action.id}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            tooltipOpen
+            onClick={() => {
+              if (action.id === "sort_fci") {
+                onChangeSortOrder("fci-standard-number");
+              } else if (action.id === "sort_date") {
+                onChangeSortOrder("air-date");
+              } else if (action.id === "sort_alphabetical") {
+                onChangeSortOrder("alphabetical");
+              } else if (action.id === "collapse_similar_breeds") {
+                onChangeCollapseSimilarBreeds();
+              }
+
+              handleSettingsModalClose();
+            }}
+          />
+        ))}
+      </SpeedDial>
+    </>
+  );
+};
