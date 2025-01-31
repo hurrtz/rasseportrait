@@ -13,7 +13,7 @@ import TopicIcon from "@mui/icons-material/Topic";
 import DDDHWNBIcon from "@mui/icons-material/Sick";
 import ImprintIcon from "@mui/icons-material/Policy";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import breedsList from "../db";
+import breedsList from "../breeds";
 import PageBreedList from "./pages/BreedList";
 import PageImprint from "./pages/Imprint";
 import PageTipps from "./pages/Tipps";

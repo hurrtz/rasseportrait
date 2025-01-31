@@ -56,7 +56,7 @@ const processImages = async (sourceDir, targetDir) => {
   }
 };
 
-const SOURCE_FOLDER = path.join(__dirname, "../db");
+const SOURCE_FOLDER = path.join(__dirname, "../breeds");
 const DESTINATION_FOLDER = path.join(__dirname, "../dist/illustrations");
 
 processImages(SOURCE_FOLDER, DESTINATION_FOLDER);
