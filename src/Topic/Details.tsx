@@ -192,7 +192,12 @@ export default ({ topicIdentifier, closeUI, children }: Props) => {
 
             {furtherReading && furtherReading.length > 0 && (
               <>
-                <Typography gutterBottom variant="body2" component="div">
+                <Typography
+                  gutterBottom
+                  variant="body2"
+                  component="div"
+                  sx={{ marginTop: 2 }}
+                >
                   Weitere Infos:
                 </Typography>
 
