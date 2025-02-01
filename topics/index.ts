@@ -1,11 +1,11 @@
 import SayingFarewell from "./saying_farewell";
 import Finances from "./finances";
-import HorsesInSportCompetitions from "./horses_in_sport_competitions";
+import Horses from "./horses";
 import MartinFamily from "./martin_family";
 
 export default {
   SayingFarewell,
   Finances,
-  HorsesInSportCompetitions,
+  Horses,
   MartinFamily,
 };

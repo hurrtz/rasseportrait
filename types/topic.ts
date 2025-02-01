@@ -1,9 +1,13 @@
 import type { Podcast, EnrichedPodcast, FurtherReading } from "./general";
 
+interface PodcastWithKeywords extends Podcast {
+  keywords?: string[];
+}
+
 export interface Topic {
   id: number | string;
   title: string;
-  podcast: Podcast[];
+  podcast: PodcastWithKeywords[];
   furtherReading?: FurtherReading[];
   keywords?: string[];
 }

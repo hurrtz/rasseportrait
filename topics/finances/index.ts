@@ -11,6 +11,7 @@ const topic: Topic = {
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/56-martin-wird-aufgemischt-krumme-dackelbeine-spartipps-teil-1-6g11t4rkl512j",
       timecode: 3010,
       airDate: "2022-04-07",
+      context: "Martins Spartipps",
     },
     {
       number: 57,
@@ -18,6 +19,7 @@ const topic: Topic = {
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/57-welpenhaendler-zerrspiele-spartipps-teil-2-it4nn687n9bsg",
       timecode: 2577,
       airDate: "2022-04-14",
+      context: "Martins Spartipps, Fortsetzung",
     },
   ],
 };
