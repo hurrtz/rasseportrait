@@ -52,6 +52,10 @@ const getTimeCopy = (timecode: Podcast["timecode"]) => {
     out.push(`Sekunde ${time[2]}`);
   }
 
+  if (!time[0] && !time[1] && !time[2]) {
+    out.push("n.A.");
+  }
+
   return out.join(", ");
 };
 
