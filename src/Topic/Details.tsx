@@ -116,28 +116,37 @@ export default ({ topicIdentifier, closeUI, children }: Props) => {
             </Fab>
           )}
           <CardHeaderImage image={image} />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+          <CardContent sx={{ textAlign: "center" }}>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{
+                display: "inline-block",
+                fontVariant: "small-caps",
+                textAlign: "center",
+                borderBottom: "0.5px solid #000",
+                padding: "0 16px 4px",
+                margin: "0 0 4px",
+              }}
+            >
               {title}
             </Typography>
 
-            <List dense>
+            <List dense sx={{ paddingBottom: 0 }}>
               {podcasts.map(
-                ({
-                  number,
-                  episode,
-                  url,
-                  timecode,
-                  type = "audio",
-                  context = "Rasseportrait",
-                }) => (
+                (
+                  { number, episode, url, timecode, type = "audio" },
+                  index,
+                  array,
+                ) => (
                   <ListItem
                     disablePadding
                     key={number}
                     sx={{
                       backgroundColor: "#e3f2fd",
                       marginTop: 1,
-                      marginBottom: 1,
+                      marginBottom: index === array.length - 1 ? 0 : 1,
                       borderRadius: 2,
                     }}
                   >
@@ -153,10 +162,6 @@ export default ({ topicIdentifier, closeUI, children }: Props) => {
                           <div>
                             <span>
                               Folge {number} — {getTimeCopy(timecode)}
-                            </span>
-                            <br />
-                            <span style={{ fontVariant: "small-caps" }}>
-                              {context}
                             </span>
                           </div>
                         }

@@ -211,8 +211,20 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
             </Fab>
           )}
           <CardHeaderImage image={image} />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+          <CardContent sx={{ textAlign: "center" }}>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{
+                display: "inline-block",
+                fontVariant: "small-caps",
+                textAlign: "center",
+                borderBottom: "0.5px solid #000",
+                padding: "0 16px 4px",
+                margin: "0 0 16px",
+              }}
+            >
               {names[0]}
             </Typography>
             {isOfficiallyPresented === false && (
@@ -296,8 +308,15 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
               )}
             </List>
 
-            <Typography gutterBottom variant="body2" component="div">
-              Weitere Infos:
+            <Typography
+              gutterBottom
+              variant="body2"
+              component="div"
+              sx={{
+                fontVariant: "small-caps",
+              }}
+            >
+              Weitere Infos
             </Typography>
 
             <Stack direction="row" justifyContent="space-between">
