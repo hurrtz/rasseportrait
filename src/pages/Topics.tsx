@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import * as amplitude from "@amplitude/analytics-browser";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Typography from "@mui/material/Typography";
+import Alert from "@mui/material/Alert";
 import TopicList from "../Topic/List";
 import type { TopicIdentifier } from "../../types/topic";
 import { getWindowLocationSearch } from "../utils";
-import Typography from "@mui/material/Typography";
 import Details from "../Details";
 
 interface Props {}
@@ -55,6 +56,13 @@ const PageTopicList = ({}: Props) => {
       <Typography variant={isMobile ? "h4" : "h2"} gutterBottom>
         Themen
       </Typography>
+
+      <Alert severity="info" sx={{ marginBottom: 4 }}>
+        <Typography variant="h6">Work in progress</Typography>
+        <Typography>
+          Seite ist im Aufbau und weitere Inhalte folgen demnächst!
+        </Typography>
+      </Alert>
 
       <TopicList
         searchValue={searchValue}

@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Alert from "@mui/material/Alert";
 
 const Tipps = () => {
   const isMobile = useMediaQuery("(max-width: 480px)");
@@ -12,12 +13,12 @@ const Tipps = () => {
         Tipps
       </Typography>
 
-      <Typography variant="body2" gutterBottom>
-        dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
-      </Typography>
+      <Alert severity="info">
+        <Typography variant="h6">Work in progress</Typography>
+        <Typography>
+          Seite ist im Aufbau und weitere Inhalte folgen demnächst!
+        </Typography>
+      </Alert>
     </Box>
   );
 };
