@@ -1,7 +1,7 @@
 import BreedList from "./BreedList";
 import Topics from "./Topics";
 import Tipps from "./Tipps";
-import DDDHWNB from "./DDDHWNB";
+import DDDHNB from "./DDDHNB";
 import Imprint from "./Imprint";
 
-export { BreedList, Topics, Tipps, DDDHWNB, Imprint };
+export { BreedList, Topics, Tipps, DDDHNB, Imprint };

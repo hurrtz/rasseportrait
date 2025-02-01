@@ -15,7 +15,7 @@ import ImprintIcon from "@mui/icons-material/Policy";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import breedsList from "../breeds";
 import topicsList from "../topics";
-import { BreedList, Topics, Tipps, DDDHWNB, Imprint } from "./pages";
+import { BreedList, Topics, Tipps, Imprint, DDDHNB } from "./pages";
 import { useBreedsStore } from "./stores/Breeds";
 import { useTopicsStore } from "./stores/Topics";
 import { useSettingsStore } from "./stores/Settings";
@@ -205,7 +205,7 @@ const App = () => {
               />
               <Tab value="topics" label="Themen" icon={<TopicIcon />} />
               <Tab value="tipps" label="Tipps" icon={<TippsIcon />} />
-              <Tab value="dddhwnb" label="DDDHWNB" icon={<DDDHWNBIcon />} />
+              <Tab value="dddhnb" label="DDDHNB" icon={<DDDHWNBIcon />} />
               <Tab value="imprint" label="Impressum" icon={<ImprintIcon />} />
             </TabList>
           </Box>
@@ -225,8 +225,8 @@ const App = () => {
             <Tipps />
           </TabPanel>
 
-          <TabPanel value="dddhwnb" sx={{ width: "100%" }}>
-            <DDDHWNB />
+          <TabPanel value="dddhnb" sx={{ width: "100%" }}>
+            <DDDHNB />
           </TabPanel>
 
           <TabPanel value="imprint" sx={{ width: "100%" }}>
