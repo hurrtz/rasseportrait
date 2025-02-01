@@ -66,11 +66,23 @@ const FCIText = ({
 
   if (standardNumber && standardNumber.length > 0) {
     return (
-      <Typography variant="body2" color="text.secondary">
-        FCI: {`Standardnummer${standardNumber.length === 1 ? "" : "n"}`}{" "}
-        {standardNumber.join(", ")} (Gruppe {firstCompleteFCIDataset?.group},
-        Sektion {firstCompleteFCIDataset?.section})
-      </Typography>
+      <>
+        <Typography
+          gutterBottom
+          variant="body2"
+          component="div"
+          sx={{
+            fontVariant: "small-caps",
+          }}
+        >
+          FCI
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {`Standardnummer${standardNumber.length === 1 ? "" : "n"}`}{" "}
+          {standardNumber.join(", ")} (Gruppe {firstCompleteFCIDataset?.group},
+          Sektion {firstCompleteFCIDataset?.section})
+        </Typography>
+      </>
     );
   }
 
@@ -226,6 +238,13 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
               }}
             >
               {names[0]}
+              {!settings.collapseSimilarBreeds &&
+                variants &&
+                variants.length > 0 && (
+                  <Typography gutterBottom component="div">
+                    {variants[0].names[0]}
+                  </Typography>
+                )}
             </Typography>
             {isOfficiallyPresented === false && (
               <Typography
@@ -242,13 +261,6 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
                 noch nicht offiziell besprochen
               </Typography>
             )}
-            {!settings.collapseSimilarBreeds &&
-              variants &&
-              variants.length > 0 && (
-                <Typography gutterBottom variant="h6" component="div">
-                  {variants[0].names[0]}
-                </Typography>
-              )}
 
             <FCIText fci={fci} variants={variants} />
 
