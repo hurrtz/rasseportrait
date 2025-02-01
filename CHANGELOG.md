@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.52.0](https://github.com/hurrtz/rasseportrait/compare/v1.51.0...v1.52.0) (2025-02-01)
+
+
+### Features
+
+* add CssBaseline ([6d3e747](https://github.com/hurrtz/rasseportrait/commit/6d3e7474cfebb33ee2631f93f404b38adb8feeab))
+* add dummy page DDDHWNB ([87c8d2c](https://github.com/hurrtz/rasseportrait/commit/87c8d2ca9f8bf5db422f8dbf5f0b7a8b3b087bb7))
+* add dummy page Tipps ([6b9c37f](https://github.com/hurrtz/rasseportrait/commit/6b9c37ffa29e8fe624ca2894039e9b8551e412cb))
+* add dummy page Topics ([974c096](https://github.com/hurrtz/rasseportrait/commit/974c096fe88b740f9947945b48be512bc265ee5a))
+* add package @mui/lab ([7d23a14](https://github.com/hurrtz/rasseportrait/commit/7d23a1405909dd58ee27d250a1ab2642ce29a66b))
+* add topic Martin's Family ([ecb61bd](https://github.com/hurrtz/rasseportrait/commit/ecb61bd936525957cabd3036b3fbd9317ad3360b))
+* add topics content ([10b343c](https://github.com/hurrtz/rasseportrait/commit/10b343c50dd9d5d42bf0ba268602eac9099a1af3))
+* add topics Dangerous Dog List and Curel Breeding ([5545590](https://github.com/hurrtz/rasseportrait/commit/55455904fa22388d19d12899907bf751ab3bd106))
+* add topics to Horses ([d332b49](https://github.com/hurrtz/rasseportrait/commit/d332b4953bc7c01a7edb38b615644a9b50b307d5))
+* add WiP statements ([35c8587](https://github.com/hurrtz/rasseportrait/commit/35c8587a96a729a423a8c68758457c78c61da080))
+* improve UI on card details ([85b3485](https://github.com/hurrtz/rasseportrait/commit/85b3485b1c002aa28d4828abb68d6a81998a6c47))
+* make settingsfab responsive to mobile ([83c9149](https://github.com/hurrtz/rasseportrait/commit/83c9149c44631580042fddadfc51e5c3549c3ede))
+* migrate site to tabbed view ([beacee7](https://github.com/hurrtz/rasseportrait/commit/beacee7246cb720531ceb4748123f3c0d6c49082))
+* move illustrations under one umbrella ([e8dd4dd](https://github.com/hurrtz/rasseportrait/commit/e8dd4ddb09c2852e3d5a2edf5669fe327b06b566))
+* provide fallback timestamp ([c55efc3](https://github.com/hurrtz/rasseportrait/commit/c55efc348bb20f37e0601e4e42e10bcc2814058f))
+* remove obsolete HeaderSection ([e7cabdc](https://github.com/hurrtz/rasseportrait/commit/e7cabdc8c87b3ffb7942ea7b7bcb46a91c38a39e))
+* rename folder db -> breeds ([1e126ed](https://github.com/hurrtz/rasseportrait/commit/1e126ed5876791e8e97dd692805dd7b6c80bfe8e))
+* update structure of page Imprint ([d8d0289](https://github.com/hurrtz/rasseportrait/commit/d8d0289509abd10ebb14cce4fd30a2241a735eac))
+
+
+### Bug Fixes
+
+* improve UI in breed details ([2e5d444](https://github.com/hurrtz/rasseportrait/commit/2e5d444e671b9d2d4c595d36ccc98f8980c6964a))
+
 ## [1.51.0](https://github.com/hurrtz/rasseportrait/compare/v1.50.0...v1.51.0) (2025-01-30)
 
 
