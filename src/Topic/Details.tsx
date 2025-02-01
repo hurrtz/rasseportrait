@@ -136,7 +136,7 @@ export default ({ topicIdentifier, closeUI, children }: Props) => {
             <List dense sx={{ paddingBottom: 0 }}>
               {podcasts.map(
                 (
-                  { number, episode, url, timecode, type = "audio" },
+                  { number, episode, url, timecode, type = "audio", context },
                   index,
                   array,
                 ) => (
@@ -163,6 +163,14 @@ export default ({ topicIdentifier, closeUI, children }: Props) => {
                             <span>
                               Folge {number} — {getTimeCopy(timecode)}
                             </span>
+                            {context && (
+                              <>
+                                <br />
+                                <span style={{ fontVariant: "small-caps" }}>
+                                  {context}
+                                </span>
+                              </>
+                            )}
                           </div>
                         }
                         primaryTypographyProps={{

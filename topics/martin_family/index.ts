@@ -1,0 +1,93 @@
+import type { Topic } from "../../types/topic";
+
+const topic: Topic = {
+  id: "martin_family",
+  title: "Martins (erweiterte) Familie",
+  keywords: [
+    "Martin",
+    "Familie",
+    "Schwester",
+    "Astrid",
+    "Tochter",
+    "Marleen",
+    "Freund",
+    "Alexander",
+  ],
+  podcast: [
+    {
+      number: 5,
+      episode: "Wolf & Hund, Futterbeuteltraining und eine besondere Gästin",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/5-wolf-hund-futterbeuteltraining-und-eine-besondere-gaestin-cow2hi7xinfj0",
+      timecode: 0,
+      airDate: "2021-04-06",
+      context: "Tochter Marleen",
+    },
+    {
+      number: 10,
+      episode: "Hundeführerschein, Homöopathie & Matschbrötchen",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/10-hundefuehrerschein-homoeopathie-matschbroetchen-3rkt1q5nrlkum",
+      timecode: 0,
+      airDate: "2021-05-11",
+      context: "Tochter Marleen",
+    },
+    {
+      number: 42,
+      episode: "Silvesterspecial",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/42-silvesterspecial-qjvj2rjgy407m",
+      timecode: 0,
+      airDate: "2021-12-29",
+      context: "Freund Alexander",
+    },
+    {
+      number: 66,
+      episode: "Martins Schwester packt und teilt aus!",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/57-welpenhaendler-zerrspiele-spartipps-teil-2-it4nn687n9bsg",
+      timecode: 0,
+      airDate: "2022-06-16",
+      context: "Schwester Astrid",
+    },
+    {
+      number: 86,
+      episode: "Helfen hilft!",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/86-helfen-hilft-aehe5345ysihk",
+      timecode: 0,
+      airDate: "2022-11-03",
+      context: "Schwester Astrid",
+    },
+    {
+      number: 101,
+      episode: "Jubiläumsfolge live aus dem Walfisch",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/101-jubilaeumsfolge-live-aus-dem-walfisch-du0ci4j36ofr2",
+      timecode: 0,
+      airDate: "2023-02-16",
+      context: "Tochter Marleen und Schwester Astrid",
+    },
+    {
+      number: 130,
+      episode: "Dackelfreunde gesucht!",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/130-dackelfreunde-gesucht-yggvyxqshadwj",
+      timecode: 0,
+      airDate: "2023-09-07",
+      context: "Schwester Astrid",
+    },
+    {
+      number: "Exklusiv #6",
+      episode: "Live-Podcast Euskirchen",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-euskirchen-xnzts3crxhjd5",
+      timecode: 0,
+      airDate: "2024-11-13",
+      context: "Schwester Astrid",
+    },
+    {
+      number: "Exklusiv #6",
+      episode: "Live-Podcast Euskirchen",
+      url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-6-live-podcast-euskirchen-1013243",
+      timecode: 0,
+      airDate: "2024-11-13",
+      type: "video",
+      context: "Schwester Astrid",
+    },
+  ],
+};
+
+export default topic;
