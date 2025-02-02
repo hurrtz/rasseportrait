@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.53.0](https://github.com/hurrtz/rasseportrait/compare/v1.52.0...v1.53.0) (2025-02-02)
+
+
+### Features
+
+* provide first content for Tipps ([0ff7a55](https://github.com/hurrtz/rasseportrait/commit/0ff7a55a1fa57a4fd74110b3aad510438117ee74))
+* put topics and breeds under umbrella folder ([8683b5d](https://github.com/hurrtz/rasseportrait/commit/8683b5d91951f277332d5c0481a654bb70773b55))
+
 ## [1.52.0](https://github.com/hurrtz/rasseportrait/compare/v1.51.0...v1.52.0) (2025-02-01)
 
 
