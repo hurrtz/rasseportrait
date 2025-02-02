@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.55.0](https://github.com/hurrtz/rasseportrait/compare/v1.54.0...v1.55.0) (2025-02-02)
+
+
+### Features
+
+* add content for topic Guests ([ec2eb79](https://github.com/hurrtz/rasseportrait/commit/ec2eb792615fa83f63e2a0382006b4fa2b7d2dbe))
+
 ## [1.54.0](https://github.com/hurrtz/rasseportrait/compare/v1.53.0...v1.54.0) (2025-02-02)
 
 
