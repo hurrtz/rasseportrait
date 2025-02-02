@@ -1,4 +1,4 @@
-export type Author = "Martin Rütter" | "Katharina Adick";
+export type Author = string;
 
 interface Tipps {
   title: string;

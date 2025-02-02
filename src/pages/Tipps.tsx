@@ -42,13 +42,43 @@ const stringAvatar = (name: string) => ({
 
 const AvatarMartin = <Avatar {...stringAvatar("Martin Rütter")} />;
 const AvatarKatharina = <Avatar {...stringAvatar("Katharina Adick")} />;
+const AvatarSophie = <Avatar {...stringAvatar("Sophie Grethe")} />;
+const AvatarKirsten = <Avatar {...stringAvatar("Kirsten Tönnies")} />;
+const AvatarConny = <Avatar {...stringAvatar("Conny Sporrer")} />;
+const AvatarAchim = <Avatar {...stringAvatar("Achim Gruber")} />;
+const AvatarPeter = <Avatar {...stringAvatar("Peter Wohlleben")} />;
+const AvatarKarim = <Avatar {...stringAvatar("Karim Montasser")} />;
+const AvatarMai = <Avatar {...stringAvatar("Mai Thi Nguyen Kim")} />;
 
 const getAvatar = (name: Author) => {
   switch (name) {
     case "Martin Rütter":
       return AvatarMartin;
+
     case "Katharina Adick":
       return AvatarKatharina;
+
+    case "Sophie Grethe":
+      return AvatarSophie;
+
+    case "Dr. Kirsten Tönnies":
+      return AvatarKirsten;
+
+    case "Conny Sporrer":
+      return AvatarConny;
+
+    case "Prof. Achim Gruber":
+      return AvatarAchim;
+
+    case "Peter Wohlleben":
+      return AvatarPeter;
+
+    case "Dr. Karim Montasser":
+      return AvatarKarim;
+
+    case "Mai Thi Nguyen Kim":
+      return AvatarMai;
+
     default:
       return null;
   }
