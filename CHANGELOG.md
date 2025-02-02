@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.57.0](https://github.com/hurrtz/rasseportrait/compare/v1.56.0...v1.57.0) (2025-02-02)
+
+
+### Bug Fixes
+
+* masonry layout on mobile ([233c0c7](https://github.com/hurrtz/rasseportrait/commit/233c0c71142043ec5417a696007e8686d149825d))
+
 ## [1.56.0](https://github.com/hurrtz/rasseportrait/compare/v1.55.0...v1.56.0) (2025-02-02)
 
 ## [1.55.0](https://github.com/hurrtz/rasseportrait/compare/v1.54.0...v1.55.0) (2025-02-02)
