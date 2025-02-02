@@ -5,6 +5,7 @@ import MartinFamily from "./martin_family";
 import CruelBreeding from "./cruel_breeding";
 import DangerousDogsList from "./dangerous_dogs_list";
 import Guests from "./guests";
+import SicknessInDogs from "./sickness_in_dogs";
 
 export default {
   SayingFarewell,
@@ -14,4 +15,5 @@ export default {
   CruelBreeding,
   DangerousDogsList,
   Guests,
+  SicknessInDogs,
 };
