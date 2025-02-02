@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.58.0](https://github.com/hurrtz/rasseportrait/compare/v1.57.0...v1.58.0) (2025-02-02)
+
+
+### Features
+
+* add new topic Sickness in Dogs ([a4b2be7](https://github.com/hurrtz/rasseportrait/commit/a4b2be789010b920417c9f86b03429a738fe13cb))
+
 ## [1.57.0](https://github.com/hurrtz/rasseportrait/compare/v1.56.0...v1.57.0) (2025-02-02)
 
 
