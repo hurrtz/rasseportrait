@@ -7,6 +7,24 @@ import TopicList from "../Topic/List";
 import type { TopicIdentifier } from "../../types/topic";
 import { getWindowLocationSearch } from "../utils";
 import Details from "../Details";
+import Paper from "@mui/material/Paper";
+import Masonry from "@mui/lab/Masonry";
+import { styled } from "@mui/material/styles";
+
+const heights = [
+  150, 30, 90, 70, 110, 150, 130, 80, 50, 90, 100, 150, 30, 50, 80,
+];
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(0.5),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+  ...theme.applyStyles("dark", {
+    backgroundColor: "#1A2027",
+  }),
+}));
 
 interface Props {}
 

@@ -13,6 +13,7 @@ import Avatar from "@mui/material/Avatar";
 import Divider from "@mui/material/Divider";
 import { tipps } from "../../db/tipps";
 import { Author } from "../../types/tipps";
+import Masonry from "@mui/lab/Masonry";
 
 const stringToColor = (string: string) => {
   let hash = 0;
@@ -133,26 +134,28 @@ const Tipps = () => {
         </Typography>
       </Alert>
 
-      {tipps.map(({ title, subheader, tipps, url }) => (
-        <Card sx={{ marginTop: 2 }}>
-          <CardHeader title={title} subheader={subheader} />
-          <CardContent>
-            {tipps.map(({ tipp, author }, index, array) => (
-              <>
-                <EpisodeTipp content={tipp} author={author} />
-                {index < array.length - 1 && StyledDivider}
-              </>
-            ))}
-          </CardContent>
-          <CardActions>
-            <Button size="small">
-              <Link underline="none" target="_blank" href={url}>
-                zur Episode
-              </Link>
-            </Button>
-          </CardActions>
-        </Card>
-      ))}
+      <Masonry columns={isMobile ? 1 : 3} spacing={2}>
+        {tipps.map(({ title, subheader, tipps, url }) => (
+          <Card sx={{ marginTop: 2 }} key={title}>
+            <CardHeader title={title} subheader={subheader} />
+            <CardContent>
+              {tipps.map(({ tipp, author }, index, array) => (
+                <>
+                  <EpisodeTipp content={tipp} author={author} />
+                  {index < array.length - 1 && StyledDivider}
+                </>
+              ))}
+            </CardContent>
+            <CardActions>
+              <Button size="small">
+                <Link underline="none" target="_blank" href={url}>
+                  zur Episode
+                </Link>
+              </Button>
+            </CardActions>
+          </Card>
+        ))}
+      </Masonry>
     </Box>
   );
 };
