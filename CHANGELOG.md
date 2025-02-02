@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.54.0](https://github.com/hurrtz/rasseportrait/compare/v1.53.0...v1.54.0) (2025-02-02)
+
+
+### Features
+
+* add first content to page DDDHNB ([4a21b63](https://github.com/hurrtz/rasseportrait/commit/4a21b63a35e590d07c37c163b980192f1653ed27))
+* add more content for page Tipps ([d8bc3a8](https://github.com/hurrtz/rasseportrait/commit/d8bc3a8c09fcdd0e57f69583d62782cd7cc1d4cd))
+
 ## [1.53.0](https://github.com/hurrtz/rasseportrait/compare/v1.52.0...v1.53.0) (2025-02-02)
 
 
