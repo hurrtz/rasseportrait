@@ -6,6 +6,14 @@ const topic: Topic = {
   keywords: ["Gast", "Gäste", "Gäste:innen"],
   podcast: [
     {
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/193-tierschutzgesetz-auf-der-kippe-mit-ariane-desireekari-ru3lhdp8eck20",
+      number: 193,
+      episode: "Tierschutzgesetz auf der Kippe?",
+      timecode: 0,
+      context: "zu Gast: Ariane Désirée Kari",
+      airDate: "2024-11-21",
+    },
+    {
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/192-was-ist-eigentlich-hoopers-agility-0njifnzinmuz1",
       number: 192,
       episode: "Was ist eigentlich Hoopers Agility?",
