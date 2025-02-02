@@ -118,8 +118,30 @@ const EpisodeTipp = ({
 
 const StyledDivider = <Divider sx={{ marginTop: 2, marginBottom: 2 }} />;
 
+const content = tipps.map(({ title, subheader, tipps, url }) => (
+  <Card sx={{ marginTop: 2 }} key={title}>
+    <CardHeader title={title} subheader={subheader} />
+    <CardContent>
+      {tipps.map(({ tipp, author }, index, array) => (
+        <>
+          <EpisodeTipp content={tipp} author={author} />
+          {index < array.length - 1 && StyledDivider}
+        </>
+      ))}
+    </CardContent>
+    <CardActions>
+      <Button size="small">
+        <Link underline="none" target="_blank" href={url}>
+          zur Episode
+        </Link>
+      </Button>
+    </CardActions>
+  </Card>
+));
+
 const Tipps = () => {
-  const isMobile = useMediaQuery("(max-width: 480px)");
+  const isMobile = useMediaQuery("(max-width: 799px)");
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
 
   return (
     <Box>
@@ -134,28 +156,13 @@ const Tipps = () => {
         </Typography>
       </Alert>
 
-      <Masonry columns={isMobile ? 1 : 3} spacing={2}>
-        {tipps.map(({ title, subheader, tipps, url }) => (
-          <Card sx={{ marginTop: 2 }} key={title}>
-            <CardHeader title={title} subheader={subheader} />
-            <CardContent>
-              {tipps.map(({ tipp, author }, index, array) => (
-                <>
-                  <EpisodeTipp content={tipp} author={author} />
-                  {index < array.length - 1 && StyledDivider}
-                </>
-              ))}
-            </CardContent>
-            <CardActions>
-              <Button size="small">
-                <Link underline="none" target="_blank" href={url}>
-                  zur Episode
-                </Link>
-              </Button>
-            </CardActions>
-          </Card>
-        ))}
-      </Masonry>
+      {isMobile ? (
+        <>{content}</>
+      ) : (
+        <Masonry columns={isDesktop ? 3 : 2} spacing={2}>
+          {content}
+        </Masonry>
+      )}
     </Box>
   );
 };
