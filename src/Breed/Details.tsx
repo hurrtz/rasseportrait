@@ -184,6 +184,7 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
         breed: breedIdentifier?.id,
         variant: breedIdentifier?.variantName,
         url,
+        category: "breeds",
       });
       window.open(url, "_blank");
     };

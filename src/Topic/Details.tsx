@@ -76,18 +76,19 @@ export default ({ topicIdentifier, closeUI, children }: Props) => {
   });
 
   if (topic) {
-    const { title, keywords, podcast: podcasts, furtherReading, image } = topic;
+    const { title, podcast: podcasts, furtherReading, image } = topic;
 
     const openPodcast = (url: string) => {
       amplitude.track("Podcast Clicked", {
         topic: topicIdentifier?.id,
         url,
+        category: "topics",
       });
       window.open(url, "_blank");
     };
 
     const openReadMore = (url: string) => {
-      amplitude.track("Additional Breed Info Clicked", {
+      amplitude.track("Additional Topic Info Clicked", {
         topic: topicIdentifier?.id,
         url,
       });

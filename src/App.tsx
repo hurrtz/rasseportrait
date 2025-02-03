@@ -31,6 +31,7 @@ const App = () => {
   const isMobile = useMediaQuery("(max-width: 480px)");
 
   const handleTabChange = (event: SyntheticEvent, newValue: string) => {
+    amplitude.track("Page: Select", { newPage: newValue });
     setTabState(newValue);
   };
 

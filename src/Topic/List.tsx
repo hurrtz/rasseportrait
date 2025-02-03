@@ -4,7 +4,6 @@ import type { TopicIdentifier } from "../../types/topic";
 import TopicCards from "./Cards";
 
 interface Props {
-  searchValue?: string;
   setSelectedTopic: (topicIdentifier: TopicIdentifier) => void;
   isMobile?: boolean;
 }

@@ -8,6 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import Link from "@mui/material/Link";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
+import * as amplitude from "@amplitude/analytics-browser";
 import { dddhnb } from "../../db/dddhnb";
 import { DDDHNB } from "../../types/dddhnb";
 
@@ -58,7 +59,17 @@ const DDDHNB = () => {
           </CardContent>
           <CardActions>
             <Button size="small">
-              <Link underline="none" target="_blank" href={url}>
+              <Link
+                underline="none"
+                target="_blank"
+                href={url}
+                onClick={() => {
+                  amplitude.track("Podcast Clicked", {
+                    category: "dddhnb",
+                    url,
+                  });
+                }}
+              >
                 zur Episode
               </Link>
             </Button>

@@ -11,6 +11,7 @@ import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import Divider from "@mui/material/Divider";
+import * as amplitude from "@amplitude/analytics-browser";
 import { tipps } from "../../db/tipps";
 import { Author } from "../../types/tipps";
 import Masonry from "@mui/lab/Masonry";
@@ -131,7 +132,14 @@ const content = tipps.map(({ title, subheader, tipps, url }) => (
     </CardContent>
     <CardActions>
       <Button size="small">
-        <Link underline="none" target="_blank" href={url}>
+        <Link
+          underline="none"
+          target="_blank"
+          href={url}
+          onClick={() => {
+            amplitude.track("Podcast Clicked", { category: "tipp", url });
+          }}
+        >
           zur Episode
         </Link>
       </Button>
