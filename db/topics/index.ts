@@ -8,6 +8,7 @@ import Guests from "./guests";
 import SicknessInDogs from "./sickness_in_dogs";
 import Veganism from "./veganism";
 import NewYearsEve from "./new_years_eve";
+import Live from "./live";
 
 export default {
   SayingFarewell,
@@ -20,4 +21,5 @@ export default {
   SicknessInDogs,
   Veganism,
   NewYearsEve,
+  Live,
 };
