@@ -6,6 +6,7 @@ import CruelBreeding from "./cruel_breeding";
 import DangerousDogsList from "./dangerous_dogs_list";
 import Guests from "./guests";
 import SicknessInDogs from "./sickness_in_dogs";
+import Veganism from "./veganism";
 
 export default {
   SayingFarewell,
@@ -16,4 +17,5 @@ export default {
   DangerousDogsList,
   Guests,
   SicknessInDogs,
+  Veganism,
 };
