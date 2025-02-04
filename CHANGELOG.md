@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.60.0](https://github.com/hurrtz/rasseportrait/compare/v1.59.0...v1.60.0) (2025-02-04)
+
+
+### Features
+
+* add new guest to topic guests ([b2c54d0](https://github.com/hurrtz/rasseportrait/commit/b2c54d0e30ba6819caf3e74588ea633b9eab43ab))
+* add new topic New Years Eve ([ec331b1](https://github.com/hurrtz/rasseportrait/commit/ec331b1b0b937221e873311c3e851bfdd3cc5a9f))
+* add topic Veganism ([5fd329e](https://github.com/hurrtz/rasseportrait/commit/5fd329e36fc52b68aac6691a5d921073657efa55))
+
 ## [1.59.0](https://github.com/hurrtz/rasseportrait/compare/v1.58.0...v1.59.0) (2025-02-03)
 
 
