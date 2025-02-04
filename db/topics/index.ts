@@ -7,6 +7,7 @@ import DangerousDogsList from "./dangerous_dogs_list";
 import Guests from "./guests";
 import SicknessInDogs from "./sickness_in_dogs";
 import Veganism from "./veganism";
+import NewYearsEve from "./new_years_eve";
 
 export default {
   SayingFarewell,
@@ -18,4 +19,5 @@ export default {
   Guests,
   SicknessInDogs,
   Veganism,
+  NewYearsEve,
 };
