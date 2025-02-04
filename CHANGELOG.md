@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.61.0](https://github.com/hurrtz/rasseportrait/compare/v1.60.0...v1.61.0) (2025-02-04)
+
+
+### Features
+
+* add new topic Live ([2fcf337](https://github.com/hurrtz/rasseportrait/commit/2fcf337a9dd759521e6d501d1bac3efd90258f13))
+
 ## [1.60.0](https://github.com/hurrtz/rasseportrait/compare/v1.59.0...v1.60.0) (2025-02-04)
 
 
