@@ -6,6 +6,14 @@ const topic: Topic = {
   keywords: ["Listenhunde", "Kampfhunde", "gefährliche Hunde"],
   podcast: [
     {
+      number: "Summer Edition #6",
+      episode: "Junger Mann zum Mitreisen gesucht!",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-6-junger-mann-zum-mitreisen-gesucht-oxv9o45d8w0ad",
+      timecode: 0,
+      airDate: "2024-08-01",
+      context: "Brandenburg schafft die Rasseliste ab!",
+    },
+    {
       number: 54,
       episode:
         "Starke Frauen, eine blutige Nase & der American Staffordshire Terrier",
