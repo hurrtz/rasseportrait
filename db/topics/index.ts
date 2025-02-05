@@ -9,6 +9,7 @@ import SicknessInDogs from "./sickness_in_dogs";
 import Veganism from "./veganism";
 import NewYearsEve from "./new_years_eve";
 import Live from "./live";
+import AnimalShelterDogOfTheWeek from "./animal_shelter_animal_of_the_week";
 
 export default {
   SayingFarewell,
@@ -22,4 +23,5 @@ export default {
   Veganism,
   NewYearsEve,
   Live,
+  AnimalShelterDogOfTheWeek,
 };
