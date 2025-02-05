@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.62.0](https://github.com/hurrtz/rasseportrait/compare/v1.61.0...v1.62.0) (2025-02-05)
+
+
+### Features
+
+* add content to topic Dangerous Dogs List ([3cbea90](https://github.com/hurrtz/rasseportrait/commit/3cbea90fa9cc6d5467712985a16cc91aed815362))
+* add new topic Animal Shelter Animal Of The Week ([2e908b3](https://github.com/hurrtz/rasseportrait/commit/2e908b333c725d2cda64dcbb5b76de3ff8cd41d0))
+
 ## [1.61.0](https://github.com/hurrtz/rasseportrait/compare/v1.60.0...v1.61.0) (2025-02-04)
 
 
