@@ -23,6 +23,7 @@ export interface Breed {
   podcast: Podcast[];
   furtherReading: FurtherReading[];
   recognitions?: string[];
+  startShowingFromTimestamp?: number;
 }
 
 export interface EnrichedBreed extends Omit<Breed, "image" | "podcast"> {

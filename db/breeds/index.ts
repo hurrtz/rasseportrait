@@ -6,6 +6,7 @@ import AmericanStaffordshireTerrier from "./american_staffordshire_terrier";
 import AppenzellerSennenhund from "./appenzeller_sennenhund";
 import AustralianKelpie from "./australian_kelpie";
 import AustralianShepherd from "./australian_shepherd";
+import AustralianSilkyTerrier from "./australian_silky_terrier";
 import Azawakh from "./azawakh";
 import Basenji from "./basenji";
 import BavarianMountainHound from "./bavarian_mountain_hound";
@@ -139,6 +140,7 @@ export default {
   AppenzellerSennenhund,
   AustralianKelpie,
   AustralianShepherd,
+  AustralianSilkyTerrier,
   Azawakh,
   Basenji,
   BavarianMountainHound,
