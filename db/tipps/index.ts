@@ -2,6 +2,25 @@ import { TippsList } from "../../types/tipps";
 
 export const tipps: TippsList = [
   {
+    title: "Aktuelle Folge",
+    subheader: "Episode 204 — Minute 58:48",
+    tipps: [
+      {
+        tipp: [
+          "Machiavelli Sessions & Stories auf WDR COSMO und in ARD Mediathek",
+          "Spenden für Eddy",
+        ],
+        author: "Martin Rütter",
+      },
+      {
+        tipp: ["bitte geht wählen!"],
+        author: "Katharina Adick",
+      },
+    ],
+    url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+    startShowingFromTimestamp: 1738882800000,
+  },
+  {
     title: "Hausfuchs! Ein Crosspodcast mit 'Behind Science'",
     subheader: "Episode 190 — Minute 15:45",
     tipps: [

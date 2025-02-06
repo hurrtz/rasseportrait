@@ -16,6 +16,10 @@ import { tipps } from "../../db/tipps";
 import { Author } from "../../types/tipps";
 import Masonry from "@mui/lab/Masonry";
 
+const now = Date.now();
+const url = new URL(window.location.href);
+const isPreviewMode = url.searchParams.get("preview");
+
 const stringToColor = (string: string) => {
   let hash = 0;
   let i;
@@ -119,33 +123,41 @@ const EpisodeTipp = ({
 
 const StyledDivider = <Divider sx={{ marginTop: 2, marginBottom: 2 }} />;
 
-const content = tipps.map(({ title, subheader, tipps, url }) => (
-  <Card sx={{ marginTop: 2 }} key={title}>
-    <CardHeader title={title} subheader={subheader} />
-    <CardContent>
-      {tipps.map(({ tipp, author }, index, array) => (
-        <>
-          <EpisodeTipp content={tipp} author={author} />
-          {index < array.length - 1 && StyledDivider}
-        </>
-      ))}
-    </CardContent>
-    <CardActions>
-      <Button size="small">
-        <Link
-          underline="none"
-          target="_blank"
-          href={url}
-          onClick={() => {
-            amplitude.track("Podcast Clicked", { category: "tipp", url });
-          }}
-        >
-          zur Episode
-        </Link>
-      </Button>
-    </CardActions>
-  </Card>
-));
+const content = tipps
+  .filter(({ startShowingFromTimestamp }) => {
+    if (isPreviewMode || startShowingFromTimestamp === undefined) {
+      return true;
+    }
+
+    return now > startShowingFromTimestamp;
+  })
+  .map(({ title, subheader, tipps, url }) => (
+    <Card sx={{ marginTop: 2 }} key={title}>
+      <CardHeader title={title} subheader={subheader} />
+      <CardContent>
+        {tipps.map(({ tipp, author }, index, array) => (
+          <>
+            <EpisodeTipp content={tipp} author={author} />
+            {index < array.length - 1 && StyledDivider}
+          </>
+        ))}
+      </CardContent>
+      <CardActions>
+        <Button size="small">
+          <Link
+            underline="none"
+            target="_blank"
+            href={url}
+            onClick={() => {
+              amplitude.track("Podcast Clicked", { category: "tipp", url });
+            }}
+          >
+            zur Episode
+          </Link>
+        </Button>
+      </CardActions>
+    </Card>
+  ));
 
 const Tipps = () => {
   const isMobile = useMediaQuery("(max-width: 799px)");

@@ -8,6 +8,7 @@ interface Tipps {
     author: Author;
   }[];
   url: string;
+  startShowingFromTimestamp?: number;
 }
 
 export type TippsList = Tipps[];
