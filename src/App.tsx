@@ -26,6 +26,10 @@ import type { EnrichedTopic } from "../types/topic";
 
 const storedSettings = window.localStorage.getItem("settings");
 
+const now = Date.now();
+const url = new URL(window.location.href);
+const isPreviewMode = url.searchParams.get("preview");
+
 const App = () => {
   const [tabState, setTabState] = React.useState("breedlist");
   const isMobile = useMediaQuery("(max-width: 480px)");
@@ -55,7 +59,14 @@ const App = () => {
   const breeds = Object.values(breedsList);
   const topics = Object.values(topicsList);
 
-  let breedsWithVariants = breeds;
+  // filter breeds that should not be shown yet
+  let breedsWithVariants = breeds.filter((breed) => {
+    if (isPreviewMode || breed.startShowingFromTimestamp === undefined) {
+      return true;
+    }
+
+    return now > breed.startShowingFromTimestamp;
+  });
 
   if (!settings.collapseSimilarBreeds) {
     breedsWithVariants = flattenBreedVariants({ breeds });

@@ -4,7 +4,7 @@ const breed: Breed = {
   id: "australian_silky_terrier",
   names: ["Australian Silky Terrier"],
   wasGuessedCorrectlyInPodcast: true,
-  startShowingFromTimestamp: 1707273600,
+  startShowingFromTimestamp: 1738882800000,
   fci: {
     group: 3,
     section: 4,
