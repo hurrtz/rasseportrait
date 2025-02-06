@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.63.0](https://github.com/hurrtz/rasseportrait/compare/v1.62.0...v1.63.0) (2025-02-06)
+
+
+### Features
+
+* add Australian Silky Terrier ([b03219a](https://github.com/hurrtz/rasseportrait/commit/b03219ab14da33dd8a98ace4c9cf820f794459a6))
+* add tipps ([1128d0d](https://github.com/hurrtz/rasseportrait/commit/1128d0d2f8cf25d5ca0d73c454cd50e5463fb4b3))
+* enable breeds by start date, add preview mode ([649ae18](https://github.com/hurrtz/rasseportrait/commit/649ae18a2f242254d33aa8e3bb9cbaaebf9bfb8c))
+
 ## [1.62.0](https://github.com/hurrtz/rasseportrait/compare/v1.61.0...v1.62.0) (2025-02-05)
 
 
