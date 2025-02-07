@@ -19,6 +19,20 @@ export const tipps: TippsList = [
     ],
     url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/204-hodenhochstand-7knji9zctlnlj",
     startShowingFromTimestamp: 1738882800000,
+    furtherReading: [
+      {
+        name: "GoFundMe für Eddy",
+        url: "https://www.gofundme.com/f/h7aewv-eddys-recovery",
+      },
+      {
+        name: "Machiavelli Sessions & Stories",
+        url: "https://www1.wdr.de/radio/cosmo/podcast/machiavelli/machiavelli-sessions-und-stories-100.html",
+      },
+      {
+        name: "Wahl-O-Mat",
+        url: "https://www.wahl-o-mat.de/bundestagswahl2025/app/main_app.html",
+      },
+    ],
   },
   {
     title: "Hausfuchs! Ein Crosspodcast mit 'Behind Science'",

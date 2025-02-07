@@ -1,4 +1,5 @@
 import React from "react";
+import * as amplitude from "@amplitude/analytics-browser";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -6,15 +7,20 @@ import Alert from "@mui/material/Alert";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
-import Link from "@mui/material/Link";
 import CardActions from "@mui/material/CardActions";
-import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import Divider from "@mui/material/Divider";
-import * as amplitude from "@amplitude/analytics-browser";
+import Masonry from "@mui/lab/Masonry";
+import PlayCircle from "@mui/icons-material/PlayCircle";
 import { tipps } from "../../db/tipps";
 import { Author } from "../../types/tipps";
-import Masonry from "@mui/lab/Masonry";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import LinkIcon from "@mui/icons-material/Link";
+import IconButton from "@mui/material/IconButton";
 
 const now = Date.now();
 const url = new URL(window.location.href);
@@ -131,9 +137,24 @@ const content = tipps
 
     return now > startShowingFromTimestamp;
   })
-  .map(({ title, subheader, tipps, url }) => (
+  .map(({ title, subheader, tipps, url, furtherReading }) => (
     <Card sx={{ marginTop: 2 }} key={title}>
-      <CardHeader title={title} subheader={subheader} />
+      <CardHeader
+        title={title}
+        subheader={subheader}
+        action={
+          <IconButton
+            onClick={() => {
+              amplitude.track("Podcast Clicked", { category: "tipp", url });
+            }}
+            target="_blank"
+            href={url}
+            title="zur Episode"
+          >
+            <PlayCircle />
+          </IconButton>
+        }
+      />
       <CardContent>
         {tipps.map(({ tipp, author }, index, array) => (
           <>
@@ -142,20 +163,46 @@ const content = tipps
           </>
         ))}
       </CardContent>
-      <CardActions>
-        <Button size="small">
-          <Link
-            underline="none"
-            target="_blank"
-            href={url}
-            onClick={() => {
-              amplitude.track("Podcast Clicked", { category: "tipp", url });
-            }}
-          >
-            zur Episode
-          </Link>
-        </Button>
-      </CardActions>
+      {furtherReading && (
+        <CardActions sx={{ flexWrap: "wrap" }}>
+          <div style={{ margin: "0" }}>
+            <List dense>
+              {furtherReading &&
+                furtherReading.map(({ name, url }) => (
+                  <>
+                    <ListItem
+                      key={name}
+                      disablePadding
+                      disableGutters
+                      sx={{ marginBottom: "8px" }}
+                    >
+                      <ListItemButton
+                        sx={{
+                          flex: "0 0 auto",
+                          backgroundColor: "rgba(0, 0, 0, .025);",
+                          borderRadius: 1,
+                        }}
+                        onClick={() => {
+                          amplitude.track("Further Reading Clicked", {
+                            category: "tipp",
+                            url,
+                          });
+                        }}
+                        target="_blank"
+                        href={url}
+                      >
+                        <ListItemIcon>
+                          <LinkIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={name} />
+                      </ListItemButton>
+                    </ListItem>
+                  </>
+                ))}
+            </List>
+          </div>
+        </CardActions>
+      )}
     </Card>
   ));
 

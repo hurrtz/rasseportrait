@@ -9,6 +9,10 @@ interface Tipps {
   }[];
   url: string;
   startShowingFromTimestamp?: number;
+  furtherReading?: {
+    name: string;
+    url: string;
+  }[];
 }
 
 export type TippsList = Tipps[];
