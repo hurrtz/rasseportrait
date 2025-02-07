@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.64.0](https://github.com/hurrtz/rasseportrait/compare/v1.63.0...v1.64.0) (2025-02-07)
+
 ## [1.63.0](https://github.com/hurrtz/rasseportrait/compare/v1.62.0...v1.63.0) (2025-02-06)
 
 
