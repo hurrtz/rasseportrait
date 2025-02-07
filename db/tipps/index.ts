@@ -17,7 +17,7 @@ export const tipps: TippsList = [
         author: "Katharina Adick",
       },
     ],
-    url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+    url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/204-hodenhochstand-7knji9zctlnlj",
     startShowingFromTimestamp: 1738882800000,
   },
   {

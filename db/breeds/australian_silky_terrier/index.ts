@@ -14,8 +14,8 @@ const breed: Breed = {
     {
       number: 204,
       episode: "Aktuelle Folge",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
-      timecode: 1678,
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/204-hodenhochstand-7knji9zctlnlj",
+      timecode: 1745,
       airDate: "2025-02-07",
     },
   ],
