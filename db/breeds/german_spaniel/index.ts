@@ -3,14 +3,21 @@ import type { Breed } from "../../../types/breed";
 const breed: Breed = {
   id: "german_spaniel",
   names: ["Deutscher Wachtelhund", "Deutscher Wachtel", "Deutscher Spaniel"],
-  wasGuessedCorrectlyInPodcast: "not_applicable",
-  isOfficiallyPresented: false,
+  wasGuessedCorrectlyInPodcast: true,
+  startShowingFromTimestamp: 1739491200000,
   fci: {
     group: 8,
     section: 2,
     standardNumber: 104,
   },
   podcast: [
+    {
+      number: 205,
+      episode: "Aktuelle Folge",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+      timecode: 1218,
+      airDate: "2025-02-14",
+    },
     {
       number: 134,
       episode: "Mischwesen & Cancelculture",

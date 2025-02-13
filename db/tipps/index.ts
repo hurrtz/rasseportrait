@@ -2,7 +2,41 @@ import { TippsList } from "../../types/tipps";
 
 export const tipps: TippsList = [
   {
-    title: "Aktuelle Folge",
+    title: "aktuelle Folge",
+    subheader: "Episode 205 — Minute 46:03",
+    tipps: [
+      {
+        tipp: ["Wahl-O-Mat", "Wahlprogramme lesen"],
+        author: "Martin Rütter",
+      },
+      {
+        tipp: [
+          "Wahl-O-Mat",
+          "Real-O-Mat",
+          "Instagram-Account von Martins Schwester Astrid",
+        ],
+        author: "Katharina Adick",
+      },
+    ],
+    url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+    startShowingFromTimestamp: 1738882800000,
+    furtherReading: [
+      {
+        name: "Wahl-O-Mat",
+        url: "https://www.wahl-o-mat.de/bundestagswahl2025/app/main_app.html",
+      },
+      {
+        name: "Real-O-Mat",
+        url: "https://real-o-mat.de",
+      },
+      {
+        name: "Astrid auf Instagram",
+        url: "https://www.instagram.com/astrid.windgassen_frank/",
+      },
+    ],
+  },
+  {
+    title: "Hodenhochstand",
     subheader: "Episode 204 — Minute 58:48",
     tipps: [
       {
