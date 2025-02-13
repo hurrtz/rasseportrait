@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.67.0](https://github.com/hurrtz/rasseportrait/compare/v1.66.0...v1.67.0) (2025-02-13)
+
+
+### Features
+
+* update information on German Spaniel, new tipss ([f26d36d](https://github.com/hurrtz/rasseportrait/commit/f26d36dad18602b307f90a398711b27676bcac7b))
+
 ## [1.66.0](https://github.com/hurrtz/rasseportrait/compare/v1.65.0...v1.66.0) (2025-02-09)
 
 ## [1.65.0](https://github.com/hurrtz/rasseportrait/compare/v1.64.0...v1.65.0) (2025-02-07)
