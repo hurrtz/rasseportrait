@@ -13,8 +13,8 @@ const breed: Breed = {
   podcast: [
     {
       number: 205,
-      episode: "Aktuelle Folge",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+      episode: "Biber an die Macht",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/205-biber-an-die-macht-4jqr0gglrlroo",
       timecode: 1218,
       airDate: "2025-02-14",
     },

@@ -2,7 +2,7 @@ import { TippsList } from "../../types/tipps";
 
 export const tipps: TippsList = [
   {
-    title: "aktuelle Folge",
+    title: "Biber an die Macht",
     subheader: "Episode 205 — Minute 46:03",
     tipps: [
       {
@@ -18,7 +18,7 @@ export const tipps: TippsList = [
         author: "Katharina Adick",
       },
     ],
-    url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+    url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/205-biber-an-die-macht-4jqr0gglrlroo",
     startShowingFromTimestamp: 1738882800000,
     furtherReading: [
       {
