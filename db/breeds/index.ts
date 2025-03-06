@@ -35,6 +35,7 @@ import CirnecoDellEtna from "./cirneco_dell_etna";
 import ClumberSpaniel from "./clumber_spaniel";
 import Corgi from "./corgi";
 import CotonDeTulear from "./coton_de_tulear";
+import CroatianSheepdog from "./croatian_sheepdog";
 import Dachshund from "./dachshund";
 import DalmatianDog from "./dalmatian_dog";
 import DandieDinmontTerrier from "./dandie_dinmont_terrier";
@@ -169,6 +170,7 @@ export default {
   ClumberSpaniel,
   Corgi,
   CotonDeTulear,
+  CroatianSheepdog,
   Dachshund,
   DalmatianDog,
   DandieDinmontTerrier,
