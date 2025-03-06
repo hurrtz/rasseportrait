@@ -87,6 +87,14 @@ const topic: Topic = {
       type: "video",
       context: "Schwester Astrid",
     },
+    {
+      number: 206,
+      episode: "Vertretungsstunde",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/206-vertretungsstunde-bkykudao4y5eq",
+      timecode: 0,
+      airDate: "2025-02-21",
+      context: "Tochter Marleen",
+    },
   ],
 };
 
