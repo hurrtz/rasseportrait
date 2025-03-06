@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.69.0](https://github.com/hurrtz/rasseportrait/compare/v1.68.0...v1.69.0) (2025-03-06)
+
+
+### Features
+
+* add Croatian Sheepdog ([9167778](https://github.com/hurrtz/rasseportrait/commit/9167778b584517969094e244221c0299dcd0267c))
+* add podcast to topic Martins Family ([ddafce3](https://github.com/hurrtz/rasseportrait/commit/ddafce339c24f1492831ab4ccd2706647c263b7d))
+
 ## [1.68.0](https://github.com/hurrtz/rasseportrait/compare/v1.67.0...v1.68.0) (2025-02-14)
 
 ## [1.67.0](https://github.com/hurrtz/rasseportrait/compare/v1.66.0...v1.67.0) (2025-02-13)
