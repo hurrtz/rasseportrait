@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.70.0](https://github.com/hurrtz/rasseportrait/compare/v1.69.0...v1.70.0) (2025-03-14)
+
+
+### Features
+
+* add Jämthund ([1fa1833](https://github.com/hurrtz/rasseportrait/commit/1fa18333485aa7d750ef533badef42a65214aaba))
+
 ## [1.69.0](https://github.com/hurrtz/rasseportrait/compare/v1.68.0...v1.69.0) (2025-03-06)
 
 
