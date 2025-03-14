@@ -68,6 +68,7 @@ import IrishSoftCoatedWheatenTerrier from "./irish_soft_coated_wheaten_terrier";
 import IrishTerrier from "./irish_terrier";
 import IrishWaterSpaniel from "./irish_water_spaniel";
 import IrishWolfhound from "./irish_wolfhound";
+import Jaemthund from "./jaemthund";
 import JapaneseSpitz from "./japanese_spitz";
 import KarelianBearDog from "./karelian_bear_dog";
 import Kokoni from "./kokoni";
@@ -203,6 +204,7 @@ export default {
   IrishTerrier,
   IrishWaterSpaniel,
   IrishWolfhound,
+  Jaemthund,
   JapaneseSpitz,
   KarelianBearDog,
   Kokoni,

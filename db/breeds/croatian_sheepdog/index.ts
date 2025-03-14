@@ -4,7 +4,6 @@ const breed: Breed = {
   id: "croatian_sheepdog",
   names: ["Hrvatski ovčar", "Kroatischer Schäferhund"],
   wasGuessedCorrectlyInPodcast: false,
-  startShowingFromTimestamp: 1741305600000,
   fci: {
     group: 1,
     section: 1,
@@ -13,8 +12,8 @@ const breed: Breed = {
   podcast: [
     {
       number: 208,
-      episode: "Aktuelle Folge",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+      episode: "Wie die Lemminge",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/208-wie-die-lemminge-y0ypqy92z48z2",
       timecode: 679,
       airDate: "2025-03-09",
     },
