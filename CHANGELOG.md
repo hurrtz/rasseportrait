@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.71.0](https://github.com/hurrtz/rasseportrait/compare/v1.70.0...v1.71.0) (2025-04-04)
+
+
+### Features
+
+* add Harrier ([37a427d](https://github.com/hurrtz/rasseportrait/commit/37a427d3da14f1c0801504916d11aa2924a0aa67))
+
 ## [1.70.0](https://github.com/hurrtz/rasseportrait/compare/v1.69.0...v1.70.0) (2025-03-14)
 
 
