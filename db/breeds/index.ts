@@ -63,6 +63,7 @@ import GiantSchnauzer from "./giant_schnauzer";
 import GoldenRetriever from "./golden_retriever";
 import GrandGasconSaintongeois from "./grand_gascon_saintongeois";
 import GriffonNivernais from "./griffon_nivernais";
+import Harrier from "./harrier";
 import Hovawart from "./hovawart";
 import IrishSoftCoatedWheatenTerrier from "./irish_soft_coated_wheaten_terrier";
 import IrishTerrier from "./irish_terrier";
@@ -199,6 +200,7 @@ export default {
   GoldenRetriever,
   GrandGasconSaintongeois,
   GriffonNivernais,
+  Harrier,
   Hovawart,
   IrishSoftCoatedWheatenTerrier,
   IrishTerrier,
