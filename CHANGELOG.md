@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.72.0](https://github.com/hurrtz/rasseportrait/compare/v1.71.0...v1.72.0) (2025-04-10)
+
+
+### Features
+
+* add Irish Setter ([0730c94](https://github.com/hurrtz/rasseportrait/commit/0730c9424adf0333739252a8fb6e64b2ef69afee))
+
 ## [1.71.0](https://github.com/hurrtz/rasseportrait/compare/v1.70.0...v1.71.0) (2025-04-04)
 
 
