@@ -65,6 +65,7 @@ import GrandGasconSaintongeois from "./grand_gascon_saintongeois";
 import GriffonNivernais from "./griffon_nivernais";
 import Harrier from "./harrier";
 import Hovawart from "./hovawart";
+import IrishSetter from "./irish_setter";
 import IrishSoftCoatedWheatenTerrier from "./irish_soft_coated_wheaten_terrier";
 import IrishTerrier from "./irish_terrier";
 import IrishWaterSpaniel from "./irish_water_spaniel";
@@ -202,6 +203,7 @@ export default {
   GriffonNivernais,
   Harrier,
   Hovawart,
+  IrishSetter,
   IrishSoftCoatedWheatenTerrier,
   IrishTerrier,
   IrishWaterSpaniel,
