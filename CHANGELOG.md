@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.73.0](https://github.com/hurrtz/rasseportrait/compare/v1.72.0...v1.73.0) (2025-04-27)
+
+
+### Features
+
+* add Schweizer Laufhund ([8ffd5a4](https://github.com/hurrtz/rasseportrait/commit/8ffd5a48e0b4d3e9534e28430558b32a1bcb47e9))
+
 ## [1.72.0](https://github.com/hurrtz/rasseportrait/compare/v1.71.0...v1.72.0) (2025-04-10)
 
 
