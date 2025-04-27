@@ -12,10 +12,10 @@ const breed: Breed = {
   podcast: [
     {
       number: 213,
-      episode: "Neue Folge",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/neue-folge",
+      episode: "Der Schattenwolf",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/213-der-schattenwolf-g3qxe03xyc2na",
       timecode: 2045,
-      airDate: "2025-04-10",
+      airDate: "2025-04-11",
     },
   ],
   furtherReading: [
