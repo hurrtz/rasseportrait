@@ -110,6 +110,7 @@ import PyreneanMountainDog from "./pyrenean_mountain_dog";
 import RhodesianRidgeback from "./rhodesian_ridgeback";
 import Rottweiler from "./rottweiler";
 import SamoyedDog from "./samoyed_dog";
+import SchweizerLaufhund from "./schweizer_laufhund";
 import ScottishTerrier from "./scottish_terrier";
 import ShetlandSheepdog from "./shetland_sheepdog";
 import Shiba from "./shiba";
@@ -248,6 +249,7 @@ export default {
   RhodesianRidgeback,
   Rottweiler,
   SamoyedDog,
+  SchweizerLaufhund,
   ScottishTerrier,
   ShetlandSheepdog,
   Shiba,

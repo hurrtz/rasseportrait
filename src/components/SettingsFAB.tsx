@@ -57,7 +57,9 @@ const getFabActionObject = ({
         id,
         name: (
           <Typography color={isActive ? "primary" : "action"}>
-            {"ähnliche Rassen zusammenfassen"}
+            {
+              "Varietäten (z.B. Schweizer Laufhund) und ähnliche Rassen (z.B. Corgi) zusammenfassen"
+            }
           </Typography>
         ),
         icon: <PetsIcon color={isActive ? "primary" : "action"} />,
