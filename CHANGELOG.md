@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.74.0](https://github.com/hurrtz/rasseportrait/compare/v1.73.0...v1.74.0) (2025-05-04)
+
+
+### Features
+
+* update German Shepherd ([70f41c1](https://github.com/hurrtz/rasseportrait/commit/70f41c1d80a741f6225cb6477874c272a551d3e3))
+
 ## [1.73.0](https://github.com/hurrtz/rasseportrait/compare/v1.72.0...v1.73.0) (2025-04-27)
 
 
