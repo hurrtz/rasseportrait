@@ -40,6 +40,14 @@ const breed: Breed = {
       timecode: 1222,
       airDate: "2022-03-31",
     },
+    {
+      number: 215,
+      episode: "Viele Fragen uns ja…",
+      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/215-viele-fragen-uns-ja-2qjfbgxlbz4cv",
+      timecode: 2398,
+      airDate: "2025-05-02",
+      context: "Rasseportrait, aber Katharina muss raten!",
+    },
   ],
   furtherReading: [
     {
