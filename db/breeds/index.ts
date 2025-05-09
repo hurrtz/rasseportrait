@@ -33,6 +33,7 @@ import ChineseCrestedDog from "./chinese_crested_dog";
 import ChowChow from "./chow_chow";
 import CirnecoDellEtna from "./cirneco_dell_etna";
 import ClumberSpaniel from "./clumber_spaniel";
+import Collie from "./collie";
 import Corgi from "./corgi";
 import CotonDeTulear from "./coton_de_tulear";
 import CroatianSheepdog from "./croatian_sheepdog";
@@ -172,6 +173,7 @@ export default {
   ChowChow,
   CirnecoDellEtna,
   ClumberSpaniel,
+  Collie,
   Corgi,
   CotonDeTulear,
   CroatianSheepdog,
