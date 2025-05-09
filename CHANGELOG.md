@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.75.0](https://github.com/hurrtz/rasseportrait/compare/v1.74.0...v1.75.0) (2025-05-09)
+
+
+### Features
+
+* add Collie ([8d2f73f](https://github.com/hurrtz/rasseportrait/commit/8d2f73f32162ea34064ebe3c35de6bd4460459fd))
+
 ## [1.74.0](https://github.com/hurrtz/rasseportrait/compare/v1.73.0...v1.74.0) (2025-05-04)
 
 
