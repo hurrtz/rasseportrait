@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.76.0](https://github.com/hurrtz/rasseportrait/compare/v1.75.0...v1.76.0) (2025-05-16)
+
+
+### Features
+
+* add Katharina into stats section ([99d2b32](https://github.com/hurrtz/rasseportrait/commit/99d2b32115600e4c71e299b967154b9fa4003a05))
+
 ## [1.75.0](https://github.com/hurrtz/rasseportrait/compare/v1.74.0...v1.75.0) (2025-05-09)
 
 
