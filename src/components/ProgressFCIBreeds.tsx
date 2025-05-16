@@ -91,8 +91,16 @@ export default ({ setSelectedBreed }: Props) => {
         {breed.names[0]}
       </Link>,
     ]);
-  const amountBreedsCorrectlyGuessed = breeds.filter(
-    (breed) => breed.wasGuessedCorrectlyInPodcast === true,
+  const amountBreedsCorrectlyGuessedByMartin = breeds.filter(
+    (breed) =>
+      breed.wasGuessedCorrectlyInPodcast === true &&
+      (!breed.wasGuessedCorrectlyInPodcastBy ||
+        breed.wasGuessedCorrectlyInPodcastBy === "martin"),
+  ).length;
+  const amountBreedsCorrectlyGuessedByKatharina = breeds.filter(
+    (breed) =>
+      breed.wasGuessedCorrectlyInPodcast === true &&
+      breed.wasGuessedCorrectlyInPodcastBy === "katharina",
   ).length;
   const amountBreedsGuessNotNeeded = breeds.filter(
     (breed) => breed.wasGuessedCorrectlyInPodcast === "not_applicable",
@@ -209,7 +217,7 @@ export default ({ setSelectedBreed }: Props) => {
                   secondary={namedBreedsThatAreNotYetOfficiallyPresented}
                 />
               </ListItem>
-              <ListItem disableGutters>
+              <ListItem divider disableGutters>
                 <ListItemIcon>
                   <PointingFingerIcon isHighlight />
                 </ListItemIcon>
@@ -220,7 +228,7 @@ export default ({ setSelectedBreed }: Props) => {
                       <Typography fontWeight="bold" component="span">
                         {toPercentString(
                           getPercentValue(
-                            amountBreedsCorrectlyGuessed,
+                            amountBreedsCorrectlyGuessedByMartin,
                             breeds.length - amountBreedsGuessNotNeeded,
                           ) / 100,
                         )}
@@ -228,9 +236,27 @@ export default ({ setSelectedBreed }: Props) => {
                     </Typography>
                   }
                   secondary={[
-                    `${amountBreedsCorrectlyGuessed} von ${breeds.length - amountBreedsGuessNotNeeded} erratbaren Rassen korrekt geraten (abgezogen: ${amountBreedsGuessNotNeeded} direkt benannte Rassen und der `,
+                    `${amountBreedsCorrectlyGuessedByMartin} von ${breeds.length - amountBreedsGuessNotNeeded} erratbaren Rassen korrekt geraten (abgezogen: ${amountBreedsGuessNotNeeded} direkt benannte Rassen und der `,
                     ...namedBreedsExcludedFromGuessing,
                     ")",
+                  ]}
+                />
+              </ListItem>
+              <ListItem disableGutters>
+                <ListItemIcon>
+                  <PointingFingerIcon isHighlight />
+                </ListItemIcon>
+                <ListItemText
+                  primary={
+                    <Typography fontSize="small">
+                      Erfolgsquote von Katharina beim Raten der Rassen:{" "}
+                      <Typography fontWeight="bold" component="span">
+                        {toPercentString(getPercentValue(1, 1) / 100)}
+                      </Typography>
+                    </Typography>
+                  }
+                  secondary={[
+                    `${1} von ${1} erratbaren Rassen korrekt geraten`,
                   ]}
                 />
               </ListItem>
