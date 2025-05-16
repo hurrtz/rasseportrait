@@ -263,6 +263,14 @@ export default ({ breedIdentifier, closeUI, children }: Props) => {
               </Typography>
             )}
 
+            {settings.collapseSimilarBreeds &&
+              variants &&
+              variants.length > 0 && (
+                <Typography gutterBottom component="div">
+                  {variants[0].names[0]}
+                </Typography>
+              )}
+
             <FCIText fci={fci} variants={variants} />
 
             <List dense>
