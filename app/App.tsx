@@ -1,27 +1,31 @@
 import { AppShell, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import classes from "./App.module.css";
 
 function App({ children }: { children: React.ReactNode }) {
+  const { Header, Navbar, Main } = AppShell;
   const [opened, { toggle }] = useDisclosure();
 
   return (
     <AppShell
       header={{ height: 60 }}
       navbar={{
-        width: 300,
+        width: 250,
         breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
       padding="md"
     >
-      <AppShell.Header>
+      <Header>
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <div>Logo</div>
-      </AppShell.Header>
+        <div className={classes.logoWrapper}>
+          <img className={classes.logo} src="logo.png" alt="Logo" />
+        </div>
+      </Header>
 
-      <AppShell.Navbar p="md">Navbar</AppShell.Navbar>
+      <Navbar p="md">Navbar</Navbar>
 
-      <AppShell.Main>{children}</AppShell.Main>
+      <Main>{children}</Main>
     </AppShell>
   );
 }

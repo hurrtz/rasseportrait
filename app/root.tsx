@@ -13,7 +13,6 @@ import {
   mantineHtmlProps,
 } from "@mantine/core";
 import type { Route } from "./+types/root";
-import "./app.css";
 import AppWrapper from "./App";
 
 export const links: Route.LinksFunction = () => [
