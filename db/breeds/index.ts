@@ -276,4 +276,4 @@ export default {
   Westfalenterrier,
   Wetterhoun,
   YorkshireTerrier,
-};
+} as const;

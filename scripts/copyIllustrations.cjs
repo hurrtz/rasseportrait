@@ -59,12 +59,12 @@ const processImages = async (sourceDir, targetDir) => {
 const BREEDS_SOURCE_FOLDER = path.join(__dirname, "../db/breeds");
 const BREEDS_DESTINATION_FOLDER = path.join(
   __dirname,
-  "../dist/illustrations/breeds",
+  "../public/illustrations/breeds",
 );
 const TOPICS_SOURCE_FOLDER = path.join(__dirname, "../db/topics");
 const TOPICS_DESTINATION_FOLDER = path.join(
   __dirname,
-  "../dist/illustrations/topics",
+  "../public/illustrations/topics",
 );
 
 processImages(BREEDS_SOURCE_FOLDER, BREEDS_DESTINATION_FOLDER);
