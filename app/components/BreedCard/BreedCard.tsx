@@ -2,21 +2,27 @@ import React from "react";
 import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 import { type Breed } from "../../../types/breed";
 
-const BreedCard = ({ id, names, fci }: Pick<Breed, "id" | "names" | "fci">) => {
+interface Props extends Pick<Breed, "id" | "names" | "fci"> {
+  imageId?: string;
+}
+
+const BreedCard = ({ id, names, fci, imageId }: Props) => {
   const { Section } = Card;
 
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
       <Section>
         <Image
-          src={`illustrations/breeds/${id}/illustration_thumbnail.jpeg`}
+          src={`illustrations/breeds/${imageId}/illustration_thumbnail.jpeg`}
           height={160}
           alt={names[0]}
         />
       </Section>
 
       <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={500}>{names[0]}</Text>
+        <Text fw={500}>
+          {names[0]} - {fci?.standardNumber}
+        </Text>
       </Group>
     </Card>
   );

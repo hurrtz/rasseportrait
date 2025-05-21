@@ -21,6 +21,7 @@ export interface Breed {
   names: string[];
   variants?: Variant[];
   fci?: FCI;
+  non_fci?: number;
   podcast: Podcast[];
   furtherReading: FurtherReading[];
   recognitions?: string[];

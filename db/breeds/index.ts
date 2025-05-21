@@ -1,141 +1,147 @@
-import Affenpinscher from "./affenpinscher";
-import Akita from "./akita";
-import AlaskanMalamute from "./alaskan_malamute";
-import AmericanAkita from "./american_akita";
-import AmericanStaffordshireTerrier from "./american_staffordshire_terrier";
-import AppenzellerSennenhund from "./appenzeller_sennenhund";
-import AustralianKelpie from "./australian_kelpie";
-import AustralianShepherd from "./australian_shepherd";
-import AustralianSilkyTerrier from "./australian_silky_terrier";
-import Azawakh from "./azawakh";
-import Basenji from "./basenji";
-import BavarianMountainHound from "./bavarian_mountain_hound";
-import Beagle from "./beagle";
-import BeardedCollie from "./bearded_collie";
-import Beauceron from "./beauceron";
-import BedlingtonTerrier from "./bedlington_terrier";
-import BelgianShepherd from "./belgian_shepherd";
-import BergamascoShepherdDog from "./bergamasco_shepherd_dog";
-import BergerPicard from "./berger_picard";
-import BerneseMountainDog from "./bernese_mountain_dog";
-import BlackAndTanCoonhound from "./black_and_tan_coonhound";
-import BologneseDog from "./bolognese_dog";
-import BolonkaZwetna from "./bolonka_zwetna";
-import BordeauxMastiff from "./bordeaux_mastiff";
-import BostonTerrier from "./boston_terrier";
-import Briard from "./briard";
-import CanaryMastiff from "./canary_mastiff";
-import CaneCorso from "./cane_corso";
-import Catalburun from "./catalburun";
-import ChesapeakeBayRetriever from "./chesapeake_bay_retriever";
-import Chihuahua from "./chihuahua";
-import ChineseCrestedDog from "./chinese_crested_dog";
-import ChowChow from "./chow_chow";
-import CirnecoDellEtna from "./cirneco_dell_etna";
-import ClumberSpaniel from "./clumber_spaniel";
-import Collie from "./collie";
-import Corgi from "./corgi";
-import CotonDeTulear from "./coton_de_tulear";
-import CroatianSheepdog from "./croatian_sheepdog";
-import Dachshund from "./dachshund";
-import DalmatianDog from "./dalmatian_dog";
-import DandieDinmontTerrier from "./dandie_dinmont_terrier";
-import DanishMastiff from "./danish_mastiff";
-import DanishSwedishFarmdog from "./danish_swedish_farmdog";
-import Dobermann from "./dobermann";
-import DutchShepherd from "./dutch_shepherd";
-import DutchSmoushond from "./dutch_smoushond";
-import Elo from "./elo";
-import EnglishCockerSpaniel from "./english_cocker_spaniel";
-import EnglishSpringerSpaniel from "./english_springer_spaniel";
-import EntlebucherMountainDog from "./entlebucher_mountain_dog";
-import Eurasier from "./eurasier";
-import FlatCoatedRetriever from "./flat_coated_retriever";
-import FoxTerrier from "./fox_terrier";
-import GermanBoxer from "./german_boxer";
-import GermanJagdterrier from "./german_jagdterrier";
-import GermanPinscher from "./german_pinscher";
-import GermanRoughhairedPointer from "./german_roughhaired_pointer";
-import GermanShepherd from "./german_shepherd";
-import GermanSpaniel from "./german_spaniel";
-import GermanSpitz from "./german_spitz";
-import GermanWirehairedPointer from "./german_wirehaired_pointer";
-import GiantSchnauzer from "./giant_schnauzer";
-import GoldenRetriever from "./golden_retriever";
-import GrandGasconSaintongeois from "./grand_gascon_saintongeois";
-import GriffonNivernais from "./griffon_nivernais";
-import Harrier from "./harrier";
-import Hovawart from "./hovawart";
-import IrishSetter from "./irish_setter";
-import IrishSoftCoatedWheatenTerrier from "./irish_soft_coated_wheaten_terrier";
-import IrishTerrier from "./irish_terrier";
-import IrishWaterSpaniel from "./irish_water_spaniel";
-import IrishWolfhound from "./irish_wolfhound";
-import Jaemthund from "./jaemthund";
-import JapaneseSpitz from "./japanese_spitz";
-import KarelianBearDog from "./karelian_bear_dog";
-import Kokoni from "./kokoni";
-import Komondor from "./komondor";
-import Kromfohrlaender from "./kromfohrlaender";
-import Kuhhund from "./kuhhund";
-import Kuvasz from "./kuvasz";
-import LabradorRetriever from "./labrador_retriever";
-import LagottoRomagnolo from "./lagotto_romagnolo";
-import LancashireHeeler from "./lancashire_heeler";
-import LandseerDog from "./landseer_dog";
-import LargeMuensterlaender from "./large_muensterlaender";
-import Leonberger from "./leonberger";
-import LouisianaCatahoulaLeopardDog from "./louisiana_catahoula_leopard_dog";
-import MajorcanMastiff from "./majorcan_mastiff";
-import MajorcaShepherdDog from "./majorca_shepherd_dog";
-import ManchesterTerrier from "./manchester_terrier";
-import Markiesje from "./markiesje";
-import MiniaturePinscher from "./miniature_pinscher";
-import MiniatureSchnauzer from "./miniature_schnauzer";
-import NederlandseKooikerhondje from "./nederlandse_kooikerhondje";
-import NorfolkTerrier from "./norfolk_terrier";
-import NorwegianBuhund from "./norwegian_buhund";
-import NovaScotiaDuckTollingRetriever from "./nova_scotia_duck_tolling_retriever";
-import OldEnglishSheepdog from "./old_english_sheepdog";
-import Otterhound from "./otterhound";
-import Papillon from "./papillon";
-import ParsonRussellTerrier from "./parson_russell_terrier";
-import PatterdaleTerrier from "./patterdale_terrier";
-import PetitBrabancon from "./petit_brabancon";
-import Podenco from "./podenco";
-import Poodle from "./poodle";
-import PragueRatter from "./prague_ratter";
-import PumiDog from "./pumi_dog";
-import PyreneanMastiff from "./pyrenean_mastiff";
-import PyreneanMountainDog from "./pyrenean_mountain_dog";
-import RhodesianRidgeback from "./rhodesian_ridgeback";
-import Rottweiler from "./rottweiler";
-import SamoyedDog from "./samoyed_dog";
-import SchweizerLaufhund from "./schweizer_laufhund";
-import ScottishTerrier from "./scottish_terrier";
-import ShetlandSheepdog from "./shetland_sheepdog";
-import Shiba from "./shiba";
-import ShihTzu from "./shih_tzu";
-import SilkenWindsprite from "./silken_windsprite";
-import SpanishGalgo from "./spanish_galgo";
-import SpanishWaterDog from "./spanish_water_dog";
-import SpinoneItaliano from "./spinone_italiano";
-import Stabyhoun from "./stabyhoun";
-import StyrianCoarseHairedHound from "./styrian_coarse_haired_hound";
-import SwedishCattleDog from "./swedish_cattle_dog";
-import SyberianHusky from "./syberian_husky";
-import ThaiRidgeback from "./thai_ridgeback";
-import TibetanMastiff from "./tibetan_mastiff";
-import TibetanSpaniel from "./tibetan_spaniel";
-import TibetanTerrier from "./tibetan_terrier";
-import Tornjak from "./tornjak";
-import TransmontanoMastiff from "./transmontano_mastiff";
-import Turnspit from "./turnspit";
-import Viszla from "./viszla";
-import Weimaraner from "./weimaraner";
-import Westfalenterrier from "./westfalenterrier";
-import Wetterhoun from "./wetterhoun";
-import YorkshireTerrier from "./yorkshire_terrier";
+import Affenpinscher from "./186";
+import Akita from "./255";
+import AlaskanMalamute from "./243";
+import AmericanAkita from "./344";
+import AmericanStaffordshireTerrier from "./286";
+import AppenzellerSennenhund from "./46";
+import AustralianKelpie from "./293";
+import AustralianShepherd from "./342";
+import AustralianSilkyTerrier from "./236";
+import Azawakh from "./307";
+import Basenji from "./43";
+import BavarianMountainHound from "./217";
+import Beagle from "./161";
+import BeardedCollie from "./271";
+import Beauceron from "./44";
+import BedlingtonTerrier from "./9";
+import BelgianShepherd from "./15";
+import BergamascoShepherdDog from "./194";
+import BergerPicard from "./176";
+import BerneseMountainDog from "./45";
+import BlackAndTanCoonhound from "./300";
+import BologneseDog from "./196";
+import BolonkaZwetna from "./no_fci_6";
+import BordeauxMastiff from "./116";
+import BostonTerrier from "./140";
+import Briard from "./113";
+import CanaryMastiff from "./346";
+import CaneCorso from "./343";
+import Catalburun from "./no_fci_3";
+import ChesapeakeBayRetriever from "./263";
+import Chihuahua from "./218";
+import ChineseCrestedDog from "./288";
+import ChowChow from "./205";
+import CirnecoDellEtna from "./199";
+import ClumberSpaniel from "./109";
+import CollieRough from "./156";
+import CollieSmooth from "./296";
+import CorgiCardigan from "./38";
+import CorgiPembroke from "./39";
+import CotonDeTulear from "./283";
+import CroatianSheepdog from "./277";
+import Dachshund from "./148";
+import DalmatianDog from "./153";
+import DandieDinmontTerrier from "./168";
+import DanishMastiff from "./315";
+import DanishSwedishFarmdog from "./356";
+import Dobermann from "./143";
+import DutchShepherd from "./223";
+import DutchSmoushond from "./308";
+import Elo from "./no_fci_1";
+import EnglishCockerSpaniel from "./5";
+import EnglishSpringerSpaniel from "./125";
+import EntlebucherMountainDog from "./47";
+import Eurasier from "./291";
+import FlatCoatedRetriever from "./121";
+import FoxTerrierSmooth from "./12";
+import FoxTerrierWire from "./169";
+import GermanBoxer from "./144";
+import GermanJagdterrier from "./103";
+import GermanPinscher from "./184";
+import GermanRoughhairedPointer from "./232";
+import GermanShepherd from "./166";
+import GermanSpaniel from "./104";
+import GermanSpitz from "./97";
+import GermanWirehairedPointer from "./98";
+import GiantSchnauzer from "./181";
+import GoldenRetriever from "./111";
+import GrandGasconSaintongeois from "./21";
+import GriffonNivernais from "./17";
+import Harrier from "./295";
+import Hovawart from "./190";
+import IrishSetter from "./120";
+import IrishSoftCoatedWheatenTerrier from "./40";
+import IrishTerrier from "./139";
+import IrishWaterSpaniel from "./124";
+import IrishWolfhound from "./160";
+import Jaemthund from "./42";
+import JapaneseSpitz from "./262";
+import KarelianBearDog from "./48";
+import Kokoni from "./no_fci_8";
+import Komondor from "./53";
+import Kromfohrlaender from "./192";
+import Kuhhund from "./no_fci_9";
+import Kuvasz from "./54";
+import LabradorRetriever from "./122";
+import LagottoRomagnolo from "./298";
+import LancashireHeeler from "./360";
+import LandseerDog from "./226";
+import LargeMuensterlaender from "./118";
+import Leonberger from "./145";
+import LouisianaCatahoulaLeopardDog from "./no_fci_7";
+import MajorcanMastiff from "./249";
+import MajorcaShepherdDog from "./321";
+import ManchesterTerrier from "./71";
+import Markiesje from "./no_fci_10";
+import MiniaturePinscher from "./185";
+import MiniatureSchnauzer from "./183";
+import NederlandseKooikerhondje from "./314";
+import NorfolkTerrier from "./272";
+import NorwegianBuhund from "./237";
+import NovaScotiaDuckTollingRetriever from "./312";
+import OldEnglishSheepdog from "./16";
+import Otterhound from "./294";
+import Papillon from "./77";
+import ParsonRussellTerrier from "./339";
+import PatterdaleTerrier from "./no_fci_11";
+import PetitBrabancon from "./82";
+import PodencoIbicenco from "./89";
+import PodencoPortugues from "./94";
+import PodencoCanario from "./329";
+import Poodle from "./172";
+import PragueRatter from "./363";
+import PumiDog from "./56";
+import PyreneanMastiff from "./292";
+import PyreneanMountainDog from "./137";
+import RhodesianRidgeback from "./146";
+import Rottweiler from "./147";
+import SamoyedDog from "./212";
+import SchweizerLaufhund from "./59";
+import ScottishTerrier from "./73";
+import ShetlandSheepdog from "./88";
+import Shiba from "./257";
+import ShihTzu from "./208";
+import SilkenWindsprite from "./no_fci_4";
+import SpanishGalgo from "./285";
+import SpanishWaterDog from "./336";
+import SpinoneItaliano from "./165";
+import Stabyhoun from "./222";
+import StyrianCoarseHairedHound from "./62";
+import SwedishCattleDog from "./14";
+import SyberianHusky from "./270";
+import ThaiRidgeback from "./338";
+import TibetanMastiff from "./230";
+import TibetanSpaniel from "./231";
+import TibetanTerrier from "./209";
+import Tornjak from "./355";
+import TransmontanoMastiff from "./368";
+import Turnspit from "./no_fci_2";
+import ViszlaShort from "./57";
+import ViszlaWire from "./239";
+import Weimaraner from "./99";
+import Westfalenterrier from "./no_fci_5";
+import Wetterhoun from "./221";
+import YorkshireTerrier from "./86";
 
 export default {
   Affenpinscher,
@@ -173,8 +179,10 @@ export default {
   ChowChow,
   CirnecoDellEtna,
   ClumberSpaniel,
-  Collie,
-  Corgi,
+  CollieRough,
+  CollieSmooth,
+  CorgiCardigan,
+  CorgiPembroke,
   CotonDeTulear,
   CroatianSheepdog,
   Dachshund,
@@ -191,7 +199,8 @@ export default {
   EntlebucherMountainDog,
   Eurasier,
   FlatCoatedRetriever,
-  FoxTerrier,
+  FoxTerrierSmooth,
+  FoxTerrierWire,
   GermanBoxer,
   GermanJagdterrier,
   GermanPinscher,
@@ -242,7 +251,9 @@ export default {
   ParsonRussellTerrier,
   PatterdaleTerrier,
   PetitBrabancon,
-  Podenco,
+  PodencoIbicenco,
+  PodencoPortugues,
+  PodencoCanario,
   Poodle,
   PragueRatter,
   PumiDog,
@@ -271,7 +282,8 @@ export default {
   Tornjak,
   TransmontanoMastiff,
   Turnspit,
-  Viszla,
+  ViszlaShort,
+  ViszlaWire,
   Weimaraner,
   Westfalenterrier,
   Wetterhoun,

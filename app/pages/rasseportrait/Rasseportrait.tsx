@@ -16,9 +16,14 @@ const Rasseportrait = () => {
     }
   }, [breeds]);
 
-  const breedCards = breeds.map(({ id, names, fci }) => (
+  const breedCards = breeds.map(({ id, names, fci, non_fci }) => (
     <Col span={4}>
-      <BreedCard id={id} names={names} fci={fci} />
+      <BreedCard
+        id={id}
+        names={names}
+        fci={fci}
+        imageId={non_fci ? `no_fci_${non_fci}` : String(fci?.standardNumber)}
+      />
     </Col>
   ));
 
