@@ -1,17 +1,33 @@
 import React, { useEffect } from "react";
 import { Grid } from "@mantine/core";
 import { BreedCard } from "../../components/BreedCard";
-import { useBreedActions, useBreeds } from "../../stores/breeds";
+import {
+  useBreedActions,
+  useBreeds,
+  useSelectedBreed,
+} from "../../stores/breeds";
 import breedsDB from "../../../db/breeds";
 import useWindowDimensions from "../../tools/useWindowDimensions";
+import { useDisclosure } from "@mantine/hooks";
+import { Modal } from "../../components/Modal";
+import { BreedDetails } from "../../components/BreedDetails";
+import type { Breed } from "types/breed";
 
 const Rasseportrait = () => {
   const breeds = useBreeds();
-  const { setBreeds } = useBreedActions();
-  const { Col } = Grid;
+  const { setBreeds, setSelectedBreed } = useBreedActions();
   const { width } = useWindowDimensions();
+  const [isModalOpen, { open: openModal, close: closeModal }] =
+    useDisclosure(false);
+  const { Col } = Grid;
+  const selectedBreed = useSelectedBreed();
 
-  let numberOfColumns = 1;
+  const onSelectBreed = (id: Breed["id"]) => {
+    setSelectedBreed(id);
+    openModal();
+  };
+
+  let numberOfColumns: number;
 
   if (width > 2048) {
     numberOfColumns = 1;
@@ -34,13 +50,14 @@ const Rasseportrait = () => {
     }
   }, [breeds]);
 
-  const breedCards = breeds.map(({ id, names, fci, non_fci }) => (
+  const breedCards = breeds.map(({ id, names, fci, no_fci }) => (
     <Col span={numberOfColumns}>
       <BreedCard
         id={id}
         names={names}
         fci={fci}
-        imageId={non_fci ? `no_fci_${non_fci}` : String(fci?.standardNumber)}
+        imageId={no_fci ? `no_fci_${no_fci}` : String(fci?.standardNumber)}
+        onClick={() => onSelectBreed(id)}
       />
     </Col>
   ));
@@ -48,6 +65,13 @@ const Rasseportrait = () => {
   return (
     <div>
       <Grid grow>{breedCards}</Grid>
+      <Modal
+        isOpen={isModalOpen}
+        close={closeModal}
+        title={selectedBreed?.names[0]}
+      >
+        <BreedDetails breed={selectedBreed} />
+      </Modal>
     </div>
   );
 };

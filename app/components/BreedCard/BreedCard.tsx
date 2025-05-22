@@ -4,13 +4,14 @@ import { type Breed } from "../../../types/breed";
 
 interface Props extends Pick<Breed, "id" | "names" | "fci"> {
   imageId?: string;
+  onClick: () => void;
 }
 
-const BreedCard = ({ id, names, fci, imageId }: Props) => {
+const BreedCard = ({ id, names, fci, imageId, onClick }: Props) => {
   const { Section } = Card;
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder>
+    <Card shadow="sm" padding="lg" radius="md" withBorder onClick={onClick}>
       <Section>
         <Image
           src={`illustrations/breeds/${imageId}/illustration_thumbnail.jpeg`}

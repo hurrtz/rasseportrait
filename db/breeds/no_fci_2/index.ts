@@ -18,7 +18,7 @@ const breed: Breed = {
     section: -1,
     standardNumber: -1,
   },
-  non_fci: 2,
+  no_fci: 2,
   podcast: [
     {
       number: 91,
