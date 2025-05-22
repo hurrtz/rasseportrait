@@ -129,6 +129,7 @@ import Stabyhoun from "./222";
 import StyrianCoarseHairedHound from "./62";
 import SwedishCattleDog from "./14";
 import SyberianHusky from "./270";
+import ThaiBangkaew from "./358";
 import ThaiRidgeback from "./338";
 import TibetanMastiff from "./230";
 import TibetanSpaniel from "./231";
@@ -275,6 +276,7 @@ export default {
   StyrianCoarseHairedHound,
   SwedishCattleDog,
   SyberianHusky,
+  ThaiBangkaew,
   ThaiRidgeback,
   TibetanMastiff,
   TibetanSpaniel,
