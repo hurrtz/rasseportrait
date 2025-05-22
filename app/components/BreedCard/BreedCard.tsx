@@ -14,7 +14,7 @@ const BreedCard = ({ id, names, fci, imageId }: Props) => {
       <Section>
         <Image
           src={`illustrations/breeds/${imageId}/illustration_thumbnail.jpeg`}
-          height={160}
+          height="100%"
           alt={names[0]}
         />
       </Section>
