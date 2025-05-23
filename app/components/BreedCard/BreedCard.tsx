@@ -1,28 +1,30 @@
 import React from "react";
 import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
-import { type Breed } from "../../../types/breed";
+import type { Breed } from "../../../types/breed";
 
-interface Props extends Pick<Breed, "id" | "names" | "fci"> {
-  imageId?: string;
+interface Props {
+  id: Breed["id"];
+  name: string;
+  fci: Breed["classification"]["fci"];
   onClick: () => void;
 }
 
-const BreedCard = ({ id, names, fci, imageId, onClick }: Props) => {
+const BreedCard = ({ id, name, fci, onClick }: Props) => {
   const { Section } = Card;
 
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder onClick={onClick}>
       <Section>
         <Image
-          src={`illustrations/breeds/${imageId}/illustration_thumbnail.jpeg`}
+          src={`illustrations/breeds/${id}/illustration_thumbnail.jpeg`}
           height="100%"
-          alt={names[0]}
+          alt={name}
         />
       </Section>
 
       <Group justify="space-between" mt="md" mb="xs">
         <Text fw={500}>
-          {names[0]} - {fci?.standardNumber}
+          {name} - {fci?.standardNumber}
         </Text>
       </Group>
     </Card>

@@ -1,22 +1,28 @@
 import type { Breed } from "../../../types/breed";
 
 const breed: Breed = {
-  id: "patterdale_terrier",
-  names: ["Patterdale Terrier"],
-  wasGuessedCorrectlyInPodcast: false,
-  fci: {
-    group: -1,
-    section: -1,
-    standardNumber: -1,
+  id: "no_fci_11",
+  details: {
+    internal: "patterdale_terrier",
+    public: ["Patterdale Terrier"],
   },
-  no_fci: 11,
+  classification: {
+    fci: undefined,
+  },
   podcast: [
     {
       number: 203,
       episode: "Hölzerne Körper",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/203-hoelzerne-koerper-nrmedtvqkcq0d",
-      timecode: 1303,
-      airDate: "2025-01-30",
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1303,
+        airDate: "2025-01-30",
+        isGuessable: true,
+        isGuessedCorrectly: false,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [

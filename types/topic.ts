@@ -1,4 +1,4 @@
-import type { Podcast, EnrichedPodcast, FurtherReading } from "./general";
+import type { Podcast, FurtherReading } from "./breed";
 
 interface PodcastWithKeywords extends Podcast {
   keywords?: string[];
@@ -14,7 +14,7 @@ export interface Topic {
 
 export interface EnrichedTopic extends Omit<Topic, "image" | "podcast"> {
   image: string;
-  podcast: EnrichedPodcast[];
+  podcast: Podcast[];
 }
 
 export type TopicIdentifier =

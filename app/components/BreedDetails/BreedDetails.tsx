@@ -6,7 +6,7 @@ interface Props {
 }
 
 const BreedDetails = ({ breed }: Props) => {
-  return <div>{breed.fci?.standardNumber}</div>;
+  return <div>{breed.classification.fci?.standardNumber}</div>;
 };
 
 export default BreedDetails;

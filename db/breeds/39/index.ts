@@ -1,27 +1,39 @@
 import type { Breed } from "../../../types/breed";
 
 const breed: Breed = {
-  id: "corgi",
-  names: ["Corgi"],
-  wasGuessedCorrectlyInPodcast: "not_applicable",
-  variants: [
-    {
-      id: "pembroke",
-      names: ["Welsh Corgi Pembroke"],
+  id: 39,
+  details: {
+    internal: "corgi_pembroke",
+    public: ["Corgi"],
+    variants: [
+      {
+        internal: "pembroke",
+        public: "Welsh Corgi Pembroke",
+      },
+    ],
+    groupAs: "corgi",
+  },
+  classification: {
+    fci: {
+      group: 1,
+      section: 2,
+      standardNumber: 39,
     },
-  ],
-  fci: {
-    group: 1,
-    section: 2,
-    standardNumber: 39,
   },
   podcast: [
     {
       number: 50,
       episode: "Hundeparfüm, „Die Unvermittelbaren“ & der Corgi",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/50-hundeparfuem-die-unvermittelbaren-der-corgi-fkny11pjvlp4x",
-      timecode: 2925,
-      airDate: "2022-02-24",
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2925,
+        airDate: "2022-02-24",
+        isGuessable: false,
+        isGuessedCorrectly: undefined,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [

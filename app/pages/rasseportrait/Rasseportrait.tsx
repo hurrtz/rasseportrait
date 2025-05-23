@@ -50,17 +50,18 @@ const Rasseportrait = () => {
     }
   }, [breeds]);
 
-  const breedCards = breeds.map(({ id, names, fci, no_fci }) => (
-    <Col span={numberOfColumns}>
-      <BreedCard
-        id={id}
-        names={names}
-        fci={fci}
-        imageId={no_fci ? `no_fci_${no_fci}` : String(fci?.standardNumber)}
-        onClick={() => onSelectBreed(id)}
-      />
-    </Col>
-  ));
+  const breedCards = breeds.map(
+    ({ id, details: { public: names }, classification: { fci } }) => (
+      <Col span={numberOfColumns}>
+        <BreedCard
+          id={id}
+          name={names[0]}
+          fci={fci}
+          onClick={() => onSelectBreed(id)}
+        />
+      </Col>
+    ),
+  );
 
   return (
     <div>
@@ -68,7 +69,7 @@ const Rasseportrait = () => {
       <Modal
         isOpen={isModalOpen}
         close={closeModal}
-        title={selectedBreed?.names[0]}
+        title={selectedBreed?.details.public[0]}
       >
         <BreedDetails breed={selectedBreed} />
       </Modal>
