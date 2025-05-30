@@ -1,22 +1,38 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "spanish_galgo",
-  names: ["Galgo Español", "Galgo", "Spanischer Windhund"],
-  wasGuessedCorrectlyInPodcast: "not_applicable",
-  fci: {
-    group: 10,
-    section: 3,
-    standardNumber: 285,
+export default {
+  id: 285,
+  details: {
+    internal: "spanish_galgo",
+    public: ["Galgo Español", "Galgo", "Spanischer Windhund"],
+  },
+  classification: {
+    fci: {
+      group: 10,
+      section: 3,
+      standardNumber: 285,
+    },
   },
   podcast: [
     {
       number: 47,
       episode:
         "Das traurige Schicksal der Galgos, Conny Reimann & Mythos Wildfutter",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/47-das-traurige-schicksal-der-galgos-conny-reimann-mythos-wildfutter-qqta8btva9n8i",
-      timecode: 1115,
-      airDate: "2022-02-03",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/47-das-traurige-schicksal-der-galgos-conny-reimann-mythos-wildfutter-qqta8btva9n8i",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1115,
+        airDate: "2022-02-03",
+        isGuessable: false,
+        isGuessedCorrectly: undefined,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -33,6 +49,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/galgo-espanol",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

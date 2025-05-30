@@ -1,21 +1,32 @@
 import type { Breed } from "../../../types/breed";
 
 const breed: Breed = {
-  id: "english_cocker_spaniel",
-  names: ["English Cocker Spaniel"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 8,
-    section: 2,
-    standardNumber: 5,
+  id: 5,
+  details: {
+    internal: "english_cocker_spaniel",
+    public: ["English Cocker Spaniel"],
+  },
+  classification: {
+    fci: {
+      group: 8,
+      section: 2,
+      standardNumber: 5,
+    },
   },
   podcast: [
     {
       number: 113,
       episode: "Welpenhandel, Wolfsbegegnung & Ölkäfer",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/113-welpenhandel-wolfsbegegnung-oelkaefer-05xtswrnw6hnb",
-      timecode: 2298,
-      airDate: "2023-05-11",
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2298,
+        airDate: "2023-05-11",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [

@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "wetterhoun",
-  names: ["Wetterhoun", "Friesischer Wasserhund"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 8,
-    section: 3,
-    standardNumber: 221,
+export default {
+  id: 221,
+  details: {
+    internal: "wetterhoun",
+    public: ["Wetterhoun", "Friesischer Wasserhund"],
+  },
+  classification: {
+    fci: {
+      group: 8,
+      section: 3,
+      standardNumber: 221,
+    },
   },
   podcast: [
     {
       number: 133,
       episode: "Ein bisschen Paloma",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/133-ein-bisschen-paloma-189d70agws5z3",
-      timecode: 2628,
-      airDate: "2023-09-28",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/133-ein-bisschen-paloma-189d70agws5z3",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2628,
+        airDate: "2023-09-28",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/wetterhoun",
     },
   ],
-};
-
-export default breed;
+} as Breed;

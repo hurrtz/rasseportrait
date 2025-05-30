@@ -1,29 +1,56 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "dalmatian_dog",
-  names: ["Dalmatiner"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 6,
-    section: 3,
-    standardNumber: 153,
+export default {
+  id: 153,
+  details: {
+    internal: "dalmatian_dog",
+    public: ["Dalmatiner"],
+  },
+  classification: {
+    fci: {
+      group: 6,
+      section: 3,
+      standardNumber: 153,
+    },
   },
   podcast: [
     {
       number: 12,
       episode: "Die ganze Wahrheit",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/12-die-ganze-wahrheit-kc3oyphk7j1ra",
-      timecode: 890,
-      airDate: "2021-05-25",
-      context: "Erfahrungen mit der Rasse",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/12-die-ganze-wahrheit-kc3oyphk7j1ra",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "personal_anecdote",
+        public: "Persönliche Anekdote",
+        timecode: 890,
+        airDate: "2021-05-25",
+        isGuessable: undefined,
+        isGuessedCorrectly: undefined,
+        guessedBy: undefined,
+      },
     },
     {
       number: 105,
       episode: "Geiselnahme, skurrile Wildtiere & 1,5 Grad wärmer",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/105-geiselnahme-skurrile-wildtiere-1-5-grad-waermer-9qzro9uynb4pc",
-      timecode: 3565,
-      airDate: "2023-03-16",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/105-geiselnahme-skurrile-wildtiere-1-5-grad-waermer-9qzro9uynb4pc",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 3565,
+        airDate: "2023-03-16",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -44,6 +71,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/dalmatiner-1",
     },
   ],
-};
-
-export default breed;
+} as Breed;

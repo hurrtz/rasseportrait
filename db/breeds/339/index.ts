@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "parson_russell_terrier",
-  names: ["Parson Russell Terrier"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 3,
-    section: 1,
-    standardNumber: 339,
+export default {
+  id: 339,
+  details: {
+    internal: "parson_russell_terrier",
+    public: ["Parson Russell Terrier"],
+  },
+  classification: {
+    fci: {
+      group: 3,
+      section: 1,
+      standardNumber: 339,
+    },
   },
   podcast: [
     {
       number: 125,
       episode: "Kampf der Urzeitkrebse",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/125-kampf-der-urzeitkrebse-i8h9g7dvtu49g",
-      timecode: 2081,
-      airDate: "2023-08-03",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/125-kampf-der-urzeitkrebse-i8h9g7dvtu49g",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2081,
+        airDate: "2023-08-03",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/parson-russell-terrier",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

@@ -1,28 +1,44 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "miniature_pinscher",
-  names: [
-    "Zwergpinscher",
-    "Rehpinscher",
-    "Miniature Pinscher",
-    "Minpin",
-    "Minidoberman",
-    "Rehrattler",
-  ],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 2,
-    section: 1,
-    standardNumber: 185,
+export default {
+  id: 185,
+  details: {
+    internal: "miniature_pinscher",
+    public: [
+      "Zwergpinscher",
+      "Rehpinscher",
+      "Miniature Pinscher",
+      "Minpin",
+      "Minidoberman",
+      "Rehrattler",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 2,
+      section: 1,
+      standardNumber: 185,
+    },
   },
   podcast: [
     {
       number: 184,
       episode: "Wo ist Wilma?",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/184-wo-ist-wilma-7hen4hjz2wbam",
-      timecode: 3300,
-      airDate: "2024-09-19",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/184-wo-ist-wilma-7hen4hjz2wbam",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 3300,
+        airDate: "2024-09-19",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -43,6 +59,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/zwergpinscher",
     },
   ],
-};
-
-export default breed;
+} as Breed;

@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "golden_retriever",
-  names: ["Golden Retriever"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 8,
-    section: 1,
-    standardNumber: 111,
+export default {
+  id: 111,
+  details: {
+    internal: "golden_retriever",
+    public: ["Golden Retriever"],
+  },
+  classification: {
+    fci: {
+      group: 8,
+      section: 1,
+      standardNumber: 111,
+    },
   },
   podcast: [
     {
       number: 101,
       episode: "Jubiläumsfolge live aus dem Walfisch",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/101-jubilaeumsfolge-live-aus-dem-walfisch-du0ci4j36ofr2",
-      timecode: 2983,
-      airDate: "2023-02-16",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/101-jubilaeumsfolge-live-aus-dem-walfisch-du0ci4j36ofr2",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2983,
+        airDate: "2023-02-16",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/golden-retriever",
     },
   ],
-};
-
-export default breed;
+} as Breed;

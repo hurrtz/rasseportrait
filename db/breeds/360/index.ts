@@ -1,29 +1,41 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "lancashire_heeler",
-  names: ["Lancashire Heeler", "Ormskirk Heeler"],
-  wasGuessedCorrectlyInPodcast: false,
-  fci: {
-    group: 1,
-    section: 1,
-    standardNumber: 360,
+export default {
+  id: 360,
+  details: {
+    internal: "lancashire_heeler",
+    public: ["Lancashire Heeler", "Ormskirk Heeler"],
+  },
+  classification: {
+    fci: {
+      group: 1,
+      section: 1,
+      standardNumber: 360,
+    },
   },
   podcast: [
     {
       number: "Exklusiv #3",
       episode: "Live-Podcast Köln: Die große Überraschung",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-koeln-die-grosse-ueberraschung-fd8vbp81ih11w",
-      timecode: 1586,
-      airDate: "2024-09-12",
-    },
-    {
-      number: "Exklusiv #3",
-      episode: "Live-Podcast Köln: Die große Überraschung",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-koeln-die-grosse-ueberraschung-fd8vbp81ih11w",
-      timecode: 1586,
-      type: "video",
-      airDate: "2024-09-12",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-koeln-die-grosse-ueberraschung-fd8vbp81ih11w",
+          type: "audio",
+        },
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-koeln-die-grosse-ueberraschung-fd8vbp81ih11w",
+          type: "video",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1586,
+        airDate: "2024-09-12",
+        isGuessable: true,
+        isGuessedCorrectly: false,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -40,6 +52,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/lancashire-heeler",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

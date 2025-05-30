@@ -1,29 +1,41 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "german_wirehaired_pointer",
-  names: ["Deutsch Drahthaar"],
-  fci: {
-    group: 7,
-    section: 1,
-    standardNumber: 98,
+export default {
+  id: 98,
+  details: {
+    internal: "german_wirehaired_pointer",
+    public: ["Deutsch Drahthaar"],
   },
-  wasGuessedCorrectlyInPodcast: true,
+  classification: {
+    fci: {
+      group: 7,
+      section: 1,
+      standardNumber: 98,
+    },
+  },
   podcast: [
     {
       number: "Exklusiv #6",
       episode: "Live-Podcast Euskirchen",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-euskirchen-xnzts3crxhjd5",
-      timecode: 2438,
-      airDate: "2024-11-13",
-    },
-    {
-      number: "Exklusiv #6",
-      episode: "Live-Podcast Euskirchen",
-      url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-6-live-podcast-euskirchen-1013243",
-      timecode: 2438,
-      type: "video",
-      airDate: "2024-11-13",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-euskirchen-xnzts3crxhjd5",
+          type: "audio",
+        },
+        {
+          url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-6-live-podcast-euskirchen-1013243",
+          type: "video",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2438,
+        airDate: "2024-11-13",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -44,6 +56,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/deutsch-drahthaar",
     },
   ],
-};
-
-export default breed;
+} as Breed;

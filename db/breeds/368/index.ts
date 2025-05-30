@@ -1,25 +1,41 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "transmontano_mastiff",
-  names: [
-    "Transmontano-Hirtenhund",
-    "Cão de Gado Trasmontano",
-    "Transmontano Mastiff",
-  ],
-  wasGuessedCorrectlyInPodcast: false,
-  fci: {
-    group: 2,
-    section: 2,
-    standardNumber: 368,
+export default {
+  id: 368,
+  details: {
+    internal: "transmontano_mastiff",
+    public: [
+      "Transmontano-Hirtenhund",
+      "Cão de Gado Trasmontano",
+      "Transmontano Mastiff",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 2,
+      section: 2,
+      standardNumber: 368,
+    },
   },
   podcast: [
     {
       number: 164,
       episode: "Sofafolge",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/164-sofafolge-k911jyp1xsjm0",
-      timecode: 1917,
-      airDate: "2024-05-02",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/164-sofafolge-k911jyp1xsjm0",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1917,
+        airDate: "2024-05-02",
+        isGuessable: true,
+        isGuessedCorrectly: false,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/cao-de-gado-transmontano",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

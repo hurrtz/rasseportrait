@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "english_springer_spaniel",
-  names: ["English Springer Spaniel"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 8,
-    section: 2,
-    standardNumber: 125,
+export default {
+  id: 125,
+  details: {
+    internal: "english_springer_spaniel",
+    public: ["English Springer Spaniel"],
+  },
+  classification: {
+    fci: {
+      group: 8,
+      section: 2,
+      standardNumber: 125,
+    },
   },
   podcast: [
     {
       number: 109,
       episode: "Fliewatüüt, Fettfilter & Ferien",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/109-fliewatueuet-fettfilter-ferien-u84xhk4aavxfa",
-      timecode: 3328,
-      airDate: "2023-04-13",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/109-fliewatueuet-fettfilter-ferien-u84xhk4aavxfa",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 3328,
+        airDate: "2023-04-13",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/english-springer-spaniel",
     },
   ],
-};
-
-export default breed;
+} as Breed;

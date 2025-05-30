@@ -1,25 +1,41 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "lagotto_romagnolo",
-  names: [
-    "Lagotto Romagnolo",
-    "Wasserhund der Romagna",
-    "Italienischer Trüffelhund",
-  ],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 8,
-    section: 3,
-    standardNumber: 298,
+export default {
+  id: 298,
+  details: {
+    internal: "lagotto_romagnolo",
+    public: [
+      "Lagotto Romagnolo",
+      "Wasserhund der Romagna",
+      "Italienischer Trüffelhund",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 8,
+      section: 3,
+      standardNumber: 298,
+    },
   },
   podcast: [
     {
       number: 138,
       episode: "Fichtenflitzer, Riesenregenwurm & Kot-Tapete",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/138-fichtenflitzer-riesenregenwurm-kot-tapete-lcq6dk9w7df3w",
-      timecode: 818,
-      airDate: "2023-11-02",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/138-fichtenflitzer-riesenregenwurm-kot-tapete-lcq6dk9w7df3w",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 818,
+        airDate: "2023-11-02",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -40,6 +56,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/lagotto-romagnolo",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

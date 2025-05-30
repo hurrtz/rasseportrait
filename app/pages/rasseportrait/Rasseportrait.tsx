@@ -52,7 +52,7 @@ const Rasseportrait = () => {
 
   const breedCards = breeds.map(
     ({ id, details: { public: names }, classification: { fci } }) => (
-      <Col span={numberOfColumns}>
+      <Col span={numberOfColumns} key={id}>
         <BreedCard
           id={id}
           name={names[0]}

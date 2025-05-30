@@ -1,26 +1,42 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "spinone_italiano",
-  names: [
-    "Spinone Italiano",
-    "Spinone",
-    "Rauhaariger italienischer Vorstehhund",
-    "Italian Griffon",
-  ],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 7,
-    section: 1,
-    standardNumber: 165,
+export default {
+  id: 165,
+  details: {
+    internal: "spinone_italiano",
+    public: [
+      "Spinone Italiano",
+      "Spinone",
+      "Rauhaariger italienischer Vorstehhund",
+      "Italian Griffon",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 7,
+      section: 1,
+      standardNumber: 165,
+    },
   },
   podcast: [
     {
       number: "Summer Edition #1",
       episode: "Geburtstag & Good News",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-1-geburtstag-good-news-8jh3dh6u48lpr",
-      timecode: 1530,
-      airDate: "2024-06-27",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-1-geburtstag-good-news-8jh3dh6u48lpr",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1530,
+        airDate: "2024-06-27",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -38,6 +54,4 @@ const breed: Breed = {
     },
   ],
   recognitions: ["Dorothee, für die Korrekturvorschläge beim Spinone! 🙂"],
-};
-
-export default breed;
+} as Breed;

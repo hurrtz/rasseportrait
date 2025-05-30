@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "beagle",
-  names: ["Beagle"],
-  wasGuessedCorrectlyInPodcast: "not_applicable",
-  fci: {
-    group: 6,
-    section: 1,
-    standardNumber: 161,
+export default {
+  id: 161,
+  details: {
+    internal: "beagle",
+    public: ["Beagle"],
+  },
+  classification: {
+    fci: {
+      group: 6,
+      section: 1,
+      standardNumber: 161,
+    },
   },
   podcast: [
     {
       number: 45,
       episode: "ASMR, Beagle und Wombatkacke",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/45-asmr-beagle-und-wombatkacke-iesctegwj6jg6",
-      timecode: 1009,
-      airDate: "2022-01-20",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/45-asmr-beagle-und-wombatkacke-iesctegwj6jg6",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1009,
+        airDate: "2022-01-20",
+        isGuessable: false,
+        isGuessedCorrectly: undefined,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/beagle",
     },
   ],
-};
-
-export default breed;
+} as Breed;

@@ -1,27 +1,38 @@
 import type { Breed } from "../../../types/breed";
 
 const breed: Breed = {
-  id: "swedish_cattle_dog",
-  names: [
-    "Västgötaspets",
-    "Westgotenspitz",
-    "Schwedischer Schäferspitz",
-    "Swedish Cattle Dog",
-    "Schwedischer Vallhund",
-  ],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 5,
-    section: 3,
-    standardNumber: 14,
+  id: 14,
+  details: {
+    internal: "swedish_cattle_dog",
+    public: [
+      "Västgötaspets",
+      "Westgotenspitz",
+      "Schwedischer Schäferspitz",
+      "Swedish Cattle Dog",
+      "Schwedischer Vallhund",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 5,
+      section: 3,
+      standardNumber: 14,
+    },
   },
   podcast: [
     {
       number: 83,
       episode: "Kriegsschrecken, Kommunikationsmöhren & falsche Schildkröten",
       url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/83-kriegsschrecken-kommunikationsmoehren-falsche-schildkroeten-t7s7tgilkx2ql",
-      timecode: 3562,
-      airDate: "2022-10-13",
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 3562,
+        airDate: "2022-10-13",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [

@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "styrian_coarse_haired_hound",
-  names: ["Steirische Rauhhaarbracke", "Peintinger-Bracke"],
-  wasGuessedCorrectlyInPodcast: false,
-  fci: {
-    group: 6,
-    section: 1,
-    standardNumber: 62,
+export default {
+  id: 62,
+  details: {
+    internal: "styrian_coarse_haired_hound",
+    public: ["Steirische Rauhhaarbracke", "Peintinger-Bracke"],
+  },
+  classification: {
+    fci: {
+      group: 6,
+      section: 1,
+      standardNumber: 62,
+    },
   },
   podcast: [
     {
       number: "Summer Edition #9",
       episode: "Katzengefühle",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-9-katzengefuehle-57gluk24bflht",
-      timecode: 2044,
-      airDate: "2024-08-22",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-9-katzengefuehle-57gluk24bflht",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2044,
+        airDate: "2024-08-22",
+        isGuessable: true,
+        isGuessedCorrectly: false,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -33,6 +49,4 @@ const breed: Breed = {
     },
   ],
   recognitions: ["Danke an Dirk für das Feedback zum Bild!"],
-};
-
-export default breed;
+} as Breed;

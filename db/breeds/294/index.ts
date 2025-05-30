@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "otterhound",
-  names: ["Otterhund"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 6,
-    section: 1,
-    standardNumber: 294,
+export default {
+  id: 294,
+  details: {
+    internal: "otterhound",
+    public: ["Otterhund"],
+  },
+  classification: {
+    fci: {
+      group: 6,
+      section: 1,
+      standardNumber: 294,
+    },
   },
   podcast: [
     {
       number: 157,
       episode: "Otterjagd & Dackelkatzen",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/157-otterjagd-dackelkatzen-jfhrn0c2yrt91",
-      timecode: 2238,
-      airDate: "2024-03-14",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/157-otterjagd-dackelkatzen-jfhrn0c2yrt91",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2238,
+        airDate: "2024-03-14",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/otterhound",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

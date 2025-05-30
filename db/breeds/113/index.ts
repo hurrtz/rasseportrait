@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "briard",
-  names: ["Briard", "Berger de Brie"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 1,
-    section: 1,
-    standardNumber: 113,
+export default {
+  id: 113,
+  details: {
+    internal: "briard",
+    public: ["Briard", "Berger de Brie"],
+  },
+  classification: {
+    fci: {
+      group: 1,
+      section: 1,
+      standardNumber: 113,
+    },
   },
   podcast: [
     {
       number: 135,
       episode: "Herbstanfang",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/135-herbstanfang-mjmh2c8xp08jy",
-      timecode: 2978,
-      airDate: "2023-10-12",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/135-herbstanfang-mjmh2c8xp08jy",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2978,
+        airDate: "2023-10-12",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/briard",
     },
   ],
-};
-
-export default breed;
+} as Breed;

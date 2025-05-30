@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "canary_mastiff",
-  names: ["Presa Canario", "Kanarische Dogge", "Dogo Canario"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 2,
-    section: 2,
-    standardNumber: 346,
+export default {
+  id: 346,
+  details: {
+    internal: "canary_mastiff",
+    public: ["Presa Canario", "Kanarische Dogge", "Dogo Canario"],
+  },
+  classification: {
+    fci: {
+      group: 2,
+      section: 2,
+      standardNumber: 346,
+    },
   },
   podcast: [
     {
       number: 141,
       episode: "Giftwarnung, Zeckenspray & Hühner-Hacks",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/141-giftwarnung-zeckenspray-huehner-hacks-gds039ru762p9",
-      timecode: 2594,
-      airDate: "2023-11-23",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/141-giftwarnung-zeckenspray-huehner-hacks-gds039ru762p9",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2594,
+        airDate: "2023-11-23",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/presa-canario",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

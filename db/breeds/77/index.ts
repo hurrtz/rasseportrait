@@ -1,26 +1,42 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "papillon",
-  names: [
-    "Kontinentaler Zwergspaniel",
-    "Papillon",
-    "Phalène",
-    "Schmetterlingshündchen",
-  ],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 9,
-    section: 9,
-    standardNumber: 77,
+export default {
+  id: 77,
+  details: {
+    internal: "papillon",
+    public: [
+      "Kontinentaler Zwergspaniel",
+      "Papillon",
+      "Phalène",
+      "Schmetterlingshündchen",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 9,
+      section: 9,
+      standardNumber: 77,
+    },
   },
   podcast: [
     {
       number: 189,
       episode: "Die 30.000 Euro Frage",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/189-die-30000-euro-frage-8uwhvk42tx8h8",
-      timecode: 3010,
-      airDate: "2024-10-24",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/189-die-30000-euro-frage-8uwhvk42tx8h8",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 3010,
+        airDate: "2024-10-24",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -41,6 +57,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/kontinentaler-zwergspaniel",
     },
   ],
-};
-
-export default breed;
+} as Breed;

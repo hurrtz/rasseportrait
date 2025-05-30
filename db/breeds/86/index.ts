@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "yorkshire_terrier",
-  names: ["Yorkshire Terrier"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 3,
-    section: 4,
-    standardNumber: 86,
+export default {
+  id: 86,
+  details: {
+    internal: "yorkshire_terrier",
+    public: ["Yorkshire Terrier"],
+  },
+  classification: {
+    fci: {
+      group: 3,
+      section: 4,
+      standardNumber: 86,
+    },
   },
   podcast: [
     {
       number: 84,
       episode: "Beef, vegane Wurst & Schutzhund-Training mit Nebenwirkungen",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/84-beef-vegane-wurst-schutzhund-training-mit-nebenwirkungen-dtn7aqb2nwlal",
-      timecode: 2314,
-      airDate: "2022-10-20",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/84-beef-vegane-wurst-schutzhund-training-mit-nebenwirkungen-dtn7aqb2nwlal",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2314,
+        airDate: "2022-10-20",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/yorkshire-terrier",
     },
   ],
-};
-
-export default breed;
+} as Breed;

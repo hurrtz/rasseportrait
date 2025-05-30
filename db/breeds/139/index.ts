@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "irish_terrier",
-  names: ["Irish Terrier"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 3,
-    section: 1,
-    standardNumber: 139,
+export default {
+  id: 139,
+  details: {
+    internal: "irish_terrier",
+    public: ["Irish Terrier"],
+  },
+  classification: {
+    fci: {
+      group: 3,
+      section: 1,
+      standardNumber: 139,
+    },
   },
   podcast: [
     {
       number: 106,
       episode: "Bibi & Tina, Horoskope und ein absurdes Rasse-Ranking",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/106-bibi-tina-horoskope-und-ein-absurdes-rasse-ranking-vzrl6k8ajwg7p",
-      timecode: 1890,
-      airDate: "2023-03-23",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/106-bibi-tina-horoskope-und-ein-absurdes-rasse-ranking-vzrl6k8ajwg7p",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1890,
+        airDate: "2023-03-23",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/irish-terrier",
     },
   ],
-};
-
-export default breed;
+} as Breed;

@@ -1,23 +1,38 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "akita",
-  names: ["Akita", "Akita-Inu", "Japanischer Akita", "Akita Ken", "秋田犬"],
-  wasGuessedCorrectlyInPodcast: "not_applicable",
-  fci: {
-    group: 5,
-    section: 5,
-    standardNumber: 255,
+export default {
+  id: 255,
+  details: {
+    internal: "akita",
+    public: ["Akita", "Akita-Inu", "Japanischer Akita", "Akita Ken", "秋田犬"],
+    isOfficiallyPresented: false,
   },
-  isOfficiallyPresented: false,
+  classification: {
+    fci: {
+      group: 5,
+      section: 5,
+      standardNumber: 255,
+    },
+  },
   podcast: [
     {
       number: "Summer Edition #7",
       episode: "Hobby Horsing for Olympia!",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-7-hobby-horsing-for-olympia-7pbpazh2zvi72",
-      timecode: 1075,
-      airDate: "2024-08-08",
-      context: "Vergleich mit American Akita",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-7-hobby-horsing-for-olympia-7pbpazh2zvi72",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "other",
+        public: "Vergleich mit American Akita",
+        timecode: 1075,
+        airDate: "2024-08-08",
+        isGuessable: false,
+        isGuessedCorrectly: undefined,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -38,6 +53,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/akita",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

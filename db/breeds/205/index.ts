@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "chow_chow",
-  names: ["Chow Chow"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 5,
-    section: 5,
-    standardNumber: 205,
+export default {
+  id: 205,
+  details: {
+    internal: "chow_chow",
+    public: ["Chow Chow"],
+  },
+  classification: {
+    fci: {
+      group: 5,
+      section: 5,
+      standardNumber: 205,
+    },
   },
   podcast: [
     {
       number: 194,
       episode: "Akani, Igelnot & ein Gerichtsurteil",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/194-akani-igelnot-ein-gerichtsurteil-rtb0827raqywx",
-      timecode: 647,
-      airDate: "2024-11-28",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/194-akani-igelnot-ein-gerichtsurteil-rtb0827raqywx",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 647,
+        airDate: "2024-11-28",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/ratgeber/rassekunde/chow-chow",
     },
   ],
-};
-
-export default breed;
+} as Breed;

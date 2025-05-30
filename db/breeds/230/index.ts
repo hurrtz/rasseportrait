@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "tibetan_mastiff",
-  names: ["Do Khyi", "Tibetanische Dogge", "Tibetdogge", "Tibetmastiff"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 2,
-    section: 2,
-    standardNumber: 230,
+export default {
+  id: 230,
+  details: {
+    internal: "tibetan_mastiff",
+    public: ["Do Khyi", "Tibetanische Dogge", "Tibetdogge", "Tibetmastiff"],
+  },
+  classification: {
+    fci: {
+      group: 2,
+      section: 2,
+      standardNumber: 230,
+    },
   },
   podcast: [
     {
       number: 118,
       episode: "Getreidefreie Folge",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/118-getreidefreie-folge-usumre6izvygu",
-      timecode: 1499,
-      airDate: "2023-06-15",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/118-getreidefreie-folge-usumre6izvygu",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1499,
+        airDate: "2023-06-15",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/do-khyi",
     },
   ],
-};
-
-export default breed;
+} as Breed;

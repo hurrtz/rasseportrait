@@ -1,22 +1,38 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "rhodesian_ridgeback",
-  names: ["Rhodesian Ridgeback"],
-  wasGuessedCorrectlyInPodcast: "not_applicable",
-  fci: {
-    group: 6,
-    section: 3,
-    standardNumber: 146,
+export default {
+  id: 146,
+  details: {
+    internal: "rhodesian_ridgeback",
+    public: ["Rhodesian Ridgeback"],
+  },
+  classification: {
+    fci: {
+      group: 6,
+      section: 3,
+      standardNumber: 146,
+    },
   },
   podcast: [
     {
       number: 44,
       episode:
         "Geteiltes Sorgerecht für Tiere, falsches Mäusegulasch & Zwangspause für Polizeihunde",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/44-geteiltes-sorgerecht-fuer-tiere-falsches-maeusegulasch-zwangspause-fuer-polizeihunde-ioj5kmbkn4v7c",
-      timecode: 3136,
-      airDate: "2022-01-13",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/44-geteiltes-sorgerecht-fuer-tiere-falsches-maeusegulasch-zwangspause-fuer-polizeihunde-ioj5kmbkn4v7c",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 3136,
+        airDate: "2022-01-13",
+        isGuessable: false,
+        isGuessedCorrectly: undefined,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -37,6 +53,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/rhodesian-ridgeback-1",
     },
   ],
-};
-
-export default breed;
+} as Breed;

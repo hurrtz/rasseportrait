@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "rottweiler",
-  names: ["Rottweiler"],
-  wasGuessedCorrectlyInPodcast: "not_applicable",
-  fci: {
-    group: 2,
-    section: 2,
-    standardNumber: 147,
+export default {
+  id: 147,
+  details: {
+    internal: "rottweiler",
+    public: ["Rottweiler"],
+  },
+  classification: {
+    fci: {
+      group: 2,
+      section: 2,
+      standardNumber: 147,
+    },
   },
   podcast: [
     {
       number: 24,
       episode: "Ferienfolge",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/24-ferienfolge-lg7idzp6e0vr8",
-      timecode: 275,
-      airDate: "2021-08-17",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/24-ferienfolge-lg7idzp6e0vr8",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 275,
+        airDate: "2021-08-17",
+        isGuessable: false,
+        isGuessedCorrectly: undefined,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/rottweiler",
     },
   ],
-};
-
-export default breed;
+} as Breed;

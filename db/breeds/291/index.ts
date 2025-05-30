@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "eurasier",
-  names: ["Eurasier"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 5,
-    section: 5,
-    standardNumber: 291,
+export default {
+  id: 291,
+  details: {
+    internal: "eurasier",
+    public: ["Eurasier"],
+  },
+  classification: {
+    fci: {
+      group: 5,
+      section: 5,
+      standardNumber: 291,
+    },
   },
   podcast: [
     {
       number: 60,
       episode: "Lost in the Sauerland, Boris Becker & Hunderassen-Studie",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/60-lost-in-the-sauerland-boris-becker-hunderassen-studie-qgpee4hjubcmh",
-      timecode: 2079,
-      airDate: "2022-05-05",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/60-lost-in-the-sauerland-boris-becker-hunderassen-studie-qgpee4hjubcmh",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2079,
+        airDate: "2022-05-05",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/eurasier",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

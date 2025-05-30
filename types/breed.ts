@@ -1,18 +1,29 @@
 interface PodcastMeta {
-  internal: "portrait" | "listener_question" | "personal_anecdote";
-  public: "Rasseportrait" | "Hörerfrage" | "Persönliche Anekdote";
+  internal:
+    | "portrait"
+    | "listener_question"
+    | "personal_anecdote"
+    | "other"
+    | string;
+  public: "Rasseportrait" | "Hörerfrage" | "Persönliche Anekdote" | string;
   timecode: number;
   airDate: string;
+  type?: "video" | "audio";
   publicDate?: string;
   isGuessable: boolean | undefined;
   isGuessedCorrectly: boolean | undefined;
-  guessedBy: "mr" | "ka";
+  guessedBy: "mr" | "ka" | undefined;
+}
+
+interface Source {
+  url: string;
+  type: "video" | "audio";
 }
 
 interface Podcast {
   number: number | string;
   episode: string;
-  url: string;
+  sources: Source[];
   meta: PodcastMeta;
 }
 
@@ -38,6 +49,7 @@ interface BreedDetails {
   public: string[];
   variants?: Variant[];
   groupAs?: string;
+  isOfficiallyPresented?: boolean;
 }
 
 export interface Breed {

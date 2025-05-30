@@ -1,7 +1,7 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "no_fci_11",
+export default {
+  id: "special_11",
   details: {
     internal: "patterdale_terrier",
     public: ["Patterdale Terrier"],
@@ -13,7 +13,12 @@ const breed: Breed = {
     {
       number: 203,
       episode: "Hölzerne Körper",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/203-hoelzerne-koerper-nrmedtvqkcq0d",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/203-hoelzerne-koerper-nrmedtvqkcq0d",
+          type: "audio",
+        },
+      ],
       meta: {
         internal: "portrait",
         public: "Rasseportrait",
@@ -39,6 +44,4 @@ const breed: Breed = {
       url: "https://patterdaleterrierclubofamerica.com/",
     },
   ],
-};
-
-export default breed;
+} as Breed;

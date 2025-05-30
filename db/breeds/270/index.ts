@@ -1,22 +1,38 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "syberian_husky",
-  names: ["Syberian Husky", "Siberischer Husky"],
-  wasGuessedCorrectlyInPodcast: false,
-  fci: {
-    group: 5,
-    section: 1,
-    standardNumber: 270,
+export default {
+  id: 270,
+  details: {
+    internal: "syberian_husky",
+    public: ["Syberian Husky", "Siberischer Husky"],
+  },
+  classification: {
+    fci: {
+      group: 5,
+      section: 1,
+      standardNumber: 270,
+    },
   },
   podcast: [
     {
       number: 70,
       episode:
         "Martin wird Katzenprofi, Hitzetipps kompakt & gläserne Hundekoffer",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/70-martin-wird-katzenprofi-hitzetipps-kompakt-glaeserne-hundekoffer-ot6914r1cd1bo",
-      timecode: 1324,
-      airDate: "2022-07-14",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/70-martin-wird-katzenprofi-hitzetipps-kompakt-glaeserne-hundekoffer-ot6914r1cd1bo",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1324,
+        airDate: "2022-07-14",
+        isGuessable: true,
+        isGuessedCorrectly: false,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -37,6 +53,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/siberian-husky",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

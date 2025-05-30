@@ -1,22 +1,38 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "affenpinscher",
-  names: ["Affenpinscher"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 2,
-    section: 1,
-    standardNumber: 186,
+export default {
+  id: 186,
+  details: {
+    internal: "affenpinscher",
+    public: ["Affenpinscher"],
+  },
+  classification: {
+    fci: {
+      group: 2,
+      section: 1,
+      standardNumber: 186,
+    },
   },
   podcast: [
     {
       number: 65,
       episode:
         "Ein Keks mit Folgen, Körpersprache für Hunde & schöne Geschenke",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/65-ein-keks-mit-folgen-koerpersprache-fuer-hunde-schoene-geschenke-362zgzakgwpmb",
-      timecode: 2909,
-      airDate: "2022-06-09",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/65-ein-keks-mit-folgen-koerpersprache-fuer-hunde-schoene-geschenke-362zgzakgwpmb",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2909,
+        airDate: "2022-06-09",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -33,6 +49,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/affenpinscher",
     },
   ],
-};
-
-export default breed;
+} as Breed;

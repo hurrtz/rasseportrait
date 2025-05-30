@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "australian_silky_terrier",
-  names: ["Australian Silky Terrier"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 3,
-    section: 4,
-    standardNumber: 236,
+export default {
+  id: 236,
+  details: {
+    internal: "australian_silky_terrier",
+    public: ["Australian Silky Terrier"],
+  },
+  classification: {
+    fci: {
+      group: 3,
+      section: 4,
+      standardNumber: 236,
+    },
   },
   podcast: [
     {
       number: 204,
       episode: "Aktuelle Folge",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/204-hodenhochstand-7knji9zctlnlj",
-      timecode: 1745,
-      airDate: "2025-02-07",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/204-hodenhochstand-7knji9zctlnlj",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1745,
+        airDate: "2025-02-07",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/australian-silky-terrier",
     },
   ],
-};
-
-export default breed;
+} as Breed;

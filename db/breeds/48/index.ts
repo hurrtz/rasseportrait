@@ -1,26 +1,42 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "karelian_bear_dog",
-  names: [
-    "Karelischer Bärenhund",
-    "Karjalankarhukoira",
-    "Björnhund",
-    "Hund der Zyrianer",
-  ],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 5,
-    section: 2,
-    standardNumber: 48,
+export default {
+  id: 48,
+  details: {
+    internal: "karelian_bear_dog",
+    public: [
+      "Karelischer Bärenhund",
+      "Karjalankarhukoira",
+      "Björnhund",
+      "Hund der Zyrianer",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 5,
+      section: 2,
+      standardNumber: 48,
+    },
   },
   podcast: [
     {
       number: 132,
       episode: "Funkstille, Fliegen & Hochstaplersyndrom",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/132-funkstille-fliegen-hochstaplersyndrom-vw7v85dyj5wp9",
-      timecode: 2264,
-      airDate: "2023-09-21",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/132-funkstille-fliegen-hochstaplersyndrom-vw7v85dyj5wp9",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2264,
+        airDate: "2023-09-21",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -37,6 +53,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/karelischer-baerenhund",
     },
   ],
-};
-
-export default breed;
+} as Breed;

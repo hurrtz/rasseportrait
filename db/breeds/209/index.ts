@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "tibetan_terrier",
-  names: ["Tibet-Terrier", "Tibetan Terrier", "Tsang Apso"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 9,
-    section: 5,
-    standardNumber: 209,
+export default {
+  id: 209,
+  details: {
+    internal: "tibetan_terrier",
+    public: ["Tibet-Terrier", "Tibetan Terrier", "Tsang Apso"],
+  },
+  classification: {
+    fci: {
+      group: 9,
+      section: 5,
+      standardNumber: 209,
+    },
   },
   podcast: [
     {
       number: 61,
       episode: "Ein Helm für Chihuahuas, Kack-Typen & Mähroboter",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/61-ein-helm-fuer-chihuahuas-kack-typen-maehroboter-jd7qib7z8uurv",
-      timecode: 2589,
-      airDate: "2022-05-12",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/61-ein-helm-fuer-chihuahuas-kack-typen-maehroboter-jd7qib7z8uurv",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2589,
+        airDate: "2022-05-12",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/ratgeber/rassekunde/tibet-terrier",
     },
   ],
-};
-
-export default breed;
+} as Breed;

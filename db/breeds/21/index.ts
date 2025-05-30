@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "grand_gascon_saintongeois",
-  names: ["Grand Gascon Saintongeois"],
-  wasGuessedCorrectlyInPodcast: false,
-  fci: {
-    group: 6,
-    section: 1,
-    standardNumber: 21,
+export default {
+  id: 21,
+  details: {
+    internal: "grand_gascon_saintongeois",
+    public: ["Grand Gascon Saintongeois"],
+  },
+  classification: {
+    fci: {
+      group: 6,
+      section: 1,
+      standardNumber: 21,
+    },
   },
   podcast: [
     {
       number: 129,
       episode: "Einfach mal sitzen",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/129-einfach-mal-sitzen-dbc2cl161xydt",
-      timecode: 1132,
-      airDate: "2023-08-31",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/129-einfach-mal-sitzen-dbc2cl161xydt",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1132,
+        airDate: "2023-08-31",
+        isGuessable: true,
+        isGuessedCorrectly: false,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/gascon-saintongeois",
     },
   ],
-};
-
-export default breed;
+} as Breed;

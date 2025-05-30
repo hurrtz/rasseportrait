@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "petit_brabancon",
-  names: ["Petit Brabançon", "Kleiner Brabanter", "Brabanter Griffon"],
-  wasGuessedCorrectlyInPodcast: false,
-  fci: {
-    group: 9,
-    section: 3,
-    standardNumber: 82,
+export default {
+  id: 82,
+  details: {
+    internal: "petit_brabancon",
+    public: ["Petit Brabançon", "Kleiner Brabanter", "Brabanter Griffon"],
+  },
+  classification: {
+    fci: {
+      group: 9,
+      section: 3,
+      standardNumber: 82,
+    },
   },
   podcast: [
     {
       number: 156,
       episode: "Garnelenfieber",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/156-garnelenfieber-xhvk5s6b64dc4",
-      timecode: 1860,
-      airDate: "2024-03-07",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/156-garnelenfieber-xhvk5s6b64dc4",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1860,
+        airDate: "2024-03-07",
+        isGuessable: true,
+        isGuessedCorrectly: false,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/petit-brabancon",
     },
   ],
-};
-
-export default breed;
+} as Breed;

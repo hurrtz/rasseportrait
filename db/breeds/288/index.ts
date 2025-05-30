@@ -1,43 +1,59 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "chinese_crested_dog",
-  names: ["Chinesischer Schopfhund"],
-  wasGuessedCorrectlyInPodcast: true,
-  variants: [
-    {
-      names: ["Haarlos"],
-      id: "hairless",
-      furtherReading: [
-        {
-          name: "VDH",
-          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chinese-crested-dog-hairless",
-        },
-      ],
+export default {
+  id: 288,
+  details: {
+    internal: "chinese_crested_dog",
+    public: ["Chinesischer Schopfhund"],
+    variants: [
+      {
+        internal: "hairless",
+        public: "Haarlos",
+        furtherReading: [
+          {
+            name: "VDH",
+            url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chinese-crested-dog-hairless",
+          },
+        ],
+      },
+      {
+        internal: "powderpuff",
+        public: "Powderpuff",
+        furtherReading: [
+          {
+            name: "VDH",
+            url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chinese-crested-dog-powderpuff",
+          },
+        ],
+      },
+    ],
+  },
+  classification: {
+    fci: {
+      group: 9,
+      section: 4,
+      standardNumber: 288,
     },
-    {
-      names: ["Powderpuff"],
-      id: "powderpuff",
-      furtherReading: [
-        {
-          name: "VDH",
-          url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/chinese-crested-dog-powderpuff",
-        },
-      ],
-    },
-  ],
-  fci: {
-    group: 9,
-    section: 4,
-    standardNumber: 288,
   },
   podcast: [
     {
       number: 123,
       episode: "Oh, wie schön ist Panama",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/123-oh-wie-schoen-ist-panama-92aq873dx2z0n",
-      timecode: 1907,
-      airDate: "2023-07-20",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/123-oh-wie-schoen-ist-panama-92aq873dx2z0n",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1907,
+        airDate: "2023-07-20",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -50,6 +66,4 @@ const breed: Breed = {
       url: "https://www.fci.be/de/nomenclature/CHINESISCHER-SCHOPFHUND-288.html",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

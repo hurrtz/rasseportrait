@@ -1,6 +1,6 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
+export default {
   id: 38,
   details: {
     internal: "corgi_cardigan",
@@ -24,7 +24,12 @@ const breed: Breed = {
     {
       number: 50,
       episode: "Hundeparfüm, „Die Unvermittelbaren“ & der Corgi",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/50-hundeparfuem-die-unvermittelbaren-der-corgi-fkny11pjvlp4x",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/50-hundeparfuem-die-unvermittelbaren-der-corgi-fkny11pjvlp4x",
+          type: "audio",
+        },
+      ],
       meta: {
         internal: "portrait",
         public: "Rasseportrait",
@@ -54,6 +59,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/welsh-corgi",
     },
   ],
-};
-
-export default breed;
+} as Breed;

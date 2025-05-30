@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "shetland_sheepdog",
-  names: ["Shetland Sheepdog", "Sheltie"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 1,
-    section: 1,
-    standardNumber: 88,
+export default {
+  id: 88,
+  details: {
+    internal: "shetland_sheepdog",
+    public: ["Shetland Sheepdog", "Sheltie"],
+  },
+  classification: {
+    fci: {
+      group: 1,
+      section: 1,
+      standardNumber: 88,
+    },
   },
   podcast: [
     {
       number: 153,
       episode: "Parlamentskreis Hund",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/153-parlamentskreis-hund-yijtj5yrhqgo1",
-      timecode: 2232,
-      airDate: "2024-02-15",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/153-parlamentskreis-hund-yijtj5yrhqgo1",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2232,
+        airDate: "2024-02-15",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/shetland-sheepdog-sheltie",
     },
   ],
-};
-
-export default breed;
+} as Breed;

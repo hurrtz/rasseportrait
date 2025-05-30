@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "stabyhoun",
-  names: ["Stabyhoun", "Stabijhoun", "Stabÿhoun", "Friesischer Vorstehhund"],
-  wasGuessedCorrectlyInPodcast: false,
-  fci: {
-    group: 7,
-    section: 1,
-    standardNumber: 222,
+export default {
+  id: 222,
+  details: {
+    internal: "stabyhoun",
+    public: ["Stabyhoun", "Stabijhoun", "Stabÿhoun", "Friesischer Vorstehhund"],
+  },
+  classification: {
+    fci: {
+      group: 7,
+      section: 1,
+      standardNumber: 222,
+    },
   },
   podcast: [
     {
       number: 199,
       episode: "Prosit Neujahr!",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/199-prosit-neujahr-98cdxhj3nfpmb",
-      timecode: 1978,
-      airDate: "2025-01-02",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/199-prosit-neujahr-98cdxhj3nfpmb",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1978,
+        airDate: "2025-01-02",
+        isGuessable: true,
+        isGuessedCorrectly: false,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/stabijhoun",
     },
   ],
-};
-
-export default breed;
+} as Breed;

@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "australian_shepherd",
-  names: ["Australian Shepherd", "Australischer Schäferhund"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 1,
-    section: 1,
-    standardNumber: 342,
+export default {
+  id: 342,
+  details: {
+    internal: "australian_shepherd",
+    public: ["Australian Shepherd", "Australischer Schäferhund"],
+  },
+  classification: {
+    fci: {
+      group: 1,
+      section: 1,
+      standardNumber: 342,
+    },
   },
   podcast: [
     {
       number: 182,
       episode: "Blümerle",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/182-bluemerle-wwapqiaojdbki",
-      timecode: 2130,
-      airDate: "2024-09-05",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/182-bluemerle-wwapqiaojdbki",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2130,
+        airDate: "2024-09-05",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/australian-shepherd",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

@@ -1,30 +1,46 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "bearded_collie",
-  names: [
-    "Bearded Collie",
-    "Mongrel",
-    "Mouled Dog",
-    "beardie",
-    "Mountain Collie",
-    "Hairy Mou'ed Collie",
-    "Highland Collie",
-    "Mountain Collie",
-  ],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 1,
-    section: 1,
-    standardNumber: 271,
+export default {
+  id: 271,
+  details: {
+    internal: "bearded_collie",
+    public: [
+      "Bearded Collie",
+      "Mongrel",
+      "Mouled Dog",
+      "beardie",
+      "Mountain Collie",
+      "Hairy Mou'ed Collie",
+      "Highland Collie",
+      "Mountain Collie",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 1,
+      section: 1,
+      standardNumber: 271,
+    },
   },
   podcast: [
     {
       number: 195,
       episode: "Frau mit Rollkoffer",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/171-abschied-in-die-sommerpause-sst637kxiu8ty",
-      timecode: 2557,
-      airDate: "2024-12-05",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/195-frau-mit-rollkoffer-7exy0vywl69i9",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2557,
+        airDate: "2024-12-05",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -45,6 +61,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/bearded-collie",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

@@ -1,6 +1,6 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
+export default {
   id: 166,
   details: {
     internal: "german_shepherd",
@@ -40,7 +40,12 @@ const breed: Breed = {
       number: 55,
       episode:
         "Hundetraining aus der Sprühflasche, Maulkorb & der Deutsche Schäferhund",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/55-hundetraining-aus-der-spruehflasche-maulkorb-der-deutsche-schaeferhund-v2o7yjc6mh4we",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/55-hundetraining-aus-der-spruehflasche-maulkorb-der-deutsche-schaeferhund-v2o7yjc6mh4we",
+          type: "audio",
+        },
+      ],
       meta: {
         internal: "portrait",
         public: "Rasseportrait",
@@ -54,7 +59,12 @@ const breed: Breed = {
     {
       number: 215,
       episode: "Viele Fragen uns ja…",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/215-viele-fragen-uns-ja-2qjfbgxlbz4cv",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/215-viele-fragen-uns-ja-2qjfbgxlbz4cv",
+          type: "audio",
+        },
+      ],
       meta: {
         internal: "portrait",
         public: "Rasseportrait",
@@ -80,6 +90,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/deutscher-schaeferhund",
     },
   ],
-};
-
-export default breed;
+} as Breed;

@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "german_pinscher",
-  names: ["Deutscher Pinscher"],
-  wasGuessedCorrectlyInPodcast: false,
-  fci: {
-    group: 2,
-    section: 1,
-    standardNumber: 184,
+export default {
+  id: 184,
+  details: {
+    internal: "german_pinscher",
+    public: ["Deutscher Pinscher"],
+  },
+  classification: {
+    fci: {
+      group: 2,
+      section: 1,
+      standardNumber: 184,
+    },
   },
   podcast: [
     {
       number: 89,
       episode: "Bitte nicht nachmachen!",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/89-bitte-nicht-nachmachen-tt85sxkz7dhtd",
-      timecode: 1470,
-      airDate: "2022-11-24",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/89-bitte-nicht-nachmachen-tt85sxkz7dhtd",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1470,
+        airDate: "2022-11-24",
+        isGuessable: true,
+        isGuessedCorrectly: false,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -36,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/deutscher-pinscher",
     },
   ],
-};
-
-export default breed;
+} as Breed;

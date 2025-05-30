@@ -1,27 +1,43 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "australian_kelpie",
-  names: [
-    "Australian Kelpie",
-    "Kelpie",
-    "Australischer Schäferhund",
-    "Australian Sheepdog",
-    "Barb",
-  ],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 1,
-    section: 1,
-    standardNumber: 293,
+export default {
+  id: 293,
+  details: {
+    internal: "australian_kelpie",
+    public: [
+      "Australian Kelpie",
+      "Kelpie",
+      "Australischer Schäferhund",
+      "Australian Sheepdog",
+      "Barb",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 1,
+      section: 1,
+      standardNumber: 293,
+    },
   },
   podcast: [
     {
       number: 122,
       episode: "Kurioser Unfall, Katzenbegegnungen & Fledermausbomben",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/122-kurioser-unfall-katzenbegegnungen-fledermausbomben-vdy2nybu1xoqm",
-      timecode: 2632,
-      airDate: "2023-07-13",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/122-kurioser-unfall-katzenbegegnungen-fledermausbomben-vdy2nybu1xoqm",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2632,
+        airDate: "2023-07-13",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -42,6 +58,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/australian-kelpie",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

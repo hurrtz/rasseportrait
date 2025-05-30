@@ -1,21 +1,37 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "jaemthund",
-  names: ["Jämthund", "Schwedischer Elchhund"],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 5,
-    section: 2,
-    standardNumber: 42,
+export default {
+  id: 42,
+  details: {
+    internal: "jaemthund",
+    public: ["Jämthund", "Schwedischer Elchhund"],
+  },
+  classification: {
+    fci: {
+      group: 5,
+      section: 2,
+      standardNumber: 42,
+    },
   },
   podcast: [
     {
       number: 209,
       episode: "Der Amselrüde",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/209-der-amselruede-1mufixb6e2c69",
-      timecode: 1500,
-      airDate: "2025-03-14",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/209-der-amselruede-1mufixb6e2c69",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 1500,
+        airDate: "2025-03-14",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -32,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/jaemthund",
     },
   ],
-};
-
-export default breed;
+} as Breed;

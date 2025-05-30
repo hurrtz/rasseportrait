@@ -1,27 +1,43 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "majorcan_mastiff",
-  names: [
-    "Ca de Bou",
-    "Perro dogo mallorquín",
-    "Perro de Presa Mallorquín",
-    "Mallorca-Dogge",
-    "Mallorca Mastiff",
-  ],
-  wasGuessedCorrectlyInPodcast: true,
-  fci: {
-    group: 2,
-    section: 2,
-    standardNumber: 249,
+export default {
+  id: 249,
+  details: {
+    internal: "majorcan_mastiff",
+    public: [
+      "Ca de Bou",
+      "Perro dogo mallorquín",
+      "Perro de Presa Mallorquín",
+      "Mallorca-Dogge",
+      "Mallorca Mastiff",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 2,
+      section: 2,
+      standardNumber: 249,
+    },
   },
   podcast: [
     {
       number: 167,
       episode: "Ameisen-Waschstraße",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/167-ameisen-waschstrasse-sctwq1mdogjpv",
-      timecode: 2572,
-      airDate: "2024-05-23",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/167-ameisen-waschstrasse-sctwq1mdogjpv",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 2572,
+        airDate: "2024-05-23",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -38,6 +54,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/perro-dogo-mallorquin",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

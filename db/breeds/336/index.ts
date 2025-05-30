@@ -1,28 +1,44 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "spanish_water_dog",
-  names: [
-    "Spanischer Wasserhund",
-    "Perro de Agua Español",
-    "perro Turco",
-    "Türkenhund",
-    "Turco Andaluz",
-    "Andalusischer Türke",
-  ],
-  wasGuessedCorrectlyInPodcast: "not_applicable",
-  fci: {
-    group: 8,
-    section: 3,
-    standardNumber: 336,
+export default {
+  id: 336,
+  details: {
+    internal: "spanish_water_dog",
+    public: [
+      "Spanischer Wasserhund",
+      "Perro de Agua Español",
+      "perro Turco",
+      "Türkenhund",
+      "Turco Andaluz",
+      "Andalusischer Türke",
+    ],
+  },
+  classification: {
+    fci: {
+      group: 8,
+      section: 3,
+      standardNumber: 336,
+    },
   },
   podcast: [
     {
       number: 85,
       episode: "Suppenattacke, Rudelbegegnung & 1 eiliger Aufruf!!",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/85-suppenattacke-rudelbegegnung-1-eiliger-aufruf-zyhm5ofxax4e1",
-      timecode: 4006,
-      airDate: "2022-10-27",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/85-suppenattacke-rudelbegegnung-1-eiliger-aufruf-zyhm5ofxax4e1",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "portrait",
+        public: "Rasseportrait",
+        timecode: 4006,
+        airDate: "2022-10-27",
+        isGuessable: true,
+        isGuessedCorrectly: undefined,
+        guessedBy: "mr",
+      },
     },
   ],
   furtherReading: [
@@ -39,6 +55,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/perro-de-agua-espanol",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;
