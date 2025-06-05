@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.78.0](https://github.com/hurrtz/rasseportrait/compare/v1.77.0...v1.78.0) (2025-06-05)
+
+
+### Features
+
+* add Russian Toy ([3dd0ac2](https://github.com/hurrtz/rasseportrait/commit/3dd0ac2a6b11208ad11fb8bb896659f9cf9459bf))
+
 ## [1.77.0](https://github.com/hurrtz/rasseportrait/compare/v1.76.0...v1.77.0) (2025-05-22)
 
 ## [1.76.0](https://github.com/hurrtz/rasseportrait/compare/v1.75.0...v1.76.0) (2025-05-16)
