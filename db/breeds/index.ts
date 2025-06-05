@@ -115,6 +115,7 @@ import PyreneanMastiff from "./292";
 import PyreneanMountainDog from "./137";
 import RhodesianRidgeback from "./146";
 import Rottweiler from "./147";
+import RussianToy from "./352";
 import SamoyedDog from "./212";
 import SchweizerLaufhund from "./59";
 import ScottishTerrier from "./73";
@@ -262,6 +263,7 @@ export default {
   PyreneanMountainDog,
   RhodesianRidgeback,
   Rottweiler,
+  RussianToy,
   SamoyedDog,
   SchweizerLaufhund,
   ScottishTerrier,
