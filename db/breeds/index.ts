@@ -117,6 +117,7 @@ import RhodesianRidgeback from "./146";
 import Rottweiler from "./147";
 import RussianToy from "./352";
 import SamoyedDog from "./212";
+import Schipperke from "./83";
 import SchweizerLaufhund from "./59";
 import ScottishTerrier from "./73";
 import ShetlandSheepdog from "./88";
@@ -265,6 +266,7 @@ export default {
   Rottweiler,
   RussianToy,
   SamoyedDog,
+  Schipperke,
   SchweizerLaufhund,
   ScottishTerrier,
   ShetlandSheepdog,
