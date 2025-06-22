@@ -31,16 +31,16 @@ const Rasseportrait = () => {
 
   if (width > 2048) {
     numberOfColumns = 1;
-  } else if (width > 1600) {
+  } else if (width >= 1600) {
     numberOfColumns = 2;
-  } else if (width > 1024) {
+  } else if (width >= 1024) {
+    numberOfColumns = 3;
+  } else if (width >= 768) {
     numberOfColumns = 4;
-  } else if (width > 768) {
-    numberOfColumns = 6;
-  } else if (width > 480) {
-    numberOfColumns = 8;
+  } else if (width >= 480) {
+    numberOfColumns = 5;
   } else {
-    numberOfColumns = 10;
+    numberOfColumns = 6;
   }
 
   useEffect(() => {
