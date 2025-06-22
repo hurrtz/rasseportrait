@@ -1,7 +1,7 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
-  id: "schipperke",
+export default {
+  id: 83,
   details: {
     internal: "schipperke",
     public: ["Schipperke"],
@@ -48,6 +48,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/schipperke",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;
