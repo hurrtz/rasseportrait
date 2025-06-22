@@ -47,7 +47,7 @@ const Rasseportrait = () => {
   return (
     <div>
       <SimpleGrid
-        cols={{ base: 1, sm: 2, lg: 3, xl: 4 }}
+        cols={{ base: 2, sm: 3, lg: 4, xl: 5 }}
         spacing={{ base: 8 }}
         verticalSpacing={{ base: 8 }}
       >

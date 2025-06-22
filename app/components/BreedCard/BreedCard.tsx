@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
+import { Card, Image } from "@mantine/core";
 import type { Breed } from "../../../types/breed";
 
 interface Props {
@@ -21,12 +21,6 @@ const BreedCard = ({ id, name, fci, onClick }: Props) => {
           alt={name}
         />
       </Section>
-
-      <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={500}>
-          {name} - {fci?.standardNumber}
-        </Text>
-      </Group>
     </Card>
   );
 };
