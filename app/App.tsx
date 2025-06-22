@@ -1,13 +1,16 @@
+import { type ReactNode } from "react";
 import { AppShell, Burger, Flex, Image } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./App.module.css";
 
-function App({ children }: { children: React.ReactNode }) {
+const HEADER_HEIGHT = 60;
+
+const App = ({ children }: { children: ReactNode }) => {
   const { Header, Main } = AppShell;
   const [opened, { toggle }] = useDisclosure();
 
   return (
-    <AppShell header={{ height: 60 }} padding="md">
+    <AppShell header={{ height: HEADER_HEIGHT }} padding="md">
       <Header>
         <Flex
           justify="space-between"
@@ -15,7 +18,12 @@ function App({ children }: { children: React.ReactNode }) {
           className={classes.headerFlex}
         >
           <div className={classes.logoWrapper}>
-            <Image src="logo.png" alt="Logo" className={classes.logo} />
+            <Image
+              src="logo.png"
+              alt="Logo"
+              style={{ maxHeight: HEADER_HEIGHT }}
+              fit="contain"
+            />
           </div>
 
           <div className={classes.burgerWrapper}>
@@ -27,6 +35,6 @@ function App({ children }: { children: React.ReactNode }) {
       <Main>{children}</Main>
     </AppShell>
   );
-}
+};
 
 export default App;
