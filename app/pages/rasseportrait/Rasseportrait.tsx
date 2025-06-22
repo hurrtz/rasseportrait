@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Grid } from "@mantine/core";
+import { SimpleGrid } from "@mantine/core";
 import { BreedCard } from "../../components/BreedCard";
 import {
   useBreedActions,
@@ -19,29 +19,12 @@ const Rasseportrait = () => {
   const { width } = useWindowDimensions();
   const [isModalOpen, { open: openModal, close: closeModal }] =
     useDisclosure(false);
-  const { Col } = Grid;
   const selectedBreed = useSelectedBreed();
 
   const onSelectBreed = (id: Breed["id"]) => {
     setSelectedBreed(id);
     openModal();
   };
-
-  let numberOfColumns: number;
-
-  if (width > 2048) {
-    numberOfColumns = 1;
-  } else if (width >= 1600) {
-    numberOfColumns = 2;
-  } else if (width >= 1024) {
-    numberOfColumns = 3;
-  } else if (width >= 768) {
-    numberOfColumns = 4;
-  } else if (width >= 480) {
-    numberOfColumns = 5;
-  } else {
-    numberOfColumns = 6;
-  }
 
   useEffect(() => {
     if (!breeds.length) {
@@ -52,20 +35,24 @@ const Rasseportrait = () => {
 
   const breedCards = breeds.map(
     ({ id, details: { public: names }, classification: { fci } }) => (
-      <Col span={numberOfColumns} key={id}>
-        <BreedCard
-          id={id}
-          name={names[0]}
-          fci={fci}
-          onClick={() => onSelectBreed(id)}
-        />
-      </Col>
+      <BreedCard
+        id={id}
+        name={names[0]}
+        fci={fci}
+        onClick={() => onSelectBreed(id)}
+      />
     ),
   );
 
   return (
     <div>
-      <Grid grow>{breedCards}</Grid>
+      <SimpleGrid
+        cols={{ base: 1, sm: 2, lg: 3, xl: 4 }}
+        spacing={{ base: 8 }}
+        verticalSpacing={{ base: 8 }}
+      >
+        {breedCards}
+      </SimpleGrid>
       <Modal
         isOpen={isModalOpen}
         close={closeModal}

@@ -1,8 +1,17 @@
+.headerFlex {
+  height: 100%;
+}
+
 .logoWrapper {
   height: 100%;
-  padding-left: 4px;
+  padding-left: 10px;
 }
 
 .logo {
   height: 100%;
+  width: auto;
+}
+
+.burgerWrapper {
+  padding-right: 20px;
 }
