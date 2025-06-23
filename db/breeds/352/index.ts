@@ -1,7 +1,7 @@
 import type { Breed } from "../../../types/breed";
 
 export default {
-  id: "352",
+  id: 352,
   details: {
     internal: "russian_toy",
     public: [
