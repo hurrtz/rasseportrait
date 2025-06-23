@@ -1,0 +1,12 @@
+.image {
+  flex: 1 0 auto;
+}
+
+.slide {
+  margin: 0 4px;
+  border-radius: 8px;
+}
+
+.singleImageCardSection {
+  flex: 1 0 auto;
+}

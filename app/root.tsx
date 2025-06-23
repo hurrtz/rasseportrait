@@ -1,3 +1,4 @@
+import React, { type ReactNode } from "react";
 import {
   isRouteErrorResponse,
   Links,
@@ -28,67 +29,43 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" {...mantineHtmlProps}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon_16.ico"
-          sizes="16x16"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon_32.ico"
-          sizes="32x32"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon_48.ico"
-          sizes="48x48"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon_64.ico"
-          sizes="64x64"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon_128.ico"
-          sizes="128x128"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon_256.ico"
-          sizes="256x256"
-        />
-        <link rel="icon" href="/favicon.ico" />
-        <ColorSchemeScript />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        <MantineProvider>
-          <AppWrapper>{children}</AppWrapper>
-        </MantineProvider>
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
-  );
-}
+export const Layout = ({ children }: { children: ReactNode }) => (
+  <html lang="en" {...mantineHtmlProps}>
+    <head>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" type="image/png" href="/favicon_16.ico" sizes="16x16" />
+      <link rel="icon" type="image/png" href="/favicon_32.ico" sizes="32x32" />
+      <link rel="icon" type="image/png" href="/favicon_48.ico" sizes="48x48" />
+      <link rel="icon" type="image/png" href="/favicon_64.ico" sizes="64x64" />
+      <link
+        rel="icon"
+        type="image/png"
+        href="/favicon_128.ico"
+        sizes="128x128"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href="/favicon_256.ico"
+        sizes="256x256"
+      />
+      <link rel="icon" href="/favicon.ico" />
+      <ColorSchemeScript />
+      <Meta />
+      <Links />
+    </head>
+    <body>
+      <MantineProvider>
+        <AppWrapper>{children}</AppWrapper>
+      </MantineProvider>
+      <ScrollRestoration />
+      <Scripts />
+    </body>
+  </html>
+);
 
-export default function App() {
-  return <Outlet />;
-}
+const App = () => <Outlet />;
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
@@ -118,3 +95,5 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     </main>
   );
 }
+
+export default App;

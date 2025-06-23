@@ -36,6 +36,7 @@ const Rasseportrait = () => {
   const breedCards = breeds.map(
     ({ id, details: { public: names }, classification: { fci } }) => (
       <BreedCard
+        key={id}
         id={id}
         name={names[0]}
         fci={fci}
@@ -56,7 +57,7 @@ const Rasseportrait = () => {
       <Modal
         isOpen={isModalOpen}
         close={closeModal}
-        title={selectedBreed?.details.public[0]}
+        title={selectedBreed?.details.public[0] ?? ""}
       >
         <BreedDetails breed={selectedBreed} />
       </Modal>
