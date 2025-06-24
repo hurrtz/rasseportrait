@@ -11,7 +11,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "../../components/Modal";
 import { BreedDetails } from "../../components/BreedDetails";
 import type { Breed } from "types/breed";
-import { mergeGroupedBreeds } from "./utils";
+import { mergeGroupedBreeds, sortBreeds } from "./utils";
 
 const Rasseportrait = () => {
   const breeds = useBreeds();
@@ -29,6 +29,7 @@ const Rasseportrait = () => {
     if (!breeds.length) {
       // all breeds straight from the database as is
       const breeds = Object.values(breedsDB) as Breed[];
+
       setRawBreeds(breeds);
 
       // all breeds that are solitary, i.e. not grouped (e.g. Poodle)
@@ -37,7 +38,16 @@ const Rasseportrait = () => {
       // all breeds that are grouped (e.g. Corgi), each group merged into a single breed with variants
       const mergedBreeds = mergeGroupedBreeds(breeds);
 
-      setBreeds([...singleBreeds, ...mergedBreeds]);
+      const allBreeds = [...singleBreeds, ...mergedBreeds];
+
+      // sort breeds by air date of podcast
+      const sortedBreeds = sortBreeds({
+        breeds: allBreeds,
+        sortBy: "airDate",
+        sortDirection: "desc",
+      });
+
+      setBreeds(sortedBreeds);
     }
   }, [breeds]);
 

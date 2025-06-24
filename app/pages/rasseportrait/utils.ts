@@ -76,3 +76,128 @@ export const mergeGroupedBreeds = (breeds: Breed[]): Breed[] => {
 
   return mergedBreeds;
 };
+
+type SortDirection = "asc" | "desc";
+
+/*
+  Sorts breeds by air date of podcast
+  @param breeds - An array of breeds
+  @param sortDirection - The direction to sort the breeds in
+  @returns An array of sorted breeds
+*/
+const sortBreedsByAirDate = ({
+  breeds,
+  sortDirection = "asc",
+}: {
+  breeds: Breed[];
+  sortDirection?: SortDirection;
+}): Breed[] =>
+  breeds.sort((a, b) => {
+    const aAirDate = a.podcast.find(
+      ({ meta: { internal } }) => internal === "portrait",
+    )?.meta.airDate;
+
+    const bAirDate = b.podcast.find(
+      ({ meta: { internal } }) => internal === "portrait",
+    )?.meta.airDate;
+
+    const aDate = new Date(aAirDate ?? "").getTime();
+    const bDate = new Date(bAirDate ?? "").getTime();
+
+    if (sortDirection === "asc") {
+      return aDate - bDate;
+    }
+
+    return bDate - aDate;
+  });
+
+/*
+  Sorts breeds by name
+  @param breeds - An array of breeds
+  @param sortDirection - The direction to sort the breeds in
+  @returns An array of sorted breeds
+*/
+const sortBreedsByName = ({
+  breeds,
+  sortDirection = "asc",
+}: {
+  breeds: Breed[];
+  sortDirection?: SortDirection;
+}): Breed[] =>
+  breeds.sort((a, b) => {
+    const aName = a.details.internal;
+    const bName = b.details.internal;
+
+    if (aName === bName) {
+      return 0;
+    }
+
+    if (sortDirection === "asc") {
+      return aName.localeCompare(bName);
+    }
+
+    return bName.localeCompare(aName);
+  });
+
+/*
+  Sorts breeds by FCI number
+  @param breeds - An array of breeds
+  @param sortDirection - The direction to sort the breeds in
+  @returns An array of sorted breeds
+*/
+const sortBreedsByFCI = ({
+  breeds,
+  sortDirection = "asc",
+}: {
+  breeds: Breed[];
+  sortDirection?: SortDirection;
+}): Breed[] =>
+  breeds.sort((a, b) => {
+    const aFCI =
+      a.classification.fci?.standardNumber ??
+      a.details.variants?.[0]?.fci?.standardNumber;
+    const bFCI =
+      b.classification.fci?.standardNumber ??
+      b.details.variants?.[0]?.fci?.standardNumber;
+
+    // anything that is not standard FCI gets moved to the bottom of the list
+    if (aFCI === undefined || bFCI === undefined) {
+      if (bFCI !== undefined) {
+        return 1;
+      }
+
+      if (aFCI !== undefined) {
+        return -1;
+      }
+
+      return 0;
+    }
+
+    if (sortDirection === "asc") {
+      return aFCI - bFCI;
+    }
+
+    return bFCI - aFCI;
+  });
+
+type SortBy = "airDate" | "name" | "fci";
+
+export const sortBreeds = ({
+  breeds,
+  sortBy,
+  sortDirection = "asc",
+}: {
+  breeds: Breed[];
+  sortBy: SortBy;
+  sortDirection?: SortDirection;
+}) => {
+  switch (sortBy) {
+    case "name":
+      return sortBreedsByName({ breeds, sortDirection });
+    case "fci":
+      return sortBreedsByFCI({ breeds, sortDirection });
+    default:
+    case "airDate":
+      return sortBreedsByAirDate({ breeds, sortDirection });
+  }
+};
