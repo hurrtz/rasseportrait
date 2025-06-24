@@ -38,10 +38,11 @@ interface FCI {
   standardNumber: number;
 }
 
-interface Variant {
+export interface Variant {
   internal: string;
   public: string;
   furtherReading?: FurtherReading[];
+  fci?: FCI;
 }
 
 interface BreedDetails {
@@ -49,6 +50,7 @@ interface BreedDetails {
   public: string[];
   variants?: Variant[];
   groupAs?: string;
+  isGrouped?: boolean;
   isOfficiallyPresented?: boolean;
 }
 

@@ -7,16 +7,15 @@ import {
   useSelectedBreed,
 } from "../../stores/breeds";
 import breedsDB from "../../../db/breeds";
-import useWindowDimensions from "../../tools/useWindowDimensions";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "../../components/Modal";
 import { BreedDetails } from "../../components/BreedDetails";
 import type { Breed } from "types/breed";
+import { mergeGroupedBreeds } from "./utils";
 
 const Rasseportrait = () => {
   const breeds = useBreeds();
-  const { setBreeds, setSelectedBreed } = useBreedActions();
-  const { width } = useWindowDimensions();
+  const { setRawBreeds, setBreeds, setSelectedBreed } = useBreedActions();
   const [isModalOpen, { open: openModal, close: closeModal }] =
     useDisclosure(false);
   const selectedBreed = useSelectedBreed();
@@ -28,8 +27,17 @@ const Rasseportrait = () => {
 
   useEffect(() => {
     if (!breeds.length) {
-      const breeds = Object.values(breedsDB);
-      setBreeds(breeds);
+      // all breeds straight from the database as is
+      const breeds = Object.values(breedsDB) as Breed[];
+      setRawBreeds(breeds);
+
+      // all breeds that are solitary, i.e. not grouped (e.g. Poodle)
+      const singleBreeds = breeds.filter((breed) => !breed.details.groupAs);
+
+      // all breeds that are grouped (e.g. Corgi), each group merged into a single breed with variants
+      const mergedBreeds = mergeGroupedBreeds(breeds);
+
+      setBreeds([...singleBreeds, ...mergedBreeds]);
     }
   }, [breeds]);
 

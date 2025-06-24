@@ -3,7 +3,7 @@ import { Card, Image, Text, Group } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { clsx } from "clsx";
 import type { Breed } from "../../../types/breed";
-import { useBreedVariantNames } from "../../stores/breeds";
+import { useBreed, useBreedVariantNames } from "../../stores/breeds";
 import "@mantine/carousel/styles.css";
 import "./styles.css";
 
@@ -44,16 +44,24 @@ const Images = ({ images }: { images: string[] }) => {
 
 const BreedCard = ({ id, name, fci, onClick }: Props) => {
   const { Section } = Card;
+  const { details } = useBreed(id)!;
   const variantNames = useBreedVariantNames(id);
+  const isGrouped = details.isGrouped;
 
-  const images = useMemo(
-    () =>
+  const images = useMemo(() => {
+    if (isGrouped) {
+      return details.variants!.map((variant) => {
+        return `illustrations/breeds/${variant.fci!.standardNumber}/illustration_${variant.internal}_thumbnail.jpeg`;
+      });
+    }
+
+    return (
       variantNames?.map(
         ({ id, variant }) =>
           `illustrations/breeds/${id}/illustration${variant ? `_${variant}` : ""}_thumbnail.jpeg`,
-      ) ?? [],
-    [variantNames],
-  );
+      ) ?? []
+    );
+  }, [variantNames]);
 
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder onClick={onClick}>

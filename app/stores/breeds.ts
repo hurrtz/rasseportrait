@@ -5,6 +5,7 @@ import { type Breed } from "../../types/breed";
 import { getBreedVariantNames } from "./utils";
 
 interface BreedActions {
+  setRawBreeds: (breeds: Breed[]) => void;
   setBreeds: (breeds: Breed[]) => void;
   setBreed: (breed: Breed) => void;
   addBreed: (breed: Breed) => void;
@@ -12,6 +13,7 @@ interface BreedActions {
 }
 
 interface State {
+  rawBreeds: Breed[];
   breeds: Breed[];
   selectedBreed?: Breed["id"];
   actions: BreedActions;
@@ -21,6 +23,8 @@ const useBreedsStore = create<State>()(
   devtools((set) => ({
     breeds: [],
     actions: {
+      setRawBreeds: (breeds: Breed[]) =>
+        set({ rawBreeds: breeds }, undefined, "breeds/setRawBreeds"),
       setBreeds: (breeds: Breed[]) =>
         set({ breeds }, undefined, "breeds/setBreeds"),
       setBreed: (newBreed: Breed) =>
@@ -45,6 +49,8 @@ const useBreedsStore = create<State>()(
   })),
 );
 
+export const useRawBreeds = () =>
+  useBreedsStore((state: State) => state.rawBreeds);
 export const useBreeds = () => useBreedsStore((state: State) => state.breeds);
 export const useBreed = (id: Breed["id"]) =>
   useBreedsStore((state: State) =>
