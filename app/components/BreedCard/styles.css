@@ -7,6 +7,45 @@
   border-radius: 8px;
 }
 
-.singleImageCardSection {
+.card-section {
+  margin-bottom: calc(var(--card-padding) * -1);
+}
+
+.single-image-card-section {
   flex: 1 0 auto;
+}
+
+.breed-card-name {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: calc(100% - 32px);
+  padding: 8px 16px;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 30px;
+  backdrop-filter: blur(4px);
+  -moz-osx-font-smoothing: grayscale;
+  font-variant: small-caps;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.breed-card-name-text {
+  width: 100%;
+}
+
+@media (max-width: 48em) {
+  .breed-card-name {
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+}
+
+.carousel-indicator {
+  bottom: auto;
+  top: 16px;
 }

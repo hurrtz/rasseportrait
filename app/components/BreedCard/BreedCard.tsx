@@ -34,6 +34,9 @@ const Images = ({ images }: { images: string[] }) => {
         dragFree: false,
         align: "center",
       }}
+      classNames={{
+        indicators: "carousel-indicator",
+      }}
     >
       {images.map((image, index) => (
         <Image src={image} key={`${image}-${index}`} className="image slide" />
@@ -66,14 +69,16 @@ const BreedCard = ({ id, name, fci, onClick }: Props) => {
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder onClick={onClick}>
       <Section
-        className={clsx({ singleImageCardSection: variantNames.length == 1 })}
+        className={clsx("card-section", {
+          "single-image-card-section": variantNames.length == 1,
+        })}
       >
         <Images images={images} />
       </Section>
 
-      <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={500}>
-          {name} - {fci?.standardNumber}
+      <Group justify="space-between" className="breed-card-name">
+        <Text truncate="end" className="breed-card-name-text">
+          {name}
         </Text>
       </Group>
     </Card>
