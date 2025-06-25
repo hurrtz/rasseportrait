@@ -17,6 +17,7 @@ export default {
         ],
       },
     ],
+    groupAs: "collie",
   },
   classification: {
     fci: {
