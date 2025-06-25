@@ -1,3 +1,7 @@
+.card {
+  cursor: pointer;
+}
+
 .image {
   flex: 1 0 auto;
 }

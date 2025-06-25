@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, type MouseEventHandler } from "react";
 import { Card, Image, Text, Group } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { clsx } from "clsx";
@@ -10,14 +10,25 @@ import "./styles.css";
 interface Props {
   id: Breed["id"];
   name: string;
-  fci: Breed["classification"]["fci"];
   onClick: () => void;
 }
 
-const Images = ({ images }: { images: string[] }) => {
+const Images = ({
+  images,
+  onClick,
+}: {
+  images: string[];
+  onClick?: MouseEventHandler<HTMLDivElement>;
+}) => {
   if (images.length === 1) {
     return (
-      <Image src={images[0]} height="100%" key={images[0]} className="image" />
+      <Image
+        src={images[0]}
+        height="100%"
+        key={images[0]}
+        className="image"
+        onClick={onClick}
+      />
     );
   }
 
@@ -39,13 +50,18 @@ const Images = ({ images }: { images: string[] }) => {
       }}
     >
       {images.map((image, index) => (
-        <Image src={image} key={`${image}-${index}`} className="image slide" />
+        <Image
+          src={image}
+          key={`${image}-${index}`}
+          className="image slide"
+          onClick={onClick}
+        />
       ))}
     </Carousel>
   );
 };
 
-const BreedCard = ({ id, name, fci, onClick }: Props) => {
+const BreedCard = ({ id, name, onClick }: Props) => {
   const { Section } = Card;
   const { details } = useBreed(id)!;
   const variantNames = useBreedVariantNames(id);
@@ -67,13 +83,13 @@ const BreedCard = ({ id, name, fci, onClick }: Props) => {
   }, [variantNames]);
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder onClick={onClick}>
+    <Card shadow="sm" padding="lg" radius="md" withBorder className="card">
       <Section
         className={clsx("card-section", {
           "single-image-card-section": variantNames.length == 1,
         })}
       >
-        <Images images={images} />
+        <Images images={images} onClick={onClick} />
       </Section>
 
       <Group justify="space-between" className="breed-card-name">

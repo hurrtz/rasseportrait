@@ -51,17 +51,14 @@ const Rasseportrait = () => {
     }
   }, [breeds]);
 
-  const breedCards = breeds.map(
-    ({ id, details: { public: names }, classification: { fci } }) => (
-      <BreedCard
-        key={id}
-        id={id}
-        name={names[0]}
-        fci={fci}
-        onClick={() => onSelectBreed(id)}
-      />
-    ),
-  );
+  const breedCards = breeds.map(({ id, details: { public: names } }) => (
+    <BreedCard
+      key={id}
+      id={id}
+      name={names[0]}
+      onClick={() => onSelectBreed(id)}
+    />
+  ));
 
   return (
     <div>
