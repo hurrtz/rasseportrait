@@ -104,7 +104,7 @@ const Rasseportrait = () => {
         <BreedSearch />
 
         <SimpleGrid
-          cols={{ base: 2, sm: 3, lg: 4, xl: 5 }}
+          cols={{ base: 1, sm: 3, lg: 4, xl: 5 }}
           spacing={{ base: 8 }}
           verticalSpacing={{ base: 8 }}
         >

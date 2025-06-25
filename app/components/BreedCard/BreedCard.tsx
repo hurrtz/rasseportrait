@@ -96,6 +96,11 @@ const BreedCard = ({ id, name, onClick }: Props) => {
         <Text truncate="end" className="breed-card-name-text">
           {name}
         </Text>
+        {details.variants?.length && (
+          <Text truncate="end" className="breed-card-name-sub-text" size="sm">
+            {details.variants?.[0]?.public}
+          </Text>
+        )}
       </Group>
     </Card>
   );
