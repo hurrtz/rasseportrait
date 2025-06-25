@@ -1,24 +1,50 @@
-import React, { useEffect } from "react";
-import { SimpleGrid } from "@mantine/core";
+import React, { useEffect, useMemo } from "react";
+import { SimpleGrid, Stack } from "@mantine/core";
 import { BreedCard } from "../../components/BreedCard";
 import {
+  useAllBreeds,
   useBreedActions,
   useBreeds,
+  useRawBreeds,
   useSelectedBreed,
+  useSearch,
 } from "../../stores/breeds";
 import breedsDB from "../../../db/breeds";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "../../components/Modal";
 import { BreedDetails } from "../../components/BreedDetails";
+import { BreedSearch } from "../../components/BreedSearch";
 import type { Breed } from "types/breed";
 import { mergeGroupedBreeds, sortBreeds } from "./utils";
+import Fuse from "fuse.js";
+
+const fuseOptions = {
+  keys: [
+    "classification.fci.standardNumber",
+    "details.variants[0].fci.standardNumber",
+    "details.internal",
+    "details.public",
+    "variants[0].internal",
+    "variants[0].public",
+  ],
+  shouldSort: true,
+  ignoreLocation: true,
+  threshold: 0.1,
+};
 
 const Rasseportrait = () => {
   const breeds = useBreeds();
-  const { setRawBreeds, setBreeds, setSelectedBreed } = useBreedActions();
+  const allBreeds = useAllBreeds();
+  const rawBreeds = useRawBreeds();
+  let searchedBreeds = breeds;
+  const { needle } = useSearch();
+  const { setRawBreeds, setBreeds, setSelectedBreed, setSearch } =
+    useBreedActions();
   const [isModalOpen, { open: openModal, close: closeModal }] =
     useDisclosure(false);
   const selectedBreed = useSelectedBreed();
+
+  const fuse = useMemo(() => new Fuse(allBreeds, fuseOptions), [allBreeds]);
 
   const onSelectBreed = (id: Breed["id"]) => {
     setSelectedBreed(id);
@@ -26,7 +52,7 @@ const Rasseportrait = () => {
   };
 
   useEffect(() => {
-    if (!breeds.length) {
+    if (!rawBreeds.length) {
       // all breeds straight from the database as is
       const breeds = Object.values(breedsDB) as Breed[];
 
@@ -49,26 +75,43 @@ const Rasseportrait = () => {
 
       setBreeds(sortedBreeds);
     }
-  }, [breeds]);
+  }, [rawBreeds.length]);
 
-  const breedCards = breeds.map(({ id, details: { public: names } }) => (
-    <BreedCard
-      key={id}
-      id={id}
-      name={names[0]}
-      onClick={() => onSelectBreed(id)}
-    />
-  ));
+  useEffect(() => {
+    if (!needle) {
+      setSearch({ results: null });
+    } else {
+      const results = fuse.search(needle).map(({ item: { id } }) => id);
+
+      setSearch({ results });
+    }
+  }, [needle, setSearch, fuse]);
+
+  const breedCards = searchedBreeds.map(
+    ({ id, details: { public: names } }) => (
+      <BreedCard
+        key={id}
+        id={id}
+        name={names[0]}
+        onClick={() => onSelectBreed(id)}
+      />
+    ),
+  );
 
   return (
-    <div>
-      <SimpleGrid
-        cols={{ base: 2, sm: 3, lg: 4, xl: 5 }}
-        spacing={{ base: 8 }}
-        verticalSpacing={{ base: 8 }}
-      >
-        {breedCards}
-      </SimpleGrid>
+    <>
+      <Stack>
+        <BreedSearch />
+
+        <SimpleGrid
+          cols={{ base: 2, sm: 3, lg: 4, xl: 5 }}
+          spacing={{ base: 8 }}
+          verticalSpacing={{ base: 8 }}
+        >
+          {breedCards}
+        </SimpleGrid>
+      </Stack>
+
       <Modal
         isOpen={isModalOpen}
         close={closeModal}
@@ -76,7 +119,7 @@ const Rasseportrait = () => {
       >
         <BreedDetails breed={selectedBreed} />
       </Modal>
-    </div>
+    </>
   );
 };
 
