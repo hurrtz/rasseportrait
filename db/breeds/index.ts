@@ -95,6 +95,7 @@ import MiniatureSchnauzer from "./miniature_schnauzer";
 import NederlandseKooikerhondje from "./nederlandse_kooikerhondje";
 import NorfolkTerrier from "./norfolk_terrier";
 import NorwegianBuhund from "./norwegian_buhund";
+import NorwegianElkhound from "./norwegian_elkhound";
 import NovaScotiaDuckTollingRetriever from "./nova_scotia_duck_tolling_retriever";
 import OldEnglishSheepdog from "./old_english_sheepdog";
 import Otterhound from "./otterhound";
@@ -238,6 +239,7 @@ export default {
   NederlandseKooikerhondje,
   NorfolkTerrier,
   NorwegianBuhund,
+  NorwegianElkhound,
   NovaScotiaDuckTollingRetriever,
   OldEnglishSheepdog,
   Otterhound,
