@@ -4,7 +4,7 @@ import React, {
   type MouseEventHandler,
   useCallback,
 } from "react";
-import { Card, Image, Text, Group } from "@mantine/core";
+import { Card, Image, Text, Group, Divider } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { clsx } from "clsx";
 import type { Breed } from "../../../types/breed";
@@ -96,7 +96,7 @@ const BreedCard = ({ id, name, onClick }: Props) => {
   }, [variantNames]);
 
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder className="card">
+    <Card shadow="xl" padding="xl" radius="md" className="card">
       <Section
         className={clsx("card-section", {
           "single-image-card-section": variantNames.length == 1,
@@ -114,9 +114,12 @@ const BreedCard = ({ id, name, onClick }: Props) => {
           {name.replace(/ß/g, "ss")}
         </Text>
         {details.variants?.length && (
-          <Text truncate="end" className="breed-card-name-sub-text" size="sm">
-            {details.variants?.[activeSlide]?.public.replace(/ß/g, "ss")}
-          </Text>
+          <>
+            <Divider className="breed-card-name-divider" />
+            <Text truncate="end" size="sm">
+              {details.variants?.[activeSlide]?.public.replace(/ß/g, "ss")}
+            </Text>
+          </>
         )}
       </Group>
     </Card>

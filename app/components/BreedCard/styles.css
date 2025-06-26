@@ -1,5 +1,10 @@
 .card {
   cursor: pointer;
+  opacity: 0.9;
+}
+
+.card:hover {
+  opacity: 1;
 }
 
 .image {
@@ -42,11 +47,11 @@
   width: 100%;
 }
 
-.breed-card-name-sub-text {
+.breed-card-name-divider {
+  margin: 8px auto 8px;
   border-top: 0.5px solid #000;
-  padding: 8px 0 0;
-  margin: 8px 16px 0;
-  width: calc(100% - 32px);
+  height: 0;
+  width: 20%;
 }
 
 .carousel-indicator {
