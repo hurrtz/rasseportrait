@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.80.0](https://github.com/hurrtz/rasseportrait/compare/v1.79.0...v1.80.0) (2025-06-26)
+
+
+### Features
+
+* add Norwegian Elk Hound ([2815525](https://github.com/hurrtz/rasseportrait/commit/28155256b42a1befa505a871b4d9947a44498947))
+
 ## [1.79.0](https://github.com/hurrtz/rasseportrait/compare/v1.78.0...v1.79.0) (2025-06-21)
 
 ## [1.78.0](https://github.com/hurrtz/rasseportrait/compare/v1.77.0...v1.78.0) (2025-06-05)
