@@ -19,6 +19,7 @@ import BergamascoShepherdDog from "./194";
 import BergerPicard from "./176";
 import BerneseMountainDog from "./45";
 import BlackAndTanCoonhound from "./300";
+import BlackNorwegianElkhound from "./268";
 import BologneseDog from "./196";
 import BolonkaZwetna from "./special_6";
 import BordeauxMastiff from "./116";
@@ -66,6 +67,7 @@ import GermanWirehairedPointer from "./98";
 import GiantSchnauzer from "./181";
 import GoldenRetriever from "./111";
 import GrandGasconSaintongeois from "./21";
+import GreyNorwegianElkhound from "./242";
 import GriffonNivernais from "./17";
 import Harrier from "./295";
 import Hovawart from "./190";
@@ -168,6 +170,7 @@ export default {
   BergerPicard,
   BerneseMountainDog,
   BlackAndTanCoonhound,
+  BlackNorwegianElkhound,
   BologneseDog,
   BolonkaZwetna,
   BordeauxMastiff,
@@ -215,6 +218,7 @@ export default {
   GiantSchnauzer,
   GoldenRetriever,
   GrandGasconSaintongeois,
+  GreyNorwegianElkhound,
   GriffonNivernais,
   Harrier,
   Hovawart,
