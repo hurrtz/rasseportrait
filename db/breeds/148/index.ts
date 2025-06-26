@@ -16,6 +16,26 @@ export default {
           },
         ],
       },
+      {
+        internal: "long",
+        public: "Langhaar",
+        furtherReading: [
+          {
+            name: "VDH",
+            url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/teckel-langhaar",
+          },
+        ],
+      },
+      {
+        internal: "wire",
+        public: "Rauhaar",
+        furtherReading: [
+          {
+            name: "VDH",
+            url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/teckel-rauhhaar",
+          },
+        ],
+      },
     ],
   },
   classification: {
