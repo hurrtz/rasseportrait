@@ -5,7 +5,7 @@ const breed: Breed = {
   details: {
     internal: "fox_terrier_wire",
     public: ["Foxterrier"],
-    groupAs: "fox_terrier",
+    groupAs: "Foxterrier",
     variants: [
       {
         internal: "wire",
@@ -24,7 +24,12 @@ const breed: Breed = {
     {
       number: "Summer Edition #3",
       episode: "Martins Solo-Folge",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-3-martins-solo-folge-tfmv41s6tzg65",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-3-martins-solo-folge-tfmv41s6tzg65",
+          type: "audio",
+        },
+      ],
       meta: {
         internal: "other",
         public: "Anteasern des Rasseportraits in «Grausame Natur»",
@@ -38,7 +43,12 @@ const breed: Breed = {
     {
       number: "Summer Edition #5",
       episode: "Grausame Natur",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-5-grausame-natur-2cmtu8gbfflgx",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-5-grausame-natur-2cmtu8gbfflgx",
+          type: "audio",
+        },
+      ],
       meta: {
         internal: "portrait",
         public: "Rasseportrait",

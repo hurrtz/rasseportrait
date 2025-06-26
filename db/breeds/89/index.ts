@@ -5,7 +5,7 @@ export default {
   details: {
     internal: "podenco_ibicenco",
     public: ["Podenco Ibicenco"],
-    groupAs: "podenco",
+    groupAs: "Podenco",
   },
   classification: {
     fci: {

@@ -5,7 +5,7 @@ export default {
   details: {
     internal: "viszla_shorthaired",
     public: ["Kurzhaariger Ungarischer Vorstehhund", "Viszla"],
-    groupAs: "vizsla",
+    groupAs: "Viszla",
   },
   classification: {
     fci: {

@@ -5,7 +5,7 @@ export default {
   details: {
     internal: "miniature_schnauzer",
     public: ["Zwergschnauzer"],
-    groupAs: "schnauzer",
+    groupAs: "Schnauzer",
   },
   classification: {
     fci: {

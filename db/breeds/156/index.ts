@@ -11,7 +11,7 @@ export default {
         public: "Langhaar",
       },
     ],
-    groupAs: "collie",
+    groupAs: "Collie",
   },
   classification: {
     fci: {

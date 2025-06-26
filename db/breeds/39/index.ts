@@ -11,7 +11,7 @@ export default {
         public: "Welsh Corgi Pembroke",
       },
     ],
-    groupAs: "corgi",
+    groupAs: "Corgi",
   },
   classification: {
     fci: {

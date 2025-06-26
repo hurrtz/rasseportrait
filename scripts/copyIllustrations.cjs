@@ -61,11 +61,5 @@ const BREEDS_DESTINATION_FOLDER = path.join(
   __dirname,
   "../public/illustrations/breeds",
 );
-const TOPICS_SOURCE_FOLDER = path.join(__dirname, "../db/topics");
-const TOPICS_DESTINATION_FOLDER = path.join(
-  __dirname,
-  "../public/illustrations/topics",
-);
 
 processImages(BREEDS_SOURCE_FOLDER, BREEDS_DESTINATION_FOLDER);
-processImages(TOPICS_SOURCE_FOLDER, TOPICS_DESTINATION_FOLDER);

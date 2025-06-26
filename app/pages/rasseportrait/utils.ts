@@ -41,7 +41,7 @@ export const mergeGroupedBreeds = (breeds: Breed[]): Breed[] => {
       details: {
         internal: group[0].details.groupAs!,
         isGrouped: true,
-        public: group[0].details.public,
+        public: [group[0].details.groupAs!],
         variants: [],
       },
       classification: {

@@ -5,7 +5,7 @@ export default {
   details: {
     internal: "podenco_canario",
     public: ["Podenco Canario", "Kanarischer Podenco"],
-    groupAs: "podenco",
+    groupAs: "Podenco",
   },
   classification: {
     fci: {

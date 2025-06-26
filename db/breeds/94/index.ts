@@ -5,7 +5,7 @@ export default {
   details: {
     internal: "podenco_portugese",
     public: ["Podengo Português"],
-    groupAs: "podenco",
+    groupAs: "Podenco",
   },
   classification: {
     fci: {

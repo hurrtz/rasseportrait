@@ -3,9 +3,9 @@ import type { Breed } from "../../../types/breed";
 export default {
   id: 239,
   details: {
-    internal: "vizsla_wirehaired",
+    internal: "viszla_wirehaired",
     public: ["Drahthaariger Ungarischer Vorstehhund", "Viszla"],
-    groupAs: "vizsla",
+    groupAs: "Viszla",
   },
   classification: {
     fci: {
