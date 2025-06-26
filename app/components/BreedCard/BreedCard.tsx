@@ -1,4 +1,9 @@
-import React, { useMemo, type MouseEventHandler } from "react";
+import React, {
+  useMemo,
+  useState,
+  type MouseEventHandler,
+  useCallback,
+} from "react";
 import { Card, Image, Text, Group } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { clsx } from "clsx";
@@ -16,9 +21,11 @@ interface Props {
 const Images = ({
   images,
   onClick,
+  handleSlideChange,
 }: {
   images: string[];
   onClick?: MouseEventHandler<HTMLDivElement>;
+  handleSlideChange?: (index: number) => void;
 }) => {
   if (images.length === 1) {
     return (
@@ -48,6 +55,7 @@ const Images = ({
       classNames={{
         indicators: "carousel-indicator",
       }}
+      onSlideChange={handleSlideChange}
     >
       {images.map((image, index) => (
         <Image
@@ -66,6 +74,11 @@ const BreedCard = ({ id, name, onClick }: Props) => {
   const { details } = useBreed(id)!;
   const variantNames = useBreedVariantNames(id);
   const isGrouped = details.isGrouped;
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const handleSlideChange = useCallback((index: number) => {
+    setActiveSlide(index);
+  }, []);
 
   const images = useMemo(() => {
     if (isGrouped) {
@@ -89,7 +102,11 @@ const BreedCard = ({ id, name, onClick }: Props) => {
           "single-image-card-section": variantNames.length == 1,
         })}
       >
-        <Images images={images} onClick={onClick} />
+        <Images
+          images={images}
+          onClick={onClick}
+          handleSlideChange={handleSlideChange}
+        />
       </Section>
 
       <Group justify="space-between" className="breed-card-name">
@@ -98,7 +115,7 @@ const BreedCard = ({ id, name, onClick }: Props) => {
         </Text>
         {details.variants?.length && (
           <Text truncate="end" className="breed-card-name-sub-text" size="sm">
-            {details.variants?.[0]?.public}
+            {details.variants?.[activeSlide]?.public}
           </Text>
         )}
       </Group>
