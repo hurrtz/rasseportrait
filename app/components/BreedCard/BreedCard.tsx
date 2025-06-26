@@ -111,11 +111,11 @@ const BreedCard = ({ id, name, onClick }: Props) => {
 
       <Group justify="space-between" className="breed-card-name">
         <Text truncate="end" className="breed-card-name-text">
-          {name}
+          {name.replace(/ß/g, "ss")}
         </Text>
         {details.variants?.length && (
           <Text truncate="end" className="breed-card-name-sub-text" size="sm">
-            {details.variants?.[activeSlide]?.public}
+            {details.variants?.[activeSlide]?.public.replace(/ß/g, "ss")}
           </Text>
         )}
       </Group>
