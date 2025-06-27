@@ -20,6 +20,36 @@ const breed: Breed = {
           },
         ],
       },
+      {
+        internal: "groenendael",
+        public: "Groenendael",
+        furtherReading: [
+          {
+            name: "VDH",
+            url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/groenendael",
+          },
+        ],
+      },
+      {
+        internal: "tervueren",
+        public: "Tervueren",
+        furtherReading: [
+          {
+            name: "VDH",
+            url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/tervueren",
+          },
+        ],
+      },
+      {
+        internal: "laekenois",
+        public: "Laekenois",
+        furtherReading: [
+          {
+            name: "VDH",
+            url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/laekenois",
+          },
+        ],
+      },
     ],
   },
   classification: {
@@ -33,7 +63,12 @@ const breed: Breed = {
     {
       number: 62,
       episode: "Tierschutzhundeverordnung, Strohhalmtest & Zwingerhaltung",
-      url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/62-tierschutzhundeverordnung-strohhalmtest-zwingerhaltung-vbf1lpiq5foqn",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/62-tierschutzhundeverordnung-strohhalmtest-zwingerhaltung-vbf1lpiq5foqn",
+          type: "audio",
+        },
+      ],
       meta: {
         internal: "portrait",
         public: "Rasseportrait",

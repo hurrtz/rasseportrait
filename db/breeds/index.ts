@@ -130,6 +130,7 @@ import SpanishGalgo from "./285";
 import SpanishWaterDog from "./336";
 import SpinoneItaliano from "./165";
 import Stabyhoun from "./222";
+import StandardSchnauzer from "./182";
 import StyrianCoarseHairedHound from "./62";
 import SwedishCattleDog from "./14";
 import SyberianHusky from "./270";
@@ -281,6 +282,7 @@ export default {
   SpanishWaterDog,
   SpinoneItaliano,
   Stabyhoun,
+  StandardSchnauzer,
   StyrianCoarseHairedHound,
   SwedishCattleDog,
   SyberianHusky,
