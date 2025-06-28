@@ -1,4 +1,5 @@
 import type { Breed, Variant } from "types/breed";
+import { AMOUNT_OF_BREEDS_TOTAL } from "./constants";
 
 /**
  * Groups groupable breeds (e.g. Corgi) into an array of arrays of breeds, each representing a group of breeds
@@ -202,4 +203,80 @@ export const sortBreeds = ({
     default:
       return sortBreedsByAirDate({ breeds, sortOrder });
   }
+};
+
+export const getStatistics = (breeds: Breed[]) => {
+  const getPercentage = (amount: number, total: number) =>
+    (amount / total) * 100;
+
+  const breedsPresented = breeds.filter((breed) =>
+    breed.podcast.some((podcast) => podcast.meta.internal === "portrait"),
+  );
+  const amountBreedsPresented = breedsPresented.length;
+  const percentageBreedsPresented = getPercentage(
+    amountBreedsPresented,
+    AMOUNT_OF_BREEDS_TOTAL,
+  ).toFixed(2);
+  const breedsOutsideFCI = breeds.filter(
+    (breed) => breed.classification.fci === undefined,
+  );
+  const breedsNotPresented = breeds.filter(
+    (breed) =>
+      !breed.podcast.some((podcast) => podcast.meta.internal === "portrait"),
+  );
+  const martinCorrectGuessesOutOfTotal = breedsPresented.filter((breed) =>
+    breed.podcast.find(
+      (podcast) =>
+        podcast.meta.internal === "portrait" &&
+        podcast.meta.guessedBy === "mr" &&
+        podcast.meta.isGuessable,
+    ),
+  ).length;
+  const martinCorrectGuesses = breedsPresented.filter((breed) =>
+    breed.podcast.find(
+      (podcast) =>
+        podcast.meta.internal === "portrait" &&
+        podcast.meta.guessedBy === "mr" &&
+        podcast.meta.isGuessable &&
+        podcast.meta.isGuessedCorrectly,
+    ),
+  ).length;
+  const martinCorrectGuessesPercentage = getPercentage(
+    martinCorrectGuesses,
+    martinCorrectGuessesOutOfTotal,
+  ).toFixed(2);
+  const katharinaCorrectGuessesOutOfTotal = breedsPresented.filter((breed) =>
+    breed.podcast.find(
+      (podcast) =>
+        podcast.meta.internal === "portrait" &&
+        podcast.meta.guessedBy === "ka" &&
+        podcast.meta.isGuessable,
+    ),
+  ).length;
+  const katharinaCorrectGuesses = breedsPresented.filter((breed) =>
+    breed.podcast.find(
+      (podcast) =>
+        podcast.meta.internal === "portrait" &&
+        podcast.meta.guessedBy === "ka" &&
+        podcast.meta.isGuessable &&
+        podcast.meta.isGuessedCorrectly,
+    ),
+  ).length;
+  const katharinaCorrectGuessesPercentage = getPercentage(
+    katharinaCorrectGuesses,
+    katharinaCorrectGuessesOutOfTotal,
+  ).toFixed(2);
+
+  return {
+    amountBreedsPresented,
+    percentageBreedsPresented,
+    breedsOutsideFCI,
+    breedsNotPresented,
+    martinCorrectGuesses,
+    martinCorrectGuessesOutOfTotal,
+    martinCorrectGuessesPercentage,
+    katharinaCorrectGuesses,
+    katharinaCorrectGuessesOutOfTotal,
+    katharinaCorrectGuessesPercentage,
+  };
 };
