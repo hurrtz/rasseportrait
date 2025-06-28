@@ -16,6 +16,14 @@ export default {
           },
         ],
       },
+      {
+        internal: "long",
+        public: "Langhaar",
+      },
+      {
+        internal: "wire",
+        public: "Rauhaar",
+      },
     ],
   },
   classification: {

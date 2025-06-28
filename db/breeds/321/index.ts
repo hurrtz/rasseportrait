@@ -14,6 +14,10 @@ export default {
         internal: "short",
         public: "Kurzhaar",
       },
+      {
+        internal: "wire",
+        public: "Rauhhaar",
+      },
     ],
   },
   classification: {

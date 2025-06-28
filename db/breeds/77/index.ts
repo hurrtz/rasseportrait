@@ -3,12 +3,17 @@ import type { Breed } from "../../../types/breed";
 export default {
   id: 77,
   details: {
-    internal: "papillon",
-    public: [
-      "Kontinentaler Zwergspaniel",
-      "Papillon",
-      "Phalène",
-      "Schmetterlingshündchen",
+    internal: "continental_toy_spaniel",
+    public: ["Kontinentaler Zwergspaniel", "Schmetterlingshündchen"],
+    variants: [
+      {
+        internal: "papillon",
+        public: "Papillon",
+      },
+      {
+        internal: "phalene",
+        public: "Phalène",
+      },
     ],
   },
   classification: {
