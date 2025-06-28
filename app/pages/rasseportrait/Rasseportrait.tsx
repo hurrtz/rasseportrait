@@ -6,13 +6,12 @@ import {
   useBreedActions,
   useBreeds,
   useRawBreeds,
-  useSelectedBreed,
   useSearch,
+  useSelectedBreedId,
 } from "../../stores/breeds";
 import breedsDB from "../../../db/breeds";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "../../components/Modal";
-import { BreedDetails } from "../../components/BreedDetails";
 import { BreedSearch } from "../../components/BreedSearch";
 import type { Breed } from "types/breed";
 import { mergeGroupedBreeds, sortBreeds } from "./utils";
@@ -38,18 +37,28 @@ const Rasseportrait = () => {
   const rawBreeds = useRawBreeds();
   let searchedBreeds = breeds;
   const { needle } = useSearch();
+  const selectedBreedId = useSelectedBreedId();
   const { setRawBreeds, setBreeds, setSelectedBreed, setSearch } =
     useBreedActions();
   const [isModalOpen, { open: openModal, close: closeModal }] =
     useDisclosure(false);
-  const selectedBreed = useSelectedBreed();
 
   const fuse = useMemo(() => new Fuse(allBreeds, fuseOptions), [allBreeds]);
 
   const onSelectBreed = (id: Breed["id"]) => {
     setSelectedBreed(id);
-    openModal();
   };
+
+  const onCloseModal = () => {
+    setSelectedBreed(undefined);
+    closeModal();
+  };
+
+  useEffect(() => {
+    if (selectedBreedId) {
+      openModal();
+    }
+  }, [selectedBreedId, openModal]);
 
   useEffect(() => {
     if (!rawBreeds.length) {
@@ -112,13 +121,7 @@ const Rasseportrait = () => {
         </SimpleGrid>
       </Stack>
 
-      <Modal
-        isOpen={isModalOpen}
-        close={closeModal}
-        title={selectedBreed?.details.public[0] ?? ""}
-      >
-        <BreedDetails breed={selectedBreed} />
-      </Modal>
+      <Modal isOpen={isModalOpen} close={onCloseModal} />
     </>
   );
 };

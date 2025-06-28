@@ -8,15 +8,6 @@
   transform: scale(1.025);
 }
 
-.image {
-  flex: 1 0 auto;
-}
-
-.slide {
-  margin: 0 4px;
-  border-radius: 8px;
-}
-
 .card-section {
   margin-bottom: calc(var(--card-padding) * -1);
 }
@@ -53,9 +44,4 @@
   border-top: 0.5px solid #000;
   height: 0;
   width: 20%;
-}
-
-.carousel-indicator {
-  bottom: auto;
-  top: 16px;
 }

@@ -38,6 +38,7 @@
     "@mantine/hooks": "^8.0.1",
     "@react-router/node": "^7.5.3",
     "@react-router/serve": "^7.5.3",
+    "@tabler/icons-react": "^3.34.0",
     "clsx": "^2.1.1",
     "embla-carousel": "^8.6.0",
     "embla-carousel-react": "^8.6.0",

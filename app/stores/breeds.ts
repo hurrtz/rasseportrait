@@ -109,10 +109,6 @@ export const useBreed = (id: Breed["id"]) =>
   );
 export const useSelectedBreedId = () =>
   useBreedsStore((state: State) => state.selectedBreed);
-export const useSelectedBreed = () =>
-  useBreedsStore((state: State) =>
-    state.breeds.find((breed) => breed.id === state.selectedBreed),
-  );
 export const useBreedActions = () =>
   useBreedsStore((state: State) => state.actions);
 export const useBreedGroup = (groupAs: Breed["details"]["groupAs"]) =>
@@ -125,3 +121,14 @@ export const useBreedVariantNames = (id: Breed["id"]) => {
   return useMemo(() => getBreedVariantNames(breeds, id), [breeds, id]);
 };
 export const useSearch = () => useBreedsStore((state: State) => state.search);
+export const useSelectedBreed = () => {
+  const { selectedBreed, breeds } = useBreedsStore((state: State) => state);
+
+  return useMemo(() => {
+    if (selectedBreed && breeds) {
+      return breeds.find(({ id }) => id === selectedBreed);
+    }
+
+    return undefined;
+  }, [selectedBreed, breeds]);
+};

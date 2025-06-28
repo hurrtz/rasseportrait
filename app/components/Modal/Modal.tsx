@@ -1,17 +1,25 @@
-import React, { type ReactNode } from "react";
-import { Modal as MantineModal } from "@mantine/core";
+import React from "react";
+import { Modal as MantineModal, ScrollArea } from "@mantine/core";
+import BreedDetails from "../BreedDetails/BreedDetails";
+import "./styles.css";
 
 interface Props {
-  children: ReactNode;
-  title: string;
   isOpen: boolean;
   close: () => void;
 }
 
-const Modal = ({ children, title, isOpen, close }: Props) => (
+const Modal = ({ isOpen, close }: Props) => (
   <>
-    <MantineModal opened={isOpen} onClose={close} title={title}>
-      {children}
+    <MantineModal
+      opened={isOpen}
+      onClose={close}
+      scrollAreaComponent={ScrollArea.Autosize}
+      classNames={{
+        header: "modal-header",
+        body: "modal-body",
+      }}
+    >
+      <BreedDetails />
     </MantineModal>
   </>
 );
