@@ -9,6 +9,7 @@ import {
   IconSectionSign,
 } from "@tabler/icons-react";
 import clsx from "clsx";
+import { useNavigate } from "react-router";
 
 const SORT_BY_OPTIONS: { label: string; value: "name" | "fci" | "airDate" }[] =
   [
@@ -23,7 +24,7 @@ const App = ({ children }: { children: ReactNode }) => {
   const { Header, Main } = AppShell;
   const { Target, Dropdown, Label, Item, Divider } = Menu;
   const [opened, { toggle }] = useDisclosure();
-
+  const navigate = useNavigate();
   const sortBy = useSortBy();
   const sortOrder = useSortOrder();
   const { setSort } = useBreedActions();
@@ -36,7 +37,7 @@ const App = ({ children }: { children: ReactNode }) => {
           align="center"
           className={classes.headerFlex}
         >
-          <div className={classes.logoWrapper}>
+          <div className={classes.logoWrapper} onClick={() => navigate("/")}>
             <Image
               src="logo.png"
               alt="Logo"
@@ -75,10 +76,11 @@ const App = ({ children }: { children: ReactNode }) => {
                 </Item>
               ))}
               <Divider />
+              <Label>Seiten</Label>
               <Item
                 leftSection={<IconSectionSign />}
                 onClick={() => {
-                  window.open("https://www.impressum-generator.de", "_blank");
+                  navigate("/impressum");
                 }}
               >
                 Impressum

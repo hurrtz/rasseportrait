@@ -4,13 +4,11 @@
 
 .logoWrapper {
   padding-left: 10px;
+  cursor: pointer;
 }
 
 .burgerWrapper {
   padding: 0 20px 0 10px;
-}
-
-.sortByItem {
 }
 
 .sortByItem.active {
