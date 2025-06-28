@@ -1,13 +1,32 @@
 import { type ReactNode } from "react";
-import { AppShell, Burger, Flex, Image } from "@mantine/core";
+import { AppShell, Burger, Flex, Image, Menu } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./App.module.css";
+import { useBreedActions, useSortBy, useSortOrder } from "./stores/breeds";
+import {
+  IconSortAscending,
+  IconSortDescending,
+  IconSectionSign,
+} from "@tabler/icons-react";
+import clsx from "clsx";
+
+const SORT_BY_OPTIONS: { label: string; value: "name" | "fci" | "airDate" }[] =
+  [
+    { label: "Name", value: "name" },
+    { label: "FCI", value: "fci" },
+    { label: "Datum", value: "airDate" },
+  ];
 
 const HEADER_HEIGHT = 60;
 
 const App = ({ children }: { children: ReactNode }) => {
   const { Header, Main } = AppShell;
+  const { Target, Dropdown, Label, Item, Divider } = Menu;
   const [opened, { toggle }] = useDisclosure();
+
+  const sortBy = useSortBy();
+  const sortOrder = useSortOrder();
+  const { setSort } = useBreedActions();
 
   return (
     <AppShell header={{ height: HEADER_HEIGHT }} padding="md">
@@ -26,9 +45,46 @@ const App = ({ children }: { children: ReactNode }) => {
             />
           </div>
 
-          <div className={classes.burgerWrapper}>
-            <Burger opened={opened} onClick={toggle} />
-          </div>
+          <Menu shadow="md" width={200}>
+            <Target>
+              <div className={classes.burgerWrapper}>
+                <Burger opened={opened} onClick={toggle} />
+              </div>
+            </Target>
+            <Dropdown>
+              <Label>Sortieren nach</Label>
+              {SORT_BY_OPTIONS.map(({ value, label }) => (
+                <Item
+                  key={value}
+                  onClick={() => {
+                    setSort({ sortBy: value, sortOrder });
+                    toggle();
+                  }}
+                  leftSection={
+                    sortBy === value && sortOrder === "asc" ? (
+                      <IconSortAscending />
+                    ) : (
+                      <IconSortDescending />
+                    )
+                  }
+                  className={clsx([classes.sortByItem], {
+                    [classes.active]: value === sortBy,
+                  })}
+                >
+                  {label}
+                </Item>
+              ))}
+              <Divider />
+              <Item
+                leftSection={<IconSectionSign />}
+                onClick={() => {
+                  window.open("https://www.impressum-generator.de", "_blank");
+                }}
+              >
+                Impressum
+              </Item>
+            </Dropdown>
+          </Menu>
         </Flex>
       </Header>
 

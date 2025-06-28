@@ -14,7 +14,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "../../components/Modal";
 import { BreedSearch } from "../../components/BreedSearch";
 import type { Breed } from "types/breed";
-import { mergeGroupedBreeds, sortBreeds } from "./utils";
+import { mergeGroupedBreeds } from "./utils";
 import Fuse from "fuse.js";
 
 const fuseOptions = {
@@ -35,7 +35,6 @@ const Rasseportrait = () => {
   const breeds = useBreeds();
   const allBreeds = useAllBreeds();
   const rawBreeds = useRawBreeds();
-  let searchedBreeds = breeds;
   const { needle } = useSearch();
   const selectedBreedId = useSelectedBreedId();
   const { setRawBreeds, setBreeds, setSelectedBreed, setSearch } =
@@ -75,14 +74,7 @@ const Rasseportrait = () => {
 
       const allBreeds = [...singleBreeds, ...mergedBreeds];
 
-      // sort breeds by air date of podcast
-      const sortedBreeds = sortBreeds({
-        breeds: allBreeds,
-        sortBy: "airDate",
-        sortDirection: "desc",
-      });
-
-      setBreeds(sortedBreeds);
+      setBreeds(allBreeds);
     }
   }, [rawBreeds.length]);
 
@@ -96,16 +88,14 @@ const Rasseportrait = () => {
     }
   }, [needle, setSearch, fuse]);
 
-  const breedCards = searchedBreeds.map(
-    ({ id, details: { public: names } }) => (
-      <BreedCard
-        key={id}
-        id={id}
-        name={names[0]}
-        onClick={() => onSelectBreed(id)}
-      />
-    ),
-  );
+  const breedCards = breeds.map(({ id, details: { public: names } }) => (
+    <BreedCard
+      key={id}
+      id={id}
+      name={names[0]}
+      onClick={() => onSelectBreed(id)}
+    />
+  ));
 
   return (
     <>

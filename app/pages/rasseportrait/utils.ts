@@ -77,7 +77,7 @@ export const mergeGroupedBreeds = (breeds: Breed[]): Breed[] => {
   return mergedBreeds;
 };
 
-type SortDirection = "asc" | "desc";
+type SortOrder = "asc" | "desc";
 
 /*
   Sorts breeds by air date of podcast
@@ -87,10 +87,10 @@ type SortDirection = "asc" | "desc";
 */
 const sortBreedsByAirDate = ({
   breeds,
-  sortDirection = "asc",
+  sortOrder,
 }: {
   breeds: Breed[];
-  sortDirection?: SortDirection;
+  sortOrder: SortOrder;
 }): Breed[] =>
   breeds.sort((a, b) => {
     const aAirDate = a.podcast.find(
@@ -104,7 +104,7 @@ const sortBreedsByAirDate = ({
     const aDate = new Date(aAirDate ?? "").getTime();
     const bDate = new Date(bAirDate ?? "").getTime();
 
-    if (sortDirection === "asc") {
+    if (sortOrder === "asc") {
       return aDate - bDate;
     }
 
@@ -119,10 +119,10 @@ const sortBreedsByAirDate = ({
 */
 const sortBreedsByName = ({
   breeds,
-  sortDirection = "asc",
+  sortOrder,
 }: {
   breeds: Breed[];
-  sortDirection?: SortDirection;
+  sortOrder: SortOrder;
 }): Breed[] =>
   breeds.sort((a, b) => {
     const aName = a.details.internal;
@@ -132,7 +132,7 @@ const sortBreedsByName = ({
       return 0;
     }
 
-    if (sortDirection === "asc") {
+    if (sortOrder === "asc") {
       return aName.localeCompare(bName);
     }
 
@@ -147,10 +147,10 @@ const sortBreedsByName = ({
 */
 const sortBreedsByFCI = ({
   breeds,
-  sortDirection = "asc",
+  sortOrder,
 }: {
   breeds: Breed[];
-  sortDirection?: SortDirection;
+  sortOrder: SortOrder;
 }): Breed[] =>
   breeds.sort((a, b) => {
     const aFCI =
@@ -173,7 +173,7 @@ const sortBreedsByFCI = ({
       return 0;
     }
 
-    if (sortDirection === "asc") {
+    if (sortOrder === "asc") {
       return aFCI - bFCI;
     }
 
@@ -185,19 +185,21 @@ type SortBy = "airDate" | "name" | "fci";
 export const sortBreeds = ({
   breeds,
   sortBy,
-  sortDirection = "asc",
+  sortOrder,
 }: {
   breeds: Breed[];
   sortBy: SortBy;
-  sortDirection?: SortDirection;
+  sortOrder: SortOrder;
 }) => {
   switch (sortBy) {
     case "name":
-      return sortBreedsByName({ breeds, sortDirection });
+      return sortBreedsByName({ breeds, sortOrder });
+
     case "fci":
-      return sortBreedsByFCI({ breeds, sortDirection });
-    default:
+      return sortBreedsByFCI({ breeds, sortOrder });
+
     case "airDate":
-      return sortBreedsByAirDate({ breeds, sortDirection });
+    default:
+      return sortBreedsByAirDate({ breeds, sortOrder });
   }
 };

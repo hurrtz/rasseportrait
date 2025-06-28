@@ -3,6 +3,7 @@ import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 import { type Breed } from "../../types/breed";
 import { getBreedVariantNames } from "./utils";
+import { sortBreeds } from "../pages/rasseportrait/utils";
 
 type Search = {
   needle?: string | null;
@@ -16,6 +17,10 @@ interface BreedActions {
   addBreed: (breed: Breed) => void;
   setSelectedBreed: (id?: Breed["id"]) => void;
   setSearch: (search: Search) => void;
+  setSort: (sort: {
+    sortBy: "name" | "fci" | "airDate";
+    sortOrder: "asc" | "desc";
+  }) => void;
 }
 
 interface State {
@@ -24,6 +29,8 @@ interface State {
   selectedBreed?: Breed["id"];
   actions: BreedActions;
   search: Search;
+  sortBy: "name" | "fci" | "airDate";
+  sortOrder: "asc" | "desc";
 }
 
 const initialState: Omit<State, "actions"> = {
@@ -33,6 +40,8 @@ const initialState: Omit<State, "actions"> = {
     needle: "",
     results: [],
   },
+  sortBy: "airDate",
+  sortOrder: "desc",
 };
 
 const useBreedsStore = create<State>()(
@@ -78,6 +87,26 @@ const useBreedsStore = create<State>()(
             undefined,
             "setSearch",
           ),
+        setSort: ({
+          sortBy,
+          sortOrder,
+        }: {
+          sortBy: "name" | "fci" | "airDate";
+          sortOrder: "asc" | "desc";
+        }) =>
+          set(
+            (state) => ({
+              sortBy,
+              sortOrder:
+                state.sortBy === sortBy
+                  ? state.sortOrder === "asc"
+                    ? "desc"
+                    : "asc"
+                  : sortOrder,
+            }),
+            undefined,
+            "setSort",
+          ),
       },
     }),
     {
@@ -95,13 +124,19 @@ export const useBreeds = () => {
   const {
     search: { needle, results },
     breeds,
+    sortBy,
+    sortOrder,
   } = useBreedsStore((state: State) => state);
 
+  const sortedBreeds = useMemo(() => {
+    return sortBreeds({ breeds, sortBy, sortOrder });
+  }, [breeds, sortBy, sortOrder]);
+
   if (needle && results) {
-    return breeds.filter((breed) => results.includes(breed.id));
+    return sortedBreeds.filter((breed) => results.includes(breed.id));
   }
 
-  return breeds;
+  return sortedBreeds;
 };
 export const useBreed = (id: Breed["id"]) =>
   useBreedsStore((state: State) =>
@@ -132,3 +167,6 @@ export const useSelectedBreed = () => {
     return undefined;
   }, [selectedBreed, breeds]);
 };
+export const useSortBy = () => useBreedsStore((state: State) => state.sortBy);
+export const useSortOrder = () =>
+  useBreedsStore((state: State) => state.sortOrder);
