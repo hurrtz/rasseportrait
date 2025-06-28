@@ -61,21 +61,12 @@ const BreedDetails = () => {
 
   const podcastEpisodes = getPodcastEpisodes();
 
-  const getFurtherReadings = () => {
-    const readings: Breed["furtherReading"] = [];
-
-    selectedBreed.furtherReading.forEach((reading) => {
-      readings.push({ ...reading });
-    });
-
-    selectedBreed.details.variants?.[activeSlide]?.furtherReading?.forEach(
-      (reading) => {
-        readings.push({ ...reading });
-      },
-    );
-
-    return [...new Set(readings)];
-  };
+  const furtherReadings = [
+    ...new Set([
+      ...selectedBreed.furtherReading,
+      ...(selectedBreed.details.variants?.[activeSlide]?.furtherReading ?? []),
+    ]),
+  ];
 
   return (
     <div className="breed-details-container">
@@ -90,7 +81,7 @@ const BreedDetails = () => {
           {selectedBreed.details.variants?.[activeSlide]?.public}
         </Text>
         <Divider className="divider" />
-        <Text>
+        <div>
           <Text size="sm" className="section-name">
             FCI
           </Text>
@@ -109,7 +100,7 @@ const BreedDetails = () => {
               selectedBreed.details.variants?.[activeSlide]?.fci?.section}
             )
           </Text>
-        </Text>
+        </div>
         <Divider className="divider" />
         {podcastEpisodes.map(
           (
@@ -127,6 +118,9 @@ const BreedDetails = () => {
               radius="md"
               color="gray"
               className="podcast-episode"
+              onClick={() => {
+                window.open(sources[0].url, "_blank");
+              }}
             >
               <Group gap="lg" wrap="nowrap" preventGrowOverflow>
                 <div className="podcast-episode-icon">
@@ -155,12 +149,15 @@ const BreedDetails = () => {
           Weitere Infos
         </Text>
         <div className="further-readings">
-          {getFurtherReadings().map((reading) => (
+          {furtherReadings.map((reading) => (
             <ActionIcon
               key={reading.name}
               variant="outline"
               className="further-reading-icon"
               color="#63687c"
+              onClick={() => {
+                window.open(reading.url, "_blank");
+              }}
             >
               <Text component="span" size="xs">
                 {reading.name}
