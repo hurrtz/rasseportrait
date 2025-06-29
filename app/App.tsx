@@ -10,6 +10,16 @@ import {
 } from "@tabler/icons-react";
 import clsx from "clsx";
 import { useNavigate } from "react-router";
+import * as amplitude from "@amplitude/analytics-browser";
+import { sessionReplayPlugin } from "@amplitude/plugin-session-replay-browser";
+
+const sessionReplayTracking = sessionReplayPlugin();
+amplitude.add(sessionReplayTracking);
+amplitude.init(
+  window.location.hostname === "localhost"
+    ? "" // no tracking during development
+    : "73172d06233b85ff451f0f15f016ec0b",
+);
 
 const SORT_BY_OPTIONS: { label: string; value: "name" | "fci" | "airDate" }[] =
   [
