@@ -1,7 +1,7 @@
 {
   "name": "rasseportrait",
   "private": true,
-  "version": "2.0.0@alpha.1",
+  "version": "2.0.0",
   "description": "RTL - Tierisch Menschlich - Rasseportrait Fanseite",
   "type": "module",
   "scripts": {
