@@ -1,0 +1,16 @@
+.headerFlex {
+  height: 100%;
+}
+
+.logoWrapper {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.burgerWrapper {
+  padding: 0 20px 0 10px;
+}
+
+.sortByItem.active {
+  background-color: #c8cad3;
+}

@@ -1,40 +1,66 @@
-import type { Podcast, EnrichedPodcast, FurtherReading } from "./general";
+interface PodcastMeta {
+  internal:
+    | "portrait"
+    | "listener_question"
+    | "personal_anecdote"
+    | "other"
+    | string;
+  public: "Rasseportrait" | "Hörerfrage" | "Persönliche Anekdote" | string;
+  timecode: number;
+  airDate: string;
+  type?: "video" | "audio";
+  publicDate?: string;
+  isGuessable: boolean | undefined;
+  isGuessedCorrectly: boolean | undefined;
+  guessedBy: "mr" | "ka" | undefined;
+}
 
-export interface FCI {
+interface Source {
+  url: string;
+  type: "video" | "audio";
+}
+
+interface Podcast {
+  number: number | string;
+  episode: string;
+  sources: Source[];
+  meta: PodcastMeta;
+}
+
+interface FurtherReading {
+  name: string;
+  url: string;
+}
+
+interface FCI {
   group: number;
   section: number;
   standardNumber: number;
 }
 
 export interface Variant {
-  id: string;
-  names: string[];
-  fci?: FCI;
+  internal: string;
+  public: string;
   furtherReading?: FurtherReading[];
+  fci?: FCI;
+}
+
+interface BreedDetails {
+  internal: string;
+  public: string[];
+  variants?: Variant[];
+  groupAs?: string;
+  isGrouped?: boolean;
+  isOfficiallyPresented?: boolean;
 }
 
 export interface Breed {
   id: number | string;
-  isOfficiallyPresented?: boolean;
-  wasGuessedCorrectlyInPodcast: boolean | "not_applicable";
-  wasGuessedCorrectlyInPodcastBy?: "martin" | "katharina";
-  names: string[];
-  variants?: Variant[];
-  fci?: FCI;
+  details: BreedDetails;
+  classification: {
+    fci: FCI | undefined;
+  };
   podcast: Podcast[];
   furtherReading: FurtherReading[];
   recognitions?: string[];
-  startShowingFromTimestamp?: number;
 }
-
-export interface EnrichedBreed extends Omit<Breed, "image" | "podcast"> {
-  image: string;
-  podcast: EnrichedPodcast[];
-}
-
-export type BreedIdentifier =
-  | {
-      id: string | number;
-      variantName?: string;
-    }
-  | undefined;
