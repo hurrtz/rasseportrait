@@ -4,6 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import viteCompression from "vite-plugin-compression";
 
 export default defineConfig({
+  base: "./",
   plugins: [
     reactRouter(),
     tsconfigPaths(),

@@ -34,23 +34,23 @@ export const Layout = ({ children }: { children: ReactNode }) => (
     <head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" type="image/png" href="/favicon_16.ico" sizes="16x16" />
-      <link rel="icon" type="image/png" href="/favicon_32.ico" sizes="32x32" />
-      <link rel="icon" type="image/png" href="/favicon_48.ico" sizes="48x48" />
-      <link rel="icon" type="image/png" href="/favicon_64.ico" sizes="64x64" />
+      <link rel="icon" type="image/png" href="./favicon_16.ico" sizes="16x16" />
+      <link rel="icon" type="image/png" href="./favicon_32.ico" sizes="32x32" />
+      <link rel="icon" type="image/png" href="./favicon_48.ico" sizes="48x48" />
+      <link rel="icon" type="image/png" href="./favicon_64.ico" sizes="64x64" />
       <link
         rel="icon"
         type="image/png"
-        href="/favicon_128.ico"
+        href="./favicon_128.ico"
         sizes="128x128"
       />
       <link
         rel="icon"
         type="image/png"
-        href="/favicon_256.ico"
+        href="./favicon_256.ico"
         sizes="256x256"
       />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="./favicon.ico" />
       <ColorSchemeScript />
       <Meta />
       <Links />
