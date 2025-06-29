@@ -53,10 +53,7 @@ const App = ({ children }: { children: ReactNode }) => {
           "@amplitude/plugin-session-replay-browser"
         );
 
-        // Initialize Amplitude with your API key
-        const apiKey =
-          process.env.REACT_APP_AMPLITUDE_API_KEY ||
-          process.env.VITE_AMPLITUDE_API_KEY;
+        const apiKey = "73172d06233b85ff451f0f15f016ec0b";
 
         if (!apiKey) {
           console.warn("Amplitude API key not found. Analytics disabled.");
