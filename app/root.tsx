@@ -52,6 +52,46 @@ export const Layout = ({ children }: { children: ReactNode }) => (
       />
       <link rel="icon" href="./favicon.ico" />
       <ColorSchemeScript />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            // Calculate dynamic basename for subdirectory deployment
+            (function() {
+              // Get current pathname
+              var pathname = window.location.pathname;
+
+              // If we're at root, basename is "/"
+              if (pathname === '/' || pathname === '/index.html') {
+                return;
+              }
+
+              // For subdirectory deployments, calculate basename
+              // If URL is like /folder/index.html or /folder/, basename should be /folder
+              var pathParts = pathname.split('/').filter(Boolean);
+
+              // If last part is index.html, remove it
+              if (pathParts[pathParts.length - 1] === 'index.html') {
+                pathParts.pop();
+              }
+
+              // If we have path parts, that's our basename
+              if (pathParts.length > 0) {
+                var basename = '/' + pathParts.join('/');
+
+                // Update React Router context when it becomes available
+                var checkContext = function() {
+                  if (window.__reactRouterContext) {
+                    window.__reactRouterContext.basename = basename;
+                  } else {
+                    setTimeout(checkContext, 10);
+                  }
+                };
+                checkContext();
+              }
+            })();
+          `,
+        }}
+      />
       <Meta />
       <Links />
     </head>
