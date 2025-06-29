@@ -10,6 +10,7 @@ import {
 } from "@tabler/icons-react";
 import clsx from "clsx";
 import { useNavigate } from "react-router";
+import { useAmplitude } from "./hooks/useAmplitude";
 
 const SORT_BY_OPTIONS: { label: string; value: "name" | "fci" | "airDate" }[] =
   [
@@ -20,32 +21,6 @@ const SORT_BY_OPTIONS: { label: string; value: "name" | "fci" | "airDate" }[] =
 
 const HEADER_HEIGHT = 60;
 
-// Initialize Amplitude only on client side
-const initializeAmplitude = async () => {
-  // Check if we're in a browser environment
-  if (typeof window === "undefined") return;
-
-  try {
-    // Dynamic imports to avoid SSR issues
-    const [{ default: amplitude }, { sessionReplayPlugin }] = await Promise.all(
-      [
-        import("@amplitude/analytics-browser"),
-        import("@amplitude/plugin-session-replay-browser"),
-      ],
-    );
-
-    const sessionReplayTracking = sessionReplayPlugin();
-    amplitude.add(sessionReplayTracking);
-    amplitude.init(
-      window.location.hostname === "localhost"
-        ? "" // no tracking during development
-        : "73172d06233b85ff451f0f15f016ec0b",
-    );
-  } catch (error) {
-    console.warn("Failed to initialize Amplitude:", error);
-  }
-};
-
 const App = ({ children }: { children: ReactNode }) => {
   const { Header, Main } = AppShell;
   const { Target, Dropdown, Label, Item, Divider } = Menu;
@@ -54,11 +29,7 @@ const App = ({ children }: { children: ReactNode }) => {
   const sortBy = useSortBy();
   const sortOrder = useSortOrder();
   const { setSort } = useBreedActions();
-
-  // Initialize Amplitude on client side only
-  useEffect(() => {
-    initializeAmplitude();
-  }, []);
+  const { track } = useAmplitude();
 
   // Handle GitHub Pages SPA redirect
   useEffect(() => {
@@ -69,6 +40,63 @@ const App = ({ children }: { children: ReactNode }) => {
     }
   }, [navigate]);
 
+  // Initialize Amplitude Analytics (client-side only)
+  useEffect(() => {
+    const initializeAmplitude = async () => {
+      // Only run on client side to avoid SSR issues
+      if (typeof window === "undefined") return;
+
+      try {
+        // Dynamic import to avoid SSR issues
+        const { init, track } = await import("@amplitude/analytics-browser");
+        const { sessionReplayPlugin } = await import(
+          "@amplitude/plugin-session-replay-browser"
+        );
+
+        // Initialize Amplitude with your API key
+        const apiKey =
+          process.env.REACT_APP_AMPLITUDE_API_KEY ||
+          process.env.VITE_AMPLITUDE_API_KEY;
+
+        if (!apiKey) {
+          console.warn("Amplitude API key not found. Analytics disabled.");
+          return;
+        }
+
+        // Initialize with session replay plugin
+        await init(apiKey, undefined, {
+          defaultTracking: {
+            sessions: true,
+            pageViews: true,
+            formInteractions: true,
+            fileDownloads: true,
+          },
+        });
+
+        // Add session replay plugin
+        const sessionReplay = sessionReplayPlugin({
+          sampleRate: 1, // Capture 100% of sessions (adjust as needed)
+        });
+
+        // Add the plugin to Amplitude (no setup call needed)
+        const { add } = await import("@amplitude/analytics-browser");
+        add(sessionReplay);
+
+        // Track initial app load
+        track("App Loaded", {
+          timestamp: Date.now(),
+          url: window.location.href,
+        });
+
+        console.log("✅ Amplitude analytics initialized successfully");
+      } catch (error) {
+        console.error("❌ Failed to initialize Amplitude:", error);
+      }
+    };
+
+    initializeAmplitude();
+  }, []);
+
   return (
     <AppShell header={{ height: HEADER_HEIGHT }} padding="md">
       <Header>
@@ -77,7 +105,13 @@ const App = ({ children }: { children: ReactNode }) => {
           align="center"
           className={classes.headerFlex}
         >
-          <div className={classes.logoWrapper} onClick={() => navigate("/")}>
+          <div
+            className={classes.logoWrapper}
+            onClick={() => {
+              track("Logo Clicked", { page: window.location.pathname });
+              navigate("/");
+            }}
+          >
             <Image
               src="logo.png"
               alt="Logo"
@@ -98,6 +132,11 @@ const App = ({ children }: { children: ReactNode }) => {
                 <Item
                   key={value}
                   onClick={() => {
+                    track("Sort Changed", {
+                      sortBy: value,
+                      sortOrder,
+                      previousSortBy: sortBy,
+                    });
                     setSort({ sortBy: value, sortOrder });
                     toggle();
                   }}
@@ -120,6 +159,10 @@ const App = ({ children }: { children: ReactNode }) => {
               <Item
                 leftSection={<IconSectionSign />}
                 onClick={() => {
+                  track("Impressum Clicked", {
+                    source: "header_menu",
+                    page: window.location.pathname,
+                  });
                   navigate("/impressum");
                 }}
               >
