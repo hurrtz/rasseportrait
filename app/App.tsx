@@ -60,6 +60,15 @@ const App = ({ children }: { children: ReactNode }) => {
     initializeAmplitude();
   }, []);
 
+  // Handle GitHub Pages SPA redirect
+  useEffect(() => {
+    const redirectPath = sessionStorage.getItem("redirectPath");
+    if (redirectPath) {
+      sessionStorage.removeItem("redirectPath");
+      navigate(redirectPath, { replace: true });
+    }
+  }, [navigate]);
+
   return (
     <AppShell header={{ height: HEADER_HEIGHT }} padding="md">
       <Header>
