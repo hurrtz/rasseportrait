@@ -5,6 +5,7 @@ import type { Breed } from "../../../types/breed";
 import { useBreed, useBreedVariantNames } from "../../stores/breeds";
 import "@mantine/carousel/styles.css";
 import { BreedImages } from "../BreedImages";
+import { useAmplitude } from "../../hooks/useAmplitude";
 import "./styles.css";
 
 interface Props {
@@ -18,10 +19,33 @@ const BreedCard = ({ id, name, onClick }: Props) => {
   const { details } = useBreed(id)!;
   const variantNames = useBreedVariantNames(id);
   const [activeSlide, setActiveSlide] = useState(0);
+  const { track } = useAmplitude();
 
-  const handleSlideChange = useCallback((index: number) => {
-    setActiveSlide(index);
-  }, []);
+  const handleSlideChange = useCallback(
+    (index: number) => {
+      track("Breed Card Image Slide Changed", {
+        breedId: id,
+        breedName: name,
+        slideIndex: index,
+        totalSlides: variantNames.length,
+        variantName: variantNames[index],
+      });
+      setActiveSlide(index);
+    },
+    [id, name, variantNames, track],
+  );
+
+  const handleCardClick = useCallback(() => {
+    track("Breed Card Clicked", {
+      breedId: id,
+      breedName: name,
+      hasVariants: variantNames.length > 1,
+      variantCount: variantNames.length,
+      currentSlide: activeSlide,
+      currentVariant: variantNames[activeSlide],
+    });
+    onClick();
+  }, [id, name, variantNames, activeSlide, onClick, track]);
 
   return (
     <Card shadow="xl" padding="xl" radius="md" className="card">
@@ -32,7 +56,7 @@ const BreedCard = ({ id, name, onClick }: Props) => {
       >
         <BreedImages
           id={id}
-          onClick={onClick}
+          onClick={handleCardClick}
           handleSlideChange={handleSlideChange}
         />
       </Section>

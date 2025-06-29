@@ -26,6 +26,7 @@ import { mergeGroupedBreeds, getStatistics } from "./utils";
 import Fuse from "fuse.js";
 import { IconHandFingerRight } from "@tabler/icons-react";
 import { AMOUNT_OF_BREEDS_TOTAL } from "./constants";
+import { useAmplitude } from "../../hooks/useAmplitude";
 
 const fuseOptions = {
   keys: [
@@ -51,6 +52,7 @@ const Rasseportrait = () => {
     useBreedActions();
   const [isModalOpen, { open: openModal, close: closeModal }] =
     useDisclosure(false);
+  const { track } = useAmplitude();
 
   const fuse = useMemo(() => new Fuse(allBreeds, fuseOptions), [allBreeds]);
   const { Item, Panel, Control } = Accordion;
@@ -70,10 +72,28 @@ const Rasseportrait = () => {
   } = getStatistics(rawBreeds);
 
   const onSelectBreed = (id: Breed["id"]) => {
+    const selectedBreedData = allBreeds.find((breed) => breed.id === id);
+    track("Breed Selected", {
+      breedId: id,
+      breedName: selectedBreedData?.details.public[0],
+      hasVariants: (selectedBreedData?.details.variants?.length || 0) > 1,
+      variantCount: selectedBreedData?.details.variants?.length || 0,
+      searchActive: !!needle,
+      searchTerm: needle || null,
+      totalBreedsVisible: breeds.length,
+    });
     setSelectedBreed(id);
   };
 
   const onCloseModal = () => {
+    const selectedBreedData = allBreeds.find(
+      (breed) => breed.id === selectedBreedId,
+    );
+    track("Breed Modal Closed", {
+      breedId: selectedBreedId,
+      breedName: selectedBreedData?.details.public[0],
+      modalOpenDuration: Date.now(), // This could be improved with actual duration tracking
+    });
     setSelectedBreed(undefined);
     closeModal();
   };
@@ -108,10 +128,15 @@ const Rasseportrait = () => {
       setSearch({ results: null });
     } else {
       const results = fuse.search(needle).map(({ item: { id } }) => id);
-
+      track("Breed Search Performed", {
+        searchTerm: needle,
+        resultsCount: results.length,
+        totalBreeds: allBreeds.length,
+        hasResults: results.length > 0,
+      });
       setSearch({ results });
     }
-  }, [needle, setSearch, fuse]);
+  }, [needle, setSearch, fuse, track, allBreeds.length]);
 
   const breedCards = breeds.map(({ id, details: { public: names } }) => (
     <BreedCard
@@ -124,7 +149,17 @@ const Rasseportrait = () => {
 
   const items = [
     <Item key="statistics" value="on">
-      <Control>Statistiken</Control>
+      <Control
+        onClick={() =>
+          track("Statistics Accordion Clicked", {
+            totalBreeds: allBreeds.length,
+            visibleBreeds: breeds.length,
+            searchActive: !!needle,
+          })
+        }
+      >
+        Statistiken
+      </Control>
       <Panel>
         <Stack>
           <Group wrap="nowrap">

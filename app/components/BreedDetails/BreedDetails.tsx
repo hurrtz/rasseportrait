@@ -4,6 +4,7 @@ import { useSelectedBreed } from "../../stores/breeds";
 import { BreedImages } from "../BreedImages";
 import type { Breed } from "types/breed";
 import { IconBroadcast, IconVideo } from "@tabler/icons-react";
+import { useAmplitude } from "../../hooks/useAmplitude";
 import "./styles.css";
 
 const Icon = ({ type }: { type: string }) => {
@@ -20,6 +21,7 @@ const Icon = ({ type }: { type: string }) => {
 const BreedDetails = () => {
   const selectedBreed = useSelectedBreed();
   const [activeSlide, setActiveSlide] = useState(0);
+  const { track } = useAmplitude();
 
   if (!selectedBreed) {
     return <div>Breed not found</div>;
@@ -71,7 +73,19 @@ const BreedDetails = () => {
   return (
     <div className="breed-details-container">
       <div>
-        <BreedImages id={selectedBreed.id} handleSlideChange={setActiveSlide} />
+        <BreedImages
+          id={selectedBreed.id}
+          handleSlideChange={(index: number) => {
+            track("Breed Details Image Slide Changed", {
+              breedId: selectedBreed.id,
+              breedName: selectedBreed.details.public[0],
+              slideIndex: index,
+              totalSlides: selectedBreed.details.variants?.length || 1,
+              variantName: selectedBreed.details.variants?.[index]?.public,
+            });
+            setActiveSlide(index);
+          }}
+        />
       </div>
       <div className="breed-details">
         <Text className="breed-name" size="xl" fw={300}>
@@ -119,6 +133,15 @@ const BreedDetails = () => {
               color="gray"
               className="podcast-episode"
               onClick={() => {
+                track("Podcast Episode Clicked", {
+                  breedId: selectedBreed.id,
+                  breedName: selectedBreed.details.public[0],
+                  episodeTitle: episode,
+                  episodeNumber: number,
+                  sourceType: sources[0].type,
+                  sourceUrl: sources[0].url,
+                  timecode: timecode,
+                });
                 window.open(sources[0].url, "_blank");
               }}
             >
@@ -156,6 +179,14 @@ const BreedDetails = () => {
               className="further-reading-icon"
               color="#63687c"
               onClick={() => {
+                track("Further Reading Link Clicked", {
+                  breedId: selectedBreed.id,
+                  breedName: selectedBreed.details.public[0],
+                  linkName: reading.name,
+                  linkUrl: reading.url,
+                  currentVariant:
+                    selectedBreed.details.variants?.[activeSlide]?.public,
+                });
                 window.open(reading.url, "_blank");
               }}
             >
