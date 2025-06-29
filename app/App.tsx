@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode, useEffect } from "react";
 import { AppShell, Burger, Flex, Image, Menu } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./App.module.css";
@@ -10,16 +10,6 @@ import {
 } from "@tabler/icons-react";
 import clsx from "clsx";
 import { useNavigate } from "react-router";
-import * as amplitude from "@amplitude/analytics-browser";
-import { sessionReplayPlugin } from "@amplitude/plugin-session-replay-browser";
-
-const sessionReplayTracking = sessionReplayPlugin();
-amplitude.add(sessionReplayTracking);
-amplitude.init(
-  window.location.hostname === "localhost"
-    ? "" // no tracking during development
-    : "73172d06233b85ff451f0f15f016ec0b",
-);
 
 const SORT_BY_OPTIONS: { label: string; value: "name" | "fci" | "airDate" }[] =
   [
@@ -30,6 +20,32 @@ const SORT_BY_OPTIONS: { label: string; value: "name" | "fci" | "airDate" }[] =
 
 const HEADER_HEIGHT = 60;
 
+// Initialize Amplitude only on client side
+const initializeAmplitude = async () => {
+  // Check if we're in a browser environment
+  if (typeof window === "undefined") return;
+
+  try {
+    // Dynamic imports to avoid SSR issues
+    const [{ default: amplitude }, { sessionReplayPlugin }] = await Promise.all(
+      [
+        import("@amplitude/analytics-browser"),
+        import("@amplitude/plugin-session-replay-browser"),
+      ],
+    );
+
+    const sessionReplayTracking = sessionReplayPlugin();
+    amplitude.add(sessionReplayTracking);
+    amplitude.init(
+      window.location.hostname === "localhost"
+        ? "" // no tracking during development
+        : "73172d06233b85ff451f0f15f016ec0b",
+    );
+  } catch (error) {
+    console.warn("Failed to initialize Amplitude:", error);
+  }
+};
+
 const App = ({ children }: { children: ReactNode }) => {
   const { Header, Main } = AppShell;
   const { Target, Dropdown, Label, Item, Divider } = Menu;
@@ -38,6 +54,11 @@ const App = ({ children }: { children: ReactNode }) => {
   const sortBy = useSortBy();
   const sortOrder = useSortOrder();
   const { setSort } = useBreedActions();
+
+  // Initialize Amplitude on client side only
+  useEffect(() => {
+    initializeAmplitude();
+  }, []);
 
   return (
     <AppShell header={{ height: HEADER_HEIGHT }} padding="md">

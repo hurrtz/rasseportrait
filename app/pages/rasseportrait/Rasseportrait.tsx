@@ -25,12 +25,7 @@ import type { Breed } from "types/breed";
 import { mergeGroupedBreeds, getStatistics } from "./utils";
 import Fuse from "fuse.js";
 import { IconHandFingerRight } from "@tabler/icons-react";
-import {
-  AMOUNT_OF_BREEDS_APPROVED,
-  AMOUNT_OF_BREEDS_PROVISIONAL,
-  AMOUNT_OF_BREEDS_REMOVED,
-  AMOUNT_OF_BREEDS_TOTAL,
-} from "./constants";
+import { AMOUNT_OF_BREEDS_TOTAL } from "./constants";
 
 const fuseOptions = {
   keys: [
