@@ -2,6 +2,63 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/hurrtz/rasseportrait/compare/v1.80.0...v2.1.0) (2025-06-29)
+
+
+### Features
+
+* add app logo ([bed5668](https://github.com/hurrtz/rasseportrait/commit/bed566866ae0375f66eec2ee04615e49a6877a6f))
+* add favicon ([a3a25a2](https://github.com/hurrtz/rasseportrait/commit/a3a25a290bcd4f96611254df9ac2d830f676998d))
+* add image caroussel for breeds with variants ([d225813](https://github.com/hurrtz/rasseportrait/commit/d22581375326482dd9dff1bd926c1c99cd8d4e79))
+* add imprint ([d4e04ea](https://github.com/hurrtz/rasseportrait/commit/d4e04ea7bcb5760d4dbd890473ca84a0939f51fc))
+* add modal functionality ([cafdeb3](https://github.com/hurrtz/rasseportrait/commit/cafdeb38c941a2e2d7a45f52d7886b0fc754e4e0))
+* add modal functionality, missing files ([0e9365a](https://github.com/hurrtz/rasseportrait/commit/0e9365a45d9d51462d5f1b86619dd029d7e77cee))
+* add Norwegian Elk Hound ([5e23092](https://github.com/hurrtz/rasseportrait/commit/5e23092168f7a50fdf9a8293ae8a7c1d22eaadcb))
+* add page skeleton ([1959dc0](https://github.com/hurrtz/rasseportrait/commit/1959dc04a637db4af0e1114c36b887afb4fa8203))
+* add Russian Toy ([4f689b6](https://github.com/hurrtz/rasseportrait/commit/4f689b682e07c74f007ce2a5106bf85c89acad34))
+* add statistics ([9dca4f8](https://github.com/hurrtz/rasseportrait/commit/9dca4f826d51c8a5994a3df8571a17b3dd41d8b1))
+* add styles for card title ([576d521](https://github.com/hurrtz/rasseportrait/commit/576d521dc308117ebfaaa7e6cc83a9cd6461196f))
+* add Thai Bankaew ([a963f9a](https://github.com/hurrtz/rasseportrait/commit/a963f9ad92860b11b92270fbadc324a595a3622a))
+* add tracking ([1ca7d44](https://github.com/hurrtz/rasseportrait/commit/1ca7d443d4f55010939374de60956c9c04ebde18))
+* add variant name in breed card ([5b3c0ab](https://github.com/hurrtz/rasseportrait/commit/5b3c0ab0519da0098091954bd1e30f7171b7ec7d))
+* add zustand ([ef1bf4d](https://github.com/hurrtz/rasseportrait/commit/ef1bf4da12f08aa04d7f686c3046050a29755f31))
+* added variant names to images ([3523fb1](https://github.com/hurrtz/rasseportrait/commit/3523fb127af9f7e02110c8802b92c446abec9724))
+* better card sizes based on browser width ([b4326b3](https://github.com/hurrtz/rasseportrait/commit/b4326b310deb34fbaf43d501b3c23cb5291cf1c1))
+* configure store and add illustrations to breeds ([4939b52](https://github.com/hurrtz/rasseportrait/commit/4939b52ce17198c184368b1fcf4804a3dfd7b311))
+* content for modal ([1d25d32](https://github.com/hurrtz/rasseportrait/commit/1d25d32649adb8d4cf0f982b0b6dacff695c3578))
+* create new db structure for breeds ([fa5dec0](https://github.com/hurrtz/rasseportrait/commit/fa5dec07280e38a46419857ec4f373c254dd39ec))
+* enable caroussel on grouped breeds as well ([8d5d31d](https://github.com/hurrtz/rasseportrait/commit/8d5d31d1c9496ccbb00d20f67fd9e530713edd26))
+* enable prod compression ([cafad92](https://github.com/hurrtz/rasseportrait/commit/cafad92a98f73ed459240cae6be0ebcc6ec73cdd))
+* enable searching ([cffa01a](https://github.com/hurrtz/rasseportrait/commit/cffa01aa573f61e9766ee154ab1617877605231e))
+* enable searching (missing files) ([3e50ff2](https://github.com/hurrtz/rasseportrait/commit/3e50ff2852dfed843a5e59284ad3320d422071d3))
+* enable sorting and menu ([bcfb1b2](https://github.com/hurrtz/rasseportrait/commit/bcfb1b25a61b032d5606e1ec94da12012efcc127))
+* enable sorting of breeds ([7e07532](https://github.com/hurrtz/rasseportrait/commit/7e0753274baad1bb15a7dcfd57ac0249c692101b))
+* final major update of imagery for rest of breeds ([a37340a](https://github.com/hurrtz/rasseportrait/commit/a37340ab8e34cfa8eefcb90cfc9c9d0444d70fef))
+* fix click handler bubbling on cards ([62a497a](https://github.com/hurrtz/rasseportrait/commit/62a497a4ccd5091a838bd1d663b0c8d9e046628f))
+* fix header on small devices ([f30ce06](https://github.com/hurrtz/rasseportrait/commit/f30ce06eddef3ac1cf4a526f4bc7e8bd8fc95d36))
+* fix image grid ([af62ae8](https://github.com/hurrtz/rasseportrait/commit/af62ae898541a11a3008ac6c50314dd195d1c473))
+* group Collie ([972628b](https://github.com/hurrtz/rasseportrait/commit/972628b07d4cf59052007f548d0f72537dde5096))
+* increase columns on mobile ([cc16d01](https://github.com/hurrtz/rasseportrait/commit/cc16d01b3b23167bf8b7c44ba8a9a50ff14e5965))
+* init v2 architecture ([fd2a105](https://github.com/hurrtz/rasseportrait/commit/fd2a105f5ddc1419d11357802a021ad49a5b27ce))
+* initialize v2 of Rasseportrait ([c62321f](https://github.com/hurrtz/rasseportrait/commit/c62321fa4f59f12ffea38e64cfe7b25022f729d2))
+* make variant name on card react to slide change ([1e76aaa](https://github.com/hurrtz/rasseportrait/commit/1e76aaa8d452c92b53e4a0e94f0235946ce57a8b))
+* move page into pages subfolder ([25ba950](https://github.com/hurrtz/rasseportrait/commit/25ba950626d173d6b0687f114f77cd674a779375))
+* re-sorting of breeds ([b66dbd4](https://github.com/hurrtz/rasseportrait/commit/b66dbd4cf43710d08426cf86fdde93763ec5efaa))
+* remove navbar, fix column widths ([daebb13](https://github.com/hurrtz/rasseportrait/commit/daebb13f6689bd32546f9d7db72310b1852e133e))
+* remove section Topics ([ffa00f4](https://github.com/hurrtz/rasseportrait/commit/ffa00f416445f09d8b4f84a4431ae565a957d589))
+* rewrite db ([7621f19](https://github.com/hurrtz/rasseportrait/commit/7621f19e09b6d4197f41f5bd6334e86269f2f813))
+* rudimentary breed card ([0d7de93](https://github.com/hurrtz/rasseportrait/commit/0d7de935464aa31a69149d00ae9a31c5a6c7e654))
+* update imagery on a bunch of breeds ([600a70b](https://github.com/hurrtz/rasseportrait/commit/600a70bc7ac86d04d0d187c3035070ffdc8ac607))
+* update imagery on German Spitz and Amstaff ([77bc06c](https://github.com/hurrtz/rasseportrait/commit/77bc06cd44a691b7f3820a73af87c37d54278675))
+* update imagery on several breeds ([e2d4a08](https://github.com/hurrtz/rasseportrait/commit/e2d4a08bc8a5ce119a3a8e3d9dd4c408c888d3e5))
+
+
+### Bug Fixes
+
+* correct breed name for grouped breeds ([e47e62a](https://github.com/hurrtz/rasseportrait/commit/e47e62aae1885dd1dfd29ea405df6f11b639bb24))
+* init of amplitude ([eb7b02d](https://github.com/hurrtz/rasseportrait/commit/eb7b02d787bc51706ff1db4b3e58fdeb2b975876))
+* naming of illustration ([86b1a4b](https://github.com/hurrtz/rasseportrait/commit/86b1a4b14d3ece72db1c48c85e331a1a916bb872))
+
 ## [1.80.0](https://github.com/hurrtz/rasseportrait/compare/v1.79.0...v1.80.0) (2025-06-26)
 
 
