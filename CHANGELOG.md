@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/hurrtz/rasseportrait/compare/v2.3.0...v2.4.0) (2025-06-30)
+
+
+### Features
+
+* add comprehensive Amplitude tracking to BreedCard, Rasseportrait, and BreedDetails components ([d899d98](https://github.com/hurrtz/rasseportrait/commit/d899d985b0dee4bc189c9a5f81cccf319e43b74f))
+* integrate Amplitude analytics with SSR-safe implementation ([06fe675](https://github.com/hurrtz/rasseportrait/commit/06fe675be6fe0243f4a72e52a5303a95367203a9))
+* update imagery on German Spitz and Doberman ([5e817d4](https://github.com/hurrtz/rasseportrait/commit/5e817d4a97cbfcedeadd0b72a99e69011e3102bc))
+
+
+### Bug Fixes
+
+* absolute to relative uri paths ([c8efb81](https://github.com/hurrtz/rasseportrait/commit/c8efb8193a3a9610ce9f3d448c880af72d7b8bf6))
+* absolute to relative uri paths, v2 ([b025b49](https://github.com/hurrtz/rasseportrait/commit/b025b49cf953a1863f0eb9d1321405f7c2f0f2fd))
+* absolute to relative uri paths, v3 ([b651e67](https://github.com/hurrtz/rasseportrait/commit/b651e67810210b4e223bdefb914821f34eb89b8e))
+* add build output for deployment ([ebbc592](https://github.com/hurrtz/rasseportrait/commit/ebbc59241cbf3a80c34d5fefdc07b1ab0dff4d12))
+* align Vite base with React Router basename to resolve double assets path ([6a6192f](https://github.com/hurrtz/rasseportrait/commit/6a6192f33e653ac3160eb0a5a906e035f21e3780))
+
 ## [2.3.0](https://github.com/hurrtz/rasseportrait/compare/v2.2.0...v2.3.0) (2025-06-29)
 
 
