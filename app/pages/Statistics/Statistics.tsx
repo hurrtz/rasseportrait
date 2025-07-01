@@ -161,7 +161,7 @@ const Statistics = () => {
             </Text>
           </Stack>
 
-          <Group wrap="nowrap">
+          <Group wrap="nowrap" align="flex-start">
             <Stack w="100%">
               <Stack pt="md">
                 <Text
@@ -208,7 +208,7 @@ const Statistics = () => {
                     style={{ fontVariant: "small-caps" }}
                     onClick={() => handleBreedClick(336)}
                   >
-                    Spanischer Wasserhund
+                    Span. Wasserhund
                   </Button>
                   )
                 </Text>
