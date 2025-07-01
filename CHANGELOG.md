@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/hurrtz/rasseportrait/compare/v2.4.0...v2.5.0) (2025-07-01)
+
+
+### Features
+
+* add page for Rasseportrait in menu ([e26bc4f](https://github.com/hurrtz/rasseportrait/commit/e26bc4f0bb0509b21bd71530c0c022cf7b2886da))
+* provide content for statistics page ([bf0447c](https://github.com/hurrtz/rasseportrait/commit/bf0447cc1e97986ca6341a9962b3ea6e4aa57f3d))
+
+
+### Bug Fixes
+
+* running the app locally ([7218948](https://github.com/hurrtz/rasseportrait/commit/72189481efb13ac08c559ca53785ce8cff4927fa))
+
 ## [2.4.0](https://github.com/hurrtz/rasseportrait/compare/v2.3.0...v2.4.0) (2025-06-30)
 
 
