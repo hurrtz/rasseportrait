@@ -4,6 +4,7 @@ import {
   IconSectionSign,
   IconSortAscending,
   IconSortDescending,
+  IconDog,
 } from "@tabler/icons-react";
 import { useAmplitude } from "../../hooks/useAmplitude";
 import { useNavigate } from "react-router";
@@ -67,6 +68,18 @@ export default () => {
         ))}
         <Divider />
         <Label>Seiten</Label>
+        <Item
+          leftSection={<IconDog />}
+          onClick={() => {
+            track("Rasseportrait Clicked", {
+              source: "header_menu",
+              page: window.location.pathname,
+            });
+            navigate("/");
+          }}
+        >
+          Rasseportrait
+        </Item>
         <Item
           leftSection={<IconChartBar />}
           onClick={() => {
