@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.2](https://github.com/hurrtz/rasseportrait/compare/v2.5.1...v2.5.2) (2025-07-01)
+
+
+### Bug Fixes
+
+* alignment of statistics on small mobile ([d2ba812](https://github.com/hurrtz/rasseportrait/commit/d2ba81262b7d171f9bbe562291cc28ead0fe12cc))
+
 ### [2.5.1](https://github.com/hurrtz/rasseportrait/compare/v2.5.0...v2.5.1) (2025-07-01)
 
 
