@@ -78,7 +78,11 @@ const App = ({ children }: { children: ReactNode }) => {
   return (
     <AppShell header={{ height: HEADER_HEIGHT }} padding="md">
       <Header pl="xs" pr="md">
-        <Group className={classes.headerFlex} justify="space-between">
+        <Group
+          className={classes.headerFlex}
+          justify="space-between"
+          wrap="nowrap"
+        >
           <div
             className={classes.logoWrapper}
             onClick={() => {
