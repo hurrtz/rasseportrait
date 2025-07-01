@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/hurrtz/rasseportrait/compare/v2.5.2...v2.6.0) (2025-07-01)
+
+
+### Features
+
+* replace batch of the gloomier breed illustrations ([1420ab1](https://github.com/hurrtz/rasseportrait/commit/1420ab12956670749e7f3aa91c408ef2e838f218))
+
 ### [2.5.2](https://github.com/hurrtz/rasseportrait/compare/v2.5.1...v2.5.2) (2025-07-01)
 
 
