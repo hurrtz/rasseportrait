@@ -73,7 +73,6 @@ export const Layout = ({ children }: { children: ReactNode }) => (
       <link rel="icon" href="/rasseportrait/favicon.ico" />
       <ColorSchemeScript />
 
-      <Meta />
       <Links />
     </head>
     <body>
@@ -86,7 +85,14 @@ export const Layout = ({ children }: { children: ReactNode }) => (
   </html>
 );
 
-const App = () => <Outlet />;
+function App() {
+  return (
+    <>
+      <Meta />
+      <Outlet />
+    </>
+  );
+}
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
