@@ -17,7 +17,6 @@ import type { Breed } from "types/breed";
 import { mergeGroupedBreeds } from "./utils";
 import Fuse from "fuse.js";
 import { useAmplitude } from "../../hooks/useAmplitude";
-import { Statistics } from "../../components/Statistics";
 
 const fuseOptions = {
   keys: [
@@ -127,8 +126,6 @@ const Rasseportrait = () => {
     <>
       <Stack>
         <BreedSearch />
-        <Statistics />
-
         <SimpleGrid
           cols={{ base: 1, sm: 3, lg: 4, xl: 5 }}
           spacing={{ base: 8 }}

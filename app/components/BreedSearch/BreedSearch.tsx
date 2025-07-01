@@ -17,6 +17,7 @@ const BreedSearch = () => {
       <Input
         placeholder="Suche nach Rassenamen oder FCI-Nummern"
         onChange={handleChange}
+        size="lg"
       />
     </>
   );
