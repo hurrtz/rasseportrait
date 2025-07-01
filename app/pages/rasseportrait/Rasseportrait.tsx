@@ -173,8 +173,7 @@ const Rasseportrait = () => {
               <Root size="xl">
                 <Section
                   value={Number(percentageBreedsPresented)}
-                  color="orange"
-                  striped
+                  color="#EEA13B"
                 >
                   <Label>
                     {percentageBreedsPresented}% ({amountBreedsPresented}/
