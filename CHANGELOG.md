@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/hurrtz/rasseportrait/compare/v2.6.0...v2.7.0) (2025-07-02)
+
+
+### Features
+
+* update imagery on various gloomy breeds ([539e78b](https://github.com/hurrtz/rasseportrait/commit/539e78b6b48a71ea30b0f191ed850fc87062d000))
+
 ## [2.6.0](https://github.com/hurrtz/rasseportrait/compare/v2.5.2...v2.6.0) (2025-07-01)
 
 
