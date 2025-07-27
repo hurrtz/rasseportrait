@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.9.0](https://github.com/hurrtz/rasseportrait/compare/v2.8.0...v2.9.0) (2025-07-27)
+
+
+### Bug Fixes
+
+* play videos inline on native ([50cba62](https://github.com/hurrtz/rasseportrait/commit/50cba620b175c439303c9f39a08dcfee0c195ed3))
+
 ## [2.8.0](https://github.com/hurrtz/rasseportrait/compare/v2.7.0...v2.8.0) (2025-07-27)
 
 
