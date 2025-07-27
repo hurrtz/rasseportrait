@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.0](https://github.com/hurrtz/rasseportrait/compare/v2.7.0...v2.8.0) (2025-07-27)
+
+
+### Features
+
+* add video functionality in breed details ([b31cd70](https://github.com/hurrtz/rasseportrait/commit/b31cd70ea7e84a75713e30c9086f65fda23c7247))
+
+
+### Bug Fixes
+
+* useless rerender of BreedImages ([136ff84](https://github.com/hurrtz/rasseportrait/commit/136ff84cc228f8f39dbd8e2bf0dccc10cc9a8b34))
+
 ## [2.7.0](https://github.com/hurrtz/rasseportrait/compare/v2.6.0...v2.7.0) (2025-07-02)
 
 
