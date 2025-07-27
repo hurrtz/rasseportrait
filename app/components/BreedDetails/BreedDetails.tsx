@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { Card, Text, Divider, Group, Stack, ActionIcon } from "@mantine/core";
 import { useSelectedBreed } from "../../stores/breeds";
 import { BreedImages } from "../BreedImages";
@@ -72,21 +72,19 @@ const BreedDetails = () => {
 
   return (
     <div className="breed-details-container">
-      <div>
-        <BreedImages
-          id={selectedBreed.id}
-          handleSlideChange={(index: number) => {
-            track("Breed Details Image Slide Changed", {
-              breedId: selectedBreed.id,
-              breedName: selectedBreed.details.public[0],
-              slideIndex: index,
-              totalSlides: selectedBreed.details.variants?.length || 1,
-              variantName: selectedBreed.details.variants?.[index]?.public,
-            });
-            setActiveSlide(index);
-          }}
-        />
-      </div>
+      <BreedImages
+        id={selectedBreed.id}
+        handleSlideChange={(index: number) => {
+          track("Breed Details Image Slide Changed", {
+            breedId: selectedBreed.id,
+            breedName: selectedBreed.details.public[0],
+            slideIndex: index,
+            totalSlides: selectedBreed.details.variants?.length || 1,
+            variantName: selectedBreed.details.variants?.[index]?.public,
+          });
+          setActiveSlide(index);
+        }}
+      />
       <div className="breed-details">
         <Text className="breed-name" size="xl" fw={300}>
           {selectedBreed.details.public[0]}
@@ -201,4 +199,4 @@ const BreedDetails = () => {
   );
 };
 
-export default BreedDetails;
+export default memo(BreedDetails);

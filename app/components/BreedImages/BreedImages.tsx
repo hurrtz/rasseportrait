@@ -1,10 +1,15 @@
-import React, { useMemo, type MouseEventHandler } from "react";
+import React, { useMemo, type MouseEventHandler, memo } from "react";
 import { Image } from "@mantine/core";
+import Video from "react-player";
 import { Carousel } from "@mantine/carousel";
 import "@mantine/carousel/styles.css";
 import "./styles.css";
 import type { Breed } from "types/breed";
-import { useBreed, useBreedVariantNames } from "~/stores/breeds";
+import {
+  useBreed,
+  useBreedVariantNames,
+  useSelectedBreed,
+} from "~/stores/breeds";
 
 interface Props {
   id: Breed["id"];
@@ -12,25 +17,53 @@ interface Props {
   handleSlideChange?: (index: number) => void;
 }
 
+const videoProps = {
+  controls: false,
+  muted: true,
+  loop: true,
+  playing: true,
+  width: "100%",
+  height: "100%",
+};
+
 const BreedImages = ({ id, onClick, handleSlideChange }: Props) => {
   const { details } = useBreed(id)!;
   const variantNames = useBreedVariantNames(id);
   const isGrouped = details.isGrouped;
+  const isDetailView = Boolean(useSelectedBreed());
+  const isVideo = ["grouped_268_268", "352", "83"].includes(String(id));
+
+  const PATH = "illustrations";
+  const CATEGORY = "breeds";
+  const ASSET_TYPE = isDetailView && isVideo ? "video" : "illustration";
+  const EXTENSION = isDetailView && isVideo ? "mp4" : "jpeg";
+  const THUMBNAIL = isDetailView ? "" : "_thumbnail";
 
   const images = useMemo(() => {
     if (isGrouped) {
       return details.variants!.map((variant) => {
-        return `illustrations/breeds/${variant.fci!.standardNumber}/illustration_${variant.internal}_thumbnail.jpeg`;
+        return `${PATH}/${CATEGORY}/${variant.fci!.standardNumber}/${ASSET_TYPE}_${variant.internal}${THUMBNAIL}.${EXTENSION}`;
       });
     }
 
     return (
       variantNames?.map(
         ({ id, variant }) =>
-          `illustrations/breeds/${id}/illustration${variant ? `_${variant}` : ""}_thumbnail.jpeg`,
+          `${PATH}/${CATEGORY}/${id}/${ASSET_TYPE}${variant ? `_${variant}` : ""}${THUMBNAIL}.${EXTENSION}`,
       ) ?? []
     );
   }, [variantNames, isGrouped, details]);
+
+  if (images.length === 1 && isDetailView && isVideo) {
+    return (
+      <Video
+        src={images[0]}
+        key={images[0]}
+        className="image"
+        {...videoProps}
+      />
+    );
+  }
 
   if (images.length === 1) {
     return (
@@ -62,16 +95,29 @@ const BreedImages = ({ id, onClick, handleSlideChange }: Props) => {
       }}
       onSlideChange={handleSlideChange}
     >
-      {images.map((image, index) => (
-        <Image
-          src={image}
-          key={`${image}-${index}`}
-          className="image slide"
-          onClick={onClick}
-        />
-      ))}
+      {images.map((image, index) => {
+        if (isDetailView && isVideo) {
+          return (
+            <Video
+              src={image}
+              key={`${image}-${index}`}
+              className="image slide"
+              {...videoProps}
+            />
+          );
+        }
+
+        return (
+          <Image
+            src={image}
+            key={`${image}-${index}`}
+            className="image slide"
+            onClick={onClick}
+          />
+        );
+      })}
     </Carousel>
   );
 };
 
-export default BreedImages;
+export default memo(BreedImages);

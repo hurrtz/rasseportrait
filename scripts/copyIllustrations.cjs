@@ -49,6 +49,15 @@ const processImages = async (sourceDir, targetDir) => {
         await createWebImage(originPath, toImagePath);
 
         console.log();
+      } else if (/\.(mp4)$/i.test(file)) {
+        const originPath = path.join(sourceDir, file);
+        const targetPath = path.join(targetDir, file);
+
+        console.log(`Copying video "${fullPath}"...`);
+
+        await fs.copy(originPath, targetPath);
+
+        console.log();
       }
     }
   } catch (error) {
