@@ -25,6 +25,7 @@ const videoProps = {
   playing: true,
   width: "100%",
   height: "100%",
+  playsInline: true,
 };
 
 const BreedImages = ({
