@@ -15,6 +15,7 @@ interface Props {
   id: Breed["id"];
   onClick?: MouseEventHandler<HTMLDivElement>;
   handleSlideChange?: (index: number) => void;
+  isDetailView?: boolean;
 }
 
 const videoProps = {
@@ -26,11 +27,15 @@ const videoProps = {
   height: "100%",
 };
 
-const BreedImages = ({ id, onClick, handleSlideChange }: Props) => {
+const BreedImages = ({
+  id,
+  onClick,
+  handleSlideChange,
+  isDetailView = false,
+}: Props) => {
   const { details } = useBreed(id)!;
   const variantNames = useBreedVariantNames(id);
   const isGrouped = details.isGrouped;
-  const isDetailView = Boolean(useSelectedBreed());
   const isVideo = ["grouped_268_268", "352", "83"].includes(String(id));
 
   const PATH = "illustrations";
@@ -52,7 +57,7 @@ const BreedImages = ({ id, onClick, handleSlideChange }: Props) => {
           `${PATH}/${CATEGORY}/${id}/${ASSET_TYPE}${variant ? `_${variant}` : ""}${THUMBNAIL}.${EXTENSION}`,
       ) ?? []
     );
-  }, [variantNames, isGrouped, details]);
+  }, [variantNames, isGrouped, details, ASSET_TYPE, THUMBNAIL, EXTENSION]);
 
   if (images.length === 1 && isDetailView && isVideo) {
     return (
@@ -120,4 +125,36 @@ const BreedImages = ({ id, onClick, handleSlideChange }: Props) => {
   );
 };
 
+// Separate component for list view that doesn't depend on selectedBreed
+const BreedImagesList = memo(
+  ({ id, onClick, handleSlideChange }: Omit<Props, "isDetailView">) => {
+    return (
+      <BreedImages
+        id={id}
+        onClick={onClick}
+        handleSlideChange={handleSlideChange}
+        isDetailView={false}
+      />
+    );
+  },
+);
+
+// Separate component for detail view that depends on selectedBreed
+const BreedImagesDetail = memo(
+  ({ id, onClick, handleSlideChange }: Omit<Props, "isDetailView">) => {
+    const selectedBreed = useSelectedBreed();
+    const isDetailView = Boolean(selectedBreed);
+
+    return (
+      <BreedImages
+        id={id}
+        onClick={onClick}
+        handleSlideChange={handleSlideChange}
+        isDetailView={isDetailView}
+      />
+    );
+  },
+);
+
+export { BreedImagesList, BreedImagesDetail };
 export default memo(BreedImages);

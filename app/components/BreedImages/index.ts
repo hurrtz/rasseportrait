@@ -1,3 +1,3 @@
-import BreedImages from "./BreedImages";
+import BreedImages, { BreedImagesList, BreedImagesDetail } from "./BreedImages";
 
-export { BreedImages };
+export { BreedImages, BreedImagesList, BreedImagesDetail };

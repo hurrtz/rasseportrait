@@ -4,7 +4,7 @@ import { clsx } from "clsx";
 import type { Breed } from "../../../types/breed";
 import { useBreed, useBreedVariantNames } from "../../stores/breeds";
 import "@mantine/carousel/styles.css";
-import { BreedImages } from "../BreedImages";
+import { BreedImagesList } from "../BreedImages";
 import { useAmplitude } from "../../hooks/useAmplitude";
 import "./styles.css";
 
@@ -54,7 +54,7 @@ const BreedCard = ({ id, name, onClick }: Props) => {
           "single-image-card-section": variantNames.length == 1,
         })}
       >
-        <BreedImages
+        <BreedImagesList
           id={id}
           onClick={handleCardClick}
           handleSlideChange={handleSlideChange}

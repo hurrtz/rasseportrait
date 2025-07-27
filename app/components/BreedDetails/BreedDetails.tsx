@@ -1,7 +1,7 @@
 import React, { useState, memo } from "react";
 import { Card, Text, Divider, Group, Stack, ActionIcon } from "@mantine/core";
 import { useSelectedBreed } from "../../stores/breeds";
-import { BreedImages } from "../BreedImages";
+import { BreedImagesDetail } from "../BreedImages";
 import type { Breed } from "types/breed";
 import { IconBroadcast, IconVideo } from "@tabler/icons-react";
 import { useAmplitude } from "../../hooks/useAmplitude";
@@ -72,7 +72,7 @@ const BreedDetails = () => {
 
   return (
     <div className="breed-details-container">
-      <BreedImages
+      <BreedImagesDetail
         id={selectedBreed.id}
         handleSlideChange={(index: number) => {
           track("Breed Details Image Slide Changed", {
