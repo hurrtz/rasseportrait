@@ -1,4 +1,11 @@
-export const VIDEO_IDS = ["grouped_268_268", "352", "83"] as const;
+export const VIDEO_IDS = [
+  "grouped_268_268",
+  "352",
+  "83",
+  "grouped_156_296",
+  "358",
+  "59",
+] as const;
 
 export const videoProps = {
   controls: false,
