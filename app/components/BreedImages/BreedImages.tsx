@@ -66,6 +66,14 @@ const BreedImages = ({
         src={images[0]}
         key={images[0]}
         className="image"
+        fallback={
+          <Image
+            src={images[0]}
+            height="100%"
+            key={images[0]}
+            className="image"
+          />
+        }
         {...videoProps}
       />
     );
@@ -108,6 +116,9 @@ const BreedImages = ({
               src={image}
               key={`${image}-${index}`}
               className="image slide"
+              fallback={
+                <Image src={image} height="100%" className="image slide" />
+              }
               {...videoProps}
             />
           );
