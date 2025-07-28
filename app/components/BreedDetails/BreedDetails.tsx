@@ -76,7 +76,7 @@ const BreedDetails = () => {
         id={selectedBreed.id}
         handleSlideChange={(index: number) => {
           track("Breed Details Image Slide Changed", {
-            breedId: selectedBreed.id,
+            breedId: String(selectedBreed.id),
             breedName: selectedBreed.details.public[0],
             slideIndex: index,
             totalSlides: selectedBreed.details.variants?.length || 1,
@@ -132,10 +132,10 @@ const BreedDetails = () => {
               className="podcast-episode"
               onClick={() => {
                 track("Podcast Episode Clicked", {
-                  breedId: selectedBreed.id,
+                  breedId: String(selectedBreed.id),
                   breedName: selectedBreed.details.public[0],
                   episodeTitle: episode,
-                  episodeNumber: number,
+                  episodeNumber: Number(number),
                   sourceType: sources[0].type,
                   sourceUrl: sources[0].url,
                   timecode: timecode,
@@ -178,7 +178,7 @@ const BreedDetails = () => {
               color="#63687c"
               onClick={() => {
                 track("Further Reading Link Clicked", {
-                  breedId: selectedBreed.id,
+                  breedId: String(selectedBreed.id),
                   breedName: selectedBreed.details.public[0],
                   linkName: reading.name,
                   linkUrl: reading.url,

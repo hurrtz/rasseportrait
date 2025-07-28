@@ -13,6 +13,7 @@ import breedsDB from "../../../db/breeds";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "../../components/Modal";
 import { BreedSearch } from "../../components/BreedSearch";
+import LoadingSpinner from "../../components/LoadingSpinner";
 import type { Breed } from "types/breed";
 import { mergeGroupedBreeds } from "./utils";
 import Fuse from "fuse.js";
@@ -49,7 +50,7 @@ const Rasseportrait = () => {
   const onSelectBreed = (id: Breed["id"]) => {
     const selectedBreedData = allBreeds.find((breed) => breed.id === id);
     track("Breed Selected", {
-      breedId: id,
+      breedId: String(id),
       breedName: selectedBreedData?.details.public[0],
       hasVariants: (selectedBreedData?.details.variants?.length || 0) > 1,
       variantCount: selectedBreedData?.details.variants?.length || 0,
@@ -65,7 +66,7 @@ const Rasseportrait = () => {
       (breed) => breed.id === selectedBreedId,
     );
     track("Breed Modal Closed", {
-      breedId: selectedBreedId,
+      breedId: selectedBreedId ? String(selectedBreedId) : undefined,
       breedName: selectedBreedData?.details.public[0],
       modalOpenDuration: Date.now(), // This could be improved with actual duration tracking
     });
@@ -112,6 +113,11 @@ const Rasseportrait = () => {
       setSearch({ results });
     }
   }, [needle, setSearch, fuse, track, allBreeds.length]);
+
+  // Show loading state while breeds are being loaded
+  if (!breeds.length && !rawBreeds.length) {
+    return <LoadingSpinner message="Loading breeds..." />;
+  }
 
   const breedCards = breeds.map(({ id, details: { public: names } }) => (
     <BreedCard

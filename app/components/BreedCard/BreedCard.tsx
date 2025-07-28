@@ -24,11 +24,14 @@ const BreedCard = ({ id, name, onClick }: Props) => {
   const handleSlideChange = useCallback(
     (index: number) => {
       track("Breed Card Image Slide Changed", {
-        breedId: id,
+        breedId: String(id),
         breedName: name,
         slideIndex: index,
         totalSlides: variantNames.length,
-        variantName: variantNames[index],
+        variantName:
+          typeof variantNames[index] === "string"
+            ? variantNames[index]
+            : String(variantNames[index]),
       });
       setActiveSlide(index);
     },
@@ -37,12 +40,15 @@ const BreedCard = ({ id, name, onClick }: Props) => {
 
   const handleCardClick = useCallback(() => {
     track("Breed Card Clicked", {
-      breedId: id,
+      breedId: String(id),
       breedName: name,
       hasVariants: variantNames.length > 1,
       variantCount: variantNames.length,
       currentSlide: activeSlide,
-      currentVariant: variantNames[activeSlide],
+      currentVariant:
+        typeof variantNames[activeSlide] === "string"
+          ? variantNames[activeSlide]
+          : String(variantNames[activeSlide]),
     });
     onClick();
   }, [id, name, variantNames, activeSlide, onClick, track]);
@@ -59,6 +65,7 @@ const BreedCard = ({ id, name, onClick }: Props) => {
           onClick={handleCardClick}
           handleSlideChange={handleSlideChange}
         />
+        <div className="sr-only">Click to view details for {name}</div>
       </Section>
 
       <Group justify="space-between" className="breed-card-name">

@@ -4,6 +4,7 @@ import classes from "./App.module.css";
 import { useNavigate } from "react-router";
 import { useAmplitude } from "./hooks/useAmplitude";
 import { Menu } from "./components/Menu";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const HEADER_HEIGHT = 60;
 
@@ -21,11 +22,15 @@ const App = ({ children }: { children: ReactNode }) => {
     }
   }, [navigate]);
 
-  // Initialize Amplitude Analytics (client-side only)
+  // Initialize Amplitude Analytics (production only)
   useEffect(() => {
+    let isInitialized = false;
+    let cleanup: (() => void) | undefined;
+
     const initializeAmplitude = async () => {
-      // Only run on client side to avoid SSR issues
-      if (typeof window === "undefined") return;
+      // Only run on client side and in production to avoid SSR issues and dev tracking
+      if (typeof window === "undefined" || isInitialized || import.meta.env.DEV)
+        return;
 
       try {
         // Dynamic import to avoid SSR issues
@@ -34,7 +39,8 @@ const App = ({ children }: { children: ReactNode }) => {
           "@amplitude/plugin-session-replay-browser"
         );
 
-        const apiKey = "73172d06233b85ff451f0f15f016ec0b";
+        const { config } = await import("./config/environment");
+        const apiKey = config.amplitude.apiKey;
 
         if (!apiKey) {
           console.warn("Amplitude API key not found. Analytics disabled.");
@@ -51,12 +57,12 @@ const App = ({ children }: { children: ReactNode }) => {
           },
         });
 
-        // Add session replay plugin
+        // Add session replay plugin with reduced sample rate
         const sessionReplay = sessionReplayPlugin({
-          sampleRate: 1, // Capture 100% of sessions (adjust as needed)
+          sampleRate: 0.1, // Capture 10% of sessions instead of 100%
         });
 
-        // Add the plugin to Amplitude (no setup call needed)
+        // Add the plugin to Amplitude
         const { add } = await import("@amplitude/analytics-browser");
         add(sessionReplay);
 
@@ -66,6 +72,7 @@ const App = ({ children }: { children: ReactNode }) => {
           url: window.location.href,
         });
 
+        isInitialized = true;
         console.log("✅ Amplitude analytics initialized successfully");
       } catch (error) {
         console.error("❌ Failed to initialize Amplitude:", error);
@@ -73,6 +80,16 @@ const App = ({ children }: { children: ReactNode }) => {
     };
 
     initializeAmplitude();
+
+    // Cleanup function
+    cleanup = () => {
+      if (isInitialized && typeof window !== "undefined") {
+        // Amplitude doesn't have a direct cleanup method, but we can mark as uninitialized
+        isInitialized = false;
+      }
+    };
+
+    return cleanup;
   }, []);
 
   return (
@@ -101,7 +118,9 @@ const App = ({ children }: { children: ReactNode }) => {
         </Group>
       </Header>
 
-      <Main>{children}</Main>
+      <Main>
+        <ErrorBoundary>{children}</ErrorBoundary>
+      </Main>
     </AppShell>
   );
 };

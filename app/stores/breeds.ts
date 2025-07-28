@@ -155,6 +155,13 @@ export const useBreedVariantNames = (id: Breed["id"]) => {
 
   return useMemo(() => getBreedVariantNames(breeds, id), [breeds, id]);
 };
+
+// More granular selector for better performance
+export const useBreedById = (id: Breed["id"]) => {
+  return useBreedsStore((state: State) =>
+    state.breeds.find((breed) => breed.id === id),
+  );
+};
 export const useSearch = () => useBreedsStore((state: State) => state.search);
 export const useSelectedBreed = () => {
   const { selectedBreed, breeds } = useBreedsStore((state: State) => state);

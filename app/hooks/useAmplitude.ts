@@ -1,12 +1,65 @@
 import { useCallback } from "react";
 
-type EventProperties = Record<string, any>;
+interface BaseEventProperties {
+  timestamp?: number;
+  url?: string;
+}
+
+interface BreedEventProperties extends BaseEventProperties {
+  breedId?: string;
+  breedName?: string;
+  hasVariants?: boolean;
+  variantCount?: number;
+  searchActive?: boolean;
+  searchTerm?: string | null;
+  totalBreedsVisible?: number;
+  slideIndex?: number;
+  totalSlides?: number;
+  variantName?: string;
+  currentSlide?: number;
+  currentVariant?: string;
+  source?: string;
+  page?: string;
+  episodeTitle?: string;
+  episodeNumber?: number;
+  sourceType?: string;
+  sourceUrl?: string;
+  timecode?: number;
+  linkName?: string;
+  linkUrl?: string;
+  modalOpenDuration?: number;
+  sortBy?: string;
+  sortOrder?: string;
+  previousSortBy?: string;
+  resultsCount?: number;
+  totalBreeds?: number;
+  hasResults?: boolean;
+}
+
+interface ErrorEventProperties extends BaseEventProperties {
+  error?: string;
+  stack?: string;
+  componentStack?: string;
+}
+
+interface SearchEventProperties extends BaseEventProperties {
+  searchTerm: string;
+  resultsCount: number;
+  totalBreeds: number;
+  hasResults: boolean;
+}
+
+type EventProperties =
+  | BreedEventProperties
+  | ErrorEventProperties
+  | SearchEventProperties
+  | BaseEventProperties;
 
 export const useAmplitude = () => {
   const track = useCallback(
     async (eventName: string, properties?: EventProperties) => {
-      // Only track on client side
-      if (typeof window === "undefined") return;
+      // Only track on client side and in production
+      if (typeof window === "undefined" || import.meta.env.DEV) return;
 
       try {
         const { track } = await import("@amplitude/analytics-browser");
@@ -24,7 +77,7 @@ export const useAmplitude = () => {
 
   const identify = useCallback(
     async (userId: string, userProperties?: EventProperties) => {
-      if (typeof window === "undefined") return;
+      if (typeof window === "undefined" || import.meta.env.DEV) return;
 
       try {
         const { setUserId, identify, Identify } = await import(
@@ -46,7 +99,7 @@ export const useAmplitude = () => {
   );
 
   const setUserProperty = useCallback(async (property: string, value: any) => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || import.meta.env.DEV) return;
 
     try {
       const { identify, Identify } = await import(
