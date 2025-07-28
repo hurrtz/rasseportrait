@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.10.0](https://github.com/hurrtz/rasseportrait/compare/v2.9.0...v2.10.0) (2025-07-28)
+
+
+### Features
+
+* add loading spinner ([fc0c37d](https://github.com/hurrtz/rasseportrait/commit/fc0c37dcccc3989a7bc929feffbe859c83b24254))
+* add videos for more breeds ([a917c65](https://github.com/hurrtz/rasseportrait/commit/a917c653f137c29d808a4c16c4e54c8151cb7764))
+* provide fallback image for videos ([afb6fa7](https://github.com/hurrtz/rasseportrait/commit/afb6fa763623fb0d62ad1845feea8f802d6343bf))
+
+
+### Bug Fixes
+
+* several performance improvements ([3b2ddfb](https://github.com/hurrtz/rasseportrait/commit/3b2ddfbc788dcd620a048a2c719dcd255651b3a9))
+
 ## [2.9.0](https://github.com/hurrtz/rasseportrait/compare/v2.8.0...v2.9.0) (2025-07-27)
 
 
