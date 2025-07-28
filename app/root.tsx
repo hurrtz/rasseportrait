@@ -12,6 +12,7 @@ import {
   ColorSchemeScript,
   MantineProvider,
   mantineHtmlProps,
+  Loader,
 } from "@mantine/core";
 import type { Route } from "./+types/root";
 import AppWrapper from "./App";
@@ -28,6 +29,26 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
 ];
+
+export function HydrateFallback() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        fontFamily: "Inter, sans-serif",
+        fontSize: "18px",
+        color: "#666",
+      }}
+    >
+      <div style={{ textAlign: "center" }}>
+        <Loader size="lg" />
+      </div>
+    </div>
+  );
+}
 
 export const Layout = ({ children }: { children: ReactNode }) => (
   <html lang="en" {...mantineHtmlProps}>
