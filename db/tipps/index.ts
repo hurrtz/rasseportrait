@@ -1,4 +1,4 @@
-import { TippsList } from "../../types/tipps";
+import type { TippsList } from "../../types/tipps";
 
 export const tipps: TippsList = [
   {

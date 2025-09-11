@@ -1,4 +1,4 @@
-import { DDDHNBList } from "../../types/dddhnb";
+import type { DDDHNBList } from "../../types/dddhnb";
 
 export const dddhnb: DDDHNBList = [
   {
