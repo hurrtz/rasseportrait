@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.11.0](https://github.com/hurrtz/rasseportrait/compare/v2.10.0...v2.11.0) (2025-09-11)
+
+
+### Features
+
+* add Newfoundland dog ([40307b7](https://github.com/hurrtz/rasseportrait/commit/40307b71089901e752fea6a112001d278ac51147))
+
+
+### Bug Fixes
+
+* type errors ([a3aebeb](https://github.com/hurrtz/rasseportrait/commit/a3aebeb0bbc960617c401c9468d6a93cb746d83b))
+
 ## [2.10.0](https://github.com/hurrtz/rasseportrait/compare/v2.9.0...v2.10.0) (2025-07-28)
 
 
