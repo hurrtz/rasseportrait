@@ -98,6 +98,7 @@ import Markiesje from "./special_10";
 import MiniaturePinscher from "./185";
 import MiniatureSchnauzer from "./183";
 import NederlandseKooikerhondje from "./314";
+import Newfoundlander from './50';
 import NorfolkTerrier from "./272";
 import NorwegianBuhund from "./237";
 import NovaScotiaDuckTollingRetriever from "./312";
@@ -250,6 +251,7 @@ export default {
   MiniaturePinscher,
   MiniatureSchnauzer,
   NederlandseKooikerhondje,
+  Newfoundlander,
   NorfolkTerrier,
   NorwegianBuhund,
   NovaScotiaDuckTollingRetriever,
