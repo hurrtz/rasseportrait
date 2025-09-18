@@ -71,6 +71,7 @@ import GreyNorwegianElkhound from "./242";
 import GriffonNivernais from "./17";
 import Harrier from "./295";
 import Hovawart from "./190";
+import IcelandicSheepdog from "./289";
 import IrishSetter from "./120";
 import IrishSoftCoatedWheatenTerrier from "./40";
 import IrishTerrier from "./139";
@@ -98,7 +99,7 @@ import Markiesje from "./special_10";
 import MiniaturePinscher from "./185";
 import MiniatureSchnauzer from "./183";
 import NederlandseKooikerhondje from "./314";
-import Newfoundlander from './50';
+import Newfoundlander from "./50";
 import NorfolkTerrier from "./272";
 import NorwegianBuhund from "./237";
 import NovaScotiaDuckTollingRetriever from "./312";
@@ -224,6 +225,7 @@ export default {
   GriffonNivernais,
   Harrier,
   Hovawart,
+  IcelandicSheepdog,
   IrishSetter,
   IrishSoftCoatedWheatenTerrier,
   IrishTerrier,
