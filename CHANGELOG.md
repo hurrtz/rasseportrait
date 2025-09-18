@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.12.0](https://github.com/hurrtz/rasseportrait/compare/v2.11.0...v2.12.0) (2025-09-18)
+
+
+### Features
+
+* add Icelanding Sheepdog ([bf31c89](https://github.com/hurrtz/rasseportrait/commit/bf31c89e742c73ba7cc03bf14d46c6a3bc6e41bd))
+
 ## [2.11.0](https://github.com/hurrtz/rasseportrait/compare/v2.10.0...v2.11.0) (2025-09-11)
 
 
