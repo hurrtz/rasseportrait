@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.13.0](https://github.com/hurrtz/rasseportrait/compare/v2.12.0...v2.13.0) (2025-09-22)
+
+
+### Features
+
+* add feature recognitions ([a8cc2a6](https://github.com/hurrtz/rasseportrait/commit/a8cc2a6425d6d909db9033b4550e3f5f8ab9160b))
+* update imagery for Bavarian Mountain Dog ([3934697](https://github.com/hurrtz/rasseportrait/commit/39346970342e68e6f8e684010fa371e40cea88f9))
+
 ## [2.12.0](https://github.com/hurrtz/rasseportrait/compare/v2.11.0...v2.12.0) (2025-09-18)
 
 
