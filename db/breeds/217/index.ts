@@ -6,6 +6,7 @@ export default {
     internal: "bavarian_mountain_hound",
     public: ["Bayerischer Gebirgsschweißhund"],
   },
+  recognitions: ["Deborah"],
   classification: {
     fci: {
       group: 6,

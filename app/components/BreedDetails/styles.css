@@ -5,6 +5,7 @@
 
 .breed-details {
   padding: 16px;
+  position: relative;
 }
 
 .breed-name {
@@ -84,4 +85,17 @@
 
 .further-reading-icon + .further-reading-icon {
   margin-left: 8px;
+}
+
+.recognition-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  transform: rotate(45deg);
+}
+
+.recognition {
+  transform: rotate(45deg);
+  margin-top: 20px;
+  margin-left: 28px;
 }

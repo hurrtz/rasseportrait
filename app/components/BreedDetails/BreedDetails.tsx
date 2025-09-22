@@ -1,5 +1,14 @@
 import React, { useState, memo } from "react";
-import { Card, Text, Divider, Group, Stack, ActionIcon } from "@mantine/core";
+import {
+  Card,
+  Text,
+  Divider,
+  Group,
+  Stack,
+  ActionIcon,
+  Tooltip,
+} from "@mantine/core";
+import { IconHeart } from "@tabler/icons-react";
 import { useSelectedBreed } from "../../stores/breeds";
 import { BreedImagesDetail } from "../BreedImages";
 import type { Breed } from "types/breed";
@@ -194,6 +203,26 @@ const BreedDetails = () => {
             </ActionIcon>
           ))}
         </div>
+        {selectedBreed.recognitions?.map((recognition, index) => (
+          <Tooltip
+            key={`recognition_${index}`}
+            label={recognition}
+            className="recognition"
+            withArrow
+            arrowOffset={25}
+            arrowSize={8}
+          >
+            <ActionIcon
+              className="recognition-button"
+              variant="gradient"
+              radius="lg"
+              size="lg"
+              gradient={{ from: "orange", to: "red", deg: 90 }}
+            >
+              <IconHeart />
+            </ActionIcon>
+          </Tooltip>
+        ))}
       </div>
     </div>
   );
