@@ -67,6 +67,7 @@ import GermanWirehairedPointer from "./98";
 import GiantSchnauzer from "./181";
 import GoldenRetriever from "./111";
 import GrandGasconSaintongeois from "./21";
+import GreatDane from "./235";
 import GreyNorwegianElkhound from "./242";
 import GriffonNivernais from "./17";
 import Harrier from "./295";
@@ -222,6 +223,7 @@ export default {
   GiantSchnauzer,
   GoldenRetriever,
   GrandGasconSaintongeois,
+  GreatDane,
   GreyNorwegianElkhound,
   GriffonNivernais,
   Harrier,

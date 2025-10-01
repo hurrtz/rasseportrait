@@ -9,6 +9,7 @@ export const VIDEO_IDS = [
   "289",
   "217",
   "204",
+  "235",
 ] as const;
 
 export const videoProps = {
