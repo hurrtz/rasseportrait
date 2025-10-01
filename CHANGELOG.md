@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.15.0](https://github.com/hurrtz/rasseportrait/compare/v2.14.0...v2.15.0) (2025-10-01)
+
+
+### Features
+
+* add Great Dane ([72a6e47](https://github.com/hurrtz/rasseportrait/commit/72a6e47f196f148f3d5eeca867243582f02111d8))
+
 ## [2.14.0](https://github.com/hurrtz/rasseportrait/compare/v2.13.0...v2.14.0) (2025-09-25)
 
 ## [2.13.0](https://github.com/hurrtz/rasseportrait/compare/v2.12.0...v2.13.0) (2025-09-22)
