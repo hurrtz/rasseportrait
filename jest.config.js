@@ -12,4 +12,7 @@ export default {
   transform: {
     ...tsJestTransformCfg,
   },
+  moduleNameMapper: {
+    "^~/(.*)$": "<rootDir>/app/$1",
+  },
 };
