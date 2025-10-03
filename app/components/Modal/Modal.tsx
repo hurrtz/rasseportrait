@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal as MantineModal, ScrollArea } from "@mantine/core";
-import { useSelectedBreedId, useBreed } from "../../stores/breeds";
+import { useSelectedBreed } from "../../stores/breeds";
 import BreedDetails from "../BreedDetails/BreedDetails";
 import "./styles.css";
 
@@ -10,8 +10,7 @@ interface Props {
 }
 
 const Modal = ({ isOpen, close }: Props) => {
-  const selectedBreedId = useSelectedBreedId();
-  const selectedBreed = selectedBreedId ? useBreed(selectedBreedId) : undefined;
+  const selectedBreed = useSelectedBreed();
   const breedName = selectedBreed?.details.public[0] || "breed";
 
   return (
@@ -24,9 +23,7 @@ const Modal = ({ isOpen, close }: Props) => {
           header: "modal-header",
           body: "modal-body",
         }}
-        title={breedName}
         centered
-        size="xl"
         trapFocus
         returnFocus
         closeOnEscape
