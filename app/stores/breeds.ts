@@ -4,6 +4,7 @@ import { devtools } from "zustand/middleware";
 import { type Breed } from "../../types/breed";
 import { getBreedVariantNames } from "./utils";
 import { sortBreeds } from "../pages/rasseportrait/utils";
+import { logger } from "~/utils/logger";
 
 type Search = {
   needle?: string | null;
@@ -11,6 +12,7 @@ type Search = {
 };
 
 interface BreedActions {
+  initialize: () => Promise<void>;
   setRawBreeds: (breeds: Breed[]) => void;
   setBreeds: (breeds: Breed[]) => void;
   setBreed: (breed: Breed) => void;
@@ -27,6 +29,9 @@ interface State {
   rawBreeds: Breed[];
   breeds: Breed[];
   selectedBreed?: Breed["id"];
+  loading: boolean;
+  error: string | null;
+  initialized: boolean;
   actions: BreedActions;
   search: Search;
   sortBy: "name" | "fci" | "airDate";
@@ -36,6 +41,9 @@ interface State {
 const initialState: Omit<State, "actions"> = {
   rawBreeds: [],
   breeds: [],
+  loading: false,
+  error: null,
+  initialized: false,
   search: {
     needle: "",
     results: [],
@@ -49,6 +57,55 @@ const useBreedsStore = create<State>()(
     (set) => ({
       ...initialState,
       actions: {
+        initialize: async () => {
+          const state = useBreedsStore.getState();
+          if (state.initialized || state.loading) return;
+
+          set({ loading: true, error: null }, undefined, "initialize:start");
+
+          try {
+            // Import breed data
+            const breedsModule = await import("../../db/breeds");
+            const breedsDB = breedsModule.default;
+            const breeds = Object.values(breedsDB) as Breed[];
+
+            if (!breeds.length) {
+              throw new Error("No breeds found in database");
+            }
+
+            logger.info(`Loaded ${breeds.length} breeds from database`);
+
+            // Use existing actions to set data
+            const { setRawBreeds, setBreeds } = useBreedsStore.getState().actions;
+            setRawBreeds(breeds);
+
+            // Filter and merge breeds (logic from Rasseportrait page)
+            const { mergeGroupedBreeds } = await import(
+              "../pages/rasseportrait/utils"
+            );
+            const singleBreeds = breeds.filter(
+              (breed) => !breed.details.groupAs,
+            );
+            const mergedBreeds = mergeGroupedBreeds(breeds);
+            const allBreeds = [...singleBreeds, ...mergedBreeds];
+
+            setBreeds(allBreeds);
+
+            set(
+              { initialized: true, loading: false },
+              undefined,
+              "initialize:success",
+            );
+          } catch (e) {
+            const error = e instanceof Error ? e.message : "Unknown error";
+            logger.error("Failed to initialize breeds:", e);
+            set(
+              { error, loading: false, initialized: false },
+              undefined,
+              "initialize:error",
+            );
+          }
+        },
         setRawBreeds: (breeds: Breed[]) =>
           set({ rawBreeds: breeds }, undefined, "setRawBreeds"),
         setBreeds: (breeds: Breed[]) => set({ breeds }, undefined, "setBreeds"),
@@ -177,3 +234,10 @@ export const useSelectedBreed = () => {
 export const useSortBy = () => useBreedsStore((state: State) => state.sortBy);
 export const useSortOrder = () =>
   useBreedsStore((state: State) => state.sortOrder);
+
+// Loading and error state selectors
+export const useLoading = () =>
+  useBreedsStore((state: State) => state.loading);
+export const useError = () => useBreedsStore((state: State) => state.error);
+export const useInitialized = () =>
+  useBreedsStore((state: State) => state.initialized);
