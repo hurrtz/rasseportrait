@@ -92,6 +92,76 @@ describe("sortBreeds", () => {
       expect(lastBreed.classification.fci).toBeUndefined();
       expect(lastBreed.id).toBe(4); // mockBreedWithoutFCI
     });
+
+    it("should handle multiple breeds without FCI", () => {
+      const anotherWithoutFCI = {
+        ...mockBreedWithoutFCI,
+        id: 5,
+        details: {
+          ...mockBreedWithoutFCI.details,
+          internal: "another_designer",
+        },
+      };
+
+      const result = sortBreeds({
+        breeds: [mockBreed1, mockBreedWithoutFCI, anotherWithoutFCI],
+        sortBy: "fci",
+        sortOrder: "asc",
+      });
+
+      // Breed with FCI should be first
+      expect(result[0].classification.fci?.standardNumber).toBe(111);
+      // Both without FCI should be at the end (order between them is preserved)
+      expect(result[1].classification.fci).toBeUndefined();
+      expect(result[2].classification.fci).toBeUndefined();
+    });
+
+    it("should use variant FCI when main FCI is undefined", () => {
+      const breedWithVariantFCI = {
+        ...mockBreed1,
+        id: 6,
+        classification: { fci: undefined },
+        details: {
+          ...mockBreed1.details,
+          internal: "breed_with_variant_fci",
+          variants: [
+            {
+              internal: "variant",
+              public: "Variant",
+              fci: {
+                group: 5,
+                section: 1,
+                standardNumber: 250,
+              },
+            },
+          ],
+        },
+      };
+
+      const result = sortBreeds({
+        breeds: [mockBreed1, breedWithVariantFCI, mockBreed3],
+        sortBy: "fci",
+        sortOrder: "asc",
+      });
+
+      // Should be sorted by FCI including variant FCI
+      expect(result[0].classification.fci?.standardNumber).toBe(111);
+      expect(result[1].details.variants?.[0]?.fci?.standardNumber).toBe(250);
+      expect(result[2].classification.fci?.standardNumber).toBe(342);
+    });
+
+    it("should handle breed with FCI compared to breed without any FCI", () => {
+      const result = sortBreeds({
+        breeds: [mockBreedWithoutFCI, mockBreed1],
+        sortBy: "fci",
+        sortOrder: "asc",
+      });
+
+      // Breed with FCI should come first
+      expect(result[0].classification.fci?.standardNumber).toBe(111);
+      // Breed without FCI should be last
+      expect(result[1].classification.fci).toBeUndefined();
+    });
   });
 
   describe("sorting by air date", () => {
