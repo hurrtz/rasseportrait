@@ -16,9 +16,20 @@ export default {
       {
         tsconfig: {
           verbatimModuleSyntax: false,
+          module: "esnext",
+          target: "esnext",
         },
       },
     ],
+  },
+  globals: {
+    "import.meta": {
+      env: {
+        DEV: true,
+        VITE_LOG_LEVEL: "debug",
+        VITE_AMPLITUDE_API_KEY: "test-api-key",
+      },
+    },
   },
   moduleNameMapper: {
     "^~/(.*)$": "<rootDir>/app/$1",
