@@ -11,7 +11,14 @@ export default {
   coverageProvider: "v8",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   transform: {
-    ...tsJestTransformCfg,
+    "^.+\.tsx?$": [
+      "ts-jest",
+      {
+        tsconfig: {
+          verbatimModuleSyntax: false,
+        },
+      },
+    ],
   },
   moduleNameMapper: {
     "^~/(.*)$": "<rootDir>/app/$1",
@@ -20,5 +27,9 @@ export default {
   testMatch: [
     "**/__tests__/**/*.[jt]s?(x)",
     "**/?(*.)+(spec|test).[jt]s?(x)",
+  ],
+  testPathIgnorePatterns: [
+    "/node_modules/",
+    "/__tests__/fixtures\\.(ts|tsx|js|jsx)$",
   ],
 };
