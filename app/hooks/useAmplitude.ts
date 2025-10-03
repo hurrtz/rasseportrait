@@ -103,7 +103,11 @@ export const useAmplitude = () => {
     [],
   );
 
-  const setUserProperty = useCallback(async (property: string, value: any) => {
+  const setUserProperty = useCallback(
+    async (
+      property: string,
+      value: string | number | boolean | string[],
+    ) => {
     if (typeof window === "undefined" || import.meta.env.DEV) return;
 
     try {
