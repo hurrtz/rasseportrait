@@ -218,7 +218,7 @@ describe("BreedCard", () => {
 
       renderWithMantine(<BreedCard id={1} name="Golden Retriever" onClick={mockOnClick} />);
 
-      const srText = screen.getByText(/Click to view details for Golden Retriever/);
+      const srText = screen.getByText(/Press Enter or Space to view details for Golden Retriever/);
       expect(srText).toBeTruthy();
       expect(srText.className).toContain("sr-only");
     });

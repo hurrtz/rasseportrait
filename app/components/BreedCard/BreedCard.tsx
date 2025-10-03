@@ -53,8 +53,28 @@ const BreedCard = ({ id, name, onClick }: Props) => {
     onClick();
   }, [id, name, variantNames, activeSlide, onClick, track]);
 
+  const handleKeyDown = useCallback(
+    (event: React.KeyboardEvent) => {
+      // Enter or Space key to open breed details
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        handleCardClick();
+      }
+    },
+    [handleCardClick],
+  );
+
   return (
-    <Card shadow="xl" padding="xl" radius="md" className="card">
+    <Card
+      shadow="xl"
+      padding="xl"
+      radius="md"
+      className="card"
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+      role="button"
+      aria-label={`View details for ${name}`}
+    >
       <Section
         className={clsx("card-section", {
           "single-image-card-section": variantNames.length == 1,
@@ -65,7 +85,7 @@ const BreedCard = ({ id, name, onClick }: Props) => {
           onClick={handleCardClick}
           handleSlideChange={handleSlideChange}
         />
-        <div className="sr-only">Click to view details for {name}</div>
+        <div className="sr-only">Press Enter or Space to view details for {name}</div>
       </Section>
 
       <Group justify="space-between" className="breed-card-name">

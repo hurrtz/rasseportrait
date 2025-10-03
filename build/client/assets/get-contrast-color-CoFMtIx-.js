@@ -1,1 +1,0 @@
-import{y as t,g as n}from"./Text-Bcx26Dxc.js";function s({color:o,theme:r,autoContrast:a}){return(typeof a=="boolean"?a:r.autoContrast)&&t({color:o||r.primaryColor,theme:r}).isLight?"var(--mantine-color-black)":"var(--mantine-color-white)"}function e(o,r){return s({color:o.colors[o.primaryColor][n(o,r)],theme:o,autoContrast:null})}export{s as a,e as g};
