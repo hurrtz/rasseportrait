@@ -3,11 +3,17 @@ import { Input } from "@mantine/core";
 import "./styles.css";
 import { useBreedActions } from "../../stores/breeds";
 import { useDebounce } from "../../hooks/useDebounce";
+import {
+  SEARCH_DEBOUNCE_DELAY_MS,
+  SEARCH_PLACEHOLDER,
+  SEARCH_ARIA_LABEL,
+  ROLE_SEARCHBOX,
+} from "~/constants";
 
 const BreedSearch = () => {
   const { setSearch } = useBreedActions();
   const [searchValue, setSearchValue] = useState("");
-  const debouncedSearchValue = useDebounce(searchValue, 300); // 300ms delay
+  const debouncedSearchValue = useDebounce(searchValue, SEARCH_DEBOUNCE_DELAY_MS);
 
   const handleChange = useCallback((event?: ChangeEvent<HTMLInputElement>) => {
     if (event && event.currentTarget) {
@@ -23,12 +29,12 @@ const BreedSearch = () => {
   return (
     <>
       <Input
-        placeholder="Suche nach Rassenamen oder FCI-Nummern"
+        placeholder={SEARCH_PLACEHOLDER}
         value={searchValue}
         onChange={handleChange}
         size="lg"
-        aria-label="Search for dog breeds by name or FCI number"
-        role="searchbox"
+        aria-label={SEARCH_ARIA_LABEL}
+        role={ROLE_SEARCHBOX}
       />
     </>
   );

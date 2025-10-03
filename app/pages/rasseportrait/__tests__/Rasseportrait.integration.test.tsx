@@ -5,6 +5,7 @@ import { MantineProvider } from "@mantine/core";
 import Rasseportrait from "../Rasseportrait";
 import * as breedsStore from "../../../stores/breeds";
 import type { Breed } from "types/breed";
+import { LOADING_MESSAGE } from "~/constants";
 
 // Mock modules
 jest.mock("../../../components/BreedSearch", () => ({
@@ -255,7 +256,7 @@ describe("Rasseportrait Integration Tests", () => {
 
       // Should show initializing state
       expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
-      expect(screen.getByText("Initializing...")).toBeInTheDocument();
+      expect(screen.getByText(LOADING_MESSAGE)).toBeInTheDocument();
 
       // Verify initialization was called
       await waitFor(() => {
@@ -273,7 +274,7 @@ describe("Rasseportrait Integration Tests", () => {
 
       // Should show loading state
       await waitFor(() => {
-        expect(screen.getByText("Loading breeds...")).toBeInTheDocument();
+        expect(screen.getByText(LOADING_MESSAGE)).toBeInTheDocument();
       });
 
       // Simulate successful load

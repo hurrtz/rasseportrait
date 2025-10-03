@@ -5,6 +5,15 @@ import { type Breed } from "../../types/breed";
 import { getBreedVariantNames } from "./utils";
 import { sortBreeds } from "../pages/rasseportrait/utils";
 import { logger } from "~/utils/logger";
+import {
+  BREEDS_STORE_NAME,
+  DEFAULT_SORT_BY,
+  DEFAULT_SORT_ORDER,
+  DEFAULT_SEARCH_NEEDLE,
+  DEFAULT_SEARCH_RESULTS,
+  ERROR_NO_BREEDS_FOUND,
+  ERROR_UNKNOWN,
+} from "~/constants";
 
 type Search = {
   needle?: string | null;
@@ -45,11 +54,11 @@ const initialState: Omit<State, "actions"> = {
   error: null,
   initialized: false,
   search: {
-    needle: "",
-    results: [],
+    needle: DEFAULT_SEARCH_NEEDLE,
+    results: DEFAULT_SEARCH_RESULTS,
   },
-  sortBy: "airDate",
-  sortOrder: "desc",
+  sortBy: DEFAULT_SORT_BY,
+  sortOrder: DEFAULT_SORT_ORDER,
 };
 
 const useBreedsStore = create<State>()(
@@ -70,7 +79,7 @@ const useBreedsStore = create<State>()(
             const breeds = Object.values(breedsDB) as Breed[];
 
             if (!breeds.length) {
-              throw new Error("No breeds found in database");
+              throw new Error(ERROR_NO_BREEDS_FOUND);
             }
 
             logger.info(`Loaded ${breeds.length} breeds from database`);
@@ -97,7 +106,7 @@ const useBreedsStore = create<State>()(
               "initialize:success",
             );
           } catch (e) {
-            const error = e instanceof Error ? e.message : "Unknown error";
+            const error = e instanceof Error ? e.message : ERROR_UNKNOWN;
             logger.error("Failed to initialize breeds:", e);
             set(
               { error, loading: false, initialized: false },
@@ -167,7 +176,7 @@ const useBreedsStore = create<State>()(
       },
     }),
     {
-      name: "BreedsStore",
+      name: BREEDS_STORE_NAME,
       trace: true,
     },
   ),

@@ -19,6 +19,7 @@ import LoadingSpinner from "../../components/LoadingSpinner";
 import type { Breed } from "types/breed";
 import Fuse from "fuse.js";
 import { useAmplitude } from "../../hooks/useAmplitude";
+import { LOADING_MESSAGE } from "~/constants";
 
 const fuseOptions = {
   keys: [
@@ -106,7 +107,7 @@ const Rasseportrait = () => {
 
   // Show loading state while breeds are being loaded
   if (loading) {
-    return <LoadingSpinner message="Loading breeds..." />;
+    return <LoadingSpinner message={LOADING_MESSAGE} />;
   }
 
   // Show error state if initialization failed
@@ -125,7 +126,7 @@ const Rasseportrait = () => {
 
   // Don't render until initialized
   if (!initialized) {
-    return <LoadingSpinner message="Initializing..." />;
+    return <LoadingSpinner message={LOADING_MESSAGE} />;
   }
 
   const breedCards = breeds.map(({ id, details: { public: names } }) => (

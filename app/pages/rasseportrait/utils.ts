@@ -80,12 +80,12 @@ export const mergeGroupedBreeds = (breeds: Breed[]): Breed[] => {
 
 type SortOrder = "asc" | "desc";
 
-/*
-  Sorts breeds by air date of podcast
-  @param breeds - An array of breeds
-  @param sortDirection - The direction to sort the breeds in
-  @returns An array of sorted breeds
-*/
+/**
+ * Sorts breeds by air date of podcast
+ * @param breeds - An array of breeds
+ * @param sortOrder - The direction to sort the breeds in ('asc' or 'desc')
+ * @returns An array of sorted breeds
+ */
 const sortBreedsByAirDate = ({
   breeds,
   sortOrder,
@@ -112,12 +112,12 @@ const sortBreedsByAirDate = ({
     return bDate - aDate;
   });
 
-/*
-  Sorts breeds by name
-  @param breeds - An array of breeds
-  @param sortDirection - The direction to sort the breeds in
-  @returns An array of sorted breeds
-*/
+/**
+ * Sorts breeds by name (internal identifier)
+ * @param breeds - An array of breeds
+ * @param sortOrder - The direction to sort the breeds in ('asc' or 'desc')
+ * @returns An array of sorted breeds
+ */
 const sortBreedsByName = ({
   breeds,
   sortOrder,
@@ -140,12 +140,13 @@ const sortBreedsByName = ({
     return bName.localeCompare(aName);
   });
 
-/*
-  Sorts breeds by FCI number
-  @param breeds - An array of breeds
-  @param sortDirection - The direction to sort the breeds in
-  @returns An array of sorted breeds
-*/
+/**
+ * Sorts breeds by FCI standard number
+ * Breeds without FCI numbers are moved to the bottom of the list
+ * @param breeds - An array of breeds
+ * @param sortOrder - The direction to sort the breeds in ('asc' or 'desc')
+ * @returns An array of sorted breeds
+ */
 const sortBreedsByFCI = ({
   breeds,
   sortOrder,
@@ -183,6 +184,13 @@ const sortBreedsByFCI = ({
 
 type SortBy = "airDate" | "name" | "fci";
 
+/**
+ * Sorts breeds by the specified field and order
+ * @param breeds - An array of breeds to sort
+ * @param sortBy - The field to sort by ('airDate', 'name', or 'fci')
+ * @param sortOrder - The direction to sort in ('asc' or 'desc')
+ * @returns An array of sorted breeds
+ */
 export const sortBreeds = ({
   breeds,
   sortBy,
@@ -205,7 +213,22 @@ export const sortBreeds = ({
   }
 };
 
+/**
+ * Calculates statistics about breed presentation in the podcast
+ * @param breeds - An array of breeds to analyze
+ * @returns An object containing various breed statistics including:
+ *   - Number and percentage of breeds presented
+ *   - Breeds outside FCI classification
+ *   - Breeds not yet presented
+ *   - Martin and Katharina's correct guesses and percentages
+ */
 export const getStatistics = (breeds: Breed[]) => {
+  /**
+   * Calculates percentage of amount relative to total
+   * @param amount - The numerator value
+   * @param total - The denominator value
+   * @returns Percentage as a decimal number
+   */
   const getPercentage = (amount: number, total: number) =>
     (amount / total) * 100;
 

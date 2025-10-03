@@ -10,6 +10,8 @@
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
     "test": "jest",
+    "test:coverage": "jest --coverage && open coverage/lcov-report/index.html",
+    "test:watch": "jest --watch",
     "prepare": "husky",
     "prerelease": "npm run build && scripts/prepareRelease.sh",
     "release": "npm run prepareRelease && standard-version && npm run publish",

@@ -6,6 +6,12 @@ import { useBreed, useBreedVariantNames } from "../../stores/breeds";
 import "@mantine/carousel/styles.css";
 import { BreedImagesList } from "../BreedImages";
 import { useAmplitude } from "../../hooks/useAmplitude";
+import {
+  KEY_ENTER,
+  KEY_SPACE,
+  TAB_INDEX_FOCUSABLE,
+  ROLE_BUTTON,
+} from "~/constants";
 import "./styles.css";
 
 interface Props {
@@ -56,7 +62,7 @@ const BreedCard = ({ id, name, onClick }: Props) => {
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
       // Enter or Space key to open breed details
-      if (event.key === "Enter" || event.key === " ") {
+      if (event.key === KEY_ENTER || event.key === KEY_SPACE) {
         event.preventDefault();
         handleCardClick();
       }
@@ -70,9 +76,9 @@ const BreedCard = ({ id, name, onClick }: Props) => {
       padding="xl"
       radius="md"
       className="card"
-      tabIndex={0}
+      tabIndex={TAB_INDEX_FOCUSABLE}
       onKeyDown={handleKeyDown}
-      role="button"
+      role={ROLE_BUTTON}
       aria-label={`View details for ${name}`}
     >
       <Section
