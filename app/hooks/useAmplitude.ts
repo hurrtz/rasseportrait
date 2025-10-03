@@ -69,7 +69,10 @@ export const useAmplitude = () => {
           ...properties,
         });
       } catch (error) {
-        console.error("Failed to track event:", eventName, error);
+        // Error tracking failures should not interrupt user flow
+        if (import.meta.env.DEV) {
+          console.error("Failed to track event:", eventName, error);
+        }
       }
     },
     [],
@@ -92,7 +95,9 @@ export const useAmplitude = () => {
           identify(identifyEvent);
         }
       } catch (error) {
-        console.error("Failed to identify user:", error);
+        if (import.meta.env.DEV) {
+          console.error("Failed to identify user:", error);
+        }
       }
     },
     [],
@@ -109,7 +114,9 @@ export const useAmplitude = () => {
       identifyEvent.set(property, value);
       identify(identifyEvent);
     } catch (error) {
-      console.error("Failed to set user property:", error);
+      if (import.meta.env.DEV) {
+        console.error("Failed to set user property:", error);
+      }
     }
   }, []);
 

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 import { useAmplitude } from "./hooks/useAmplitude";
 import { Menu } from "./components/Menu";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { logger } from "./utils/logger";
 
 const HEADER_HEIGHT = 60;
 
@@ -43,7 +44,7 @@ const App = ({ children }: { children: ReactNode }) => {
         const apiKey = config.amplitude.apiKey;
 
         if (!apiKey) {
-          console.warn("Amplitude API key not found. Analytics disabled.");
+          logger.warn("Amplitude API key not found. Analytics disabled.");
           return;
         }
 
@@ -73,9 +74,9 @@ const App = ({ children }: { children: ReactNode }) => {
         });
 
         isInitialized = true;
-        console.log("✅ Amplitude analytics initialized successfully");
+        logger.info("✅ Amplitude analytics initialized successfully");
       } catch (error) {
-        console.error("❌ Failed to initialize Amplitude:", error);
+        logger.error("❌ Failed to initialize Amplitude:", error);
       }
     };
 

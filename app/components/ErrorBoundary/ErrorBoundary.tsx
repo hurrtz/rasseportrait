@@ -1,6 +1,7 @@
 import React, { Component, type ReactNode } from "react";
 import { Alert, Button, Stack, Text } from "@mantine/core";
 import { IconAlertCircle, IconRefresh } from "@tabler/icons-react";
+import { logger } from "~/utils/logger";
 
 interface Props {
   children: ReactNode;
@@ -24,7 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error("ErrorBoundary caught an error:", error, errorInfo);
+    logger.error("ErrorBoundary caught an error:", error, errorInfo);
 
     // Track error with analytics if available (production only)
     if (typeof window !== "undefined" && !import.meta.env.DEV) {
@@ -39,7 +40,7 @@ class ErrorBoundary extends Component<Props, State> {
         });
       } catch (e) {
         // Analytics not available, just log
-        console.error("Failed to track error:", e);
+        logger.error("Failed to track error:", e);
       }
     }
 
