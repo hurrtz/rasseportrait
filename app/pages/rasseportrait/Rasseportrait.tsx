@@ -1,21 +1,22 @@
 import React, { useEffect, useMemo } from "react";
-import { SimpleGrid, Stack } from "@mantine/core";
+import { SimpleGrid, Stack, Alert } from "@mantine/core";
+import { IconAlertCircle } from "@tabler/icons-react";
 import { BreedCard } from "../../components/BreedCard";
 import {
   useAllBreeds,
   useBreedActions,
   useBreeds,
-  useRawBreeds,
   useSearch,
   useSelectedBreedId,
+  useLoading,
+  useError,
+  useInitialized,
 } from "../../stores/breeds";
-import breedsDB from "../../../db/breeds";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "../../components/Modal";
 import { BreedSearch } from "../../components/BreedSearch";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import type { Breed } from "types/breed";
-import { mergeGroupedBreeds } from "./utils";
 import Fuse from "fuse.js";
 import { useAmplitude } from "../../hooks/useAmplitude";
 
@@ -36,11 +37,12 @@ const fuseOptions = {
 const Rasseportrait = () => {
   const breeds = useBreeds();
   const allBreeds = useAllBreeds();
-  const rawBreeds = useRawBreeds();
   const { needle } = useSearch();
   const selectedBreedId = useSelectedBreedId();
-  const { setRawBreeds, setBreeds, setSelectedBreed, setSearch } =
-    useBreedActions();
+  const loading = useLoading();
+  const error = useError();
+  const initialized = useInitialized();
+  const { initialize, setSelectedBreed, setSearch } = useBreedActions();
   const [isModalOpen, { open: openModal, close: closeModal }] =
     useDisclosure(false);
   const { track } = useAmplitude();
@@ -74,30 +76,18 @@ const Rasseportrait = () => {
     closeModal();
   };
 
+  // Initialize breeds on mount
+  useEffect(() => {
+    if (!initialized && !loading) {
+      initialize();
+    }
+  }, [initialized, loading, initialize]);
+
   useEffect(() => {
     if (selectedBreedId) {
       openModal();
     }
   }, [selectedBreedId, openModal]);
-
-  useEffect(() => {
-    if (!rawBreeds.length) {
-      // all breeds straight from the database as is
-      const breeds = Object.values(breedsDB) as Breed[];
-
-      setRawBreeds(breeds);
-
-      // all breeds that are solitary, i.e. not grouped (e.g. Poodle)
-      const singleBreeds = breeds.filter((breed) => !breed.details.groupAs);
-
-      // all breeds that are grouped (e.g. Corgi), each group merged into a single breed with variants
-      const mergedBreeds = mergeGroupedBreeds(breeds);
-
-      const allBreeds = [...singleBreeds, ...mergedBreeds];
-
-      setBreeds(allBreeds);
-    }
-  }, [rawBreeds.length]);
 
   useEffect(() => {
     if (!needle) {
@@ -115,8 +105,27 @@ const Rasseportrait = () => {
   }, [needle, setSearch, fuse, track, allBreeds.length]);
 
   // Show loading state while breeds are being loaded
-  if (!breeds.length && !rawBreeds.length) {
+  if (loading) {
     return <LoadingSpinner message="Loading breeds..." />;
+  }
+
+  // Show error state if initialization failed
+  if (error) {
+    return (
+      <Alert
+        icon={<IconAlertCircle size={16} />}
+        title="Failed to load breeds"
+        color="red"
+        variant="light"
+      >
+        {error}
+      </Alert>
+    );
+  }
+
+  // Don't render until initialized
+  if (!initialized) {
+    return <LoadingSpinner message="Initializing..." />;
   }
 
   const breedCards = breeds.map(({ id, details: { public: names } }) => (
