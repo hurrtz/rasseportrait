@@ -54,5 +54,9 @@ export default {
       name: "VDH",
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/islandhund",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/islandhund",
+    },
   ],
 } satisfies Breed;

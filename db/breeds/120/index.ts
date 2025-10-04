@@ -47,5 +47,9 @@ export default {
       name: "VDH",
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/irish-red-setter",
     },
+    {
+      name: "Martin Rütter",
+      url: "https://www.martinruetter.com/rassekunde/irish-red-setter",
+    },
   ],
 } as Breed;

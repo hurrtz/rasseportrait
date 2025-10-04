@@ -10,6 +10,12 @@ export default {
         internal: "rough",
         public: "Langhaar",
         hasVideo: true,
+        furtherReading: [
+          {
+            name: "Martin Rütter",
+            url: "https://www.martinruetter.com/rassekunde/langhaar-collie",
+          },
+        ],
       },
     ],
     groupAs: "Collie",
