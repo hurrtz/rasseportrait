@@ -9,6 +9,7 @@ export default {
       {
         internal: "rough",
         public: "Langhaar",
+    hasVideo: true,
       },
     ],
     groupAs: "Collie",

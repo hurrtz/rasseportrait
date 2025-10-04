@@ -10,6 +10,7 @@ const breed: Breed = {
       "Dyrehund",
     ],
     groupAs: "Norwegischer Elchhund",
+    hasVideo: true,
   },
   classification: {
     fci: {

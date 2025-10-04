@@ -52,6 +52,7 @@ interface BreedDetails {
   groupAs?: string;
   isGrouped?: boolean;
   isOfficiallyPresented?: boolean;
+  hasVideo?: boolean;
 }
 
 export interface Breed {

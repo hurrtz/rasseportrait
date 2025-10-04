@@ -14,6 +14,7 @@ export default {
       "Saupacker",
       "Große Dogge",
     ],
+    hasVideo: true,
   },
   classification: {
     fci: {

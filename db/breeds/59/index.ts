@@ -13,6 +13,7 @@ export default {
           {
             name: "Wikipedia",
             url: "https://de.wikipedia.org/wiki/Berner_Laufhund",
+    hasVideo: true,
           },
           {
             name: "VDH",

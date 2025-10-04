@@ -11,6 +11,7 @@ export default {
       "Isländischer Schäferhund",
       "Icelandic Sheepdog",
     ],
+    hasVideo: true,
   },
   classification: {
     fci: {

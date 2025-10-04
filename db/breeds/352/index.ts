@@ -18,6 +18,7 @@ export default {
           {
             name: "VDH",
             url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/russkiy-toy-langhaar",
+    hasVideo: true,
           },
         ],
       },
