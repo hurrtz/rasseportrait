@@ -102,8 +102,8 @@ const sortBreedsByAirDate = ({
       ({ meta: { internal } }) => internal === "portrait",
     )?.meta.airDate;
 
-    const aDate = new Date(aAirDate ?? "").getTime();
-    const bDate = new Date(bAirDate ?? "").getTime();
+    const aDate = new Date(aAirDate ?? 0).getTime();
+    const bDate = new Date(bAirDate ?? 0).getTime();
 
     if (sortOrder === "asc") {
       return aDate - bDate;
