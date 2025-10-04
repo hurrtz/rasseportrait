@@ -13,7 +13,10 @@ import {
 const BreedSearch = () => {
   const { setSearch } = useBreedActions();
   const [searchValue, setSearchValue] = useState("");
-  const debouncedSearchValue = useDebounce(searchValue, SEARCH_DEBOUNCE_DELAY_MS);
+  const debouncedSearchValue = useDebounce(
+    searchValue,
+    SEARCH_DEBOUNCE_DELAY_MS,
+  );
 
   const handleChange = useCallback((event?: ChangeEvent<HTMLInputElement>) => {
     if (event && event.currentTarget) {

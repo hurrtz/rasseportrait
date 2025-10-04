@@ -46,7 +46,9 @@ jest.mock("~/utils/logger", () => ({
 }));
 
 jest.mock("../../../components/ErrorBoundary", () => ({
-  ErrorBoundary: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  ErrorBoundary: ({ children }: { children: React.ReactNode }) => (
+    <>{children}</>
+  ),
 }));
 
 jest.mock("../../../components/BreedImages", () => ({
@@ -56,7 +58,9 @@ jest.mock("../../../components/BreedImages", () => ({
       Breed Images List
     </div>
   ),
-  BreedImagesDetail: () => <div data-testid="breed-images-detail">Breed Images Detail</div>,
+  BreedImagesDetail: () => (
+    <div data-testid="breed-images-detail">Breed Images Detail</div>
+  ),
 }));
 
 // Test fixtures
@@ -127,9 +131,11 @@ describe("Rasseportrait Integration Tests", () => {
     jest.spyOn(breedsStore, "useLoading").mockReturnValue(false);
     jest.spyOn(breedsStore, "useError").mockReturnValue(null);
     jest.spyOn(breedsStore, "useInitialized").mockReturnValue(true);
-    jest.spyOn(breedsStore, "useBreed").mockImplementation((id: Breed["id"]) =>
-      mockBreeds.find((breed) => breed.id === id),
-    );
+    jest
+      .spyOn(breedsStore, "useBreed")
+      .mockImplementation((id: Breed["id"]) =>
+        mockBreeds.find((breed) => breed.id === id),
+      );
     jest.spyOn(breedsStore, "useBreedVariantNames").mockReturnValue([]);
     jest.spyOn(breedsStore, "useBreedActions").mockReturnValue({
       initialize: mockInitialize,
@@ -208,7 +214,9 @@ describe("Rasseportrait Integration Tests", () => {
       expect(screen.getByText("Test Breed 3")).toBeInTheDocument();
 
       // Simulate search being performed (needle updated in store)
-      jest.spyOn(breedsStore, "useSearch").mockReturnValue({ needle: "breed 1" });
+      jest
+        .spyOn(breedsStore, "useSearch")
+        .mockReturnValue({ needle: "breed 1" });
       jest.spyOn(breedsStore, "useBreeds").mockReturnValue([mockBreeds[0]]);
 
       rerender(
@@ -298,7 +306,9 @@ describe("Rasseportrait Integration Tests", () => {
 
     it("should handle error recovery workflow", async () => {
       // Start with error state
-      jest.spyOn(breedsStore, "useError").mockReturnValue("Failed to load data");
+      jest
+        .spyOn(breedsStore, "useError")
+        .mockReturnValue("Failed to load data");
       jest.spyOn(breedsStore, "useLoading").mockReturnValue(false);
       jest.spyOn(breedsStore, "useInitialized").mockReturnValue(true);
 
@@ -326,7 +336,9 @@ describe("Rasseportrait Integration Tests", () => {
       await waitFor(() => {
         expect(screen.getByText("Test Breed 1")).toBeInTheDocument();
       });
-      expect(screen.queryByText("Failed to load breeds")).not.toBeInTheDocument();
+      expect(
+        screen.queryByText("Failed to load breeds"),
+      ).not.toBeInTheDocument();
     });
 
     it("should handle multiple breed selections in sequence", async () => {
@@ -406,7 +418,9 @@ describe("Rasseportrait Integration Tests", () => {
       });
 
       // User performs search while modal open
-      jest.spyOn(breedsStore, "useSearch").mockReturnValue({ needle: "breed 2" });
+      jest
+        .spyOn(breedsStore, "useSearch")
+        .mockReturnValue({ needle: "breed 2" });
       jest.spyOn(breedsStore, "useBreeds").mockReturnValue([mockBreeds[1]]);
 
       rerender(

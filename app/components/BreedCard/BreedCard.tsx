@@ -91,7 +91,9 @@ const BreedCard = ({ id, name, onClick }: Props) => {
           onClick={handleCardClick}
           handleSlideChange={handleSlideChange}
         />
-        <div className="sr-only">Press Enter or Space to view details for {name}</div>
+        <div className="sr-only">
+          Press Enter or Space to view details for {name}
+        </div>
       </Section>
 
       <Group justify="space-between" className="breed-card-name">

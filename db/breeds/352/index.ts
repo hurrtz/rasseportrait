@@ -10,11 +10,11 @@ export default {
       "Russischer Zwergspaniel",
       "московский длинношерстный той-терьер",
     ],
+    hasVideo: true,
     variants: [
       {
         internal: "long",
         public: "Moskauer Langhaariger Toy",
-        hasVideo: true,
         furtherReading: [
           {
             name: "VDH",
@@ -25,7 +25,6 @@ export default {
       {
         internal: "smooth",
         public: "Kurzhaar",
-        hasVideo: true,
         furtherReading: [
           {
             name: "VDH",

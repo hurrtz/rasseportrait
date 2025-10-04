@@ -104,25 +104,24 @@ export const useAmplitude = () => {
   );
 
   const setUserProperty = useCallback(
-    async (
-      property: string,
-      value: string | number | boolean | string[],
-    ) => {
-    if (typeof window === "undefined" || import.meta.env.DEV) return;
+    async (property: string, value: string | number | boolean | string[]) => {
+      if (typeof window === "undefined" || import.meta.env.DEV) return;
 
-    try {
-      const { identify, Identify } = await import(
-        "@amplitude/analytics-browser"
-      );
-      const identifyEvent = new Identify();
-      identifyEvent.set(property, value);
-      identify(identifyEvent);
-    } catch (error) {
-      if (import.meta.env.DEV) {
-        console.error("Failed to set user property:", error);
+      try {
+        const { identify, Identify } = await import(
+          "@amplitude/analytics-browser"
+        );
+        const identifyEvent = new Identify();
+        identifyEvent.set(property, value);
+        identify(identifyEvent);
+      } catch (error) {
+        if (import.meta.env.DEV) {
+          console.error("Failed to set user property:", error);
+        }
       }
-    }
-  }, []);
+    },
+    [],
+  );
 
   return {
     track,

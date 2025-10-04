@@ -5,6 +5,7 @@ export default {
   details: {
     internal: "schweizer_laufhund",
     public: ["Schweizer Laufhund", "Chien Courant Suisse"],
+    hasVideo: true,
     variants: [
       {
         internal: "berner",
@@ -13,7 +14,6 @@ export default {
           {
             name: "Wikipedia",
             url: "https://de.wikipedia.org/wiki/Berner_Laufhund",
-    hasVideo: true,
           },
           {
             name: "VDH",

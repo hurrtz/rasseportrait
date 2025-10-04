@@ -185,7 +185,9 @@ describe("Breeds Store", () => {
 
       // These should always be false and null initially
       expect(typeof loadingResult.current).toBe("boolean");
-      expect(errorResult.current === null || typeof errorResult.current === "string").toBe(true);
+      expect(
+        errorResult.current === null || typeof errorResult.current === "string",
+      ).toBe(true);
     });
   });
 
@@ -305,7 +307,10 @@ describe("Breeds Store", () => {
         actionsResult.current.setBreeds([mockBreed1, mockBreed2]);
       });
 
-      const updatedBreed = { ...mockBreed1, details: { ...mockBreed1.details, internal: "updated" } };
+      const updatedBreed = {
+        ...mockBreed1,
+        details: { ...mockBreed1.details, internal: "updated" },
+      };
 
       act(() => {
         actionsResult.current.setBreed(updatedBreed);
@@ -333,7 +338,9 @@ describe("Breeds Store", () => {
 
     it("should set selected breed", () => {
       const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: selectedIdResult } = renderHook(() => useSelectedBreedId());
+      const { result: selectedIdResult } = renderHook(() =>
+        useSelectedBreedId(),
+      );
 
       act(() => {
         actionsResult.current.setSelectedBreed(mockBreed1.id);
@@ -344,7 +351,9 @@ describe("Breeds Store", () => {
 
     it("should clear selected breed", () => {
       const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: selectedIdResult } = renderHook(() => useSelectedBreedId());
+      const { result: selectedIdResult } = renderHook(() =>
+        useSelectedBreedId(),
+      );
 
       act(() => {
         actionsResult.current.setSelectedBreed(mockBreed1.id);
@@ -434,7 +443,12 @@ describe("Breeds Store", () => {
     beforeEach(() => {
       const { result: actionsResult } = renderHook(() => useBreedActions());
       act(() => {
-        actionsResult.current.setBreeds([mockBreed1, mockBreed2, mockBreed3, mockBreed4]);
+        actionsResult.current.setBreeds([
+          mockBreed1,
+          mockBreed2,
+          mockBreed3,
+          mockBreed4,
+        ]);
       });
     });
 
@@ -481,7 +495,9 @@ describe("Breeds Store", () => {
 
     it("useSelectedBreed should return the selected breed", () => {
       const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: selectedBreedResult } = renderHook(() => useSelectedBreed());
+      const { result: selectedBreedResult } = renderHook(() =>
+        useSelectedBreed(),
+      );
 
       act(() => {
         actionsResult.current.setSelectedBreed(mockBreed1.id);
@@ -493,7 +509,7 @@ describe("Breeds Store", () => {
 
     it("useSelectedBreed should return the selected breed or undefined", () => {
       const { result: actionsResult } = renderHook(() => useBreedActions());
-      
+
       // Clear selection first
       act(() => {
         actionsResult.current.setSelectedBreed(undefined);
@@ -510,7 +526,9 @@ describe("Breeds Store", () => {
       const { result } = renderHook(() => useBreedGroup("poodle"));
 
       expect(result.current).toHaveLength(2);
-      expect(result.current.every((b) => b.details.groupAs === "poodle")).toBe(true);
+      expect(result.current.every((b) => b.details.groupAs === "poodle")).toBe(
+        true,
+      );
     });
 
     it("useBreedVariantNames should return variant names for grouped breeds", () => {
@@ -529,7 +547,9 @@ describe("Breeds Store", () => {
 
     it("should expose error state", () => {
       const { result } = renderHook(() => useError());
-      expect(result.current === null || typeof result.current === "string").toBe(true);
+      expect(
+        result.current === null || typeof result.current === "string",
+      ).toBe(true);
     });
 
     it("should expose initialized state", () => {
@@ -556,7 +576,9 @@ describe("Breeds Store", () => {
       });
 
       const names = breedsResult.current.map((b) => b.details.public[0]);
-      expect(names[0].localeCompare(names[names.length - 1])).toBeLessThanOrEqual(0);
+      expect(
+        names[0].localeCompare(names[names.length - 1]),
+      ).toBeLessThanOrEqual(0);
     });
 
     it("should sort by airDate in descending order", () => {
@@ -597,7 +619,7 @@ describe("Breeds Store", () => {
 
       // Verify sorting is applied - breeds should have FCI classifications
       const allBreedsWithFCI = breedsResult.current.filter(
-        (b) => b.classification.fci?.standardNumber
+        (b) => b.classification.fci?.standardNumber,
       );
       expect(allBreedsWithFCI.length).toBeGreaterThan(0);
     });

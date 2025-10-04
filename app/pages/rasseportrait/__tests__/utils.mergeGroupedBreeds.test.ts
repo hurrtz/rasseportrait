@@ -1,9 +1,5 @@
 import { mergeGroupedBreeds } from "../utils";
-import {
-  mockBreed1,
-  mockGroupedBreed1,
-  mockGroupedBreed2,
-} from "./fixtures";
+import { mockBreed1, mockGroupedBreed1, mockGroupedBreed2 } from "./fixtures";
 
 describe("mergeGroupedBreeds", () => {
   it("should merge grouped breeds into single breed with variants", () => {

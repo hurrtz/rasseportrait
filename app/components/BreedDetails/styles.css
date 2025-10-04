@@ -41,12 +41,12 @@
 }
 
 .podcast-episode:hover {
-  background-color: #EEA13B;
+  background-color: #eea13b;
 }
 
 .podcast-episode-icon {
   width: 24px;
-  height: 24px
+  height: 24px;
 }
 
 .podcast-episode-title {
@@ -80,7 +80,7 @@
 .further-reading-icon {
   width: auto;
   padding: 8px;
-  border-width: 0.5px
+  border-width: 0.5px;
 }
 
 .further-reading-icon + .further-reading-icon {

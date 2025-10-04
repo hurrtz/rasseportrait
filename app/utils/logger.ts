@@ -34,10 +34,7 @@ export const createLogger = (
     warn: (...a) => should("warn") && console.warn(...prefixArgs(scope, a)),
     error: (...a) => console.error(...prefixArgs(scope, a)),
     child: (childScope) =>
-      createLogger(
-        scope ? `${scope}:${childScope}` : childScope,
-        minLevel,
-      ),
+      createLogger(scope ? `${scope}:${childScope}` : childScope, minLevel),
   };
 };
 

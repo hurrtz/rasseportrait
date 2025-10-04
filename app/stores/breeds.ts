@@ -85,7 +85,8 @@ const useBreedsStore = create<State>()(
             logger.info(`Loaded ${breeds.length} breeds from database`);
 
             // Use existing actions to set data
-            const { setRawBreeds, setBreeds } = useBreedsStore.getState().actions;
+            const { setRawBreeds, setBreeds } =
+              useBreedsStore.getState().actions;
             setRawBreeds(breeds);
 
             // Filter and merge breeds (logic from Rasseportrait page)
@@ -184,8 +185,10 @@ const useBreedsStore = create<State>()(
 
 export const useRawBreeds = () =>
   useBreedsStore((state: State) => state.rawBreeds);
+
 export const useAllBreeds = () =>
   useBreedsStore((state: State) => state.breeds);
+
 export const useBreeds = () => {
   const {
     search: { needle, results },
@@ -204,18 +207,23 @@ export const useBreeds = () => {
 
   return sortedBreeds;
 };
+
 export const useBreed = (id: Breed["id"]) =>
   useBreedsStore((state: State) =>
     state.breeds.find((breed) => breed.id === id),
   );
+
 export const useSelectedBreedId = () =>
   useBreedsStore((state: State) => state.selectedBreed);
+
 export const useBreedActions = () =>
   useBreedsStore((state: State) => state.actions);
+
 export const useBreedGroup = (groupAs: Breed["details"]["groupAs"]) =>
   useBreedsStore((state: State) =>
     state.breeds.filter((breed) => breed.details.groupAs === groupAs),
   );
+
 export const useBreedVariantNames = (id: Breed["id"]) => {
   const breeds = useBreedsStore((state: State) => state.breeds);
 
@@ -228,7 +236,9 @@ export const useBreedById = (id: Breed["id"]) => {
     state.breeds.find((breed) => breed.id === id),
   );
 };
+
 export const useSearch = () => useBreedsStore((state: State) => state.search);
+
 export const useSelectedBreed = () => {
   const { selectedBreed, breeds } = useBreedsStore((state: State) => state);
 
@@ -240,13 +250,16 @@ export const useSelectedBreed = () => {
     return undefined;
   }, [selectedBreed, breeds]);
 };
+
 export const useSortBy = () => useBreedsStore((state: State) => state.sortBy);
+
 export const useSortOrder = () =>
   useBreedsStore((state: State) => state.sortOrder);
 
 // Loading and error state selectors
-export const useLoading = () =>
-  useBreedsStore((state: State) => state.loading);
+export const useLoading = () => useBreedsStore((state: State) => state.loading);
+
 export const useError = () => useBreedsStore((state: State) => state.error);
+
 export const useInitialized = () =>
   useBreedsStore((state: State) => state.initialized);
