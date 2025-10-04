@@ -8,16 +8,16 @@ interface ImageCarouselProps {
   images: string[];
   onClick?: MouseEventHandler<HTMLDivElement>;
   handleSlideChange?: (index: number) => void;
-  isVideo?: boolean;
   isDetailView?: boolean;
+  breedId?: string | number;
 }
 
 const ImageCarousel = ({
   images,
   onClick,
   handleSlideChange,
-  isVideo = false,
   isDetailView = false,
+  breedId,
 }: ImageCarouselProps) => {
   return (
     <ErrorBoundary>
@@ -39,14 +39,15 @@ const ImageCarousel = ({
         onSlideChange={handleSlideChange}
       >
         {images.map((image, index) => (
-          <MediaItem
-            key={`${image}-${index}`}
-            src={image}
-            onClick={onClick}
-            isVideo={isVideo}
-            isDetailView={isDetailView}
-            className="image slide"
-          />
+          <Carousel.Slide key={`${image}-${index}`}>
+            <MediaItem
+              src={image}
+              onClick={onClick}
+              isDetailView={isDetailView}
+              className="image slide"
+              breedId={breedId}
+            />
+          </Carousel.Slide>
         ))}
       </Carousel>
     </ErrorBoundary>

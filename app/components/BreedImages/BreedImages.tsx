@@ -3,7 +3,6 @@ import "./styles.css";
 import type { Breed } from "types/breed";
 import { useSelectedBreed } from "~/stores/breeds";
 import { useImagePaths } from "./hooks";
-import { isVideoBreed } from "./utils";
 import { SingleImage, ImageCarousel } from "./components";
 
 interface Props {
@@ -19,11 +18,10 @@ const BreedImages = ({
   handleSlideChange,
   isDetailView = false,
 }: Props) => {
-  const isVideo = isVideoBreed(id);
-  const { images, isDetailView: isDetailViewFromHook } = useImagePaths({
+  const { images } = useImagePaths({
     id,
     isDetailView,
-    isVideo,
+    // Always get illustrations, videos handled by MediaItem internally
   });
 
   // Single image case
@@ -32,8 +30,8 @@ const BreedImages = ({
       <SingleImage
         src={images[0]}
         onClick={onClick}
-        isVideo={isVideo}
         isDetailView={isDetailView}
+        breedId={id}
       />
     );
   }
@@ -44,8 +42,8 @@ const BreedImages = ({
       images={images}
       onClick={onClick}
       handleSlideChange={handleSlideChange}
-      isVideo={isVideo}
       isDetailView={isDetailView}
+      breedId={id}
     />
   );
 };

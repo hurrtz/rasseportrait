@@ -6,7 +6,6 @@ import PlayButton from "./PlayButton";
 interface MediaItemProps {
   src: string;
   onClick?: MouseEventHandler<HTMLDivElement>;
-  isVideo?: boolean;
   isDetailView?: boolean;
   className?: string;
   breedId?: string | number;
@@ -15,7 +14,6 @@ interface MediaItemProps {
 const MediaItem = ({
   src,
   onClick,
-  isVideo = false,
   isDetailView = false,
   className = "image",
   breedId,

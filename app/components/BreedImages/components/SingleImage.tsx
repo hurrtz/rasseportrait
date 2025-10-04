@@ -5,26 +5,26 @@ import MediaItem from "./MediaItem";
 interface SingleImageProps {
   src: string;
   onClick?: MouseEventHandler<HTMLDivElement>;
-  isVideo?: boolean;
   isDetailView?: boolean;
   className?: string;
+  breedId?: string | number;
 }
 
 const SingleImage = ({
   src,
   onClick,
-  isVideo = false,
   isDetailView = false,
   className = "image",
+  breedId,
 }: SingleImageProps) => {
   return (
     <ErrorBoundary>
       <MediaItem
         src={src}
         onClick={onClick}
-        isVideo={isVideo}
         isDetailView={isDetailView}
         className={className}
+        breedId={breedId}
         key={src}
       />
     </ErrorBoundary>
