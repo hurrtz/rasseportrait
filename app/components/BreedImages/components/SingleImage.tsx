@@ -7,7 +7,7 @@ interface SingleImageProps {
   onClick?: MouseEventHandler<HTMLDivElement>;
   isDetailView?: boolean;
   className?: string;
-  breedId?: string | number;
+  breedId: string | number;
 }
 
 const SingleImage = ({
@@ -16,19 +16,17 @@ const SingleImage = ({
   isDetailView = false,
   className = "image",
   breedId,
-}: SingleImageProps) => {
-  return (
-    <ErrorBoundary>
-      <MediaItem
-        src={src}
-        onClick={onClick}
-        isDetailView={isDetailView}
-        className={className}
-        breedId={breedId}
-        key={src}
-      />
-    </ErrorBoundary>
-  );
-};
+}: SingleImageProps) => (
+  <ErrorBoundary>
+    <MediaItem
+      src={src}
+      onClick={onClick}
+      isDetailView={isDetailView}
+      className={className}
+      breedId={breedId}
+      key={src}
+    />
+  </ErrorBoundary>
+);
 
 export default SingleImage;

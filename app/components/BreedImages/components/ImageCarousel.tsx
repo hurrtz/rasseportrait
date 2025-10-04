@@ -9,7 +9,7 @@ interface ImageCarouselProps {
   onClick?: MouseEventHandler<HTMLDivElement>;
   handleSlideChange?: (index: number) => void;
   isDetailView?: boolean;
-  breedId?: string | number;
+  breedId: string | number;
 }
 
 const ImageCarousel = ({

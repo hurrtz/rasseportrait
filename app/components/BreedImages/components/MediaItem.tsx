@@ -2,11 +2,14 @@ import React, {
   useState,
   useRef,
   useEffect,
+  memo,
   type MouseEventHandler,
 } from "react";
 import { Image } from "@mantine/core";
+import clsx from "clsx";
 import { useBreed } from "~/stores/breeds";
 import PlayButton from "./PlayButton";
+import "./styles.css";
 
 interface MediaItemProps {
   src: string;
@@ -30,28 +33,14 @@ const MediaItem = ({
   // Extract variant from image path (e.g., 'illustration_long.jpeg' -> 'long')
   const extractVariantFromPath = (imagePath: string): string | null => {
     const match = imagePath.match(/_(\w+)(?:_thumbnail)?\.(jpeg|jpg|png)$/i);
+
     return match ? match[1] : null;
   };
 
-  // Check if a specific variant has video capability
-  const getVariantVideoCapability = (variantName: string | null): boolean => {
-    if (!breed?.details?.variants || !variantName) return false;
-
-    const variant = breed.details.variants.find(
-      (v) => v.internal === variantName,
-    );
-    return Boolean(variant?.hasVideo);
-  };
-
   const currentVariant = extractVariantFromPath(src);
-  const variantHasVideo = getVariantVideoCapability(currentVariant);
 
-  // Check if this breed/variant has video capability
-  const hasVideo =
-    breedId &&
-    isDetailView &&
-    ((currentVariant && variantHasVideo) || // Specific variant has video
-      (!currentVariant && breed?.details?.hasVideo)); // No variant but breed has general video
+  // Check if this breed has video capability
+  const hasVideo = breedId && isDetailView && breed?.details?.hasVideo;
 
   // Control video playback when showingVideo changes
   useEffect(() => {
@@ -75,47 +64,27 @@ const MediaItem = ({
   if (hasVideo) {
     // Detail view with video capability - use absolute positioning layout
     return (
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          aspectRatio: "1 / 1", // Creates a square
-        }}
-        onClick={onClick}
-      >
+      <div className={clsx("mediaItemWrapper")} onClick={onClick}>
         {/* Image - positioned absolutely */}
         <div
+          className={clsx("imageWrapper")}
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
             opacity: showingVideo ? 0 : 1,
-            transition: "opacity 0.3s ease",
           }}
         >
           <Image
             src={src}
             height="100%"
             width="100%"
-            className={className}
-            style={{
-              objectFit: "contain",
-            }}
+            className={clsx(className, "image")}
           />
         </div>
 
         {/* Video - positioned absolutely */}
         <div
+          className={clsx("imageWrapper")}
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
             opacity: showingVideo ? 1 : 0,
-            transition: "opacity 0.3s ease",
           }}
         >
           <video
@@ -125,11 +94,7 @@ const MediaItem = ({
             height="100%"
             muted
             loop
-            className={className}
-            style={{
-              objectFit: "contain",
-              backgroundColor: "transparent",
-            }}
+            className={clsx(className, "video")}
           />
         </div>
 
@@ -148,24 +113,20 @@ const MediaItem = ({
   // Standard overview layout - simple image only
   return (
     <div
-      style={{
-        position: "relative",
-        width: "100%",
-        aspectRatio: "1 / 1", // Creates a square
-      }}
+      className={clsx("mediaItemWrapper", {
+        notPresented: breed?.details.isOfficiallyPresented === false,
+        detailView: isDetailView,
+      })}
       onClick={onClick}
     >
       <Image
         src={src}
         width="100%"
         height="100%"
-        className={className}
-        style={{
-          objectFit: "contain",
-        }}
+        className={clsx(className, "image")}
       />
     </div>
   );
 };
 
-export default React.memo(MediaItem);
+export default memo(MediaItem);

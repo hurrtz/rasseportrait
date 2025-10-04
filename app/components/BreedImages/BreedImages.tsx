@@ -21,7 +21,7 @@ const BreedImages = ({
   const { images } = useImagePaths({
     id,
     isDetailView,
-    // Always get illustrations, videos handled by MediaItem internally
+    isVideo: false,
   });
 
   // Single image case
