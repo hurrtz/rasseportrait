@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   IconChartBar,
   IconSectionSign,
@@ -7,7 +7,7 @@ import {
   IconDog,
 } from "@tabler/icons-react";
 import { useAmplitude } from "../../hooks/useAmplitude";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import { Burger, Menu } from "@mantine/core";
 import classes from "./Menu.module.css";
 import { useDisclosure } from "@mantine/hooks";
@@ -25,17 +25,18 @@ const SORT_BY_OPTIONS: { label: string; value: "name" | "fci" | "airDate" }[] =
 export default () => {
   const { track } = useAmplitude();
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const sortBy = useSortBy();
   const sortOrder = useSortOrder();
   const { setSort } = useBreedActions();
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { toggle: toggleMenuButton }] = useDisclosure();
   const { Target, Dropdown, Label, Item, Divider } = Menu;
 
   return (
     <Menu shadow="md">
       <Target>
         <div className={classes.burgerWrapper}>
-          <Burger opened={opened} onClick={toggle} />
+          <Burger opened={opened} onClick={toggleMenuButton} />
         </div>
       </Target>
       <Dropdown>
@@ -50,7 +51,7 @@ export default () => {
                 previousSortBy: sortBy,
               });
               setSort({ sortBy: value, sortOrder });
-              toggle();
+              toggleMenuButton();
             }}
             leftSection={
               sortBy === value && sortOrder === "asc" ? (
@@ -59,7 +60,7 @@ export default () => {
                 <IconSortDescending />
               )
             }
-            className={clsx([classes.sortByItem], {
+            className={clsx({
               [classes.active]: value === sortBy,
             })}
           >
@@ -76,7 +77,11 @@ export default () => {
               page: window.location.pathname,
             });
             navigate("/");
+            toggleMenuButton();
           }}
+          className={clsx({
+            [classes.active]: pathname === "/",
+          })}
         >
           Rasseportrait
         </Item>
@@ -88,7 +93,11 @@ export default () => {
               page: window.location.pathname,
             });
             navigate("/statistiken");
+            toggleMenuButton();
           }}
+          className={clsx({
+            [classes.active]: pathname === "/statistiken",
+          })}
         >
           Statistiken
         </Item>
@@ -100,7 +109,11 @@ export default () => {
               page: window.location.pathname,
             });
             navigate("/impressum");
+            toggleMenuButton();
           }}
+          className={clsx({
+            [classes.active]: pathname === "/impressum",
+          })}
         >
           Impressum
         </Item>
