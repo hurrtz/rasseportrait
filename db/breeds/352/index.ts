@@ -14,17 +14,18 @@ export default {
       {
         internal: "long",
         public: "Moskauer Langhaariger Toy",
+        hasVideo: true,
         furtherReading: [
           {
             name: "VDH",
             url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/russkiy-toy-langhaar",
-    hasVideo: true,
           },
         ],
       },
       {
         internal: "smooth",
         public: "Kurzhaar",
+        hasVideo: true,
         furtherReading: [
           {
             name: "VDH",

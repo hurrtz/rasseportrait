@@ -43,6 +43,7 @@ export interface Variant {
   public: string;
   furtherReading?: FurtherReading[];
   fci?: FCI;
+  hasVideo?: boolean;
 }
 
 interface BreedDetails {

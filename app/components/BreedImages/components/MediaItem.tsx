@@ -25,14 +25,39 @@ const MediaItem = ({
   // Debug logging
   console.log('MediaItem debug:', {
     breedId,
+    src,
+    currentVariant,
+    variantHasVideo,
     breedHasVideo: breed?.details?.hasVideo,
     isDetailView,
     showingVideo,
+    hasVideo,
+    videoPath,
     breed: breed?.details
   });
   
-  // Check if this breed has a video and we have a breedId
-  const hasVideo = breedId && breed?.details?.hasVideo && isDetailView;
+  // Extract variant from image path (e.g., 'illustration_long.jpeg' -> 'long')
+  const extractVariantFromPath = (imagePath: string): string | null => {
+    const match = imagePath.match(/_(\w+)(?:_thumbnail)?\.(jpeg|jpg|png)$/i);
+    return match ? match[1] : null;
+  };
+  
+  // Check if a specific variant has video capability
+  const getVariantVideoCapability = (variantName: string | null): boolean => {
+    if (!breed?.details?.variants || !variantName) return false;
+    
+    const variant = breed.details.variants.find(v => v.internal === variantName);
+    return Boolean(variant?.hasVideo);
+  };
+  
+  const currentVariant = extractVariantFromPath(src);
+  const variantHasVideo = getVariantVideoCapability(currentVariant);
+  
+  // Check if this breed/variant has video capability
+  const hasVideo = breedId && isDetailView && (
+    (currentVariant && variantHasVideo) || // Specific variant has video
+    (!currentVariant && breed?.details?.hasVideo) // No variant but breed has general video
+  );
   
   // Control video playback when showingVideo changes
   useEffect(() => {
@@ -50,8 +75,9 @@ const MediaItem = ({
     }
   }, [showingVideo]);
   
-  // Always render the same container structure to avoid DOM changes
-  const videoPath = hasVideo ? `illustrations/breeds/${breedId}/video.mp4` : '';
+  // Generate video path based on variant
+  const videoPath = hasVideo ? 
+    `illustrations/breeds/${breedId}/video${currentVariant ? `_${currentVariant}` : ''}.mp4` : '';
   
   // Use different layouts based on whether video is available
   if (hasVideo) {
