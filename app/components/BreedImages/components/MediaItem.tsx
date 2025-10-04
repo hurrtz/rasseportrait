@@ -22,20 +22,6 @@ const MediaItem = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const breed = useBreed(breedId);
   
-  // Debug logging
-  console.log('MediaItem debug:', {
-    breedId,
-    src,
-    currentVariant,
-    variantHasVideo,
-    breedHasVideo: breed?.details?.hasVideo,
-    isDetailView,
-    showingVideo,
-    hasVideo,
-    videoPath,
-    breed: breed?.details
-  });
-  
   // Extract variant from image path (e.g., 'illustration_long.jpeg' -> 'long')
   const extractVariantFromPath = (imagePath: string): string | null => {
     const match = imagePath.match(/_(\w+)(?:_thumbnail)?\.(jpeg|jpg|png)$/i);
@@ -78,6 +64,20 @@ const MediaItem = ({
   // Generate video path based on variant
   const videoPath = hasVideo ? 
     `illustrations/breeds/${breedId}/video${currentVariant ? `_${currentVariant}` : ''}.mp4` : '';
+  
+  // Debug logging
+  console.log('MediaItem debug:', {
+    breedId,
+    src,
+    currentVariant,
+    variantHasVideo,
+    breedHasVideo: breed?.details?.hasVideo,
+    isDetailView,
+    showingVideo,
+    hasVideo,
+    videoPath,
+    breed: breed?.details
+  });
   
   // Use different layouts based on whether video is available
   if (hasVideo) {
