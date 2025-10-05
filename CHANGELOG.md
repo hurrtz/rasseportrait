@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.16.0](https://github.com/hurrtz/rasseportrait/compare/v2.15.0...v2.16.0) (2025-10-05)
+
+
+### Features
+
+* **a11y:** add keyboard navigation and ARIA improvements (Phase 3) ([df8e078](https://github.com/hurrtz/rasseportrait/commit/df8e07852f2d3dc883bbfa8dbbeb6fd47e77a419))
+* add hasVideo property to breed types and mark video-enabled breeds ([4d6a1ab](https://github.com/hurrtz/rasseportrait/commit/4d6a1ab98e41775224fef6f527aed0aae88b522d))
+* add smooth video playback with square aspect ratio in MediaItem ([313d69f](https://github.com/hurrtz/rasseportrait/commit/313d69f9b973187c0d7d7ff46c98e7e86f0cdfca))
+* add variant-specific video support for breed carousel slides ([ea24526](https://github.com/hurrtz/rasseportrait/commit/ea24526059aa92876043b308335b620bc1024cb5)), closes [#352](https://github.com/hurrtz/rasseportrait/issues/352)
+* provide proper UI for breeds that are not yet officiall presented ([2f1266c](https://github.com/hurrtz/rasseportrait/commit/2f1266ce4fa5ee37e0cf2e0faee8ac0ceeebca28))
+* **quality:** add Phase 4 code quality improvements ([e383475](https://github.com/hurrtz/rasseportrait/commit/e3834752b40daafadade0469b426b0e946f1ead5))
+* **route:** handle breeds loading and error states in Rasseportrait with user feedback ([7affd38](https://github.com/hurrtz/rasseportrait/commit/7affd3852eea2a1d25d2a3bd037266f8206e75af))
+* **store:** add loading/error/initialized states and initializer to breeds store ([04daf2d](https://github.com/hurrtz/rasseportrait/commit/04daf2d684bf800014399e6913b701ac033daafa))
+* **utils:** add structured logger with log levels and scoping ([b67b81e](https://github.com/hurrtz/rasseportrait/commit/b67b81e5c7baf169d7b65c18b58c144d9be211d1))
+
+
+### Bug Fixes
+
+* active ui for menu items ([b6856e8](https://github.com/hurrtz/rasseportrait/commit/b6856e8caee224c47af0aa93d361562d638eb857))
+* **analytics:** replace any type with strict typing in useAmplitude ([2e4adb6](https://github.com/hurrtz/rasseportrait/commit/2e4adb617aa3bb20bc8915649d10db4f219157c5))
+* bug with sorting by airdate ([e3fc70a](https://github.com/hurrtz/rasseportrait/commit/e3fc70aa6b55093447b7bde22d8f4d7faa1ab835))
+* correct debug logging order and fix breed 156 hasVideo property placement ([a1646c9](https://github.com/hurrtz/rasseportrait/commit/a1646c9f7dd964c5e69613e47478dae0a953bb97))
+* modal styles ([1353fee](https://github.com/hurrtz/rasseportrait/commit/1353feee48db1bf5ef6eeb0d09730afb18b6fabf))
+* remove gap between image slides ([9f7c2f2](https://github.com/hurrtz/rasseportrait/commit/9f7c2f272fa5ef1f43f688ee8f8272997bfb7cb9))
+
 ## [2.15.0](https://github.com/hurrtz/rasseportrait/compare/v2.14.0...v2.15.0) (2025-10-01)
 
 
