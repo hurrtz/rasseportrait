@@ -146,6 +146,7 @@ describe("Rasseportrait Integration Tests", () => {
       setBreed: jest.fn(),
       addBreed: jest.fn(),
       setSort: jest.fn(),
+      resetSort: jest.fn(),
     });
   });
 

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { create } from "zustand";
-import { devtools } from "zustand/middleware";
+import { devtools, persist } from "zustand/middleware";
 import { type Breed } from "../../types/breed";
 import { getBreedVariantNames } from "./utils";
 import { sortBreeds } from "../pages/rasseportrait/utils";
@@ -32,6 +32,7 @@ interface BreedActions {
     sortBy: "name" | "fci" | "airDate";
     sortOrder: "asc" | "desc";
   }) => void;
+  resetSort: () => void;
 }
 
 interface State {
@@ -63,9 +64,10 @@ const initialState: Omit<State, "actions"> = {
 
 const useBreedsStore = create<State>()(
   devtools(
-    (set) => ({
-      ...initialState,
-      actions: {
+    persist(
+      (set) => ({
+        ...initialState,
+        actions: {
         initialize: async () => {
           const state = useBreedsStore.getState();
           if (state.initialized || state.loading) return;
@@ -174,8 +176,38 @@ const useBreedsStore = create<State>()(
             undefined,
             "setSort",
           ),
+        resetSort: () =>
+          set(
+            {
+              sortBy: DEFAULT_SORT_BY,
+              sortOrder: DEFAULT_SORT_ORDER,
+            },
+            undefined,
+            "resetSort",
+          ),
       },
     }),
+      {
+        name: "rasseportrait-sort-settings",
+        partialize: (state) => ({
+          sortBy: state.sortBy,
+          sortOrder: state.sortOrder,
+        }),
+        version: 1,
+        storage: typeof window !== "undefined" ? {
+          getItem: (name) => {
+            const item = localStorage.getItem(name);
+            return item ? JSON.parse(item) : null;
+          },
+          setItem: (name, value) => {
+            localStorage.setItem(name, JSON.stringify(value));
+          },
+          removeItem: (name) => {
+            localStorage.removeItem(name);
+          },
+        } : undefined,
+      },
+    ),
     {
       name: BREEDS_STORE_NAME,
       trace: true,
@@ -263,3 +295,9 @@ export const useError = () => useBreedsStore((state: State) => state.error);
 
 export const useInitialized = () =>
   useBreedsStore((state: State) => state.initialized);
+
+// Sort management hooks
+export const useResetSort = () => {
+  const resetSort = useBreedsStore((state: State) => state.actions.resetSort);
+  return resetSort;
+};
