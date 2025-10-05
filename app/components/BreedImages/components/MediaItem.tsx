@@ -1,11 +1,6 @@
-import React, {
-  useState,
-  useRef,
-  useEffect,
-  memo,
-  type MouseEventHandler,
-} from "react";
+import React, { useState, memo, type MouseEventHandler } from "react";
 import { Image } from "@mantine/core";
+import ReactPlayer from "react-player";
 import clsx from "clsx";
 import { useBreed } from "~/stores/breeds";
 import PlayButton from "./PlayButton";
@@ -27,7 +22,6 @@ const MediaItem = ({
   breedId,
 }: MediaItemProps) => {
   const [showingVideo, setShowingVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
   const breed = useBreed(breedId);
 
   // Extract variant from image path (e.g., 'illustration_long.jpeg' -> 'long')
@@ -41,19 +35,6 @@ const MediaItem = ({
 
   // Check if this breed has video capability
   const hasVideo = breedId && isDetailView && breed?.details?.hasVideo;
-
-  // Control video playback when showingVideo changes
-  useEffect(() => {
-    if (videoRef.current) {
-      if (showingVideo) {
-        videoRef.current.play().catch((error) => {
-          console.error("Video play failed:", error);
-        });
-      } else {
-        videoRef.current.pause();
-      }
-    }
-  }, [showingVideo]);
 
   // Generate video path based on variant
   const videoPath = hasVideo
@@ -87,13 +68,15 @@ const MediaItem = ({
             opacity: showingVideo ? 1 : 0,
           }}
         >
-          <video
-            ref={videoRef}
+          <ReactPlayer
             src={videoPath}
             width="100%"
             height="100%"
+            playing={showingVideo}
             muted
             loop
+            playsInline
+            controls={false}
             className={clsx(className, "video")}
           />
         </div>
