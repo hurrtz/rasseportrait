@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.17.0](https://github.com/hurrtz/rasseportrait/compare/v2.16.0...v2.17.0) (2025-10-05)
+
+
+### Features
+
+* add persistent sort settings using Zustand persist middleware ([199de5f](https://github.com/hurrtz/rasseportrait/commit/199de5fcbb35e457ee24a9512f4c7eb1337bef30))
+
 ## [2.16.0](https://github.com/hurrtz/rasseportrait/compare/v2.15.0...v2.16.0) (2025-10-05)
 
 
