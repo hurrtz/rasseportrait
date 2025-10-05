@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.18.0](https://github.com/hurrtz/rasseportrait/compare/v2.17.0...v2.18.0) (2025-10-05)
+
+
+### Bug Fixes
+
+* video playing fullscreen on mobile ([b5b302d](https://github.com/hurrtz/rasseportrait/commit/b5b302df83021da7f53cba40b8e0755514b438d9))
+
 ## [2.17.0](https://github.com/hurrtz/rasseportrait/compare/v2.16.0...v2.17.0) (2025-10-05)
 
 
