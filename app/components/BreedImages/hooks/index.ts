@@ -1,1 +1,0 @@
-export { useImagePaths } from "./useImagePaths";
