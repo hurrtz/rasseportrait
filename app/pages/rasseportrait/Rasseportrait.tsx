@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo } from "react";
 import { SimpleGrid, Stack, Alert } from "@mantine/core";
 import { IconAlertCircle } from "@tabler/icons-react";
-import { BreedCard } from "../../components/BreedCard";
+import { LazyBreedCard } from "../../components/LazyBreedCard";
 import {
   useAllBreeds,
   useBreedActions,
@@ -20,6 +20,7 @@ import type { Breed } from "types/breed";
 import Fuse from "fuse.js";
 import { useAmplitude } from "../../hooks/useAmplitude";
 import { LOADING_MESSAGE } from "~/constants";
+import { logger } from "~/utils/logger";
 
 const fuseOptions = {
   keys: [
@@ -80,9 +81,34 @@ const Rasseportrait = () => {
   // Initialize breeds on mount
   useEffect(() => {
     if (!initialized && !loading) {
+      // Mark performance for initial render
+      if (typeof window !== 'undefined' && window.performance?.mark) {
+        window.performance.mark('breeds-init-start');
+      }
       initialize();
     }
   }, [initialized, loading, initialize]);
+
+  // Log performance metrics when breeds are loaded
+  useEffect(() => {
+    if (initialized && typeof window !== 'undefined' && window.performance?.mark) {
+      window.performance.mark('breeds-init-end');
+      try {
+        if (window.performance?.measure) {
+          window.performance.measure('breeds-initialization', 'breeds-init-start', 'breeds-init-end');
+          const measure = window.performance.getEntriesByName?.('breeds-initialization')[0];
+          if (measure) {
+            logger.info(`Breeds initialization took ${measure.duration.toFixed(2)}ms`);
+          }
+        }
+      } catch (e) {
+        // Ignore if marks don't exist
+      }
+      
+      // Log total breeds count for performance tracking
+      logger.info(`Total breeds loaded: ${allBreeds.length}, Visible: ${breeds.length}`);
+    }
+  }, [initialized, allBreeds.length, breeds.length]);
 
   useEffect(() => {
     if (selectedBreedId) {
@@ -130,7 +156,7 @@ const Rasseportrait = () => {
   }
 
   const breedCards = breeds.map(({ id, details: { public: names } }) => (
-    <BreedCard
+    <LazyBreedCard
       key={id}
       id={id}
       name={names[0]}
