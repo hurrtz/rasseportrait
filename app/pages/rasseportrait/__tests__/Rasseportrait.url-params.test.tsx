@@ -101,6 +101,10 @@ describe("Rasseportrait URL Parameters", () => {
     (breedsStore.useSortOrder as jest.Mock).mockReturnValue("asc");
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe("Setting URL parameters", () => {
     it("should add breed ID to URL when a breed is selected", async () => {
       const user = userEvent.setup();
@@ -209,34 +213,33 @@ describe("Rasseportrait URL Parameters", () => {
       // The other parameters should be preserved (this would need integration testing to fully verify)
     });
 
-    it("should clear selected breed when URL parameter is removed", async () => {
+    it("should handle closing modal via modal close button properly", async () => {
+      jest.useFakeTimers();
+      const user = userEvent.setup({ delay: null });
+      
       // Start with a selected breed
-      (breedsStore.useSelectedBreedId as jest.Mock)
-        .mockReturnValueOnce(2)
-        .mockReturnValueOnce(undefined);
+      (breedsStore.useSelectedBreedId as jest.Mock).mockReturnValue(2);
 
-      const { rerender } = renderWithRouter(["/?breed=2"]);
+      renderWithRouter(["/?breed=2"]);
 
       // Verify modal is initially open
       await waitFor(() => {
         expect(screen.getByTestId("breed-modal")).toBeInTheDocument();
       });
 
-      // Simulate URL change (removing breed parameter)
-      rerender(
-        <MantineProvider>
-          <MemoryRouter initialEntries={["/"]}>
-            <Routes>
-              <Route path="*" element={<Rasseportrait />} />
-            </Routes>
-          </MemoryRouter>
-        </MantineProvider>
-      );
+      // Close the modal by clicking it
+      const modal = screen.getByTestId("breed-modal");
+      await user.click(modal);
 
-      // Verify setSelectedBreed was called to clear the selection
+      // Run the setTimeout callback
+      jest.runAllTimers();
+
+      // Verify setSelectedBreed was called with undefined
       await waitFor(() => {
         expect(mockSetSelectedBreed).toHaveBeenCalledWith(undefined);
       });
+
+      jest.useRealTimers();
     });
   });
 });
