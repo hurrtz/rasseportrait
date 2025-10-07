@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useCallback } from "react";
 import { SimpleGrid, Stack, Alert } from "@mantine/core";
 import { IconAlertCircle } from "@tabler/icons-react";
+import { useSearchParams } from "react-router";
 import { LazyBreedCard } from "../../components/LazyBreedCard";
 import {
   useAllBreeds,
@@ -48,10 +49,11 @@ const Rasseportrait = () => {
   const [isModalOpen, { open: openModal, close: closeModal }] =
     useDisclosure(false);
   const { track } = useAmplitude();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const fuse = useMemo(() => new Fuse(allBreeds, fuseOptions), [allBreeds]);
 
-  const onSelectBreed = (id: Breed["id"]) => {
+  const onSelectBreed = useCallback((id: Breed["id"]) => {
     const selectedBreedData = allBreeds.find((breed) => breed.id === id);
     track("Breed Selected", {
       breedId: String(id),
@@ -63,9 +65,16 @@ const Rasseportrait = () => {
       totalBreedsVisible: breeds.length,
     });
     setSelectedBreed(id);
-  };
+    
+    // Update URL with breed parameter without affecting scroll position
+    setSearchParams((prev) => {
+      const newParams = new URLSearchParams(prev);
+      newParams.set('breed', String(id));
+      return newParams;
+    }, { replace: true, preventScrollReset: true });
+  }, [allBreeds, track, needle, breeds.length, setSelectedBreed, setSearchParams]);
 
-  const onCloseModal = () => {
+  const onCloseModal = useCallback(() => {
     const selectedBreedData = allBreeds.find(
       (breed) => breed.id === selectedBreedId,
     );
@@ -76,7 +85,14 @@ const Rasseportrait = () => {
     });
     setSelectedBreed(undefined);
     closeModal();
-  };
+    
+    // Remove breed parameter from URL without affecting scroll position
+    setSearchParams((prev) => {
+      const newParams = new URLSearchParams(prev);
+      newParams.delete('breed');
+      return newParams;
+    }, { replace: true, preventScrollReset: true });
+  }, [allBreeds, selectedBreedId, track, setSelectedBreed, closeModal, setSearchParams]);
 
   // Initialize breeds on mount
   useEffect(() => {
@@ -88,6 +104,37 @@ const Rasseportrait = () => {
       initialize();
     }
   }, [initialized, loading, initialize]);
+
+  // Handle breed parameter from URL on initial load and URL changes
+  useEffect(() => {
+    if (!initialized) return;
+    
+    const breedParam = searchParams.get('breed');
+    if (breedParam) {
+      // Convert to number if it's a numeric ID, otherwise keep as string
+      const breedId = /^\d+$/.test(breedParam) ? parseInt(breedParam, 10) : breedParam;
+      
+      // Check if this breed exists
+      const breedExists = allBreeds.some(breed => breed.id === breedId);
+      
+      if (breedExists && breedId !== selectedBreedId) {
+        // Set the selected breed without updating URL (since it's already there)
+        setSelectedBreed(breedId);
+        logger.info(`Opening breed from URL parameter: ${breedId}`);
+      } else if (!breedExists && breedParam) {
+        // Invalid breed ID in URL, remove it
+        logger.warn(`Invalid breed ID in URL: ${breedParam}`);
+        setSearchParams((prev) => {
+          const newParams = new URLSearchParams(prev);
+          newParams.delete('breed');
+          return newParams;
+        }, { replace: true, preventScrollReset: true });
+      }
+    } else if (selectedBreedId) {
+      // URL has no breed parameter but we have a selected breed, clear it
+      setSelectedBreed(undefined);
+    }
+  }, [searchParams, initialized, allBreeds, selectedBreedId, setSelectedBreed, setSearchParams]);
 
   // Log performance metrics when breeds are loaded
   useEffect(() => {

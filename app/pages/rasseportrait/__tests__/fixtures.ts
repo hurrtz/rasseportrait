@@ -189,3 +189,12 @@ export const mockGroupedBreed2: Breed = {
   ],
   furtherReading: [],
 };
+
+export const mockBreedsFull: Breed[] = [
+  mockBreed1,
+  mockBreed2,
+  mockBreed3,
+  mockBreedWithoutFCI,
+  mockGroupedBreed1,
+  mockGroupedBreed2,
+];

@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { MantineProvider } from "@mantine/core";
+import { MemoryRouter } from "react-router";
 import { describe, expect, it, jest } from "@jest/globals";
 import type { Mock } from "jest-mock";
 import Rasseportrait from "../Rasseportrait";
@@ -59,9 +60,13 @@ import {
 } from "../../../stores/breeds";
 import { useAmplitude } from "../../../hooks/useAmplitude";
 
-// Test helper to render with MantineProvider
+// Test helper to render with MantineProvider and Router
 const renderWithMantine = (component: React.ReactElement) => {
-  return render(<MantineProvider>{component}</MantineProvider>);
+  return render(
+    <MemoryRouter>
+      <MantineProvider>{component}</MantineProvider>
+    </MemoryRouter>
+  );
 };
 
 describe("Rasseportrait Page", () => {
