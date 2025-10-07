@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.19.0](https://github.com/hurrtz/rasseportrait/compare/v2.18.0...v2.19.0) (2025-10-07)
+
+
+### Features
+
+* implement lazy loading for breed cards to improve mobile performance ([f324f32](https://github.com/hurrtz/rasseportrait/commit/f324f326f6d4a34e27521a2d6e3f604153bd3af3))
+
+
+### Bug Fixes
+
+* eliminate act() warnings in BreedSearch tests ([d6bd975](https://github.com/hurrtz/rasseportrait/commit/d6bd97568ab6492436c473d31d3fbcd7f7ac02e1))
+* prevent breed cards from reloading after search clear ([087f7ba](https://github.com/hurrtz/rasseportrait/commit/087f7ba0acec14b7225693ed880a0c0532a956d2))
+* resolve Jest test failures with import.meta and react-player ([d7aef68](https://github.com/hurrtz/rasseportrait/commit/d7aef68a1c01a829bcf238efaeeb5568cb09f4c1))
+
 ## [2.18.0](https://github.com/hurrtz/rasseportrait/compare/v2.17.0...v2.18.0) (2025-10-05)
 
 
