@@ -7,9 +7,21 @@ const LEVELS: Record<LogLevel, number> = {
   error: 40,
 };
 
-const DEFAULT_LEVEL: LogLevel =
-  (import.meta.env.VITE_LOG_LEVEL as LogLevel) ??
-  (import.meta.env.DEV ? "debug" : "warn");
+// Use process.env for Jest compatibility
+const getDefaultLevel = (): LogLevel => {
+  // In test environment
+  if (typeof process !== 'undefined' && process.env.NODE_ENV === 'test') {
+    return 'warn'; // Less verbose in tests
+  }
+  // In development environment
+  if (typeof process !== 'undefined' && process.env.NODE_ENV === 'development') {
+    return 'debug';
+  }
+  // In production or other environments
+  return 'warn';
+};
+
+const DEFAULT_LEVEL: LogLevel = getDefaultLevel();
 
 const prefixArgs = (scope?: string, args: unknown[] = []) =>
   scope ? [`[${scope}]`, ...args] : args;

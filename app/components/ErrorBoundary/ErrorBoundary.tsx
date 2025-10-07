@@ -28,7 +28,8 @@ class ErrorBoundary extends Component<Props, State> {
     logger.error("ErrorBoundary caught an error:", error, errorInfo);
 
     // Track error with analytics if available (production only)
-    if (typeof window !== "undefined" && !import.meta.env.DEV) {
+    const isDev = process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test';
+    if (typeof window !== "undefined" && !isDev) {
       try {
         import("@amplitude/analytics-browser").then(({ track }) => {
           track("Error Boundary Caught", {
@@ -68,7 +69,7 @@ class ErrorBoundary extends Component<Props, State> {
             <Text size="sm">
               An unexpected error occurred. Please try refreshing the page.
             </Text>
-            {import.meta.env.DEV && this.state.error && (
+            {(process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') && this.state.error && (
               <details>
                 <summary>Error Details (Development)</summary>
                 <pre style={{ fontSize: "12px", overflow: "auto" }}>
