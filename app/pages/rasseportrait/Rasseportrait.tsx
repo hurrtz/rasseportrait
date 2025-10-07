@@ -83,7 +83,8 @@ const Rasseportrait = () => {
       breedName: selectedBreedData?.details.public[0],
       modalOpenDuration: Date.now(), // This could be improved with actual duration tracking
     });
-    setSelectedBreed(undefined);
+    
+    // Close modal first
     closeModal();
     
     // Remove breed parameter from URL without affecting scroll position
@@ -92,6 +93,11 @@ const Rasseportrait = () => {
       newParams.delete('breed');
       return newParams;
     }, { replace: true, preventScrollReset: true });
+    
+    // Clear the selected breed after a short delay to allow modal to close
+    setTimeout(() => {
+      setSelectedBreed(undefined);
+    }, 0);
   }, [allBreeds, selectedBreedId, track, setSelectedBreed, closeModal, setSearchParams]);
 
   // Initialize breeds on mount
@@ -130,11 +136,10 @@ const Rasseportrait = () => {
           return newParams;
         }, { replace: true, preventScrollReset: true });
       }
-    } else if (selectedBreedId) {
-      // URL has no breed parameter but we have a selected breed, clear it
-      setSelectedBreed(undefined);
     }
-  }, [searchParams, initialized, allBreeds, selectedBreedId, setSelectedBreed, setSearchParams]);
+    // Remove the else clause that was clearing selectedBreedId when URL has no breed parameter
+    // This prevents the race condition when closing the modal
+  }, [searchParams, initialized, allBreeds, setSelectedBreed, setSearchParams]);
 
   // Log performance metrics when breeds are loaded
   useEffect(() => {
