@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, act } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { MantineProvider } from "@mantine/core";
 import BreedSearch from "../BreedSearch";
@@ -30,7 +30,9 @@ describe("BreedSearch", () => {
   });
 
   afterEach(() => {
-    jest.runOnlyPendingTimers();
+    act(() => {
+      jest.runOnlyPendingTimers();
+    });
     jest.useRealTimers();
   });
 
@@ -112,7 +114,9 @@ describe("BreedSearch", () => {
       renderWithProvider(<BreedSearch />);
 
       // Clear initial mount call
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
       });
@@ -127,7 +131,9 @@ describe("BreedSearch", () => {
       expect(mockSetSearch).not.toHaveBeenCalled();
 
       // Fast-forward time by 300ms
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       // Now it should have been called
       await waitFor(() => {
@@ -139,12 +145,23 @@ describe("BreedSearch", () => {
       const user = userEvent.setup({ delay: null });
       renderWithProvider(<BreedSearch />);
 
+      // Clear initial mount call
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
+      await waitFor(() => {
+        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
+      });
+      mockSetSearch.mockClear();
+
       const input = screen.getByRole("searchbox");
 
       await user.type(input, "Test");
 
       // Fast-forward
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledTimes(1);
@@ -156,7 +173,9 @@ describe("BreedSearch", () => {
       renderWithProvider(<BreedSearch />);
 
       // Clear initial mount call
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
       });
@@ -168,18 +187,24 @@ describe("BreedSearch", () => {
       await user.type(input, "G");
 
       // Wait 200ms (not enough to trigger)
-      jest.advanceTimersByTime(200);
+      act(() => {
+        jest.advanceTimersByTime(200);
+      });
       expect(mockSetSearch).not.toHaveBeenCalled();
 
       // Type another character (should reset timer)
       await user.type(input, "o");
 
       // Wait another 200ms (still not 300ms since last input)
-      jest.advanceTimersByTime(200);
+      act(() => {
+        jest.advanceTimersByTime(200);
+      });
       expect(mockSetSearch).not.toHaveBeenCalled();
 
       // Wait remaining 100ms
-      jest.advanceTimersByTime(100);
+      act(() => {
+        jest.advanceTimersByTime(100);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "Go" });
@@ -194,7 +219,9 @@ describe("BreedSearch", () => {
 
       // Type something
       await user.type(input, "Test");
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "Test" });
@@ -204,7 +231,9 @@ describe("BreedSearch", () => {
 
       // Clear the input
       await user.clear(input);
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
@@ -220,7 +249,9 @@ describe("BreedSearch", () => {
       const input = screen.getByRole("searchbox");
       await user.type(input, "Gol");
 
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "Gol" });
@@ -234,7 +265,9 @@ describe("BreedSearch", () => {
       const input = screen.getByRole("searchbox");
       await user.type(input, "111");
 
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "111" });
@@ -246,7 +279,9 @@ describe("BreedSearch", () => {
       renderWithProvider(<BreedSearch />);
 
       // Clear initial mount call
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
       });
@@ -258,7 +293,9 @@ describe("BreedSearch", () => {
       await user.type(input, "Golden Retriever");
 
       // Only advance timer once after all typing
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({
@@ -278,7 +315,9 @@ describe("BreedSearch", () => {
       const input = screen.getByRole("searchbox");
       await user.type(input, "  Golden  ");
 
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "  Golden  " });
@@ -292,7 +331,9 @@ describe("BreedSearch", () => {
       const input = screen.getByRole("searchbox");
       await user.type(input, "   ");
 
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: "   " });
@@ -307,7 +348,9 @@ describe("BreedSearch", () => {
       const input = screen.getByRole("searchbox");
       await user.type(input, longString);
 
-      jest.advanceTimersByTime(300);
+      act(() => {
+        jest.advanceTimersByTime(300);
+      });
 
       await waitFor(() => {
         expect(mockSetSearch).toHaveBeenCalledWith({ needle: longString });
