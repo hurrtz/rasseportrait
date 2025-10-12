@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.20.0](https://github.com/hurrtz/rasseportrait/compare/v2.19.0...v2.20.0) (2025-10-12)
+
+
+### Features
+
+* add URL parameter support for selected breed ([d3bf875](https://github.com/hurrtz/rasseportrait/commit/d3bf875457f02ef4a1b29fc912ba5ee455909d5a))
+* hash breed ids so that urls become nicer ([8e1d4b5](https://github.com/hurrtz/rasseportrait/commit/8e1d4b51f76f577f23665d39034405d4abc2f941))
+
+
+### Bug Fixes
+
+* prevent 'Breed not found' error when closing modal ([f462631](https://github.com/hurrtz/rasseportrait/commit/f462631e8e2a504615f500ff066f54c1beb2d632))
+
 ## [2.19.0](https://github.com/hurrtz/rasseportrait/compare/v2.18.0...v2.19.0) (2025-10-07)
 
 
