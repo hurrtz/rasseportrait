@@ -36,9 +36,12 @@ const MediaItem = ({
   // Check if this breed has video capability
   const hasVideo = breedId && isDetailView && breed?.details?.hasVideo;
 
+  // Use originalId for file paths (fallback to breedId if not available)
+  const pathId = breed?.originalId || breedId;
+
   // Generate video path based on variant
   const videoPath = hasVideo
-    ? `illustrations/breeds/${breedId}/video${currentVariant ? `_${currentVariant}` : ""}.mp4`
+    ? `illustrations/breeds/${pathId}/video${currentVariant ? `_${currentVariant}` : ""}.mp4`
     : "";
 
   // Use different layouts based on whether video is available

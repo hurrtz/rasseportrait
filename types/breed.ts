@@ -58,6 +58,7 @@ interface BreedDetails {
 
 export interface Breed {
   id: number | string;
+  originalId?: number | string;  // Original ID before hashing (for image paths, etc.)
   details: BreedDetails;
   classification: {
     fci: FCI | undefined;

@@ -12,8 +12,21 @@ export const useImagePaths = ({
   isDetailView,
   isVideo,
 }: UseImagePathsProps) => {
-  const { details } = useBreed(id)!;
+  const breed = useBreed(id);
   const variantNames = useBreedVariantNames(id);
+  
+  // Safety check if breed is not found
+  if (!breed) {
+    console.warn(`Breed not found for ID: ${id}`);
+    return {
+      images: [],
+      isGrouped: false,
+      isVideo,
+      isDetailView,
+    };
+  }
+  
+  const { details } = breed;
   const isGrouped = details.isGrouped;
 
   const PATH = "illustrations";

@@ -32,13 +32,16 @@ export const getBreedVariantNames = (breeds: Breed[], id: Breed["id"]) => {
     ? breeds.filter((b) => b.details.groupAs === breed.details.groupAs)
     : [breed];
 
-  return targetBreeds.flatMap(({ id, details }) => {
-    if (details.variants) {
-      return details.variants.map(({ internal }) => ({
-        id,
+  return targetBreeds.flatMap((breed) => {
+    // Use originalId for image paths, fallback to id if originalId doesn't exist
+    const imageId = breed.originalId || breed.id;
+    
+    if (breed.details.variants) {
+      return breed.details.variants.map(({ internal }) => ({
+        id: imageId,
         variant: internal,
       }));
     }
-    return [{ id, variant: "" }];
+    return [{ id: imageId, variant: "" }];
   });
 };

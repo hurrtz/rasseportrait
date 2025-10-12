@@ -5,6 +5,7 @@ import { type Breed } from "../../types/breed";
 import { getBreedVariantNames } from "./utils";
 import { sortBreeds } from "../pages/rasseportrait/utils";
 import { logger } from "~/utils/logger";
+import { generateBreedHashes } from "~/utils/generateBreedHash";
 import {
   BREEDS_STORE_NAME,
   DEFAULT_SORT_BY,
@@ -68,125 +69,145 @@ const useBreedsStore = create<State>()(
       (set) => ({
         ...initialState,
         actions: {
-        initialize: async () => {
-          const state = useBreedsStore.getState();
-          if (state.initialized || state.loading) return;
+          initialize: async () => {
+            const state = useBreedsStore.getState();
+            if (state.initialized || state.loading) return;
 
-          set({ loading: true, error: null }, undefined, "initialize:start");
+            set({ loading: true, error: null }, undefined, "initialize:start");
 
-          try {
-            // Import breed data
-            const breedsModule = await import("../../db/breeds");
-            const breedsDB = breedsModule.default;
-            const breeds = Object.values(breedsDB) as Breed[];
+            try {
+              // Import breed data
+              const breedsModule = await import("../../db/breeds");
+              const breedsDB = breedsModule.default;
+              const breeds = Object.values(breedsDB) as Breed[];
 
-            if (!breeds.length) {
-              throw new Error(ERROR_NO_BREEDS_FOUND);
+              if (!breeds.length) {
+                throw new Error(ERROR_NO_BREEDS_FOUND);
+              }
+
+              logger.info(`Loaded ${breeds.length} breeds from database`);
+
+              // Use existing actions to set data
+              const { setRawBreeds, setBreeds } =
+                useBreedsStore.getState().actions;
+              setRawBreeds(breeds);
+
+              // Filter and merge breeds (logic from Rasseportrait page)
+              const { mergeGroupedBreeds } = await import(
+                "../pages/rasseportrait/utils"
+              );
+              const singleBreeds = breeds.filter(
+                (breed) => !breed.details.groupAs,
+              );
+              const mergedBreeds = mergeGroupedBreeds(breeds);
+              const allBreeds = [...singleBreeds, ...mergedBreeds];
+
+              // Generate unique hashes for all breed IDs
+              const hashMap = generateBreedHashes(allBreeds);
+
+              // Transform breed IDs to 4-character hashes
+              const breedsWithHashes = allBreeds.map((breed) => {
+                const hash = hashMap.get(breed.id);
+                if (!hash) {
+                  logger.warn(
+                    `No hash generated for breed ${breed.id}, using original ID`,
+                  );
+                  return breed;
+                }
+                return {
+                  ...breed,
+                  originalId: breed.id, // Keep original ID for reference (e.g., for image paths)
+                  id: hash,
+                };
+              });
+
+              setBreeds(breedsWithHashes);
+
+              set(
+                { initialized: true, loading: false },
+                undefined,
+                "initialize:success",
+              );
+            } catch (e) {
+              const error = e instanceof Error ? e.message : ERROR_UNKNOWN;
+              logger.error("Failed to initialize breeds:", e);
+              set(
+                { error, loading: false, initialized: false },
+                undefined,
+                "initialize:error",
+              );
             }
-
-            logger.info(`Loaded ${breeds.length} breeds from database`);
-
-            // Use existing actions to set data
-            const { setRawBreeds, setBreeds } =
-              useBreedsStore.getState().actions;
-            setRawBreeds(breeds);
-
-            // Filter and merge breeds (logic from Rasseportrait page)
-            const { mergeGroupedBreeds } = await import(
-              "../pages/rasseportrait/utils"
-            );
-            const singleBreeds = breeds.filter(
-              (breed) => !breed.details.groupAs,
-            );
-            const mergedBreeds = mergeGroupedBreeds(breeds);
-            const allBreeds = [...singleBreeds, ...mergedBreeds];
-
-            setBreeds(allBreeds);
-
+          },
+          setRawBreeds: (breeds: Breed[]) =>
+            set({ rawBreeds: breeds }, undefined, "setRawBreeds"),
+          setBreeds: (breeds: Breed[]) =>
+            set({ breeds }, undefined, "setBreeds"),
+          setBreed: (newBreed: Breed) =>
             set(
-              { initialized: true, loading: false },
+              (state) => ({
+                breeds: state.breeds.map((breed) =>
+                  breed.id === newBreed.id ? newBreed : breed,
+                ),
+              }),
               undefined,
-              "initialize:success",
-            );
-          } catch (e) {
-            const error = e instanceof Error ? e.message : ERROR_UNKNOWN;
-            logger.error("Failed to initialize breeds:", e);
+              "setBreed",
+            ),
+          addBreed: (breed: Breed) =>
             set(
-              { error, loading: false, initialized: false },
+              (state) => ({ breeds: [...state.breeds, breed] }),
               undefined,
-              "initialize:error",
-            );
-          }
-        },
-        setRawBreeds: (breeds: Breed[]) =>
-          set({ rawBreeds: breeds }, undefined, "setRawBreeds"),
-        setBreeds: (breeds: Breed[]) => set({ breeds }, undefined, "setBreeds"),
-        setBreed: (newBreed: Breed) =>
-          set(
-            (state) => ({
-              breeds: state.breeds.map((breed) =>
-                breed.id === newBreed.id ? newBreed : breed,
-              ),
-            }),
-            undefined,
-            "setBreed",
-          ),
-        addBreed: (breed: Breed) =>
-          set(
-            (state) => ({ breeds: [...state.breeds, breed] }),
-            undefined,
-            "addBreed",
-          ),
-        setSelectedBreed: (id?: Breed["id"]) =>
-          set({ selectedBreed: id }, undefined, "setSelectedBreed"),
-        setSearch: ({ needle, results }: Search) =>
-          set(
-            (state) => ({
-              search: {
-                needle:
-                  needle === null
-                    ? initialState.search.needle
-                    : (needle ?? state.search.needle),
-                results:
-                  results === null
-                    ? initialState.search.results
-                    : (results ?? state.search.results),
+              "addBreed",
+            ),
+          setSelectedBreed: (id?: Breed["id"]) =>
+            set({ selectedBreed: id }, undefined, "setSelectedBreed"),
+          setSearch: ({ needle, results }: Search) =>
+            set(
+              (state) => ({
+                search: {
+                  needle:
+                    needle === null
+                      ? initialState.search.needle
+                      : (needle ?? state.search.needle),
+                  results:
+                    results === null
+                      ? initialState.search.results
+                      : (results ?? state.search.results),
+                },
+              }),
+              undefined,
+              "setSearch",
+            ),
+          setSort: ({
+            sortBy,
+            sortOrder,
+          }: {
+            sortBy: "name" | "fci" | "airDate";
+            sortOrder: "asc" | "desc";
+          }) =>
+            set(
+              (state) => ({
+                sortBy,
+                sortOrder:
+                  state.sortBy === sortBy
+                    ? state.sortOrder === "asc"
+                      ? "desc"
+                      : "asc"
+                    : sortOrder,
+              }),
+              undefined,
+              "setSort",
+            ),
+          resetSort: () =>
+            set(
+              {
+                sortBy: DEFAULT_SORT_BY,
+                sortOrder: DEFAULT_SORT_ORDER,
               },
-            }),
-            undefined,
-            "setSearch",
-          ),
-        setSort: ({
-          sortBy,
-          sortOrder,
-        }: {
-          sortBy: "name" | "fci" | "airDate";
-          sortOrder: "asc" | "desc";
-        }) =>
-          set(
-            (state) => ({
-              sortBy,
-              sortOrder:
-                state.sortBy === sortBy
-                  ? state.sortOrder === "asc"
-                    ? "desc"
-                    : "asc"
-                  : sortOrder,
-            }),
-            undefined,
-            "setSort",
-          ),
-        resetSort: () =>
-          set(
-            {
-              sortBy: DEFAULT_SORT_BY,
-              sortOrder: DEFAULT_SORT_ORDER,
-            },
-            undefined,
-            "resetSort",
-          ),
-      },
-    }),
+              undefined,
+              "resetSort",
+            ),
+        },
+      }),
       {
         name: "rasseportrait-sort-settings",
         partialize: (state) => ({
@@ -194,18 +215,21 @@ const useBreedsStore = create<State>()(
           sortOrder: state.sortOrder,
         }),
         version: 1,
-        storage: typeof window !== "undefined" ? {
-          getItem: (name) => {
-            const item = localStorage.getItem(name);
-            return item ? JSON.parse(item) : null;
-          },
-          setItem: (name, value) => {
-            localStorage.setItem(name, JSON.stringify(value));
-          },
-          removeItem: (name) => {
-            localStorage.removeItem(name);
-          },
-        } : undefined,
+        storage:
+          typeof window !== "undefined"
+            ? {
+                getItem: (name) => {
+                  const item = localStorage.getItem(name);
+                  return item ? JSON.parse(item) : null;
+                },
+                setItem: (name, value) => {
+                  localStorage.setItem(name, JSON.stringify(value));
+                },
+                removeItem: (name) => {
+                  localStorage.removeItem(name);
+                },
+              }
+            : undefined,
       },
     ),
     {
