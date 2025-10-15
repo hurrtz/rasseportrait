@@ -79,6 +79,7 @@ import IrishTerrier from "./139";
 import IrishWaterSpaniel from "./124";
 import IrishWolfhound from "./160";
 import Jaemthund from "./42";
+import JapaneseChin from "./206";
 import JapaneseSpitz from "./262";
 import KarelianBearDog from "./48";
 import Kokoni from "./special_8";
@@ -235,6 +236,7 @@ export default {
   IrishWaterSpaniel,
   IrishWolfhound,
   Jaemthund,
+  JapaneseChin,
   JapaneseSpitz,
   KarelianBearDog,
   Kokoni,
