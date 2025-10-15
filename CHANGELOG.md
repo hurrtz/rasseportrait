@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.21.0](https://github.com/hurrtz/rasseportrait/compare/v2.20.0...v2.21.0) (2025-10-15)
+
+
+### Features
+
+* add Japanese Chin ([0352608](https://github.com/hurrtz/rasseportrait/commit/03526084228bc31d607c961f850ef25c3393cd80))
+
 ## [2.20.0](https://github.com/hurrtz/rasseportrait/compare/v2.19.0...v2.20.0) (2025-10-12)
 
 
