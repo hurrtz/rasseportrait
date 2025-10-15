@@ -5,6 +5,7 @@ export default {
   details: {
     internal: "australian_shepherd",
     public: ["Australian Shepherd", "Australischer Schäferhund"],
+    hasVideo: true,
   },
   classification: {
     fci: {
