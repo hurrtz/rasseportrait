@@ -57,6 +57,7 @@ export default {
         ],
       },
     ],
+    hasVideo: true,
   },
   classification: {
     fci: {
