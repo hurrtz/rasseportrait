@@ -1,6 +1,6 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
+export default {
   id: 169,
   details: {
     internal: "fox_terrier_wire",
@@ -74,6 +74,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/fox-terrier-drahthaar",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

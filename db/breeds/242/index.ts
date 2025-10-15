@@ -1,6 +1,6 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
+export default {
   id: 268,
   details: {
     internal: "grey_norwegian_elkhound",
@@ -54,6 +54,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/norwegischer-elchhund-schwarz",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

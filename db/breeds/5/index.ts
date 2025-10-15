@@ -1,6 +1,6 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
+export default {
   id: 5,
   details: {
     internal: "english_cocker_spaniel",
@@ -52,6 +52,4 @@ const breed: Breed = {
       url: "https://www.martinruetter.com/rassekunde/english-cocker-spaniel",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

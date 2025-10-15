@@ -1,6 +1,6 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
+export default {
   id: 14,
   details: {
     internal: "swedish_cattle_dog",
@@ -54,6 +54,4 @@ const breed: Breed = {
       url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/vaestgoetaspets",
     },
   ],
-};
-
-export default breed;
+} satisfies Breed;

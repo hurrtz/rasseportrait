@@ -1,6 +1,6 @@
 import type { Breed } from "../../../types/breed";
 
-const breed: Breed = {
+export default {
   id: 15,
   details: {
     internal: "belgian_shepherd",
@@ -87,6 +87,4 @@ const breed: Breed = {
     },
   ],
   recognitions: ["VDH"],
-};
-
-export default breed;
+} satisfies Breed;
