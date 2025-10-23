@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.22.0](https://github.com/hurrtz/rasseportrait/compare/v2.21.0...v2.22.0) (2025-10-23)
+
+
+### Features
+
+* add Segugio Maremmano ([ed2f492](https://github.com/hurrtz/rasseportrait/commit/ed2f492cf17da115bdc80af423e146416ffc94eb))
+
 ## [2.21.0](https://github.com/hurrtz/rasseportrait/compare/v2.20.0...v2.21.0) (2025-10-15)
 
 
