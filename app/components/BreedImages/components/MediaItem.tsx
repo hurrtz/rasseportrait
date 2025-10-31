@@ -34,10 +34,18 @@ const MediaItem = ({
   const currentVariant = extractVariantFromPath(src);
 
   // Check if this breed has video capability
-  const hasVideo = breedId && isDetailView && breed?.details?.hasVideo;
+  // For grouped breeds, check the variant-level hasVideo flag
+  const variant = currentVariant
+    ? breed?.details?.variants?.find((v) => v.internal === currentVariant)
+    : undefined;
+  const hasVideo =
+    breedId &&
+    isDetailView &&
+    (breed?.details?.hasVideo || variant?.hasVideo);
 
-  // Use originalId for file paths (fallback to breedId if not available)
-  const pathId = breed?.originalId || breedId;
+  // For grouped breeds, use the variant's FCI standard number as the path ID
+  // For non-grouped breeds, use originalId or breedId
+  const pathId = variant?.fci?.standardNumber || breed?.originalId || breedId;
 
   // Generate video path based on variant
   const videoPath = hasVideo
