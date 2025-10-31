@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.24.0](https://github.com/hurrtz/rasseportrait/compare/v2.23.0...v2.24.0) (2025-10-31)
+
+
+### Bug Fixes
+
+* make grouped breeds become searchable ([c918bfa](https://github.com/hurrtz/rasseportrait/commit/c918bfa2a7a470848200a429ffe27b7ce986e904))
+
 ## [2.23.0](https://github.com/hurrtz/rasseportrait/compare/v2.22.0...v2.23.0) (2025-10-31)
 
 
