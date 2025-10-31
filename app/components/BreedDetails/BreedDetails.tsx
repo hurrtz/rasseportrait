@@ -55,19 +55,10 @@ const BreedDetails = () => {
   };
 
   const getPodcastEpisodes = () => {
-    const episodes: Breed["podcast"] = [];
-
-    selectedBreed.podcast.forEach((episode) => {
-      episode.sources.forEach((source) => {
-        let sources = episode.sources;
-        sources = [source];
-        episode.sources = sources;
-
-        episodes.push({ ...episode });
-      });
-    });
-
-    return episodes;
+    // For grouped breeds, use the podcast data from the active variant
+    // For regular breeds, use the breed's podcast data
+    const podcastData = selectedBreed.details.variants?.[activeSlide]?.podcast ?? selectedBreed.podcast;
+    return podcastData;
   };
 
   const podcastEpisodes = getPodcastEpisodes();

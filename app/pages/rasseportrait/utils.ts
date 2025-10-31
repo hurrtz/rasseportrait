@@ -68,6 +68,7 @@ export const mergeGroupedBreeds = (breeds: Breed[]): Breed[] => {
         ...variant,
         fci: breed.classification.fci,
         ...(breed.details.hasVideo && { hasVideo: breed.details.hasVideo }),
+        podcast: breed.podcast,
       }));
 
       mergedBreed.details.variants!.push(...variants);

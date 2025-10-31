@@ -44,6 +44,7 @@ export interface Variant {
   furtherReading?: FurtherReading[];
   fci?: FCI;
   hasVideo?: boolean;
+  podcast?: Podcast[];
 }
 
 interface BreedDetails {
