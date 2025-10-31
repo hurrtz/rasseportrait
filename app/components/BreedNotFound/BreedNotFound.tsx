@@ -6,7 +6,6 @@ import {
   Text,
   Space,
   AspectRatio,
-  Divider,
   Highlight,
   Center,
 } from "@mantine/core";
@@ -28,7 +27,7 @@ export const BreedNotFound = ({ needle }: { needle: string }) => {
         >
           <Section>
             <Image
-              src="illustrations/general_purpose/not_found.jpeg"
+              src="illustrations/general_purpose/not_found_illustration.jpeg"
               alt="Breed not found"
               h={320}
             />
@@ -59,13 +58,6 @@ export const BreedNotFound = ({ needle }: { needle: string }) => {
           <Text size="sm">
             Bitte ändere deine Suche, oder lösche alles, damit du wieder alle
             Rassen siehst.
-          </Text>
-
-          <Divider my={16} />
-
-          <Text size="sm" c="dimmed">
-            Pro Tipp: Diese Sucheingabe noch mehr zu erweitern, wird nicht
-            helfen 😉
           </Text>
         </Card>
       </AspectRatio>
