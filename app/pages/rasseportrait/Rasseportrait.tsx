@@ -26,11 +26,9 @@ import { logger } from "~/utils/logger";
 const fuseOptions = {
   keys: [
     "classification.fci.standardNumber",
-    "details.variants[0].fci.standardNumber",
-    "details.internal",
+    "details.variants.public",
+    "details.variants.fci.standardNumber",
     "details.public",
-    "variants[0].internal",
-    "variants[0].public",
   ],
   shouldSort: true,
   ignoreLocation: true,
