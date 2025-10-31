@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.23.0](https://github.com/hurrtz/rasseportrait/compare/v2.22.0...v2.23.0) (2025-10-31)
+
+
+### Features
+
+* add Jack Russell Terrier ([4d7900e](https://github.com/hurrtz/rasseportrait/commit/4d7900ec0b6cd8d74a2ff18c5070a3df6feda110))
+* multiple podcast are presented in the breed details ([ed98e04](https://github.com/hurrtz/rasseportrait/commit/ed98e04a2f16253dd65fe69473a87fb816b27f08))
+
+
+### Bug Fixes
+
+* enable videos for grouped breeds ([333dd1a](https://github.com/hurrtz/rasseportrait/commit/333dd1a9d16ceba724184b4b794e2a8da9342ae4))
+
 ## [2.22.0](https://github.com/hurrtz/rasseportrait/compare/v2.21.0...v2.22.0) (2025-10-23)
 
 
