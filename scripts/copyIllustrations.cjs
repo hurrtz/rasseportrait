@@ -72,3 +72,17 @@ const BREEDS_DESTINATION_FOLDER = path.join(
 );
 
 processImages(BREEDS_SOURCE_FOLDER, BREEDS_DESTINATION_FOLDER);
+
+const GENERAL_PURPOSE_SOURCE_FOLDER = path.join(
+  __dirname,
+  "../db/general_purpose",
+);
+const GENERAL_PURPOSE_DESTINATION_FOLDER = path.join(
+  __dirname,
+  "../public/illustrations/general_purpose",
+);
+
+processImages(
+  GENERAL_PURPOSE_SOURCE_FOLDER,
+  GENERAL_PURPOSE_DESTINATION_FOLDER,
+);

@@ -1,5 +1,10 @@
-import React, { useCallback, type ChangeEvent, useState } from "react";
-import { Input } from "@mantine/core";
+import React, {
+  useCallback,
+  useState,
+  useEffect,
+  type ChangeEvent,
+} from "react";
+import { Input, CloseButton } from "@mantine/core";
 import "./styles.css";
 import { useBreedActions } from "../../stores/breeds";
 import { useDebounce } from "../../hooks/useDebounce";
@@ -25,7 +30,7 @@ const BreedSearch = () => {
   }, []);
 
   // Update search when debounced value changes
-  React.useEffect(() => {
+  useEffect(() => {
     setSearch({ needle: debouncedSearchValue });
   }, [debouncedSearchValue, setSearch]);
 
@@ -38,6 +43,14 @@ const BreedSearch = () => {
         size="lg"
         aria-label={SEARCH_ARIA_LABEL}
         role={ROLE_SEARCHBOX}
+        rightSectionPointerEvents="all"
+        rightSection={
+          <CloseButton
+            aria-label="Clear input"
+            onClick={() => setSearchValue("")}
+            style={{ display: searchValue ? undefined : "none" }}
+          />
+        }
       />
     </>
   );

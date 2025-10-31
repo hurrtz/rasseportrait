@@ -15,6 +15,7 @@ import {
 } from "../../stores/breeds";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "../../components/Modal";
+import BreedNotFound from "~/components/BreedNotFound";
 import { BreedSearch } from "../../components/BreedSearch";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import type { Breed } from "types/breed";
@@ -260,6 +261,8 @@ const Rasseportrait = () => {
     <>
       <Stack>
         <BreedSearch />
+        {needle && !breeds.length && <BreedNotFound needle={needle} />}
+
         <SimpleGrid
           cols={{ base: 1, sm: 3, lg: 4, xl: 5 }}
           spacing={{ base: 8 }}
