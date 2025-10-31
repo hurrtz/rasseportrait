@@ -78,6 +78,7 @@ import IrishSoftCoatedWheatenTerrier from "./40";
 import IrishTerrier from "./139";
 import IrishWaterSpaniel from "./124";
 import IrishWolfhound from "./160";
+import JackRussellTerrier from "./345";
 import Jaemthund from "./42";
 import JapaneseChin from "./206";
 import JapaneseSpitz from "./262";
@@ -236,6 +237,7 @@ export default {
   IrishTerrier,
   IrishWaterSpaniel,
   IrishWolfhound,
+  JackRussellTerrier,
   Jaemthund,
   JapaneseChin,
   JapaneseSpitz,

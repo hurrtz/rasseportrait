@@ -5,6 +5,8 @@ export default {
   details: {
     internal: "parson_russell_terrier",
     public: ["Parson Russell Terrier"],
+    hasVideo: true,
+    groupAs: "Russell Terriers",
   },
   classification: {
     fci: {
@@ -28,6 +30,25 @@ export default {
         public: "Rasseportrait",
         timecode: 2081,
         airDate: "2023-08-03",
+        isGuessable: true,
+        isGuessedCorrectly: true,
+        guessedBy: "mr",
+      },
+    },
+    {
+      number: 233,
+      episode: "Verliebt, verplant, verhunzt.",
+      sources: [
+        {
+          url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/233-verliebt-verplant-verhunzt-88ikzih1g9717",
+          type: "audio",
+        },
+      ],
+      meta: {
+        internal: "other",
+        public: "Bezug zu Jack Russell Terrier",
+        timecode: 1790,
+        airDate: "2025-10-29",
         isGuessable: true,
         isGuessedCorrectly: true,
         guessedBy: "mr",
