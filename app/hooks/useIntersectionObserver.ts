@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type RefObject } from 'react';
+import { useEffect, useRef, useState, type RefObject } from "react";
 
 interface UseIntersectionObserverOptions {
   threshold?: number | number[];
@@ -10,14 +10,16 @@ interface UseIntersectionObserverOptions {
 /**
  * Hook to detect when an element is visible in the viewport using IntersectionObserver.
  * Triggers loading before element is fully visible to optimize perceived performance.
- * 
+ *
  * @param options Configuration options for IntersectionObserver
  * @returns Tuple of [ref to attach to element, boolean indicating if visible]
  */
-export function useIntersectionObserver<T extends HTMLElement = HTMLDivElement>({
+export function useIntersectionObserver<
+  T extends HTMLElement = HTMLDivElement,
+>({
   threshold = 0,
   root = null,
-  rootMargin = '100px', // Load 100px before element enters viewport
+  rootMargin = "100px", // Load 100px before element enters viewport
   freezeOnceVisible = true, // Once visible, keep it visible to prevent re-renders
 }: UseIntersectionObserverOptions = {}): [RefObject<T | null>, boolean] {
   const elementRef = useRef<T>(null);
@@ -26,11 +28,11 @@ export function useIntersectionObserver<T extends HTMLElement = HTMLDivElement>(
 
   useEffect(() => {
     const element = elementRef.current;
-    
+
     // Check if IntersectionObserver is supported
-    if (!element || typeof IntersectionObserver === 'undefined') {
+    if (!element || typeof IntersectionObserver === "undefined") {
       // If not supported, show element immediately
-      if (typeof IntersectionObserver === 'undefined') {
+      if (typeof IntersectionObserver === "undefined") {
         setIsIntersecting(true);
       }
       return;
@@ -56,7 +58,7 @@ export function useIntersectionObserver<T extends HTMLElement = HTMLDivElement>(
         threshold,
         root,
         rootMargin,
-      }
+      },
     );
 
     observer.observe(element);
@@ -72,23 +74,25 @@ export function useIntersectionObserver<T extends HTMLElement = HTMLDivElement>(
 /**
  * Alternative hook that accepts an external ref if component already has one
  */
-export function useIntersectionObserverWithRef<T extends HTMLElement = HTMLDivElement>(
+export function useIntersectionObserverWithRef<
+  T extends HTMLElement = HTMLDivElement,
+>(
   ref: RefObject<T>,
   {
     threshold = 0,
     root = null,
-    rootMargin = '100px',
+    rootMargin = "100px",
     freezeOnceVisible = true,
-  }: UseIntersectionObserverOptions = {}
+  }: UseIntersectionObserverOptions = {},
 ): boolean {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const frozenRef = useRef(false);
 
   useEffect(() => {
     const element = ref.current;
-    
-    if (!element || typeof IntersectionObserver === 'undefined') {
-      if (typeof IntersectionObserver === 'undefined') {
+
+    if (!element || typeof IntersectionObserver === "undefined") {
+      if (typeof IntersectionObserver === "undefined") {
         setIsIntersecting(true);
       }
       return;
@@ -112,7 +116,7 @@ export function useIntersectionObserverWithRef<T extends HTMLElement = HTMLDivEl
         threshold,
         root,
         rootMargin,
-      }
+      },
     );
 
     observer.observe(element);

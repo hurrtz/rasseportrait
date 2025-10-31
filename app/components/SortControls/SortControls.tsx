@@ -1,5 +1,10 @@
 import { Button, Group, Select } from "@mantine/core";
-import { useBreedActions, useSortBy, useSortOrder, useResetSort } from "~/stores/breeds";
+import {
+  useBreedActions,
+  useSortBy,
+  useSortOrder,
+  useResetSort,
+} from "~/stores/breeds";
 
 export const SortControls = () => {
   const { setSort } = useBreedActions();
@@ -39,21 +44,12 @@ export const SortControls = () => {
           { value: "airDate", label: "Air Date" },
         ]}
       />
-      
-      <Button 
-        variant="light" 
-        onClick={toggleSortOrder}
-        size="sm"
-      >
+
+      <Button variant="light" onClick={toggleSortOrder} size="sm">
         Order: {sortOrder === "asc" ? "↑ Ascending" : "↓ Descending"}
       </Button>
-      
-      <Button 
-        variant="outline" 
-        color="gray" 
-        onClick={handleReset}
-        size="sm"
-      >
+
+      <Button variant="outline" color="gray" onClick={handleReset} size="sm">
         Reset Sort
       </Button>
     </Group>

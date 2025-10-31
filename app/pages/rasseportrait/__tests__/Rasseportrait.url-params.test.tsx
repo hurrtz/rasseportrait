@@ -76,7 +76,7 @@ describe("Rasseportrait URL Parameters", () => {
             <Route path="*" element={<Rasseportrait />} />
           </Routes>
         </MemoryRouter>
-      </MantineProvider>
+      </MantineProvider>,
     );
   };
 
@@ -134,10 +134,10 @@ describe("Rasseportrait URL Parameters", () => {
 
     it("should remove breed parameter from URL when modal is closed", async () => {
       const user = userEvent.setup();
-      
+
       // Start with a selected breed
       (breedsStore.useSelectedBreedId as jest.Mock).mockReturnValue(2);
-      
+
       renderWithRouter(["/?breed=2"]);
 
       // Verify modal is open
@@ -182,10 +182,14 @@ describe("Rasseportrait URL Parameters", () => {
           furtherReading: [],
         },
       ];
-      
-      (breedsStore.useAllBreeds as jest.Mock).mockReturnValue(breedsWithStringId);
+
+      (breedsStore.useAllBreeds as jest.Mock).mockReturnValue(
+        breedsWithStringId,
+      );
       (breedsStore.useBreeds as jest.Mock).mockReturnValue(breedsWithStringId);
-      (breedsStore.useSelectedBreedId as jest.Mock).mockReturnValue("special-breed");
+      (breedsStore.useSelectedBreedId as jest.Mock).mockReturnValue(
+        "special-breed",
+      );
 
       renderWithRouter(["/?breed=special-breed"]);
 
@@ -216,7 +220,7 @@ describe("Rasseportrait URL Parameters", () => {
     it("should handle closing modal via modal close button properly", async () => {
       jest.useFakeTimers();
       const user = userEvent.setup({ delay: null });
-      
+
       // Start with a selected breed
       (breedsStore.useSelectedBreedId as jest.Mock).mockReturnValue(2);
 

@@ -36,9 +36,7 @@ export default {
     "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/styleMock.js",
     "^react-player$": "<rootDir>/__mocks__/react-player.js",
   },
-  transformIgnorePatterns: [
-    "node_modules/(?!(@amplitude|react-player)/)"
-  ],
+  transformIgnorePatterns: ["node_modules/(?!(@amplitude|react-player)/)"],
   testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
   testPathIgnorePatterns: [
     "/node_modules/",

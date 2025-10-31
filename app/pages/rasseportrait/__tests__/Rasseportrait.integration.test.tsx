@@ -121,7 +121,7 @@ const renderWithProviders = (component: React.ReactElement) => {
   return render(
     <MemoryRouter>
       <MantineProvider>{component}</MantineProvider>
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 };
 
@@ -504,9 +504,9 @@ describe("Rasseportrait Integration Tests", () => {
       expect(mockSetSelectedBreed.mock.calls.length).toBeGreaterThanOrEqual(3);
       // Verify the breeds were selected in order
       const calls = mockSetSelectedBreed.mock.calls;
-      expect(calls.some(call => call[0] === 1)).toBe(true);
-      expect(calls.some(call => call[0] === 2)).toBe(true);
-      expect(calls.some(call => call[0] === 3)).toBe(true);
+      expect(calls.some((call) => call[0] === 1)).toBe(true);
+      expect(calls.some((call) => call[0] === 2)).toBe(true);
+      expect(calls.some((call) => call[0] === 3)).toBe(true);
     });
   });
 });

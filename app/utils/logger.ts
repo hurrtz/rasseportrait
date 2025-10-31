@@ -10,15 +10,18 @@ const LEVELS: Record<LogLevel, number> = {
 // Use process.env for Jest compatibility
 const getDefaultLevel = (): LogLevel => {
   // In test environment
-  if (typeof process !== 'undefined' && process.env.NODE_ENV === 'test') {
-    return 'warn'; // Less verbose in tests
+  if (typeof process !== "undefined" && process.env.NODE_ENV === "test") {
+    return "warn"; // Less verbose in tests
   }
   // In development environment
-  if (typeof process !== 'undefined' && process.env.NODE_ENV === 'development') {
-    return 'debug';
+  if (
+    typeof process !== "undefined" &&
+    process.env.NODE_ENV === "development"
+  ) {
+    return "debug";
   }
   // In production or other environments
-  return 'warn';
+  return "warn";
 };
 
 const DEFAULT_LEVEL: LogLevel = getDefaultLevel();

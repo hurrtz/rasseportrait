@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card, Skeleton, Group } from '@mantine/core';
-import './styles.css';
+import React from "react";
+import { Card, Skeleton, Group } from "@mantine/core";
+import "./styles.css";
 
 /**
  * Skeleton placeholder for BreedCard component
@@ -11,18 +11,10 @@ const BreedCardSkeleton = () => {
   const { Section } = Card;
 
   return (
-    <Card
-      shadow="xl"
-      padding="xl"
-      radius="md"
-      className="breed-card-skeleton"
-    >
+    <Card shadow="xl" padding="xl" radius="md" className="breed-card-skeleton">
       <Section className="card-section-skeleton">
         {/* Image skeleton with 1:1 aspect ratio to match breed images */}
-        <Skeleton 
-          className="image-skeleton"
-          radius="md"
-        />
+        <Skeleton className="image-skeleton" radius="md" />
       </Section>
 
       {/* Name/text skeleton positioned absolutely like real breed name */}

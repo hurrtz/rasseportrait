@@ -39,9 +39,7 @@ const MediaItem = ({
     ? breed?.details?.variants?.find((v) => v.internal === currentVariant)
     : undefined;
   const hasVideo =
-    breedId &&
-    isDetailView &&
-    (breed?.details?.hasVideo || variant?.hasVideo);
+    breedId && isDetailView && (breed?.details?.hasVideo || variant?.hasVideo);
 
   // For grouped breeds, use the variant's FCI standard number as the path ID
   // For non-grouped breeds, use originalId or breedId

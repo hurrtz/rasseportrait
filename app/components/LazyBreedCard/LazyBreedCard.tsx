@@ -1,9 +1,9 @@
-import React, { memo } from 'react';
-import type { Breed } from '../../../types/breed';
-import BreedCard from '../BreedCard/BreedCard';
-import BreedCardSkeleton from '../BreedCardSkeleton';
-import { useLazyBreedCard } from '../../hooks/useBreedVisibility';
-import { logger } from '~/utils/logger';
+import React, { memo } from "react";
+import type { Breed } from "../../../types/breed";
+import BreedCard from "../BreedCard/BreedCard";
+import BreedCardSkeleton from "../BreedCardSkeleton";
+import { useLazyBreedCard } from "../../hooks/useBreedVisibility";
+import { logger } from "~/utils/logger";
 
 interface LazyBreedCardProps {
   id: Breed["id"];
@@ -18,7 +18,7 @@ interface LazyBreedCardProps {
  *
  * Uses IntersectionObserver to detect visibility with 100px margin
  * to start loading before card enters viewport for smoother UX.
- * 
+ *
  * Maintains global visibility state so cards remain loaded even
  * after search filtering/clearing operations.
  */

@@ -35,7 +35,7 @@ export const getBreedVariantNames = (breeds: Breed[], id: Breed["id"]) => {
   return targetBreeds.flatMap((breed) => {
     // Use originalId for image paths, fallback to id if originalId doesn't exist
     const imageId = breed.originalId || breed.id;
-    
+
     if (breed.details.variants) {
       return breed.details.variants.map(({ internal }) => ({
         id: imageId,

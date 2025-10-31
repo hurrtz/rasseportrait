@@ -14,7 +14,7 @@ export const useImagePaths = ({
 }: UseImagePathsProps) => {
   const breed = useBreed(id);
   const variantNames = useBreedVariantNames(id);
-  
+
   // Safety check if breed is not found
   if (!breed) {
     console.warn(`Breed not found for ID: ${id}`);
@@ -25,7 +25,7 @@ export const useImagePaths = ({
       isDetailView,
     };
   }
-  
+
   const { details } = breed;
   const isGrouped = details.isGrouped;
 

@@ -65,7 +65,7 @@ const renderWithMantine = (component: React.ReactElement) => {
   return render(
     <MemoryRouter>
       <MantineProvider>{component}</MantineProvider>
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 };
 

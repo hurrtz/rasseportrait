@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
-import type { Breed } from '../../types/breed';
+import { useEffect, useRef, useState, useCallback } from "react";
+import type { Breed } from "../../types/breed";
 
 // Global set to track which breed IDs have been loaded
 // This persists across component unmounts/remounts during search
@@ -10,11 +10,9 @@ const loadedBreedIds = new Set<string | number>();
  * Once a breed card has been loaded, it stays loaded even after
  * search filtering and clearing.
  */
-export function useBreedVisibility(breedId: Breed['id']) {
+export function useBreedVisibility(breedId: Breed["id"]) {
   // Check if this breed was already loaded previously
-  const [isLoaded, setIsLoaded] = useState(() => 
-    loadedBreedIds.has(breedId)
-  );
+  const [isLoaded, setIsLoaded] = useState(() => loadedBreedIds.has(breedId));
 
   const markAsLoaded = useCallback(() => {
     if (!loadedBreedIds.has(breedId)) {
@@ -31,7 +29,7 @@ export function useBreedVisibility(breedId: Breed['id']) {
  * Ensures that once a breed card is loaded, it remains loaded even
  * after search operations.
  */
-export function useLazyBreedCard(breedId: Breed['id']) {
+export function useLazyBreedCard(breedId: Breed["id"]) {
   const { isLoaded, markAsLoaded } = useBreedVisibility(breedId);
   const elementRef = useRef<HTMLDivElement>(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -41,10 +39,10 @@ export function useLazyBreedCard(breedId: Breed['id']) {
     if (isLoaded) return;
 
     const element = elementRef.current;
-    
+
     // Fallback for browsers without IntersectionObserver
-    if (!element || typeof IntersectionObserver === 'undefined') {
-      if (typeof IntersectionObserver === 'undefined') {
+    if (!element || typeof IntersectionObserver === "undefined") {
+      if (typeof IntersectionObserver === "undefined") {
         markAsLoaded();
       }
       return;
@@ -60,8 +58,8 @@ export function useLazyBreedCard(breedId: Breed['id']) {
       },
       {
         threshold: 0,
-        rootMargin: '100px', // Load 100px before entering viewport
-      }
+        rootMargin: "100px", // Load 100px before entering viewport
+      },
     );
 
     observer.observe(element);

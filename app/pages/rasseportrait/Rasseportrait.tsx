@@ -51,26 +51,39 @@ const Rasseportrait = () => {
 
   const fuse = useMemo(() => new Fuse(allBreeds, fuseOptions), [allBreeds]);
 
-  const onSelectBreed = useCallback((id: Breed["id"]) => {
-    const selectedBreedData = allBreeds.find((breed) => breed.id === id);
-    track("Breed Selected", {
-      breedId: String(id),
-      breedName: selectedBreedData?.details.public[0],
-      hasVariants: (selectedBreedData?.details.variants?.length || 0) > 1,
-      variantCount: selectedBreedData?.details.variants?.length || 0,
-      searchActive: !!needle,
-      searchTerm: needle || null,
-      totalBreedsVisible: breeds.length,
-    });
-    setSelectedBreed(id);
-    
-    // Update URL with breed parameter without affecting scroll position
-    setSearchParams((prev) => {
-      const newParams = new URLSearchParams(prev);
-      newParams.set('breed', String(id));
-      return newParams;
-    }, { replace: true, preventScrollReset: true });
-  }, [allBreeds, track, needle, breeds.length, setSelectedBreed, setSearchParams]);
+  const onSelectBreed = useCallback(
+    (id: Breed["id"]) => {
+      const selectedBreedData = allBreeds.find((breed) => breed.id === id);
+      track("Breed Selected", {
+        breedId: String(id),
+        breedName: selectedBreedData?.details.public[0],
+        hasVariants: (selectedBreedData?.details.variants?.length || 0) > 1,
+        variantCount: selectedBreedData?.details.variants?.length || 0,
+        searchActive: !!needle,
+        searchTerm: needle || null,
+        totalBreedsVisible: breeds.length,
+      });
+      setSelectedBreed(id);
+
+      // Update URL with breed parameter without affecting scroll position
+      setSearchParams(
+        (prev) => {
+          const newParams = new URLSearchParams(prev);
+          newParams.set("breed", String(id));
+          return newParams;
+        },
+        { replace: true, preventScrollReset: true },
+      );
+    },
+    [
+      allBreeds,
+      track,
+      needle,
+      breeds.length,
+      setSelectedBreed,
+      setSearchParams,
+    ],
+  );
 
   const onCloseModal = useCallback(() => {
     const selectedBreedData = allBreeds.find(
@@ -81,29 +94,39 @@ const Rasseportrait = () => {
       breedName: selectedBreedData?.details.public[0],
       modalOpenDuration: Date.now(), // This could be improved with actual duration tracking
     });
-    
+
     // Close modal first
     closeModal();
-    
+
     // Remove breed parameter from URL without affecting scroll position
-    setSearchParams((prev) => {
-      const newParams = new URLSearchParams(prev);
-      newParams.delete('breed');
-      return newParams;
-    }, { replace: true, preventScrollReset: true });
-    
+    setSearchParams(
+      (prev) => {
+        const newParams = new URLSearchParams(prev);
+        newParams.delete("breed");
+        return newParams;
+      },
+      { replace: true, preventScrollReset: true },
+    );
+
     // Clear the selected breed after a short delay to allow modal to close
     setTimeout(() => {
       setSelectedBreed(undefined);
     }, 0);
-  }, [allBreeds, selectedBreedId, track, setSelectedBreed, closeModal, setSearchParams]);
+  }, [
+    allBreeds,
+    selectedBreedId,
+    track,
+    setSelectedBreed,
+    closeModal,
+    setSearchParams,
+  ]);
 
   // Initialize breeds on mount
   useEffect(() => {
     if (!initialized && !loading) {
       // Mark performance for initial render
-      if (typeof window !== 'undefined' && window.performance?.mark) {
-        window.performance.mark('breeds-init-start');
+      if (typeof window !== "undefined" && window.performance?.mark) {
+        window.performance.mark("breeds-init-start");
       }
       initialize();
     }
@@ -112,15 +135,17 @@ const Rasseportrait = () => {
   // Handle breed parameter from URL on initial load and URL changes
   useEffect(() => {
     if (!initialized) return;
-    
-    const breedParam = searchParams.get('breed');
+
+    const breedParam = searchParams.get("breed");
     if (breedParam) {
       // Convert to number if it's a numeric ID, otherwise keep as string
-      const breedId = /^\d+$/.test(breedParam) ? parseInt(breedParam, 10) : breedParam;
-      
+      const breedId = /^\d+$/.test(breedParam)
+        ? parseInt(breedParam, 10)
+        : breedParam;
+
       // Check if this breed exists
-      const breedExists = allBreeds.some(breed => breed.id === breedId);
-      
+      const breedExists = allBreeds.some((breed) => breed.id === breedId);
+
       if (breedExists && breedId !== selectedBreedId) {
         // Set the selected breed without updating URL (since it's already there)
         setSelectedBreed(breedId);
@@ -128,11 +153,14 @@ const Rasseportrait = () => {
       } else if (!breedExists && breedParam) {
         // Invalid breed ID in URL, remove it
         logger.warn(`Invalid breed ID in URL: ${breedParam}`);
-        setSearchParams((prev) => {
-          const newParams = new URLSearchParams(prev);
-          newParams.delete('breed');
-          return newParams;
-        }, { replace: true, preventScrollReset: true });
+        setSearchParams(
+          (prev) => {
+            const newParams = new URLSearchParams(prev);
+            newParams.delete("breed");
+            return newParams;
+          },
+          { replace: true, preventScrollReset: true },
+        );
       }
     }
     // Remove the else clause that was clearing selectedBreedId when URL has no breed parameter
@@ -141,22 +169,36 @@ const Rasseportrait = () => {
 
   // Log performance metrics when breeds are loaded
   useEffect(() => {
-    if (initialized && typeof window !== 'undefined' && window.performance?.mark) {
-      window.performance.mark('breeds-init-end');
+    if (
+      initialized &&
+      typeof window !== "undefined" &&
+      window.performance?.mark
+    ) {
+      window.performance.mark("breeds-init-end");
       try {
         if (window.performance?.measure) {
-          window.performance.measure('breeds-initialization', 'breeds-init-start', 'breeds-init-end');
-          const measure = window.performance.getEntriesByName?.('breeds-initialization')[0];
+          window.performance.measure(
+            "breeds-initialization",
+            "breeds-init-start",
+            "breeds-init-end",
+          );
+          const measure = window.performance.getEntriesByName?.(
+            "breeds-initialization",
+          )[0];
           if (measure) {
-            logger.info(`Breeds initialization took ${measure.duration.toFixed(2)}ms`);
+            logger.info(
+              `Breeds initialization took ${measure.duration.toFixed(2)}ms`,
+            );
           }
         }
       } catch (e) {
         // Ignore if marks don't exist
       }
-      
+
       // Log total breeds count for performance tracking
-      logger.info(`Total breeds loaded: ${allBreeds.length}, Visible: ${breeds.length}`);
+      logger.info(
+        `Total breeds loaded: ${allBreeds.length}, Visible: ${breeds.length}`,
+      );
     }
   }, [initialized, allBreeds.length, breeds.length]);
 

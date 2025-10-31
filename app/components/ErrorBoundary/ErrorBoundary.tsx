@@ -28,7 +28,8 @@ class ErrorBoundary extends Component<Props, State> {
     logger.error("ErrorBoundary caught an error:", error, errorInfo);
 
     // Track error with analytics if available (production only)
-    const isDev = process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test';
+    const isDev =
+      process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
     if (typeof window !== "undefined" && !isDev) {
       try {
         import("@amplitude/analytics-browser").then(({ track }) => {
@@ -69,16 +70,18 @@ class ErrorBoundary extends Component<Props, State> {
             <Text size="sm">
               An unexpected error occurred. Please try refreshing the page.
             </Text>
-            {(process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') && this.state.error && (
-              <details>
-                <summary>Error Details (Development)</summary>
-                <pre style={{ fontSize: "12px", overflow: "auto" }}>
-                  {this.state.error.message}
-                  {"\n"}
-                  {this.state.error.stack}
-                </pre>
-              </details>
-            )}
+            {(process.env.NODE_ENV === "development" ||
+              process.env.NODE_ENV === "test") &&
+              this.state.error && (
+                <details>
+                  <summary>Error Details (Development)</summary>
+                  <pre style={{ fontSize: "12px", overflow: "auto" }}>
+                    {this.state.error.message}
+                    {"\n"}
+                    {this.state.error.stack}
+                  </pre>
+                </details>
+              )}
             <Button
               leftSection={<IconRefresh size={16} />}
               onClick={this.handleRetry}

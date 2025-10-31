@@ -57,7 +57,9 @@ const BreedDetails = () => {
   const getPodcastEpisodes = () => {
     // For grouped breeds, use the podcast data from the active variant
     // For regular breeds, use the breed's podcast data
-    const podcastData = selectedBreed.details.variants?.[activeSlide]?.podcast ?? selectedBreed.podcast;
+    const podcastData =
+      selectedBreed.details.variants?.[activeSlide]?.podcast ??
+      selectedBreed.podcast;
     return podcastData;
   };
 

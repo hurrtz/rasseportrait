@@ -1,7 +1,7 @@
 require("@testing-library/jest-dom");
 
 // Add TextEncoder/TextDecoder for React Router v7
-const { TextEncoder, TextDecoder } = require('util');
+const { TextEncoder, TextDecoder } = require("util");
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
