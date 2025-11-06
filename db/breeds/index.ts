@@ -2,6 +2,7 @@ import Affenpinscher from "./186";
 import Akita from "./255";
 import AlaskanMalamute from "./243";
 import AmericanAkita from "./344";
+import AmericanCockerSpaniel from "./167";
 import AmericanStaffordshireTerrier from "./286";
 import AppenzellerSennenhund from "./46";
 import AustralianKelpie from "./293";
@@ -161,6 +162,7 @@ export default {
   Akita,
   AlaskanMalamute,
   AmericanAkita,
+  AmericanCockerSpaniel,
   AmericanStaffordshireTerrier,
   AppenzellerSennenhund,
   AustralianKelpie,
