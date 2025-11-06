@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 import {
   Group,
@@ -14,6 +14,8 @@ import {
   useAllBreeds,
   useBreedActions,
   useRawBreeds,
+  useInitialized,
+  useLoading,
 } from "../../stores/breeds";
 import {
   AMOUNT_OF_BREEDS_TOTAL,
@@ -27,11 +29,20 @@ import { Modal } from "../../components/Modal";
 const Statistics = () => {
   const rawBreeds = useRawBreeds();
   const allBreeds = useAllBreeds();
+  const initialized = useInitialized();
+  const loading = useLoading();
 
   const [isModalOpen, { open: openModal, close: closeModal }] =
     useDisclosure(false);
 
-  const { setSelectedBreed } = useBreedActions();
+  const { setSelectedBreed, initialize } = useBreedActions();
+
+  // Initialize breeds on mount if not already initialized
+  useEffect(() => {
+    if (!initialized && !loading) {
+      initialize();
+    }
+  }, [initialized, loading, initialize]);
 
   const {
     amountBreedsPresented,
@@ -47,10 +58,21 @@ const Statistics = () => {
   } = getStatistics(rawBreeds);
 
   const handleBreedClick = (id: Breed["id"]) => {
-    const selectedBreedData = allBreeds.find((breed) => breed.id === id);
+    // Find the breed in rawBreeds (which has original IDs)
+    const rawBreed = rawBreeds.find((breed) => breed.id === id);
 
-    if (selectedBreedData) {
-      setSelectedBreed(id);
+    if (!rawBreed) {
+      return;
+    }
+
+    // Find the corresponding breed in allBreeds (which has hashed IDs)
+    // Match by internal name since that's the most reliable identifier
+    const hashedBreed = allBreeds.find(
+      (breed) => breed.details.internal === rawBreed.details.internal,
+    );
+
+    if (hashedBreed) {
+      setSelectedBreed(hashedBreed.id);
       openModal();
     }
   };
@@ -206,7 +228,17 @@ const Statistics = () => {
                     c="dimmed"
                     fw={300}
                     style={{ fontVariant: "small-caps" }}
-                    onClick={() => handleBreedClick(336)}
+                    onClick={() => {
+                      // Find "Spanischer Wasserhund" by internal name
+                      const spanischerWasserhund = rawBreeds.find(
+                        (breed) =>
+                          breed.details.internal === "spanish_water_dog",
+                      );
+
+                      if (spanischerWasserhund) {
+                        handleBreedClick(spanischerWasserhund.id);
+                      }
+                    }}
                   >
                     Spanischer Wasserhund
                   </Button>
