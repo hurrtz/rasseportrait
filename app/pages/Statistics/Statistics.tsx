@@ -208,7 +208,7 @@ const Statistics = () => {
                     style={{ fontVariant: "small-caps" }}
                     onClick={() => handleBreedClick(336)}
                   >
-                    Span. Wasserhund
+                    Spanischer Wasserhund
                   </Button>
                   )
                 </Text>
