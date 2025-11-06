@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.27.0](https://github.com/hurrtz/rasseportrait/compare/v2.26.0...v2.27.0) (2025-11-06)
+
+
+### Features
+
+* add American Cocker Spaniel ([10441e6](https://github.com/hurrtz/rasseportrait/commit/10441e62ac1739eabcb058271decdd9e791ba8ca))
+
+
+### Bug Fixes
+
+* breeds in statistics clickable again, page can be loaded on its own ([7d80d30](https://github.com/hurrtz/rasseportrait/commit/7d80d3094a4dad61723d52768cb1ccc5d7700cbd))
+
 ## [2.26.0](https://github.com/hurrtz/rasseportrait/compare/v2.25.0...v2.26.0) (2025-10-31)
 
 ## [2.25.0](https://github.com/hurrtz/rasseportrait/compare/v2.24.0...v2.25.0) (2025-10-31)
