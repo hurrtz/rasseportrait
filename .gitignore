@@ -5,3 +5,19 @@
 /.react-router/
 
 /coverage
+
+# Exclude source media files from breed folders (keep TypeScript)
+# These are high-resolution source files from Midjourney
+db/breeds/*/illustration.png
+db/breeds/*/illustration.jpg
+db/breeds/*/illustration.jpeg
+db/breeds/*/video.mp4
+db/breeds/*/video.mov
+db/breeds/**/*.png
+db/breeds/**/*.jpg
+db/breeds/**/*.jpeg
+db/breeds/**/*.mp4
+db/breeds/**/*.mov
+
+# Keep TypeScript breed definition files
+!db/breeds/**/index.ts
