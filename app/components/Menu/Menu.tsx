@@ -5,6 +5,7 @@ import {
   IconSortAscending,
   IconSortDescending,
   IconDog,
+  IconBook,
 } from "@tabler/icons-react";
 import { useAmplitude } from "../../hooks/useAmplitude";
 import { useNavigate, useLocation } from "react-router";
@@ -84,6 +85,22 @@ export default () => {
           })}
         >
           Rasseportrait
+        </Item>
+        <Item
+          leftSection={<IconBook />}
+          onClick={() => {
+            track("Hundewissen Clicked", {
+              source: "header_menu",
+              page: window.location.pathname,
+            });
+            navigate("/hundewissen");
+            toggleMenuButton();
+          }}
+          className={clsx({
+            [classes.active]: pathname === "/hundewissen",
+          })}
+        >
+          Hundewissen
         </Item>
         <Item
           leftSection={<IconChartBar />}
