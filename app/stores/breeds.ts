@@ -76,16 +76,24 @@ const useBreedsStore = create<State>()(
             set({ loading: true, error: null }, undefined, "initialize:start");
 
             try {
-              // Import breed data
-              const breedsModule = await import("../../db/breeds");
-              const breedsDB = breedsModule.default;
-              const breeds = Object.values(breedsDB) as Breed[];
+              // Fetch breed data from compiled JSON
+              const response = await fetch("/rasseportrait/data/breeds.json");
+              if (!response.ok) {
+                throw new Error(
+                  `Failed to load breeds: ${response.status} ${response.statusText}`,
+                );
+              }
 
-              if (!breeds.length) {
+              const data = await response.json();
+              const breeds = data.breeds as Breed[];
+
+              if (!breeds || !breeds.length) {
                 throw new Error(ERROR_NO_BREEDS_FOUND);
               }
 
-              logger.info(`Loaded ${breeds.length} breeds from database`);
+              logger.info(
+                `Loaded ${breeds.length} breeds from JSON (compiled: ${data.meta?.compiled})`,
+              );
 
               // Use existing actions to set data
               const { setRawBreeds, setBreeds } =
