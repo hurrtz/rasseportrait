@@ -6,13 +6,9 @@ export default {
     internal: "tierversuche",
     public: "Tierversuche",
   },
-  description:
-    "Informationen über Tierversuche mit Hunden - ein ethisch umstrittenes Thema mit vielen Facetten.",
   content: `
-# Tierversuche
-
-Tierversuche sind Experimente an und mit lebenden Tieren. Bei Hunden werden solche Versuche in 
-verschiedenen Bereichen durchgeführt, etwa in der medizinischen Forschung oder bei der Entwicklung 
+Tierversuche sind Experimente an und mit lebenden Tieren. Bei Hunden werden solche Versuche in
+verschiedenen Bereichen durchgeführt, etwa in der medizinischen Forschung oder bei der Entwicklung
 von Medikamenten. Das Thema ist ethisch hochsensibel und bedarf einer differenzierten Betrachtung.
 
 Hier werden in Zukunft detaillierte Informationen zu diesem wichtigen Thema zusammengetragen.

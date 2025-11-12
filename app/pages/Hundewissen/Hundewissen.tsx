@@ -1,13 +1,5 @@
 import { useEffect, useCallback, useMemo } from "react";
-import {
-  Container,
-  Title,
-  Grid,
-  Stack,
-  Alert,
-  Box,
-  Paper,
-} from "@mantine/core";
+import { Container, Title, Grid, Alert, Tabs } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconAlertCircle } from "@tabler/icons-react";
 import { useSearchParams } from "react-router";
@@ -148,70 +140,29 @@ const Hundewissen = () => {
     );
   }
 
-  if (!topics.length) {
-    return (
-      <Container size="xl">
-        <Title order={1} mb="md">
-          Hundewissen
-        </Title>
-        <Alert
-          icon={<IconAlertCircle size={16} />}
-          title="Keine Themen gefunden"
-        >
-          Es wurden keine Wissensthemen gefunden.
-        </Alert>
-      </Container>
-    );
-  }
-
   return (
     <Container size="xl">
       <Title order={1} mb="lg">
         Hundewissen
       </Title>
 
-      <Grid gutter="lg">
-        {/* Table of Contents - Left Column on Desktop, Top on Mobile */}
-        <Grid.Col span={{ base: 12, md: 3 }}>
-          <Paper withBorder p="md" style={{ width: "250px" }}>
-            <Title order={3} mb="sm">
-              Themen
-            </Title>
-            <Stack gap="xs">
-              {topics.map((topic) => (
-                <Box
-                  key={topic.id}
-                  component="button"
-                  onClick={() => handleTopicSelect(topic.id)}
-                  style={{
-                    all: "unset",
-                    cursor: "pointer",
-                    padding: "8px 12px",
-                    borderRadius: "4px",
-                    backgroundColor:
-                      selectedTopicId === topic.id
-                        ? "var(--mantine-color-blue-light)"
-                        : "transparent",
-                    fontWeight: selectedTopicId === topic.id ? 500 : 400,
-                    transition: "background-color 0.2s",
-                  }}
-                >
-                  {topic.title.public}
-                </Box>
-              ))}
-            </Stack>
-          </Paper>
-        </Grid.Col>
+      <Tabs defaultValue={selectedTopicId} orientation="horizontal">
+        <Tabs.List grow>
+          {topics.map((topic) => (
+            <Tabs.Tab
+              value={topic.id}
+              key={topic.id}
+              onClick={() => handleTopicSelect(topic.id)}
+            >
+              {topic.title.public}
+            </Tabs.Tab>
+          ))}
+        </Tabs.List>
+      </Tabs>
 
-        {/* Content - Right Column */}
-        <Grid.Col span={{ base: 12, md: 9 }}>
-          {selectedTopic ? (
-            <KnowledgeContent topic={selectedTopic} />
-          ) : (
-            <Alert icon={<IconAlertCircle size={16} />}>
-              Bitte wählen Sie ein Thema aus der Liste.
-            </Alert>
-          )}
+      <Grid gutter="lg">
+        <Grid.Col mt="lg">
+          <KnowledgeContent topic={selectedTopic} />
         </Grid.Col>
       </Grid>
     </Container>

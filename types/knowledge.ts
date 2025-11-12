@@ -6,7 +6,6 @@ export interface KnowledgeTopic {
     internal: string;
     public: string;
   };
-  description: string;
   content: string;
   podcast: Podcast[];
   furtherReading: FurtherReading[];

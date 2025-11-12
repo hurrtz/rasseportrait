@@ -51,13 +51,7 @@ async function compileKnowledgeData() {
 
         if (!topic.title || !topic.title.internal || !topic.title.public) {
           throw new Error(
-            `Topic ${topic.id} missing required 'title' fields (internal, public)`
-          );
-        }
-
-        if (!topic.description) {
-          throw new Error(
-            `Topic ${topic.id} missing required 'description' field`
+            `Topic ${topic.id} missing required 'title' fields (internal, public)`,
           );
         }
 
@@ -99,7 +93,7 @@ async function compileKnowledgeData() {
     // Write to file (minified for production)
     await fs.writeFile(
       "public/data/knowledge.json",
-      JSON.stringify(output, null, 0)
+      JSON.stringify(output, null, 0),
     );
 
     const duration = ((Date.now() - stats.startTime) / 1000).toFixed(2);

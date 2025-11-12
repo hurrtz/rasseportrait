@@ -6,14 +6,10 @@ export default {
     internal: "silvester",
     public: "Silvester",
   },
-  description:
-    "Tipps und Informationen für einen stressfreien Jahreswechsel mit Hund trotz Feuerwerk und Böllern.",
   content: `
-# Silvester mit Hund
-
-Silvester ist für viele Hunde eine besonders stressige Zeit. Der Lärm von Feuerwerk und Böllern 
-kann bei Hunden Angst und Panik auslösen. Es gibt verschiedene Strategien und Maßnahmen, mit denen 
-man seinem Hund helfen kann, diese Zeit besser zu überstehen. Dazu gehören Vorbereitung, 
+Silvester ist für viele Hunde eine besonders stressige Zeit. Der Lärm von Feuerwerk und Böllern
+kann bei Hunden Angst und Panik auslösen. Es gibt verschiedene Strategien und Maßnahmen, mit denen
+man seinem Hund helfen kann, diese Zeit besser zu überstehen. Dazu gehören Vorbereitung,
 Desensibilisierung, die richtige Umgebung und im Bedarfsfall auch tierärztliche Unterstützung.
 
 Hier werden in Zukunft detaillierte Informationen zu diesem wichtigen Thema zusammengetragen.
