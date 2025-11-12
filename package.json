@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "build:data": "node scripts/compileBreedData.cjs",
+    "build:knowledge": "node scripts/compileKnowledgeData.cjs",
     "build:images": "node scripts/copyIllustrations.cjs",
-    "prebuild": "npm run build:data && npm run build:images",
+    "prebuild": "npm run build:data && npm run build:knowledge && npm run build:images",
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
