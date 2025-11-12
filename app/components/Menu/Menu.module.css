@@ -1,3 +1,6 @@
-.active {
-  background-color: #c8cad3;
+.burgerWrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
 }

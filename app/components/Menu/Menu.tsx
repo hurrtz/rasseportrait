@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import {
   IconChartBar,
   IconSectionSign,
@@ -9,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 import { useAmplitude } from "../../hooks/useAmplitude";
 import { useNavigate, useLocation } from "react-router";
-import { Burger, Menu } from "@mantine/core";
+import { Burger, Drawer, NavLink, Stack, Text, Portal } from "@mantine/core";
 import classes from "./Menu.module.css";
 import { useDisclosure } from "@mantine/hooks";
 import { useBreedActions, useSortBy, useSortOrder } from "../../stores/breeds";
@@ -30,111 +30,124 @@ export default () => {
   const sortBy = useSortBy();
   const sortOrder = useSortOrder();
   const { setSort } = useBreedActions();
-  const [opened, { toggle: toggleMenuButton }] = useDisclosure();
-  const { Target, Dropdown, Label, Item, Divider } = Menu;
+  const [opened, { open, close }] = useDisclosure();
 
   return (
-    <Menu shadow="md">
-      <Target>
+    <>
+      <Portal>
         <div className={classes.burgerWrapper}>
-          <Burger opened={opened} onClick={toggleMenuButton} />
+          <Burger opened={opened} onClick={opened ? close : open} />
         </div>
-      </Target>
-      <Dropdown>
-        <Label>Sortieren nach</Label>
-        {SORT_BY_OPTIONS.map(({ value, label }) => (
-          <Item
-            key={value}
+      </Portal>
+
+      <Drawer
+        opened={opened}
+        onClose={close}
+        position="right"
+        withCloseButton={false}
+      >
+        <Stack gap="xs">
+          <Text size="sm" fw="bold">
+            Sortieren nach
+          </Text>
+          {SORT_BY_OPTIONS.map(({ value, label }) => (
+            <NavLink
+              key={value}
+              label={label}
+              onClick={() => {
+                track("Sort Changed", {
+                  sortBy: value,
+                  sortOrder,
+                  previousSortBy: sortBy,
+                });
+                setSort({ sortBy: value, sortOrder });
+                close();
+              }}
+              leftSection={
+                sortBy === value && sortOrder === "asc" ? (
+                  <IconSortAscending size={20} />
+                ) : (
+                  <IconSortDescending size={20} />
+                )
+              }
+              active={value === sortBy}
+              variant="light"
+              autoContrast
+              color="orange"
+            />
+          ))}
+        </Stack>
+
+        <Stack gap="xs" mt={32}>
+          <Text size="sm" fw="bold">
+            Seiten
+          </Text>
+          <NavLink
+            label="Rasseportrait"
+            leftSection={<IconDog size={20} />}
             onClick={() => {
-              track("Sort Changed", {
-                sortBy: value,
-                sortOrder,
-                previousSortBy: sortBy,
+              track("Rasseportrait Clicked", {
+                source: "header_menu",
+                page: window.location.pathname,
               });
-              setSort({ sortBy: value, sortOrder });
-              toggleMenuButton();
+              navigate("/");
+              close();
             }}
-            leftSection={
-              sortBy === value && sortOrder === "asc" ? (
-                <IconSortAscending />
-              ) : (
-                <IconSortDescending />
-              )
-            }
-            className={clsx({
-              [classes.active]: value === sortBy,
-            })}
-          >
-            {label}
-          </Item>
-        ))}
-        <Divider />
-        <Label>Seiten</Label>
-        <Item
-          leftSection={<IconDog />}
-          onClick={() => {
-            track("Rasseportrait Clicked", {
-              source: "header_menu",
-              page: window.location.pathname,
-            });
-            navigate("/");
-            toggleMenuButton();
-          }}
-          className={clsx({
-            [classes.active]: pathname === "/",
-          })}
-        >
-          Rasseportrait
-        </Item>
-        <Item
-          leftSection={<IconBook />}
-          onClick={() => {
-            track("Hundewissen Clicked", {
-              source: "header_menu",
-              page: window.location.pathname,
-            });
-            navigate("/hundewissen");
-            toggleMenuButton();
-          }}
-          className={clsx({
-            [classes.active]: pathname === "/hundewissen",
-          })}
-        >
-          Hundewissen
-        </Item>
-        <Item
-          leftSection={<IconChartBar />}
-          onClick={() => {
-            track("Statistics Clicked", {
-              source: "header_menu",
-              page: window.location.pathname,
-            });
-            navigate("/statistiken");
-            toggleMenuButton();
-          }}
-          className={clsx({
-            [classes.active]: pathname === "/statistiken",
-          })}
-        >
-          Statistiken
-        </Item>
-        <Item
-          leftSection={<IconSectionSign />}
-          onClick={() => {
-            track("Impressum Clicked", {
-              source: "header_menu",
-              page: window.location.pathname,
-            });
-            navigate("/impressum");
-            toggleMenuButton();
-          }}
-          className={clsx({
-            [classes.active]: pathname === "/impressum",
-          })}
-        >
-          Impressum
-        </Item>
-      </Dropdown>
-    </Menu>
+            active={pathname === "/"}
+            variant="filled"
+            autoContrast
+            color="lime"
+          />
+          <NavLink
+            label="Hundewissen"
+            leftSection={<IconBook size={20} />}
+            onClick={() => {
+              track("Hundewissen Clicked", {
+                source: "header_menu",
+                page: window.location.pathname,
+              });
+              navigate("/hundewissen");
+              close();
+            }}
+            active={pathname === "/hundewissen"}
+            variant="filled"
+            autoContrast
+            color="lime"
+          />
+          <NavLink
+            label="Statistiken"
+            leftSection={<IconChartBar size={20} />}
+            onClick={() => {
+              track("Statistics Clicked", {
+                source: "header_menu",
+                page: window.location.pathname,
+              });
+              navigate("/statistiken");
+              close();
+            }}
+            active={pathname === "/statistiken"}
+            variant="filled"
+            autoContrast
+            color="lime"
+          />
+          <NavLink
+            label="Impressum"
+            leftSection={<IconSectionSign size={20} />}
+            onClick={() => {
+              track("Impressum Clicked", {
+                source: "header_menu",
+                page: window.location.pathname,
+              });
+              navigate("/impressum");
+              close();
+            }}
+            active={pathname === "/impressum"}
+            variant="filled"
+            autoContrast
+            color="lime"
+          />
+        </Stack>
+      </Drawer>
+    </>
   );
 };
