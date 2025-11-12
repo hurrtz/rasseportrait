@@ -1,6 +1,6 @@
-# WARP.md
+# Project Context for AI Assistants
 
-This file provides guidance to WARP (warp.dev) when working with code in this repository.
+This file provides guidance to AI coding assistants (Cursor, Windsurf, Warp, Cline, etc.) when working with code in this repository.
 
 ## Project Overview
 
