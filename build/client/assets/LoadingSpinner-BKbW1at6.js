@@ -1,0 +1,1 @@
+import{o as s}from"./chunk-D4RADZKF-D3RvspMY.js";import{S as i,L as n}from"./logger-CUj1w86T.js";import{T as o}from"./Text-DKFpbWKK.js";const p=({message:r="Loading...",size:e="md",color:a="blue"})=>s.jsxs(i,{align:"center",gap:"md",className:"loading-spinner",children:[s.jsx(n,{size:e,color:a}),s.jsx(o,{size:"sm",c:"dimmed",children:r})]});export{p as L};
