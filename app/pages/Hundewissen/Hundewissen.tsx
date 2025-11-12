@@ -1,21 +1,244 @@
-import { Container, Text, Title, Card, Stack } from "@mantine/core";
+import { useEffect, useCallback, useMemo } from "react";
+import {
+  Container,
+  Text,
+  Title,
+  Grid,
+  Stack,
+  Alert,
+  Box,
+  Affix,
+  Paper,
+} from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { IconAlertCircle } from "@tabler/icons-react";
+import { useSearchParams } from "react-router";
+import {
+  useKnowledgeTopics,
+  useSelectedTopicId,
+  useKnowledgeActions,
+  useKnowledgeLoading,
+  useKnowledgeError,
+  useKnowledgeInitialized,
+} from "~/stores/knowledge";
+import { KnowledgeContent } from "~/components/KnowledgeContent";
+import LoadingSpinner from "~/components/LoadingSpinner";
+import { useAmplitude } from "~/hooks/useAmplitude";
+import { logger } from "~/utils/logger";
 
 const Hundewissen = () => {
+  const topics = useKnowledgeTopics();
+  const selectedTopicId = useSelectedTopicId();
+  const loading = useKnowledgeLoading();
+  const error = useKnowledgeError();
+  const initialized = useKnowledgeInitialized();
+  const { initialize, setSelectedTopic } = useKnowledgeActions();
+  const { track } = useAmplitude();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  // Initialize knowledge data on mount
+  useEffect(() => {
+    if (!initialized && !loading) {
+      initialize();
+    }
+  }, [initialized, loading, initialize]);
+
+  // Handle topic parameter from URL
+  useEffect(() => {
+    if (!initialized) return;
+
+    const topicParam = searchParams.get("topic");
+    if (topicParam) {
+      const topicExists = topics.some((t) => t.id === topicParam);
+      if (topicExists && topicParam !== selectedTopicId) {
+        setSelectedTopic(topicParam);
+        logger.info(`Opening topic from URL parameter: ${topicParam}`);
+      } else if (!topicExists && topicParam) {
+        logger.warn(`Invalid topic ID in URL: ${topicParam}`);
+        setSearchParams(
+          (prev) => {
+            const newParams = new URLSearchParams(prev);
+            newParams.delete("topic");
+            return newParams;
+          },
+          { replace: true, preventScrollReset: true }
+        );
+      }
+    } else if (!topicParam && topics.length > 0 && !selectedTopicId) {
+      // Auto-select first topic if none selected
+      const firstTopic = topics[0];
+      setSelectedTopic(firstTopic.id);
+      setSearchParams(
+        (prev) => {
+          const newParams = new URLSearchParams(prev);
+          newParams.set("topic", firstTopic.id);
+          return newParams;
+        },
+        { replace: true, preventScrollReset: true }
+      );
+    }
+  }, [searchParams, initialized, topics, selectedTopicId, setSelectedTopic, setSearchParams]);
+
+  const handleTopicSelect = useCallback(
+    (topicId: string) => {
+      const topic = topics.find((t) => t.id === topicId);
+      if (!topic) return;
+
+      track("Knowledge Topic Selected", {
+        topicId,
+        topicTitle: topic.title.public,
+        hasPodcastEpisodes: topic.podcast.length > 0,
+        episodeCount: topic.podcast.length,
+      });
+
+      setSelectedTopic(topicId);
+      setSearchParams(
+        (prev) => {
+          const newParams = new URLSearchParams(prev);
+          newParams.set("topic", topicId);
+          return newParams;
+        },
+        { replace: true, preventScrollReset: true }
+      );
+
+      // Scroll to top on mobile
+      if (isMobile) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    },
+    [topics, track, setSelectedTopic, setSearchParams, isMobile]
+  );
+
+  const tocLinks = useMemo(
+    () =>
+      topics.map((topic) => ({
+        label: topic.title.public,
+        link: `#${topic.id}`,
+        order: 1,
+      })),
+    [topics]
+  );
+
+  const selectedTopic = useMemo(
+    () => topics.find((t) => t.id === selectedTopicId),
+    [topics, selectedTopicId]
+  );
+
+  if (loading) {
+    return (
+      <Container size="xl">
+        <LoadingSpinner message="Lade Hundewissen..." />
+      </Container>
+    );
+  }
+
+  if (error) {
+    return (
+      <Container size="xl">
+        <Alert icon={<IconAlertCircle size={16} />} title="Fehler" color="red">
+          {error}
+        </Alert>
+      </Container>
+    );
+  }
+
+  if (!topics.length) {
+    return (
+      <Container size="xl">
+        <Title order={1} mb="md">
+          Hundewissen
+        </Title>
+        <Alert icon={<IconAlertCircle size={16} />} title="Keine Themen gefunden">
+          Es wurden keine Wissensthemen gefunden.
+        </Alert>
+      </Container>
+    );
+  }
+
   return (
-    <Container size="md">
-      <Title order={1}>Hundewissen</Title>
-      <Card withBorder p="lg" mt="lg">
-        <Stack gap="md">
-          <Text>
-            Hier entsteht bald eine Sammlung von Wissenswertem rund um Hunde.
-          </Text>
-          <Text c="dimmed" size="sm">
-            Diese Seite wird zukünftig interessante Fakten, Tipps und
-            Informationen über Hunde, ihre Haltung, Erziehung und vieles mehr
-            enthalten.
-          </Text>
-        </Stack>
-      </Card>
+    <Container size="xl">
+      <Title order={1} mb="lg">
+        Hundewissen
+      </Title>
+
+      <Grid gutter="lg">
+        {/* Table of Contents - Left Column on Desktop, Top on Mobile */}
+        <Grid.Col span={{ base: 12, md: 3 }}>
+          {isMobile ? (
+            <Paper withBorder p="md" mb="md">
+              <Title order={3} mb="sm">
+                Themen
+              </Title>
+              <Stack gap="xs">
+                {topics.map((topic) => (
+                  <Box
+                    key={topic.id}
+                    component="button"
+                    onClick={() => handleTopicSelect(topic.id)}
+                    style={{
+                      all: "unset",
+                      cursor: "pointer",
+                      padding: "8px 12px",
+                      borderRadius: "4px",
+                      backgroundColor:
+                        selectedTopicId === topic.id
+                          ? "var(--mantine-color-blue-light)"
+                          : "transparent",
+                      fontWeight: selectedTopicId === topic.id ? 500 : 400,
+                      transition: "background-color 0.2s",
+                    }}
+                  >
+                    {topic.title.public}
+                  </Box>
+                ))}
+              </Stack>
+            </Paper>
+          ) : (
+            <Affix position={{ top: 80, left: 20 }}>
+              <Paper withBorder p="md" style={{ width: "250px" }}>
+                <Title order={3} mb="sm">
+                  Themen
+                </Title>
+                <Stack gap="xs">
+                  {topics.map((topic) => (
+                    <Box
+                      key={topic.id}
+                      component="button"
+                      onClick={() => handleTopicSelect(topic.id)}
+                      style={{
+                        all: "unset",
+                        cursor: "pointer",
+                        padding: "8px 12px",
+                        borderRadius: "4px",
+                        backgroundColor:
+                          selectedTopicId === topic.id
+                            ? "var(--mantine-color-blue-light)"
+                            : "transparent",
+                        fontWeight: selectedTopicId === topic.id ? 500 : 400,
+                        transition: "background-color 0.2s",
+                      }}
+                    >
+                      {topic.title.public}
+                    </Box>
+                  ))}
+                </Stack>
+              </Paper>
+            </Affix>
+          )}
+        </Grid.Col>
+
+        {/* Content - Right Column */}
+        <Grid.Col span={{ base: 12, md: 9 }}>
+          {selectedTopic ? (
+            <KnowledgeContent topic={selectedTopic} />
+          ) : (
+            <Alert icon={<IconAlertCircle size={16} />}>
+              Bitte wählen Sie ein Thema aus der Liste.
+            </Alert>
+          )}
+        </Grid.Col>
+      </Grid>
     </Container>
   );
 };
