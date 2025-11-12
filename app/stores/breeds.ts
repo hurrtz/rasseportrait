@@ -34,6 +34,7 @@ interface BreedActions {
     sortOrder: "asc" | "desc";
   }) => void;
   resetSort: () => void;
+  reset: () => void;
 }
 
 interface State {
@@ -214,6 +215,17 @@ const useBreedsStore = create<State>()(
               undefined,
               "resetSort",
             ),
+          reset: () => {
+            const currentActions = useBreedsStore.getState().actions;
+            set(
+              {
+                ...initialState,
+                actions: currentActions,
+              },
+              undefined,
+              "reset",
+            );
+          },
         },
       }),
       {
@@ -333,3 +345,6 @@ export const useResetSort = () => {
   const resetSort = useBreedsStore((state: State) => state.actions.resetSort);
   return resetSort;
 };
+
+// Export store for testing
+export default useBreedsStore;

@@ -1,6 +1,6 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, jest } from "@jest/globals";
-import {
+import useBreedsStore, {
   useAllBreeds,
   useBreed,
   useBreedActions,
@@ -173,9 +173,16 @@ jest.mock("~/utils/logger", () => ({
 
 describe("Breeds Store", () => {
   beforeEach(() => {
-    // Note: We cannot fully reset the Zustand store state between tests
-    // since it's a singleton. Tests should be written to be independent
-    // or setup their own state explicitly.
+    // Clear localStorage to prevent persisted state interference
+    if (typeof localStorage !== 'undefined') {
+      localStorage.clear();
+    }
+    
+    // Reset the Zustand store state between tests
+    const state = useBreedsStore.getState();
+    if (state?.actions?.reset) {
+      state.actions.reset();
+    }
   });
 
   describe("Initial State", () => {
