@@ -178,11 +178,26 @@ describe("Breeds Store", () => {
       localStorage.clear();
     }
     
-    // Reset the Zustand store state between tests
-    const state = useBreedsStore.getState();
-    if (state?.actions?.reset) {
-      state.actions.reset();
-    }
+    // Completely reset the Zustand store state between tests
+    // We need to call setState directly to ensure clean reset
+    const currentState = useBreedsStore.getState();
+    const currentActions = currentState.actions;
+    
+    useBreedsStore.setState({
+      rawBreeds: [],
+      breeds: [],
+      selectedBreed: undefined,
+      loading: false,
+      error: null,
+      initialized: false,
+      search: {
+        needle: "",
+        results: [],
+      },
+      sortBy: "name",
+      sortOrder: "asc",
+      actions: currentActions,
+    }, true); // true = replace state completely
   });
 
   describe("Initial State", () => {
@@ -285,33 +300,39 @@ describe("Breeds Store", () => {
 
   describe("Actions", () => {
     it("should set raw breeds", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: rawBreedsResult } = renderHook(() => useRawBreeds());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        rawBreeds: useRawBreeds(),
+      }));
 
       act(() => {
-        actionsResult.current.setRawBreeds([mockBreed1, mockBreed2]);
+        result.current.actions.setRawBreeds([mockBreed1, mockBreed2]);
       });
 
-      expect(rawBreedsResult.current).toEqual([mockBreed1, mockBreed2]);
+      expect(result.current.rawBreeds).toEqual([mockBreed1, mockBreed2]);
     });
 
     it("should set breeds", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: breedsResult } = renderHook(() => useAllBreeds());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        breeds: useAllBreeds(),
+      }));
 
       act(() => {
-        actionsResult.current.setBreeds([mockBreed1, mockBreed2]);
+        result.current.actions.setBreeds([mockBreed1, mockBreed2]);
       });
 
-      expect(breedsResult.current).toEqual([mockBreed1, mockBreed2]);
+      expect(result.current.breeds).toEqual([mockBreed1, mockBreed2]);
     });
 
     it("should update a specific breed", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: breedsResult } = renderHook(() => useAllBreeds());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        breeds: useAllBreeds(),
+      }));
 
       act(() => {
-        actionsResult.current.setBreeds([mockBreed1, mockBreed2]);
+        result.current.actions.setBreeds([mockBreed1, mockBreed2]);
       });
 
       const updatedBreed = {
@@ -320,137 +341,144 @@ describe("Breeds Store", () => {
       };
 
       act(() => {
-        actionsResult.current.setBreed(updatedBreed);
+        result.current.actions.setBreed(updatedBreed);
       });
 
-      expect(breedsResult.current[0].details.internal).toBe("updated");
-      expect(breedsResult.current[1]).toEqual(mockBreed2);
+      expect(result.current.breeds[0].details.internal).toBe("updated");
+      expect(result.current.breeds[1]).toEqual(mockBreed2);
     });
 
     it("should add a breed", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: breedsResult } = renderHook(() => useAllBreeds());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        breeds: useAllBreeds(),
+      }));
 
       act(() => {
-        actionsResult.current.setBreeds([mockBreed1]);
+        result.current.actions.setBreeds([mockBreed1]);
       });
 
       act(() => {
-        actionsResult.current.addBreed(mockBreed2);
+        result.current.actions.addBreed(mockBreed2);
       });
 
-      expect(breedsResult.current).toHaveLength(2);
-      expect(breedsResult.current[1]).toEqual(mockBreed2);
+      expect(result.current.breeds).toHaveLength(2);
+      expect(result.current.breeds[1]).toEqual(mockBreed2);
     });
 
     it("should set selected breed", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: selectedIdResult } = renderHook(() =>
-        useSelectedBreedId(),
-      );
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        selectedId: useSelectedBreedId(),
+      }));
 
       act(() => {
-        actionsResult.current.setSelectedBreed(mockBreed1.id);
+        result.current.actions.setSelectedBreed(mockBreed1.id);
       });
 
-      expect(selectedIdResult.current).toBe(mockBreed1.id);
+      expect(result.current.selectedId).toBe(mockBreed1.id);
     });
 
     it("should clear selected breed", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: selectedIdResult } = renderHook(() =>
-        useSelectedBreedId(),
-      );
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        selectedId: useSelectedBreedId(),
+      }));
 
       act(() => {
-        actionsResult.current.setSelectedBreed(mockBreed1.id);
+        result.current.actions.setSelectedBreed(mockBreed1.id);
       });
 
-      expect(selectedIdResult.current).toBe(mockBreed1.id);
+      expect(result.current.selectedId).toBe(mockBreed1.id);
 
       act(() => {
-        actionsResult.current.setSelectedBreed(undefined);
+        result.current.actions.setSelectedBreed(undefined);
       });
 
-      expect(selectedIdResult.current).toBeUndefined();
+      expect(result.current.selectedId).toBeUndefined();
     });
 
     it("should set search needle and results", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: searchResult } = renderHook(() => useSearch());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        search: useSearch(),
+      }));
 
       act(() => {
-        actionsResult.current.setSearch({ needle: "golden", results: [1, 2] });
+        result.current.actions.setSearch({ needle: "golden", results: [1, 2] });
       });
 
-      expect(searchResult.current.needle).toBe("golden");
-      expect(searchResult.current.results).toEqual([1, 2]);
+      expect(result.current.search.needle).toBe("golden");
+      expect(result.current.search.results).toEqual([1, 2]);
     });
 
     it("should reset search to initial state when passing null", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: searchResult } = renderHook(() => useSearch());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        search: useSearch(),
+      }));
 
       act(() => {
-        actionsResult.current.setSearch({ needle: "golden", results: [1, 2] });
+        result.current.actions.setSearch({ needle: "golden", results: [1, 2] });
       });
 
       act(() => {
-        actionsResult.current.setSearch({ needle: null, results: null });
+        result.current.actions.setSearch({ needle: null, results: null });
       });
 
-      expect(searchResult.current.needle).toBe("");
-      expect(searchResult.current.results).toEqual([]);
+      expect(result.current.search.needle).toBe("");
+      expect(result.current.search.results).toEqual([]);
     });
 
     it("should set sort by and order", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        sortBy: useSortBy(),
+        sortOrder: useSortOrder(),
+      }));
 
       act(() => {
-        actionsResult.current.setSort({ sortBy: "name", sortOrder: "asc" });
+        result.current.actions.setSort({ sortBy: "name", sortOrder: "asc" });
       });
 
-      const { result: sortByResult } = renderHook(() => useSortBy());
-      const { result: sortOrderResult } = renderHook(() => useSortOrder());
-
-      expect(sortByResult.current).toBe("name");
+      expect(result.current.sortBy).toBe("name");
       // Note: sortOrder may be toggled from previous state, so we check it changed
-      expect(["asc", "desc"]).toContain(sortOrderResult.current);
+      expect(["asc", "desc"]).toContain(result.current.sortOrder);
     });
 
     it("should toggle sort order when setting same sortBy", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        sortBy: useSortBy(),
+        sortOrder: useSortOrder(),
+      }));
 
       // Set initial sort
       act(() => {
-        actionsResult.current.setSort({ sortBy: "fci", sortOrder: "asc" });
+        result.current.actions.setSort({ sortBy: "fci", sortOrder: "asc" });
       });
 
-      const { result: sortByResult1 } = renderHook(() => useSortBy());
-      const { result: sortOrderResult1 } = renderHook(() => useSortOrder());
-      const firstOrder = sortOrderResult1.current;
-
-      expect(sortByResult1.current).toBe("fci");
+      const firstOrder = result.current.sortOrder;
+      expect(result.current.sortBy).toBe("fci");
 
       // Setting same sortBy should toggle order
       act(() => {
-        actionsResult.current.setSort({ sortBy: "fci", sortOrder: "asc" });
+        result.current.actions.setSort({ sortBy: "fci", sortOrder: "asc" });
       });
 
-      const { result: sortByResult2 } = renderHook(() => useSortBy());
-      const { result: sortOrderResult2 } = renderHook(() => useSortOrder());
-
-      expect(sortByResult2.current).toBe("fci");
+      expect(result.current.sortBy).toBe("fci");
       // Order should have toggled
-      expect(sortOrderResult2.current).not.toBe(firstOrder);
+      expect(result.current.sortOrder).not.toBe(firstOrder);
     });
   });
 
   describe("Selectors", () => {
     beforeEach(() => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+      }));
       act(() => {
-        actionsResult.current.setBreeds([
+        result.current.actions.setBreeds([
           mockBreed1,
           mockBreed2,
           mockBreed3,
@@ -460,30 +488,34 @@ describe("Breeds Store", () => {
     });
 
     it("useBreeds should return sorted breeds", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: breedsResult } = renderHook(() => useBreeds());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        breeds: useBreeds(),
+      }));
 
       act(() => {
-        actionsResult.current.setSort({ sortBy: "name", sortOrder: "asc" });
+        result.current.actions.setSort({ sortBy: "name", sortOrder: "asc" });
       });
 
-      expect(breedsResult.current.length).toBeGreaterThan(0);
+      expect(result.current.breeds.length).toBeGreaterThan(0);
       // Results should be sorted by name
-      const names = breedsResult.current.map((b) => b.details.public[0]);
+      const names = result.current.breeds.map((b) => b.details.public[0]);
       const sortedNames = [...names].sort();
       expect(names).toEqual(sortedNames);
     });
 
     it("useBreeds should filter by search results", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: breedsResult } = renderHook(() => useBreeds());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        breeds: useBreeds(),
+      }));
 
       act(() => {
-        actionsResult.current.setSearch({ needle: "golden", results: [1] });
+        result.current.actions.setSearch({ needle: "golden", results: [1] });
       });
 
-      expect(breedsResult.current).toHaveLength(1);
-      expect(breedsResult.current[0].id).toBe(1);
+      expect(result.current.breeds).toHaveLength(1);
+      expect(result.current.breeds[0].id).toBe(1);
     });
 
     it("useBreed should find breed by id", () => {
@@ -501,29 +533,31 @@ describe("Breeds Store", () => {
     });
 
     it("useSelectedBreed should return the selected breed", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: selectedBreedResult } = renderHook(() =>
-        useSelectedBreed(),
-      );
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        selectedBreed: useSelectedBreed(),
+      }));
 
       act(() => {
-        actionsResult.current.setSelectedBreed(mockBreed1.id);
+        result.current.actions.setSelectedBreed(mockBreed1.id);
       });
 
-      expect(selectedBreedResult.current).toBeDefined();
-      expect(selectedBreedResult.current?.id).toBe(mockBreed1.id);
+      expect(result.current.selectedBreed).toBeDefined();
+      expect(result.current.selectedBreed?.id).toBe(mockBreed1.id);
     });
 
     it("useSelectedBreed should return the selected breed or undefined", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        selectedBreed: useSelectedBreed(),
+      }));
 
       // Clear selection first
       act(() => {
-        actionsResult.current.setSelectedBreed(undefined);
+        result.current.actions.setSelectedBreed(undefined);
       });
 
-      const { result } = renderHook(() => useSelectedBreed());
-      expect(result.current).toBeUndefined();
+      expect(result.current.selectedBreed).toBeUndefined();
     });
 
     // Note: Skipping useBreedGroup test as it causes infinite loops in test environment
@@ -569,40 +603,42 @@ describe("Breeds Store", () => {
     // Note: Each test sets up its own breed list to avoid state pollution
 
     it("should sort by name in ascending order", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        breeds: useBreeds(),
+      }));
 
       // Set up test data
       act(() => {
-        actionsResult.current.setBreeds([mockBreed1, mockBreed2]);
+        result.current.actions.setBreeds([mockBreed1, mockBreed2]);
       });
-
-      const { result: breedsResult } = renderHook(() => useBreeds());
 
       act(() => {
-        actionsResult.current.setSort({ sortBy: "name", sortOrder: "asc" });
+        result.current.actions.setSort({ sortBy: "name", sortOrder: "asc" });
       });
 
-      const names = breedsResult.current.map((b) => b.details.public[0]);
+      const names = result.current.breeds.map((b) => b.details.public[0]);
       expect(
         names[0].localeCompare(names[names.length - 1]),
       ).toBeLessThanOrEqual(0);
     });
 
     it("should sort by airDate in descending order", () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        breeds: useBreeds(),
+      }));
 
       // Set up test data
       act(() => {
-        actionsResult.current.setBreeds([mockBreed1, mockBreed2]);
+        result.current.actions.setBreeds([mockBreed1, mockBreed2]);
       });
-
-      const { result: breedsResult } = renderHook(() => useBreeds());
 
       act(() => {
-        actionsResult.current.setSort({ sortBy: "airDate", sortOrder: "desc" });
+        result.current.actions.setSort({ sortBy: "airDate", sortOrder: "desc" });
       });
 
-      const dates = breedsResult.current.map((b) => b.podcast[0].meta.airDate);
+      const dates = result.current.breeds.map((b) => b.podcast[0].meta.airDate);
       // In descending order, first date should be >= last date
       // localeCompare returns positive if first > second, so we expect >= 0
       const comparison = dates[0].localeCompare(dates[dates.length - 1]);
@@ -610,22 +646,24 @@ describe("Breeds Store", () => {
     });
 
     it("should sort by FCI number when classification exists", async () => {
-      const { result: actionsResult } = renderHook(() => useBreedActions());
-      const { result: breedsResult } = renderHook(() => useBreeds());
+      const { result } = renderHook(() => ({
+        actions: useBreedActions(),
+        breeds: useBreeds(),
+      }));
 
       // Set up test data
       act(() => {
-        actionsResult.current.setBreeds([mockBreed1, mockBreed2]);
-        actionsResult.current.setSort({ sortBy: "fci", sortOrder: "asc" });
+        result.current.actions.setBreeds([mockBreed1, mockBreed2]);
+        result.current.actions.setSort({ sortBy: "fci", sortOrder: "asc" });
       });
 
       // Wait for the state to update
       await waitFor(() => {
-        expect(breedsResult.current.length).toBeGreaterThan(0);
+        expect(result.current.breeds.length).toBeGreaterThan(0);
       });
 
       // Verify sorting is applied - breeds should have FCI classifications
-      const allBreedsWithFCI = breedsResult.current.filter(
+      const allBreedsWithFCI = result.current.breeds.filter(
         (b) => b.classification.fci?.standardNumber,
       );
       expect(allBreedsWithFCI.length).toBeGreaterThan(0);

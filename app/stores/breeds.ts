@@ -215,17 +215,15 @@ const useBreedsStore = create<State>()(
               undefined,
               "resetSort",
             ),
-          reset: () => {
-            const currentActions = useBreedsStore.getState().actions;
+          reset: () =>
             set(
-              {
+              (state) => ({
                 ...initialState,
-                actions: currentActions,
-              },
-              undefined,
+                actions: state.actions,
+              }),
+              true, // replace entire state
               "reset",
-            );
-          },
+            ),
         },
       }),
       {

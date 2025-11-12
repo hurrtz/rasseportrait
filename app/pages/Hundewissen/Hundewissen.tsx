@@ -1,13 +1,11 @@
 import { useEffect, useCallback, useMemo } from "react";
 import {
   Container,
-  Text,
   Title,
   Grid,
   Stack,
   Alert,
   Box,
-  Affix,
   Paper,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
@@ -46,28 +44,40 @@ const Hundewissen = () => {
 
   // Handle topic parameter from URL
   useEffect(() => {
-    if (!initialized) return;
+    if (!initialized) {
+      return;
+    }
 
     const topicParam = searchParams.get("topic");
+
     if (topicParam) {
       const topicExists = topics.some((t) => t.id === topicParam);
+
       if (topicExists && topicParam !== selectedTopicId) {
-        setSelectedTopic(topicParam);
         logger.info(`Opening topic from URL parameter: ${topicParam}`);
-      } else if (!topicExists && topicParam) {
+
+        setSelectedTopic(topicParam);
+      }
+
+      if (!topicExists) {
         logger.warn(`Invalid topic ID in URL: ${topicParam}`);
+
         setSearchParams(
           (prev) => {
             const newParams = new URLSearchParams(prev);
             newParams.delete("topic");
+
             return newParams;
           },
-          { replace: true, preventScrollReset: true }
+          { replace: true, preventScrollReset: true },
         );
       }
-    } else if (!topicParam && topics.length > 0 && !selectedTopicId) {
+    }
+
+    if (!topicParam && topics.length > 0 && !selectedTopicId) {
       // Auto-select first topic if none selected
       const firstTopic = topics[0];
+
       setSelectedTopic(firstTopic.id);
       setSearchParams(
         (prev) => {
@@ -75,15 +85,25 @@ const Hundewissen = () => {
           newParams.set("topic", firstTopic.id);
           return newParams;
         },
-        { replace: true, preventScrollReset: true }
+        { replace: true, preventScrollReset: true },
       );
     }
-  }, [searchParams, initialized, topics, selectedTopicId, setSelectedTopic, setSearchParams]);
+  }, [
+    searchParams,
+    initialized,
+    topics,
+    selectedTopicId,
+    setSelectedTopic,
+    setSearchParams,
+  ]);
 
   const handleTopicSelect = useCallback(
     (topicId: string) => {
       const topic = topics.find((t) => t.id === topicId);
-      if (!topic) return;
+
+      if (!topic) {
+        return;
+      }
 
       track("Knowledge Topic Selected", {
         topicId,
@@ -99,30 +119,15 @@ const Hundewissen = () => {
           newParams.set("topic", topicId);
           return newParams;
         },
-        { replace: true, preventScrollReset: true }
+        { replace: true, preventScrollReset: true },
       );
-
-      // Scroll to top on mobile
-      if (isMobile) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
     },
-    [topics, track, setSelectedTopic, setSearchParams, isMobile]
-  );
-
-  const tocLinks = useMemo(
-    () =>
-      topics.map((topic) => ({
-        label: topic.title.public,
-        link: `#${topic.id}`,
-        order: 1,
-      })),
-    [topics]
+    [topics, track, setSelectedTopic, setSearchParams],
   );
 
   const selectedTopic = useMemo(
     () => topics.find((t) => t.id === selectedTopicId),
-    [topics, selectedTopicId]
+    [topics, selectedTopicId],
   );
 
   if (loading) {
@@ -149,7 +154,10 @@ const Hundewissen = () => {
         <Title order={1} mb="md">
           Hundewissen
         </Title>
-        <Alert icon={<IconAlertCircle size={16} />} title="Keine Themen gefunden">
+        <Alert
+          icon={<IconAlertCircle size={16} />}
+          title="Keine Themen gefunden"
+        >
           Es wurden keine Wissensthemen gefunden.
         </Alert>
       </Container>
@@ -165,67 +173,34 @@ const Hundewissen = () => {
       <Grid gutter="lg">
         {/* Table of Contents - Left Column on Desktop, Top on Mobile */}
         <Grid.Col span={{ base: 12, md: 3 }}>
-          {isMobile ? (
-            <Paper withBorder p="md" mb="md">
-              <Title order={3} mb="sm">
-                Themen
-              </Title>
-              <Stack gap="xs">
-                {topics.map((topic) => (
-                  <Box
-                    key={topic.id}
-                    component="button"
-                    onClick={() => handleTopicSelect(topic.id)}
-                    style={{
-                      all: "unset",
-                      cursor: "pointer",
-                      padding: "8px 12px",
-                      borderRadius: "4px",
-                      backgroundColor:
-                        selectedTopicId === topic.id
-                          ? "var(--mantine-color-blue-light)"
-                          : "transparent",
-                      fontWeight: selectedTopicId === topic.id ? 500 : 400,
-                      transition: "background-color 0.2s",
-                    }}
-                  >
-                    {topic.title.public}
-                  </Box>
-                ))}
-              </Stack>
-            </Paper>
-          ) : (
-            <Affix position={{ top: 80, left: 20 }}>
-              <Paper withBorder p="md" style={{ width: "250px" }}>
-                <Title order={3} mb="sm">
-                  Themen
-                </Title>
-                <Stack gap="xs">
-                  {topics.map((topic) => (
-                    <Box
-                      key={topic.id}
-                      component="button"
-                      onClick={() => handleTopicSelect(topic.id)}
-                      style={{
-                        all: "unset",
-                        cursor: "pointer",
-                        padding: "8px 12px",
-                        borderRadius: "4px",
-                        backgroundColor:
-                          selectedTopicId === topic.id
-                            ? "var(--mantine-color-blue-light)"
-                            : "transparent",
-                        fontWeight: selectedTopicId === topic.id ? 500 : 400,
-                        transition: "background-color 0.2s",
-                      }}
-                    >
-                      {topic.title.public}
-                    </Box>
-                  ))}
-                </Stack>
-              </Paper>
-            </Affix>
-          )}
+          <Paper withBorder p="md" style={{ width: "250px" }}>
+            <Title order={3} mb="sm">
+              Themen
+            </Title>
+            <Stack gap="xs">
+              {topics.map((topic) => (
+                <Box
+                  key={topic.id}
+                  component="button"
+                  onClick={() => handleTopicSelect(topic.id)}
+                  style={{
+                    all: "unset",
+                    cursor: "pointer",
+                    padding: "8px 12px",
+                    borderRadius: "4px",
+                    backgroundColor:
+                      selectedTopicId === topic.id
+                        ? "var(--mantine-color-blue-light)"
+                        : "transparent",
+                    fontWeight: selectedTopicId === topic.id ? 500 : 400,
+                    transition: "background-color 0.2s",
+                  }}
+                >
+                  {topic.title.public}
+                </Box>
+              ))}
+            </Stack>
+          </Paper>
         </Grid.Col>
 
         {/* Content - Right Column */}
