@@ -17,3 +17,8 @@
   border-radius: 0;
   margin: 0;
 }
+
+.modal-root {
+  position: relative;
+  z-index: 10000;
+}

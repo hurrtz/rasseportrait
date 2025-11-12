@@ -22,6 +22,7 @@ const Modal = ({ isOpen, close }: Props) => {
         classNames={{
           header: "modal-header",
           body: "modal-body",
+          root: "modal-root",
         }}
         centered
         trapFocus

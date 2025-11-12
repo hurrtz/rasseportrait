@@ -100,7 +100,7 @@ const App = ({ children }: { children: ReactNode }) => {
           className={classes.headerFlex}
           justify="space-between"
           wrap="nowrap"
-          style={{ paddingRight: "64px" }}
+          style={{ marginRight: "45px" }}
         >
           <div
             className={classes.logoWrapper}
