@@ -15,6 +15,11 @@ npm run build            # Build for production (GitHub Pages)
 npm run typecheck        # TypeScript checking + React Router typegen
 npm test                 # Run Jest tests
 
+# Data compilation
+npm run build:data       # Compile breed data to JSON
+npm run build:knowledge  # Compile knowledge topics to JSON
+npm run build:images     # Copy breed illustrations
+
 # Release workflow
 npm run release:patch    # Patch version bump, changelog, tag
 npm run release:minor    # Minor version bump, changelog, tag
@@ -35,9 +40,11 @@ npm run release:major    # Major version bump, changelog, tag
 ### Key Configuration
 - **Base path**: `/rasseportrait/` (GitHub Pages deployment)
 - **Path alias**: `~/*` maps to `./app/*`
-- **Routes**: File-based routing in `/app/routes/` (rasseportrait, imprint, statistics)
+- **Routes**: File-based routing in `/app/routes/` (rasseportrait, hundewissen, imprint, statistics)
 
 ### Data Architecture
+
+#### Breed Data
 
 Breed data is stored in `/db/breeds/` with one TypeScript file per breed. Each breed follows this schema:
 
@@ -78,13 +85,46 @@ interface Breed {
 }
 ```
 
+#### Knowledge Topics
+
+Knowledge topics are stored in `/db/knowledge/` with one TypeScript file per topic:
+
+```typescript
+interface KnowledgeTopic {
+  id: string;
+  title: {
+    internal: string;
+    public: string;
+  };
+  description: string;
+  content: string;
+  podcast: Podcast[];  // Reuses Podcast type from breeds
+  furtherReading: FurtherReading[];  // Reuses FurtherReading type
+}
+```
+
+Topics include:
+- Qualzuchten (torture breeding)
+- Tierversuche (animal testing)
+- Jagdhunde (hunting dogs)
+- Schutzhunde (protection dogs)
+- Hundesprache (dog language)
+- Medizin (medicine)
+- Silvester (New Year's Eve)
+
 ### State Management
 
-The Zustand store (`app/stores/breeds.ts`) centralizes breed data and provides:
+**Breeds Store** (`app/stores/breeds.ts`) centralizes breed data and provides:
 - Search functionality with fuzzy matching
 - Sorting by name, FCI number, or air date
 - Filtering by breed characteristics
 - Selected breed state for detail views
+
+**Knowledge Store** (`app/stores/knowledge.ts`) manages knowledge topics:
+- Topic initialization from compiled JSON
+- Selected topic state management
+- Loading and error states
+- Custom hooks for all state values
 
 ### Images & Media
 
@@ -95,10 +135,9 @@ The Zustand store (`app/stores/breeds.ts`) centralizes breed data and provides:
 ### Analytics
 
 Amplitude tracks user interactions:
-- Breed searches and selections
-- Image carousel navigation
-- Podcast episode clicks
-- External link clicks
+- **Breed interactions**: searches, selections, carousel navigation
+- **Knowledge interactions**: topic selections, podcast episode clicks, further reading clicks
+- **General**: external link clicks
 - API key sourced from `VITE_AMPLITUDE_API_KEY` environment variable or fallback
 
 ## Development Workflow
@@ -128,16 +167,44 @@ Amplitude tracks user interactions:
 1. **Router typegen**: Run `npm run typecheck` after route changes to update types
 2. **Base path alignment**: Ensure Vite config base (`/rasseportrait/`) matches React Router basename
 3. **Breed data**: Each breed file must export a default object satisfying the `Breed` interface
-4. **Images**: Breed images follow naming convention based on breed ID/internal name
-5. **Analytics**: Avoid logging PII in Amplitude events
+4. **Knowledge topics**: Each topic file must export a default object satisfying the `KnowledgeTopic` interface
+5. **Images**: Breed images follow naming convention based on breed ID/internal name
+6. **Analytics**: Avoid logging PII in Amplitude events
+7. **Data compilation**: Run `npm run build:knowledge` after adding/modifying knowledge topics
 
 ## Quick Verification
 
 Before deploying changes:
 ```bash
-npm run typecheck  # TypeScript checking + React Router typegen
-npm test           # Runs test suite
-npm run build      # Verifies production build
+npm run typecheck        # TypeScript checking + React Router typegen
+npm test                 # Runs test suite
+npm run build:knowledge  # Compile knowledge topics (if modified)
+npm run build            # Verifies production build
 ```
 
 The build should complete without errors and generate assets compatible with the `/rasseportrait/` base path for GitHub Pages deployment.
+
+## Hundewissen Section
+
+The Hundewissen (Dog Knowledge) section provides educational content organized by topics:
+
+### Layout
+- **Desktop**: Two-column layout with sticky sidebar navigation (3-9 grid ratio)
+- **Mobile**: Vertical stack with topic selector at top
+- **Navigation**: URL-based with `?topic=` parameter for deep linking
+
+### Components
+- **`app/pages/Hundewissen/Hundewissen.tsx`**: Main page with TableOfContents and responsive layout
+- **`app/components/KnowledgeContent/KnowledgeContent.tsx`**: Displays individual topic content with:
+  - Title and description
+  - Main content with markdown-style formatting
+  - Podcast episodes with timecodes and badges
+  - Further reading links
+
+### Adding Content
+
+To add or modify knowledge topics:
+1. Edit files in `/db/knowledge/[topic-id]/index.ts`
+2. Add podcast episodes and further reading links as needed
+3. Run `npm run build:knowledge` to recompile
+4. Test with `npm run dev` and navigate to `/hundewissen`
