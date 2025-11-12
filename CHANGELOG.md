@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/hurrtz/rasseportrait/compare/v2.27.0...v3.0.0) (2025-11-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **docs:** WARP.md is now located at .ai/README.md
+
+### Features
+
+* add breed data compilation script ([65f75b5](https://github.com/hurrtz/rasseportrait/commit/65f75b5a60622f733b4c2d31b27faead367895bb))
+* add Hundewissen page structure and route ([e1ae4af](https://github.com/hurrtz/rasseportrait/commit/e1ae4aff967f82afc5d461444e78310461b54f9c))
+* **analytics:** add knowledge event tracking types ([8943837](https://github.com/hurrtz/rasseportrait/commit/8943837df1660a9d6098c3403ee9e25c5e1ac1b3))
+* **components:** add KnowledgeContent display component ([34b8f4b](https://github.com/hurrtz/rasseportrait/commit/34b8f4bd0c48381f77d3f1021ce5a040920a53ea))
+* **db:** add knowledge topics database ([ca462e4](https://github.com/hurrtz/rasseportrait/commit/ca462e4d79275ae43ffd06b4b75536797d647567))
+* improve on visual tonality of new section ([4babf0f](https://github.com/hurrtz/rasseportrait/commit/4babf0f8e2e91e0e7723011496ff4dd2d707f1fd))
+* improve on visual tonality of new section ([097ac68](https://github.com/hurrtz/rasseportrait/commit/097ac680ff73e838dc5c27a9d5d944344684b1aa))
+* integrate breed data compilation into build pipeline ([7abf3f2](https://github.com/hurrtz/rasseportrait/commit/7abf3f2e6e41956ed94e5605ede748201408ca1f))
+* **pages:** redesign Hundewissen with table of contents ([fa0df1f](https://github.com/hurrtz/rasseportrait/commit/fa0df1f2e997c66fd9711f30377462edb68cda18))
+* **store:** add knowledge topics Zustand store ([1506dee](https://github.com/hurrtz/rasseportrait/commit/1506dee63b3966f97cfdcdd12ebb1d14c6a6e727))
+* **types:** add knowledge topic type definitions ([66aa934](https://github.com/hurrtz/rasseportrait/commit/66aa934a784ffa902fcc12a8c9cb6b5bb80394c7))
+* update imagery for American Cocker Spaniel ([e0c2e2b](https://github.com/hurrtz/rasseportrait/commit/e0c2e2bd1894b6ae1a5f435b7917a0fdf6aa2a2c))
+
+
+* **docs:** migrate WARP.md to .ai/ directory structure ([3885575](https://github.com/hurrtz/rasseportrait/commit/3885575b0b6def282dc2462f2426773c8cbd4b42))
+
 ## [2.27.0](https://github.com/hurrtz/rasseportrait/compare/v2.26.0...v2.27.0) (2025-11-06)
 
 
