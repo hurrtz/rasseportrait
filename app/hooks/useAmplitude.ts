@@ -21,7 +21,7 @@ interface BreedEventProperties extends BaseEventProperties {
   source?: string;
   page?: string;
   episodeTitle?: string;
-  episodeNumber?: number;
+  episodeNumber?: number | string;
   sourceType?: string;
   sourceUrl?: string;
   timecode?: number;
@@ -34,6 +34,15 @@ interface BreedEventProperties extends BaseEventProperties {
   resultsCount?: number;
   totalBreeds?: number;
   hasResults?: boolean;
+}
+
+interface KnowledgeEventProperties extends BaseEventProperties {
+  topicId?: string;
+  topicTitle?: string;
+  hasPodcastEpisodes?: boolean;
+  episodeCount?: number;
+  episodeNumber?: string;
+  linkName?: string;
 }
 
 interface ErrorEventProperties extends BaseEventProperties {
@@ -51,6 +60,7 @@ interface SearchEventProperties extends BaseEventProperties {
 
 type EventProperties =
   | BreedEventProperties
+  | KnowledgeEventProperties
   | ErrorEventProperties
   | SearchEventProperties
   | BaseEventProperties;
