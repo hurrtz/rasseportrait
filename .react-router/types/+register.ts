@@ -12,6 +12,7 @@ declare module "react-router" {
 
 type Params = {
   "/": {};
+  "/hundewissen": {};
   "/impressum": {};
   "/statistiken": {};
 };
