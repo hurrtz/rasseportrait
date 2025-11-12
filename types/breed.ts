@@ -20,14 +20,14 @@ interface Source {
   type: "video" | "audio";
 }
 
-interface Podcast {
+export interface Podcast {
   number: number | string;
   episode: string;
   sources: Source[];
   meta: PodcastMeta;
 }
 
-interface FurtherReading {
+export interface FurtherReading {
   name: string;
   url: string;
 }
