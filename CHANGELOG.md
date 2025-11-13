@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/hurrtz/rasseportrait/compare/v3.1.1...v3.2.0) (2025-11-13)
+
+
+### Features
+
+* add Border Terrier ([aa4e7e3](https://github.com/hurrtz/rasseportrait/commit/aa4e7e35dc06440aaa901a6df4967d9c1554c3d2))
+
 ### [3.1.1](https://github.com/hurrtz/rasseportrait/compare/v3.1.0...v3.1.1) (2025-11-12)
 
 
