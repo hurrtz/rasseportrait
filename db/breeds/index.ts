@@ -101,6 +101,7 @@ import MajorcanMastiff from "./249";
 import MajorcaShepherdDog from "./321";
 import ManchesterTerrier from "./71";
 import Markiesje from "./special_10";
+import Mastiff from "./264";
 import MiniaturePinscher from "./185";
 import MiniatureSchnauzer from "./183";
 import NederlandseKooikerhondje from "./314";
@@ -262,6 +263,7 @@ export default {
   MajorcaShepherdDog,
   ManchesterTerrier,
   Markiesje,
+  Mastiff,
   MiniaturePinscher,
   MiniatureSchnauzer,
   NederlandseKooikerhondje,
