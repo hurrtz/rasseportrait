@@ -132,6 +132,7 @@ import Schipperke from "./83";
 import SchweizerLaufhund from "./59";
 import ScottishTerrier from "./73";
 import SegugioMaremmano from "./361";
+import SharPei from "./309";
 import ShetlandSheepdog from "./88";
 import Shiba from "./257";
 import ShihTzu from "./208";
@@ -294,6 +295,7 @@ export default {
   SchweizerLaufhund,
   ScottishTerrier,
   SegugioMaremmano,
+  SharPei,
   ShetlandSheepdog,
   Shiba,
   ShihTzu,
