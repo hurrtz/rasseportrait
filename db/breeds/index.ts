@@ -104,6 +104,7 @@ import Markiesje from "./special_10";
 import Mastiff from "./264";
 import MiniaturePinscher from "./185";
 import MiniatureSchnauzer from "./183";
+import Mioritic from "./349";
 import NederlandseKooikerhondje from "./314";
 import Newfoundlander from "./50";
 import NorfolkTerrier from "./272";
@@ -267,6 +268,7 @@ export default {
   Mastiff,
   MiniaturePinscher,
   MiniatureSchnauzer,
+  Mioritic,
   NederlandseKooikerhondje,
   Newfoundlander,
   NorfolkTerrier,
