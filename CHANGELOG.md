@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/hurrtz/rasseportrait/compare/v3.4.0...v3.5.0) (2025-12-11)
+
+
+### Features
+
+* add Minoritic ([2c96b08](https://github.com/hurrtz/rasseportrait/commit/2c96b08eb4d9a40a9c22f4e5b678dc46eb032055))
+* update imagery of Shar Pei ([3e73a9d](https://github.com/hurrtz/rasseportrait/commit/3e73a9de64b820f732ab96e2edf3c09fda49afd8))
+
 ## [3.4.0](https://github.com/hurrtz/rasseportrait/compare/v3.3.0...v3.4.0) (2025-12-04)
 
 
