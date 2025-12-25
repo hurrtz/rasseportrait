@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "segugio_maremmano",
     public: ["Segugio Maremmano"],
-    hasVideo: true,
   },
   classification: {
     fci: {

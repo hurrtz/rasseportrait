@@ -43,7 +43,6 @@ export interface Variant {
   public: string;
   furtherReading?: FurtherReading[];
   fci?: FCI;
-  hasVideo?: boolean;
   podcast?: Podcast[];
 }
 
@@ -54,7 +53,6 @@ interface BreedDetails {
   groupAs?: string;
   isGrouped?: boolean;
   isOfficiallyPresented?: boolean;
-  hasVideo?: boolean;
 }
 
 export interface Breed {

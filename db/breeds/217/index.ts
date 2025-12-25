@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "bavarian_mountain_hound",
     public: ["Bayerischer Gebirgsschweißhund"],
-    hasVideo: true,
   },
   recognitions: ["Deborah"],
   classification: {

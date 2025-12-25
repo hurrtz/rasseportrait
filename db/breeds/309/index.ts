@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "shar_pei",
     public: ["Shar Pei"],
-    hasVideo: true,
   },
   classification: {
     fci: {

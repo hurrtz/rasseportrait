@@ -15,7 +15,6 @@ export default {
             url: "https://welpen.vdh.de/hunderassen/rasselexikon/ergebnis/collie-kurzhaar",
           },
         ],
-        hasVideo: true,
       },
     ],
     groupAs: "Collie",

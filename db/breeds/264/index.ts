@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "mastiff",
     public: ["Mastiff", "Old English Mastiff"],
-    hasVideo: true,
   },
   classification: {
     fci: {

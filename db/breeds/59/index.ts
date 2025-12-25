@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "schweizer_laufhund",
     public: ["Schweizer Laufhund", "Chien Courant Suisse"],
-    hasVideo: true,
     variants: [
       {
         internal: "berner",

@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "mioritic",
     public: ["Ciobănesc Românesc Mioritic", "Mioritic", "Mocano", "Barac"],
-    hasVideo: true,
   },
   classification: {
     fci: {

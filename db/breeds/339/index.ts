@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "parson_russell_terrier",
     public: ["Parson Russell Terrier"],
-    hasVideo: true,
     groupAs: "Russell Terriers",
   },
   classification: {

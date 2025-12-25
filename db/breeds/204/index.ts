@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "sabueso_espanol",
     public: ["Sabueso Español", "Spanischer Laufhund"],
-    hasVideo: true,
   },
   classification: {
     fci: {

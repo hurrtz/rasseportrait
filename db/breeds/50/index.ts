@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "newfoundlander",
     public: ["Neufundländer", "Newfoundland"],
-    hasVideo: true,
   },
   classification: {
     fci: {

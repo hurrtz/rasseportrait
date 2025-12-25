@@ -10,7 +10,6 @@ export default {
       "Russischer Zwergspaniel",
       "московский длинношерстный той-терьер",
     ],
-    hasVideo: true,
     variants: [
       {
         internal: "long",

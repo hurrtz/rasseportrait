@@ -9,7 +9,6 @@ export default {
       {
         internal: "rough",
         public: "Langhaar",
-        hasVideo: true,
         furtherReading: [
           {
             name: "Martin Rütter",

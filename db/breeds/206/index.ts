@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "japanese_chin",
     public: ["Japan Chin"],
-    hasVideo: true,
   },
   classification: {
     fci: {

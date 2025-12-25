@@ -10,7 +10,6 @@ export default {
       "Dyrehund",
     ],
     groupAs: "Norwegischer Elchhund",
-    hasVideo: true,
   },
   classification: {
     fci: {

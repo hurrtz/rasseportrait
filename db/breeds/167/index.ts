@@ -10,7 +10,6 @@ export default {
       "Cocker américain",
       "Cocker spaniel americano",
     ],
-    hasVideo: true,
   },
   classification: {
     fci: {

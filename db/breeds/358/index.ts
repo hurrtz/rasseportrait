@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "thai_bangkaew",
     public: ["Thai Bangkaew Dog"],
-    hasVideo: true,
   },
   classification: {
     fci: {

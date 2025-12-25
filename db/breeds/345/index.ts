@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "jack_russell_terrier",
     public: ["Jack Russell Terrier"],
-    hasVideo: true,
     groupAs: "Russell Terriers",
   },
   classification: {

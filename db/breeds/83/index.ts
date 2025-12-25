@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "schipperke",
     public: ["Schipperke"],
-    hasVideo: true,
   },
   classification: {
     fci: {

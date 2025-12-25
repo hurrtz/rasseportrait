@@ -5,7 +5,6 @@ export default {
   details: {
     internal: "border_terrier",
     public: ["Border Terrier"],
-    hasVideo: true,
   },
   classification: {
     fci: {
