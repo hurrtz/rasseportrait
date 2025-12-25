@@ -69,25 +69,6 @@ const processImages = async (sourceDir, targetDir) => {
           stats.processed++;
           console.log(`  ✓ Generated thumbnail + full image`);
         }
-      } else if (/\.(mp4)$/i.test(file)) {
-        const originPath = path.join(sourceDir, file);
-        const targetPath = path.join(targetDir, file);
-
-        console.log(`Copying video "${file}"...`);
-
-        try {
-          await fs.copy(originPath, targetPath);
-          stats.processed++;
-          console.log(`  ✓ Copied video`);
-        } catch (error) {
-          if (error.code === "ENOENT") {
-            console.warn(`  ⚠ Missing source video: ${file}`);
-            stats.skipped++;
-          } else {
-            console.error(`  ✗ Error copying video:`, error.message);
-            stats.errors++;
-          }
-        }
       }
     }
   } catch (error) {
