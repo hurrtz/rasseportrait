@@ -4,13 +4,11 @@ import { useBreed, useBreedVariantNames } from "~/stores/breeds";
 interface UseImagePathsProps {
   id: string | number;
   isDetailView: boolean;
-  isVideo: boolean;
 }
 
 export const useImagePaths = ({
   id,
   isDetailView,
-  isVideo,
 }: UseImagePathsProps) => {
   const breed = useBreed(id);
   const variantNames = useBreedVariantNames(id);
@@ -21,7 +19,6 @@ export const useImagePaths = ({
     return {
       images: [],
       isGrouped: false,
-      isVideo,
       isDetailView,
     };
   }
@@ -31,8 +28,8 @@ export const useImagePaths = ({
 
   const PATH = "illustrations";
   const CATEGORY = "breeds";
-  const ASSET_TYPE = isDetailView && isVideo ? "video" : "illustration";
-  const EXTENSION = isDetailView && isVideo ? "mp4" : "jpeg";
+  const ASSET_TYPE = "illustration";
+  const EXTENSION = "jpeg";
   const THUMBNAIL = isDetailView ? "" : "_thumbnail";
 
   const images = useMemo(() => {
@@ -54,7 +51,6 @@ export const useImagePaths = ({
   return {
     images,
     isGrouped,
-    isVideo,
     isDetailView,
   };
 };

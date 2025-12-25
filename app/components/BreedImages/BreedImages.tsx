@@ -21,7 +21,6 @@ const BreedImages = ({
   const { images } = useImagePaths({
     id,
     isDetailView,
-    isVideo: false,
   });
 
   // Single image case

@@ -67,7 +67,6 @@ export const mergeGroupedBreeds = (breeds: Breed[]): Breed[] => {
       variants = variants.map((variant) => ({
         ...variant,
         fci: breed.classification.fci,
-        ...(breed.details.hasVideo && { hasVideo: breed.details.hasVideo }),
         podcast: breed.podcast,
       }));
 
