@@ -148,7 +148,11 @@ const BreedDetails = () => {
                   sourceUrl: sources[0].url,
                   timecode: timecode,
                 });
-                window.open(sources[0].url, "_blank");
+                const url =
+                  sources[0].provider === "spotify"
+                    ? `${sources[0].url}&t=${timecode}`
+                    : sources[0].url;
+                window.open(url, "_blank");
               }}
             >
               <Group gap="lg" wrap="nowrap" preventGrowOverflow>
