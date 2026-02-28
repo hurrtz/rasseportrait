@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/hurrtz/rasseportrait/compare/v3.5.0...v3.6.0) (2026-02-28)
+
+
+### Features
+
+* add provider logo to podcast episode cards ([31ff387](https://github.com/hurrtz/rasseportrait/commit/31ff387695d537571994388dcbc909e40737c124))
+* add provider: "rtl" to all existing breed sources ([0543e4e](https://github.com/hurrtz/rasseportrait/commit/0543e4e99949cab993d5929152b3b74a1a3bc81c))
+* append timecode parameter to Spotify episode URLs ([34a0e2c](https://github.com/hurrtz/rasseportrait/commit/34a0e2cc98b23fbb5d37b46b5871857ca4cbe026))
+
 ## [3.5.0](https://github.com/hurrtz/rasseportrait/compare/v3.4.0...v3.5.0) (2025-12-11)
 
 
