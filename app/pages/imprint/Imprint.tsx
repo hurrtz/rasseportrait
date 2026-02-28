@@ -8,14 +8,29 @@ const Imprint = () => {
         <Title order={2}>Zweck</Title>
         <Text mt="lg">
           Diese Website ist ein Fanprojekt zum Podcast{" "}
-          <a href="https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv">
-            Tierisch Menschlich
+          <strong>Tierisch Menschlich</strong> von Martin Rütter und Katharina
+          Adick. Es enthält eine nicht verbindliche kuratierte Liste aller
+          Episoden, die ein Rasseportrait enthalten.
+        </Text>
+        <Text mt="sm">
+          Der Podcast wurde bis zum 11. Dezember 2025 über{" "}
+          <a href="https://plus.rtl.de" target="_blank">
+            RTL+
           </a>{" "}
-          von Martin Rütter und Katharina Adick. Es enthält eine nicht
-          verbindliche kuratierte Liste aller Episoden, die ein Rasseportrait
-          enthalten. Dieses Projekt ist in keiner Weise beauftragt von RTL oder
-          einer der teilnehmenden oder der Produktion des Podcasts mitwirkenden
-          Personen.
+          veröffentlicht. Seit Februar 2026 wird er von{" "}
+          <a href="https://www.mina-entertainment.de" target="_blank">
+            Mina Entertainment
+          </a>{" "}
+          (Martin Rütter) produziert und über{" "}
+          <a href="https://open.spotify.com" target="_blank">
+            Spotify
+          </a>{" "}
+          bereitgestellt.
+        </Text>
+        <Text mt="sm">
+          Dieses Projekt ist in keiner Weise beauftragt von oder affiliiert mit
+          RTL, Mina Entertainment, Spotify oder einer der am Podcast
+          teilnehmenden oder mitwirkenden Personen.
         </Text>
         <Text>
           Bei Problemen, Änderungswünschen oder sonstigem Feedback wenden Sie
