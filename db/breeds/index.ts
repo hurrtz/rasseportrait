@@ -27,6 +27,7 @@ import BordeauxMastiff from "./116";
 import BorderTerrier from "./10";
 import BostonTerrier from "./140";
 import Briard from "./113";
+import Bullmastiff from "./157";
 import CanaryMastiff from "./346";
 import CaneCorso from "./343";
 import Catalburun from "./special_3";
@@ -191,6 +192,7 @@ export default {
   BorderTerrier,
   BostonTerrier,
   Briard,
+  Bullmastiff,
   CanaryMastiff,
   CaneCorso,
   Catalburun,

@@ -18,6 +18,7 @@ interface PodcastMeta {
 interface Source {
   url: string;
   type: "video" | "audio";
+  provider?: "spotify" | "rtl";
 }
 
 export interface Podcast {
