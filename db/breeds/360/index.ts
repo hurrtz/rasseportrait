@@ -21,10 +21,12 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-koeln-die-grosse-ueberraschung-fd8vbp81ih11w",
           type: "audio",
+          provider: "rtl",
         },
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-koeln-die-grosse-ueberraschung-fd8vbp81ih11w",
           type: "video",
+          provider: "rtl",
         },
       ],
       meta: {

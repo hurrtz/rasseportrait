@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/139-co-ownership-knochen-knacken-3ht5yygef4ypm",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

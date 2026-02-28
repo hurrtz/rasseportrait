@@ -22,6 +22,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/57-welpenhaendler-zerrspiele-spartipps-teil-2-it4nn687n9bsg",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

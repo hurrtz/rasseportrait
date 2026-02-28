@@ -17,6 +17,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-8-die-schlauesten-tiere-der-welt-febovvjxrpps9",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

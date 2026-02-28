@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/222-der-schwere-duft-von-ryanair-82gd9hzof390x",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

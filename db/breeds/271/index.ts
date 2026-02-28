@@ -30,6 +30,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/195-frau-mit-rollkoffer-7exy0vywl69i9",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

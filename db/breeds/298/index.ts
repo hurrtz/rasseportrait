@@ -25,6 +25,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/138-fichtenflitzer-riesenregenwurm-kot-tapete-lcq6dk9w7df3w",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

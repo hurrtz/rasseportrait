@@ -43,6 +43,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/52-richtig-helfen-fliegende-kotbeutel-der-weimaraner-m5dz64ld7wmvh",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

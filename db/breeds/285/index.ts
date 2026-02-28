@@ -22,6 +22,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/47-das-traurige-schicksal-der-galgos-conny-reimann-mythos-wildfutter-qqta8btva9n8i",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

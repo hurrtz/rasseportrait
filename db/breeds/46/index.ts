@@ -21,10 +21,12 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-unna-6u1dfm6uo2jq0",
           type: "audio",
+          provider: "rtl",
         },
         {
           url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-5-live-podcast-unna-1013242",
           type: "video",
+          provider: "rtl",
         },
       ],
       meta: {

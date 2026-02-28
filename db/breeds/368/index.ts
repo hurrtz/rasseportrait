@@ -25,6 +25,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/164-sofafolge-k911jyp1xsjm0",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

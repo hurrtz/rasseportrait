@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/236-sternzeichen-bergziege-cc5x12bdhoocs",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

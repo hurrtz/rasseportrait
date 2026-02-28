@@ -26,6 +26,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/144-stark-wie-ein-regenwurm-yz5nu29vkfm1o",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

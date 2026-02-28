@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/188-selbstreflexion-pudelhaube-1co8nbj85o8tw",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

@@ -22,6 +22,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/233-verliebt-verplant-verhunzt-88ikzih1g9717",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

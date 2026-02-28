@@ -23,6 +23,7 @@ interface BreedEventProperties extends BaseEventProperties {
   episodeTitle?: string;
   episodeNumber?: number | string;
   sourceType?: string;
+  sourceProvider?: string;
   sourceUrl?: string;
   timecode?: number;
   linkName?: string;

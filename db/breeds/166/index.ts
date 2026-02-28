@@ -44,6 +44,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/55-hundetraining-aus-der-spruehflasche-maulkorb-der-deutsche-schaeferhund-v2o7yjc6mh4we",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {
@@ -63,6 +64,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/215-viele-fragen-uns-ja-2qjfbgxlbz4cv",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/235-das-bisschen-blut-l2xj1fwex331z",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

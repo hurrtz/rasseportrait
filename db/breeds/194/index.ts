@@ -27,6 +27,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/154-schnitzelbankabend-kompetenzvermutung-k2ec0em6e8dt4",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

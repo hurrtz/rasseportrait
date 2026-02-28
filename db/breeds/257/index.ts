@@ -21,10 +21,12 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-wuerselen-wildkatzen-fp3kwv8cghuui",
           type: "audio",
+          provider: "rtl",
         },
         {
           url: "https://plus.rtl.de/video-tv/shows/tierisch-menschlich-der-video-podcast-1001612/staffel-2-1007832/episode-4-live-podcast-wuerselen-wildkatzen-1013241",
           type: "video",
+          provider: "rtl",
         },
       ],
       meta: {

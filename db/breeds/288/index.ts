@@ -43,6 +43,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/123-oh-wie-schoen-ist-panama-92aq873dx2z0n",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

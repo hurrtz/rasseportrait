@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/88-ich-bremse-auch-fuer-kinder-z4tmc9itz9sz3",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

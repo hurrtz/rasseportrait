@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/212-tourfinale-garnelen-und-stelzenhunde-n9b80w9jjgd0f",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

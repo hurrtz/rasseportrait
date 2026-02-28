@@ -27,6 +27,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/83-kriegsschrecken-kommunikationsmoehren-falsche-schildkroeten-t7s7tgilkx2ql",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

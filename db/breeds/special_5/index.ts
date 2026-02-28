@@ -17,6 +17,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/live-podcast-delbrueck-therapie-schafe-schnaps-hasen-l8amf2kemppre",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/73-ferien-strohmann-argumente-eine-raetselhafte-hunderasse-1x9e06d6pxpnr",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/200-die-fliege-an-der-wand-n3r0xgvkrzorr",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

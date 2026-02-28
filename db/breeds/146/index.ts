@@ -22,6 +22,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/44-geteiltes-sorgerecht-fuer-tiere-falsches-maeusegulasch-zwangspause-fuer-polizeihunde-ioj5kmbkn4v7c",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

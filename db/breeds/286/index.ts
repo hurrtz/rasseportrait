@@ -22,6 +22,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/54-starke-frauen-eine-blutige-nase-der-american-staffordshire-terrier-5u9lggnny8ey9",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

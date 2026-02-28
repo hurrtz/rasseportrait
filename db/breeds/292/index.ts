@@ -22,6 +22,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/64-giftige-nuesse-chihuahua-im-rettungsdienst-ruetter-als-lakritzfigur-1al7eu52bnser",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

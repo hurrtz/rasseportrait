@@ -26,6 +26,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/223-hirschkaefer-flieg-mtn0ofyb3vlsl",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

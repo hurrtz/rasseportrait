@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/75-faultiere-hitzschlag-leben-nach-dem-tod-rqnqcr03z9fmo",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

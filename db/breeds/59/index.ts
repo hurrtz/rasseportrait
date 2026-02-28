@@ -79,6 +79,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/214-lasst-mich-bei-den-affen-lmh9y9fj3f4ar",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

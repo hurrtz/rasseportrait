@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/135-herbstanfang-mjmh2c8xp08jy",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

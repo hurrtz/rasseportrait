@@ -35,6 +35,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/166-zwingerclub-2ok8zkm2k969d",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

@@ -26,6 +26,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/234-martins-abschied-von-der-buehne-tmlh5rv3dmjs0",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {

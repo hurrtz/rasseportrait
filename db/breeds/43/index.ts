@@ -21,6 +21,7 @@ export default {
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/58-religionskriege-bei-facebook-vegane-hunde-und-kleine-ritter-u6g77nktkpqi2",
           type: "audio",
+          provider: "rtl",
         },
       ],
       meta: {
