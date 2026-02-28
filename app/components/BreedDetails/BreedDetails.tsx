@@ -16,7 +16,7 @@ import { IconBroadcast, IconVideo } from "@tabler/icons-react";
 import { useAmplitude } from "../../hooks/useAmplitude";
 import "./styles.css";
 
-const Icon = ({ type }: { type: string }) => {
+const TypeIcon = ({ type }: { type: string }) => {
   switch (type) {
     case "video":
       return <IconVideo />;
@@ -25,6 +25,11 @@ const Icon = ({ type }: { type: string }) => {
     default:
       return <IconBroadcast />;
   }
+};
+
+const providerLogos: Record<string, { src: string; alt: string }> = {
+  rtl: { src: "/rasseportrait/rtl_plus_logo.png", alt: "RTL+" },
+  spotify: { src: "/rasseportrait/spotify_logo.png", alt: "Spotify" },
 };
 
 const BreedDetails = () => {
@@ -139,6 +144,7 @@ const BreedDetails = () => {
                   episodeTitle: episode,
                   episodeNumber: Number(number),
                   sourceType: sources[0].type,
+                  sourceProvider: sources[0].provider,
                   sourceUrl: sources[0].url,
                   timecode: timecode,
                 });
@@ -147,7 +153,14 @@ const BreedDetails = () => {
             >
               <Group gap="lg" wrap="nowrap" preventGrowOverflow>
                 <div className="podcast-episode-icon">
-                  <Icon type={sources[0].type} />
+                  <TypeIcon type={sources[0].type} />
+                  {sources[0].provider && providerLogos[sources[0].provider] && (
+                    <img
+                      src={providerLogos[sources[0].provider].src}
+                      alt={providerLogos[sources[0].provider].alt}
+                      className="podcast-episode-provider-logo"
+                    />
+                  )}
                 </div>
                 <Stack gap={0}>
                   <Text key={episode} className="podcast-episode-title">
