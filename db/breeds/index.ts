@@ -101,6 +101,7 @@ import LouisianaCatahoulaLeopardDog from "./special_7";
 import MajorcanMastiff from "./249";
 import MajorcaShepherdDog from "./321";
 import ManchesterTerrier from "./71";
+import MaremmanoAbruzzeseSheepdog from "./201";
 import Markiesje from "./special_10";
 import Mastiff from "./264";
 import MiniaturePinscher from "./185";
@@ -266,6 +267,7 @@ export default {
   MajorcanMastiff,
   MajorcaShepherdDog,
   ManchesterTerrier,
+  MaremmanoAbruzzeseSheepdog,
   Markiesje,
   Mastiff,
   MiniaturePinscher,

@@ -19,7 +19,7 @@ export default {
       episode: "Wir sind wieder da - Tierisch Menschlich kehr zurück!",
       sources: [
         {
-          url: "https://open.spotify.com/episode/5JXqG3gPc1Z5JohJ28jMh3?si=gjDqLZaXQB-ev6KKujee8A",
+          url: "https://open.spotify.com/episode/5JXqG3gPc1Z5JohJ28jMh3",
           provider: "spotify",
           type: "audio",
         },
