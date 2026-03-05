@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/hurrtz/rasseportrait/compare/v3.7.0...v3.8.0) (2026-03-05)
+
+
+### Features
+
+* add Maremmano-Abruzzese Sheepdog ([8948e81](https://github.com/hurrtz/rasseportrait/commit/8948e8151f8421afa2b37669e5410d7f2f3d8732))
+
 ## [3.7.0](https://github.com/hurrtz/rasseportrait/compare/v3.6.0...v3.7.0) (2026-02-28)
 
 ## [3.6.0](https://github.com/hurrtz/rasseportrait/compare/v3.5.0...v3.6.0) (2026-02-28)
