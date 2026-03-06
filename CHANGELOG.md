@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.9.0](https://github.com/hurrtz/rasseportrait/compare/v3.8.0...v3.9.0) (2026-03-06)
+
+
+### Features
+
+* update all images ([91861ee](https://github.com/hurrtz/rasseportrait/commit/91861eeba1aaa681562e3b16e4e4a69b6ab34a0f))
+* update some images ([4cee85a](https://github.com/hurrtz/rasseportrait/commit/4cee85a6eea097b2c909995da083548bc1e8de2c))
+
 ## [3.8.0](https://github.com/hurrtz/rasseportrait/compare/v3.7.0...v3.8.0) (2026-03-05)
 
 
