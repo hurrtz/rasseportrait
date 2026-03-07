@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.10.0](https://github.com/hurrtz/rasseportrait/compare/v3.9.0...v3.10.0) (2026-03-07)
+
+
+### Features
+
+* add spotify urls to all episodes, design fixes, fix for special breed fci statement ([e4b9599](https://github.com/hurrtz/rasseportrait/commit/e4b95990b8ea6a928bd771209e833d851e090401))
+
 ## [3.9.0](https://github.com/hurrtz/rasseportrait/compare/v3.8.0...v3.9.0) (2026-03-06)
 
 
