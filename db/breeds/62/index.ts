@@ -19,6 +19,11 @@ export default {
       episode: "Katzengefühle",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3Rp5WJRUipIRFXbjDttIBY",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-9-katzengefuehle-57gluk24bflht",
           type: "audio",
           provider: "rtl",

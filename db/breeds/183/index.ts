@@ -20,6 +20,11 @@ export default {
       episode: "Wichtige Updates",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7oeqh1ydlk8Ia1Ytx8l12P",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/169-wichtige-updates-jbd8afdfpby1s",
           type: "audio",
           provider: "rtl",

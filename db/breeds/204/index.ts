@@ -19,6 +19,11 @@ export default {
       episode: "Verona, Veggie-Futter & Vorsorge",
       sources: [
         {
+          url: "https://open.spotify.com/episode/72TOySnfKqGvZQ8WBNNbzs",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/228-verona-veggiefutter-vorsorge-oaudd8gdmv8ix",
           type: "audio",
           provider: "rtl",

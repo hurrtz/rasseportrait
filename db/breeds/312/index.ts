@@ -19,6 +19,11 @@ export default {
       episode: "Positive Verstärkung, Männergrippe & Zurückrudern",
       sources: [
         {
+          url: "https://open.spotify.com/episode/1cy7gl4OrQOsOq3RLp2RK0",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/136-positive-verstaerkung-maennergrippe-zurueckrudern-pcewcbc9hru3t",
           type: "audio",
           provider: "rtl",

@@ -33,6 +33,11 @@ export default {
       episode: "Zwingerclub",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3vjGIVQ0f00gUTyIc8Cpjk",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/166-zwingerclub-2ok8zkm2k969d",
           type: "audio",
           provider: "rtl",

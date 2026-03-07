@@ -24,6 +24,11 @@ export default {
       episode: "Martins Abschied von der Bühne",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3THLAvT1dvqanGu8uEEAN8",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/234-martins-abschied-von-der-buehne-tmlh5rv3dmjs0",
           type: "audio",
           provider: "rtl",

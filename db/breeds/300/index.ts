@@ -19,6 +19,11 @@ export default {
       episode: "Biologisch logisch",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6yhnWRx5MYddaBZwu8Fadt",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/155-biologisch-logisch-ssywwck5le064",
           type: "audio",
           provider: "rtl",

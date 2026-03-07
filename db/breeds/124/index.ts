@@ -24,6 +24,11 @@ export default {
       episode: "Stark wie ein Regenwurm",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0rkuIYOv92HZ5Y8HSw4s7o",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/144-stark-wie-ein-regenwurm-yz5nu29vkfm1o",
           type: "audio",
           provider: "rtl",

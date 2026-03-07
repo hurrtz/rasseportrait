@@ -19,6 +19,11 @@ export default {
       episode: "Bulette & Bier",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0atrslFg9ZGC7YRac8vkal",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/110-bulette-bier-evkbrps47ac2f",
           type: "audio",
           provider: "rtl",

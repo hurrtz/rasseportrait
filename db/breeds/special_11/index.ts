@@ -15,6 +15,11 @@ export default {
       episode: "Hölzerne Körper",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5KQDW8I4FFAQfKBarTBs1M",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/203-hoelzerne-koerper-nrmedtvqkcq0d",
           type: "audio",
           provider: "rtl",

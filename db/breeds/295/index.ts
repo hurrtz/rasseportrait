@@ -19,6 +19,11 @@ export default {
       episode: "Tourfinale, Garnelen und Stelzenhunde",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5jrZNscI1Z276Gre6EMGs4",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/212-tourfinale-garnelen-und-stelzenhunde-n9b80w9jjgd0f",
           type: "audio",
           provider: "rtl",

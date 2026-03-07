@@ -19,6 +19,11 @@ export default {
       episode: "Die ganze Wahrheit",
       sources: [
         {
+          url: "https://open.spotify.com/episode/239L7Enf4is1XqbOOgFrOy",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/12-die-ganze-wahrheit-kc3oyphk7j1ra",
           type: "audio",
           provider: "rtl",
@@ -38,6 +43,11 @@ export default {
       number: 105,
       episode: "Geiselnahme, skurrile Wildtiere & 1,5 Grad wärmer",
       sources: [
+        {
+          url: "https://open.spotify.com/episode/08UaIDVHaeUlHwROWdh5fO",
+          type: "audio",
+          provider: "spotify",
+        },
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/105-geiselnahme-skurrile-wildtiere-1-5-grad-waermer-9qzro9uynb4pc",
           type: "audio",

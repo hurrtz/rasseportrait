@@ -19,6 +19,11 @@ export default {
       episode: "Wolfskralle, dicke Hunde & sprechende Pflanzen",
       sources: [
         {
+          url: "https://open.spotify.com/episode/34A6L6DEtO5IbOM2eHZX8N",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/100-wolfskralle-dicke-hunde-sprechende-pflanzen-wat87q06xwqct",
           type: "audio",
           provider: "rtl",

@@ -61,6 +61,11 @@ export default {
       episode: "Leben und leben lassen",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7hruWLIoabwdRqggr8Gqh9",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/13-leben-und-leben-lassen-23n9dglym2zxx",
           type: "audio",
           provider: "rtl",
@@ -80,6 +85,11 @@ export default {
       number: 51,
       episode: "Wenn Nachrichten Angst machen",
       sources: [
+        {
+          url: "https://open.spotify.com/episode/7sYervCFsRXRN0Knd789yK",
+          type: "audio",
+          provider: "spotify",
+        },
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/51-wenn-nachrichten-angst-machen-eay4li7j9ucbk",
           type: "audio",

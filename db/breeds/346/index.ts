@@ -19,6 +19,11 @@ export default {
       episode: "Giftwarnung, Zeckenspray & Hühner-Hacks",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5qj2keC3IVFZdzmmMYpilj",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/141-giftwarnung-zeckenspray-huehner-hacks-gds039ru762p9",
           type: "audio",
           provider: "rtl",

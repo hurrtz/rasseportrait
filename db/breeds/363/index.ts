@@ -19,6 +19,11 @@ export default {
       episode: "Apple Store, Mottenbefall & Wasserrute",
       sources: [
         {
+          url: "https://open.spotify.com/episode/1fEhmJvt09vXfxpKVx5Px0",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/115-apple-store-mottenbefall-wasserrute-1mxwlzwkra8ev",
           type: "audio",
           provider: "rtl",

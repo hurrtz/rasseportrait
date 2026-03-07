@@ -19,6 +19,11 @@ export default {
       episode: "Bitte nicht nachmachen!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5k6fGPZuN3BRXb50XxogkL",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/89-bitte-nicht-nachmachen-tt85sxkz7dhtd",
           type: "audio",
           provider: "rtl",

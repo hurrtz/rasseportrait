@@ -25,6 +25,11 @@ export default {
       episode: "Borstenwurm & Reizangel",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5kHE0jlb8snBzcqGRvOEkz",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/227-borstenwurm-reizangel-jfjt8qv47reur",
           type: "audio",
           provider: "rtl",

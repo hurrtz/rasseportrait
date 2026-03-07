@@ -19,6 +19,11 @@ export default {
       episode: "Podcast live: Entenschnabelmaulkorb",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0GgBfxBBMUMe6CJIKAalIg",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/126-podcast-live-entenschnabelmaulkorb-b61210fz1bl75",
           type: "audio",
           provider: "rtl",

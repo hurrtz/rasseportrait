@@ -19,6 +19,11 @@ export default {
       episode: "Wie die Lemminge",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5HvLbHWhaVAXhfd1nY9yVh",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/208-wie-die-lemminge-y0ypqy92z48z2",
           type: "audio",
           provider: "rtl",

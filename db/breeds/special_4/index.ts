@@ -15,6 +15,11 @@ export default {
       episode: "Biber & Bark Date",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0D6fSGgeUfeTxEjblwXgec",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/165-biber-bark-date-qfe8t7gfo7siq",
           type: "audio",
           provider: "rtl",

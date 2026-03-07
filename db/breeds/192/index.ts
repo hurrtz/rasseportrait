@@ -29,6 +29,11 @@ export default {
       episode: "Ebay, Aquadom & Frohe Weihnachten",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6UV3OdJBZLKy2tBoHGQIwJ",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/93-ebay-aquadom-frohe-weihnachten-vunq6bh8makya",
           type: "audio",
           provider: "rtl",
@@ -48,6 +53,11 @@ export default {
       number: "Summer Edition #10",
       episode: "Stabile Typen",
       sources: [
+        {
+          url: "https://open.spotify.com/episode/3zNHCnqUXWj90rVod6WA5m",
+          type: "audio",
+          provider: "spotify",
+        },
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-10-stabile-typen-4s4s3dlg5jjyi",
           type: "audio",

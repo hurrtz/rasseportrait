@@ -32,6 +32,7 @@ const providerLogos: Record<string, { src: string; alt: string }> = {
   spotify: { src: "/rasseportrait/spotify_logo.png", alt: "Spotify" },
 };
 
+
 const BreedDetails = () => {
   const selectedBreed = useSelectedBreed();
   const [activeSlide, setActiveSlide] = useState(0);
@@ -100,26 +101,26 @@ const BreedDetails = () => {
           {selectedBreed.details.variants?.[activeSlide]?.public}
         </Text>
         <Divider className="divider" />
-        <div>
-          <Text size="sm" className="section-name">
-            FCI
-          </Text>
-          <Text fw={300} size="xs" ta="center">
-            Standardnummer{" "}
-            <strong>
-              {selectedBreed.classification.fci?.standardNumber ??
-                selectedBreed.details.variants?.[activeSlide]?.fci
-                  ?.standardNumber}
-            </strong>{" "}
-            (Gruppe{" "}
-            {selectedBreed.classification.fci?.group ??
-              selectedBreed.details.variants?.[activeSlide]?.fci?.group}
-            , Sektion{" "}
-            {selectedBreed.classification.fci?.section ??
-              selectedBreed.details.variants?.[activeSlide]?.fci?.section}
-            )
-          </Text>
-        </div>
+        {(() => {
+          const fci =
+            selectedBreed.classification.fci ??
+            selectedBreed.details.variants?.[activeSlide]?.fci;
+          return fci ? (
+            <div>
+              <Text size="sm" className="section-name">
+                FCI
+              </Text>
+              <Text fw={300} size="xs" ta="center">
+                Standardnummer <strong>{fci.standardNumber}</strong>{" "}
+                (Gruppe {fci.group}, Sektion {fci.section})
+              </Text>
+            </div>
+          ) : (
+            <Text fw={300} size="xs" ta="center" c="dimmed">
+              Nicht im FCI-Standard
+            </Text>
+          );
+        })()}
         <Divider className="divider" />
         {podcastEpisodes.map(
           (
@@ -130,59 +131,124 @@ const BreedDetails = () => {
               sources,
             },
             index,
-          ) => (
-            <Card
-              key={`${index}-${episode}`}
-              shadow="sm"
-              radius="md"
-              color="gray"
-              className="podcast-episode"
-              onClick={() => {
-                track("Podcast Episode Clicked", {
-                  breedId: String(selectedBreed.id),
-                  breedName: selectedBreed.details.public[0],
-                  episodeTitle: episode,
-                  episodeNumber: Number(number),
-                  sourceType: sources[0].type,
-                  sourceProvider: sources[0].provider,
-                  sourceUrl: sources[0].url,
-                  timecode: timecode,
-                });
-                const url =
-                  sources[0].provider === "spotify"
-                    ? `${sources[0].url}&t=${timecode}`
-                    : sources[0].url;
-                window.open(url, "_blank");
-              }}
-            >
-              <Group gap="lg" wrap="nowrap" preventGrowOverflow>
-                <div className="podcast-episode-icon">
-                  <TypeIcon type={sources[0].type} />
-                  {sources[0].provider && providerLogos[sources[0].provider] && (
-                    <img
-                      src={providerLogos[sources[0].provider].src}
-                      alt={providerLogos[sources[0].provider].alt}
-                      className="podcast-episode-provider-logo"
-                    />
+          ) => {
+            const hasSingleSource = sources.length === 1;
+            const singleSourceUrl =
+              hasSingleSource
+                ? sources[0].provider === "spotify"
+                  ? `${sources[0].url}?t=${timecode}`
+                  : sources[0].url
+                : "";
+
+            const handleSingleClick = hasSingleSource
+              ? () => {
+                  track("Podcast Episode Clicked", {
+                    breedId: String(selectedBreed.id),
+                    breedName: selectedBreed.details.public[0],
+                    episodeTitle: episode,
+                    episodeNumber: Number(number),
+                    sourceType: sources[0].type,
+                    sourceProvider: sources[0].provider,
+                    sourceUrl: singleSourceUrl,
+                    timecode: timecode,
+                  });
+                  window.open(singleSourceUrl, "_blank");
+                }
+              : undefined;
+
+            return (
+              <Card
+                key={`${index}-${episode}`}
+                shadow="sm"
+                radius="md"
+                color="gray"
+                className={
+                  hasSingleSource
+                    ? "podcast-episode podcast-episode-clickable"
+                    : "podcast-episode"
+                }
+                onClick={handleSingleClick}
+              >
+                <Group
+                  gap="lg"
+                  wrap="nowrap"
+                  justify="space-between"
+                  align="center"
+                >
+                  <div>
+                    <Text className="podcast-episode-title">{episode}</Text>
+                    <Text className="podcast-episode-time">
+                      Folge <strong>{number}</strong> —{" "}
+                      <span className="podcast-episode-time-value">
+                        {getTime(timecode)}
+                      </span>
+                    </Text>
+                    <Text className="podcast-episode-category">
+                      {publicName}
+                    </Text>
+                  </div>
+                  {hasSingleSource ? (
+                    <div className="podcast-episode-icon">
+                      {sources[0].provider &&
+                      providerLogos[sources[0].provider] ? (
+                        <img
+                          src={providerLogos[sources[0].provider].src}
+                          alt={providerLogos[sources[0].provider].alt}
+                          className="podcast-episode-provider-logo"
+                        />
+                      ) : (
+                        <TypeIcon type={sources[0].type} />
+                      )}
+                    </div>
+                  ) : (
+                    <Stack gap={6} className="podcast-source-buttons">
+                      {sources.map((source, sourceIndex) => {
+                        const sourceUrl =
+                          source.provider === "spotify"
+                            ? `${source.url}?t=${timecode}`
+                            : source.url;
+                        const logo =
+                          source.provider &&
+                          providerLogos[source.provider];
+                        return (
+                          <button
+                            key={sourceIndex}
+                            type="button"
+                            className="podcast-source-button"
+                            onClick={() => {
+                              track("Podcast Episode Clicked", {
+                                breedId: String(selectedBreed.id),
+                                breedName:
+                                  selectedBreed.details.public[0],
+                                episodeTitle: episode,
+                                episodeNumber: Number(number),
+                                sourceType: source.type,
+                                sourceProvider: source.provider,
+                                sourceUrl: sourceUrl,
+                                timecode: timecode,
+                              });
+                              window.open(sourceUrl, "_blank");
+                            }}
+                          >
+                            {logo && (
+                              <img
+                                src={logo.src}
+                                alt={logo.alt}
+                                className="podcast-source-button-logo"
+                              />
+                            )}
+                            <span className="podcast-source-button-label">
+                              {logo ? logo.alt : "Anhören"}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </Stack>
                   )}
-                </div>
-                <Stack gap={0}>
-                  <Text key={episode} className="podcast-episode-title">
-                    {episode}
-                  </Text>
-                  <Text key={number} className="podcast-episode-time">
-                    Folge <strong>{number}</strong> —{" "}
-                    <span className="podcast-episode-time-value">
-                      {getTime(timecode)}
-                    </span>
-                  </Text>
-                  <Text key={publicName} className="podcast-episode-category">
-                    {publicName}
-                  </Text>
-                </Stack>
-              </Group>
-            </Card>
-          ),
+                </Group>
+              </Card>
+            );
+          },
         )}
         <Divider className="divider" />
         <Text size="sm" className="section-name">

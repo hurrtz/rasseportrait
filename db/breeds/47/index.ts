@@ -19,6 +19,11 @@ export default {
       episode: "Braunes Rauschen & veganes Futter",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3TqjdPTxy8CS5KySEZ4PLY",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/147-braunes-rauschen-veganes-futter-rq1a38523a8db",
           type: "audio",
           provider: "rtl",

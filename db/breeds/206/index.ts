@@ -19,6 +19,11 @@ export default {
       episode: "Ragebait, Qualzucht & Elch Erwin",
       sources: [
         {
+          url: "https://open.spotify.com/episode/2D9cdhEQlbFnnY2mqEdrWS",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/231-ragebait-qualzucht-elch-erwin-g4112jk713gpm",
           type: "audio",
           provider: "rtl",

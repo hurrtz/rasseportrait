@@ -19,6 +19,11 @@ export default {
       episode: "Hundepension, Katzenfänger & Let's Dance",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4FD2FcxZLob5KAZUOoW5sI",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/63-hundepension-katzenfaenger-lets-dance-dl5as9b3mwwhh",
           type: "audio",
           provider: "rtl",

@@ -20,6 +20,11 @@ export default {
         "Giftige Nüsse, Chihuahua im Rettungsdienst & Rütter als Lakritzfigur",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4dznIP7C0t9u5axmQdbMNj",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/64-giftige-nuesse-chihuahua-im-rettungsdienst-ruetter-als-lakritzfigur-1al7eu52bnser",
           type: "audio",
           provider: "rtl",

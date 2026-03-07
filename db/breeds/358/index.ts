@@ -19,6 +19,11 @@ export default {
       episode: "Reiherpfoten auf die Ohren - so war der ESC",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6gtrPiAGmCWuzhuLNjq9AN",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/218-reiherpfoten-auf-die-ohren-so-war-der-esc-n21vg9dgh2ixb",
           type: "audio",
           provider: "rtl",

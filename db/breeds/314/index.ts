@@ -19,6 +19,11 @@ export default {
       episode: "Ferien, Strohmann-Argumente & eine rätselhafte Hunderasse",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0W6iXGhOexIh7ykZQ9zvzz",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/73-ferien-strohmann-argumente-eine-raetselhafte-hunderasse-1x9e06d6pxpnr",
           type: "audio",
           provider: "rtl",

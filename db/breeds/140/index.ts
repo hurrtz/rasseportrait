@@ -19,6 +19,11 @@ export default {
       episode: "Wettkampfdruck & Dackelverbot",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0bdvBtxmZ2NV4GgT0PTIpM",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/160-wettkampfdruck-dackelverbot-u55fefrt71llx",
           type: "audio",
           provider: "rtl",

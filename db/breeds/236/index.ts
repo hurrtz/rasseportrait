@@ -19,6 +19,11 @@ export default {
       episode: "Aktuelle Folge",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4RvUsiSb3pFkgDLQWWYG7F",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/204-hodenhochstand-7knji9zctlnlj",
           type: "audio",
           provider: "rtl",

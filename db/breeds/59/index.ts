@@ -77,6 +77,11 @@ export default {
       episode: "Lasst mich bei den Affen!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4Mm1527NyzIbthgwQs5VAw",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/214-lasst-mich-bei-den-affen-lmh9y9fj3f4ar",
           type: "audio",
           provider: "rtl",

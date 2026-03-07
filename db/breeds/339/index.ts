@@ -20,6 +20,11 @@ export default {
       episode: "Kampf der Urzeitkrebse",
       sources: [
         {
+          url: "https://open.spotify.com/episode/1OmKJWRe18zWQZON1mBGYe",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/125-kampf-der-urzeitkrebse-i8h9g7dvtu49g",
           type: "audio",
           provider: "rtl",
@@ -39,6 +44,11 @@ export default {
       number: 233,
       episode: "Verliebt, verplant, verhunzt.",
       sources: [
+        {
+          url: "https://open.spotify.com/episode/4865lqmAbEWjOniA3hnxqH",
+          type: "audio",
+          provider: "spotify",
+        },
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/233-verliebt-verplant-verhunzt-88ikzih1g9717",
           type: "audio",

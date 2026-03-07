@@ -71,6 +71,11 @@ export default {
       episode: "Der Spitz, Zwingerhaltung & Puddingmatten",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7IoCyX0gNMIK5Sqz4ldi5f",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/49-der-spitz-zwingerhaltung-puddingmatten-7hsefpcuadjr7",
           type: "audio",
           provider: "rtl",

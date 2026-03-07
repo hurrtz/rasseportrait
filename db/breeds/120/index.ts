@@ -19,6 +19,11 @@ export default {
       episode: "Der Schattenwolf",
       sources: [
         {
+          url: "https://open.spotify.com/episode/51LFr3zr4ZI0BMee8k4j4u",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/213-der-schattenwolf-g3qxe03xyc2na",
           type: "audio",
           provider: "rtl",

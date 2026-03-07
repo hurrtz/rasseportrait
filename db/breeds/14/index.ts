@@ -25,6 +25,11 @@ export default {
       episode: "Kriegsschrecken, Kommunikationsmöhren & falsche Schildkröten",
       sources: [
         {
+          url: "https://open.spotify.com/episode/1uXDmKFep4i1Ay3P5iC4U2",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/83-kriegsschrecken-kommunikationsmoehren-falsche-schildkroeten-t7s7tgilkx2ql",
           type: "audio",
           provider: "rtl",

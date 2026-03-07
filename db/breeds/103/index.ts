@@ -19,6 +19,11 @@ export default {
       episode: "Feindliche Natur, Jagdverhalten & Hundehomöopathie",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3XFOHj3J1Ldn2BGjSJKhKQ",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/103-feindliche-natur-jagdverhalten-hundehomoeopathie-w2n7ys2hcqab2",
           type: "audio",
           provider: "rtl",

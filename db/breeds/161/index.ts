@@ -19,6 +19,11 @@ export default {
       episode: "ASMR, Beagle und Wombatkacke",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4I6vQoMHdS5LYhJHY7p4ta",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/45-asmr-beagle-und-wombatkacke-iesctegwj6jg6",
           type: "audio",
           provider: "rtl",

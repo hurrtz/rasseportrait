@@ -19,6 +19,11 @@ export default {
       episode: 'Hausfuchs! Ein Crosspodcast mit "Behind Science"',
       sources: [
         {
+          url: "https://open.spotify.com/episode/1jSDj4KMBJiFq6iptMC25k",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/190-hausfuchs-ein-crosspodcast-mit-behind-science-t635dvd6wdi21",
           type: "audio",
           provider: "rtl",

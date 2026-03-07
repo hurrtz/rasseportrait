@@ -24,6 +24,11 @@ export default {
       episode: "R.I.P. Kuno",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5zeY1fOvfhLXC9lGJtHJy6",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/168-rip-kuno-wq8x5w4z45ctt",
           type: "audio",
           provider: "rtl",

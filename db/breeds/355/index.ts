@@ -19,6 +19,11 @@ export default {
       episode: "Tierwohl paradox",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7L1gvasi0ud0p06nrOwjbx",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/186-tierwohl-paradox-kpxqn1g2q73xu",
           type: "audio",
           provider: "rtl",

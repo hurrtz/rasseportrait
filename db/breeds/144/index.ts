@@ -19,6 +19,11 @@ export default {
       episode: "Ticketbetrug, Fakeprofile & Schadstoffe im Hundespielzeug",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3blhwnMu1cTy8fKRlVcmWn",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/80-ticketbetrug-fakeprofile-schadstoffe-im-hundespielzeug-3s90k5fnxokpg",
           type: "audio",
           provider: "rtl",

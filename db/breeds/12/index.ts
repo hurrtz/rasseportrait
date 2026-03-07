@@ -26,6 +26,11 @@ export default {
       episode: "Martins Solo-Folge",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7FGcmOkN5J30HMyOl0ePNM",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-3-martins-solo-folge-tfmv41s6tzg65",
           type: "audio",
           provider: "rtl",
@@ -45,6 +50,11 @@ export default {
       number: "Summer Edition #5",
       episode: "Grausame Natur",
       sources: [
+        {
+          url: "https://open.spotify.com/episode/5B39HBurOnFxMKAsYIIBNo",
+          type: "audio",
+          provider: "spotify",
+        },
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-5-grausame-natur-2cmtu8gbfflgx",
           type: "audio",

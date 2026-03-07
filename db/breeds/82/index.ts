@@ -19,6 +19,11 @@ export default {
       episode: "Garnelenfieber",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3SEcaPNdbDj5BGev5UMm4W",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/156-garnelenfieber-xhvk5s6b64dc4",
           type: "audio",
           provider: "rtl",

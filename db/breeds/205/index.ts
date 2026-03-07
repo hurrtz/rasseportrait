@@ -19,6 +19,11 @@ export default {
       episode: "Akani, Igelnot & ein Gerichtsurteil",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7z9gK7M2J7LITtURdFANjg",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/194-akani-igelnot-ein-gerichtsurteil-rtb0827raqywx",
           type: "audio",
           provider: "rtl",

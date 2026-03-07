@@ -15,6 +15,11 @@ export default {
       episode: "Naturstumper",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0K3ETjNkKuSFqC9siVtzNq",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/197-naturstumper-dsjc2lg3wwjlx",
           type: "audio",
           provider: "rtl",

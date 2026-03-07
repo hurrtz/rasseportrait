@@ -19,6 +19,11 @@ export default {
       episode: "Sommernostalgie und Bahnärger",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7jSZqTThO7CM3jJzEqpskm",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-2-sommernostalgie-und-bahnaerger-0fne38y8v7soe",
           type: "audio",
           provider: "rtl",

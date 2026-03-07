@@ -19,6 +19,11 @@ export default {
       episode: "Mischwesen & Cancelculture",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7GFUZ3Skn03uVy1jVnJEvk",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/134-mischwesen-cancelculture-v758khsqvx1l5",
           type: "audio",
           provider: "rtl",

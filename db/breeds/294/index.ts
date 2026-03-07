@@ -19,6 +19,11 @@ export default {
       episode: "Otterjagd & Dackelkatzen",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0QuSoBvMgK4ro8oSgQulTd",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/157-otterjagd-dackelkatzen-jfhrn0c2yrt91",
           type: "audio",
           provider: "rtl",

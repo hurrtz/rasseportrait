@@ -19,6 +19,11 @@ export default {
       episode: "Getreidefreie Folge",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3dCzJBZHsgWdfnySkv5Ym1",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/118-getreidefreie-folge-usumre6izvygu",
           type: "audio",
           provider: "rtl",

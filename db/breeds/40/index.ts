@@ -19,6 +19,11 @@ export default {
       episode: "Fischklingel, Osterfeuer & Weizenfarbe",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0hk0llTTOviPX4xmilmmWq",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/159-fischklingel-osterfeuer-weizenfarbe-o1tpe1gkh4pyu",
           type: "audio",
           provider: "rtl",

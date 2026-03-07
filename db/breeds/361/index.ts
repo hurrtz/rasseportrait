@@ -19,6 +19,11 @@ export default {
       episode: "Willkommen, Trudi!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5ewp9Ew7atwRzNfDwB2wPK",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/232-willkommen-trudi-233yrn8zkcaj2",
           type: "audio",
           provider: "rtl",

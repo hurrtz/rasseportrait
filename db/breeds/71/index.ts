@@ -19,6 +19,11 @@ export default {
       episode: "Rattenfänger",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6k51VfkRBwjPli6rCtmWrj",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/158-rattenfaenger-2gvydqa8svsq9",
           type: "audio",
           provider: "rtl",

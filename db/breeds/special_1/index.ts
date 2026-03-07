@@ -15,6 +15,11 @@ export default {
       episode: "Elos, eckige Hühner & blutrünstige Nutrias",
       sources: [
         {
+          url: "https://open.spotify.com/episode/1xTPnkAHlYR4vQyIkYBuU4",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/32-elos-eckige-huehner-blutruenstige-nutrias-cn96yspmq7wbu",
           type: "audio",
           provider: "rtl",

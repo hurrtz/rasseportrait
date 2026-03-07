@@ -19,6 +19,11 @@ export default {
       episode: "Der Amselrüde",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0Bhh2jP9XKRYOl3tsrMLkG",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/209-der-amselruede-1mufixb6e2c69",
           type: "audio",
           provider: "rtl",

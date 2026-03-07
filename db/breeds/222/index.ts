@@ -19,6 +19,11 @@ export default {
       episode: "Prosit Neujahr!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3GKmLeZa4hskj0LQZFUvDw",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/199-prosit-neujahr-98cdxhj3nfpmb",
           type: "audio",
           provider: "rtl",

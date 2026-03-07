@@ -19,6 +19,11 @@ export default {
       episode: "Biber an die Macht",
       sources: [
         {
+          url: "https://open.spotify.com/episode/36hxXuT8npVLx8DjhUpcfH",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/205-biber-an-die-macht-4jqr0gglrlroo",
           type: "audio",
           provider: "rtl",
@@ -38,6 +43,11 @@ export default {
       number: 134,
       episode: "Mischwesen & Cancelculture",
       sources: [
+        {
+          url: "https://open.spotify.com/episode/7GFUZ3Skn03uVy1jVnJEvk",
+          type: "audio",
+          provider: "spotify",
+        },
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/134-mischwesen-cancelculture-v758khsqvx1l5",
           type: "audio",

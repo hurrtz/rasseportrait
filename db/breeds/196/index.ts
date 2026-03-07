@@ -19,6 +19,11 @@ export default {
       episode: "Der Hundeprofi unterwegs & Eifersucht in der Podcast-Ehe",
       sources: [
         {
+          url: "https://open.spotify.com/episode/2WCAESy9u1sjWbXT6O4GBJ",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/161-der-hundeprofi-unterwegs-eifersucht-in-der-podcast-ehe-jmf8cndv5kf19",
           type: "audio",
           provider: "rtl",

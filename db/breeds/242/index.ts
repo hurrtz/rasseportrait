@@ -24,6 +24,11 @@ export default {
       episode: "Hirschkäfer fliegt",
       sources: [
         {
+          url: "https://open.spotify.com/episode/2IdCUrRYmx63EThWkvPEkb",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/223-hirschkaefer-flieg-mtn0ofyb3vlsl",
           type: "audio",
           provider: "rtl",

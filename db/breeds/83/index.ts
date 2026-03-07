@@ -19,6 +19,11 @@ export default {
       episode: "Der schwere Duft von Ryanair",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4KljdHH21yfpUBf4yA37iY",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/222-der-schwere-duft-von-ryanair-82gd9hzof390x",
           type: "audio",
           provider: "rtl",

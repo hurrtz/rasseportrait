@@ -25,6 +25,11 @@ export default {
       episode: "Schnitzelbankabend & Kompetenzvermutung",
       sources: [
         {
+          url: "https://open.spotify.com/episode/51a3LyB0f2Imj29gP6BuyN",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/154-schnitzelbankabend-kompetenzvermutung-k2ec0em6e8dt4",
           type: "audio",
           provider: "rtl",

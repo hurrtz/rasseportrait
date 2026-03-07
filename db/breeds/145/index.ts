@@ -19,6 +19,11 @@ export default {
       episode: '"Hundjes", Schreckreiz & Italopop',
       sources: [
         {
+          url: "https://open.spotify.com/episode/2xzTXgcRFf1sKhVcSIMYIP",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/111-hundjes-schreckreiz-italopop-ba9cvkn3rq8je",
           type: "audio",
           provider: "rtl",

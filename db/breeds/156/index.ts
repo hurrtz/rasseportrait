@@ -32,6 +32,11 @@ export default {
       episode: "Missing Dog Syndrome",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6mnOJa7YiYx5KXjE6IuSlL",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/216-missing-dog-syndrome-v6p8x3s3b42pg",
           type: "audio",
           provider: "rtl",

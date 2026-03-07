@@ -19,6 +19,11 @@ export default {
       episode: "Toadzilla, Tierhandel bei Ebay & Fischloopings",
       sources: [
         {
+          url: "https://open.spotify.com/episode/29c6mQI8jAJoxmlr0Dpp4F",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/98-toadzilla-tierhandel-bei-ebay-fischloopings-3ajopzugmpayq",
           type: "audio",
           provider: "rtl",

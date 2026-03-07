@@ -26,6 +26,11 @@ export default {
       episode: "Suppenattacke, Rudelbegegnung & 1 eiliger Aufruf!!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7nBC3vzx2E7Fe9bQSnjTz1",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/85-suppenattacke-rudelbegegnung-1-eiliger-aufruf-zyhm5ofxax4e1",
           type: "audio",
           provider: "rtl",

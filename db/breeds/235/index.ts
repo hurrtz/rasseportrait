@@ -28,6 +28,11 @@ export default {
       episode: "Riesen, Hämorrhoiden & Essgeräusche",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5YSlRkvQGXoXai0g7UR2nw",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/riesen-haemorrhoiden-essgeraeusche-2bv0xl50a0o8p",
           type: "audio",
           provider: "rtl",

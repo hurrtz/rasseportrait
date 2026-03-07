@@ -19,6 +19,11 @@ export default {
       episode: "Jubiläumsfolge live aus dem Walfisch",
       sources: [
         {
+          url: "https://open.spotify.com/episode/50OSDnKsEqyiFfrHXJmJRS",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/101-jubilaeumsfolge-live-aus-dem-walfisch-du0ci4j36ofr2",
           type: "audio",
           provider: "rtl",

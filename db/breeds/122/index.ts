@@ -19,6 +19,11 @@ export default {
       episode: "Menschen, Biber, Emotionen",
       sources: [
         {
+          url: "https://open.spotify.com/episode/2I2f7Sr2bJIXJgW9w92W6l",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/94-menschen-biber-emotionen-qm9qeqv1xrlas",
           type: "audio",
           provider: "rtl",

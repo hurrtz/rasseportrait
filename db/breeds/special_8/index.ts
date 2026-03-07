@@ -15,6 +15,11 @@ export default {
       episode: "Tierbegegnungen",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6ZeaHpiYJV0HBiEL2fn9QQ",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/187-tierbegegnungen-h4530ab2gu9v7",
           type: "audio",
           provider: "rtl",

@@ -24,6 +24,11 @@ export default {
       episode: "Vorsicht vor Weihnachten",
       sources: [
         {
+          url: "https://open.spotify.com/episode/37O7xJSZiUQNMrVz3PhRge",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/91-vorsicht-vor-weihnachten-8afvekcm6qtq4",
           type: "audio",
           provider: "rtl",

@@ -32,34 +32,41 @@
 
 .podcast-episode {
   background-color: #ffdd9a;
-  padding: 16px 24px;
-  cursor: pointer;
+  padding: 16px 20px;
 }
 
 .podcast-episode + .podcast-episode {
   margin-top: 8px;
 }
 
-.podcast-episode:hover {
-  background-color: #eea13b;
+/* Single-source: entire card is clickable */
+.podcast-episode-clickable {
+  cursor: pointer;
 }
 
+.podcast-episode-clickable:hover {
+  background-color: #f5d080;
+}
+
+/* Single-source icon column */
 .podcast-episode-icon {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  width: 24px;
-  align-self: stretch;
+  justify-content: center;
+  width: 36px;
   flex-shrink: 0;
 }
 
-.podcast-episode-icon svg,
-.podcast-episode-provider-logo {
-  width: 100%;
-  height: auto;
+.podcast-episode-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
+.podcast-episode-provider-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
 
 .podcast-episode-title {
   font-weight: 400;
@@ -68,7 +75,7 @@
 .podcast-episode-time {
   font-weight: 300;
   font-size: 12px;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .podcast-episode-time-value {
@@ -81,8 +88,45 @@
   font-size: 12px;
 }
 
-.podcast-episode-type {
-  font-weight: 300;
+/* Multi-source: provider buttons stacked on the right */
+.podcast-source-buttons {
+  flex-shrink: 0;
+}
+
+.podcast-source-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 40px;
+}
+
+.podcast-source-button:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.podcast-source-button:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.podcast-source-button-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.podcast-source-button-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.75);
+  white-space: nowrap;
 }
 
 .further-readings {

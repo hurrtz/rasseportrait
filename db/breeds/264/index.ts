@@ -19,6 +19,11 @@ export default {
       episode: "Sternzeichen Bergziege",
       sources: [
         {
+          url: "https://open.spotify.com/episode/19wBQrwc5Fv6J8Ku8NtF3O",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/236-sternzeichen-bergziege-cc5x12bdhoocs",
           type: "audio",
           provider: "rtl",

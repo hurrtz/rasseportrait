@@ -20,6 +20,11 @@ export default {
       episode: "Glow down, Hund & Baby, Lösseler Waldgeist",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7sHVk9kADUkcsb1EqaHgPT",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/59-glow-down-hund-baby-loesseler-waldgeist-qthfcbunlahuh",
           type: "audio",
           provider: "rtl",

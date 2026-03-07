@@ -19,6 +19,11 @@ export default {
       episode: "Blümerle",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7tF6dd3F1TJ39QsfGHM36w",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/182-bluemerle-wwapqiaojdbki",
           type: "audio",
           provider: "rtl",

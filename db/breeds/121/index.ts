@@ -23,6 +23,11 @@ export default {
       episode: "Einhoder, König der Kindsköpfe & verkohlte Hundepfoten",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0qEYAZv2Cc4nLM5Y1nDuKt",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/68-einhoder-koenig-der-kindskoepfe-verkohlte-hundepfoten-xyr6ciyqxhzcf",
           type: "audio",
           provider: "rtl",
@@ -42,6 +47,11 @@ export default {
       number: 183,
       episode: "Schiebeflöte",
       sources: [
+        {
+          url: "https://open.spotify.com/episode/253oOTNMTSFcKAwqpMEFuk",
+          type: "audio",
+          provider: "spotify",
+        },
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/183-schiebefloete-z8ui95rb5t0rv",
           type: "audio",

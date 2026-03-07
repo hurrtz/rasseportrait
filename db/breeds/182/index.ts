@@ -20,6 +20,11 @@ export default {
       episode: "Welpenhändler, Zerrspiele & Spartipps Teil 2",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6ONP8WgQN9g5I6GoAWWDdF",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/57-welpenhaendler-zerrspiele-spartipps-teil-2-it4nn687n9bsg",
           type: "audio",
           provider: "rtl",

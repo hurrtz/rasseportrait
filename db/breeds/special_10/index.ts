@@ -15,6 +15,11 @@ export default {
       episode: "Hunde, Hysterie und Heuriger",
       sources: [
         {
+          url: "https://open.spotify.com/episode/40pXckz24mgFXLNqmNdlb1",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/201-hunde-hysterie-und-heuriger-t3vap4q0lxtuo",
           type: "audio",
           provider: "rtl",

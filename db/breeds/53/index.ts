@@ -19,6 +19,11 @@ export default {
       episode: "Podcast live II: Achterbahn der Feelings",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7HsymVywazWWSqaoQWUUow",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/127-podcast-live-ii-achterbahn-der-feelings-kk19bjk32yh1x",
           type: "audio",
           provider: "rtl",

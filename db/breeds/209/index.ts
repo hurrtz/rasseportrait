@@ -19,6 +19,11 @@ export default {
       episode: "Ein Helm für Chihuahuas, Kack-Typen & Mähroboter",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5765Ks1PlvRbzMxfy91X8s",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/61-ein-helm-fuer-chihuahuas-kack-typen-maehroboter-jd7qib7z8uurv",
           type: "audio",
           provider: "rtl",

@@ -20,6 +20,11 @@ export default {
       episode: "Morbus Bahlsen & Acoustic Kitty",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6SnCCED7Ughfiwb919hHzo",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/121-morbus-bahlsen-acoustic-kitty-qdz3pnuu3ngfr",
           type: "audio",
           provider: "rtl",

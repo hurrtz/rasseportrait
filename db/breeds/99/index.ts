@@ -41,6 +41,11 @@ export default {
       episode: "Richtig Helfen, fliegende Kotbeutel & der Weimaraner",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6GOeoaJTrnYl65XwFhNxlV",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/52-richtig-helfen-fliegende-kotbeutel-der-weimaraner-m5dz64ld7wmvh",
           type: "audio",
           provider: "rtl",

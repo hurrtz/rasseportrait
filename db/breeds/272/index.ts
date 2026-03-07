@@ -19,6 +19,11 @@ export default {
       episode: "Werwolf-Syndrom",
       sources: [
         {
+          url: "https://open.spotify.com/episode/2A50OUvprEGtIxTeeTo67r",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/196-werwolf-syndrom-q5qmkz4aol7wd",
           type: "audio",
           provider: "rtl",

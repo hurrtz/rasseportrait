@@ -19,6 +19,11 @@ export default {
       episode: "Faultiere, Hitzschlag & Leben nach dem Tod",
       sources: [
         {
+          url: "https://open.spotify.com/episode/1l7VOgpMeGwpN5rWCaFNPi",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/75-faultiere-hitzschlag-leben-nach-dem-tod-rqnqcr03z9fmo",
           type: "audio",
           provider: "rtl",

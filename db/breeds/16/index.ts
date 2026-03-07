@@ -19,6 +19,11 @@ export default {
       episode: "Brüten & Setzen!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/2u97E7tRb2cCdZjm9UWKye",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/112-brueten-setzen-c0h1emp4yng4h",
           type: "audio",
           provider: "rtl",

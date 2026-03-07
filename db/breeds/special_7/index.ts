@@ -15,6 +15,11 @@ export default {
       episode: "Genug ist genug",
       sources: [
         {
+          url: "https://open.spotify.com/episode/14CxlyAR98S8Te3ATPhVdD",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/185-genug-ist-genug-lh5uilbydwhba",
           type: "audio",
           provider: "rtl",

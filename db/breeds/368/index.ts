@@ -23,6 +23,11 @@ export default {
       episode: "Sofafolge",
       sources: [
         {
+          url: "https://open.spotify.com/episode/50BRiNTMi4kNxYHrI0bNmb",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/164-sofafolge-k911jyp1xsjm0",
           type: "audio",
           provider: "rtl",

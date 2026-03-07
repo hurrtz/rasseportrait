@@ -30,6 +30,11 @@ export default {
       episode: "Leuchtspray für alle!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/6PmwnDEFA27FytNMPmsS6r",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/152-leuchtspray-fuer-alle-nd21vdwsoa26d",
           type: "audio",
           provider: "rtl",

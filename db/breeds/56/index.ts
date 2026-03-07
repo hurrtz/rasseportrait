@@ -19,6 +19,11 @@ export default {
       episode: "Beamende Zecken, Kalsarikännit & Hundeduft",
       sources: [
         {
+          url: "https://open.spotify.com/episode/7HTsAZmmzI6ZjuexY0vHBI",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/128-beamende-zecken-kalsarikaennit-hundeduft-6vu1gxku02uiq",
           type: "audio",
           provider: "rtl",

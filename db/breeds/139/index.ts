@@ -19,6 +19,11 @@ export default {
       episode: "Bibi & Tina, Horoskope und ein absurdes Rasse-Ranking",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0gzKYiyPpRSboj6AkK45HF",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/106-bibi-tina-horoskope-und-ein-absurdes-rasse-ranking-vzrl6k8ajwg7p",
           type: "audio",
           provider: "rtl",

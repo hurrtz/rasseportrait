@@ -19,6 +19,11 @@ export default {
       episode: "Lost in the Sauerland, Boris Becker & Hunderassen-Studie",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4ayOel2kWgnGnjtb0phvfK",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/60-lost-in-the-sauerland-boris-becker-hunderassen-studie-qgpee4hjubcmh",
           type: "audio",
           provider: "rtl",

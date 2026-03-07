@@ -19,6 +19,11 @@ export default {
       episode: "Das bisschen Blut!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/19wBQrwc5Fv6J8Ku8NtF3O",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/235-das-bisschen-blut-l2xj1fwex331z",
           type: "audio",
           provider: "rtl",

@@ -42,6 +42,11 @@ export default {
         "Hundetraining aus der Sprühflasche, Maulkorb & der Deutsche Schäferhund",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4UL4LOSPZ0s2lwDAcM2hP2",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/55-hundetraining-aus-der-spruehflasche-maulkorb-der-deutsche-schaeferhund-v2o7yjc6mh4we",
           type: "audio",
           provider: "rtl",
@@ -61,6 +66,11 @@ export default {
       number: 215,
       episode: "Viele Fragen uns ja…",
       sources: [
+        {
+          url: "https://open.spotify.com/episode/3C7MV9XfAHGJaq7qJqrf7d",
+          type: "audio",
+          provider: "spotify",
+        },
         {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/215-viele-fragen-uns-ja-2qjfbgxlbz4cv",
           type: "audio",

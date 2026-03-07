@@ -19,6 +19,11 @@ export default {
       episode: "Parlamentskreis Hund",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4XDJF52l597Eo4bcl4g9Rn",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/153-parlamentskreis-hund-yijtj5yrhqgo1",
           type: "audio",
           provider: "rtl",

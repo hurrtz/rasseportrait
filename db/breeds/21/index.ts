@@ -19,6 +19,11 @@ export default {
       episode: "Einfach mal sitzen",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5Om5O5uNwdywwZ1Jm8aOr7",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/129-einfach-mal-sitzen-dbc2cl161xydt",
           type: "audio",
           provider: "rtl",

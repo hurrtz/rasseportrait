@@ -19,6 +19,11 @@ export default {
       episode: "Es ist zu warm",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4ZWXOsvZU2EjV95fw36AEe",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/120-es-ist-zu-warm-02gkj0kij1nng",
           type: "audio",
           provider: "rtl",

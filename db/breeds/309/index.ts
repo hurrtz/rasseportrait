@@ -19,6 +19,11 @@ export default {
       episode: "Faltenhund & Faktenflut",
       sources: [
         {
+          url: "https://open.spotify.com/episode/4sfPUcUBdmh4qpwbtTb9A8",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/238-faltenhund-faktenflut-c8w8twnxlowab",
           type: "audio",
           provider: "rtl",

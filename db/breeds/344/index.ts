@@ -23,6 +23,11 @@ export default {
       episode: "Hobby Horsing for Olympia!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/2cFVGVYSRu7GxrVStmccLq",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-7-hobby-horsing-for-olympia-7pbpazh2zvi72",
           type: "audio",
           provider: "rtl",

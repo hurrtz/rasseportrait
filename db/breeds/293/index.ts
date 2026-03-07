@@ -25,6 +25,11 @@ export default {
       episode: "Kurioser Unfall, Katzenbegegnungen & Fledermausbomben",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0WBZfct2OxifCvI74Fy8M6",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/122-kurioser-unfall-katzenbegegnungen-fledermausbomben-vdy2nybu1xoqm",
           type: "audio",
           provider: "rtl",

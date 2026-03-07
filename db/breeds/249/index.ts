@@ -25,6 +25,11 @@ export default {
       episode: "Ameisen-Waschstraße",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5oXeX2yNlvgqnNL9geGJwn",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/167-ameisen-waschstrasse-sctwq1mdogjpv",
           type: "audio",
           provider: "rtl",

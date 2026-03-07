@@ -19,6 +19,11 @@ export default {
       episode: "Eine Laune der Natur",
       sources: [
         {
+          url: "https://open.spotify.com/episode/10RYFdJ0Vl4eKv98yesYog",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/150-eine-laune-der-natur-urjn3ugdyex4s",
           type: "audio",
           provider: "rtl",

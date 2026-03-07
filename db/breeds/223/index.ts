@@ -39,6 +39,11 @@ export default {
       episode: "Körper kräftig, aber nicht ohne Adel!",
       sources: [
         {
+          url: "https://open.spotify.com/episode/2kdWfZ5q9h8qXNMcwQaZly",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/summer-edition-4-koerper-kraeftig-aber-nicht-ohne-adel-zjwmcmhv4vzuh",
           type: "audio",
           provider: "rtl",

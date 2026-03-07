@@ -19,6 +19,11 @@ export default {
       episode: "Herbstanfang",
       sources: [
         {
+          url: "https://open.spotify.com/episode/1XKgUDos94HCURl9aKS81n",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/135-herbstanfang-mjmh2c8xp08jy",
           type: "audio",
           provider: "rtl",

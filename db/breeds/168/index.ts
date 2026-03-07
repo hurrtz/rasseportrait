@@ -19,6 +19,11 @@ export default {
       episode: "Co-Ownership & Knochen knacken",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3gdQGUspzQFdA8FvmTytFR",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/139-co-ownership-knochen-knacken-3ht5yygef4ypm",
           type: "audio",
           provider: "rtl",

@@ -19,6 +19,11 @@ export default {
       episode: "Ein bisschen Paloma",
       sources: [
         {
+          url: "https://open.spotify.com/episode/3VHqKJWsC2Tkn9CRPzA4nL",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/133-ein-bisschen-paloma-189d70agws5z3",
           type: "audio",
           provider: "rtl",

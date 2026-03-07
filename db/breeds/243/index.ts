@@ -19,6 +19,11 @@ export default {
       episode: "Naturstumper",
       sources: [
         {
+          url: "https://open.spotify.com/episode/5k85DiiTWyI7tiUMGjoxJI",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/198-der-teuerste-floh-der-welt-drn0227qdnmu2",
           type: "audio",
           provider: "rtl",

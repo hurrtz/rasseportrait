@@ -20,6 +20,11 @@ export default {
         "Ein Keks mit Folgen, Körpersprache für Hunde & schöne Geschenke",
       sources: [
         {
+          url: "https://open.spotify.com/episode/0Rusti3dNYkEr6iV1sisfh",
+          type: "audio",
+          provider: "spotify",
+        },
+        {
           url: "https://plus.rtl.de/podcast/tierisch-menschlich-der-podcast-mit-hundeprofi-martin-ruetter-und-katharina-adick-m5iuweomug8fv/65-ein-keks-mit-folgen-koerpersprache-fuer-hunde-schoene-geschenke-362zgzakgwpmb",
           type: "audio",
           provider: "rtl",
