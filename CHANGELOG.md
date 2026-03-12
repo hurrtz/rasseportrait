@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.11.0](https://github.com/hurrtz/rasseportrait/compare/v3.10.0...v3.11.0) (2026-03-12)
+
+
+### Features
+
+* add Kerry Blue Terrier ([fc059af](https://github.com/hurrtz/rasseportrait/commit/fc059af7924ed3632e7e91a02ffab750a936468b))
+
 ## [3.10.0](https://github.com/hurrtz/rasseportrait/compare/v3.9.0...v3.10.0) (2026-03-07)
 
 
