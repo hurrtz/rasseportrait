@@ -86,6 +86,7 @@ import Jaemthund from "./42";
 import JapaneseChin from "./206";
 import JapaneseSpitz from "./262";
 import KarelianBearDog from "./48";
+import KerryBlueTerrier from "./3";
 import Kokoni from "./special_8";
 import Komondor from "./53";
 import Kromfohrlaender from "./192";
@@ -252,6 +253,7 @@ export default {
   JapaneseChin,
   JapaneseSpitz,
   KarelianBearDog,
+  KerryBlueTerrier,
   Kokoni,
   Komondor,
   Kromfohrlaender,
