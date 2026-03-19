@@ -161,6 +161,7 @@ import ViszlaShort from "./57";
 import ViszlaWire from "./239";
 import Weimaraner from "./99";
 import Westfalenterrier from "./special_5";
+import WestHighlandWhiteTerrier from "./85";
 import Wetterhoun from "./221";
 import YorkshireTerrier from "./86";
 
@@ -328,6 +329,7 @@ export default {
   ViszlaWire,
   Weimaraner,
   Westfalenterrier,
+  WestHighlandWhiteTerrier,
   Wetterhoun,
   YorkshireTerrier,
 } as const;
