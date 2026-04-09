@@ -24,6 +24,7 @@ import BlackNorwegianElkhound from "./268";
 import BologneseDog from "./196";
 import BolonkaZwetna from "./special_6";
 import BordeauxMastiff from "./116";
+import BorderCollie from "./297";
 import BorderTerrier from "./10";
 import BostonTerrier from "./140";
 import Briard from "./113";
@@ -192,6 +193,7 @@ export default {
   BologneseDog,
   BolonkaZwetna,
   BordeauxMastiff,
+  BorderCollie,
   BorderTerrier,
   BostonTerrier,
   Briard,
