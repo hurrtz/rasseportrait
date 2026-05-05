@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.14.0](https://github.com/hurrtz/rasseportrait/compare/v3.13.0...v3.14.0) (2026-05-05)
+
+
+### Features
+
+* add Pekingese ([e403366](https://github.com/hurrtz/rasseportrait/commit/e4033667b0ad09c37099db331491189bf9649141))
+* add Xoloitzcuintle ([a662756](https://github.com/hurrtz/rasseportrait/commit/a662756ed852dea8a8bcbaf8a6ba66a355db5dfa))
+
 ## [3.13.0](https://github.com/hurrtz/rasseportrait/compare/v3.12.0...v3.13.0) (2026-04-09)
 
 
