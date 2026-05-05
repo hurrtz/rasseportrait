@@ -119,6 +119,7 @@ import Otterhound from "./294";
 import Papillon from "./77";
 import ParsonRussellTerrier from "./339";
 import PatterdaleTerrier from "./special_11";
+import Pekingese from './207'
 import PetitBrabancon from "./82";
 import PodencoIbicenco from "./89";
 import PodencoPortugues from "./94";
@@ -288,6 +289,7 @@ export default {
   Papillon,
   ParsonRussellTerrier,
   PatterdaleTerrier,
+  Pekingese,
   PetitBrabancon,
   PodencoIbicenco,
   PodencoPortugues,
