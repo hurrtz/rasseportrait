@@ -165,6 +165,7 @@ import Weimaraner from "./99";
 import Westfalenterrier from "./special_5";
 import WestHighlandWhiteTerrier from "./85";
 import Wetterhoun from "./221";
+import Xoloitzcuintle from './234'
 import YorkshireTerrier from "./86";
 
 export default {
@@ -335,5 +336,6 @@ export default {
   Westfalenterrier,
   WestHighlandWhiteTerrier,
   Wetterhoun,
+  Xoloitzcuintle,
   YorkshireTerrier,
 } as const;

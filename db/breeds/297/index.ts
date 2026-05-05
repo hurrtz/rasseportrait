@@ -28,7 +28,7 @@ export default {
         internal: "portrait",
         public: "Rasseportrait",
         timecode: 2690,
-        airDate: "2026-04-29",
+        airDate: "2026-04-08",
         isGuessable: true,
         isGuessedCorrectly: true,
         guessedBy: "mr",
