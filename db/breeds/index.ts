@@ -129,11 +129,13 @@ import PragueRatter from "./363";
 import PumiDog from "./56";
 import PyreneanMastiff from "./292";
 import PyreneanMountainDog from "./137";
+import RatoneroBodegueroAndaluz from "./371";
 import RhodesianRidgeback from "./146";
 import Rottweiler from "./147";
 import RussianToy from "./352";
 import SabuesoEspanol from "./204";
 import SamoyedDog from "./212";
+import Schafpudel from "./special_12";
 import Schipperke from "./83";
 import SchweizerLaufhund from "./59";
 import ScottishTerrier from "./73";
@@ -300,11 +302,13 @@ export default {
   PumiDog,
   PyreneanMastiff,
   PyreneanMountainDog,
+  RatoneroBodegueroAndaluz,
   RhodesianRidgeback,
   Rottweiler,
   RussianToy,
   SabuesoEspanol,
   SamoyedDog,
+  Schafpudel,
   Schipperke,
   SchweizerLaufhund,
   ScottishTerrier,
