@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.15.0](https://github.com/hurrtz/rasseportrait/compare/v3.14.0...v3.15.0) (2026-05-26)
+
+
+### Features
+
+* add Schafpudel and Ratonero Bodeguero Andaluz ([e95044f](https://github.com/hurrtz/rasseportrait/commit/e95044f103a4910b69a77b52966930c8177dc294))
+
 ## [3.14.0](https://github.com/hurrtz/rasseportrait/compare/v3.13.0...v3.14.0) (2026-05-05)
 
 
