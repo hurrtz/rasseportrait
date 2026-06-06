@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.16.0](https://github.com/hurrtz/rasseportrait/compare/v3.15.0...v3.16.0) (2026-06-06)
+
+
+### Features
+
+* add English Setter ([d8cc2c8](https://github.com/hurrtz/rasseportrait/commit/d8cc2c8b20097f16860a262c631bced99c1330da))
+
 ## [3.15.0](https://github.com/hurrtz/rasseportrait/compare/v3.14.0...v3.15.0) (2026-05-26)
 
 
