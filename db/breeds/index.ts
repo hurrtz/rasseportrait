@@ -54,6 +54,7 @@ import DutchShepherd from "./223";
 import DutchSmoushond from "./308";
 import Elo from "./special_1";
 import EnglishCockerSpaniel from "./5";
+import EnglishSetter from "./2";
 import EnglishSpringerSpaniel from "./125";
 import EntlebucherMountainDog from "./47";
 import Eurasier from "./291";
@@ -227,6 +228,7 @@ export default {
   DutchSmoushond,
   Elo,
   EnglishCockerSpaniel,
+  EnglishSetter,
   EnglishSpringerSpaniel,
   EntlebucherMountainDog,
   Eurasier,
