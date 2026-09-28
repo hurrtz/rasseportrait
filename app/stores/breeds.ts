@@ -5,7 +5,7 @@ import { type Breed } from "../../types/breed";
 import { getBreedVariantNames } from "./utils";
 import { sortBreeds } from "../pages/rasseportrait/utils";
 import { logger } from "~/utils/logger";
-import { generateBreedHashes } from "~/utils/generateBreedHash";
+import { toDisplayBreeds } from "~/utils/breed";
 import {
   BREEDS_STORE_NAME,
   DEFAULT_SORT_BY,
@@ -96,41 +96,10 @@ const useBreedsStore = create<State>()(
                 `Loaded ${breeds.length} breeds from JSON (compiled: ${data.meta?.compiled})`,
               );
 
-              // Use existing actions to set data
               const { setRawBreeds, setBreeds } =
                 useBreedsStore.getState().actions;
               setRawBreeds(breeds);
-
-              // Filter and merge breeds (logic from Rasseportrait page)
-              const { mergeGroupedBreeds } = await import(
-                "../pages/rasseportrait/utils"
-              );
-              const singleBreeds = breeds.filter(
-                (breed) => !breed.details.groupAs,
-              );
-              const mergedBreeds = mergeGroupedBreeds(breeds);
-              const allBreeds = [...singleBreeds, ...mergedBreeds];
-
-              // Generate unique hashes for all breed IDs
-              const hashMap = generateBreedHashes(allBreeds);
-
-              // Transform breed IDs to 4-character hashes
-              const breedsWithHashes = allBreeds.map((breed) => {
-                const hash = hashMap.get(breed.id);
-                if (!hash) {
-                  logger.warn(
-                    `No hash generated for breed ${breed.id}, using original ID`,
-                  );
-                  return breed;
-                }
-                return {
-                  ...breed,
-                  originalId: breed.id, // Keep original ID for reference (e.g., for image paths)
-                  id: hash,
-                };
-              });
-
-              setBreeds(breedsWithHashes);
+              setBreeds(toDisplayBreeds(breeds));
 
               set(
                 { initialized: true, loading: false },

@@ -1,4 +1,5 @@
 import type { Breed } from "../../types/breed";
+import { logger } from "./logger";
 
 // Safe characters for URLs (36 chars total: a-z, 0-9)
 const CHARS = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -110,7 +111,7 @@ export function generateBreedHashes(
 
     // If we still have a collision after all attempts (extremely unlikely with 4 chars)
     if (!found) {
-      console.error(
+      logger.error(
         `Failed to generate unique hash for breed ${originalId} after ${attempt} attempts`,
       );
       // Use original ID as fallback
@@ -128,7 +129,7 @@ export function generateBreedHashes(
   );
 
   if (collisionHandled.length > 0) {
-    console.log(
+    logger.info(
       `Handled collisions for ${collisionHandled.length} breeds:`,
       collisionHandled.map(([id]) => id),
     );

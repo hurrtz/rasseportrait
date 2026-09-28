@@ -59,6 +59,7 @@ interface BreedDetails {
 export interface Breed {
   id: number | string;
   originalId?: number | string; // Original ID before hashing (for image paths, etc.)
+  slug?: string; // URL slug of the detail page, set with the hashed id
   details: BreedDetails;
   classification: {
     fci: FCI | undefined;

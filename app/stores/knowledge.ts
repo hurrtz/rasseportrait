@@ -45,7 +45,7 @@ const useKnowledgeStore = create<State>()(
             const response = await fetch("/rasseportrait/data/knowledge.json");
             if (!response.ok) {
               throw new Error(
-                `Failed to load knowledge topics: ${response.status} ${response.statusText}`
+                `Failed to load knowledge topics: ${response.status} ${response.statusText}`,
               );
             }
 
@@ -57,7 +57,7 @@ const useKnowledgeStore = create<State>()(
             }
 
             logger.info(
-              `Loaded ${topics.length} knowledge topics from JSON (compiled: ${data.meta?.compiled})`
+              `Loaded ${topics.length} knowledge topics from JSON (compiled: ${data.meta?.compiled})`,
             );
 
             set(
@@ -67,7 +67,7 @@ const useKnowledgeStore = create<State>()(
                 loading: false,
               },
               undefined,
-              "initialize:success"
+              "initialize:success",
             );
           } catch (e) {
             const error = e instanceof Error ? e.message : ERROR_UNKNOWN;
@@ -75,7 +75,7 @@ const useKnowledgeStore = create<State>()(
             set(
               { error, loading: false, initialized: false },
               undefined,
-              "initialize:error"
+              "initialize:error",
             );
           }
         },
@@ -85,8 +85,8 @@ const useKnowledgeStore = create<State>()(
           set({ selectedTopic: id }, undefined, "setSelectedTopic"),
       },
     }),
-    { name: KNOWLEDGE_STORE_NAME }
-  )
+    { name: KNOWLEDGE_STORE_NAME },
+  ),
 );
 
 // Selectors and hooks

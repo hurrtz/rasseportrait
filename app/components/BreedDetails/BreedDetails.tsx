@@ -32,7 +32,6 @@ const providerLogos: Record<string, { src: string; alt: string }> = {
   spotify: { src: "/rasseportrait/spotify_logo.png", alt: "Spotify" },
 };
 
-
 const BreedDetails = () => {
   const selectedBreed = useSelectedBreed();
   const [activeSlide, setActiveSlide] = useState(0);
@@ -111,8 +110,8 @@ const BreedDetails = () => {
                 FCI
               </Text>
               <Text fw={300} size="xs" ta="center">
-                Standardnummer <strong>{fci.standardNumber}</strong>{" "}
-                (Gruppe {fci.group}, Sektion {fci.section})
+                Standardnummer <strong>{fci.standardNumber}</strong> (Gruppe{" "}
+                {fci.group}, Sektion {fci.section})
               </Text>
             </div>
           ) : (
@@ -133,12 +132,11 @@ const BreedDetails = () => {
             index,
           ) => {
             const hasSingleSource = sources.length === 1;
-            const singleSourceUrl =
-              hasSingleSource
-                ? sources[0].provider === "spotify"
-                  ? `${sources[0].url}?t=${timecode}`
-                  : sources[0].url
-                : "";
+            const singleSourceUrl = hasSingleSource
+              ? sources[0].provider === "spotify"
+                ? `${sources[0].url}?t=${timecode}`
+                : sources[0].url
+              : "";
 
             const handleSingleClick = hasSingleSource
               ? () => {
@@ -208,8 +206,7 @@ const BreedDetails = () => {
                             ? `${source.url}?t=${timecode}`
                             : source.url;
                         const logo =
-                          source.provider &&
-                          providerLogos[source.provider];
+                          source.provider && providerLogos[source.provider];
                         return (
                           <button
                             key={sourceIndex}
@@ -218,8 +215,7 @@ const BreedDetails = () => {
                             onClick={() => {
                               track("Podcast Episode Clicked", {
                                 breedId: String(selectedBreed.id),
-                                breedName:
-                                  selectedBreed.details.public[0],
+                                breedName: selectedBreed.details.public[0],
                                 episodeTitle: episode,
                                 episodeNumber: Number(number),
                                 sourceType: source.type,

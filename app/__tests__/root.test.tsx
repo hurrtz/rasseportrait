@@ -17,7 +17,7 @@ jest.mock("../App", () => ({
   default: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
-import { Layout } from "../root";
+import { Layout, links } from "../root";
 
 describe("root Layout", () => {
   it("declares the document language as German", () => {
@@ -28,5 +28,16 @@ describe("root Layout", () => {
     );
 
     expect(markup).toMatch(/<html lang="de"/);
+  });
+});
+
+describe("root links", () => {
+  it("loads Bricolage Grotesque and Atkinson Hyperlegible instead of Inter", () => {
+    const hrefs = links().map((link) => ("href" in link ? link.href : ""));
+    const fonts = hrefs.find((href) => href?.includes("css2"));
+
+    expect(fonts).toContain("family=Bricolage+Grotesque");
+    expect(fonts).toContain("family=Atkinson+Hyperlegible");
+    expect(hrefs.join(" ")).not.toContain("Inter");
   });
 });

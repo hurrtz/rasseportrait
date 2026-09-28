@@ -164,25 +164,28 @@ jest.mock("~/utils/logger", () => ({
 describe("Breeds Store", () => {
   beforeEach(() => {
     // Clear localStorage to prevent persisted state interference
-    if (typeof localStorage !== 'undefined') {
+    if (typeof localStorage !== "undefined") {
       localStorage.clear();
     }
-    
+
     // Manually reset store state to initial values
-    useBreedsStore.setState({
-      rawBreeds: [],
-      breeds: [],
-      selectedBreed: undefined,
-      loading: false,
-      error: null,
-      initialized: false,
-      search: {
-        needle: "",
-        results: [],
+    useBreedsStore.setState(
+      {
+        rawBreeds: [],
+        breeds: [],
+        selectedBreed: undefined,
+        loading: false,
+        error: null,
+        initialized: false,
+        search: {
+          needle: "",
+          results: [],
+        },
+        sortBy: "name",
+        sortOrder: "asc",
       },
-      sortBy: "name",
-      sortOrder: "asc",
-    }, false); // false = merge with existing state (keeps actions)
+      false,
+    ); // false = merge with existing state (keeps actions)
   });
 
   describe("Initial State", () => {
@@ -199,6 +202,36 @@ describe("Breeds Store", () => {
   });
 
   describe("Lifecycle - initialize()", () => {
+    it("loads breeds.json into display breeds with hashed ids and slugs", async () => {
+      const originalFetch = global.fetch;
+      global.fetch = jest.fn(async () => ({
+        ok: true,
+        json: async () => ({
+          breeds: [
+            {
+              ...mockBreed1,
+              id: 297,
+              details: { internal: "border_collie", public: ["Border Collie"] },
+            },
+          ],
+        }),
+      })) as unknown as typeof fetch;
+
+      try {
+        await act(async () => {
+          await useBreedsStore.getState().actions.initialize();
+        });
+      } finally {
+        global.fetch = originalFetch;
+      }
+
+      const [breed] = useBreedsStore.getState().breeds;
+      expect(useBreedsStore.getState().initialized).toBe(true);
+      expect(breed.slug).toBe("border-collie");
+      expect(breed.originalId).toBe(297);
+      expect(String(breed.id)).toMatch(/^[a-z0-9]{4}$/);
+    });
+
     it("should successfully initialize with breeds data", async () => {
       const { result: actionsResult } = renderHook(() => useBreedActions());
       const { result: initializedResult } = renderHook(() => useInitialized());
@@ -286,12 +319,15 @@ describe("Breeds Store", () => {
   describe("Actions", () => {
     it("should set raw breeds", () => {
       const actions = useBreedsStore.getState().actions;
-      
+
       act(() => {
         actions.setRawBreeds([mockBreed1, mockBreed2]);
       });
 
-      expect(useBreedsStore.getState().rawBreeds).toEqual([mockBreed1, mockBreed2]);
+      expect(useBreedsStore.getState().rawBreeds).toEqual([
+        mockBreed1,
+        mockBreed2,
+      ]);
     });
 
     it("should set breeds", () => {
@@ -301,7 +337,10 @@ describe("Breeds Store", () => {
         actions.setBreeds([mockBreed1, mockBreed2]);
       });
 
-      expect(useBreedsStore.getState().breeds).toEqual([mockBreed1, mockBreed2]);
+      expect(useBreedsStore.getState().breeds).toEqual([
+        mockBreed1,
+        mockBreed2,
+      ]);
     });
 
     it("should update a specific breed", () => {

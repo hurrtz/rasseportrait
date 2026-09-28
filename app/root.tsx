@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 import "@mantine/core/styles.css";
+import "./styles/tokens.css";
 import {
   ColorSchemeScript,
   MantineProvider,
@@ -16,6 +17,7 @@ import {
 } from "@mantine/core";
 import type { Route } from "./+types/root";
 import AppWrapper from "./App";
+import { cssVariablesResolver, theme } from "./theme";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -26,7 +28,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap",
   },
 ];
 
@@ -38,9 +40,9 @@ export function HydrateFallback() {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        fontFamily: "Inter, sans-serif",
+        fontFamily: "var(--rp-font-body)",
         fontSize: "18px",
-        color: "#666",
+        color: "var(--rp-text-muted)",
       }}
     >
       <div style={{ textAlign: "center" }}>
@@ -92,12 +94,16 @@ export const Layout = ({ children }: { children: ReactNode }) => (
         sizes="256x256"
       />
       <link rel="icon" href="/rasseportrait/favicon.ico" />
-      <ColorSchemeScript />
+      <ColorSchemeScript forceColorScheme="light" />
 
       <Links />
     </head>
     <body>
-      <MantineProvider>
+      <MantineProvider
+        theme={theme}
+        cssVariablesResolver={cssVariablesResolver}
+        forceColorScheme="light"
+      >
         <AppWrapper>{children}</AppWrapper>
       </MantineProvider>
       <ScrollRestoration />

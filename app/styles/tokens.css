@@ -1,0 +1,63 @@
+:root {
+  /* colour */
+  --rp-bg: #faf6f0; /* page background */
+  --rp-surface: #ffffff; /* cards, hero, article, fact tiles on bg */
+  --rp-surface-muted: #f1e9de; /* player bar, chips, active nav pill, progress track, tabs */
+  --rp-text: #1b1712; /* all primary text */
+  --rp-text-muted: #5e554a; /* meta lines, labels, secondary copy */
+  --rp-line: #e0d5c6; /* 1px borders, dividers, outline pills */
+  --rp-accent: #f58220; /* play buttons, progress fill, "Neues Portrait" pill, active topic tab */
+  --rp-accent-text: #b4530a; /* orange used AS TEXT or icon on light grounds */
+  --rp-on-accent: #1b1712; /* text/icons on --rp-accent */
+  --rp-glass: rgba(250, 246, 240, 0.9); /* back button over the illustration */
+
+  /* logo only — do not use in UI */
+  --rp-brand-orange: #eea13c;
+  --rp-brand-ink: #372613;
+
+  /* type */
+  --rp-font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --rp-font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+
+  /* radius */
+  --rp-radius-thumb: 10px; /* 64px related thumbnails */
+  --rp-radius-image: 14px; /* card images */
+  --rp-radius-tile: 16px; /* fact tiles, related rows */
+  --rp-radius-image-l: 20px; /* hero image */
+  --rp-radius-card: 24px; /* stat cards, player card, mobile hero, mobile article */
+  --rp-radius-panel: 28px; /* desktop hero, desktop article */
+  --rp-radius-pill: 999px; /* buttons, chips, search, nav, segmented control */
+
+  /* spacing */
+  --rp-gutter: 16px; /* page side padding < 62em */
+  --rp-gutter-desktop: 56px; /* page side padding >= 62em */
+}
+
+:root[data-mantine-color-scheme="light"] {
+  --mantine-color-body: var(--rp-bg);
+  --mantine-color-text: var(--rp-text);
+}
+
+body {
+  background: var(--rp-bg);
+  color: var(--rp-text);
+  font-family: var(--rp-font-body);
+}
+
+:focus-visible {
+  outline: 2px solid var(--rp-accent-text);
+  outline-offset: 2px;
+}
+
+/* Visually hidden but read by screen readers */
+.rp-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
