@@ -138,4 +138,4 @@ Vite produces Gzip (level 9) + Brotli (level 11) compressed assets alongside ori
 
 ## Design
 
-The UI follows the "Sendung · Tageslicht" redesign: see `docs/redesign/README.md` for tokens, component specs, copy (German, no emoji, no exclamation marks) and contrast rules, and `docs/redesign/mockups/` for every screen. Style with CSS Modules and the `--rp-*` tokens; use Mantine only where it brings behaviour (Drawer, Menu, SegmentedControl, Loader, SimpleGrid).
+The UI follows the "Sendung · Tageslicht" redesign: see `docs/redesign/README.md` for tokens, component specs, copy (German, no emoji, no exclamation marks) and contrast rules, and `docs/redesign/mockups/` for every screen. Style with CSS Modules and the `--rp-*` tokens; use Mantine only where it brings behaviour (Drawer, Menu, SegmentedControl, Loader, SimpleGrid). Next: Hundewissen as a podcast topic index (areas → topics → entries with timecodes, built from `db/podcast/topic-index.json`), see `docs/redesign/hundewissen-themen.md`; area images per `docs/redesign/hundewissen-bilder.md`.

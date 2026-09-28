@@ -41,6 +41,10 @@ Read in this order: § 1–3 (what and where), § 4–5 (foundations, do these f
 | Breed detail | ![](screenshots/after/rasse.png) | ![](screenshots/after/rasse-mobil.png) |
 | Statistik | ![](screenshots/after/statistik.png) | ![](screenshots/after/statistik-mobil.png) |
 | Hundewissen | ![](screenshots/after/hundewissen.png) | ![](screenshots/after/hundewissen-mobil.png) |
+| Hundewissen: areas overview (topic index) | ![](screenshots/after/hundewissen-bereiche.png) | ![](screenshots/after/hundewissen-bereiche-mobil.png) |
+| Hundewissen: area | ![](screenshots/after/hundewissen-bereich.png) | ![](screenshots/after/hundewissen-bereich-mobil.png) |
+| Hundewissen: topic | ![](screenshots/after/hundewissen-thema.png) | ![](screenshots/after/hundewissen-thema-mobil.png) |
+| Hundewissen with topic images (superseded) | ![](screenshots/after/hundewissen-bilder.png) | ![](screenshots/after/hundewissen-bilder-mobil.png) |
 
 ## 3. Design sources
 
@@ -317,6 +321,10 @@ Keep the URL; the nav label becomes "Statistik". Rewrite `app/pages/Statistics/S
 - Remove the stats page's own `Modal` usage; chips navigate to the detail page.
 
 ### Phase 6 — Hundewissen (`/hundewissen?topic=…`)
+
+> **Replaced:** Hundewissen becomes a podcast topic index (areas → topics → entries with timecodes): [hundewissen-themen.md](hundewissen-themen.md). The text below describes the 3.17.0 page.
+>
+> **Change request (after 3.17.0):** topic images (article banner, list thumbnails, mobile tab thumbnails, icon fallback). Spec, pipeline and image brief: [hundewissen-bilder.md](hundewissen-bilder.md). Its mockups supersede `hundewissen.html` / `hundewissen-mobil.html`.
 
 Files: `app/pages/Hundewissen/Hundewissen.tsx`, `app/components/KnowledgeContent`, `types/knowledge.ts`, `db/knowledge/*.ts`, `scripts/compileKnowledgeData.cjs` (only if it whitelists fields). Reference: `mockups/hundewissen.html`, `mockups/hundewissen-mobil.html`.
 
