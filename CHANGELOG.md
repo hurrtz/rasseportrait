@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.17.0](https://github.com/hurrtz/rasseportrait/compare/v3.16.0...v3.17.0) (2026-09-28)
+
+
+### Features
+
+* add Erdélyi Kopó ([64df6c6](https://github.com/hurrtz/rasseportrait/commit/64df6c60baf8dbc27b348df79df17245b8f1e464))
+* breed detail page at /rasse/:slug ([e8d9a32](https://github.com/hurrtz/rasseportrait/commit/e8d9a32f013493661a736537b8e1e60c156d92c3))
+* design tokens, Mantine theme, fonts and shared helpers ([ec454dd](https://github.com/hurrtz/rasseportrait/commit/ec454dd349f15517fad6c618727fce953b384eda))
+* Hundewissen with topic list and honest draft state ([e2b0768](https://github.com/hurrtz/rasseportrait/commit/e2b0768fa03e23a450ab908fd512a7ac61d49dc0))
+* new header with pill navigation and mobile drawer ([ffb9a70](https://github.com/hurrtz/rasseportrait/commit/ffb9a70a619f1fc1d4ade4ad2ec5e2daa2c83609))
+* overview with Neues-Portrait hero, portrait cards and sort control ([e86f128](https://github.com/hurrtz/rasseportrait/commit/e86f1283f2a808e966e1be8f87ce7d0c59c95301))
+* restyled Impressum, German error pages and leaner analytics ([24994de](https://github.com/hurrtz/rasseportrait/commit/24994de7386a9e6e9ede5f27f783d75e27c9a4fd))
+* Statistik as a bento grid ([a5451fe](https://github.com/hurrtz/rasseportrait/commit/a5451fe2cf5b10963db8c29102de091f6056e290))
+
+
+### Bug Fixes
+
+* back button stays put on breed pages, play surfaces stand out more ([832c61c](https://github.com/hurrtz/rasseportrait/commit/832c61c9c31b77aab6041981e9f5dc9ba98eb93e))
+* deep links, German accessible names and breed image alt texts ([2a83e5d](https://github.com/hurrtz/rasseportrait/commit/2a83e5dc927dc4ac02ac05c499b2c87ae2c1c25c))
+* fact tiles never overflow, back link respects new-tab clicks, readable charts ([1564c65](https://github.com/hurrtz/rasseportrait/commit/1564c65530184054c55ac0ebbdbd3369b64f3975))
+* focus rings on Mantine controls, no default blues, no layout shift ([df2d454](https://github.com/hurrtz/rasseportrait/commit/df2d4546f1d262d21cba23570225e6c4168dd122))
+* sticky play bar sits 8px from the screen edges ([465d30f](https://github.com/hurrtz/rasseportrait/commit/465d30f0d48d77b9101ed0197d5b73c4986a008f))
+
 ## [3.16.0](https://github.com/hurrtz/rasseportrait/compare/v3.15.0...v3.16.0) (2026-06-06)
 
 
