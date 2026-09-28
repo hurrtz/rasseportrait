@@ -37,6 +37,18 @@ describe("App shell", () => {
     expect(screen.queryByRole("banner")).not.toBeInTheDocument();
   });
 
+  it("keeps the header of a Hundewissen area to large screens", () => {
+    renderAt("/hundewissen/zucht-rassen");
+
+    expect(screen.getByRole("banner").parentElement).toHaveClass("rp-md-only");
+  });
+
+  it("shows the header of other Hundewissen pages everywhere", () => {
+    renderAt("/hundewissen/zucht-rassen/qualzuchten");
+
+    expect(screen.getByRole("banner").parentElement).not.toHaveClass("rp-md-only");
+  });
+
   it("restores a deep link saved by the GitHub Pages 404 page", async () => {
     sessionStorage.setItem("redirectPath", "/hundewissen?topic=medizin");
 

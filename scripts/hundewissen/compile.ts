@@ -308,9 +308,8 @@ const topicBreeds = (
     .slice(0, MAX_BREEDS);
 };
 
-/** "30:28"–"32:24" → 116 */
 const entryLength = (entry: HundewissenEntry) =>
-  toSeconds(entry.end) - entry.startSeconds;
+  entry.endSeconds - entry.startSeconds;
 
 // ---------------------------------------------------------------------------
 // Topics
@@ -350,6 +349,7 @@ const groupEpisodes = (
       start: formatTimecode(startSeconds),
       end: formatTimecode(endSeconds),
       startSeconds,
+      endSeconds,
       minutes: toMinutes(endSeconds - startSeconds),
       weight: entry.weight,
       kind: entry.kind,

@@ -254,15 +254,18 @@ describe("entries", () => {
     });
 
     expect(
-      compiled.episodes[0].entries.map(({ start, end, startSeconds, minutes }) => ({
-        start,
-        end,
-        startSeconds,
-        minutes,
-      })),
+      compiled.episodes[0].entries.map(
+        ({ start, end, startSeconds, endSeconds, minutes }) => ({
+          start,
+          end,
+          startSeconds,
+          endSeconds,
+          minutes,
+        }),
+      ),
     ).toEqual([
-      { start: "30:28", end: "32:24", startSeconds: 1828, minutes: 2 },
-      { start: "1:02:08", end: "1:02:20", startSeconds: 3728, minutes: 1 },
+      { start: "30:28", end: "32:24", startSeconds: 1828, endSeconds: 1944, minutes: 2 },
+      { start: "1:02:08", end: "1:02:20", startSeconds: 3728, endSeconds: 3740, minutes: 1 },
     ]);
     expect(compiled).toMatchObject({ entryCount: 2, totalMinutes: 2 });
   });

@@ -1,0 +1,72 @@
+/* ---------- shared by the three Hundewissen pages ---------- */
+
+.eyebrow {
+  color: var(--rp-accent-text);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--rp-text);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.iconTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--rp-surface-muted);
+  color: var(--rp-text-muted);
+}
+
+/* ---------- not found ---------- */
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 96px var(--rp-gutter);
+}
+
+.notFoundTitle {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.notFoundText {
+  margin: 0;
+  font-size: 18px;
+  color: var(--rp-text-muted);
+}
+
+.backPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0 18px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  color: var(--rp-text);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}

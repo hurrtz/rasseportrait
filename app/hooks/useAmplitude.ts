@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import type { NAV_ITEMS } from "~/constants";
+import type { TopicReferrer } from "~/pages/Hundewissen/useHundewissen";
 
 export type NavEvent = (typeof NAV_ITEMS)[number]["event"];
 
@@ -13,14 +14,23 @@ export interface AnalyticsEvents {
     hasResults: boolean;
   };
   "Sort Changed": { sortBy: string; sortOrder: string; previousSortBy: string };
-  "Play Clicked": {
-    breedId: string;
-    breedName: string;
-    placement: "hero" | "card" | "detail" | "sticky" | "more";
-    provider: string | undefined;
-    episodeNumber: number | string;
-    timecode: number;
-  };
+  "Play Clicked":
+    | {
+        breedId: string;
+        breedName: string;
+        placement: "hero" | "card" | "detail" | "sticky" | "more";
+        provider: string | undefined;
+        episodeNumber: number | string;
+        timecode: number;
+      }
+    | {
+        placement: "topic-featured" | "topic-entry" | "topic-sticky";
+        topicId: string;
+        episodeId: string;
+        provider: string;
+        episodeNumber: number | string;
+        timecode: number;
+      };
   "Breed Page Viewed": {
     breedId: string;
     breedName: string;
@@ -36,6 +46,15 @@ export interface AnalyticsEvents {
     linkUrl: string;
     currentVariant: string | undefined;
   };
+  "Hundewissen Area Viewed": { area: string };
+  "Hundewissen Topic Viewed": {
+    topicId: string;
+    area: string;
+    referrer: TopicReferrer;
+  };
+  "Hundewissen Search Performed": { searchTerm: string; resultsCount: number };
+  "Related Topic Clicked": { fromTopicId: string; toTopicId: string };
+  // old Hundewissen page, removed with it
   "Knowledge Topic Selected": {
     topicId: string;
     topicTitle: string;

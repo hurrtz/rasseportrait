@@ -1,3 +1,4 @@
 import SortControl from "./SortControl";
+import SortSegments from "./SortSegments";
 
-export { SortControl };
+export { SortControl, SortSegments };

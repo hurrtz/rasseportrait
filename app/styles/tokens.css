@@ -67,6 +67,13 @@ body {
   border: 0;
 }
 
+/* Hidden below md (62em) */
+@media (max-width: 61.99em) {
+  .rp-md-only {
+    display: none;
+  }
+}
+
 /* Route-level error page (root ErrorBoundary renders outside the app shell) */
 .rp-route-error {
   display: flex;

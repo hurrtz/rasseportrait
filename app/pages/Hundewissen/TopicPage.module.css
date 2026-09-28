@@ -1,0 +1,635 @@
+/* ---------- /hundewissen/:area/:topic — stacked below md ---------- */
+
+.page {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* bottom room for the sticky player */
+  padding-bottom: 110px;
+}
+
+.crumbs {
+  display: none;
+}
+
+.back {
+  padding: 4px var(--rp-gutter) 0;
+}
+
+/* ---------- head ---------- */
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 8px var(--rp-gutter) 20px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  overflow-wrap: break-word;
+}
+
+.description {
+  max-width: 640px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--rp-text-muted);
+}
+
+.facts {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fact {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface);
+  font-size: 15px;
+}
+
+.factValue {
+  font-family: var(--rp-font-display);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.factLine {
+  margin: 0;
+  font-size: 15px;
+  color: var(--rp-text-muted);
+}
+
+.factLine b {
+  color: var(--rp-text);
+}
+
+/* ---------- featured player ---------- */
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px;
+  border-radius: var(--rp-radius-card);
+  background: var(--rp-surface-player);
+}
+
+.featuredRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.featuredText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.featuredTitle {
+  font-family: var(--rp-font-display);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.featuredMeta {
+  font-size: 14px;
+  color: var(--rp-text-muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-bg);
+  font-size: 14px;
+}
+
+.clock {
+  color: var(--rp-accent-text);
+}
+
+.provider {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--rp-text-muted);
+}
+
+/* ---------- editorial overlay ---------- */
+
+.editorial {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  margin: 0 var(--rp-gutter) 24px;
+  padding: 24px 20px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-card);
+  background: var(--rp-surface);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-accent);
+}
+
+.editorialText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+}
+
+.editorialText p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* ---------- entries, sidebar, note ---------- */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 4px var(--rp-gutter) 24px;
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.entriesHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.episode {
+  padding: 18px 16px 4px;
+  border: 1px solid var(--rp-line);
+  border-radius: 20px;
+  background: var(--rp-surface);
+}
+
+.episode[data-collapsed] {
+  display: none;
+}
+
+.episodeHead {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 14px;
+}
+
+.episodeEyebrow {
+  color: var(--rp-accent-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.episodeTitle {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.episodeCount {
+  font-size: 13px;
+  color: var(--rp-text-muted);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rp-line);
+}
+
+.entryBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.entryLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+}
+
+.entryTime {
+  font-family: var(--rp-font-display);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.entryMeta {
+  font-size: 13px;
+  color: var(--rp-text-muted);
+}
+
+.tagMain,
+.tagSide {
+  padding: 4px 10px;
+  border-radius: var(--rp-radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tagMain {
+  background: var(--rp-accent);
+  color: var(--rp-on-accent);
+}
+
+.tagSide {
+  background: var(--rp-surface-muted);
+  color: var(--rp-text);
+}
+
+.entryLabel {
+  font-family: var(--rp-font-display);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.summary {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--rp-text-muted);
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-pill);
+  background: transparent;
+  color: var(--rp-text);
+  font-family: var(--rp-font-body);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.breeds {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.asideTitle {
+  margin: 0;
+}
+
+.breed {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px;
+  border-radius: var(--rp-radius-tile);
+  color: var(--rp-text);
+  text-decoration: none;
+}
+
+.breed:hover {
+  background: var(--rp-surface-muted);
+}
+
+.breedImage {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.breedText {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2px;
+  min-width: 0;
+}
+
+.breedName {
+  font-family: var(--rp-font-display);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.breedMeta {
+  font-size: 13px;
+  color: var(--rp-text-muted);
+}
+
+.arrow {
+  display: none;
+  flex-shrink: 0;
+  color: var(--rp-text-muted);
+}
+
+/* related topics only from md; the back link covers small screens */
+.related {
+  display: none;
+}
+
+.relatedRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 8px;
+  border-top: 1px solid var(--rp-line);
+  color: var(--rp-text);
+  text-decoration: none;
+}
+
+.relatedRow:hover .relatedLabel {
+  color: var(--rp-accent-text);
+}
+
+.relatedArea {
+  color: var(--rp-accent-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.relatedLabel {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.note {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--rp-text-muted);
+}
+
+.note a {
+  color: var(--rp-accent-text);
+}
+
+/* ---------- from md: head beside the player, entries beside the sidebar ---------- */
+
+@media (min-width: 62em) {
+  .page {
+    padding-bottom: 56px;
+  }
+
+  .back,
+  .factLine,
+  .more {
+    display: none;
+  }
+
+  .crumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px var(--rp-gutter-desktop) 0;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .crumb {
+    color: var(--rp-text-muted);
+    text-decoration: none;
+  }
+
+  .crumb:hover {
+    color: var(--rp-text);
+  }
+
+  .crumbIcon {
+    flex-shrink: 0;
+    color: var(--rp-text-muted);
+  }
+
+  .head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+    align-items: end;
+    gap: 56px;
+    padding: 28px var(--rp-gutter-desktop) 40px;
+  }
+
+  .intro {
+    gap: 18px;
+  }
+
+  .title {
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+  }
+
+  .description {
+    font-size: 19px;
+  }
+
+  .facts {
+    display: flex;
+  }
+
+  .featured {
+    padding: 26px;
+  }
+
+  .featuredRow {
+    gap: 18px;
+  }
+
+  .featuredTitle {
+    font-size: 24px;
+  }
+
+  .editorial {
+    margin: 0 var(--rp-gutter-desktop) 40px;
+    padding: 40px 48px;
+    border-radius: var(--rp-radius-panel);
+  }
+
+  .editorialText p {
+    font-size: 19px;
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "entries sidebar"
+      "note sidebar";
+    align-items: start;
+    gap: 16px 40px;
+    padding: 0 var(--rp-gutter-desktop) 0;
+  }
+
+  .entries {
+    grid-area: entries;
+    gap: 16px;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .note {
+    grid-area: note;
+    font-size: 14px;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .episode {
+    padding: 24px 26px 8px;
+    border-radius: var(--rp-radius-card);
+  }
+
+  .episode[data-collapsed] {
+    display: block;
+  }
+
+  .episodeTitle {
+    font-size: 24px;
+  }
+
+  .entry {
+    gap: 18px;
+    padding: 18px 0;
+  }
+
+  .entryTime {
+    font-size: 17px;
+  }
+
+  .entryLabel {
+    font-size: 19px;
+  }
+
+  .summary {
+    font-size: 16px;
+  }
+
+  .breeds,
+  .related {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--rp-line);
+    border-radius: var(--rp-radius-card);
+    background: var(--rp-surface);
+  }
+
+  .breeds {
+    padding: 20px 16px;
+  }
+
+  .breeds .asideTitle {
+    padding: 0 8px 8px;
+  }
+
+  .related {
+    padding: 20px 16px 8px;
+  }
+
+  .related .asideTitle {
+    padding: 0 8px 12px;
+  }
+
+  .breedImage {
+    width: 56px;
+    height: 56px;
+  }
+
+  .arrow {
+    display: block;
+  }
+}

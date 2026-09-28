@@ -3,12 +3,31 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: var(--play-size);
+  height: var(--play-size);
   border-radius: var(--rp-radius-pill);
   background: var(--rp-accent);
   color: var(--rp-on-accent);
   transition: background-color 150ms ease;
 }
 
+.play svg {
+  width: var(--play-icon);
+  height: var(--play-icon);
+}
+
 .play:hover {
   background: var(--rp-accent-hover);
+}
+
+@media (min-width: 62em) {
+  .play {
+    width: var(--play-size-md);
+    height: var(--play-size-md);
+  }
+
+  .play svg {
+    width: var(--play-icon-md);
+    height: var(--play-icon-md);
+  }
 }

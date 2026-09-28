@@ -2,54 +2,6 @@
   display: flex;
 }
 
-.segmented {
-  /* Mantine paints the indicator (and, before measuring, the active label's
-     ::before) with --sc-color; keep both ink instead of white */
-  --sc-color: var(--rp-text);
-  --sc-label-color: var(--rp-bg);
-  --sc-shadow: none;
-  display: none;
-  padding: 4px;
-  border-radius: var(--rp-radius-pill);
-  background: var(--rp-surface);
-}
-
-.indicator {
-  border-radius: var(--rp-radius-pill);
-  background: var(--rp-text);
-  box-shadow: none;
-}
-
-.control {
-  border: 0;
-}
-
-.control::before {
-  display: none;
-}
-
-.label {
-  padding: 9px 16px;
-  border-radius: var(--rp-radius-pill);
-  color: var(--rp-text-muted);
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.label:hover {
-  color: var(--rp-text);
-}
-
-.label[data-active],
-.label[data-active]:hover {
-  color: var(--rp-bg);
-}
-
-.input:focus-visible + .label {
-  outline: 2px solid var(--rp-accent-text);
-  outline-offset: 2px;
-}
-
 .compact {
   display: flex;
   align-items: center;
@@ -86,10 +38,6 @@
 }
 
 @media (min-width: 62em) {
-  .segmented {
-    display: inline-flex;
-  }
-
   .compact {
     display: none;
   }

@@ -61,6 +61,7 @@ export interface HundewissenEntry {
   start: string;
   end: string;
   startSeconds: number;
+  endSeconds: number;
   /** rounded, at least 1 */
   minutes: number;
   weight: EntryWeight;

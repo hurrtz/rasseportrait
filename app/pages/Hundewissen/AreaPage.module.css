@@ -1,0 +1,229 @@
+/* ---------- /hundewissen/:area — full-bleed picture on top below md ---------- */
+
+.page {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.back {
+  display: none;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+}
+
+.picture {
+  position: relative;
+}
+
+.image {
+  display: flex;
+  width: 100%;
+  height: 240px;
+}
+
+/* stays in the top-left corner while the page scrolls, like on breed pages */
+.backCircle {
+  position: fixed;
+  top: calc(16px + env(safe-area-inset-top));
+  left: 16px;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-glass);
+  color: var(--rp-text);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px var(--rp-gutter) 16px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  overflow-wrap: break-word;
+}
+
+.lead {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--rp-text-muted);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 4px var(--rp-gutter) 32px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.empty {
+  margin: 0;
+  padding: 24px 0;
+  font-size: 17px;
+  color: var(--rp-text-muted);
+}
+
+.more {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  color: var(--rp-text);
+  font-family: var(--rp-font-body);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* other areas only from md; the back button covers small screens */
+.others {
+  display: none;
+}
+
+.othersTitle {
+  margin: 0;
+  padding: 0 12px 6px;
+}
+
+.other {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  color: var(--rp-text);
+  text-decoration: none;
+}
+
+.other:hover {
+  background: var(--rp-bg);
+}
+
+.otherIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}
+
+.otherText {
+  display: flex;
+  flex-direction: column;
+}
+
+.otherName {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.otherCount {
+  font-size: 13px;
+  color: var(--rp-text-muted);
+}
+
+/* ---------- from md: head beside the picture, list beside the other areas ---------- */
+
+@media (min-width: 62em) {
+  .back {
+    display: block;
+    padding: 8px var(--rp-gutter-desktop) 0;
+  }
+
+  .backCircle {
+    display: none;
+  }
+
+  .head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 560px);
+    grid-template-areas: "intro picture";
+    align-items: center;
+    gap: 48px;
+    padding: 12px var(--rp-gutter-desktop) 40px;
+  }
+
+  .picture {
+    grid-area: picture;
+  }
+
+  .intro {
+    grid-area: intro;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .image {
+    height: 315px;
+    border-radius: var(--rp-radius-panel);
+  }
+
+  .title {
+    font-size: clamp(56px, 6.7vw, 96px);
+    letter-spacing: -0.045em;
+  }
+
+  .lead {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: start;
+    gap: 40px;
+    padding: 0 var(--rp-gutter-desktop) 56px;
+  }
+
+  .rows {
+    gap: 10px;
+  }
+
+  .search {
+    max-width: 420px;
+  }
+
+  .others {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 16px;
+    border: 1px solid var(--rp-line);
+    border-radius: var(--rp-radius-card);
+    background: var(--rp-surface);
+  }
+}

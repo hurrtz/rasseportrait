@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, SegmentedControl } from "@mantine/core";
+import { Menu } from "@mantine/core";
 import { IconArrowsSort, IconCheck } from "@tabler/icons-react";
 import {
   SORT_ORDER_BY_FIELD,
@@ -8,6 +8,7 @@ import {
   type SortBy,
 } from "~/stores/breeds";
 import { useAmplitude } from "~/hooks/useAmplitude";
+import SortSegments from "./SortSegments";
 import classes from "./SortControl.module.css";
 
 const OPTIONS: { value: SortBy; label: string }[] = [
@@ -36,19 +37,7 @@ const SortControl = () => {
 
   return (
     <div className={classes.sort}>
-      <SegmentedControl
-        aria-label="Sortierung"
-        value={sortBy}
-        onChange={(value) => choose(value as SortBy)}
-        data={OPTIONS}
-        classNames={{
-          root: classes.segmented,
-          indicator: classes.indicator,
-          control: classes.control,
-          input: classes.input,
-          label: classes.label,
-        }}
-      />
+      <SortSegments options={OPTIONS} value={sortBy} onChange={choose} />
 
       <Menu position="bottom-end" classNames={{ dropdown: classes.dropdown }}>
         <Menu.Target>

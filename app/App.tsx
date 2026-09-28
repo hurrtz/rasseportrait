@@ -24,12 +24,18 @@ const App = ({ children }: { children: ReactNode }) => {
     initAnalytics({ apiKey: config.amplitude.apiKey });
   }, []);
 
-  // The breed detail page is full-bleed; its back button replaces the header
+  // The breed detail page is full-bleed; its back button replaces the header.
+  // A Hundewissen area does the same below md, where its picture comes first.
   const isBreedPage = pathname.startsWith("/rasse/");
+  const isAreaPage = /^\/hundewissen\/[^/]+\/?$/.test(pathname);
 
   return (
     <>
-      {!isBreedPage && <Header />}
+      {!isBreedPage && (
+        <div className={isAreaPage ? "rp-md-only" : undefined}>
+          <Header />
+        </div>
+      )}
       <main>
         <ErrorBoundary>{children}</ErrorBoundary>
       </main>
