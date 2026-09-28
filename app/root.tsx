@@ -122,25 +122,21 @@ function App() {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
-
-  if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
-  }
+  const notFound = isRouteErrorResponse(error) && error.status === 404;
+  const stack =
+    import.meta.env.DEV && error instanceof Error ? error.stack : undefined;
 
   return (
-    <main>
-      <h1>{message}</h1>
-      <p>{details}</p>
+    <main className="rp-route-error">
+      <h1>
+        {notFound ? "Seite nicht gefunden" : "Da ist etwas schiefgegangen"}
+      </h1>
+      <p>
+        {notFound
+          ? "Unter dieser Adresse gibt es nichts."
+          : "Lade die Seite neu oder versuche es später noch einmal."}
+      </p>
+      <a href="/rasseportrait/">Zu allen Portraits</a>
       {stack && (
         <pre>
           <code>{stack}</code>

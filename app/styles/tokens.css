@@ -62,3 +62,35 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+/* Route-level error page (root ErrorBoundary renders outside the app shell) */
+.rp-route-error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 96px var(--rp-gutter);
+}
+
+.rp-route-error h1 {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.rp-route-error p {
+  margin: 0;
+  font-size: 18px;
+  color: var(--rp-text-muted);
+}
+
+.rp-route-error a {
+  color: var(--rp-accent-text);
+  font-weight: 700;
+  text-underline-offset: 3px;
+}

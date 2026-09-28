@@ -41,16 +41,6 @@ export const DEFAULT_SORT_BY = "airDate" as const;
  */
 export const DEFAULT_SORT_ORDER = "desc" as const;
 
-/**
- * Initial search needle value
- */
-export const DEFAULT_SEARCH_NEEDLE = "";
-
-/**
- * Initial search results value
- */
-export const DEFAULT_SEARCH_RESULTS: never[] = [];
-
 // ============================================================================
 // Error Messages
 // ============================================================================
@@ -65,59 +55,14 @@ export const ERROR_NO_BREEDS_FOUND = "No breeds found in database";
  */
 export const ERROR_UNKNOWN = "Unknown error";
 
-/**
- * Error message for failed breed initialization
- */
-export const ERROR_INIT_FAILED = "Failed to initialize breeds";
-
 // ============================================================================
 // Loading & UI States
 // ============================================================================
 
 /**
- * Loading spinner size in pixels
- */
-export const LOADING_SPINNER_SIZE = 100;
-
-/**
  * Loading message displayed while breeds are being loaded
  */
 export const LOADING_MESSAGE = "Rassen werden geladen …";
-
-// ============================================================================
-// Keyboard Navigation
-// ============================================================================
-
-/**
- * Key codes for keyboard navigation
- */
-export const KEY_ENTER = "Enter";
-export const KEY_SPACE = " ";
-export const KEY_ESCAPE = "Escape";
-
-// ============================================================================
-// Accessibility
-// ============================================================================
-
-/**
- * Tab index for focusable elements
- */
-export const TAB_INDEX_FOCUSABLE = 0;
-
-/**
- * Tab index for non-focusable elements
- */
-export const TAB_INDEX_NOT_FOCUSABLE = -1;
-
-/**
- * Role for clickable card elements
- */
-export const ROLE_BUTTON = "button";
-
-/**
- * Role for search input elements
- */
-export const ROLE_SEARCHBOX = "searchbox";
 
 // ============================================================================
 // Assets & Navigation

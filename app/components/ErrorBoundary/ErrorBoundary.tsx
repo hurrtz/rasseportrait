@@ -1,7 +1,6 @@
 import React, { Component, type ReactNode } from "react";
-import { Alert, Button, Stack, Text } from "@mantine/core";
-import { IconAlertCircle, IconRefresh } from "@tabler/icons-react";
 import { logger } from "~/utils/logger";
+import classes from "./ErrorBoundary.module.css";
 
 interface Props {
   children: ReactNode;
@@ -13,6 +12,9 @@ interface State {
   hasError: boolean;
   error?: Error;
 }
+
+const isDevelopment = () =>
+  process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -27,23 +29,17 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     logger.error("ErrorBoundary caught an error:", error, errorInfo);
 
-    // Track error with analytics if available (production only)
-    const isDev =
-      process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
-    if (typeof window !== "undefined" && !isDev) {
-      try {
-        import("@amplitude/analytics-browser").then(({ track }) => {
+    if (typeof window !== "undefined" && !isDevelopment()) {
+      import("@amplitude/analytics-browser")
+        .then(({ track }) =>
           track("Error Boundary Caught", {
             error: error.message,
             stack: error.stack,
             componentStack: errorInfo.componentStack,
             url: window.location.href,
-          });
-        });
-      } catch (e) {
-        // Analytics not available, just log
-        logger.error("Failed to track error:", e);
-      }
+          }),
+        )
+        .catch((e) => logger.error("Failed to track error:", e));
     }
 
     this.props.onError?.(error, errorInfo);
@@ -54,47 +50,33 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
+    if (!this.state.hasError) return this.props.children;
+    if (this.props.fallback) return this.props.fallback;
 
-      return (
-        <Alert
-          icon={<IconAlertCircle size={16} />}
-          title="Something went wrong"
-          color="red"
-          variant="light"
-        >
-          <Stack gap="md">
-            <Text size="sm">
-              An unexpected error occurred. Please try refreshing the page.
-            </Text>
-            {(process.env.NODE_ENV === "development" ||
-              process.env.NODE_ENV === "test") &&
-              this.state.error && (
-                <details>
-                  <summary>Error Details (Development)</summary>
-                  <pre style={{ fontSize: "12px", overflow: "auto" }}>
-                    {this.state.error.message}
-                    {"\n"}
-                    {this.state.error.stack}
-                  </pre>
-                </details>
-              )}
-            <Button
-              leftSection={<IconRefresh size={16} />}
-              onClick={this.handleRetry}
-              size="sm"
-            >
-              Try Again
-            </Button>
-          </Stack>
-        </Alert>
-      );
-    }
-
-    return this.props.children;
+    return (
+      <div className={classes.wrap}>
+        <div role="alert" className={classes.card}>
+          <p className={classes.title}>Da ist etwas schiefgegangen.</p>
+          <p className={classes.text}>
+            Versuche es noch einmal oder lade die Seite neu.
+          </p>
+          {isDevelopment() && this.state.error && (
+            <pre className={classes.details}>
+              {this.state.error.message}
+              {"\n"}
+              {this.state.error.stack}
+            </pre>
+          )}
+          <button
+            type="button"
+            className={classes.retry}
+            onClick={this.handleRetry}
+          >
+            Erneut versuchen
+          </button>
+        </div>
+      </div>
+    );
   }
 }
 

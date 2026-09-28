@@ -3,8 +3,12 @@ import { Rasseportrait } from "../pages/rasseportrait";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Rasseportrait" },
-    { name: "description", content: "Rasseportrait" },
+    { title: "Rasseportrait · Alle Hunderassen aus Tierisch Menschlich" },
+    {
+      name: "description",
+      content:
+        "Alle Rasseportraits aus dem Podcast Tierisch Menschlich, mit Timecode zum Anhören.",
+    },
   ];
 }
 

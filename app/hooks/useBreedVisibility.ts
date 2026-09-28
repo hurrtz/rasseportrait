@@ -74,8 +74,3 @@ export function useLazyBreedCard(breedId: Breed["id"]) {
 
   return { ref: elementRef, shouldRenderCard };
 }
-
-// Optional: Export a function to clear the cache if needed
-export function clearBreedVisibilityCache() {
-  loadedBreedIds.clear();
-}

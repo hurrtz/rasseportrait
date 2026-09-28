@@ -35,19 +35,22 @@ Release: `npm run release:patch|minor|major` (standard-version + GitHub Pages de
 
 ```
 app/
-  root.tsx                    # HTML shell, Mantine provider, fonts
-  App.tsx                     # Header, menu, analytics init, error boundary
-  routes.ts                   # Route definitions (/, /hundewissen, /impressum, /statistiken)
-  routes/                     # Route entry components
-  pages/                      # Page logic (rasseportrait, Hundewissen, imprint, Statistics)
-  components/                 # Reusable components (BreedCard, BreedSearch, Modal, etc.)
-  stores/                     # Zustand stores (breeds, knowledge)
-  hooks/                      # Custom hooks (useAmplitude, useBreedVisibility, useDebounce)
-  utils/                      # Logger, hash generation
+  root.tsx                    # HTML shell, Mantine provider + theme, fonts, route error page
+  theme.ts                    # Mantine theme (orange primary, radii, fonts)
+  styles/tokens.css           # --rp-* design tokens (colours, type, radii, gutters)
+  App.tsx                     # Header (hidden on /rasse/*), GitHub Pages redirect, analytics init
+  routes.ts                   # /, /rasse/:slug, /hundewissen, /statistiken, /impressum
+  routes/                     # Route modules (meta titles; rasse.tsx has a clientLoader)
+  pages/                      # rasseportrait (overview), Rasse (detail), Statistics, Hundewissen, imprint
+  components/                 # Header, HeroPortrait, PortraitCard, PlayButton, SortControl, BreedSearch, …
+  stores/                     # Zustand stores (breeds, knowledge) with a load `status`
+  hooks/                      # useAmplitude (typed events), useEnsureBreeds, useTrackPlay, useDebounce, …
+  utils/                      # format.ts (German formats), breed.ts (slugs, listen URLs, illustrations), analytics, logger
+  test-utils/                 # makeBreed/makePodcast/seedBreeds/renderWithProviders for tests
   config/                     # Environment config (Amplitude API key)
 db/
   breeds/*/index.ts           # ~208 breed data files (TypeScript)
-  knowledge/*.ts              # Knowledge topic files
+  knowledge/*/index.ts        # Knowledge topics (summary, status draft|published)
 scripts/
   compileBreedData.cjs        # Compiles db/breeds → public/data/breeds.json
   compileKnowledgeData.cjs    # Compiles db/knowledge → public/data/knowledge.json
@@ -62,42 +65,53 @@ Breed and knowledge data lives as **TypeScript files** in `db/`. At build time (
 
 **To add/edit a breed:** Edit or create `db/breeds/<breed-name>/index.ts`, then run `npm run build:data`.
 
-**To add/edit knowledge:** Edit or create `db/knowledge/<topic>.ts`, then run `npm run build:knowledge`.
+**To add/edit knowledge:** Edit or create `db/knowledge/<topic>/index.ts`, then run `npm run build:knowledge`. Paragraphs are separated by blank lines; single line breaks are joined.
 
 ## Key Patterns & Gotchas
 
-### ID Hashing
-Breed IDs are hashed to 4-character strings for URLs (`?breed=a1b2`). The original ID is preserved in `originalId` for image path resolution. Use hashed IDs in store selectors, original IDs for asset paths.
+### Display breeds, IDs and slugs
 
-### Breed Grouping
-Some breeds are grouped via `groupAs` property (e.g., Corgi variants). `mergeGroupedBreeds()` in `app/pages/rasseportrait/utils.ts` combines variants into a single display card. Raw breeds ≠ display breeds.
+`toDisplayBreeds()` (`app/utils/breed.ts`) turns raw breeds into what the app shows: grouped breeds (`groupAs`, e.g. Corgi) merged into one breed with variants, IDs hashed to 4 characters (`originalId` keeps the raw ID for asset paths) and a unique `slug` for `/rasse/<slug>`. Raw breeds ≠ display breeds: statistics count raw breeds. Old `/?breed=<hash>` links redirect to the slug URL.
+
+### Illustrations and play links
+
+Use `getIllustrations(breed)` for image paths (absolute, per variant; grouped members live in their FCI folder) and `getListenUrl(podcast)` for play buttons (Spotify with `?t=<timecode>` first, then RTL+). Every play button is a link out; there is no audio player.
 
 ### GitHub Pages SPA Routing
-GitHub Pages doesn't support SPA routing natively. A `404.html` redirect + `sessionStorage` workaround is implemented in `App.tsx` to preserve deep links.
+
+GitHub Pages doesn't support SPA routing natively. `public/404.html` stores the path in `sessionStorage` and redirects to the app root, where `App.tsx` restores it.
 
 ### Path Alias
+
 `~/*` maps to `app/*` (configured in tsconfig + vite). Use `import { x } from '~/stores/breeds'`.
 
 ### Base Path
+
 All routes and assets use base path `/rasseportrait/` (configured in `vite.config.ts` and `react-router.config.ts`).
 
 ### No console.log
+
 ESLint enforces `no-console: error`. Use the custom logger at `app/utils/logger.ts` with scoped levels (e.g., `logger.child('store')`).
 
 ### Amplitude Analytics
-Only initializes in production. Dynamic import prevents SSR issues. Events are type-safe via TypeScript interfaces in `useAmplitude` hook.
+
+Only initializes in production (`app/utils/analytics.ts`). Session replay is sampled (10%) before its plugin is imported. Events and their properties are typed in the `AnalyticsEvents` map in `useAmplitude`.
 
 ### Lazy Loading
+
 `LazyBreedCard` uses IntersectionObserver with skeleton placeholders. Cards maintain global visibility state — they stay rendered after becoming visible, even when search filters change.
 
 ### Store Persistence
-Only sort settings (sortBy, sortOrder) persist to localStorage. Search state resets on refresh.
+
+Only the sort setting (sortBy, sortOrder; one fixed direction per field) persists to localStorage. The search query lives in the store, so it survives a visit to a breed page, but resets on refresh.
 
 ## Testing
 
 - **Framework:** Jest 29 + jsdom + React Testing Library
 - **Location:** `__tests__/` directories alongside source
 - **CSS mock:** `__mocks__/styleMock.js`
+- **Helpers:** `app/test-utils` (fixtures, store seeding, router + Mantine wrapper)
+- **`import.meta`:** rewritten to `globalThis.importMeta` by `jest/importMetaTransformer.cjs` (stubbed in `jest.setup.js`); `ResizeObserver` is stubbed there too
 - **Pre-commit hook:** Husky runs `npm test` before every commit
 
 ## Code Style
@@ -122,6 +136,6 @@ All breed illustrations are AI-generated (Midjourney). Source images in `db/bree
 
 Vite produces Gzip (level 9) + Brotli (level 11) compressed assets alongside originals.
 
-## Redesign (in progress)
+## Design
 
-The approved redesign "Sendung · Tageslicht" replaces the 3.16 look. Before touching any UI, read `docs/redesign/README.md`: tokens, Mantine theme, phased plan, component specs, copy, analytics, tests and the definition of done. Mockups of every screen are in `docs/redesign/mockups/` (open in a browser), screenshots in `docs/redesign/screenshots/`.
+The UI follows the "Sendung · Tageslicht" redesign: see `docs/redesign/README.md` for tokens, component specs, copy (German, no emoji, no exclamation marks) and contrast rules, and `docs/redesign/mockups/` for every screen. Style with CSS Modules and the `--rp-*` tokens; use Mantine only where it brings behaviour (Drawer, Menu, SegmentedControl, Loader, SimpleGrid).

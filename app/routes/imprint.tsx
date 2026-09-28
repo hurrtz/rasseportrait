@@ -3,8 +3,11 @@ import { Imprint } from "../pages/imprint";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Impressum" },
-    { name: "description", content: "Impressum" },
+    { title: "Impressum · Rasseportrait" },
+    {
+      name: "description",
+      content: "Impressum und Kontakt des Fanprojekts Rasseportrait.",
+    },
   ];
 }
 

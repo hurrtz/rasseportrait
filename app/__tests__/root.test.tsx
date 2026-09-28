@@ -17,7 +17,7 @@ jest.mock("../App", () => ({
   default: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 
-import { Layout, links } from "../root";
+import { ErrorBoundary, Layout, links } from "../root";
 
 describe("root Layout", () => {
   it("declares the document language as German", () => {
@@ -39,5 +39,30 @@ describe("root links", () => {
     expect(fonts).toContain("family=Bricolage+Grotesque");
     expect(fonts).toContain("family=Atkinson+Hyperlegible");
     expect(hrefs.join(" ")).not.toContain("Inter");
+  });
+});
+
+describe("root ErrorBoundary", () => {
+  const render = (error: unknown) =>
+    renderToStaticMarkup(
+      <ErrorBoundary
+        {...({ error } as React.ComponentProps<typeof ErrorBoundary>)}
+      />,
+    );
+
+  it("says in German that a page does not exist", () => {
+    const markup = render({
+      status: 404,
+      statusText: "Not Found",
+      internal: true,
+      data: "",
+    });
+
+    expect(markup).toContain("Seite nicht gefunden");
+    expect(markup).toContain('href="/rasseportrait/"');
+  });
+
+  it("names other failures in German", () => {
+    expect(render(new Error("boom"))).toContain("Da ist etwas schiefgegangen");
   });
 });
