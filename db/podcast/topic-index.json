@@ -1,0 +1,2514 @@
+{
+ "generated": "2026-09-28",
+ "indexedEpisodes": 8,
+ "totalEpisodes": 260,
+ "episodes": {
+  "rtl-230": {
+   "feed": "rtl",
+   "number": 230,
+   "title": "Wildkatzen, Wurstkriege & der Targetstick",
+   "published": "2025-10-23",
+   "duration": 2476,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1744-tierisch-menschlich-der-podcast-mit-hundeprofi-martin-rutter-und-katharina-adick/226767-230-wildkatzen-wurstkriege-der-targetstick.mp3?v=1&awCollectionId=julephosting_69522b4f7840a&awEpisodeId=226767",
+   "breeds": [
+    {
+     "name": "Kelpie",
+     "start": "0:31:23"
+    },
+    {
+     "name": "Kangal",
+     "start": "0:37:11"
+    },
+    {
+     "name": "Belgischer Schäferhund",
+     "start": "0:37:22"
+    }
+   ],
+   "portrait": {
+    "present": false,
+    "breed": "",
+    "start": ""
+   }
+  },
+  "rtl-229": {
+   "feed": "rtl",
+   "number": 229,
+   "title": "Riesen, Hämorrhoiden & Essgeräusche",
+   "published": "2025-10-16",
+   "duration": 3609,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1744-tierisch-menschlich-der-podcast-mit-hundeprofi-martin-rutter-und-katharina-adick/226769-229-riesen-haemorrhoiden-essgeraeusche.mp3?v=1&awCollectionId=julephosting_69522b4f7840a&awEpisodeId=226769",
+   "breeds": [
+    {
+     "name": "Deutsche Dogge",
+     "start": "0:26:36"
+    },
+    {
+     "name": "Irischer Wolfshund",
+     "start": "0:36:22"
+    },
+    {
+     "name": "Mops",
+     "start": "0:41:43"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Deutsche Dogge",
+    "start": "0:26:36"
+   }
+  },
+  "rtl-228": {
+   "feed": "rtl",
+   "number": 228,
+   "title": "Verona, Veggiefutter & Vorsorge",
+   "published": "2025-10-09",
+   "duration": 3565,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1744-tierisch-menschlich-der-podcast-mit-hundeprofi-martin-rutter-und-katharina-adick/226770-228-verona-veggiefutter-vorsorge.mp3?v=1&awCollectionId=julephosting_69522b4f7840a&awEpisodeId=226770",
+   "breeds": [
+    {
+     "name": "Jack Russell Terrier",
+     "start": "0:20:29"
+    },
+    {
+     "name": "Großer Münsterländer",
+     "start": "0:35:11"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Sabueso Español (Spanischer Laufhund)",
+    "start": "0:30:05"
+   }
+  },
+  "rtl-227": {
+   "feed": "rtl",
+   "number": 227,
+   "title": "Borstenwurm & Reizangel",
+   "published": "2025-10-02",
+   "duration": 3760,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1744-tierisch-menschlich-der-podcast-mit-hundeprofi-martin-rutter-und-katharina-adick/226772-227-borstenwurm-reizangel.mp3?v=1&awCollectionId=julephosting_69522b4f7840a&awEpisodeId=226772",
+   "breeds": [
+    {
+     "name": "Golden Retriever",
+     "start": "0:06:53"
+    },
+    {
+     "name": "Jack Russell Terrier",
+     "start": "0:07:04"
+    },
+    {
+     "name": "Deutsch Kurzhaar",
+     "start": "0:12:21"
+    },
+    {
+     "name": "Islandhund",
+     "start": "0:43:49"
+    },
+    {
+     "name": "Border Collie",
+     "start": "0:45:30"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Islandhund",
+    "start": "0:40:09"
+   }
+  },
+  "rtl-226": {
+   "feed": "rtl",
+   "number": 226,
+   "title": "Der große Leberwursttest",
+   "published": "2025-09-25",
+   "duration": 3182,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1744-tierisch-menschlich-der-podcast-mit-hundeprofi-martin-rutter-und-katharina-adick/226774-226-der-grosse-leberwursttest.mp3?v=1&awCollectionId=julephosting_69522b4f7840a&awEpisodeId=226774",
+   "breeds": [
+    {
+     "name": "Pudel",
+     "start": "0:17:26"
+    },
+    {
+     "name": "Mops",
+     "start": "0:26:17"
+    },
+    {
+     "name": "Neufundländer",
+     "start": "0:43:05"
+    },
+    {
+     "name": "Landseer",
+     "start": "0:43:05"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Neufundländer",
+    "start": "0:37:46"
+   }
+  },
+  "rtl-225": {
+   "feed": "rtl",
+   "number": 225,
+   "title": "Abschied von Alma",
+   "published": "2025-09-18",
+   "duration": 3675,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1744-tierisch-menschlich-der-podcast-mit-hundeprofi-martin-rutter-und-katharina-adick/226776-225-abschied-von-alma.mp3?v=1&awCollectionId=julephosting_69522b4f7840a&awEpisodeId=226776",
+   "breeds": [
+    {
+     "name": "Rhodesian Ridgeback",
+     "start": "0:27:17"
+    },
+    {
+     "name": "Bichon Frisé",
+     "start": "0:42:00"
+    },
+    {
+     "name": "Deutscher Schäferhund",
+     "start": "0:57:27"
+    }
+   ],
+   "portrait": {
+    "present": false,
+    "breed": "",
+    "start": ""
+   }
+  },
+  "rtl-summer-a04": {
+   "feed": "rtl",
+   "number": "Summer Edition #4",
+   "title": "Otterjagd & Dackelkatzen",
+   "published": "2025-09-11",
+   "duration": 4970,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1744-tierisch-menschlich-der-podcast-mit-hundeprofi-martin-rutter-und-katharina-adick/226777-4-summer-edition-otterjagd-dackelkatzen.mp3?v=1&awCollectionId=julephosting_69522b4f7840a&awEpisodeId=226777",
+   "breeds": [
+    {
+     "name": "Labrador Retriever",
+     "start": "0:06:22"
+    },
+    {
+     "name": "Französische Bulldogge",
+     "start": "0:10:05"
+    },
+    {
+     "name": "Flat Coated Retriever",
+     "start": "0:38:14"
+    },
+    {
+     "name": "Beagle",
+     "start": "0:42:00"
+    },
+    {
+     "name": "Otterhound",
+     "start": "0:42:20"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Otterhound",
+    "start": "0:42:20"
+   }
+  },
+  "rtl-summer-a03": {
+   "feed": "rtl",
+   "number": "Summer Edition #3",
+   "title": "Rattenfänger",
+   "published": "2025-08-28",
+   "duration": 4671,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1744-tierisch-menschlich-der-podcast-mit-hundeprofi-martin-rutter-und-katharina-adick/226779-3-summer-edition-rattenfaenger.mp3?v=1&awCollectionId=julephosting_69522b4f7840a&awEpisodeId=226779",
+   "breeds": [
+    {
+     "name": "Manchester Terrier",
+     "start": "0:50:55"
+    },
+    {
+     "name": "Deutscher Pinscher",
+     "start": "0:52:43"
+    },
+    {
+     "name": "Dobermann",
+     "start": "0:57:40"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Manchester Terrier",
+    "start": "0:51:07"
+   }
+  }
+ },
+ "topics": [
+  {
+   "id": "qualzuchten",
+   "label": "Qualzuchten",
+   "category": "Zucht & Rassen",
+   "description": "Zucht auf extreme Merkmale wie Riesenwuchs, die die Gesundheit der Hunde dauerhaft schädigt.",
+   "entries": [
+    {
+     "label": "Riesenwuchs als Qualzucht",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:30:28",
+     "end": "0:32:24",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Kritik daran, dass der Rassestandard der Deutschen Dogge Gesundheit suggeriert, während die Zucht auf Größe und Masse mit bis zu 90 cm Widerristhöhe die Hunde zerstört."
+     ]
+    },
+    {
+     "label": "Genetische Enge in der Zucht",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:39:52",
+     "end": "0:40:37",
+     "weight": "side",
+     "kind": "news",
+     "summaries": [
+      "Hinweis auf eine TV-Folge zu Qualzucht, in der es um die Risiken geht, wenn man züchterisch alles auf eine genetische Karte setzt, auch bei Kulturpflanzen."
+     ]
+    },
+    {
+     "label": "Qualzucht-Kritik an Züchtern",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:46:45",
+     "end": "0:47:29",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Beiläufige spöttische Kritik an Züchtern, die Hunde mit Atemproblemen produzieren, als Gegensatz zur Adoption aus dem Tierschutz."
+     ]
+    },
+    {
+     "label": "Qualzucht Mops",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:26:17",
+     "end": "0:26:40",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter berichtet, dass er Menschen mit Kaufwunsch für einen Mops anspricht und über das Leiden der Qualzucht aufklärt."
+     ]
+    },
+    {
+     "label": "Gesundheitsprobleme von Riesenrassen",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:47:10",
+     "end": "0:49:29",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Kritik an extremen Zuchtformen: Neufundländer leiden unter Gewicht, Hitzeempfindlichkeit, Herz-, Gelenk-, Augen- und Hauterkrankungen und werden nicht alt; Extreme wie Teacup-Hunde oder 100-Kilo-Doggen seien grundsätzlich problematisch."
+     ]
+    },
+    {
+     "label": "Österreichs Qualzuchtverbot und Werbeverbot",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:09:03",
+     "end": "0:14:27",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Österreich verbietet Zucht, Import, Erwerb, Ausstellung und Abbildung in der Werbung von Tieren mit Qualzuchtmerkmalen – von brachyzephalen Hunden und Katzen über Dackelkatzen und Nackttiere bis zu Zierfischen und Reptilien – während in Deutschland noch auf Aufklärung gesetzt wird."
+     ]
+    }
+   ],
+   "episodeCount": 4
+  },
+  {
+   "id": "leinenfuehrigkeit",
+   "label": "Leinenführigkeit",
+   "category": "Erziehung & Training",
+   "description": "Ursachen für Ziehen an der Leine und Trainingsaufbau für entspanntes Laufen an der Leine.",
+   "entries": [
+    {
+     "label": "Leinenführigkeit trainieren",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:19:07",
+     "end": "0:26:23",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Ausführlicher Trainingstipp: Warum Hunde an der Leine ziehen, welche Fehler Halter machen und wie man reizarm im Wohnzimmer ein Aufmerksamkeitssignal konditioniert und über den Wechsel von Halsband und Brustgeschirr Trainings- und Freizeitsituationen trennt."
+     ]
+    },
+    {
+     "label": "Leinenführigkeit-Challenge mit Tasse",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:37:59",
+     "end": "0:40:40",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Bei der aktuellen Challenge soll der Hund so an der Leine laufen, dass eine gefüllte Tasse in der Hand nicht überschwappt – eine Übung für feine Leinenführigkeit."
+     ]
+    },
+    {
+     "label": "Leinenführigkeit bei großen, kräftigen Hunden",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:43:28",
+     "end": "0:45:20",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Anekdote von einer Halterin zweier Neufundländer, die wegen des starken Ziehens kaum spazieren gehen konnte; junge Hunde dieser Rassen sind oft ungestüm, nicht ruhig."
+     ]
+    }
+   ],
+   "episodeCount": 3
+  },
+  {
+   "id": "amphibien-im-gartenteich",
+   "label": "Amphibien im Gartenteich",
+   "category": "Andere Tiere",
+   "description": "Frosch- und Krötenlaich im Gartenteich, Umsiedeln von Tieren und die artenschutzrechtlichen Grenzen.",
+   "entries": [
+    {
+     "label": "Krötenlaich, Frösche und Enten im Gartenteich",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "1:00:08",
+     "end": "1:01:39",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Erfahrungen mit massenhaftem Krötenlaich im Gartenteich, dem Umsiedeln von Fröschen und Entenpaaren, die im Teich ihre Jungen aufzogen und inzwischen ausbleiben."
+     ]
+    },
+    {
+     "label": "Froschlaich, Artenschutzrecht und Gartenteich",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "1:02:40",
+     "end": "1:06:27",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter räumt ein, mit dem Abfischen von Froschlaich gegen das Bundesnaturschutzgesetz verstoßen zu haben, und es wird nach tierschutzgerechten Lösungen für die Froschmassen im Garten gesucht."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
+   "id": "hundeauswahl",
+   "label": "Auswahl eines neuen Hundes",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Wie man den passenden Hund findet, welche Baustellen tragbar sind und wann man bereit für einen Hund ist.",
+   "entries": [
+    {
+     "label": "Bindung und Auswahl eines neuen Hundes",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:16:22",
+     "end": "0:20:27",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin und Katharina sprechen über das Gefühl, sich in einen Hund zu verlieben, über Trauer nach dem Tod des eigenen Hundes und darüber, wann man wieder bereit für einen Hund ist."
+     ]
+    },
+    {
+     "label": "Welche Baustellen passen zum eigenen Alltag",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:27:57",
+     "end": "0:29:22",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin erklärt, dass ein Hund Baustellen haben darf, aber nicht extrem umweltunsicher sein sollte, weil er sonst in seinem Alltag leiden würde."
+     ]
+    },
+    {
+     "label": "Anforderungen an den nächsten Hund aus dem Tierschutz",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:30:05",
+     "end": "0:34:00",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Adick beschreibt, welche Eigenschaften ein neuer Tierschutzhund für ihren Alltag mitbringen müsste, etwa soziale Belastbarkeit im Büro, und denkt über Pflegestellen nach."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
+   "id": "jagdverhalten",
+   "label": "Jagdverhalten",
+   "category": "Verhalten & Kommunikation",
+   "description": "Reizauslöser für Jagdverhalten und Training mit stark jagdlich motivierten Hunden.",
+   "entries": [
+    {
+     "label": "Jagdverhalten und Reizauslöser",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:52:08",
+     "end": "0:54:56",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Anekdote über Emma, die nachts eine Kehrmaschine als Jagdreiz wahrnahm und ungebremst über eine Straße lief – Beispiel dafür, dass auch bekannte Hunde in neuen Situationen unvorhersehbar reagieren."
+     ]
+    },
+    {
+     "label": "Jagdverhalten und Leinenziehen bei Wasserjagdhunden",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:48:45",
+     "end": "0:50:29",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Martin Rütter berichtet von zwei sehr sozialverträglichen Otterhound-Rüden im Training, deren starker Jagd- und Schwimmtrieb am Kanal zu massivem Ziehen an der Leine führte, und erwähnt das nötige Freischneiden der zuwachsenden Augen."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
+   "id": "adoptieren-statt-produzieren",
+   "label": "Verein Adoptieren statt Produzieren",
+   "category": "Tierschutz & Ethik",
+   "description": "Gründung, Projekte und Spendenverwendung des gemeinnützigen Vereins gegen Welpenhandel und Qualzucht.",
+   "entries": [
+    {
+     "label": "Verein Adoptieren statt Produzieren und Spendenverwendung",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:48:14",
+     "end": "0:56:18",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Rütter erläutert Gründung und Arbeit des gemeinnützigen Vereins, die Debatte um Verwaltungskosten bei Tierschutzspenden, unterstützte Projekte wie den Hundehof und das Darmstädter Tierheim sowie die Zusammenarbeit mit seriösen Züchtern."
+     ]
+    },
+    {
+     "label": "Tierschutzverein gegen Welpenhandel und Qualzucht",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "1:03:15",
+     "end": "1:08:16",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin Rütter kündigt die Gründung eines gemeinnützigen Vereins „Adoptieren statt Produzieren“ an, der Aufklärungskampagnen zu Welpenhandel und Qualzucht führt und Spenden vollständig und transparent an geprüfte Tierschutzprojekte weiterleitet, weil er die Verwaltungskosten selbst trägt."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
+   "id": "tierheimhund-vermittlung",
+   "label": "Vermittlung von Tierheimhunden",
+   "category": "Tierschutz & Ethik",
+   "description": "Wie Mensch und Tierheimhund zueinander passen und wie Interessenten den Hund vorab in Alltagssituationen kennenlernen können.",
+   "entries": [
+    {
+     "label": "Passung von Tierheimhund und Mensch",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:21:26",
+     "end": "0:23:25",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Anekdote über eine Tierheimvermittlung, bei der Mensch und Hund unabhängig voneinander zueinander fanden und 15 Jahre gut zusammenpassten."
+     ]
+    },
+    {
+     "label": "Hunde im Tierheim vorab testen",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:38:00",
+     "end": "0:40:35",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Gute Tierheime erlauben Interessenten, Alltagssituationen wie Autofahren, Café oder Körperkontakt mit dem Hund auszuprobieren, um eine Prognose zu ermöglichen."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
+   "id": "welpe-oder-erwachsener-hund",
+   "label": "Welpe oder erwachsener Hund",
+   "category": "Tierschutz & Ethik",
+   "description": "Vor- und Nachteile von Welpen gegenüber jungen oder erwachsenen Hunden, deren Charakter besser einschätzbar ist.",
+   "entries": [
+    {
+     "label": "Energie junger Hunde und Altersauswahl",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:46:45",
+     "end": "0:52:08",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Bei der Auswahl eines neuen Hundes unterschätzen viele die Energie eines ein- bis zweijährigen Tieres; ab etwa drei bis fünf Jahren ist die Persönlichkeit ausgereift und besser einschätzbar, auch im Tierschutz gibt es junge Hunde."
+     ]
+    },
+    {
+     "label": "Welpe aus der Zucht oder erwachsener Tierschutzhund",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:34:00",
+     "end": "0:38:00",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter widerlegt die Annahme, beim Rassewelpen wisse man genau was man bekommt, und erklärt, dass Charakter bei erwachsenen Hunden viel besser einschätzbar ist."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
+   "id": "aggressionsverhalten",
+   "label": "Aggressionsverhalten",
+   "category": "Verhalten & Kommunikation",
+   "description": "Eskalationsstufen aggressiven Verhaltens vom Drohfixieren bis zum Körperkontakt.",
+   "entries": [
+    {
+     "label": "Eskalationsstufen der Aggression",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:06:58",
+     "end": "0:07:22",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Scherzhafte Übertragung des Aggressionsmodells nach Feddersen-Petersen (Drohfixieren, Drohen ohne Körperkontakt) auf menschliches Verhalten."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "alkohol-bei-tieren",
+   "label": "Alkohol bei Tieren",
+   "category": "Andere Tiere",
+   "description": "Schimpansen und andere Tiere, die durch vergorene Früchte regelmäßig Alkohol aufnehmen.",
+   "entries": [
+    {
+     "label": "Schimpansen und vergorene Früchte",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:43:25",
+     "end": "0:44:27",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Beobachtungen aus mehreren unabhängigen Schimpansengruppen, die große Mengen vergorener Früchte fressen, dabei etwa auf die Alkoholmenge eines Biers pro Tag kommen und darüber soziale Bindungen pflegen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "angsthunde",
+   "label": "Angsthunde",
+   "category": "Verhalten & Kommunikation",
+   "description": "Haltung und Belastung sehr ängstlicher, umweltunsicherer Hunde, etwa in reizintensiver Stadtumgebung.",
+   "entries": [
+    {
+     "label": "Ängstlicher Hund in der Großstadt",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:43:28",
+     "end": "0:44:00",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Adick überlegt, dass ein sehr ängstlicher Hund in einem reizintensiven Kölner Stadtteil trotz Fürsorge überfordert wäre."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "animal-hoarding",
+   "label": "Animal Hoarding und Tierquälerei melden",
+   "category": "Tierschutz & Ethik",
+   "description": "Vorgehen bei Verdacht auf Tierquälerei oder Animal Hoarding sowie Grenzen von Veterinärämtern und Tierhaltungsverboten.",
+   "entries": [
+    {
+     "label": "Verdacht auf Tierquälerei melden",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:33:57",
+     "end": "0:39:59",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Hörerfrage zu einer vermuteten Vermehrerhaltung im Emsland: Martin berichtet von einem drastischen Animal-Hoarding-Fall, erklärt Probleme mit Veterinärämtern und Tierhaltungsverboten über Bundesländer hinweg und empfiehlt große Tierschutzorganisationen, Polizei und Hartnäckigkeit statt eigenmächtiger Aktionen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "rasseerhalt",
+   "label": "Bedrohte Rassen und Erhaltungszucht",
+   "category": "Zucht & Rassen",
+   "description": "Programme zum Erhalt sehr seltener oder fast ausgestorbener Hunderassen.",
+   "entries": [
+    {
+     "label": "Bedrohte Hunderassen und Erhaltungszucht",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:47:39",
+     "end": "0:48:21",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Der Otterhund galt in England als nahezu ausgestorben und wurde über Schutzprogramme erhalten, was mit dem weitgehenden Verbot der Otterjagd in Europa zusammenhängt."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "fischotter-bejagung",
+   "label": "Bejagung des Fischotters",
+   "category": "Recht & Politik",
+   "description": "Forderungen nach Abschuss von Fischottern wegen Schäden in der Teichwirtschaft und die Kritik daran.",
+   "entries": [
+    {
+     "label": "Streit um die Bejagung des Fischotters",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:50:51",
+     "end": "0:54:50",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion über Forderungen bayerischer Politiker, Fischotter zum Abschuss freizugeben, weil sie täglich bis zu 1,2 Kilo Fisch fressen und Teichwirten Schäden verursachen, samt Kritik an solchen Rechtfertigungen für Abschüsse."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "bellen",
+   "label": "Bellen",
+   "category": "Erziehung & Training",
+   "description": "Ursachen für vieles Bellen und Trainingswege, das Aufhören des Bellens zu verstärken.",
+   "entries": [
+    {
+     "label": "Bellen abtrainieren und Auslastung",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:46:04",
+     "end": "0:49:09",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin erklärt, wie man über gutes Timing das Aufhören des Bellens verstärkt, warum bellfreudige Hunde oft frustriert und unterbeschäftigt sind und dass weder Überdrehen noch reines Abschalttraining am Zaun sinnvoll ist."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "beschaeftigung-zuhause",
+   "label": "Beschäftigung zu Hause",
+   "category": "Haltung & Pflege",
+   "description": "Kleine Trainings- und Konditionierungsaufgaben als Beschäftigung in der Wohnung und bis ins hohe Alter.",
+   "entries": [
+    {
+     "label": "Hundebeschäftigung für zu Hause",
+     "episode": "rtl-230",
+     "number": 230,
+     "title": "Wildkatzen, Wurstkriege & der Targetstick",
+     "start": "0:30:38",
+     "end": "0:34:05",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Tricks und kleine Konditionierungsaufgaben werden als sinnvolle Beschäftigung bei schlechtem Wetter und bis ins hohe Alter empfohlen; Halter lernen ihren Hund dabei oft neu kennen, während Beziehungsthemen wie Schutz bieten nicht über Konditionierung trainierbar sind."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "brachyzephalie",
+   "label": "Brachyzephalie",
+   "category": "Zucht & Rassen",
+   "description": "Kurzköpfige Rassen mit Atemnot, Schnarchen und Operationsbedarf sowie die Verdrängung dieses Leidens durch Halter.",
+   "entries": [
+    {
+     "label": "Mops und die Wahrnehmung der Halter",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:40:37",
+     "end": "0:43:25",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Begegnung mit einer Mopshalterin, die ihren elfjährigen Hund als fit beschreibt und zugleich lautes Schnarchen, Inkontinenz und Operationen schildert – ein Beispiel für die Verdrängung von Qualzuchtleiden."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "brut-und-setzzeit",
+   "label": "Brut- und Setzzeit",
+   "category": "Haltung & Pflege",
+   "description": "Rücksicht auf Wildtiere im Wald und Kontrolle des Hundes während der Brut- und Setzzeit.",
+   "entries": [
+    {
+     "label": "Brut- und Setzzeit: Rücksicht im Wald",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "1:02:05",
+     "end": "1:02:40",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Hinweis auf die beginnende Brut- und Setzzeit und die Notwendigkeit, Hunde im Wald besser unter Kontrolle zu halten."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "depression-beim-hund",
+   "label": "Depression beim Hund",
+   "category": "Verhalten & Kommunikation",
+   "description": "Ob und wie der Begriff Depression bei Hunden anwendbar ist und welche körperlichen Ursachen dahinterstecken können.",
+   "entries": [
+    {
+     "label": "Depressionen bei Hunden",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:18:04",
+     "end": "0:19:07",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Ankündigung einer späteren Vertiefung mit der Überlegung, ob der Begriff Depression bei Hunden überhaupt zulässig ist, da Symptome nicht abgefragt werden können und oft körperliche Ursachen haben."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "einschlaefern-entscheidung",
+   "label": "Einschläfern",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Krankheitsverläufe, Prognosen und die Entscheidung über den richtigen Zeitpunkt der Euthanasie.",
+   "entries": [
+    {
+     "label": "Almas Krankheitsverlauf und Einschläferung",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:06:43",
+     "end": "0:10:10",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Katharina Adick berichtet vom Tod ihrer Hündin Alma, deren Leberschaden nach einer Anaplasmose-Infektion zu Bauchwassersucht und schließlich zur Entscheidung für das Einschläfern führte."
+     ]
+    },
+    {
+     "label": "Den richtigen Zeitpunkt zum Einschläfern finden",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:10:10",
+     "end": "0:13:04",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Die beiden vergleichen ihre Erfahrungen, wie klar oder unklar der richtige Tag für die Euthanasie war und wie eine absehbare Prognose den Abschied erleichtern kann."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "autorampe-training",
+   "label": "Einstiegsrampe fürs Auto",
+   "category": "Erziehung & Training",
+   "description": "Schrittweise Gewöhnung älterer oder körperlich eingeschränkter Hunde an eine Auto-Rampe.",
+   "entries": [
+    {
+     "label": "Hund an Auto-Rampe gewöhnen",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:40:40",
+     "end": "0:43:18",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Trainingstipp für ältere Hunde: Die Einstiegsrampe zunächst flach auf den Boden legen, mit Leckerchenspur üben und die Höhe schrittweise steigern, bevor der Hund körperlich schwach wird."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "emotionen-beim-hund",
+   "label": "Emotionen bei Hunden",
+   "category": "Verhalten & Kommunikation",
+   "description": "Debatte darüber, ob menschliche Gefühlsbegriffe wie Stolz oder Selbstbewusstsein auf Hunde übertragbar sind.",
+   "entries": [
+    {
+     "label": "Dürfen Hunde stolz sein?",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:27:29",
+     "end": "0:29:25",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion über die wissenschaftliche Skepsis gegenüber menschlichen Gefühlsbegriffen bei Hunden und über Selbstbewusstsein, das Welpen durch Erfolgserlebnisse im Training entwickeln."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "ernaehrung-grosser-rassen",
+   "label": "Ernährung großer Rassen im Wachstum",
+   "category": "Ernährung",
+   "description": "Angepasste Fütterung und Bewegung schnell wachsender großer Hunde zum Schutz der Gelenke.",
+   "entries": [
+    {
+     "label": "Ernährung und Bewegung großer Rassen",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:33:26",
+     "end": "0:33:50",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Hinweis, dass schnell wachsende große Hunde angepasst gefüttert und bewegt werden müssen, um Gelenkerkrankungen wie Osteochondrose nicht zu verschärfen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "seniorhund-ernaehrung",
+   "label": "Ernährung von Seniorhunden",
+   "category": "Ernährung",
+   "description": "Bedarfsgerechte Fütterung älterer Hunde und Vermeidung von Überversorgung.",
+   "entries": [
+    {
+     "label": "Ernährung von Seniorhunden",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:14:48",
+     "end": "0:15:37",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Hunde gelten statistisch ab acht Jahren als Senioren und sollten dann nicht mehr sehr fleischlastig ernährt werden, um Überversorgung zu vermeiden."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "wildkatze",
+   "label": "Europäische Wildkatze",
+   "category": "Andere Tiere",
+   "description": "Scheues heimisches Wildtier, das sich wieder ausbreitet und für Gefangenschaft kaum geeignet ist.",
+   "entries": [
+    {
+     "label": "Europäische Wildkatze",
+     "episode": "rtl-230",
+     "number": 230,
+     "title": "Wildkatzen, Wurstkriege & der Targetstick",
+     "start": "0:08:56",
+     "end": "0:11:06",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Die im Gehege beobachtete Wildkatze dient als Beispiel für ein extrem scheues, reizanfälliges heimisches Wildtier, das sich in Deutschland gerade wieder ausbreitet und für Gefangenschaft kaum geeignet ist."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "fellpflege-geruch",
+   "label": "Fellpflege und Hundegeruch",
+   "category": "Haltung & Pflege",
+   "description": "Unterwolle, Pflegeaufwand und Ursachen für starken Eigengeruch, auch ernährungs- und krankheitsbedingt.",
+   "entries": [
+    {
+     "label": "Hundegeruch, Unterwolle und Ernährungseinfluss",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:45:56",
+     "end": "0:46:56",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Neufundländer riechen wegen dichter Unterwolle schnell muffig; bei auffällig starkem Geruch empfiehlt Rütter Tierarztbesuch und Futterumstellung, was bei seiner Hündin Emma half."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "fleischkonsum-gesellschaft",
+   "label": "Fleischkonsum und Gesellschaft",
+   "category": "Tierschutz & Ethik",
+   "description": "Gesellschaftlicher und politischer Umgang mit Fleischkonsum und die Rolle veganer Alternativen.",
+   "entries": [
+    {
+     "label": "Fleischkonsum, Politik und gesellschaftlicher Wandel",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:29:11",
+     "end": "0:30:40",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion über wachsendes Angebot veganer Produkte, politische Zurückhaltung beim Thema Fleisch und Bereitschaft vieler Menschen, höhere Preise für Fleisch zu zahlen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "frans-de-waal",
+   "label": "Frans de Waal und Tieremotionen",
+   "category": "Wissenschaft & Forschung",
+   "description": "Arbeiten des Primatenforschers zu Moral und Emotionen bei Tieren und ihre Bedeutung für die Mensch-Tier-Grenze.",
+   "entries": [
+    {
+     "label": "Frans de Waal und Tieremotionen",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:24:24",
+     "end": "0:27:29",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Nachruf auf den Primatenforscher Frans de Waal, dessen Arbeiten zu Moral, Entschuldigungsverhalten und Emotionen bei Affen die Grenze zwischen Mensch und Tier aufweichten."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "strassenhunde",
+   "label": "Frei lebende und freilaufende Hunde",
+   "category": "Haltung & Pflege",
+   "description": "Verhalten von Hunden, die weitgehend frei leben, im Vergleich zu Artgenossen in Haushalten.",
+   "entries": [
+    {
+     "label": "Freilaufende Hunde auf Island",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:50:13",
+     "end": "0:52:02",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Martin beobachtet, dass Islandhunde in Island selbst deutlich ruhiger und weniger bellfreudig wirken als ihre Artgenossen in deutschen Haushalten, und diskutiert Zucht- und Haltungseinflüsse."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "labrador-fressverhalten",
+   "label": "Fressverhalten und Genetik",
+   "category": "Wissenschaft & Forschung",
+   "description": "Genmutationen, die Hungersignale verstärken und den Energieverbrauch senken, und ihre Folgen für Übergewicht.",
+   "entries": [
+    {
+     "label": "Genetisch bedingter Appetit beim Labrador",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:06:22",
+     "end": "0:07:15",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Vorschau auf eine Studie zum übergroßen Appetit des Labradors, dessen genetische Ursache das oft belächelte Fressverhalten in ein ernsteres Licht stellt."
+     ]
+    },
+    {
+     "label": "Mutation, Hunger und Energieverbrauch bei Retrievern",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:36:04",
+     "end": "0:42:19",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Eine Studie zeigt, dass etwa jeder vierte Labrador Retriever und auch Flat Coated Retriever eine Mutation tragen, die Hungersignale ans Gehirn sendet und den Ruheenergieverbrauch senkt; dazu Beobachtungen zu Show- und Arbeitslinien, wuseligem Verhalten, Übergewicht sowie zum Fressverhalten von Beagle und Cocker Spaniel."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "fahrtenarbeit",
+   "label": "Fährtenarbeit",
+   "category": "Hundesport & Arbeitshunde",
+   "description": "Arbeit auf Land- und Wasserfährten und die dafür nötigen körperlichen Voraussetzungen.",
+   "entries": [
+    {
+     "label": "Fährtenarbeit an Land und im Wasser",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:48:21",
+     "end": "0:48:45",
+     "weight": "side",
+     "kind": "expert",
+     "summaries": [
+      "Otterhunde folgen einer Landfährte („Drag“) bis zu zwölf Stunden und einer Wasserspur („Wash“) bis zu fünf Stunden, unterstützt von öligem Fell und Schwimmhäuten."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "geburtshelferkroete",
+   "label": "Geburtshelferkröte",
+   "category": "Andere Tiere",
+   "description": "Fund einer Geburtshelferkröte, ihre Biologie und die Auflagen für Haltung statt Freilassung.",
+   "entries": [
+    {
+     "label": "Geburtshelferkröte im Salat und ihre Haltung",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:58:01",
+     "end": "1:00:00",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Eine Familie kaufte abgepackten Feldsalat samt darin entdeckter Geburtshelferkröte, um sie zu retten; da die Art hier nicht heimisch ist, darf sie nicht ausgesetzt werden und wird nun aufwendig im Terrarium gehalten – die Art trägt ihre Brut bis zu einem fortgeschrittenen Entwicklungsstadium mit sich."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "gelenkerkrankungen",
+   "label": "Gelenkerkrankungen",
+   "category": "Gesundheit & Medizin",
+   "description": "Hüft- und Ellbogengelenksdysplasie sowie weitere Gelenkprobleme, besonders bei großen Rassen.",
+   "entries": [
+    {
+     "label": "Gelenkprobleme bei großen Hunderassen",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:50:29",
+     "end": "0:50:51",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Hinweis auf Hüft- und Ellbogengelenksdysplasie als typische genetische Gesundheitsrisiken großer Rassen wie dem Otterhund."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "genpool-inzucht",
+   "label": "Genpool und Inzucht",
+   "category": "Zucht & Rassen",
+   "description": "Kleine Populationen und Inzucht begünstigen die Häufung von Erbkrankheiten.",
+   "entries": [
+    {
+     "label": "Kleiner Genpool und Erbkrankheiten",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:52:02",
+     "end": "0:52:43",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Bei seltenen Rassen mit kleinem Genpool häufen sich vererbte Defekte, die in großen Populationen eher aussortiert werden."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "geruchssinn-bindung",
+   "label": "Geruchssinn und Bindung",
+   "category": "Wissenschaft & Forschung",
+   "description": "Studien, nach denen der Geruch der Bezugsperson das Belohnungssystem im Hundehirn besonders aktiviert.",
+   "entries": [
+    {
+     "label": "Geruch der Bezugsperson im Hundehirn",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:16:24",
+     "end": "0:17:33",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "MRT-Studien aus Budapest zeigen, dass der Geruch der vertrauten Bezugsperson das Belohnungssystem im Hundehirn stärker aktiviert als etwa Futtergerüche."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "geschlechtswechsel-im-tierreich",
+   "label": "Geschlechtswechsel im Tierreich",
+   "category": "Wissenschaft & Forschung",
+   "description": "Tierarten, die ihr Geschlecht wechseln, etwa Borstenwürmer und Clownfische.",
+   "entries": [
+    {
+     "label": "Geschlechtswechsel bei Tieren",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:01:32",
+     "end": "0:02:53",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Bei weiblichen Borstenwürmern führt das Entfernen des Gehirns oder von Körpersegmenten zum Wechsel zum Männchen; ähnliche Geschlechtswechsel gibt es etwa bei Clownfischen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "spaziergang-gestaltung",
+   "label": "Gestaltung von Spaziergängen",
+   "category": "Haltung & Pflege",
+   "description": "Abwechslung auf Gassirunden und ihr Einfluss auf Orientierung und Bindung an den Menschen.",
+   "entries": [
+    {
+     "label": "Gestaltung von Spaziergängen und Orientierung am Menschen",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:11:56",
+     "end": "0:13:46",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Immer gleiche Gassirunden können dazu führen, dass der Hund sich nicht mehr am Menschen orientiert; in fremder Umgebung ist die Bindung enger, Hunde brauchen aber auch Zeit zum Ankommen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "riesenrassen",
+   "label": "Gesundheitsprobleme von Riesenrassen",
+   "category": "Gesundheit & Medizin",
+   "description": "Schmerzen und Bewegungseinschränkungen sehr großer und schwerer Hunde im Alltag.",
+   "entries": [
+    {
+     "label": "Leiden von Riesenrassen im Alltag",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:35:35",
+     "end": "0:37:23",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Schilderung eines erst dreijährigen Doggenrüden, der wegen Schmerzen kaum noch ablegen und aufstehen konnte, sowie vergleichbarer Erfahrungen mit einem Irischen Wolfshund."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "graureiher-am-gartenteich",
+   "label": "Graureiher am Gartenteich",
+   "category": "Andere Tiere",
+   "description": "Verhalten von Reihern am Teich und die Reaktion der Teichfische auf Jahreszeit und Fütterung.",
+   "entries": [
+    {
+     "label": "Graureiher am Gartenteich und Fischverhalten",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:54:50",
+     "end": "0:57:49",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Beobachtungen zum Reiher am Gartenteich: Er lockt Fische durch Patschen mit den Füßen an die Oberfläche, bleibt beim Hund gelassen, kann bis zu 25 Jahre alt werden – und die Teichfische bleiben bei kaltem Wasser inaktiv und werden noch nicht gefüttert."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hautprobleme-hund",
+   "label": "Haut- und Fellprobleme",
+   "category": "Gesundheit & Medizin",
+   "description": "Hauterkrankungen, Schuppenbildung und stressbedingte Hautreaktionen beim Hund.",
+   "entries": [
+    {
+     "label": "Haut, Fell und Stress beim Dobermann",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:57:20",
+     "end": "0:59:28",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Gesundheitscheck zum Manchester Terrier (Haut-, Augen- und Ohrenthemen) und Rütters Beobachtung, dass Dobermänner unter Stress binnen Minuten stark schuppen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hundeabgabe",
+   "label": "Hund in ein neues Zuhause vermitteln",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Wenn ein Hund aus persönlichen Gründen abgegeben wird und wie ein solcher Umzug gelingen kann.",
+   "entries": [
+    {
+     "label": "Hund in ein neues Zuhause vermitteln",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:20:27",
+     "end": "0:27:23",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Martin schildert, wie Hündin Luna zu einer älteren Bekannten umzog, warum ein Backup für Senioren mit Hund wichtig ist und wie reibungslos die Umstellung verlief."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hund-und-baby",
+   "label": "Hund und Baby",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Vorbereitung des Hundes auf ein Kind durch frühzeitige Regel- und Routineänderungen.",
+   "entries": [
+    {
+     "label": "Hund auf ein Baby vorbereiten",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:43:18",
+     "end": "0:45:26",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Regeln wie Schlafplatzwechsel, Zimmerverbote oder das Laufen am Kinderwagen sollten lange vor der Geburt trainiert werden, damit der Hund die Veränderungen nicht mit dem Kind verknüpft."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "rattenbekaempfung-hunde",
+   "label": "Hunde zur Nagerkontrolle",
+   "category": "Hundesport & Arbeitshunde",
+   "description": "Terrier und Katzen halten auf Höfen Ratten- und Mäusepopulationen durch Jagd und Vergrämung in Schach.",
+   "entries": [
+    {
+     "label": "Terrier zur Nagerkontrolle auf dem Hof",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:54:38",
+     "end": "0:56:24",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion darüber, wie Kleinterrier und Katzen auf Höfen Ratten- und Mäusepopulationen durch Jagd und Vergrämung in Schach halten und warum das aus Hygienegründen nötig ist."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hundeausstellungen",
+   "label": "Hundeausstellungen",
+   "category": "Zucht & Rassen",
+   "description": "Kritik an Rassehundeshows, die extreme Körpermerkmale prämieren.",
+   "entries": [
+    {
+     "label": "Prämierung extremer Rassemerkmale auf Hundeshows",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:10:05",
+     "end": "0:10:47",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Kritik daran, dass auf großen Hundeausstellungen wie der Crufts eine Französische Bulldogge ohne funktionsfähige Nasenlöcher ausgezeichnet wurde und Zuchtverbände solche Extreme weiter belohnen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hundebetreuung",
+   "label": "Hundebetreuung",
+   "category": "Haltung & Pflege",
+   "description": "Gewöhnung an mehrere Bezugspersonen, Betreuungsorte und Hundetagesstätten sowie Notfall-Backups.",
+   "entries": [
+    {
+     "label": "Hund in fremde Betreuung geben",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:17:33",
+     "end": "0:20:17",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin Rütter empfiehlt, Hunde früh an mehrere Bezugspersonen und Betreuungsorte zu gewöhnen und ein Backup für Notfälle aufzubauen, da manche Hunde Ortswechsel schlecht verkraften."
+     ]
+    },
+    {
+     "label": "Anpassungsfähigkeit an neue Betreuungspersonen",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:28:03",
+     "end": "0:28:55",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Wie schnell ein Hund sich an neue Betreuungspersonen oder eine Hundetagesstätte gewöhnt, ist stark individuell, grundsätzlich sind gesunde Hunde in jedem Alter lernfähig."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hundespielzeug",
+   "label": "Hundespielzeug",
+   "category": "Erziehung & Training",
+   "description": "Auswahl und sinnvoller Einsatz von Spielzeug wie Apportierobjekten und Kauartikeln.",
+   "entries": [
+    {
+     "label": "Apportierspielzeug statt Beißring",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:47:33",
+     "end": "0:48:14",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Ein gehäkeltes Herz wird als Apportierobjekt vorgestellt, das zum Kauen geeignet ist, aber nicht zum Ziehen und Zerren gedacht ist."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hundesprache",
+   "label": "Hundesprache",
+   "category": "Verhalten & Kommunikation",
+   "description": "Körpersprache des Hundes lesen und verstehen, auch in der Vermittlung an Kinder.",
+   "entries": [
+    {
+     "label": "Hundekörpersprache mit Kindern lernen",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:33:49",
+     "end": "0:37:46",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter berichtet aus Schulprojekten und Dreharbeiten, wie Kinder Hundekörpersprache unvoreingenommen lesen und durch Selbsterfahrung (Anstarren, Nähe) begreifen, was Hunde als bedrohlich empfinden."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hundevermittlung-an-senioren",
+   "label": "Hundevermittlung an ältere Menschen",
+   "category": "Tierschutz & Ethik",
+   "description": "Debatte über Altersgrenzen bei der Vermittlung und passende Lösungen für Senioren mit Hund.",
+   "entries": [
+    {
+     "label": "Vermittlung von Hunden an ältere Menschen",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:22:56",
+     "end": "0:25:22",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter kritisiert die Praxis vieler Tierheime, Menschen über 65 keine Hunde mehr zu vermitteln, und plädiert für passende Vermittlungen statt Altersgrenzen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "welpenhandel",
+   "label": "Illegaler Welpenhandel",
+   "category": "Tierschutz & Ethik",
+   "description": "Handel mit Welpen aus Vermehrerbetrieben ohne Elterntiere und ohne gesundheitliche Absicherung.",
+   "entries": [
+    {
+     "label": "Illegaler Welpenhandel ohne Elterntiere",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:39:46",
+     "end": "0:39:52",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Kurzer Hinweis darauf, dass beim illegalen Welpenhandel oft nicht einmal die Elterntiere vorhanden sind."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "insektenfreundlicher-garten",
+   "label": "Insektenfreundlicher Garten",
+   "category": "Andere Tiere",
+   "description": "Maßnahmen und heimisches Saatgut für mehr botanische Vielfalt und Insekten im Garten.",
+   "entries": [
+    {
+     "label": "Blühende Gärten für Insekten und heimische Arten",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "1:08:16",
+     "end": "1:09:20",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Hinweis auf ein Fachnetzwerk, das über Maßnahmen für mehr botanische Vielfalt im Garten und passendes Saatgut informiert, ohne invasive Pflanzen einzubringen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "schweine-intelligenz",
+   "label": "Intelligenz von Schweinen",
+   "category": "Andere Tiere",
+   "description": "Experimente zu Täuschungsverhalten und kognitiven Fähigkeiten bei Schweinen.",
+   "entries": [
+    {
+     "label": "Täuschungsverhalten bei Schweinen",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:32:03",
+     "end": "0:33:29",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Bericht über ein Labyrinth-Experiment, in dem ein wissendes Schwein ein anderes absichtlich in die falsche Richtung lockte, um das Futter allein zu fressen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "jagd-und-jagdpolitik",
+   "label": "Jagd und Jagdlobby",
+   "category": "Tierschutz & Ethik",
+   "description": "Kritik an Freizeit- und Trophäenjagd sowie an der politischen und wirtschaftlichen Macht der Jagdverbände.",
+   "entries": [
+    {
+     "label": "Freizeitjagd, Trophäenjagd und politische Verflechtungen",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:21:04",
+     "end": "0:33:12",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Ausführliche Kritik an der Freizeitjagd: dem Verhältnis von rund 400.000 Jagdscheininhabern zu etwa 1.000 Berufsjägern, der Trophäen- und Großwildjagd im Ausland mit kolonialen Zügen sowie der Nähe von Jagdverbänden zu populistischen Politikern."
+     ]
+    },
+    {
+     "label": "Wirtschaftliche Macht der Jagdlobby",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:34:12",
+     "end": "0:34:50",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Erklärung, warum eine zahlenmäßig kleine Jägerschaft politisch Sonderregelungen erreicht: Es handelt sich um eine wirtschaftlich einflussreiche Gruppe, deren Interessen auch über die Vermarktung von Wildbret bedient werden."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hundewunsch-familie",
+   "label": "Kinderwunsch nach einem Hund",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Wenn Kinder auf einen Familienhund drängen und wie Familien damit umgehen.",
+   "entries": [
+    {
+     "label": "Kinderwunsch nach einem Hund in der Familie",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "1:01:39",
+     "end": "1:03:15",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Ein Junge berichtet auf einer Live-Show, dass er nach Rütters scherzhaftem Rat so lange auf einen Hund gedrängt habe, bis die Familie einen Dackel aufnahm, der nun als Junghund pubertiert."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "klicker-alternativen",
+   "label": "Klickertraining und Markersignale",
+   "category": "Erziehung & Training",
+   "description": "Klicker und gesprochene Signalwörter als Marker in der Konditionierung.",
+   "entries": [
+    {
+     "label": "Klicker und Alternativen",
+     "episode": "rtl-230",
+     "number": 230,
+     "title": "Wildkatzen, Wurstkriege & der Targetstick",
+     "start": "0:29:29",
+     "end": "0:30:38",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Statt eines Klickers kann auch ein gesprochenes Signalwort als Marker genutzt werden, was den Vorteil hat, dass man kein Gerät mitführen muss."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "kognition-hund",
+   "label": "Kognition und Taktik beim Hund",
+   "category": "Verhalten & Kommunikation",
+   "description": "Vorausschauendes, strategisches Verhalten wie Täuschen und Ablenken zum Erlangen von Ressourcen.",
+   "entries": [
+    {
+     "label": "Strategisches Austricksen bei Hunden",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:29:25",
+     "end": "0:32:03",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Beispiele für vorausschauendes, taktisches Verhalten von Hunden: Scheinfunde vortäuschen, andere Hunde vom Kauartikel weglocken und Ressourcen erbeuten."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "rute-kupieren",
+   "label": "Kupieren der Rute",
+   "category": "Recht & Politik",
+   "description": "Ausnahmegenehmigungen zum Kupieren von Jagdhundruten und die Kritik an dieser Sonderregelung.",
+   "entries": [
+    {
+     "label": "Kupieren von Jagdhundruten als Sonderregelung",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:33:12",
+     "end": "0:34:12",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Empörung darüber, dass für Jagdhunde weiterhin eine Ausnahmegenehmigung zum Kupieren der Rute besteht, verglichen mit der absurden Idee, einem bellenden Hund die Stimmbänder zu durchtrennen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "koerperbau-und-gesundheit",
+   "label": "Körperbau und Gesundheit",
+   "category": "Zucht & Rassen",
+   "description": "Zusammenhang zwischen Körperproportionen und gesundheitlichen Risiken beim Hund.",
+   "entries": [
+    {
+     "label": "Körperproportionen und Gesundheit",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:27:13",
+     "end": "0:27:36",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Hinweis, dass ein annähernd quadratischer Körperbau biologisch gesund ist, während Abweichungen in den Proportionen Gesundheitsrisiken bergen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "katzen-koerpersprache",
+   "label": "Körpersprache und Schmerzen bei Katzen",
+   "category": "Andere Tiere",
+   "description": "Forschungsprojekte zur Katzenkörpersprache und Instrumente wie die Feline Grimace Scale.",
+   "entries": [
+    {
+     "label": "Körpersprache und Schmerzerkennung bei Katzen",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:30:40",
+     "end": "0:32:16",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Vorstellung eines Citizen-Science-Projekts zur Katzenkörpersprache mit Videoaufnahmen sowie der Feline Grimace Scale zum Erkennen von Schmerzen im Katzengesicht."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "lebenserwartung",
+   "label": "Lebenserwartung",
+   "category": "Zucht & Rassen",
+   "description": "Unterschiedliche Lebenserwartung von Hunderassen, besonders die kurze Lebensdauer großer Rassen.",
+   "entries": [
+    {
+     "label": "Lebenserwartung großer Hunderassen",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:38:43",
+     "end": "0:39:52",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion über die geringe Lebenserwartung von Doggen von etwa sechs bis acht Jahren und die Forderung, solche Zuchten nicht zu unterstützen und die Hunde wieder kleiner zu züchten."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "lebenshof",
+   "label": "Lebenshöfe",
+   "category": "Tierschutz & Ethik",
+   "description": "Aufbau und Arbeit von Lebenshöfen, auf denen gerettete Tiere dauerhaft leben dürfen.",
+   "entries": [
+    {
+     "label": "Lebenshof-Projekt und Tierschutz in der Ukraine",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "1:07:26",
+     "end": "1:08:50",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Vorstellung der Tierschützerin Viktoria Müller, die in der Ukraine Tierschutz leistet und einen Lebenshof für Tiere aufbauen will, samt Spendenaufruf."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "massentierhaltung",
+   "label": "Massentierhaltung",
+   "category": "Tierschutz & Ethik",
+   "description": "Tierleid in der industriellen Nutztierhaltung angesichts der kognitiven Fähigkeiten der Tiere.",
+   "entries": [
+    {
+     "label": "Massentierhaltung und Tierleid",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:33:29",
+     "end": "0:34:39",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Überlegung, wie grausam die Haltung tausender Schweine angesichts ihrer kognitiven und emotionalen Fähigkeiten ist, mit Vergleich zum Welpenhandel."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "medizin",
+   "label": "Medizin",
+   "category": "Gesundheit & Medizin",
+   "description": "Krankheitsbilder und gehäufte rassetypische Erkrankungen beim Hund.",
+   "entries": [
+    {
+     "label": "Typische Erkrankungen der Deutschen Dogge",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:32:24",
+     "end": "0:35:35",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Überblick über gehäufte Krankheiten der Dogge: dilatative Kardiomyopathie und weitere Herzleiden, Magendrehung, HD, Osteochondrose, atopische Dermatitis, progressive Retinaatrophie und Katarakt."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "mischlinge-rassemix",
+   "label": "Mischlinge und Rassemischungen",
+   "category": "Zucht & Rassen",
+   "description": "Chancen und Probleme von Rassekombinationen, etwa aus Herdenschutz- und Hütehundlinien.",
+   "entries": [
+    {
+     "label": "Problematische Rassemischungen",
+     "episode": "rtl-230",
+     "number": 230,
+     "title": "Wildkatzen, Wurstkriege & der Targetstick",
+     "start": "0:37:01",
+     "end": "0:37:47",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Ankündigung einer Hörerfrage zu einem Kangal-Belgischer-Schäferhund-Mix, wobei Martin Rütter diese Kombination aus Herdenschutz- und Hütehundanlagen für höchst problematisch hält."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "neuer-hund-nach-verlust",
+   "label": "Neuer Hund nach dem Verlust",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Wie individuell der Zeitpunkt ist, nach dem Tod eines Hundes wieder einen Hund aufzunehmen.",
+   "entries": [
+    {
+     "label": "Wann ein neuer Hund passt",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:25:22",
+     "end": "0:30:05",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Beide betonen, wie individuell der Zeitpunkt für einen neuen Hund ist, und Rütter erzählt von Abby als Türöffner nach dem Tod von Mina."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "offene-fontanelle",
+   "label": "Offene Fontanelle bei Zwergrassen",
+   "category": "Zucht & Rassen",
+   "description": "Genetisch bedingt unverschlossene Schädeldecke bei sehr kleinen Rassen und die damit verbundene Verletzungsgefahr.",
+   "entries": [
+    {
+     "label": "Offene Fontanelle bei Zwergrassen",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:15:23",
+     "end": "0:16:04",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Einige Rassen haben genetisch bedingt auch als Erwachsene eine offene Fontanelle, wodurch schon leichte Schläge auf den Kopf lebensgefährlich sein können."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "pflegestelle",
+   "label": "Pflegestellen im Tierschutz",
+   "category": "Tierschutz & Ethik",
+   "description": "Aufgabe von Pflegestellen und die Entwicklung, die Hunde dort durchlaufen.",
+   "entries": [
+    {
+     "label": "Pflegestellen im Tierschutz",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:14:39",
+     "end": "0:16:22",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Katharina erzählt von einer Pflegehündin aus dem Auslandstierschutz und beschreibt, welche Verwandlung ein Hund auf einer Pflegestelle durchlaufen kann."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "praegung-und-umwelteinfluss",
+   "label": "Prägung und Umwelteinfluss",
+   "category": "Verhalten & Kommunikation",
+   "description": "Wie Alltag, Umfeld und Bezugspersonen den Charakter eines Hundes formen.",
+   "entries": [
+    {
+     "label": "Wie das Umfeld den Hundecharakter formt",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:40:35",
+     "end": "0:43:28",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Am Beispiel der Hündin Luna, die von der unsicheren Prinzessin zum robusten Hofhund wurde, wird gezeigt, wie stark Alltag und Bezugspersonen das Verhalten prägen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "rassetypisches-verhalten",
+   "label": "Rassetypisches Verhalten",
+   "category": "Verhalten & Kommunikation",
+   "description": "Rassespezifische Verhaltensanlagen und wie sie das Bild vom Wesen einer Rasse relativieren.",
+   "entries": [
+    {
+     "label": "Verhalten der Deutschen Dogge",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:37:23",
+     "end": "0:38:43",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Widerspruch zum Bild vom sanften Riesen: Doggen setzen im Hundespiel massiv ihren Körper ein, sind Menschen gegenüber distanzlos und wachsam, brauchen also klare Führung."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "nutrias-und-ratten",
+   "label": "Ratten und Nutrias",
+   "category": "Andere Tiere",
+   "description": "Kuriose Rattenfunde und die Verwechslung großer Nager mit Nutrias.",
+   "entries": [
+    {
+     "label": "Riesenratte in Yorkshire und Nutrias",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:02:00",
+     "end": "0:02:12",
+     "weight": "side",
+     "kind": "news",
+     "summaries": [
+      "Kurze Nachricht über eine 56 Zentimeter lange Ratte in Yorkshire und die Verwechslung mit Nutrias, die biberähnlich aussehen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "reizangel",
+   "label": "Reizangel und Impulskontrolle",
+   "category": "Erziehung & Training",
+   "description": "Einsatz der Reizangel zum Aufbau von Impulskontrolle und Abrufbarkeit in hoher Reizlage.",
+   "entries": [
+    {
+     "label": "Reizangel und Impulskontrolle",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:07:25",
+     "end": "0:14:14",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Ausführlicher Trainings-Hack zur Reizangel: Aufbau über Bleib und schrittweise Steigerung, Ziel ist Impulskontrolle und Abrufbarkeit in hoher Reizlage statt Förderung unkontrollierten Jagens, samt rassetypischen Reaktionen und typischen Fehlern."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "trainingszeitpunkt",
+   "label": "Richtiger Zeitpunkt für Training",
+   "category": "Erziehung & Training",
+   "description": "Warum ruhige Übungen besser nicht am aufgeregten Spaziergangsbeginn trainiert werden.",
+   "entries": [
+    {
+     "label": "Richtiger Zeitpunkt für Training",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:09:10",
+     "end": "0:11:56",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Tipp, ruhige Übungen wie Leinenführigkeit oder Impulskontrolle nicht am aufgeregten Spaziergangsbeginn, sondern auf dem Rückweg zu trainieren; Beispiel Tierheim-Gassigänger."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "welpen-sozialisierung",
+   "label": "Sozialisierung von Welpen",
+   "category": "Verhalten & Kommunikation",
+   "description": "Bedeutung früher Umweltkontakte und Folgen mangelnder Sozialisierung wie Unsicherheit und Kläffen.",
+   "entries": [
+    {
+     "label": "Unsicherheit und Sozialisierung beim Welpen",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:20:59",
+     "end": "0:24:11",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Rütter vergleicht das unsichere, kläffende Auftreten eines Prominenten mit einem nicht ausreichend sozialisierten Welpen, der am Zaun bellt, weil er sich unsicher fühlt."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "tierschutzorganisationen",
+   "label": "Spendenaufrufe für Tierschutzorganisationen",
+   "category": "Tierschutz & Ethik",
+   "description": "Unterstützung konkreter Tierschutzorganisationen durch Spenden und Podcast-Erlöse.",
+   "entries": [
+    {
+     "label": "Spendenaufruf Tierhilfe Ukraine",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:57:52",
+     "end": "0:58:35",
+     "weight": "side",
+     "kind": "news",
+     "summaries": [
+      "Aufruf, die Tierhilfe Ukraine zu unterstützen, die wegen eines Motorschadens am Einsatzfahrzeug dringend Geld benötigt; der Podcast-Erlös wurde auf 1000 Euro aufgestockt."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "sozialspiel",
+   "label": "Spielverhalten unter Hunden",
+   "category": "Verhalten & Kommunikation",
+   "description": "Unterschiedliche Spielstile von sanft bis ruppig und ihre rassetypische Prägung.",
+   "entries": [
+    {
+     "label": "Spielverhalten und Rassetypik",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:06:53",
+     "end": "0:07:15",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Martin beschreibt, dass Golden-Retriever-Welpen eher sanft spielen, während Pitbull oder Jack Russell Terrier ein raues, ruppiges Spiel zeigen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "stressanzeichen-hund",
+   "label": "Stressanzeichen beim Hund",
+   "category": "Verhalten & Kommunikation",
+   "description": "Wie sich Stress äußert, etwa durch Apathie, Durchfall oder Hautprobleme, und warum das oft übersehen wird.",
+   "entries": [
+    {
+     "label": "Stresssymptome beim Hund erkennen",
+     "episode": "rtl-230",
+     "number": 230,
+     "title": "Wildkatzen, Wurstkriege & der Targetstick",
+     "start": "0:16:39",
+     "end": "0:18:34",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin Rütter erläutert, dass introvertierte Hunde ihren Stress oft nicht durch Zerstörungsverhalten zeigen, sondern über Apathie, chronischen Durchfall oder Hautprobleme, was von Haltern häufig nicht als Stresssymptom erkannt wird."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "mensch-hund-sympathie",
+   "label": "Sympathie zwischen Mensch und Hund",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Unerklärliche Anziehung und besondere Bindung zwischen einem Menschen und einem einzelnen Hund.",
+   "entries": [
+    {
+     "label": "Unerklärliche Bindung zu einem einzelnen Hund",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:44:16",
+     "end": "0:47:33",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Rütter erzählt von einer ängstlichen Hündin bei Jürgen Drews, die ihn stark anzog und sich ihm ohne Training öffnete, ohne dass er das Phänomen erklären kann."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "targetstick",
+   "label": "Targettraining",
+   "category": "Erziehung & Training",
+   "description": "Arbeit mit dem Targetstick und Shaping als Grundlage für komplexere Aufgaben.",
+   "entries": [
+    {
+     "label": "Targetstick und Klickertraining",
+     "episode": "rtl-230",
+     "number": 230,
+     "title": "Wildkatzen, Wurstkriege & der Targetstick",
+     "start": "0:24:37",
+     "end": "0:29:29",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Erklärt wird, wie Hunde per Konditionierung Nase oder Pfote an einen Targetstick führen, wie Shaping beim Klickern funktioniert, wozu der Targetstick als Vorstufe für Aufgaben wie Lichtschalter-Bedienen dient und warum nicht jeder Hund für jede Trainingsmethode geeignet ist."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "tierschutz-medien",
+   "label": "Tierschutz in den Medien",
+   "category": "Tierschutz & Ethik",
+   "description": "Wie drastisch Tierleid in Reportagen gezeigt werden darf, um Zuschauer zu erreichen.",
+   "entries": [
+    {
+     "label": "Drastische Bilder in Tierschutz-Reportagen",
+     "episode": "rtl-summer-a03",
+     "number": "Summer Edition #3",
+     "title": "Rattenfänger",
+     "start": "0:34:53",
+     "end": "0:35:41",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter erklärt, warum in den Welpenhandel- und Tierschutz-Reportagen die schlimmsten Bilder erst am Ende gezeigt wurden, damit Zuschauer nicht wegschalten."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "tierschutz-politik",
+   "label": "Tierschutzgesetze und Tierschutzbewusstsein",
+   "category": "Recht & Politik",
+   "description": "Gesetzliche Verschärfungen und wachsendes gesellschaftliches Bewusstsein für Tierschutz.",
+   "entries": [
+    {
+     "label": "Tierschutzbewusstsein und Gesetze",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:27:50",
+     "end": "0:29:11",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Positive Nachrichten: Amsterdam baut Ausstiegstreppen in Grachten gegen ertrinkende Katzen, Italien verschärft Strafen für Tierquälerei, gesellschaftliches Tierschutzbewusstsein wächst."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "trauer-um-den-hund",
+   "label": "Trauer um den Hund",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Trauerprozesse nach dem Tod des Hundes sowie praktische Fragen wie Bestattung und Abläufe.",
+   "entries": [
+    {
+     "label": "Vorbereitung auf den Abschied und praktische Abläufe",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:13:04",
+     "end": "0:22:56",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Es wird empfohlen, Fragen wie Bestattung, Kosten und Abläufe im Vorfeld zu klären, da Trauer körperlich stark belastet und Handlungsfähigkeit einschränkt.",
+      "Martin Rütter und Katharina Adick diskutieren, wie unterschiedlich Menschen trauern und dass gut gemeinte Beileidsbekundungen von Fremden oft unpassend sind.",
+      "Nach der ersten Phase mischt sich Dankbarkeit in die Trauer; Rütter reflektiert über Emmas Vorgeschichte als problematischer Hund und ihre mögliche Tierheimkarriere."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "hundetricks-challenge",
+   "label": "Tricktraining und Challenges",
+   "category": "Erziehung & Training",
+   "description": "Tricks und monatliche Challenges als spielerische Beschäftigung ohne Leistungsdruck.",
+   "entries": [
+    {
+     "label": "Trick-Challenge und Melone als Hundesnack",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "1:19:18",
+     "end": "1:21:42",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Zur monatlichen Trick-Challenge mit einer Melone wird betont, dass es um Spaß ohne Leistungsdruck geht, dass auch misslungene Versuche zählen und dass Melone ein guter Snack für Hunde ist."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "unterforderung-hund",
+   "label": "Unterforderung und Langeweile",
+   "category": "Verhalten & Kommunikation",
+   "description": "Folgen zu geringer Beschäftigung wie Hektik, Bellen und Zerstörung.",
+   "entries": [
+    {
+     "label": "Unterforderung, Langeweile und Depression beim Hund",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:20:17",
+     "end": "0:28:03",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Hörerfrage zu einem Jack Russell, der nach der Geburt eines Kindes weniger Beschäftigung bekommt: Unterforderte Terrier reagieren meist mit Hektik, Bellen und Zerstörung statt Lethargie, und der Begriff Depression sollte beim Hund vorsichtig verwendet werden."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "vegane-ernaehrung",
+   "label": "Vegane Ernährung des Menschen",
+   "category": "Ernährung",
+   "description": "Verkostung und Bewertung veganer Fleischersatzprodukte sowie deren Akzeptanz.",
+   "entries": [
+    {
+     "label": "Vegane Ernährung und Fleischersatz",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:00:40",
+     "end": "0:08:23",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin Rütter und Katharina Adick testen vier vegane Leberwurst-Alternativen und diskutieren über Qualität, Verfügbarkeit und Akzeptanz von Fleischersatzprodukten."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "vegane-hundeernaehrung",
+   "label": "Vegane Hundeernährung",
+   "category": "Ernährung",
+   "description": "Studienlage zu pflanzenbasiertem Hundefutter und kritische Nährstoffe wie Jod und B-Vitamine.",
+   "entries": [
+    {
+     "label": "Veganes Hundefutter",
+     "episode": "rtl-228",
+     "number": 228,
+     "title": "Verona, Veggiefutter & Vorsorge",
+     "start": "0:12:36",
+     "end": "0:16:24",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Eine neue Studie der Uni Nottingham vergleicht veganes und fleischhaltiges Hundefutter: Die Nährstoffversorgung ist ähnlich, bei pflanzenbasiertem Futter fehlen häufiger Jod und B-Vitamine, die aber zugesetzt werden können."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "katzenhaltung-probleme",
+   "label": "Verhaltensprobleme bei Katzen",
+   "category": "Andere Tiere",
+   "description": "Unreinheit, Kratzen und Unterbeschäftigung bei Katzen als häufige Abgabegründe und ihre Trainierbarkeit.",
+   "entries": [
+    {
+     "label": "Verhaltensprobleme bei Katzen und Abgabe ins Tierheim",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:32:16",
+     "end": "0:33:49",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Katzen werden wegen Unreinheit oder Kratzen schneller abgegeben als Hunde; Experten halten viele Probleme für gut trainierbar, oft stecken gesundheitliche Ursachen oder Unterbeschäftigung bei Wohnungskatzen dahinter."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "wasserrettungshunde",
+   "label": "Wasserrettungshunde",
+   "category": "Hundesport & Arbeitshunde",
+   "description": "Einsatz und Eignung von Hunden für die Wasserarbeit und Rettung.",
+   "entries": [
+    {
+     "label": "Neufundländer als Wasserrettungshunde",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:45:20",
+     "end": "0:45:56",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Ursprünglich als Wasserarbeitshunde eingesetzt, sind heutige Neufundländer durch schweres Fell und Gewicht schwerfällig, könnten bei ursprünglicherem Bau aber wieder Rettungsarbeit leisten."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "welpenkauf-zuechterwahl",
+   "label": "Welpenkauf und Züchterwahl",
+   "category": "Zucht & Rassen",
+   "description": "Warnsignale unseriöser Zucht und Kriterien für die Auswahl eines seriösen Züchters.",
+   "entries": [
+    {
+     "label": "Welpenkauf und Erkennen unseriöser Züchter",
+     "episode": "rtl-226",
+     "number": 226,
+     "title": "Der große Leberwursttest",
+     "start": "0:17:12",
+     "end": "0:22:40",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Anhand eines Beratungstelefonats erklärt Martin Rütter Warnsignale unseriöser Zucht (mehrere Würfe pro Jahr, mehrere Rassen inklusive Designerhunde, sofortige Abgabe) und empfiehlt Tierheim oder Geduld beim VDH-Züchter."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "otter-werkzeuggebrauch",
+   "label": "Werkzeuggebrauch bei Seeottern",
+   "category": "Andere Tiere",
+   "description": "Seeotter nutzen mitgeführte Steine, um Muscheln und Seeigel zu knacken.",
+   "entries": [
+    {
+     "label": "Seeotter und ihr Werkzeuggebrauch",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:05:00",
+     "end": "0:06:20",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Seeotter bewahren Lieblingssteine in einer Hauttasche unter dem Arm auf und nutzen sie als Werkzeug, um Muscheln, Seeigel und Schnecken zu knacken, was auch als Spiel- und Imponierverhalten gedeutet wird."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "wildtiere-im-zirkus",
+   "label": "Wildtiere in Zirkus und Privathaltung",
+   "category": "Tierschutz & Ethik",
+   "description": "Dressuren, Beschlagnahmungen und Auffangstationen für Wildtiere aus Zirkus und Privathand.",
+   "entries": [
+    {
+     "label": "Wildtiere in Zirkus und Privathaltung",
+     "episode": "rtl-230",
+     "number": 230,
+     "title": "Wildkatzen, Wurstkriege & der Targetstick",
+     "start": "0:18:34",
+     "end": "0:23:00",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Elefantendressuren im Zirkus werden als Tierquälerei bewertet, außerdem geht es um Auffangstationen für aus Privathaltung beschlagnahmte Großkatzen und um Enrichment als Stellschraube in der Wildtierhaltung."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "wolf",
+   "label": "Wolf",
+   "category": "Wissenschaft & Forschung",
+   "description": "Ausbreitung und Wanderungen von Wölfen, etwa Rekordstrecken auf der Suche nach Revier und Partner.",
+   "entries": [
+    {
+     "label": "Rekordwanderung eines niedersächsischen Wolfs",
+     "episode": "rtl-summer-a04",
+     "number": "Summer Edition #4",
+     "title": "Otterjagd & Dackelkatzen",
+     "start": "0:34:50",
+     "end": "0:36:04",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Ein in Niedersachsen geborener Wolfsrüde wanderte auf der Suche nach Revier und Partnerin rund 1.190 Kilometer Luftlinie bis in die Pyrenäen – die längste dokumentierte Wolfswanderung."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "zecken-und-parasiten",
+   "label": "Zecken und zeckenübertragene Krankheiten",
+   "category": "Gesundheit & Medizin",
+   "description": "Infektionen wie Anaplasmose durch Zeckenbisse und deren Spätfolgen.",
+   "entries": [
+    {
+     "label": "Anaplasmose durch Zeckenbiss",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:07:18",
+     "end": "0:07:29",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Die Anaplasmose-Infektion von Alma wird auf einen Zeckenbiss auf Elba zurückgeführt und als Ursache späterer Organschäden beschrieben."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "zoos-und-wildparks",
+   "label": "Zoos und Wildparks",
+   "category": "Tierschutz & Ethik",
+   "description": "Gehegegestaltung, Stereotypien, Nachzucht und der Bildungsauftrag von Zoos und Wildparks, einschließlich begehbarer Gehege.",
+   "entries": [
+    {
+     "label": "Zoo- und Wildparkhaltung",
+     "episode": "rtl-230",
+     "number": 230,
+     "title": "Wildkatzen, Wurstkriege & der Targetstick",
+     "start": "0:07:09",
+     "end": "0:16:39",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Nach einem Besuch in einem Düsseldorfer Wildpark diskutieren die beiden über beengte Gehege, stereotype Verhaltensweisen wie das Kreislaufen einer Wildkatze, ungebremste Nachzucht von Jungtieren sowie über Vor- und Nachteile von Zoos bei Bildung und Arterhaltung."
+     ]
+    },
+    {
+     "label": "Begehbare Affengehege",
+     "episode": "rtl-230",
+     "number": 230,
+     "title": "Wildkatzen, Wurstkriege & der Targetstick",
+     "start": "0:23:46",
+     "end": "0:24:37",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Anekdote über ein begehbares Affengehege, in dem Affen Kindern gezielt Brillen und Rucksackinhalte abnahmen – ein Hinweis auf deren Lernfähigkeit und die Problematik solcher Anlagen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  }
+ ]
+}

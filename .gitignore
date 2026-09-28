@@ -21,3 +21,13 @@ db/breeds/**/*.mov
 
 # Keep TypeScript breed definition files
 !db/breeds/**/index.ts
+
+# Local secrets
+.env
+.env.*
+
+# Podcast topic index working data (audio, transcripts, raw results)
+/.podcast/
+
+# Python
+__pycache__/
