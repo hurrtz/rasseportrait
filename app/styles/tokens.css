@@ -3,6 +3,7 @@
   --rp-bg: #faf6f0; /* page background */
   --rp-surface: #ffffff; /* cards, hero, article, fact tiles on bg */
   --rp-surface-muted: #f1e9de; /* player bar, chips, active nav pill, progress track, tabs */
+  --rp-surface-player: #e9ddcc; /* play surfaces: player card, sticky play bar, hero play bar (1.24:1 on bg; muted text 5.5:1) */
   --rp-text: #1b1712; /* all primary text */
   --rp-text-muted: #5e554a; /* meta lines, labels, secondary copy */
   --rp-line: #e0d5c6; /* 1px borders, dividers, outline pills */

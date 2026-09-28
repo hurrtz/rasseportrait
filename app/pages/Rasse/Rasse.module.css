@@ -57,15 +57,20 @@
 
 /* ---------- back links ---------- */
 
+/* both back links stay in the top-left corner while the page scrolls */
 .backCircle {
-  position: absolute;
-  top: 16px;
+  position: fixed;
+  top: calc(16px + env(safe-area-inset-top));
   left: 16px;
+  z-index: 101;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 44px;
   height: 44px;
+  /* the line keeps the button visible once it floats over the page */
+  border: 1px solid var(--rp-line);
   border-radius: var(--rp-radius-pill);
   background: var(--rp-glass);
   color: var(--rp-text);
@@ -79,6 +84,7 @@
   min-height: 44px;
   box-sizing: border-box;
   padding: 0 18px;
+  border: 1px solid var(--rp-line);
   border-radius: var(--rp-radius-pill);
   background: var(--rp-glass);
   color: var(--rp-text);
@@ -165,7 +171,7 @@
   gap: 18px;
   padding: 24px;
   border-radius: var(--rp-radius-card);
-  background: var(--rp-surface-muted);
+  background: var(--rp-surface-player);
 }
 
 .playerRow {
@@ -376,7 +382,7 @@
   gap: 12px;
   padding: 8px 20px 8px 8px;
   border-radius: var(--rp-radius-pill);
-  background: var(--rp-surface-muted);
+  background: var(--rp-surface-player);
   /* the only shadow in the system */
   box-shadow: 0 8px 24px rgba(27, 23, 18, 0.12);
 }
@@ -453,9 +459,10 @@
 
   .backPill {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 24px;
     left: 24px;
+    z-index: 101;
   }
 
   .content {
