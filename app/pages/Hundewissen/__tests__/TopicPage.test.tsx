@@ -144,6 +144,10 @@ describe("topic page", () => {
     fireEvent.click(more);
 
     expect(hidden).not.toHaveAttribute("data-collapsed");
+    // keyboard users continue at the first card that appeared
+    expect(
+      within(hidden).getByRole("heading", { name: "Der große Leberwursttest" }),
+    ).toHaveFocus();
     expect(screen.queryByRole("button", { name: /weitere Folgen/ })).not.toBeInTheDocument();
   });
 

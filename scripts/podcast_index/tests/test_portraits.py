@@ -44,11 +44,11 @@ def test_replace_timecode_refuses_when_the_old_value_differs():
 def test_site_portraits_lists_portrait_entries_of_raw_breeds():
     data = {"breeds": [
         {"id": 206, "details": {"public": ["Japan Chin"]}, "podcast": [
-            {"number": 231, "episode": "Ragebait", "meta": {"internal": "portrait", "timecode": 1845}},
+            {"number": 231, "episode": "Ragebait", "meta": {"internal": "portrait", "timecode": 1845, "airDate": "2025-11-06"}},
             {"number": 12, "episode": "Anders", "meta": {"internal": "other", "timecode": 100}},
         ]},
     ]}
 
     assert site_portraits(data) == [
-        {"breedId": 206, "breed": "Japan Chin", "number": 231, "episode": "Ragebait", "timecode": 1845}
+        {"breedId": 206, "breed": "Japan Chin", "number": 231, "episode": "Ragebait", "timecode": 1845, "airDate": "2025-11-06"}
     ]

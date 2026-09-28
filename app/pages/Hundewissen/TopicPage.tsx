@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useMemo, useState } from "react";
+import React, { useEffect, useId, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useLocation, useParams } from "react-router";
 import {
   IconArrowLeft,
@@ -201,7 +201,7 @@ const EpisodeCard = ({ episode, collapsed, onPlay }: EpisodeCardProps) => {
     >
       <div className={classes.episodeHead}>
         <span className={classes.episodeEyebrow}>{episodeLine(episode)}</span>
-        <h3 id={titleId} className={classes.episodeTitle}>
+        <h3 id={titleId} tabIndex={-1} className={classes.episodeTitle}>
           {episode.title}
         </h3>
         <span className={classes.episodeCount}>
@@ -256,9 +256,25 @@ const Entries = ({
   const [expanded, setExpanded] = useState(false);
   const sorted = useMemo(() => sortEpisodes(topic.episodes, sort), [topic, sort]);
   const hidden = expanded ? 0 : Math.max(0, sorted.length - MOBILE_EPISODES);
+  const listRef = useRef<HTMLDivElement>(null);
+  const focusNew = useRef(false);
+
+  // the button disappears; keyboard users continue at the first new card
+  useEffect(() => {
+    if (!expanded || !focusNew.current) return;
+    focusNew.current = false;
+    listRef.current
+      ?.querySelectorAll<HTMLElement>("article h3")
+      [MOBILE_EPISODES]?.focus();
+  }, [expanded]);
+
+  const showAll = () => {
+    focusNew.current = true;
+    setExpanded(true);
+  };
 
   return (
-    <div className={classes.entries}>
+    <div ref={listRef} className={classes.entries}>
       <div className={classes.entriesHead}>
         <h2 className={classes.sectionTitle}>Alle Stellen im Podcast</h2>
         <SortSegments options={SORT_OPTIONS} value={sort} onChange={setSort} />
@@ -275,7 +291,7 @@ const Entries = ({
         <button
           type="button"
           className={classes.more}
-          onClick={() => setExpanded(true)}
+          onClick={showAll}
         >
           {hidden === 1 ? "1 weitere Folge zeigen" : `${hidden} weitere Folgen zeigen`}
         </button>

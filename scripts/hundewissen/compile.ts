@@ -108,10 +108,13 @@ export const normalizeTitle = (title: string) =>
     .replace(/[^a-z0-9äöüß]+/g, "");
 
 interface SiteEpisode {
+  key: string;
   number: number | string;
   title: string;
   airDate: string;
   sources: Podcast["sources"];
+  /** where the portrait starts in this episode, when it has one */
+  portraitTimecode?: number;
 }
 
 const siteEpisodes = (rawBreeds: Breed[]) => {
@@ -119,16 +122,21 @@ const siteEpisodes = (rawBreeds: Breed[]) => {
 
   const add = (podcast: Podcast) => {
     const key = normalizeTitle(podcast.episode);
+    const portraitTimecode =
+      podcast.meta.internal === "portrait" ? podcast.meta.timecode : undefined;
     const known = byTitle.get(key);
     if (!known) {
       byTitle.set(key, {
+        key,
         number: podcast.number,
         title: podcast.episode,
         airDate: podcast.meta.airDate,
         sources: [...podcast.sources],
+        portraitTimecode,
       });
       return;
     }
+    known.portraitTimecode ??= portraitTimecode;
     // breeds of one episode may list different sources; keep them all
     podcast.sources.forEach((source) => {
       if (!known.sources.some(({ url }) => url === source.url)) {
@@ -154,6 +162,16 @@ const siteEpisodes = (rawBreeds: Breed[]) => {
   return { byTitle, byNumber };
 };
 
+/**
+ * The feed publishes RTL episodes about two weeks after the site's air date;
+ * further apart means a rerun (Summer Editions) or another episode that
+ * happens to share the number (the Mina era counts from 1 again).
+ */
+const SAME_EPISODE_DAYS = 60;
+
+const daysApart = (a: string, b: string) =>
+  Math.abs(Date.parse(a) - Date.parse(b)) / 86_400_000;
+
 interface ResolvedEpisode {
   id: string;
   number: number | string;
@@ -162,7 +180,25 @@ interface ResolvedEpisode {
   sources: Podcast["sources"];
   audioUrl: string;
   record: IndexEpisode;
+  /** seconds to subtract from the transcript's timecodes */
+  shift: number;
+  /** the site episode this is a rerun of, when it is one */
+  rerunOf?: string;
+  /** the site episode it resolved to */
+  siteKey?: string;
 }
+
+/**
+ * A rerun's audio differs from the original's (new intro), so its timecodes
+ * only fit the original's Spotify/RTL+ links when the portrait lines the two
+ * up. Otherwise it plays from its own feed audio.
+ */
+const rerunTiming = (record: IndexEpisode, match: SiteEpisode) =>
+  record.portrait.present &&
+  record.portrait.start &&
+  match.portraitTimecode !== undefined
+    ? { shift: toSeconds(record.portrait.start) - match.portraitTimecode, sources: match.sources }
+    : { shift: 0, sources: [] };
 
 const resolveEpisodes = (
   episodes: Record<string, IndexEpisode>,
@@ -173,9 +209,12 @@ const resolveEpisodes = (
   const resolved = new Map<string, ResolvedEpisode>();
 
   Object.entries(episodes).forEach(([id, record]) => {
+    const near = (episode: SiteEpisode) =>
+      !record.published ||
+      daysApart(record.published, episode.airDate) <= SAME_EPISODE_DAYS;
     const byNumber =
       record.feed === "rtl" && typeof record.number === "number"
-        ? site.byNumber.get(record.number)
+        ? site.byNumber.get(record.number)?.filter(near)
         : undefined;
     const match =
       site.byTitle.get(normalizeTitle(record.title)) ??
@@ -184,16 +223,30 @@ const resolveEpisodes = (
     if (!match) {
       warn(`${id} (${record.number}: ${record.title}) has no breed data; using the feed`);
     }
+    const rerun = match && !near(match);
+    const timing = rerun
+      ? rerunTiming(record, match)
+      : { shift: 0, sources: match?.sources ?? [] };
 
     resolved.set(id, {
       id,
       number: match?.number ?? record.number,
       title: match?.title ?? record.title,
       airDate: match?.airDate ?? (record.published || undefined),
-      sources: match?.sources ?? [],
       audioUrl: record.audioUrl,
       record,
+      ...timing,
+      ...(rerun ? { rerunOf: match.key } : {}),
+      ...(match ? { siteKey: match.key } : {}),
     });
+  });
+
+  // an original and its rerun are one episode on the site; keep the original
+  const originals = new Set(
+    [...resolved.values()].filter(({ rerunOf, siteKey }) => siteKey && !rerunOf).map(({ siteKey }) => siteKey),
+  );
+  resolved.forEach((episode, id) => {
+    if (episode.rerunOf && originals.has(episode.rerunOf)) resolved.delete(id);
   });
 
   return resolved;
@@ -278,7 +331,7 @@ const topicBreeds = (
   const others: HundewissenBreed[] = [];
 
   episodes.forEach((episode) => {
-    const { record } = resolved.get(episode.id) as ResolvedEpisode;
+    const { record, shift } = resolved.get(episode.id) as ResolvedEpisode;
     const at = (relation: HundewissenBreed["relation"], name: string) => {
       const target = targets.get(breedKey(name));
       return target
@@ -294,7 +347,7 @@ const topicBreeds = (
     record.breeds.forEach(({ name, start }) => {
       const mention = at("mentioned", name);
       if (!mention) return;
-      const seconds = toSeconds(start);
+      const seconds = toSeconds(start) - shift;
       const within = episode.entries.some(
         (entry) =>
           seconds >= entry.startSeconds &&
@@ -343,9 +396,11 @@ const groupEpisodes = (
   const grouped = new Map<string, HundewissenEpisode>();
 
   topic.entries.forEach((entry) => {
-    const episode = resolved.get(entry.episode) as ResolvedEpisode;
-    const startSeconds = toSeconds(entry.start);
-    const endSeconds = toSeconds(entry.end);
+    // reruns whose original is indexed too are left out
+    const episode = resolved.get(entry.episode);
+    if (!episode) return;
+    const startSeconds = Math.max(0, toSeconds(entry.start) - episode.shift);
+    const endSeconds = Math.max(0, toSeconds(entry.end) - episode.shift);
     const compiled: HundewissenEntry = {
       label: entry.label,
       start: formatTimecode(startSeconds),
@@ -469,6 +524,10 @@ export const compileHundewissen = ({
     }
 
     const episodes = groupEpisodes(topic, resolved);
+    if (!episodes.length) {
+      warn(`Topic "${topic.id}" only occurs in reruns of indexed episodes; skipped`);
+      return [];
+    }
     const overlay = overlays.get(topic.id);
     episodeSets.set(topic.id, new Set(episodes.map(({ id }) => id)));
 
@@ -479,7 +538,7 @@ export const compileHundewissen = ({
         area: area.slug,
         description: topic.description,
         episodeCount: episodes.length,
-        entryCount: topic.entries.length,
+        entryCount: episodes.reduce((sum, { entries }) => sum + entries.length, 0),
         totalMinutes: toMinutes(
           episodes
             .flatMap(({ entries }) => entries)

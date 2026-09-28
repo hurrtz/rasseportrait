@@ -1,4 +1,4 @@
-from podcast_index.index import merge_segments, match_site_entry, portrait_correction
+from podcast_index.index import is_rerun, merge_segments, match_site_entry, portrait_correction
 
 
 def seg(start, end, topic, weight="main", summary="s"):
@@ -49,6 +49,21 @@ def test_match_site_entry_falls_back_to_the_episode_number():
 
     assert match_site_entry("Ragebait, Qualzucht & Elch Erwin", 231, site)["breed"] == "Japan Chin"
     assert match_site_entry("Etwas ganz anderes", 232, site) is None
+
+
+def test_the_number_fallback_stays_in_the_same_era():
+    # the Mina era counts from 1 again
+    site = [{"breed": "Pudel", "number": 3, "episode": "Fremdscham im Bierkönig", "timecode": 900, "airDate": "2026-03-12"}]
+
+    assert match_site_entry("Frühe Folge", 3, site, published="2020-05-01") is None
+    assert match_site_entry("Frühe Folge", 3, site, published="2026-03-26")["breed"] == "Pudel"
+
+
+def test_a_rerun_is_published_long_after_the_site_date():
+    # regular RTL episodes reach the feed about two weeks after the site date
+    assert not is_rerun("2025-10-16", {"airDate": "2025-10-01"})
+    assert is_rerun("2025-09-11", {"airDate": "2024-03-14"})
+    assert not is_rerun("", {"airDate": "2024-03-14"})
 
 
 def test_portrait_correction_only_for_clear_deviations():

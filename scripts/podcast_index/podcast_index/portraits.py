@@ -18,6 +18,7 @@ def site_portraits(breeds_json: dict[str, Any]) -> list[dict[str, Any]]:
             "number": entry["number"],
             "episode": entry["episode"],
             "timecode": entry["meta"]["timecode"],
+            "airDate": entry["meta"]["airDate"],
         }
         for breed in breeds_json["breeds"]
         for entry in breed["podcast"]

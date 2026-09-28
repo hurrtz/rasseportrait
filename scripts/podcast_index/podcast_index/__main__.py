@@ -21,7 +21,7 @@ from datetime import date, datetime
 
 from . import build, extract, feeds, live, portraits, report, transcripts
 from .common import REPO, WORK, client
-from .index import match_site_entry, portrait_correction
+from .index import is_rerun, match_site_entry, portrait_correction
 from .transcripts import timecode
 
 
@@ -192,9 +192,13 @@ def cmd_portraits(args) -> None:
         data = extractions.get(episode.id)
         if not data or not data["portrait"]["present"]:
             continue
-        entry = match_site_entry(episode.title, episode.number, site)
+        entry = match_site_entry(episode.title, episode.number, site, episode.published)
         if not entry:
             print(f"  no breed data for {episode.id} ({data['portrait']['breed']})")
+            continue
+        if is_rerun(episode.published, entry):
+            # a rerun's audio has its own intro; its timecodes don't fit the original
+            print(f"  {episode.id} is a rerun of {entry['number']}; skipped")
             continue
         change = portrait_correction(entry, data["portrait"]["start"])
         if change:

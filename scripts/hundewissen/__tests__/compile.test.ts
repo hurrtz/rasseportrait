@@ -44,12 +44,34 @@ const EPISODES: Record<string, IndexEpisode> = {
     portrait: { present: true, breed: "Border Collie", start: "0:50:00" },
   }),
   // on the site as Folge 157
+  // a rerun of Folge 157 in 2025 with 5:02 more before the portrait
   "rtl-summer-a04": episode({
     number: "Summer Edition #4",
     title: "Otterjagd & Dackelkatzen",
-    published: "2024-03-15",
+    published: "2025-09-11",
     audioUrl: "https://feed.example/a04.mp3",
     breeds: [{ name: "Kaninchen-Dachshund", start: "0:10:00" }],
+    portrait: { present: true, breed: "Otterhound", start: "0:42:20" },
+  }),
+  // a rerun of Folge 99, which has no portrait to line the two up
+  "rtl-summer-b03": episode({
+    number: "Summer Edition #3",
+    title: "Pudelwohl",
+    published: "2025-08-01",
+    audioUrl: "https://feed.example/b03.mp3",
+  }),
+  // the same episode as rtl-229, aired again
+  "rtl-summer-b09": episode({
+    number: "Summer Edition #9",
+    published: "2026-07-01",
+    audioUrl: "https://feed.example/b09.mp3",
+  }),
+  // an early RTL episode; the site's Folge 3 is a Mina-era episode
+  "rtl-003": episode({
+    number: 3,
+    title: "Frühe Folge",
+    published: "2020-05-01",
+    audioUrl: "https://feed.example/3.mp3",
   }),
   // the site has another title for Folge 150
   "rtl-150": episode({
@@ -126,7 +148,7 @@ const BREEDS: Breed[] = [
         number: 157,
         episode: "Otterjagd & Dackelkatzen",
         sources: [spotify("e157")],
-        meta: { internal: "listener_question", airDate: "2024-03-14" } as never,
+        meta: { airDate: "2024-03-14", timecode: 2238 } as never,
       }),
     ],
   }),
@@ -157,7 +179,20 @@ const BREEDS: Breed[] = [
   makeBreed({
     id: 172,
     details: { internal: "pudel", public: ["Pudel"] },
-    podcast: [],
+    podcast: [
+      makePodcast({
+        number: 99,
+        episode: "Pudelwohl",
+        sources: [spotify("e99")],
+        meta: { internal: "listener_question", airDate: "2022-05-05" } as never,
+      }),
+      makePodcast({
+        number: 3,
+        episode: "Fremdscham im Bierkönig",
+        sources: [spotify("mina3")],
+        meta: { internal: "listener_question", airDate: "2026-03-12" } as never,
+      }),
+    ],
   }),
 ];
 
@@ -213,6 +248,75 @@ describe("episode matching", () => {
       airDate: "2026-03-12",
     });
     expect(warn).toHaveBeenCalledWith(expect.stringContaining("mina-003"));
+  });
+});
+
+describe("reruns", () => {
+  it("moves a rerun's timecodes onto the original episode, lined up by the portrait", () => {
+    const [compiled] = onlyTopic({
+      entries: [entry({ episode: "rtl-summer-a04", start: "0:30:28", end: "0:32:24" })],
+    }).episodes;
+
+    // portrait at 42:20 in the rerun, at 37:18 (2238 s) in Folge 157
+    expect(compiled).toMatchObject({ number: 157, airDate: "2024-03-14" });
+    expect(compiled.entries[0]).toMatchObject({
+      start: "25:26",
+      end: "27:22",
+      startSeconds: 1526,
+      endSeconds: 1642,
+      listen: { url: "https://open.spotify.com/episode/e157?t=1526", provider: "spotify" },
+    });
+  });
+
+  it("plays a rerun from the feed when nothing lines it up with the original", () => {
+    const [compiled] = onlyTopic({
+      entries: [entry({ episode: "rtl-summer-b03", start: "0:30:28", end: "0:32:24" })],
+    }).episodes;
+
+    expect(compiled).toMatchObject({ number: 99, airDate: "2022-05-05" });
+    expect(compiled.entries[0]).toMatchObject({
+      start: "30:28",
+      listen: { url: "https://feed.example/b03.mp3#t=1828", provider: "audio" },
+    });
+  });
+
+  it("leaves out a rerun when its original is indexed too", () => {
+    const compiled = onlyTopic({
+      entries: [entry({}), entry({ episode: "rtl-summer-b09", label: "Wiederholt" })],
+    });
+
+    expect(compiled.episodes.map(({ id }) => id)).toEqual(["rtl-229"]);
+    expect(compiled).toMatchObject({ episodeCount: 1, entryCount: 1 });
+  });
+
+  it("skips a topic found only in such a rerun, with a warning", () => {
+    const warn = jest.fn();
+    const { topics } = compile(
+      [
+        topic({ id: "a" }),
+        topic({ id: "b", entries: [entry({ episode: "rtl-summer-b09" })] }),
+      ],
+      { warn },
+    );
+
+    expect(topics.map(({ id }) => id)).toEqual(["a"]);
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('"b"'));
+  });
+
+  it("does not take the number of an episode from another era", () => {
+    const warn = jest.fn();
+    const { topics } = compile(
+      [topic({ entries: [entry({ episode: "rtl-003", number: 3 })] })],
+      { warn },
+    );
+
+    expect(topics[0].episodes[0]).toMatchObject({
+      number: 3,
+      title: "Frühe Folge",
+      airDate: "2020-05-01",
+    });
+    expect(topics[0].episodes[0].entries[0].listen.provider).toBe("audio");
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining("rtl-003"));
   });
 });
 
