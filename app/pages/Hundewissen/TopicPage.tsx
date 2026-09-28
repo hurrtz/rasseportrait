@@ -24,7 +24,6 @@ import { formatDateLong, formatEpisode } from "~/utils/format";
 import HundewissenNotFound from "./HundewissenNotFound";
 import {
   CONTACT,
-  count,
   entries as entriesLabel,
   episodes as episodesLabel,
   kindLabel,
@@ -204,9 +203,6 @@ const EpisodeCard = ({ episode, collapsed, onPlay }: EpisodeCardProps) => {
         <h3 id={titleId} tabIndex={-1} className={classes.episodeTitle}>
           {episode.title}
         </h3>
-        <span className={classes.episodeCount}>
-          {count(episode.entries.length, "Stelle", "Stellen")} zu diesem Thema
-        </span>
       </div>
       {episode.entries.map((entry) => (
         <div key={entry.startSeconds} className={classes.entry}>

@@ -76,7 +76,7 @@ describe("topic page", () => {
         .getAllByRole("listitem")
         .map(({ textContent }) => textContent),
     ).toEqual(["1 Folge", "1 Stelle", "2 Min. zum Nachhören"]);
-    expect(screen.getByText("1 Stelle zu diesem Thema")).toBeInTheDocument();
+    expect(screen.queryByText(/zu diesem Thema/)).not.toBeInTheDocument();
   });
 
   it("offers the featured entry to play directly", () => {
@@ -106,7 +106,6 @@ describe("topic page", () => {
       name: "Riesen, Hämorrhoiden & Essgeräusche",
     });
     expect(within(first).getByText("Folge 229 · 1. Oktober 2025")).toBeInTheDocument();
-    expect(within(first).getByText("2 Stellen zu diesem Thema")).toBeInTheDocument();
     expect(within(first).getByText("30:28–32:24")).toBeInTheDocument();
     expect(within(first).getByText("2 Min. · Diskussion")).toBeInTheDocument();
     expect(within(first).getByText("Hauptthema")).toBeInTheDocument();

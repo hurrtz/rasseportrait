@@ -270,10 +270,6 @@
   letter-spacing: -0.01em;
 }
 
-.episodeCount {
-  font-size: 13px;
-  color: var(--rp-text-muted);
-}
 
 .entry {
   display: grid;
