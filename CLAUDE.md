@@ -121,3 +121,7 @@ All breed illustrations are AI-generated (Midjourney). Source images in `db/bree
 ## Build Compression
 
 Vite produces Gzip (level 9) + Brotli (level 11) compressed assets alongside originals.
+
+## Redesign (in progress)
+
+The approved redesign "Sendung · Tageslicht" replaces the 3.16 look. Before touching any UI, read `docs/redesign/README.md`: tokens, Mantine theme, phased plan, component specs, copy, analytics, tests and the definition of done. Mockups of every screen are in `docs/redesign/mockups/` (open in a browser), screenshots in `docs/redesign/screenshots/`.
