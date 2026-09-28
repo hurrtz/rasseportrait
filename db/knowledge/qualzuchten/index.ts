@@ -6,12 +6,13 @@ export default {
     internal: "qualzuchten",
     public: "Qualzuchten",
   },
+  summary: "Wenn äußere Merkmale wichtiger sind als die Gesundheit des Hundes.",
+  status: "draft",
   content: `
 Qualzucht bezeichnet Zuchtformen bei Hunden, bei denen gesundheitliche Beeinträchtigungen,
 Schmerzen oder Leiden für die Tiere in Kauf genommen werden, um bestimmte äußere Merkmale zu erreichen.
-Dies kann zu erheblichen gesundheitlichen Problemen führen und das Wohlbefinden der Tiere stark beeinträchtigen.
 
-Hier werden in Zukunft detaillierte Informationen zu diesem wichtigen Thema zusammengetragen.
+Dies kann zu erheblichen gesundheitlichen Problemen führen und das Wohlbefinden der Tiere stark beeinträchtigen.
   `.trim(),
   podcast: [],
   furtherReading: [],

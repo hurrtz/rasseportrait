@@ -1,107 +1,87 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 import type { KnowledgeTopic } from "../../types/knowledge";
+import { BASE_PATH } from "~/constants";
 import { logger } from "~/utils/logger";
 
-const KNOWLEDGE_STORE_NAME = "knowledge";
-const ERROR_NO_TOPICS_FOUND = "No knowledge topics found";
-const ERROR_UNKNOWN = "Unknown error occurred";
-
-interface KnowledgeActions {
-  initialize: () => Promise<void>;
-  setTopics: (topics: KnowledgeTopic[]) => void;
-  setSelectedTopic: (id?: string) => void;
-}
+export type KnowledgeStatus = "idle" | "loading" | "ready" | "error";
 
 interface State {
   topics: KnowledgeTopic[];
-  selectedTopic?: string;
-  loading: boolean;
+  status: KnowledgeStatus;
   error: string | null;
-  initialized: boolean;
-  actions: KnowledgeActions;
+  actions: {
+    /** Loads knowledge.json once; after an error it may be called again */
+    initialize: () => Promise<void>;
+  };
 }
 
-const initialState: Omit<State, "actions"> = {
-  topics: [],
-  loading: false,
-  error: null,
-  initialized: false,
+let inflight: Promise<void> | null = null;
+
+const fetchTopics = async (): Promise<KnowledgeTopic[]> => {
+  const response = await fetch(`${BASE_PATH}data/knowledge.json`);
+  if (!response.ok) {
+    throw new Error(
+      `Failed to load knowledge topics: ${response.status} ${response.statusText}`,
+    );
+  }
+
+  const data = await response.json();
+  const topics = data.topics as KnowledgeTopic[] | undefined;
+  if (!topics?.length) throw new Error("No knowledge topics found");
+
+  logger.info(
+    `Loaded ${topics.length} knowledge topics (compiled: ${data.meta?.compiled})`,
+  );
+  return topics;
 };
 
 const useKnowledgeStore = create<State>()(
   devtools(
-    (set) => ({
-      ...initialState,
+    (set, get) => ({
+      topics: [],
+      status: "idle",
+      error: null,
       actions: {
-        initialize: async () => {
-          const state = useKnowledgeStore.getState();
-          if (state.initialized || state.loading) return;
+        initialize: () => {
+          const { status } = get();
+          if (status === "ready") return Promise.resolve();
+          if (status === "loading" && inflight) return inflight;
 
-          set({ loading: true, error: null }, undefined, "initialize:start");
-
-          try {
-            // Fetch knowledge data from compiled JSON
-            const response = await fetch("/rasseportrait/data/knowledge.json");
-            if (!response.ok) {
-              throw new Error(
-                `Failed to load knowledge topics: ${response.status} ${response.statusText}`,
+          set({ status: "loading", error: null }, undefined, "initialize");
+          inflight = fetchTopics()
+            .then((topics) =>
+              set({ topics, status: "ready" }, undefined, "initialize:success"),
+            )
+            .catch((e) => {
+              logger.error("Failed to initialize knowledge topics:", e);
+              set(
+                {
+                  status: "error",
+                  error: e instanceof Error ? e.message : "Unknown error",
+                },
+                undefined,
+                "initialize:error",
               );
-            }
-
-            const data = await response.json();
-            const topics = data.topics as KnowledgeTopic[];
-
-            if (!topics || !topics.length) {
-              throw new Error(ERROR_NO_TOPICS_FOUND);
-            }
-
-            logger.info(
-              `Loaded ${topics.length} knowledge topics from JSON (compiled: ${data.meta?.compiled})`,
-            );
-
-            set(
-              {
-                topics,
-                initialized: true,
-                loading: false,
-              },
-              undefined,
-              "initialize:success",
-            );
-          } catch (e) {
-            const error = e instanceof Error ? e.message : ERROR_UNKNOWN;
-            logger.error("Failed to initialize knowledge topics:", e);
-            set(
-              { error, loading: false, initialized: false },
-              undefined,
-              "initialize:error",
-            );
-          }
+            })
+            .finally(() => {
+              inflight = null;
+            });
+          return inflight;
         },
-        setTopics: (topics: KnowledgeTopic[]) =>
-          set({ topics }, undefined, "setTopics"),
-        setSelectedTopic: (id?: string) =>
-          set({ selectedTopic: id }, undefined, "setSelectedTopic"),
       },
     }),
-    { name: KNOWLEDGE_STORE_NAME },
+    { name: "knowledge" },
   ),
 );
 
-// Selectors and hooks
 export const useKnowledgeTopics = () =>
   useKnowledgeStore((state) => state.topics);
-export const useSelectedTopicId = () =>
-  useKnowledgeStore((state) => state.selectedTopic);
+
+export const useKnowledgeStatus = () =>
+  useKnowledgeStore((state) => state.status);
+
 export const useKnowledgeActions = () =>
   useKnowledgeStore((state) => state.actions);
-export const useKnowledgeLoading = () =>
-  useKnowledgeStore((state) => state.loading);
-export const useKnowledgeError = () =>
-  useKnowledgeStore((state) => state.error);
-export const useKnowledgeInitialized = () =>
-  useKnowledgeStore((state) => state.initialized);
 
-// Export the store itself for testing purposes
 export default useKnowledgeStore;

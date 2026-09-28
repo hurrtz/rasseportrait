@@ -1,0 +1,356 @@
+.page {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 56px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px var(--rp-gutter) 12px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.intro {
+  max-width: 640px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--rp-text-muted);
+}
+
+/* ---------- topics: a scrollable row of pills below md ---------- */
+
+.topics {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px var(--rp-gutter) 16px;
+  scrollbar-width: none;
+}
+
+.topics::-webkit-scrollbar {
+  display: none;
+}
+
+.topic {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  color: var(--rp-text);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+.topic[aria-current="page"] {
+  background: var(--rp-accent);
+  color: var(--rp-on-accent);
+}
+
+.topicTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.topicArrow,
+.topicSummary {
+  display: none;
+}
+
+/* ---------- article ---------- */
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+  margin: 0 var(--rp-gutter);
+  padding: 24px 20px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-card);
+  background: var(--rp-surface);
+}
+
+.articleHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eyebrow {
+  display: none;
+  color: var(--rp-accent-text);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-accent);
+}
+
+.articleTitle {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  overflow-wrap: break-word;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 680px;
+}
+
+.text p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.episodes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rows > li {
+  background: var(--rp-surface-muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ---------- no episodes yet ---------- */
+
+.empty {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  background: var(--rp-surface-muted);
+}
+
+.emptyIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface);
+  color: var(--rp-accent-text);
+}
+
+.emptyText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.emptyTitle {
+  font-family: var(--rp-font-display);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.emptyHint {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--rp-text-muted);
+}
+
+/* orange text is too faint on the muted ground, so the address stays ink */
+.mail {
+  color: var(--rp-text);
+  text-underline-offset: 3px;
+}
+
+/* ---------- from md: list + article ---------- */
+
+@media (min-width: 62em) {
+  .head {
+    gap: 14px;
+    padding: 32px var(--rp-gutter-desktop);
+  }
+
+  .title {
+    font-size: 96px;
+    letter-spacing: -0.045em;
+  }
+
+  .intro {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 32%) minmax(0, 1fr);
+    align-items: start;
+    gap: 40px;
+    padding: 0 var(--rp-gutter-desktop);
+  }
+
+  .topics {
+    flex-direction: column;
+    gap: 4px;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .topic {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 16px 18px;
+    border: 1px solid transparent;
+    border-radius: 18px;
+    background: transparent;
+  }
+
+  .topic:hover {
+    background: var(--rp-surface-muted);
+  }
+
+  .topic[aria-current="page"] {
+    border-color: var(--rp-line);
+    background: var(--rp-surface);
+    color: var(--rp-text);
+  }
+
+  .topicTitle {
+    font-family: var(--rp-font-display);
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .topicArrow {
+    display: block;
+    flex-shrink: 0;
+    color: var(--rp-text-muted);
+  }
+
+  .topic[aria-current="page"] .topicArrow {
+    color: var(--rp-accent-text);
+  }
+
+  .topicSummary {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--rp-text-muted);
+  }
+
+  .article {
+    gap: 26px;
+    margin: 0;
+    padding: 48px 56px;
+    border-radius: var(--rp-radius-panel);
+  }
+
+  .eyebrow {
+    display: inline;
+  }
+
+  .articleTitle {
+    font-size: clamp(48px, 5vw, 72px);
+    letter-spacing: -0.04em;
+  }
+
+  .text p {
+    font-size: 19px;
+  }
+
+  .empty {
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    border-radius: 20px;
+  }
+
+  .emptyIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .emptyTitle {
+    font-size: 19px;
+  }
+
+  .emptyHint {
+    font-size: 15px;
+  }
+
+  .links {
+    gap: 12px;
+  }
+}
+
+@media (min-width: 80em) {
+  .layout {
+    grid-template-columns: 400px minmax(0, 1fr);
+  }
+}

@@ -15,4 +15,7 @@ type Params = {
   "/hundewissen": {};
   "/impressum": {};
   "/statistiken": {};
+  "/rasse/:slug": {
+    "slug": string;
+  };
 };
