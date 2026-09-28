@@ -8,7 +8,6 @@ import { SearchPill } from "~/components/SearchPill";
 import { SEARCH_DEBOUNCE_DELAY_MS } from "~/constants";
 import { useAmplitude } from "~/hooks/useAmplitude";
 import { useDebounce } from "~/hooks/useDebounce";
-import AreaIcon from "./AreaIcon";
 import AreaPicture from "./AreaPicture";
 import HundewissenNotFound from "./HundewissenNotFound";
 import { topics as topicsLabel } from "./labels";
@@ -21,7 +20,13 @@ import classes from "./AreaPage.module.css";
 /** Rows shown before "Weitere {n} Themen zeigen"; longer lists get a search */
 const VISIBLE_TOPICS = 30;
 
-const OtherAreas = ({ area, index }: { area: HundewissenArea; index: HundewissenIndex }) => {
+const OtherAreas = ({
+  area,
+  index,
+}: {
+  area: HundewissenArea;
+  index: HundewissenIndex;
+}) => {
   const titleId = useId();
   const others = index.areas.filter(({ slug }) => slug !== area.slug);
   if (!others.length) return null;
@@ -32,13 +37,23 @@ const OtherAreas = ({ area, index }: { area: HundewissenArea; index: Hundewissen
         Andere Bereiche
       </h2>
       {others.map((other) => (
-        <Link key={other.slug} to={`/hundewissen/${other.slug}`} className={classes.other}>
-          <span className={`${shared.iconTile} ${classes.otherIcon}`}>
-            <AreaIcon icon={other.icon} size={20} />
-          </span>
+        <Link
+          key={other.slug}
+          to={`/hundewissen/${other.slug}`}
+          className={classes.other}
+        >
+          <AreaPicture
+            area={other}
+            className={classes.otherIcon}
+            iconSize={20}
+            thumbnail
+            decorative
+          />
           <span className={classes.otherText}>
             <span className={classes.otherName}>{other.name}</span>
-            <span className={classes.otherCount}>{topicsLabel(other.topicCount)}</span>
+            <span className={classes.otherCount}>
+              {topicsLabel(other.topicCount)}
+            </span>
           </span>
         </Link>
       ))}
@@ -46,12 +61,19 @@ const OtherAreas = ({ area, index }: { area: HundewissenArea; index: Hundewissen
   );
 };
 
-const AreaView = ({ area, index }: { area: HundewissenArea; index: HundewissenIndex }) => {
+const AreaView = ({
+  area,
+  index,
+}: {
+  area: HundewissenArea;
+  index: HundewissenIndex;
+}) => {
   const [query, setQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
   const needle = useDebounce(query.trim(), SEARCH_DEBOUNCE_DELAY_MS);
   const topics = useMemo(
-    () => index.topics.filter((topic) => topic.area === area.slug).sort(byEpisodes),
+    () =>
+      index.topics.filter((topic) => topic.area === area.slug).sort(byEpisodes),
     [index, area],
   );
   const hits = useTopicSearch(topics, needle);
@@ -84,8 +106,8 @@ const AreaView = ({ area, index }: { area: HundewissenArea; index: HundewissenIn
           <span className={shared.eyebrow}>Hundewissen · Bereich</span>
           <h1 className={classes.title}>{area.name}</h1>
           <p className={classes.lead}>
-            {topicsLabel(topics.length)} aus {index.indexedEpisodes} ausgewerteten
-            Folgen, sortiert danach, wie oft sie vorkamen.
+            {topicsLabel(topics.length)} aus {index.indexedEpisodes}{" "}
+            ausgewerteten Folgen, sortiert danach, wie oft sie vorkamen.
           </p>
         </div>
       </section>
@@ -106,12 +128,20 @@ const AreaView = ({ area, index }: { area: HundewissenArea; index: HundewissenIn
           ) : (
             <ul aria-label="Themen" className={classes.rows}>
               {shown.map((topic) => (
-                <TopicRow key={topic.id} topic={topic} from={hits ? "search" : "area"} />
+                <TopicRow
+                  key={topic.id}
+                  topic={topic}
+                  from={hits ? "search" : "area"}
+                />
               ))}
             </ul>
           )}
           {!hits && rest > 0 && (
-            <button type="button" className={classes.more} onClick={() => setShowAll(true)}>
+            <button
+              type="button"
+              className={classes.more}
+              onClick={() => setShowAll(true)}
+            >
               Weitere {rest} {rest === 1 ? "Thema" : "Themen"} zeigen
             </button>
           )}
@@ -122,7 +152,13 @@ const AreaView = ({ area, index }: { area: HundewissenArea; index: HundewissenIn
   );
 };
 
-const TrackedArea = ({ area, index }: { area: HundewissenArea; index: HundewissenIndex }) => {
+const TrackedArea = ({
+  area,
+  index,
+}: {
+  area: HundewissenArea;
+  index: HundewissenIndex;
+}) => {
   const { track } = useAmplitude();
 
   useEffect(() => {
@@ -138,7 +174,12 @@ const AreaPage = () => {
   const { status, index, retry } = useEnsureHundewissen();
 
   if (status === "error") {
-    return <LoadError title="Hundewissen konnte nicht geladen werden." onRetry={retry} />;
+    return (
+      <LoadError
+        title="Hundewissen konnte nicht geladen werden."
+        onRetry={retry}
+      />
+    );
   }
   if (!index) return <LoadingSpinner message="Themen werden geladen …" />;
 

@@ -84,6 +84,25 @@ describe("area page", () => {
     expect(topicRows()).toEqual(["Ärger1 Folge", "Bellen1 Folge", "Zecken1 Folge"]);
   });
 
+  it("shows other areas with their thumbnail, as decoration beside the name", () => {
+    const index = makeIndex();
+    index.areas[1].image = {
+      src: "/rasseportrait/illustrations/hundewissen/gesundheit-medizin/illustration.jpeg",
+      thumbnail:
+        "/rasseportrait/illustrations/hundewissen/gesundheit-medizin/illustration_thumbnail.jpeg",
+      alt: "Eine Tierärztin hört einen Hund ab",
+    };
+    renderArea(undefined, index);
+
+    const others = screen.getByRole("complementary", { name: "Andere Bereiche" });
+    const link = within(others).getByRole("link", { name: /Gesundheit & Medizin/ });
+    expect(link.querySelector("img")).toHaveAttribute(
+      "src",
+      "/rasseportrait/illustrations/hundewissen/gesundheit-medizin/illustration_thumbnail.jpeg",
+    );
+    expect(link.querySelector("img")).toHaveAttribute("alt", "");
+  });
+
   it("links the other areas", () => {
     renderArea();
 

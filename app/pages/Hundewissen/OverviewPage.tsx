@@ -138,7 +138,13 @@ const AreaCard = ({ area, topics, span, compact }: AreaCardProps) => {
         data-narrow={narrow || undefined}
         data-compact={compact || undefined}
       >
-        <AreaPicture area={area} className={classes.areaPicture} iconSize={44} />
+        <AreaPicture
+          area={area}
+          className={classes.areaPicture}
+          iconSize={44}
+          thumbnailBelowMd={compact}
+          decorative
+        />
         <span className={classes.areaBody}>
           <span className={classes.areaHead}>
             <span className={classes.areaName}>{area.name}</span>

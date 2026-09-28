@@ -128,6 +128,38 @@ describe("Hundewissen overview", () => {
     expect(within(first).getByText("Alle 3 Themen")).toBeInTheDocument();
   });
 
+  it("shows an area's picture on its card, as decoration beside the name", () => {
+    const index = makeIndex();
+    index.areas[0].image = {
+      src: "/rasseportrait/illustrations/hundewissen/zucht-rassen/illustration.jpeg",
+      thumbnail:
+        "/rasseportrait/illustrations/hundewissen/zucht-rassen/illustration_thumbnail.jpeg",
+      alt: "Eine Hündin mit ihren Welpen im Körbchen",
+    };
+    renderOverview(index);
+
+    const image = areaCards()[0].querySelector("img");
+    expect(image).toHaveAttribute(
+      "src",
+      "/rasseportrait/illustrations/hundewissen/zucht-rassen/illustration.jpeg",
+    );
+    expect(image).toHaveAttribute("alt", "");
+  });
+
+  it("loads only the thumbnail for compact rows on small screens", () => {
+    const index = sevenAreas();
+    index.areas[3].image = {
+      src: "/x/erziehung-training/illustration.jpeg",
+      thumbnail: "/x/erziehung-training/illustration_thumbnail.jpeg",
+      alt: "Training",
+    };
+    renderOverview(index);
+
+    const source = areaCards()[3].querySelector("picture source");
+    expect(source).toHaveAttribute("srcset", "/x/erziehung-training/illustration_thumbnail.jpeg");
+    expect(source).toHaveAttribute("media", "(max-width: 61.99em)");
+  });
+
   it("lays out areas two wide, then three narrow", () => {
     renderOverview(sevenAreas());
 
