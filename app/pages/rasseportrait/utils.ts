@@ -235,7 +235,7 @@ export const getStatistics = (breeds: Breed[]) => {
    * @returns Percentage as a decimal number
    */
   const getPercentage = (amount: number, total: number) =>
-    (amount / total) * 100;
+    total ? (amount / total) * 100 : 0;
 
   const breedsPresented = breeds.filter((breed) =>
     breed.podcast.some((podcast) => podcast.meta.internal === "portrait"),
@@ -244,7 +244,7 @@ export const getStatistics = (breeds: Breed[]) => {
   const percentageBreedsPresented = getPercentage(
     amountBreedsPresented,
     AMOUNT_OF_BREEDS_TOTAL,
-  ).toFixed(2);
+  );
   const breedsOutsideFCI = breeds.filter(
     (breed) => breed.classification.fci === undefined,
   );
@@ -272,7 +272,7 @@ export const getStatistics = (breeds: Breed[]) => {
   const martinCorrectGuessesPercentage = getPercentage(
     martinCorrectGuesses,
     martinCorrectGuessesOutOfTotal,
-  ).toFixed(2);
+  );
   const katharinaCorrectGuessesOutOfTotal = breedsPresented.filter((breed) =>
     breed.podcast.find(
       (podcast) =>
@@ -293,7 +293,7 @@ export const getStatistics = (breeds: Breed[]) => {
   const katharinaCorrectGuessesPercentage = getPercentage(
     katharinaCorrectGuesses,
     katharinaCorrectGuessesOutOfTotal,
-  ).toFixed(2);
+  );
 
   return {
     amountBreedsPresented,
@@ -306,5 +306,56 @@ export const getStatistics = (breeds: Breed[]) => {
     katharinaCorrectGuesses,
     katharinaCorrectGuessesOutOfTotal,
     katharinaCorrectGuessesPercentage,
+  };
+};
+
+const isPresented = (breed: Breed) =>
+  breed.podcast.some(({ meta }) => meta.internal === "portrait");
+
+/** The earliest portrait of a presented breed */
+const firstPortraitDate = (breed: Breed) =>
+  breed.podcast
+    .filter(({ meta }) => meta.internal === "portrait")
+    .map(({ meta }) => meta.airDate)
+    .sort()[0];
+
+/**
+ * Presented breeds per year of their first portrait, from the first to the
+ * last portrait year (years without portraits count 0)
+ */
+export const getPortraitsPerYear = (breeds: Breed[]) => {
+  const dates = breeds.filter(isPresented).map(firstPortraitDate).sort();
+  const firstAirDate = dates[0];
+  const lastAirDate = dates[dates.length - 1];
+  if (!firstAirDate || !lastAirDate) {
+    return { years: [], firstAirDate, lastAirDate };
+  }
+
+  const firstYear = Number(firstAirDate.slice(0, 4));
+  const lastYear = Number(lastAirDate.slice(0, 4));
+  const years = Array.from({ length: lastYear - firstYear + 1 }, (_, i) => {
+    const year = firstYear + i;
+    return {
+      year,
+      count: dates.filter((date) => date.startsWith(String(year))).length,
+    };
+  });
+
+  return { years, firstAirDate, lastAirDate };
+};
+
+/** Presented breeds in each FCI group 1–10, plus those outside the FCI */
+export const getPortraitsPerFciGroup = (breeds: Breed[]) => {
+  const presented = breeds.filter(isPresented);
+
+  return {
+    groups: Array.from({ length: 10 }, (_, i) => ({
+      group: i + 1,
+      count: presented.filter(
+        ({ classification }) => classification.fci?.group === i + 1,
+      ).length,
+    })),
+    withoutFci: presented.filter(({ classification }) => !classification.fci)
+      .length,
   };
 };

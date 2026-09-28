@@ -70,8 +70,9 @@ describe("getStatistics", () => {
 
       const result = getStatistics(breeds);
 
-      const expected = ((1 / AMOUNT_OF_BREEDS_TOTAL) * 100).toFixed(2);
-      expect(result.percentageBreedsPresented).toBe(expected);
+      expect(result.percentageBreedsPresented).toBeCloseTo(
+        (1 / AMOUNT_OF_BREEDS_TOTAL) * 100,
+      );
     });
 
     it("should identify breeds outside FCI", () => {
@@ -177,7 +178,7 @@ describe("getStatistics", () => {
       const result = getStatistics(breeds);
 
       // 1 correct out of 2 total = 50%
-      expect(result.martinCorrectGuessesPercentage).toBe("50.00");
+      expect(result.martinCorrectGuessesPercentage).toBe(50);
     });
 
     it("should not count non-guessable breeds for Martin", () => {
@@ -289,7 +290,7 @@ describe("getStatistics", () => {
       const result = getStatistics(breeds);
 
       // 2 correct out of 4 total = 50%
-      expect(result.katharinaCorrectGuessesPercentage).toBe("50.00");
+      expect(result.katharinaCorrectGuessesPercentage).toBe(50);
     });
 
     it("should not count non-guessable breeds for Katharina", () => {
@@ -320,7 +321,7 @@ describe("getStatistics", () => {
       const result = getStatistics([]);
 
       expect(result.amountBreedsPresented).toBe(0);
-      expect(result.percentageBreedsPresented).toBe("0.00");
+      expect(result.percentageBreedsPresented).toBe(0);
       expect(result.breedsOutsideFCI).toHaveLength(0);
       expect(result.breedsNotPresented).toHaveLength(0);
       expect(result.martinCorrectGuesses).toBe(0);
@@ -401,8 +402,8 @@ describe("getStatistics", () => {
 
       const result = getStatistics(breeds);
 
-      expect(result.martinCorrectGuessesPercentage).toBe("100.00");
-      expect(result.katharinaCorrectGuessesPercentage).toBe("100.00");
+      expect(result.martinCorrectGuessesPercentage).toBe(100);
+      expect(result.katharinaCorrectGuessesPercentage).toBe(100);
     });
 
     it("should handle 0% correct guesses", () => {
@@ -423,8 +424,8 @@ describe("getStatistics", () => {
 
       const result = getStatistics(breeds);
 
-      expect(result.martinCorrectGuessesPercentage).toBe("0.00");
-      expect(result.katharinaCorrectGuessesPercentage).toBe("0.00");
+      expect(result.martinCorrectGuessesPercentage).toBe(0);
+      expect(result.katharinaCorrectGuessesPercentage).toBe(0);
     });
   });
 });

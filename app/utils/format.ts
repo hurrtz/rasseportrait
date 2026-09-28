@@ -55,13 +55,24 @@ export const formatMonthYear = (isoDate: string) =>
   monthYear.format(toUtcDate(isoDate));
 
 const percent = new Intl.NumberFormat("de-DE", {
-  minimumFractionDigits: 2,
   maximumFractionDigits: 2,
 });
 
-/** 47.2375 → "47,24 %" (non-breaking space, so the sign never wraps) */
+/**
+ * 47.2375 → "47,24 %", 100 → "100 %" (non-breaking space, so the sign
+ * never wraps)
+ */
 export const formatPercent = (value: number) => `${percent.format(value)} %`;
 
 /** 7 → "Folge 7"; named specials ("Summer Edition #8") stay as they are */
 export const formatEpisode = (number: number | string) =>
   /^\d+$/.test(String(number)) ? `Folge ${number}` : String(number);
+
+const month = new Intl.DateTimeFormat("de-DE", {
+  month: "long",
+  timeZone: "UTC",
+});
+
+/** "2026-06-04" → "Juni" */
+export const formatMonth = (isoDate: string) =>
+  month.format(toUtcDate(isoDate));

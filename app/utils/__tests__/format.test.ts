@@ -1,4 +1,6 @@
 import {
+  formatMonth,
+  formatMonthYear,
   formatDateLong,
   formatDateShort,
   formatEpisode,
@@ -33,9 +35,10 @@ describe("formatDateShort", () => {
 });
 
 describe("formatPercent", () => {
-  it("uses a decimal comma, two decimals and a non-breaking space before %", () => {
-    expect(formatPercent(47.2375)).toBe("47,24 %");
-    expect(formatPercent(100)).toBe("100,00 %");
+  it("uses a decimal comma, up to two decimals and a non-breaking space before %", () => {
+    expect(formatPercent(47.2375)).toBe("47,24\u00a0%");
+    expect(formatPercent(79.5)).toBe("79,5\u00a0%");
+    expect(formatPercent(100)).toBe("100\u00a0%");
   });
 });
 
@@ -47,5 +50,17 @@ describe("formatEpisode", () => {
 
   it("keeps named specials as they are", () => {
     expect(formatEpisode("Summer Edition #8")).toBe("Summer Edition #8");
+  });
+});
+
+describe("formatMonthYear", () => {
+  it("writes month and year", () => {
+    expect(formatMonthYear("2021-10-19")).toBe("Oktober 2021");
+  });
+});
+
+describe("formatMonth", () => {
+  it("writes the month name", () => {
+    expect(formatMonth("2026-06-04")).toBe("Juni");
   });
 });

@@ -1,271 +1,237 @@
 import React from "react";
-import { useNavigate } from "react-router";
-import "./styles.css";
-import {
-  Group,
-  Progress,
-  Stack,
-  Text,
-  Card,
-  NumberFormatter,
-  Button,
-} from "@mantine/core";
-import { getStatistics } from "../rasseportrait/utils";
-import { useAllBreeds, useRawBreeds } from "../../stores/breeds";
+import { Link } from "react-router";
+import type { Breed } from "types/breed";
+import { LoadError } from "~/components/LoadError";
+import LoadingSpinner from "~/components/LoadingSpinner";
+import { LOADING_MESSAGE } from "~/constants";
 import { useEnsureBreeds } from "~/hooks/useEnsureBreeds";
+import { useAllBreeds, useBreedActions, useRawBreeds } from "~/stores/breeds";
 import {
-  AMOUNT_OF_BREEDS_TOTAL,
+  fciGroupLabel,
+  findDisplayBreed,
+  getNewestPortraitBreed,
+  getPrimaryPortrait,
+} from "~/utils/breed";
+import {
+  formatDateLong,
+  formatEpisode,
+  formatMonth,
+  formatMonthYear,
+  formatPercent,
+} from "~/utils/format";
+import {
   AMOUNT_OF_BREEDS_APPROVED,
   AMOUNT_OF_BREEDS_PROVISIONAL,
+  AMOUNT_OF_BREEDS_TOTAL,
 } from "../rasseportrait/constants";
-import type { Breed } from "types/breed";
+import {
+  getPortraitsPerFciGroup,
+  getPortraitsPerYear,
+  getStatistics,
+} from "../rasseportrait/utils";
+import ChipList from "./components/ChipList";
+import GroupBars from "./components/GroupBars";
+import ProgressBar from "./components/ProgressBar";
+import StatCard from "./components/StatCard";
+import YearChart from "./components/YearChart";
+import classes from "./Statistics.module.css";
 
-const Statistics = () => {
+const rassen = (count: number) => (count === 1 ? "Rasse" : "Rassen");
+
+/** "Molosser und Hütehunde vorn": the two groups with the most portraits */
+const leadingGroupsHeadline = (groups: { group: number; count: number }[]) => {
+  const leading = [...groups]
+    .filter(({ count }) => count > 0)
+    .sort((a, b) => b.count - a.count || a.group - b.group)
+    .slice(0, 2)
+    .map(({ group }) => fciGroupLabel(group)!.short);
+  return leading.length
+    ? `${leading.join(" und ")} vorn`
+    : "Noch keine Portraits";
+};
+
+interface HostProps {
+  name: string;
+  correct: number;
+  total: number;
+  percentage: number;
+  caveat?: React.ReactNode;
+}
+
+const HostRate = ({ name, correct, total, percentage, caveat }: HostProps) => (
+  <div className={classes.host}>
+    <div className={classes.hostHead}>
+      <span className={classes.hostName}>{name}</span>
+      <span className={classes.hostRate}>{formatPercent(percentage)}</span>
+    </div>
+    <ProgressBar value={percentage} className={classes.medium} />
+    <p className={classes.caption}>
+      {correct} von {total} erratbaren {rassen(total)} richtig.
+      {caveat && <> {caveat}</>}
+    </p>
+  </div>
+);
+
+const StatisticsContent = () => {
   const rawBreeds = useRawBreeds();
-  const allBreeds = useAllBreeds();
-  const navigate = useNavigate();
-  useEnsureBreeds();
+  const displayBreeds = useAllBreeds();
 
-  const {
-    amountBreedsPresented,
-    percentageBreedsPresented,
-    breedsOutsideFCI,
-    breedsNotPresented,
-    martinCorrectGuesses,
-    martinCorrectGuessesOutOfTotal,
-    martinCorrectGuessesPercentage,
-    katharinaCorrectGuesses,
-    katharinaCorrectGuessesOutOfTotal,
-    katharinaCorrectGuessesPercentage,
-  } = getStatistics(rawBreeds);
+  const stats = getStatistics(rawBreeds);
+  const perYear = getPortraitsPerYear(rawBreeds);
+  const perGroup = getPortraitsPerFciGroup(rawBreeds);
+  const newest = getNewestPortraitBreed(rawBreeds);
+  const stand = newest && getPrimaryPortrait(newest);
 
-  const handleBreedClick = (id: Breed["id"]) => {
-    // Find the breed in rawBreeds (which has original IDs)
-    const rawBreed = rawBreeds.find((breed) => breed.id === id);
-
-    if (!rawBreed) {
-      return;
-    }
-
-    // Find the corresponding breed in allBreeds (which has hashed IDs)
-    // Match by internal name since that's the most reliable identifier
-    const hashedBreed = allBreeds.find(
-      (breed) => breed.details.internal === rawBreed.details.internal,
+  const toChip = (raw: Breed) => {
+    const breed = findDisplayBreed(displayBreeds, raw);
+    return (
+      breed && { label: raw.details.public[0], to: `/rasse/${breed.slug}` }
     );
-
-    if (hashedBreed) {
-      navigate(`/rasse/${hashedBreed.slug}`, {
-        state: { from: "statistics" },
-      });
-    }
   };
+  const chips = (breeds: Breed[]) =>
+    breeds.map(toChip).filter((chip) => chip !== undefined);
+
+  const waterDog = rawBreeds.find(
+    ({ details }) => details.internal === "spanish_water_dog",
+  );
+  const waterDogPage = waterDog && toChip(waterDog)?.to;
 
   return (
-    <>
-      <Stack>
-        <Card withBorder shadow="sm" padding="lg">
-          <Stack>
-            <Text fw={300} c="dark" style={{ fontVariant: "small-caps" }}>
-              Fortschritt Vorstellung FCI-Rasseliste
-            </Text>
-          </Stack>
+    <div className={classes.page}>
+      <header className={classes.head}>
+        <h1 className={classes.title}>Statistik</h1>
+        {stand && (
+          <span className={classes.stand}>
+            Stand: {formatEpisode(stand.number)},{" "}
+            {formatDateLong(stand.meta.airDate)}
+          </span>
+        )}
+      </header>
 
-          <Stack pt="md">
-            <Progress.Root size="xxl" h={24} w="100%">
-              <Progress.Section
-                value={Number(percentageBreedsPresented)}
-                color="#EEA13B"
-              >
-                <Progress.Label fw={300}>
-                  <NumberFormatter
-                    value={percentageBreedsPresented}
-                    suffix="%"
-                    thousandSeparator="."
-                    decimalSeparator=","
-                  />
-                </Progress.Label>
-              </Progress.Section>
-            </Progress.Root>
-          </Stack>
+      <div className={classes.grid}>
+        <StatCard eyebrow="FCI-Rasseliste" className={classes.fciCard}>
+          <div className={classes.fciNumbers}>
+            <span className={classes.fciCount}>
+              {stats.amountBreedsPresented}
+              <span className={classes.fciTotal}>
+                {" "}
+                von {AMOUNT_OF_BREEDS_TOTAL}
+              </span>
+            </span>
+            <span className={classes.fciRate}>
+              {formatPercent(stats.percentageBreedsPresented)}
+            </span>
+          </div>
+          <ProgressBar
+            value={stats.percentageBreedsPresented}
+            className={classes.thick}
+          />
+          <p className={classes.caption}>
+            Vorgestellte Rassen aus der FCI-Liste: {AMOUNT_OF_BREEDS_APPROVED}{" "}
+            anerkannte und {AMOUNT_OF_BREEDS_PROVISIONAL} vorläufig anerkannte
+            Rassen.
+          </p>
+        </StatCard>
 
-          <Stack pt="xs" gap="5">
-            <Text size="sm" fw={300} c="dimmed">
-              Anzahl aller Rassen per FCI-Rasseliste:{" "}
-              <Text component="span" fw={900}>
-                {AMOUNT_OF_BREEDS_TOTAL}
-              </Text>{" "}
-              ({AMOUNT_OF_BREEDS_APPROVED} genehmigte Rassen +{" "}
-              {AMOUNT_OF_BREEDS_PROVISIONAL} vorläufige Rassen)
-            </Text>
-            <Text size="sm" fw={300} c="dimmed">
-              Anzahl der vorgestellten Rassen:{" "}
-              <Text component="span" fw={900}>
-                {amountBreedsPresented}
-              </Text>
-            </Text>
-          </Stack>
-        </Card>
+        <StatCard eyebrow="Wer errät die Rasse?" className={classes.guessCard}>
+          <HostRate
+            name="Martin"
+            correct={stats.martinCorrectGuesses}
+            total={stats.martinCorrectGuessesOutOfTotal}
+            percentage={stats.martinCorrectGuessesPercentage}
+            caveat={
+              waterDog && (
+                <>
+                  Der{" "}
+                  {waterDogPage ? (
+                    <Link
+                      to={waterDogPage}
+                      state={{ from: "statistics" }}
+                      className={classes.inlineLink}
+                    >
+                      Spanische Wasserhund
+                    </Link>
+                  ) : (
+                    "Spanische Wasserhund"
+                  )}{" "}
+                  wird nicht gewertet.
+                </>
+              )
+            }
+          />
+          <hr className={classes.divider} />
+          <HostRate
+            name="Katharina"
+            correct={stats.katharinaCorrectGuesses}
+            total={stats.katharinaCorrectGuessesOutOfTotal}
+            percentage={stats.katharinaCorrectGuessesPercentage}
+          />
+        </StatCard>
 
-        <Card withBorder shadow="sm">
-          <Stack>
-            <Text fw={300} c="dark" style={{ fontVariant: "small-caps" }}>
-              Vorgestellte Rassen außerhalb der FCI-Rasseliste
-            </Text>
-          </Stack>
+        {perYear.firstAirDate && perYear.lastAirDate && (
+          <StatCard eyebrow="Portraits pro Jahr" className={classes.yearCard}>
+            <h2 className={classes.cardTitle}>
+              Seit {formatMonthYear(perYear.firstAirDate)} im Podcast
+            </h2>
+            <YearChart years={perYear.years} />
+            <p className={classes.note}>
+              {perYear.lastAirDate.slice(0, 4)} bis{" "}
+              {formatMonth(perYear.lastAirDate)}, gestrichelt.
+            </p>
+          </StatCard>
+        )}
 
-          <Group pt="xs" gap="5">
-            {breedsOutsideFCI.map((breed) => (
-              <Button
-                key={breed.id}
-                variant="light"
-                size="xs"
-                c="dimmed"
-                fw={300}
-                style={{ fontVariant: "small-caps" }}
-                onClick={() => handleBreedClick(breed.id)}
-              >
-                {breed.details.public[0]}
-              </Button>
-            ))}
-          </Group>
-        </Card>
+        <StatCard
+          eyebrow="Portraits je FCI-Gruppe"
+          className={classes.groupCard}
+        >
+          <h2 className={classes.cardTitle}>
+            {leadingGroupsHeadline(perGroup.groups)}
+          </h2>
+          <GroupBars groups={perGroup.groups} />
+          <p className={classes.note}>
+            Dazu {perGroup.withoutFci} {rassen(perGroup.withoutFci)} ohne
+            FCI-Anerkennung.
+          </p>
+        </StatCard>
 
-        <Card withBorder shadow="sm">
-          <Stack>
-            <Text fw={300} c="dark" style={{ fontVariant: "small-caps" }}>
-              Erwähnte Rassen, die noch nicht offiziell vorgestellt wurden
-            </Text>
-          </Stack>
-
-          <Group pt="xs" gap="5">
-            {breedsNotPresented.map((breed) => (
-              <Button
-                key={breed.id}
-                variant="light"
-                size="xs"
-                c="dimmed"
-                fw={300}
-                style={{ fontVariant: "small-caps" }}
-                onClick={() => handleBreedClick(breed.id)}
-              >
-                {breed.details.public[0]}
-              </Button>
-            ))}
-          </Group>
-        </Card>
-
-        <Card withBorder shadow="sm">
-          <Stack>
-            <Text fw={300} c="dark" style={{ fontVariant: "small-caps" }}>
-              Erfolgsquote beim Erraten der Rassen
-            </Text>
-          </Stack>
-
-          <Group wrap="nowrap" align="flex-start">
-            <Stack w="100%">
-              <Stack pt="md">
-                <Text
-                  fw={600}
-                  size="sm"
-                  c="dark"
-                  style={{ fontVariant: "small-caps" }}
-                >
-                  Martin
-                </Text>
-                <Progress.Root size="xxl" h={24} w="100%">
-                  <Progress.Section
-                    value={Number(martinCorrectGuessesPercentage)}
-                    color="#EEA13B"
-                  >
-                    <Progress.Label fw={300}>
-                      <NumberFormatter
-                        value={martinCorrectGuessesPercentage}
-                        suffix="%"
-                        thousandSeparator="."
-                        decimalSeparator=","
-                      />
-                    </Progress.Label>
-                  </Progress.Section>
-                </Progress.Root>
-              </Stack>
-
-              <Stack pt="0">
-                <Text fw={300} c="dimmed" size="sm">
-                  von{" "}
-                  <Text component="span" fw={900}>
-                    {martinCorrectGuessesOutOfTotal}
-                  </Text>{" "}
-                  erratbaren Rassen wurden{" "}
-                  <Text component="span" fw={900}>
-                    {martinCorrectGuesses}
-                  </Text>{" "}
-                  korrekt erraten (abzüglich{" "}
-                  <Button
-                    variant="light"
-                    size="xs"
-                    c="dimmed"
-                    fw={300}
-                    style={{ fontVariant: "small-caps" }}
-                    onClick={() => {
-                      // Find "Spanischer Wasserhund" by internal name
-                      const spanischerWasserhund = rawBreeds.find(
-                        (breed) =>
-                          breed.details.internal === "spanish_water_dog",
-                      );
-
-                      if (spanischerWasserhund) {
-                        handleBreedClick(spanischerWasserhund.id);
-                      }
-                    }}
-                  >
-                    Spanischer Wasserhund
-                  </Button>
-                  )
-                </Text>
-              </Stack>
-            </Stack>
-
-            <Stack w="100%">
-              <Stack pt="md">
-                <Text fw={600} c="dark" size="sm">
-                  Katharina
-                </Text>
-                <Progress.Root size="xxl" h={24} w="100%">
-                  <Progress.Section
-                    value={Number(katharinaCorrectGuessesPercentage)}
-                    color="#EEA13B"
-                  >
-                    <Progress.Label fw={300}>
-                      <NumberFormatter
-                        value={katharinaCorrectGuessesPercentage}
-                        suffix="%"
-                        thousandSeparator="."
-                        decimalSeparator=","
-                      />
-                    </Progress.Label>
-                  </Progress.Section>
-                </Progress.Root>
-              </Stack>
-
-              <Stack pt="0">
-                <Text fw={300} c="dimmed" size="sm">
-                  von{" "}
-                  <Text component="span" fw={900}>
-                    {katharinaCorrectGuessesOutOfTotal}
-                  </Text>{" "}
-                  erratbaren Rasse wurde{" "}
-                  <Text component="span" fw={900}>
-                    {katharinaCorrectGuesses}
-                  </Text>{" "}
-                  korrekt erraten
-                </Text>
-              </Stack>
-            </Stack>
-          </Group>
-        </Card>
-      </Stack>
-    </>
+        <StatCard
+          eyebrow="Außerhalb der FCI-Liste vorgestellt"
+          className={classes.outsideCard}
+        >
+          <ChipList chips={chips(stats.breedsOutsideFCI)} />
+          {stats.breedsNotPresented.length > 0 && (
+            <>
+              <hr className={classes.divider} />
+              <div className={classes.mentioned}>
+                <span className={classes.eyebrow}>
+                  Erwähnt, noch nicht vorgestellt
+                </span>
+                <ChipList chips={chips(stats.breedsNotPresented)} />
+              </div>
+            </>
+          )}
+        </StatCard>
+      </div>
+    </div>
   );
+};
+
+const Statistics = () => {
+  const status = useEnsureBreeds();
+  const { initialize } = useBreedActions();
+
+  if (status === "error") {
+    return (
+      <LoadError
+        title="Die Statistik konnte nicht geladen werden."
+        onRetry={initialize}
+      />
+    );
+  }
+  if (status !== "ready") return <LoadingSpinner message={LOADING_MESSAGE} />;
+
+  return <StatisticsContent />;
 };
 
 export default Statistics;

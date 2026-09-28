@@ -1,0 +1,476 @@
+.page {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px var(--rp-gutter) 8px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.stand {
+  font-size: 14px;
+  color: var(--rp-text-muted);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px var(--rp-gutter) 56px;
+}
+
+/* ---------- cards ---------- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-card);
+  background: var(--rp-surface);
+}
+
+.eyebrow {
+  color: var(--rp-accent-text);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.caption,
+.note {
+  margin: 0;
+  color: var(--rp-text-muted);
+  line-height: 1.45;
+}
+
+.caption {
+  font-size: 15px;
+}
+
+.note {
+  font-size: 14px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: var(--rp-line);
+}
+
+.inlineLink {
+  color: var(--rp-accent-text);
+  text-underline-offset: 3px;
+}
+
+.inlineLink:hover {
+  color: var(--rp-text);
+}
+
+/* ---------- bars ---------- */
+
+.track {
+  overflow: hidden;
+  height: 12px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+}
+
+.thick {
+  height: 16px;
+}
+
+.medium {
+  height: 14px;
+}
+
+.thin {
+  height: 12px;
+}
+
+.fill {
+  height: 100%;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-accent);
+}
+
+/* ---------- FCI list ---------- */
+
+.fciNumbers {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fciCount {
+  font-family: var(--rp-font-display);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+}
+
+.fciTotal {
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  color: var(--rp-text-muted);
+}
+
+.fciRate {
+  font-family: var(--rp-font-display);
+  font-size: 24px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* ---------- guesses ---------- */
+
+.host {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hostHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hostName {
+  font-family: var(--rp-font-display);
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.hostRate {
+  font-family: var(--rp-font-display);
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* ---------- portraits per year: rows below md ---------- */
+
+.years {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.year {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 30px;
+  align-items: center;
+  gap: 10px;
+}
+
+.yearLabel {
+  order: -1;
+  font-size: 14px;
+  color: var(--rp-text-muted);
+}
+
+.yearTrack {
+  display: block;
+  height: 12px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+}
+
+.yearBar {
+  display: block;
+  box-sizing: border-box;
+  width: calc(var(--share) * 100%);
+  height: 100%;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-accent);
+}
+
+.running .yearBar {
+  border: 2px dashed var(--rp-accent);
+  background: var(--rp-surface-muted);
+}
+
+.yearValue {
+  order: 1;
+  font-family: var(--rp-font-display);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ---------- FCI groups ---------- */
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.groupRow {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 8em) minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 10px;
+}
+
+.groupRoman {
+  font-family: var(--rp-font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--rp-text-muted);
+}
+
+.groupName {
+  font-size: 15px;
+}
+
+.groupLong {
+  display: none;
+}
+
+.groupCount {
+  font-family: var(--rp-font-display);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ---------- chips ---------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding: 9px 16px;
+  border: 0;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  color: var(--rp-text);
+  font-family: var(--rp-font-body);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.chip:hover {
+  background: var(--rp-line);
+}
+
+.extraChip {
+  display: none;
+}
+
+.expanded .extraChip {
+  display: inline-flex;
+}
+
+.moreChip {
+  background: var(--rp-surface);
+  box-shadow: inset 0 0 0 1px var(--rp-line);
+}
+
+.mentioned {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---------- from md: 12-column bento ---------- */
+
+@media (min-width: 62em) {
+  .head {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 32px var(--rp-gutter-desktop) 28px;
+  }
+
+  .title {
+    font-size: 96px;
+    letter-spacing: -0.045em;
+  }
+
+  .stand {
+    font-size: 16px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 24px;
+    padding: 0 var(--rp-gutter-desktop) 56px;
+  }
+
+  .card {
+    padding: 36px;
+  }
+
+  .fciCard,
+  .groupCard {
+    grid-column: span 7;
+  }
+
+  .guessCard,
+  .yearCard {
+    grid-column: span 5;
+  }
+
+  .outsideCard {
+    grid-column: span 12;
+  }
+
+  .cardTitle {
+    font-size: 30px;
+  }
+
+  .caption {
+    font-size: 16px;
+  }
+
+  .fciNumbers {
+    gap: 24px;
+  }
+
+  .fciCount {
+    font-size: clamp(80px, 8.4vw, 120px);
+    letter-spacing: -0.05em;
+  }
+
+  .fciTotal {
+    font-size: clamp(32px, 3.4vw, 48px);
+  }
+
+  .fciRate {
+    font-size: clamp(32px, 3vw, 44px);
+  }
+
+  .thick {
+    height: 22px;
+  }
+
+  .guessCard .caption {
+    font-size: 15px;
+  }
+
+  /* vertical bars */
+  .years {
+    flex-direction: row;
+    align-items: flex-end;
+    min-height: 220px;
+    justify-content: space-between;
+    gap: clamp(8px, 2vw, 28px);
+  }
+
+  .year {
+    display: flex;
+    flex: 0 1 64px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .yearValue {
+    order: 0;
+    font-size: 18px;
+  }
+
+  .yearLabel {
+    order: 0;
+  }
+
+  .yearTrack {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  /* the tallest year is 160px; the value sits right above each bar */
+  .yearBar {
+    width: 100%;
+    height: max(4px, calc(var(--share) * 160px));
+    border-radius: 12px 12px 4px 4px;
+  }
+
+  .groupRow {
+    grid-template-columns: 36px minmax(0, 320px) minmax(60px, 1fr) 36px;
+    gap: 12px;
+  }
+
+  .groupLong {
+    display: inline;
+  }
+
+  .groupShort {
+    display: none;
+  }
+
+  .chip {
+    font-size: 15px;
+  }
+
+  .extraChip {
+    display: inline-flex;
+  }
+
+  .moreChip {
+    display: none;
+  }
+
+  .mentioned {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+}

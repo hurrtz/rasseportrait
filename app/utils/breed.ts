@@ -246,3 +246,15 @@ export const getRelatedBreeds = (
       (portraitAirDate(b) ?? "").localeCompare(portraitAirDate(a) ?? ""),
     )
     .slice(0, limit);
+
+/** The display breed a raw breed is shown as (its group's breed if grouped) */
+export const findDisplayBreed = (
+  displayBreeds: Breed[],
+  raw: Breed,
+): Breed | undefined =>
+  displayBreeds.find((breed) =>
+    raw.details.groupAs
+      ? breed.details.isGrouped &&
+        breed.details.internal === raw.details.groupAs
+      : breed.originalId === raw.id,
+  );
