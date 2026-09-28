@@ -79,7 +79,7 @@ const BreedCard = ({ id, name, onClick }: Props) => {
       tabIndex={TAB_INDEX_FOCUSABLE}
       onKeyDown={handleKeyDown}
       role={ROLE_BUTTON}
-      aria-label={`View details for ${name}`}
+      aria-label={`Details zu ${name}`}
     >
       <Section
         className={clsx("card-section", {
@@ -92,7 +92,7 @@ const BreedCard = ({ id, name, onClick }: Props) => {
           handleSlideChange={handleSlideChange}
         />
         <div className="sr-only">
-          Press Enter or Space to view details for {name}
+          Mit Enter oder Leertaste Details zu {name} öffnen
         </div>
       </Section>
 

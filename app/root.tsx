@@ -51,7 +51,7 @@ export function HydrateFallback() {
 }
 
 export const Layout = ({ children }: { children: ReactNode }) => (
-  <html lang="en" {...mantineHtmlProps}>
+  <html lang="de" {...mantineHtmlProps}>
     <head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />

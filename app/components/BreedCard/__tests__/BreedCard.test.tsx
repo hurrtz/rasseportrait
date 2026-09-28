@@ -258,10 +258,25 @@ describe("BreedCard", () => {
       );
 
       const srText = screen.getByText(
-        /Press Enter or Space to view details for Golden Retriever/,
+        /Mit Enter oder Leertaste Details zu Golden Retriever öffnen/,
       );
       expect(srText).toBeTruthy();
       expect(srText.className).toContain("sr-only");
+    });
+
+    it("should label the card in German", () => {
+      (useBreed as unknown as Mock).mockReturnValue(mockBreed);
+      (useBreedVariantNames as unknown as Mock).mockReturnValue([
+        "Golden Retriever",
+      ]);
+
+      renderWithMantine(
+        <BreedCard id={1} name="Golden Retriever" onClick={mockOnClick} />,
+      );
+
+      expect(
+        screen.getByRole("button", { name: "Details zu Golden Retriever" }),
+      ).toBeTruthy();
     });
 
     it("should have cursor pointer style for clickability indication", () => {

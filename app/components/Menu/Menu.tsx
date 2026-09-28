@@ -36,7 +36,11 @@ export default () => {
     <>
       <Portal>
         <div className={classes.burgerWrapper}>
-          <Burger opened={opened} onClick={opened ? close : open} />
+          <Burger
+            opened={opened}
+            onClick={opened ? close : open}
+            aria-label={opened ? "Menü schließen" : "Menü öffnen"}
+          />
         </div>
       </Portal>
 

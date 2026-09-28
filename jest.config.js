@@ -19,6 +19,11 @@ export default {
           module: "esnext",
           target: "esnext",
         },
+        // TS1343: `import.meta` is rewritten by the transformer below
+        diagnostics: { ignoreCodes: [1343] },
+        astTransformers: {
+          before: ["<rootDir>/jest/importMetaTransformer.cjs"],
+        },
       },
     ],
   },

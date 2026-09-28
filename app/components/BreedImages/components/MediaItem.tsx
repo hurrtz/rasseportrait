@@ -6,6 +6,7 @@ import "./styles.css";
 
 interface MediaItemProps {
   src: string;
+  alt: string;
   onClick?: MouseEventHandler<HTMLDivElement>;
   isDetailView?: boolean;
   className?: string;
@@ -14,6 +15,7 @@ interface MediaItemProps {
 
 const MediaItem = ({
   src,
+  alt,
   onClick,
   isDetailView = false,
   className = "image",
@@ -31,6 +33,9 @@ const MediaItem = ({
     >
       <Image
         src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
         width="100%"
         height="100%"
         className={clsx(className, "image")}

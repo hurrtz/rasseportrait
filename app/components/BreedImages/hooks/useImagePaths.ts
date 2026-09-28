@@ -6,10 +6,7 @@ interface UseImagePathsProps {
   isDetailView: boolean;
 }
 
-export const useImagePaths = ({
-  id,
-  isDetailView,
-}: UseImagePathsProps) => {
+export const useImagePaths = ({ id, isDetailView }: UseImagePathsProps) => {
   const breed = useBreed(id);
   const variantNames = useBreedVariantNames(id);
 
@@ -18,6 +15,7 @@ export const useImagePaths = ({
     console.warn(`Breed not found for ID: ${id}`);
     return {
       images: [],
+      alts: [],
       isGrouped: false,
       isDetailView,
     };
@@ -48,8 +46,16 @@ export const useImagePaths = ({
     );
   }, [variantNames, isGrouped, details, ASSET_TYPE, THUMBNAIL, EXTENSION]);
 
+  // Alt texts follow the image order: one per variant, else the breed name
+  const name = details.public[0];
+  const alts = images.map((_, index) => {
+    const variant = details.variants?.[index]?.public;
+    return variant ? `${name}, ${variant}` : name;
+  });
+
   return {
     images,
+    alts,
     isGrouped,
     isDetailView,
   };

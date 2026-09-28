@@ -6,6 +6,7 @@ import "@mantine/carousel/styles.css";
 
 interface ImageCarouselProps {
   images: string[];
+  alts: string[];
   onClick?: MouseEventHandler<HTMLDivElement>;
   handleSlideChange?: (index: number) => void;
   isDetailView?: boolean;
@@ -14,6 +15,7 @@ interface ImageCarouselProps {
 
 const ImageCarousel = ({
   images,
+  alts,
   onClick,
   handleSlideChange,
   isDetailView = false,
@@ -42,6 +44,7 @@ const ImageCarousel = ({
           <Carousel.Slide key={`${image}-${index}`}>
             <MediaItem
               src={image}
+              alt={alts[index]}
               onClick={onClick}
               isDetailView={isDetailView}
               className="image slide"

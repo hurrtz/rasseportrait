@@ -60,10 +60,18 @@ describe("BreedSearch", () => {
     it("should have correct aria-label for accessibility", () => {
       renderWithProvider(<BreedSearch />);
 
-      const input = screen.getByLabelText(
-        "Search for dog breeds by name or FCI number",
-      );
+      const input = screen.getByLabelText("Rassen durchsuchen");
       expect(input).toBeInTheDocument();
+    });
+
+    it("should label the clear button in German", async () => {
+      const user = userEvent.setup({ delay: null });
+      renderWithProvider(<BreedSearch />);
+
+      await user.type(screen.getByRole("searchbox"), "Pudel");
+      await user.click(screen.getByRole("button", { name: "Suche leeren" }));
+
+      expect(screen.getByRole("searchbox")).toHaveValue("");
     });
 
     it("should start with empty value", () => {

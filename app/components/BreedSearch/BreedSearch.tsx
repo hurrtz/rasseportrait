@@ -46,7 +46,7 @@ const BreedSearch = () => {
         rightSectionPointerEvents="all"
         rightSection={
           <CloseButton
-            aria-label="Clear input"
+            aria-label="Suche leeren"
             onClick={() => setSearchValue("")}
             style={{ display: searchValue ? undefined : "none" }}
           />

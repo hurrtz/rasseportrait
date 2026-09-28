@@ -20,7 +20,7 @@ export const SEARCH_PLACEHOLDER = "Suche nach Rassenamen oder FCI-Nummern";
 /**
  * ARIA label for the breed search input
  */
-export const SEARCH_ARIA_LABEL = "Search for dog breeds by name or FCI number";
+export const SEARCH_ARIA_LABEL = "Rassen durchsuchen";
 
 // ============================================================================
 // Store Configuration

@@ -18,7 +18,7 @@ const BreedImages = ({
   handleSlideChange,
   isDetailView = false,
 }: Props) => {
-  const { images } = useImagePaths({
+  const { images, alts } = useImagePaths({
     id,
     isDetailView,
   });
@@ -28,6 +28,7 @@ const BreedImages = ({
     return (
       <SingleImage
         src={images[0]}
+        alt={alts[0]}
         onClick={onClick}
         isDetailView={isDetailView}
         breedId={id}
@@ -39,6 +40,7 @@ const BreedImages = ({
   return (
     <ImageCarousel
       images={images}
+      alts={alts}
       onClick={onClick}
       handleSlideChange={handleSlideChange}
       isDetailView={isDetailView}

@@ -9,7 +9,7 @@
 }
 
 .mediaItemWrapper.notPresented::after {
-  content: "noch nicht ofiziell präsentiert";
+  content: "noch nicht offiziell präsentiert";
   display: block;
   width: calc(100% - 32px);
   position: absolute;
