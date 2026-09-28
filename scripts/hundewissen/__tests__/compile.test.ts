@@ -289,18 +289,16 @@ describe("reruns", () => {
     expect(compiled).toMatchObject({ episodeCount: 1, entryCount: 1 });
   });
 
-  it("skips a topic found only in such a rerun, with a warning", () => {
-    const warn = jest.fn();
-    const { topics } = compile(
-      [
-        topic({ id: "a" }),
-        topic({ id: "b", entries: [entry({ episode: "rtl-summer-b09" })] }),
-      ],
-      { warn },
-    );
+  it("keeps a rerun's entries in a topic its original doesn't have", () => {
+    const { topics } = compile([
+      topic({ id: "a" }),
+      topic({ id: "b", entries: [entry({ episode: "rtl-summer-b09" })] }),
+    ]);
 
-    expect(topics.map(({ id }) => id)).toEqual(["a"]);
-    expect(warn).toHaveBeenCalledWith(expect.stringContaining('"b"'));
+    const b = topics.find(({ id }) => id === "b");
+    expect(b?.episodes.map(({ id, number }) => [id, number])).toEqual([
+      ["rtl-summer-b09", 229],
+    ]);
   });
 
   it("does not take the number of an episode from another era", () => {

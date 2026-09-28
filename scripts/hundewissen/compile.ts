@@ -186,6 +186,8 @@ interface ResolvedEpisode {
   rerunOf?: string;
   /** the site episode it resolved to */
   siteKey?: string;
+  /** the indexed original of this rerun */
+  originalId?: string;
 }
 
 /**
@@ -241,12 +243,15 @@ const resolveEpisodes = (
     });
   });
 
-  // an original and its rerun are one episode on the site; keep the original
-  const originals = new Set(
-    [...resolved.values()].filter(({ rerunOf, siteKey }) => siteKey && !rerunOf).map(({ siteKey }) => siteKey),
+  // an original and its rerun are one episode on the site
+  const originals = new Map(
+    [...resolved.values()]
+      .filter(({ rerunOf, siteKey }) => siteKey && !rerunOf)
+      .map(({ siteKey, id }) => [siteKey, id]),
   );
-  resolved.forEach((episode, id) => {
-    if (episode.rerunOf && originals.has(episode.rerunOf)) resolved.delete(id);
+  resolved.forEach((episode) => {
+    const originalId = episode.rerunOf && originals.get(episode.rerunOf);
+    if (originalId) episode.originalId = originalId;
   });
 
   return resolved;
@@ -394,11 +399,12 @@ const groupEpisodes = (
   resolved: Map<string, ResolvedEpisode>,
 ): HundewissenEpisode[] => {
   const grouped = new Map<string, HundewissenEpisode>();
+  const inTopic = new Set(topic.entries.map(({ episode }) => episode));
 
   topic.entries.forEach((entry) => {
-    // reruns whose original is indexed too are left out
-    const episode = resolved.get(entry.episode);
-    if (!episode) return;
+    const episode = resolved.get(entry.episode) as ResolvedEpisode;
+    // a rerun adds nothing where its original already speaks to the topic
+    if (episode.originalId && inTopic.has(episode.originalId)) return;
     const startSeconds = Math.max(0, toSeconds(entry.start) - episode.shift);
     const endSeconds = Math.max(0, toSeconds(entry.end) - episode.shift);
     const compiled: HundewissenEntry = {
@@ -524,10 +530,6 @@ export const compileHundewissen = ({
     }
 
     const episodes = groupEpisodes(topic, resolved);
-    if (!episodes.length) {
-      warn(`Topic "${topic.id}" only occurs in reruns of indexed episodes; skipped`);
-      return [];
-    }
     const overlay = overlays.get(topic.id);
     episodeSets.set(topic.id, new Set(episodes.map(({ id }) => id)));
 
