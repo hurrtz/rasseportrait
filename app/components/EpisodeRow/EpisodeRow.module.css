@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--rp-radius-tile);
+  background: var(--rp-surface);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.heading {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.meta {
+  font-size: 14px;
+  color: var(--rp-text-muted);
+}

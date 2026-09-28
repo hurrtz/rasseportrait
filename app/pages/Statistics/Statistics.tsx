@@ -54,7 +54,9 @@ const Statistics = () => {
     );
 
     if (hashedBreed) {
-      navigate(`/rasse/${hashedBreed.slug}`);
+      navigate(`/rasse/${hashedBreed.slug}`, {
+        state: { from: "statistics" },
+      });
     }
   };
 

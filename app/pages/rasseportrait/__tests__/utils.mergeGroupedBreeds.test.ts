@@ -33,6 +33,25 @@ describe("mergeGroupedBreeds", () => {
     expect(merged.details.variants?.[1].fci?.standardNumber).toBe(38);
   });
 
+  it("keeps a member's links and recognitions when it has its own variants", () => {
+    const withVariants = {
+      ...mockGroupedBreed1,
+      furtherReading: [{ name: "Wikipedia", url: "https://w.org" }],
+      recognitions: ["Danke an Robin"],
+      details: {
+        ...mockGroupedBreed1.details,
+        variants: [{ internal: "cardigan", public: "Welsh Corgi Cardigan" }],
+      },
+    };
+
+    const [merged] = mergeGroupedBreeds([withVariants, mockGroupedBreed2]);
+
+    expect(merged.details.variants?.[0].furtherReading).toEqual([
+      { name: "Wikipedia", url: "https://w.org" },
+    ]);
+    expect(merged.recognitions).toEqual(["Danke an Robin"]);
+  });
+
   it("should use podcast from first breed", () => {
     const breeds = [mockGroupedBreed1, mockGroupedBreed2];
     const result = mergeGroupedBreeds(breeds);

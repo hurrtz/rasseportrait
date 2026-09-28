@@ -66,11 +66,19 @@ export const mergeGroupedBreeds = (breeds: Breed[]): Breed[] => {
 
       variants = variants.map((variant) => ({
         ...variant,
+        furtherReading: variant.furtherReading ?? breed.furtherReading,
         fci: breed.classification.fci,
         podcast: breed.podcast,
       }));
 
       mergedBreed.details.variants!.push(...variants);
+
+      if (breed.recognitions?.length) {
+        mergedBreed.recognitions = [
+          ...(mergedBreed.recognitions ?? []),
+          ...breed.recognitions,
+        ];
+      }
     });
 
     mergedBreeds.push(mergedBreed);

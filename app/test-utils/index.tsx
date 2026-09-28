@@ -1,7 +1,13 @@
 import React, { type ReactElement } from "react";
 import { render } from "@testing-library/react";
 import { MantineProvider } from "@mantine/core";
-import { MemoryRouter, Route, Routes, useLocation } from "react-router";
+import {
+  MemoryRouter,
+  Route,
+  Routes,
+  useLocation,
+  type InitialEntry,
+} from "react-router";
 import type { Breed, Podcast } from "types/breed";
 import useBreedsStore from "~/stores/breeds";
 import { toDisplayBreeds } from "~/utils/breed";
@@ -80,17 +86,29 @@ const LocationProbe = () => {
   );
 };
 
+interface RenderOptions {
+  /** Start URL; ignored when `entries` is given */
+  route?: string;
+  /** Full history, e.g. to start on a page that was reached from another */
+  entries?: InitialEntry[];
+  /** Route path `ui` is mounted at, e.g. "/rasse/:slug" */
+  path?: string;
+}
+
 /**
- * Renders `ui` inside Mantine and a memory router at `route`. Other paths
+ * Renders `ui` inside Mantine and a memory router. Paths other than `path`
  * render nothing but a location probe, so navigation can be asserted.
  */
 export const renderWithProviders = (
   ui: ReactElement,
-  { route = "/", path = "*" }: { route?: string; path?: string } = {},
+  { route = "/", entries, path = "*" }: RenderOptions = {},
 ) =>
   render(
     <MantineProvider theme={theme}>
-      <MemoryRouter initialEntries={[route]}>
+      <MemoryRouter
+        initialEntries={entries ?? [route]}
+        initialIndex={entries ? entries.length - 1 : 0}
+      >
         <Routes>
           <Route
             path={path}

@@ -78,6 +78,20 @@ describe("breeds store · initialize", () => {
     expect(useBreedsStore.getState().status).toBe("error");
   });
 
+  it("lets a second caller wait for the load already in flight", async () => {
+    global.fetch = mockFetch({
+      ok: true,
+      json: async () => ({ breeds: rawBreeds }),
+    });
+
+    await act(async () => {
+      const { initialize: init } = useBreedsStore.getState().actions;
+      void init();
+      await init();
+      expect(useBreedsStore.getState().status).toBe("ready");
+    });
+  });
+
   it("fetches only once for concurrent and repeated calls", async () => {
     global.fetch = mockFetch({
       ok: true,

@@ -1,4 +1,4 @@
-import type { Breed, Podcast } from "types/breed";
+import type { Breed, FurtherReading, Podcast } from "types/breed";
 import { mergeGroupedBreeds } from "~/pages/rasseportrait/utils";
 import { BASE_PATH } from "~/constants";
 import { generateBreedHashes } from "./generateBreedHash";
@@ -35,6 +35,12 @@ export const getListenUrl = (podcast: Podcast): ListenTarget | undefined => {
 
   return { url, provider: source.provider, type: source.type };
 };
+
+const PROVIDER_NAMES = { spotify: "Spotify", rtl: "RTL+" } as const;
+
+/** "Spotify" / "RTL+"; unknown providers are just "Podcast" */
+export const providerName = (provider: ListenTarget["provider"]) =>
+  provider ? PROVIDER_NAMES[provider] : "Podcast";
 
 export interface FciGroupLabel {
   roman: string;
@@ -178,3 +184,65 @@ export const getNewestPortraitBreed = (breeds: Breed[]): Breed | undefined =>
     const newestDate = newest && portraitAirDate(newest);
     return !newestDate || date > newestDate ? breed : newest;
   }, undefined);
+
+export interface BreedView {
+  name: string;
+  /** Names of all variants; empty for breeds without variants */
+  variants: string[];
+  variantName: string | undefined;
+  illustration: Illustration;
+  primary: Podcast | undefined;
+  /** Further appearances besides the primary one */
+  others: Podcast[];
+  listen: ListenTarget | undefined;
+  fci: Breed["classification"]["fci"];
+  group: FciGroupLabel | undefined;
+  links: FurtherReading[];
+}
+
+/**
+ * What the breed page shows for one variant: the variant's own episodes,
+ * FCI data and links win over the breed's, links are joined.
+ */
+export const getBreedView = (breed: Breed, variantIndex: number): BreedView => {
+  const variants = breed.details.variants ?? [];
+  const variant = variants[variantIndex];
+  const podcast = variant?.podcast ?? breed.podcast;
+  const primary = getPrimaryPortrait({ podcast });
+  const fci = variant?.fci ?? breed.classification.fci;
+  const illustrations = getIllustrations(breed);
+  const links = [...breed.furtherReading, ...(variant?.furtherReading ?? [])];
+
+  return {
+    name: breed.details.public[0],
+    variants: variants.map(({ public: name }) => name),
+    variantName: variant?.public,
+    illustration: illustrations[variantIndex] ?? illustrations[0],
+    primary,
+    others: podcast.filter((entry) => entry !== primary),
+    listen: primary && getListenUrl(primary),
+    fci,
+    group: fci && fciGroupLabel(fci.group),
+    links: links.filter(
+      (link, index) => links.findIndex(({ url }) => url === link.url) === index,
+    ),
+  };
+};
+
+const fciGroupOf = (breed: Breed) =>
+  breed.classification.fci?.group ??
+  breed.details.variants?.find(({ fci }) => fci)?.fci?.group;
+
+/** Up to `limit` other breeds of the FCI group, newest portrait first */
+export const getRelatedBreeds = (
+  breeds: Breed[],
+  breed: Breed,
+  group: number,
+  limit = 3,
+): Breed[] =>
+  breeds
+    .filter((other) => other.id !== breed.id && fciGroupOf(other) === group)
+    .sort((a, b) =>
+      (portraitAirDate(b) ?? "").localeCompare(portraitAirDate(a) ?? ""),
+    )
+    .slice(0, limit);

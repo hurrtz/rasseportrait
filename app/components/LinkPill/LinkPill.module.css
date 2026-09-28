@@ -1,0 +1,35 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-pill);
+  color: var(--rp-text);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+.pill:hover {
+  background: var(--rp-surface);
+}
+
+.icon {
+  display: none;
+  flex-shrink: 0;
+}
+
+@media (min-width: 62em) {
+  .pill {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+
+  .icon {
+    display: block;
+  }
+}

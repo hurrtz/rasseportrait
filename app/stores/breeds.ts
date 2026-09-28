@@ -50,6 +50,27 @@ interface State {
   actions: BreedActions;
 }
 
+/** The running load, so concurrent callers can await the same request */
+let inflight: Promise<void> | null = null;
+
+const fetchRawBreeds = async (): Promise<Breed[]> => {
+  const response = await fetch(`${BASE_PATH}data/breeds.json`);
+  if (!response.ok) {
+    throw new Error(
+      `Failed to load breeds: ${response.status} ${response.statusText}`,
+    );
+  }
+
+  const data = await response.json();
+  const rawBreeds = data.breeds as Breed[] | undefined;
+  if (!rawBreeds?.length) throw new Error(ERROR_NO_BREEDS_FOUND);
+
+  logger.info(
+    `Loaded ${rawBreeds.length} breeds (compiled: ${data.meta?.compiled})`,
+  );
+  return rawBreeds;
+};
+
 const useBreedsStore = create<State>()(
   devtools(
     persist(
@@ -62,49 +83,39 @@ const useBreedsStore = create<State>()(
         sortBy: DEFAULT_SORT_BY,
         sortOrder: DEFAULT_SORT_ORDER,
         actions: {
-          initialize: async () => {
+          initialize: () => {
             const { status } = get();
-            if (status === "loading" || status === "ready") return;
+            if (status === "ready") return Promise.resolve();
+            if (status === "loading" && inflight) return inflight;
 
             set({ status: "loading", error: null }, undefined, "initialize");
-
-            try {
-              const response = await fetch(`${BASE_PATH}data/breeds.json`);
-              if (!response.ok) {
-                throw new Error(
-                  `Failed to load breeds: ${response.status} ${response.statusText}`,
+            inflight = fetchRawBreeds()
+              .then((rawBreeds) =>
+                set(
+                  {
+                    rawBreeds,
+                    breeds: toDisplayBreeds(rawBreeds),
+                    status: "ready",
+                  },
+                  undefined,
+                  "initialize:success",
+                ),
+              )
+              .catch((e) => {
+                logger.error("Failed to initialize breeds:", e);
+                set(
+                  {
+                    status: "error",
+                    error: e instanceof Error ? e.message : ERROR_UNKNOWN,
+                  },
+                  undefined,
+                  "initialize:error",
                 );
-              }
-
-              const data = await response.json();
-              const rawBreeds = data.breeds as Breed[] | undefined;
-              if (!rawBreeds?.length) {
-                throw new Error(ERROR_NO_BREEDS_FOUND);
-              }
-
-              logger.info(
-                `Loaded ${rawBreeds.length} breeds (compiled: ${data.meta?.compiled})`,
-              );
-              set(
-                {
-                  rawBreeds,
-                  breeds: toDisplayBreeds(rawBreeds),
-                  status: "ready",
-                },
-                undefined,
-                "initialize:success",
-              );
-            } catch (e) {
-              logger.error("Failed to initialize breeds:", e);
-              set(
-                {
-                  status: "error",
-                  error: e instanceof Error ? e.message : ERROR_UNKNOWN,
-                },
-                undefined,
-                "initialize:error",
-              );
-            }
+              })
+              .finally(() => {
+                inflight = null;
+              });
+            return inflight;
           },
           setQuery: (query) => set({ query }, undefined, "setQuery"),
           setSort: ({ sortBy, sortOrder }) =>

@@ -5,10 +5,12 @@ import {
   assignSlugs,
   breedSlug,
   fciGroupLabel,
+  getBreedView,
   getIllustrations,
   getListenUrl,
   getNewestPortraitBreed,
   getPrimaryPortrait,
+  getRelatedBreeds,
   toDisplayBreeds,
 } from "../breed";
 
@@ -307,5 +309,147 @@ describe("getNewestPortraitBreed", () => {
 
   it("returns undefined for an empty list", () => {
     expect(getNewestPortraitBreed([])).toBeUndefined();
+  });
+});
+
+describe("getBreedView", () => {
+  it("describes a single breed through its primary portrait", () => {
+    const anecdote = podcast({
+      number: 3,
+      meta: { ...podcast().meta, internal: "personal_anecdote" },
+    });
+    const portrait = podcast({ sources: [spotify, rtl] });
+    const [display] = toDisplayBreeds([
+      breed({
+        podcast: [anecdote, portrait],
+        furtherReading: [{ name: "Wikipedia", url: "https://w.org" }],
+      }),
+    ]);
+
+    const view = getBreedView(display, 0);
+
+    expect(view.primary).toBe(portrait);
+    expect(view.others).toEqual([anecdote]);
+    expect(view.listen?.provider).toBe("spotify");
+    expect(view.fci?.standardNumber).toBe(297);
+    expect(view.group?.roman).toBe("I");
+    expect(view.links).toEqual([{ name: "Wikipedia", url: "https://w.org" }]);
+    expect(view.illustration.alt).toBe("Border Collie");
+    expect(view.variants).toEqual([]);
+  });
+
+  it("switches episode, FCI and links with the variant of a grouped breed", () => {
+    const cardiganEpisode = podcast({ number: 38 });
+    const pembrokeEpisode = podcast({ number: 39 });
+    const [corgi] = toDisplayBreeds([
+      breed({
+        id: 38,
+        classification: { fci: { group: 1, section: 1, standardNumber: 38 } },
+        podcast: [cardiganEpisode],
+        furtherReading: [{ name: "Cardigan", url: "https://c.org" }],
+        details: {
+          internal: "corgi_cardigan",
+          public: ["Welsh Corgi Cardigan"],
+          groupAs: "Corgi",
+        },
+      }),
+      breed({
+        id: 39,
+        classification: { fci: { group: 1, section: 1, standardNumber: 39 } },
+        podcast: [pembrokeEpisode],
+        furtherReading: [{ name: "Pembroke", url: "https://p.org" }],
+        details: {
+          internal: "corgi_pembroke",
+          public: ["Welsh Corgi Pembroke"],
+          groupAs: "Corgi",
+        },
+      }),
+    ]);
+
+    const view = getBreedView(corgi, 1);
+
+    expect(view.variants).toEqual([
+      "Welsh Corgi Cardigan",
+      "Welsh Corgi Pembroke",
+    ]);
+    expect(view.variantName).toBe("Welsh Corgi Pembroke");
+    expect(view.primary).toBe(pembrokeEpisode);
+    expect(view.fci?.standardNumber).toBe(39);
+    expect(view.links.map(({ name }) => name)).toEqual(["Pembroke"]);
+    expect(view.illustration.alt).toBe("Corgi, Welsh Corgi Pembroke");
+  });
+
+  it("joins breed and variant links without duplicates", () => {
+    const wiki = { name: "Wikipedia", url: "https://w.org" };
+    const [poodle] = toDisplayBreeds([
+      breed({
+        id: 172,
+        furtherReading: [wiki],
+        details: {
+          internal: "poodle",
+          public: ["Pudel"],
+          variants: [
+            {
+              internal: "toy",
+              public: "Toy-Pudel",
+              furtherReading: [wiki, { name: "Toy", url: "https://t.org" }],
+            },
+          ],
+        },
+      }),
+    ]);
+
+    expect(getBreedView(poodle, 0).links.map(({ name }) => name)).toEqual([
+      "Wikipedia",
+      "Toy",
+    ]);
+  });
+});
+
+describe("getRelatedBreeds", () => {
+  const withPortrait = (id: number, group: number, airDate: string) =>
+    breed({
+      id,
+      classification: { fci: { group, section: 1, standardNumber: id } },
+      details: { internal: `breed_${id}`, public: [`Rasse ${id}`] },
+      podcast: [podcast({ meta: { ...podcast().meta, airDate } })],
+    });
+
+  it("lists up to three other breeds of the group, newest first", () => {
+    const display = toDisplayBreeds([
+      withPortrait(1, 1, "2024-01-01"),
+      withPortrait(2, 1, "2026-01-01"),
+      withPortrait(3, 2, "2026-05-01"),
+      withPortrait(4, 1, "2025-01-01"),
+      withPortrait(5, 1, "2023-01-01"),
+      withPortrait(6, 1, "2022-01-01"),
+    ]);
+
+    const related = getRelatedBreeds(display, display[0], 1);
+
+    expect(related.map((b) => b.details.public[0])).toEqual([
+      "Rasse 2",
+      "Rasse 4",
+      "Rasse 5",
+    ]);
+  });
+
+  it("finds grouped breeds through their variants' FCI group", () => {
+    const display = toDisplayBreeds([
+      withPortrait(1, 1, "2024-01-01"),
+      breed({
+        id: 38,
+        classification: { fci: { group: 1, section: 1, standardNumber: 38 } },
+        details: {
+          internal: "corgi_cardigan",
+          public: ["C"],
+          groupAs: "Corgi",
+        },
+      }),
+    ]);
+
+    expect(getRelatedBreeds(display, display[0], 1).map((b) => b.slug)).toEqual(
+      ["corgi"],
+    );
   });
 });

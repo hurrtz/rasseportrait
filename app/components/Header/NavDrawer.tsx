@@ -3,6 +3,7 @@ import { Drawer } from "@mantine/core";
 import { Link } from "react-router";
 import { IconX } from "@tabler/icons-react";
 import { NAV_ITEMS } from "~/constants";
+import type { NavEvent } from "~/hooks/useAmplitude";
 import { isNavItemActive } from "./isNavItemActive";
 import classes from "./Header.module.css";
 
@@ -10,7 +11,7 @@ interface Props {
   opened: boolean;
   onClose: () => void;
   pathname: string;
-  onNavigate: (event: string) => void;
+  onNavigate: (event: NavEvent) => void;
 }
 
 export const NavDrawer = ({ opened, onClose, pathname, onNavigate }: Props) => (

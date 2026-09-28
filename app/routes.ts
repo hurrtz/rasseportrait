@@ -5,4 +5,5 @@ export default [
   route("/hundewissen", "routes/hundewissen.tsx"),
   route("/impressum", "routes/imprint.tsx"),
   route("/statistiken", "routes/statistics.tsx"),
+  route("/rasse/:slug", "routes/rasse.tsx"),
 ] satisfies RouteConfig;

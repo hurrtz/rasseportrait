@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router";
 import { useDisclosure } from "@mantine/hooks";
 import { IconMenu2 } from "@tabler/icons-react";
 import { BASE_PATH, NAV_ITEMS } from "~/constants";
+import type { NavEvent } from "~/hooks/useAmplitude";
 import { useAmplitude } from "~/hooks/useAmplitude";
 import { NavDrawer } from "./NavDrawer";
 import { isNavItemActive } from "./isNavItemActive";
@@ -13,7 +14,7 @@ const Header = () => {
   const { track } = useAmplitude();
   const [drawerOpened, drawer] = useDisclosure(false);
 
-  const trackNavClick = (event: string, source: string) =>
+  const trackNavClick = (event: NavEvent, source: string) =>
     track(event, { source, page: pathname });
 
   return (
