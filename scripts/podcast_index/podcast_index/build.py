@@ -4,7 +4,10 @@ from __future__ import annotations
 
 import copy
 import json
+import re
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 from typing import Any
 
 from .extraction import CATEGORIES, KNOWN_TOPICS, MODEL
@@ -20,10 +23,15 @@ def is_portrait_topic(segment: dict[str, Any], breed_names: set[str]) -> bool:
 
 
 def drop_portrait_topics(extractions: Extractions, breed_names: set[str]) -> Extractions:
-    """Remove portrait sections and topics that are just a breed name"""
+    """Remove portrait sections, topics that are just a breed name, and
+    placeholder sections the extraction left without a topic"""
     kept = copy.deepcopy(extractions)
     for data in kept.values():
-        data["segments"] = [s for s in data["segments"] if not is_portrait_topic(s, breed_names)]
+        data["segments"] = [
+            s
+            for s in data["segments"]
+            if s["topic"].strip() and not is_portrait_topic(s, breed_names)
+        ]
     return kept
 
 
@@ -180,41 +188,145 @@ CONSOLIDATION_SCHEMA = {
 }
 
 
-def consolidate(client: Any, items: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[str]]:
-    """Merge duplicate topic ids with one Claude call; every id is merged or dropped"""
+CROSS_SYSTEM = f"""Du bekommst die Themen des Podcasts „Tierisch Menschlich“. Innerhalb jeder Kategorie wurden Dubletten bereits zusammengeführt; jedes Thema steht mit id, Label, Kategorie, Anzahl der Folgen und Beschreibung da.
+
+Deine Aufgabe: Führe nur noch Themen zusammen, die über Kategorien hinweg dasselbe Thema bezeichnen (etwa „zecken“ unter Gesundheit & Medizin und „zeckenschutz“ unter Haltung & Pflege). Verschiedene Themen bleiben getrennt, auch wenn sie verwandt sind.
+
+Diese ids bleiben als kanonische ids mit genau diesen Labels erhalten, wenn sie vorkommen: {json.dumps(KNOWN_TOPICS, ensure_ascii=False)}.
+
+Gib nur die Zusammenführungen aus: Themen mit mindestens zwei merged_ids, jeweils mit kanonischer id (eine der vorhandenen ids, bevorzugt die mit den meisten Folgen), Label, der passendsten Kategorie und einer Beschreibung in einem Satz. Themen, die nur eine einzelne Rasse beschreiben, gehören in dropped_ids. Alle übrigen Themen bleiben unverändert und werden nicht aufgeführt. Keine id darf mehrfach vorkommen."""
+
+
+def area_slug(category: str) -> str:
+    """"Erziehung & Training" → "erziehung-training" (the site's area slugs)"""
+    text = category.lower()
+    for umlaut, plain in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
+        text = text.replace(umlaut, plain)
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-")
+
+
+def merge_prompt(items: list[dict[str, Any]]) -> str:
+    """The user message of a merge call: one line per topic id"""
     lines = [
         f"{i['id']} | {i['label']} | {i['category']} | {i['episodes']} Folgen | "
         + " / ".join(i["examples"])
         for i in items
     ]
+    return "id | Label | Kategorie | Folgen | Beispiele\n" + "\n".join(lines)
+
+
+def _ask(client: Any, items: list[dict[str, Any]], system: str) -> dict[str, Any]:
+    """One Claude call over `items`; the raw {topics, dropped_ids} answer"""
     with client.messages.stream(
         model=MODEL,
         max_tokens=128000,
-        system=CONSOLIDATION_SYSTEM,
+        system=system,
         thinking={"type": "adaptive"},
         output_config={
             "effort": "high",
             "format": {"type": "json_schema", "schema": CONSOLIDATION_SCHEMA},
         },
-        messages=[{"role": "user", "content": "id | Label | Kategorie | Folgen | Beispiele\n" + "\n".join(lines)}],
+        messages=[{"role": "user", "content": merge_prompt(items)}],
     ) as stream:
         message = stream.get_final_message()
     if message.stop_reason in ("refusal", "max_tokens"):
         raise RuntimeError(f"consolidation stopped: {message.stop_reason}")
-    result = json.loads(next(b.text for b in message.content if b.type == "text"))
-    topics = result["topics"]
+    return json.loads(next(b.text for b in message.content if b.type == "text"))
+
+
+def _normalize(
+    result: dict[str, Any], items: list[dict[str, Any]]
+) -> tuple[list[dict[str, Any]], list[str]]:
+    """Every input id exactly once: drop repeats and unknown ids, add what was left out"""
+    topics = copy.deepcopy(result["topics"])
     by_id = {i["id"]: i for i in items}
     dropped = [i for i in result["dropped_ids"] if i in by_id]
-
-    # every input id exactly once: drop repeats, add what the model left out
     seen: set[str] = set(dropped)
     for topic in topics:
-        topic["merged_ids"] = [i for i in topic["merged_ids"] if i not in seen and not seen.add(i)]
-    for missing in (set(by_id) - seen):
+        topic["merged_ids"] = [
+            i for i in topic["merged_ids"] if i in by_id and i not in seen and not seen.add(i)
+        ]
+    for missing in sorted(set(by_id) - seen):
         item = by_id[missing]
         topics.append({"id": missing, "label": item["label"], "category": item["category"],
                        "description": "", "merged_ids": [missing]})
-    return fix_known_labels([t for t in topics if t["merged_ids"]]), dropped
+    topics = [t for t in topics if t["merged_ids"]]
+    # canonical ids come from the extraction (URL-safe); the most frequent one wins
+    for topic in topics:
+        if topic["id"] not in topic["merged_ids"]:
+            topic["id"] = max(topic["merged_ids"], key=lambda i: by_id[i]["episodes"])
+    return topics, dropped
+
+
+def _merge(
+    client: Any, items: list[dict[str, Any]], system: str, cache: Path | None
+) -> tuple[list[dict[str, Any]], list[str]]:
+    """A saved answer when there is one, else a call whose answer is saved"""
+    if cache and cache.exists():
+        result = json.loads(cache.read_text())
+    else:
+        result = _ask(client, items, system)
+        if cache:
+            cache.parent.mkdir(parents=True, exist_ok=True)
+            cache.write_text(json.dumps(result, ensure_ascii=False, indent=1))
+    return _normalize(result, items)
+
+
+def consolidate(
+    client: Any, items: list[dict[str, Any]], cache_dir: Path | None = None
+) -> tuple[list[dict[str, Any]], list[str]]:
+    """Merge duplicate topic ids: within each category, then across categories.
+
+    Two passes keep each call small enough to list every id it covers. With
+    `cache_dir`, each answer is saved as <area slug>.json / _across.json and
+    reused, so an interrupted run resumes where it stopped.
+    """
+    by_category: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for item in items:
+        by_category[item["category"]].append(item)
+
+    def cache(name: str) -> Path | None:
+        return cache_dir / f"{name}.json" if cache_dir else None
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        results = list(
+            pool.map(
+                lambda entry: _merge(client, entry[1], CONSOLIDATION_SYSTEM, cache(area_slug(entry[0]))),
+                by_category.items(),
+            )
+        )
+    first = {t["id"]: t for topics, _ in results for t in topics}
+    dropped = [i for _, ids in results for i in ids]
+
+    topics, dropped_across = _merge(client, cross_items(first, items), CROSS_SYSTEM, cache("_across"))
+
+    merged = [
+        {
+            **topic,
+            "description": topic["description"] or first[topic["id"]]["description"],
+            "merged_ids": [i for canonical in topic["merged_ids"] for i in first[canonical]["merged_ids"]],
+        }
+        for topic in topics
+    ]
+    dropped += [i for canonical in dropped_across for i in first[canonical]["merged_ids"]]
+    return fix_known_labels(merged), dropped
+
+
+def cross_items(
+    first: dict[str, dict[str, Any]], items: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """The first pass's topics as input for the pass across categories"""
+    counts = {i["id"]: i["episodes"] for i in items}
+    return [
+        {
+            "id": t["id"],
+            "label": t["label"],
+            "category": t["category"],
+            "episodes": sum(counts.get(i, 0) for i in t["merged_ids"]),
+            "examples": [t["description"]],
+        }
+        for t in first.values()
+    ]
 
 
 def category_summary(table: list[dict[str, Any]]) -> dict[str, dict[str, int]]:

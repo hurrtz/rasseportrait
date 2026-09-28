@@ -1,3 +1,8 @@
+import json
+from contextlib import nullcontext
+from types import SimpleNamespace
+
+from podcast_index import build
 from podcast_index.build import apply_mapping, inventory, topic_table
 
 
@@ -116,3 +121,141 @@ def test_episode_records_carry_dates_audio_breeds_and_portrait():
         "breeds": [{"name": "Mops", "start": "0:05:00"}],
         "portrait": {"present": True, "breed": "Japan Chin", "start": "0:27:40"},
     }}
+
+
+class FakeStream:
+    """Stands in for client.messages.stream; answers from the ids in the prompt"""
+
+    def __init__(self, answer):
+        self.answer = answer
+        self.calls = []
+
+    def stream(self, **kwargs):
+        prompt = kwargs["messages"][0]["content"]
+        ids = {line.split(" | ")[0] for line in prompt.splitlines()[1:]}
+        self.calls.append(ids)
+        text = json.dumps(self.answer(frozenset(ids)))
+        message = SimpleNamespace(
+            stop_reason="end_turn", content=[SimpleNamespace(type="text", text=text)]
+        )
+        return nullcontext(SimpleNamespace(get_final_message=lambda: message))
+
+
+def item(id_, category, episodes=1):
+    return {"id": id_, "label": id_.title(), "category": category, "episodes": episodes, "examples": ["…"]}
+
+
+def topic_(id_, category, merged):
+    return {"id": id_, "label": id_.title(), "category": category, "description": f"{id_}.", "merged_ids": merged}
+
+
+def test_consolidation_merges_within_each_area_then_across_areas():
+    items = [
+        item("rueckruf", "Erziehung & Training", 3),
+        item("rueckrufsignal", "Erziehung & Training"),
+        item("zecken", "Gesundheit & Medizin", 2),
+        item("zeckenschutz", "Haltung & Pflege"),
+        item("dogge-wesen", "Zucht & Rassen"),
+    ]
+    answers = {
+        frozenset({"rueckruf", "rueckrufsignal"}): {
+            "topics": [topic_("rueckruf", "Erziehung & Training", ["rueckruf", "rueckrufsignal"])],
+            "dropped_ids": [],
+        },
+        frozenset({"zecken"}): {"topics": [topic_("zecken", "Gesundheit & Medizin", ["zecken"])], "dropped_ids": []},
+        frozenset({"zeckenschutz"}): {
+            "topics": [topic_("zeckenschutz", "Haltung & Pflege", ["zeckenschutz"])],
+            "dropped_ids": [],
+        },
+        frozenset({"dogge-wesen"}): {"topics": [], "dropped_ids": ["dogge-wesen"]},
+        # across areas: the canonical topics of the first pass
+        frozenset({"rueckruf", "zecken", "zeckenschutz"}): {
+            "topics": [
+                topic_("rueckruf", "Erziehung & Training", ["rueckruf"]),
+                topic_("zecken", "Gesundheit & Medizin", ["zecken", "zeckenschutz"]),
+            ],
+            "dropped_ids": [],
+        },
+    }
+    client = SimpleNamespace(messages=FakeStream(answers.__getitem__))
+
+    topics, dropped = build.consolidate(client, items)
+
+    assert sorted((t["id"], sorted(t["merged_ids"])) for t in topics) == [
+        ("rueckruf", ["rueckruf", "rueckrufsignal"]),
+        ("zecken", ["zecken", "zeckenschutz"]),
+    ]
+    assert dropped == ["dogge-wesen"]
+    # one call per area, one across areas
+    assert len(client.messages.calls) == 5
+
+
+def test_consolidation_keeps_ids_the_model_left_out():
+    items = [item("rueckruf", "Erziehung & Training"), item("leine", "Erziehung & Training")]
+
+    def answer(ids):
+        return {
+            "topics": [topic_("rueckruf", "Erziehung & Training", ["rueckruf"])],
+            "dropped_ids": [],
+        }
+
+    topics, dropped = build.consolidate(SimpleNamespace(messages=FakeStream(answer)), items)
+
+    assert sorted(t["id"] for t in topics) == ["leine", "rueckruf"]
+    assert dropped == []
+
+
+def test_a_canonical_id_is_always_one_of_the_merged_ids():
+    items = [item("rueckruf", "Erziehung & Training"), item("rueckrufsignal", "Erziehung & Training")]
+
+    def answer(ids):
+        return {
+            "topics": [topic_("rueckruf-neu", "Erziehung & Training", sorted(ids))],
+            "dropped_ids": [],
+        }
+
+    topics, _ = build.consolidate(SimpleNamespace(messages=FakeStream(answer)), items)
+
+    assert [(t["id"], sorted(t["merged_ids"])) for t in topics] == [
+        ("rueckruf", ["rueckruf", "rueckrufsignal"])
+    ]
+
+
+def test_segments_without_a_topic_are_dropped():
+    data = {"rtl-101": extraction(("0:49:35", ""), ("0:50:00", "zecken"))}
+
+    kept = build.drop_portrait_topics(data, set())
+
+    assert [s["topic"] for s in kept["rtl-101"]["segments"]] == ["zecken"]
+
+
+class NoCalls:
+    def stream(self, **kwargs):
+        raise AssertionError("no API call expected")
+
+
+def test_consolidation_reuses_saved_results_per_area(tmp_path):
+    items = [item("rueckruf", "Erziehung & Training"), item("zecken", "Gesundheit & Medizin")]
+    saved = {
+        "erziehung-training": {"topics": [topic_("rueckruf", "Erziehung & Training", ["rueckruf"])], "dropped_ids": []},
+        "gesundheit-medizin": {"topics": [topic_("zecken", "Gesundheit & Medizin", ["zecken"])], "dropped_ids": []},
+        "_across": {"topics": [], "dropped_ids": []},
+    }
+    for name, result in saved.items():
+        (tmp_path / f"{name}.json").write_text(json.dumps(result))
+
+    topics, dropped = build.consolidate(SimpleNamespace(messages=NoCalls()), items, cache_dir=tmp_path)
+
+    assert sorted(t["id"] for t in topics) == ["rueckruf", "zecken"]
+    assert dropped == []
+
+
+def test_consolidation_saves_each_answer(tmp_path):
+    items = [item("rueckruf", "Erziehung & Training")]
+
+    def answer(ids):
+        return {"topics": [topic_("rueckruf", "Erziehung & Training", ["rueckruf"])], "dropped_ids": []}
+
+    build.consolidate(SimpleNamespace(messages=FakeStream(answer)), items, cache_dir=tmp_path)
+
+    assert sorted(p.name for p in tmp_path.iterdir()) == ["_across.json", "erziehung-training.json"]

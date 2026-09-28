@@ -153,7 +153,7 @@ def cmd_build(args) -> None:
         topics, dropped = cached["topics"], cached["dropped"]
     else:
         print(f"consolidating {len(items)} topic ids …", flush=True)
-        topics, dropped = build.consolidate(client(), items)
+        topics, dropped = build.consolidate(client(), items, cache_dir=WORK / "consolidation")
         cache.write_text(
             json.dumps({"topics": topics, "dropped": dropped}, ensure_ascii=False, indent=1)
         )
