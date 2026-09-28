@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.18.0](https://github.com/hurrtz/rasseportrait/compare/v3.17.0...v3.18.0) (2026-09-28)
+
+
+### Features
+
+* compile the podcast topic index into Hundewissen data ([dac6a3b](https://github.com/hurrtz/rasseportrait/commit/dac6a3bf383d8ef8d44b69cc889ca97b8e1deafa))
+* Hundewissen area illustrations ([973a371](https://github.com/hurrtz/rasseportrait/commit/973a3712dade6d3860f4aa3dc2aaabeb7a1ef660))
+* Hundewissen from all 260 episodes ([9448776](https://github.com/hurrtz/rasseportrait/commit/944877635147faa69549780774d295491856ba6b))
+* Hundewissen overview replaces the topic article page ([4e14795](https://github.com/hurrtz/rasseportrait/commit/4e14795d3dfff8a9d592e65b7c4b9c557de6a489))
+* Hundewissen topic and area pages ([5f5a0ca](https://github.com/hurrtz/rasseportrait/commit/5f5a0cad45ebc117f51945628132876740ee6955))
+* podcast topic index pipeline ([6fcf27e](https://github.com/hurrtz/rasseportrait/commit/6fcf27e9f98cf944fe35bf6470e1cf1d5630cc91))
+* topic merge per area, then across areas, resumable ([c3be4bf](https://github.com/hurrtz/rasseportrait/commit/c3be4bfc5bad97d3b715d7f66ef92d1cdd0a2b3b))
+
+
+### Bug Fixes
+
+* drop the entry count line from Hundewissen episode cards ([a801444](https://github.com/hurrtz/rasseportrait/commit/a8014443dfa00ba2de441614c98db1bc0e745312))
+* Hundewissen details from the visual check ([c1121f1](https://github.com/hurrtz/rasseportrait/commit/c1121f17dc2c009a5c85af0760293a09a0867a90))
+* Hundewissen reruns and episode matching ([876973c](https://github.com/hurrtz/rasseportrait/commit/876973c01637ab645dacd28502925cdcc8e590f3))
+
 ## [3.17.0](https://github.com/hurrtz/rasseportrait/compare/v3.16.0...v3.17.0) (2026-09-28)
 
 
