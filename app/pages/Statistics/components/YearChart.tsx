@@ -22,9 +22,11 @@ const YearChart = ({ years }: Props) => {
             classes.year,
             index === years.length - 1 && classes.running,
           )}
-          aria-label={`${year}: ${count} ${count === 1 ? "Portrait" : "Portraits"}`}
           style={{ "--share": count / max } as CSSProperties}
         >
+          <span className="rp-visually-hidden">
+            {year}: {count} {count === 1 ? "Portrait" : "Portraits"}
+          </span>
           <span className={classes.yearValue} aria-hidden>
             {count}
           </span>

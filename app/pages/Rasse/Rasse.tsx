@@ -35,6 +35,13 @@ const BackLinks = () => {
   const navigate = useNavigate();
   const referrer = useReferrer();
   const onClick = (event: React.MouseEvent) => {
+    const opensElsewhere =
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey;
+    if (opensElsewhere) return;
     if (referrer === "grid" || referrer === "hero") {
       event.preventDefault();
       navigate(-1);

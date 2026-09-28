@@ -62,6 +62,17 @@ const rawBreeds = [
   ),
 ];
 
+/**
+ * What a screen reader reads for a list item: its text outside aria-hidden
+ * subtrees (an aria-label on a plain <li> is ignored by several readers)
+ */
+const spokenText = (item: HTMLElement) => {
+  expect(item).not.toHaveAttribute("aria-label");
+  const clone = item.cloneNode(true) as HTMLElement;
+  clone.querySelectorAll('[aria-hidden="true"]').forEach((el) => el.remove());
+  return clone.textContent?.trim();
+};
+
 const card = (eyebrow: string) => screen.getByRole("region", { name: eyebrow });
 
 describe("Statistik page", () => {
@@ -116,11 +127,7 @@ describe("Statistik page", () => {
         name: "Seit Oktober 2021 im Podcast",
       }),
     ).toBeInTheDocument();
-    expect(
-      within(years)
-        .getAllByRole("listitem")
-        .map((item) => item.getAttribute("aria-label")),
-    ).toEqual([
+    expect(within(years).getAllByRole("listitem").map(spokenText)).toEqual([
       "2021: 1 Portrait",
       "2022: 1 Portrait",
       "2023: 1 Portrait",
@@ -142,10 +149,7 @@ describe("Statistik page", () => {
     ).toBeInTheDocument();
     const rows = within(groups).getAllByRole("listitem");
     expect(rows).toHaveLength(10);
-    expect(rows[0]).toHaveAttribute(
-      "aria-label",
-      "Gruppe I, Hüte- und Treibhunde: 1",
-    );
+    expect(spokenText(rows[0])).toBe("Gruppe I, Hüte- und Treibhunde: 1");
     expect(groups).toHaveTextContent("Dazu 1 Rasse ohne FCI-Anerkennung.");
   });
 

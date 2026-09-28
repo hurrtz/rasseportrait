@@ -315,6 +315,21 @@ describe("Rasse page", () => {
     );
   });
 
+  it("leaves modifier clicks on the back link to the browser (new tab)", () => {
+    renderBreed("border-collie", [borderCollie], "grid");
+
+    fireEvent.click(screen.getByRole("link", { name: "Alle Portraits" }), {
+      metaKey: true,
+    });
+    fireEvent.click(screen.getByRole("link", { name: "Alle Portraits" }), {
+      ctrlKey: true,
+    });
+
+    expect(screen.getByTestId("location")).toHaveTextContent(
+      "/rasse/border-collie",
+    );
+  });
+
   it("goes to the overview when opened directly", async () => {
     renderBreed("border-collie", [borderCollie]);
 

@@ -308,6 +308,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
   padding: 14px;
   border-radius: var(--rp-radius-tile);
   background: var(--rp-surface);
@@ -324,9 +325,13 @@
 
 .factValue {
   font-family: var(--rp-font-display);
-  font-size: 22px;
+  /* "VIII · Apportierhunde" must fit half of a 320px screen */
+  font-size: clamp(17px, 5.4vw, 22px);
   font-weight: 700;
   line-height: 1.2;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .factSub {
@@ -505,6 +510,10 @@
     padding: 16px 18px;
   }
 
+  .factValue {
+    font-size: 22px;
+  }
+
   .facts {
     gap: 12px;
   }
@@ -522,8 +531,12 @@
   .content {
     padding: 72px 72px 48px 64px;
   }
+}
 
+/* four in a row only where long values ("08.04.2026", "Apportierhunde")
+   fit; the tracks size to their content */
+@media (min-width: 90em) {
   .facts {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, auto);
   }
 }

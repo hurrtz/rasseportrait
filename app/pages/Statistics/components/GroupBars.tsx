@@ -16,11 +16,10 @@ const GroupBars = ({ groups }: Props) => {
       {groups.map(({ group, count }) => {
         const label = fciGroupLabel(group)!;
         return (
-          <li
-            key={group}
-            className={classes.groupRow}
-            aria-label={`Gruppe ${label.roman}, ${label.long}: ${count}`}
-          >
+          <li key={group} className={classes.groupRow}>
+            <span className="rp-visually-hidden">
+              Gruppe {label.roman}, {label.long}: {count}
+            </span>
             <span className={classes.groupRoman} aria-hidden>
               {label.roman}
             </span>
