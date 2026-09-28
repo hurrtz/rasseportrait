@@ -118,3 +118,23 @@ export const ROLE_BUTTON = "button";
  * Role for search input elements
  */
 export const ROLE_SEARCHBOX = "searchbox";
+
+// ============================================================================
+// Assets & Navigation
+// ============================================================================
+
+/**
+ * Base path of the deployed app; asset URLs must be absolute because detail
+ * pages live one level deeper (/rasse/:slug)
+ */
+export const BASE_PATH = "/rasseportrait/";
+
+/**
+ * Pages in the main navigation, with the analytics event of each link
+ */
+export const NAV_ITEMS = [
+  { label: "Portraits", to: "/", event: "Rasseportrait Clicked" },
+  { label: "Hundewissen", to: "/hundewissen", event: "Hundewissen Clicked" },
+  { label: "Statistik", to: "/statistiken", event: "Statistics Clicked" },
+  { label: "Impressum", to: "/impressum", event: "Impressum Clicked" },
+] as const;

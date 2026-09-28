@@ -1,18 +1,12 @@
 import { type ReactNode, useEffect } from "react";
-import { AppShell, Group, Image } from "@mantine/core";
-import classes from "./App.module.css";
-import { useNavigate } from "react-router";
-import { useAmplitude } from "./hooks/useAmplitude";
-import { Menu } from "./components/Menu";
+import { useLocation, useNavigate } from "react-router";
+import { Header } from "./components/Header";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { logger } from "./utils/logger";
 
-const HEADER_HEIGHT = 60;
-
 const App = ({ children }: { children: ReactNode }) => {
-  const { Header, Main } = AppShell;
   const navigate = useNavigate();
-  const { track } = useAmplitude();
+  const { pathname } = useLocation();
 
   // Handle GitHub Pages SPA redirect
   useEffect(() => {
@@ -93,37 +87,16 @@ const App = ({ children }: { children: ReactNode }) => {
     return cleanup;
   }, []);
 
-  return (
-    <AppShell header={{ height: HEADER_HEIGHT }} padding="md">
-      <Header pl="xs" pr="md">
-        <Group
-          className={classes.headerFlex}
-          justify="space-between"
-          wrap="nowrap"
-          style={{ marginRight: "45px" }}
-        >
-          <div
-            className={classes.logoWrapper}
-            onClick={() => {
-              track("Logo Clicked", { page: window.location.pathname });
-              navigate("/");
-            }}
-          >
-            <Image
-              src="logo.png"
-              alt="Logo"
-              style={{ maxHeight: HEADER_HEIGHT }}
-              fit="contain"
-            />
-          </div>
-          <Menu />
-        </Group>
-      </Header>
+  // The breed detail page is full-bleed; its back button replaces the header
+  const isBreedPage = pathname.startsWith("/rasse/");
 
-      <Main>
+  return (
+    <>
+      {!isBreedPage && <Header />}
+      <main>
         <ErrorBoundary>{children}</ErrorBoundary>
-      </Main>
-    </AppShell>
+      </main>
+    </>
   );
 };
 
