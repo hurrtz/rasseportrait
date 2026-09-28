@@ -35,7 +35,11 @@ const createWebImage = async (
   }
 };
 
-const processImages = async (sourceDir, targetDir) => {
+/** Breeds and general-purpose images are square; Hundewissen areas are wide */
+const SQUARE = { full: [1000, 1000], thumb: [500, 500] };
+const WIDE = { full: [1600, 900], thumb: [400, 400] };
+
+const processImages = async (sourceDir, targetDir, sizes = SQUARE) => {
   try {
     await fs.ensureDir(targetDir);
 
@@ -46,7 +50,7 @@ const processImages = async (sourceDir, targetDir) => {
       const stat = await fs.stat(fullPath);
 
       if (stat.isDirectory()) {
-        await processImages(fullPath, path.join(targetDir, file));
+        await processImages(fullPath, path.join(targetDir, file), sizes);
       } else if (/\.(jpg|jpeg|png|gif)$/i.test(file)) {
         const originPath = path.join(sourceDir, file);
         const targetPath = path.join(targetDir, file);
@@ -62,8 +66,16 @@ const processImages = async (sourceDir, targetDir) => {
         const breedName = path.basename(sourceDir);
         console.log(`Processing ${breedName}/${file}...`);
 
-        const thumbnailSuccess = await createWebImage(originPath, toThumbnailPath, 500, 500);
-        const imageSuccess = await createWebImage(originPath, toImagePath);
+        const thumbnailSuccess = await createWebImage(
+          originPath,
+          toThumbnailPath,
+          ...sizes.thumb,
+        );
+        const imageSuccess = await createWebImage(
+          originPath,
+          toImagePath,
+          ...sizes.full,
+        );
 
         if (thumbnailSuccess && imageSuccess) {
           stats.processed++;
@@ -92,6 +104,12 @@ const GENERAL_PURPOSE_DESTINATION_FOLDER = path.join(
   "../public/illustrations/general_purpose",
 );
 
+const AREAS_SOURCE_FOLDER = path.join(__dirname, "../db/hundewissen/areas");
+const AREAS_DESTINATION_FOLDER = path.join(
+  __dirname,
+  "../public/illustrations/hundewissen",
+);
+
 async function processAllImages() {
   console.log("🖼️  Processing images...\n");
 
@@ -103,6 +121,12 @@ async function processAllImages() {
     GENERAL_PURPOSE_SOURCE_FOLDER,
     GENERAL_PURPOSE_DESTINATION_FOLDER,
   );
+
+  // area pictures are added one by one; the folder may not exist yet
+  if (await fs.pathExists(AREAS_SOURCE_FOLDER)) {
+    console.log("\nProcessing Hundewissen area illustrations...");
+    await processImages(AREAS_SOURCE_FOLDER, AREAS_DESTINATION_FOLDER, WIDE);
+  }
 
   const duration = ((Date.now() - stats.startTime) / 1000).toFixed(2);
 

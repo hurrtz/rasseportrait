@@ -490,16 +490,29 @@ describe("index", () => {
         topic({ id: "a", category: "Ernährung" }),
         topic({ id: "b", category: "Zucht & Rassen" }),
       ],
-      { hasAreaImage: (slug) => slug === "ernaehrung" },
+      {
+        hasAreaImage: (slug) => slug === "ernaehrung",
+        areaImages: { ernaehrung: { alt: "Ein Napf mit Futter", position: "50% 30%" } },
+      },
     );
 
     expect(index.areas.find(({ slug }) => slug === "ernaehrung")?.image).toEqual({
       src: "/rasseportrait/illustrations/hundewissen/ernaehrung/illustration.jpeg",
       thumbnail:
         "/rasseportrait/illustrations/hundewissen/ernaehrung/illustration_thumbnail.jpeg",
-      alt: "",
+      alt: "Ein Napf mit Futter",
+      position: "50% 30%",
     });
     expect(index.areas.find(({ slug }) => slug === "zucht-rassen")?.image).toBeUndefined();
+  });
+
+  it("fails on an area picture without alt text", () => {
+    expect(() =>
+      compile([topic({ id: "a", category: "Ernährung" })], {
+        hasAreaImage: (slug) => slug === "ernaehrung",
+        areaImages: {},
+      }),
+    ).toThrow(/ernaehrung.*alt/);
   });
 
   it("skips topics of an unknown area with a warning", () => {

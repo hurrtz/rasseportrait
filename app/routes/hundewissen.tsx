@@ -1,5 +1,5 @@
 import type { Route } from "./+types/hundewissen";
-import { Hundewissen } from "../pages/Hundewissen";
+import { OverviewPage } from "../pages/Hundewissen";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -7,9 +7,9 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Hintergründe zu Themen, die im Podcast Tierisch Menschlich immer wieder vorkommen.",
+        "Alles, was im Podcast Tierisch Menschlich neben den Rasseportraits besprochen wird, mit Sprung zur Stelle in der Folge.",
     },
   ];
 }
 
-export default () => <Hundewissen />;
+export default () => <OverviewPage />;

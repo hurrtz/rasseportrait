@@ -54,25 +54,6 @@ export interface AnalyticsEvents {
   };
   "Hundewissen Search Performed": { searchTerm: string; resultsCount: number };
   "Related Topic Clicked": { fromTopicId: string; toTopicId: string };
-  // old Hundewissen page, removed with it
-  "Knowledge Topic Selected": {
-    topicId: string;
-    topicTitle: string;
-    hasPodcastEpisodes: boolean;
-    episodeCount: number;
-  };
-  "Knowledge Podcast Link Clicked": {
-    topicId: string;
-    topicTitle: string;
-    episodeNumber: string;
-    url: string;
-  };
-  "Knowledge Further Reading Clicked": {
-    topicId: string;
-    topicTitle: string;
-    linkName: string;
-    url: string;
-  };
 }
 
 type Events = AnalyticsEvents &

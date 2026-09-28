@@ -1,0 +1,613 @@
+/* ---------- /hundewissen — stacked below md ---------- */
+
+.page {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 12px var(--rp-gutter) 14px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  max-width: 620px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--rp-text-muted);
+}
+
+/* ---------- status card ---------- */
+
+.status {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-card);
+  background: var(--rp-surface);
+}
+
+.statusValue {
+  font-family: var(--rp-font-display);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.statusTotal {
+  font-size: 18px;
+  color: var(--rp-text-muted);
+  letter-spacing: -0.01em;
+}
+
+.bar {
+  height: 10px;
+  overflow: hidden;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+}
+
+.barFill {
+  height: 100%;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-accent);
+}
+
+.statusText {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--rp-text-muted);
+}
+
+/* ---------- search and area chips ---------- */
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 var(--rp-gutter) 20px;
+}
+
+/* a horizontal scroll row below md */
+.chips {
+  display: flex;
+  gap: 8px;
+  margin: 0 calc(-1 * var(--rp-gutter));
+  padding: 0 var(--rp-gutter);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.chips::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  flex-shrink: 0;
+  padding: 9px 16px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  color: var(--rp-text);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  background: var(--rp-surface-player);
+}
+
+.chip[aria-current="page"] {
+  background: var(--rp-accent);
+  color: var(--rp-on-accent);
+}
+
+/* ---------- sections ---------- */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 var(--rp-gutter) 24px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- most discussed: a horizontal scroll row below md ---------- */
+
+.frequent {
+  display: flex;
+  gap: 12px;
+  margin: 0 calc(-1 * var(--rp-gutter));
+  padding: 0 var(--rp-gutter);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.frequent::-webkit-scrollbar {
+  display: none;
+}
+
+.frequentCard {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-between;
+  gap: 18px;
+  box-sizing: border-box;
+  width: 280px;
+  padding: 20px 22px;
+  border: 1px solid var(--rp-line);
+  border-radius: 20px;
+  background: var(--rp-surface);
+  color: var(--rp-text);
+  text-decoration: none;
+}
+
+.frequentCard:hover,
+.areaCard:hover {
+  border-color: var(--rp-text-muted);
+}
+
+.frequentText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.frequentArea {
+  color: var(--rp-accent-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.frequentLabel {
+  font-family: var(--rp-font-display);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.frequentFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.countIcon {
+  color: var(--rp-accent-text);
+}
+
+.muted {
+  flex-shrink: 0;
+  color: var(--rp-text-muted);
+}
+
+/* ---------- all areas: the three biggest as cards, the rest as rows ---------- */
+
+.areas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.areaItem {
+  min-width: 0;
+}
+
+.areaCard {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-card);
+  background: var(--rp-surface);
+  color: var(--rp-text);
+  text-decoration: none;
+}
+
+.areaPicture {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 170px;
+}
+
+.areaBody {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 14px;
+  padding: 22px 24px;
+}
+
+.areaHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.areaName {
+  font-family: var(--rp-font-display);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.areaCount {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--rp-text-muted);
+}
+
+.areaTopics {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.areaTopic {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rp-line);
+}
+
+/* three topics per card below md */
+.areaTopic:nth-child(n + 4) {
+  display: none;
+}
+
+.areaTopicLabel {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.areaTopicCount {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--rp-text-muted);
+}
+
+.areaTopicCount[data-many] {
+  color: var(--rp-text);
+  font-weight: 700;
+}
+
+.areaMore {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--rp-accent-text);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.compactArrow {
+  display: none;
+  flex-shrink: 0;
+  color: var(--rp-text-muted);
+}
+
+.areaCard[data-compact] {
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px 10px 10px;
+  border-radius: 18px;
+}
+
+.areaCard[data-compact] .areaPicture {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+}
+
+.areaCard[data-compact] .areaBody {
+  gap: 0;
+  padding: 0;
+}
+
+.areaCard[data-compact] .areaHead {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.areaCard[data-compact] .areaName {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.areaCard[data-compact] .areaCount {
+  font-size: 13px;
+}
+
+.areaCard[data-compact] .areaTopics,
+.areaCard[data-compact] .areaMore {
+  display: none;
+}
+
+.areaCard[data-compact] .compactArrow {
+  display: block;
+}
+
+/* ---------- search results ---------- */
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px var(--rp-gutter) 48px;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.emptyText {
+  margin: 0;
+  font-size: 16px;
+  color: var(--rp-text-muted);
+}
+
+.reset {
+  min-height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  color: var(--rp-text);
+  font-family: var(--rp-font-body);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ---------- from md ---------- */
+
+@media (min-width: 62em) {
+  .head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    align-items: end;
+    gap: 48px;
+    padding: 28px var(--rp-gutter-desktop) 32px;
+  }
+
+  .intro {
+    gap: 16px;
+  }
+
+  .title {
+    font-size: clamp(56px, 6.7vw, 96px);
+    letter-spacing: -0.045em;
+  }
+
+  .lead {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .status {
+    padding: 26px;
+  }
+
+  .statusValue {
+    font-size: 52px;
+  }
+
+  .statusTotal {
+    font-size: 24px;
+  }
+
+  .tools {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0 var(--rp-gutter-desktop) 28px;
+  }
+
+  .search {
+    flex-shrink: 0;
+    width: 300px;
+  }
+
+  .chips {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .chip {
+    font-size: 15px;
+  }
+
+  .section {
+    gap: 18px;
+    padding: 12px var(--rp-gutter-desktop) 40px;
+  }
+
+  .section:last-child {
+    padding-bottom: 56px;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .frequent {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .frequentCard {
+    width: auto;
+  }
+
+  .areas {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .areaPicture {
+    height: 220px;
+  }
+
+  .areaName {
+    font-size: 28px;
+  }
+
+  .areaTopic:nth-child(n + 4) {
+    display: flex;
+  }
+
+  .areaCard[data-narrow] .areaPicture {
+    height: 180px;
+  }
+
+  .areaCard[data-narrow] .areaName {
+    font-size: 24px;
+  }
+
+  /* compact rows are a small-screen layout; from md every area is a card */
+  .areaCard[data-compact] {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    border-radius: var(--rp-radius-card);
+  }
+
+  .areaCard[data-compact] .areaPicture {
+    width: 100%;
+    height: 220px;
+    border-radius: 0;
+  }
+
+  .areaCard[data-compact][data-narrow] .areaPicture {
+    height: 180px;
+  }
+
+  .areaCard[data-compact] .areaBody {
+    gap: 14px;
+    padding: 22px 24px;
+  }
+
+  .areaCard[data-compact] .areaHead {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .areaCard[data-compact] .areaName {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .areaCard[data-compact][data-narrow] .areaName {
+    font-size: 24px;
+  }
+
+  .areaCard[data-compact] .areaCount {
+    font-size: 14px;
+  }
+
+  .areaCard[data-compact] .areaTopics {
+    display: block;
+  }
+
+  .areaCard[data-compact] .areaMore {
+    display: flex;
+  }
+
+  .areaCard[data-compact] .compactArrow {
+    display: none;
+  }
+
+  .results {
+    gap: 10px;
+  }
+
+  .empty {
+    padding: 16px var(--rp-gutter-desktop) 56px;
+  }
+}

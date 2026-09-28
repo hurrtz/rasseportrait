@@ -16,7 +16,7 @@ import type {
   HundewissenTopic,
   ListenProvider,
 } from "types/hundewissen";
-import { AREAS, type AreaDefinition } from "~/pages/Hundewissen/areas";
+import { AREAS } from "~/pages/Hundewissen/areas";
 import { BASE_PATH } from "~/constants";
 import { getIllustrations, toDisplayBreeds } from "~/utils/breed";
 import { formatTimecode } from "~/utils/format";
@@ -73,6 +73,8 @@ export interface CompileInput {
   editorial?: EditorialOverlay[];
   /** whether public/illustrations/hundewissen/<slug>/illustration.jpeg exists */
   hasAreaImage?: (slug: string) => boolean;
+  /** alt text and focal point per area slug; defaults to areas.ts */
+  areaImages?: Record<string, { alt: string; position?: string }>;
   warn?: (message: string) => void;
 }
 
@@ -426,21 +428,29 @@ const bySize = (a: HundewissenTopic, b: HundewissenTopic) =>
   b.entryCount - a.entryCount ||
   collator.compare(a.label, b.label);
 
-const areaImage = (area: AreaDefinition) => {
-  const base = `${BASE_PATH}illustrations/hundewissen/${area.slug}/illustration`;
+const areaImage = (slug: string, meta?: { alt: string; position?: string }) => {
+  if (!meta?.alt) {
+    throw new Error(`Area ${slug} has an illustration but no image alt text (areas.ts)`);
+  }
+  const base = `${BASE_PATH}illustrations/hundewissen/${slug}/illustration`;
   return {
     src: `${base}.jpeg`,
     thumbnail: `${base}_thumbnail.jpeg`,
-    alt: area.image?.alt ?? "",
-    ...(area.image?.position ? { position: area.image.position } : {}),
+    alt: meta.alt,
+    ...(meta.position ? { position: meta.position } : {}),
   };
 };
+
+const AREA_IMAGES = Object.fromEntries(
+  AREAS.flatMap((area) => (area.image ? [[area.slug, area.image]] : [])),
+);
 
 export const compileHundewissen = ({
   index,
   rawBreeds,
   editorial = [],
   hasAreaImage = () => false,
+  areaImages = AREA_IMAGES,
   warn = () => {},
 }: CompileInput): CompileOutput => {
   validate(index.topics, index.episodes);
@@ -506,7 +516,9 @@ export const compileHundewissen = ({
       name: area.name,
       icon: area.icon,
       topicCount: counts.get(area.slug) as number,
-      ...(hasAreaImage(area.slug) ? { image: areaImage(area) } : {}),
+      ...(hasAreaImage(area.slug)
+        ? { image: areaImage(area.slug, areaImages[area.slug]) }
+        : {}),
     }))
     // stable sort: ties keep the order of the area table
     .sort((a, b) => b.topicCount - a.topicCount);

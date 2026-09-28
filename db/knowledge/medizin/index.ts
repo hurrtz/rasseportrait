@@ -1,4 +1,4 @@
-import type { KnowledgeTopic } from "../../../types/knowledge";
+import type { EditorialOverlay } from "../../../types/hundewissen";
 
 export default {
   id: "medizin",
@@ -6,7 +6,6 @@ export default {
     internal: "medizin",
     public: "Medizin",
   },
-  summary: "Impfungen, Parasiten, häufige Erkrankungen und Erste Hilfe.",
   status: "draft",
   content: `
 Die Hundemedizin umfasst alle Aspekte der Gesundheitsvorsorge und -versorgung von Hunden.
@@ -15,6 +14,4 @@ Erste Hilfe und präventive Maßnahmen. Regelmäßige tierärztliche Kontrollen 
 ein fundiertes Grundwissen über die Gesundheit des Hundes sind wichtige Aspekte
 verantwortungsvoller Hundehaltung.
   `.trim(),
-  podcast: [],
-  furtherReading: [],
-} satisfies KnowledgeTopic;
+} satisfies EditorialOverlay;

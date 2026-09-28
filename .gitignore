@@ -22,6 +22,11 @@ db/breeds/**/*.mov
 # Keep TypeScript breed definition files
 !db/breeds/**/index.ts
 
+# Hundewissen area illustration sources (processed copies in public/ are committed)
+db/hundewissen/**/*.png
+db/hundewissen/**/*.jpg
+db/hundewissen/**/*.jpeg
+
 # Local secrets
 .env
 .env.*

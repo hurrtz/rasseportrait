@@ -1,5 +1,5 @@
-import Hundewissen from "./Hundewissen";
 import AreaPage from "./AreaPage";
+import OverviewPage from "./OverviewPage";
 import TopicPage from "./TopicPage";
 
-export { AreaPage, Hundewissen, TopicPage };
+export { AreaPage, OverviewPage, TopicPage };
