@@ -1,28 +1,27 @@
-import React, { useEffect, useMemo, useCallback } from "react";
-import { SimpleGrid, Stack, Alert } from "@mantine/core";
-import { IconAlertCircle } from "@tabler/icons-react";
-import { useSearchParams } from "react-router";
-import { LazyBreedCard } from "../../components/LazyBreedCard";
+import React, { useEffect, useMemo } from "react";
+import { SimpleGrid } from "@mantine/core";
+import { useNavigate, useSearchParams } from "react-router";
+import Fuse from "fuse.js";
+import type { Breed } from "types/breed";
+import { BreedSearch } from "~/components/BreedSearch";
+import BreedNotFound from "~/components/BreedNotFound";
+import { HeroPortrait } from "~/components/HeroPortrait";
+import { LazyBreedCard } from "~/components/LazyBreedCard";
+import { LoadError } from "~/components/LoadError";
+import LoadingSpinner from "~/components/LoadingSpinner";
+import { SortControl } from "~/components/SortControl";
+import { LOADING_MESSAGE, SEARCH_DEBOUNCE_DELAY_MS } from "~/constants";
+import { useAmplitude } from "~/hooks/useAmplitude";
+import { useDebounce } from "~/hooks/useDebounce";
+import { useEnsureBreeds } from "~/hooks/useEnsureBreeds";
 import {
   useAllBreeds,
   useBreedActions,
-  useBreeds,
-  useSearch,
-  useSelectedBreedId,
-  useLoading,
-  useError,
-  useInitialized,
-} from "../../stores/breeds";
-import { useDisclosure } from "@mantine/hooks";
-import { Modal } from "../../components/Modal";
-import BreedNotFound from "~/components/BreedNotFound";
-import { BreedSearch } from "../../components/BreedSearch";
-import LoadingSpinner from "../../components/LoadingSpinner";
-import type { Breed } from "types/breed";
-import Fuse from "fuse.js";
-import { useAmplitude } from "../../hooks/useAmplitude";
-import { LOADING_MESSAGE } from "~/constants";
-import { logger } from "~/utils/logger";
+  useQuery,
+  useSortedBreeds,
+} from "~/stores/breeds";
+import { getNewestPortraitBreed } from "~/utils/breed";
+import classes from "./Rasseportrait.module.css";
 
 const fuseOptions = {
   keys: [
@@ -36,245 +35,113 @@ const fuseOptions = {
   threshold: 0.1,
 };
 
-const Rasseportrait = () => {
-  const breeds = useBreeds();
-  const allBreeds = useAllBreeds();
-  const { needle } = useSearch();
-  const selectedBreedId = useSelectedBreedId();
-  const loading = useLoading();
-  const error = useError();
-  const initialized = useInitialized();
-  const { initialize, setSelectedBreed, setSearch } = useBreedActions();
-  const [isModalOpen, { open: openModal, close: closeModal }] =
-    useDisclosure(false);
+/** Old share links were /?breed=<hash>; they now live at /rasse/<slug> */
+const useLegacyBreedRedirect = (breeds: Breed[]) => {
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const breedParam = searchParams.get("breed");
+
+  useEffect(() => {
+    if (!breedParam) return;
+    const breed = breeds.find(({ id }) => String(id) === breedParam);
+    navigate(breed ? `/rasse/${breed.slug}` : "/", { replace: true });
+  }, [breedParam, breeds, navigate]);
+};
+
+const Overview = () => {
+  const breeds = useAllBreeds();
+  const sortedBreeds = useSortedBreeds();
+  const query = useQuery();
+  const { setQuery } = useBreedActions();
   const { track } = useAmplitude();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const needle = useDebounce(query.trim(), SEARCH_DEBOUNCE_DELAY_MS);
 
-  const fuse = useMemo(() => new Fuse(allBreeds, fuseOptions), [allBreeds]);
+  useLegacyBreedRedirect(breeds);
 
-  const onSelectBreed = useCallback(
-    (id: Breed["id"]) => {
-      const selectedBreedData = allBreeds.find((breed) => breed.id === id);
-      track("Breed Selected", {
-        breedId: String(id),
-        breedName: selectedBreedData?.details.public[0],
-        hasVariants: (selectedBreedData?.details.variants?.length || 0) > 1,
-        variantCount: selectedBreedData?.details.variants?.length || 0,
-        searchActive: !!needle,
-        searchTerm: needle || null,
-        totalBreedsVisible: breeds.length,
-      });
-      setSelectedBreed(id);
+  const fuse = useMemo(() => new Fuse(breeds, fuseOptions), [breeds]);
+  const newest = useMemo(() => getNewestPortraitBreed(breeds), [breeds]);
 
-      // Update URL with breed parameter without affecting scroll position
-      setSearchParams(
-        (prev) => {
-          const newParams = new URLSearchParams(prev);
-          newParams.set("breed", String(id));
-          return newParams;
-        },
-        { replace: true, preventScrollReset: true },
-      );
-    },
-    [
-      allBreeds,
-      track,
-      needle,
-      breeds.length,
-      setSelectedBreed,
-      setSearchParams,
-    ],
-  );
+  const visibleBreeds = useMemo(() => {
+    if (!needle) return sortedBreeds;
+    const hits = new Set(fuse.search(needle).map(({ item }) => item.id));
+    return sortedBreeds.filter(({ id }) => hits.has(id));
+  }, [needle, sortedBreeds, fuse]);
 
-  const onCloseModal = useCallback(() => {
-    const selectedBreedData = allBreeds.find(
-      (breed) => breed.id === selectedBreedId,
-    );
-    track("Breed Modal Closed", {
-      breedId: selectedBreedId ? String(selectedBreedId) : undefined,
-      breedName: selectedBreedData?.details.public[0],
-      modalOpenDuration: Date.now(), // This could be improved with actual duration tracking
+  useEffect(() => {
+    if (!needle) return;
+    track("Breed Search Performed", {
+      searchTerm: needle,
+      resultsCount: visibleBreeds.length,
+      totalBreeds: breeds.length,
+      hasResults: visibleBreeds.length > 0,
     });
-
-    // Close modal first
-    closeModal();
-
-    // Remove breed parameter from URL without affecting scroll position
-    setSearchParams(
-      (prev) => {
-        const newParams = new URLSearchParams(prev);
-        newParams.delete("breed");
-        return newParams;
-      },
-      { replace: true, preventScrollReset: true },
-    );
-
-    // Clear the selected breed after a short delay to allow modal to close
-    setTimeout(() => {
-      setSelectedBreed(undefined);
-    }, 0);
-  }, [
-    allBreeds,
-    selectedBreedId,
-    track,
-    setSelectedBreed,
-    closeModal,
-    setSearchParams,
-  ]);
-
-  // Initialize breeds on mount
-  useEffect(() => {
-    if (!initialized && !loading) {
-      // Mark performance for initial render
-      if (typeof window !== "undefined" && window.performance?.mark) {
-        window.performance.mark("breeds-init-start");
-      }
-      initialize();
-    }
-  }, [initialized, loading, initialize]);
-
-  // Handle breed parameter from URL on initial load and URL changes
-  useEffect(() => {
-    if (!initialized) return;
-
-    const breedParam = searchParams.get("breed");
-    if (breedParam) {
-      // Convert to number if it's a numeric ID, otherwise keep as string
-      const breedId = /^\d+$/.test(breedParam)
-        ? parseInt(breedParam, 10)
-        : breedParam;
-
-      // Check if this breed exists
-      const breedExists = allBreeds.some((breed) => breed.id === breedId);
-
-      if (breedExists && breedId !== selectedBreedId) {
-        // Set the selected breed without updating URL (since it's already there)
-        setSelectedBreed(breedId);
-        logger.info(`Opening breed from URL parameter: ${breedId}`);
-      } else if (!breedExists && breedParam) {
-        // Invalid breed ID in URL, remove it
-        logger.warn(`Invalid breed ID in URL: ${breedParam}`);
-        setSearchParams(
-          (prev) => {
-            const newParams = new URLSearchParams(prev);
-            newParams.delete("breed");
-            return newParams;
-          },
-          { replace: true, preventScrollReset: true },
-        );
-      }
-    }
-    // Remove the else clause that was clearing selectedBreedId when URL has no breed parameter
-    // This prevents the race condition when closing the modal
-  }, [searchParams, initialized, allBreeds, setSelectedBreed, setSearchParams]);
-
-  // Log performance metrics when breeds are loaded
-  useEffect(() => {
-    if (
-      initialized &&
-      typeof window !== "undefined" &&
-      window.performance?.mark
-    ) {
-      window.performance.mark("breeds-init-end");
-      try {
-        if (window.performance?.measure) {
-          window.performance.measure(
-            "breeds-initialization",
-            "breeds-init-start",
-            "breeds-init-end",
-          );
-          const measure = window.performance.getEntriesByName?.(
-            "breeds-initialization",
-          )[0];
-          if (measure) {
-            logger.info(
-              `Breeds initialization took ${measure.duration.toFixed(2)}ms`,
-            );
-          }
-        }
-      } catch (e) {
-        // Ignore if marks don't exist
-      }
-
-      // Log total breeds count for performance tracking
-      logger.info(
-        `Total breeds loaded: ${allBreeds.length}, Visible: ${breeds.length}`,
-      );
-    }
-  }, [initialized, allBreeds.length, breeds.length]);
-
-  useEffect(() => {
-    if (selectedBreedId) {
-      openModal();
-    }
-  }, [selectedBreedId, openModal]);
-
-  useEffect(() => {
-    if (!needle) {
-      setSearch({ results: null });
-    } else {
-      const results = fuse.search(needle).map(({ item: { id } }) => id);
-      track("Breed Search Performed", {
-        searchTerm: needle,
-        resultsCount: results.length,
-        totalBreeds: allBreeds.length,
-        hasResults: results.length > 0,
-      });
-      setSearch({ results });
-    }
-  }, [needle, setSearch, fuse, track, allBreeds.length]);
-
-  // Show loading state while breeds are being loaded
-  if (loading) {
-    return <LoadingSpinner message={LOADING_MESSAGE} />;
-  }
-
-  // Show error state if initialization failed
-  if (error) {
-    return (
-      <Alert
-        icon={<IconAlertCircle size={16} />}
-        title="Failed to load breeds"
-        color="red"
-        variant="light"
-      >
-        {error}
-      </Alert>
-    );
-  }
-
-  // Don't render until initialized
-  if (!initialized) {
-    return <LoadingSpinner message={LOADING_MESSAGE} />;
-  }
-
-  const breedCards = breeds.map(({ id, details: { public: names } }) => (
-    <LazyBreedCard
-      key={id}
-      id={id}
-      name={names[0]}
-      onClick={() => onSelectBreed(id)}
-    />
-  ));
+    // tracked once per search term, not again when results re-render
+  }, [needle]);
 
   return (
     <>
-      <Stack>
-        <BreedSearch />
-        {needle && !breeds.length && <BreedNotFound needle={needle} />}
+      {newest && !needle && (
+        <div className={classes.heroWrap}>
+          <HeroPortrait breed={newest} />
+        </div>
+      )}
 
-        <SimpleGrid
-          cols={{ base: 1, sm: 3, lg: 4, xl: 5 }}
-          spacing={{ base: 8 }}
-          verticalSpacing={{ base: 8 }}
-        >
-          {breedCards}
-        </SimpleGrid>
-      </Stack>
+      <section className={classes.section} aria-labelledby="portraits-title">
+        <div className={classes.head}>
+          <h2 id="portraits-title" className={classes.title}>
+            {needle ? (
+              `${visibleBreeds.length} Treffer für »${needle}«`
+            ) : (
+              <>
+                Alle <span className={classes.count}>{breeds.length} </span>
+                Portraits
+              </>
+            )}
+          </h2>
+          <div className={classes.search}>
+            <BreedSearch />
+          </div>
+          <div className={classes.sort}>
+            <SortControl />
+          </div>
+        </div>
 
-      <Modal isOpen={isModalOpen} close={onCloseModal} />
+        {needle && !visibleBreeds.length ? (
+          <BreedNotFound needle={needle} onReset={() => setQuery("")} />
+        ) : (
+          <SimpleGrid
+            cols={{ base: 2, sm: 3, md: 4, xl: 5 }}
+            spacing={{ base: 14, md: 24 }}
+            verticalSpacing={{ base: 24, md: 36 }}
+          >
+            {visibleBreeds.map((breed) => (
+              <LazyBreedCard key={breed.id} breed={breed} />
+            ))}
+          </SimpleGrid>
+        )}
+      </section>
     </>
   );
+};
+
+const Rasseportrait = () => {
+  const status = useEnsureBreeds();
+  const { initialize } = useBreedActions();
+
+  if (status === "error") {
+    return (
+      <LoadError
+        title="Die Rassen konnten nicht geladen werden."
+        onRetry={initialize}
+      />
+    );
+  }
+
+  if (status !== "ready") {
+    return <LoadingSpinner message={LOADING_MESSAGE} />;
+  }
+
+  return <Overview />;
 };
 
 export default Rasseportrait;

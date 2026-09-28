@@ -1,0 +1,45 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 480px;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--rp-radius-image-l);
+}
+
+.title {
+  margin: 8px 0 0;
+  font-family: var(--rp-font-display);
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--rp-text-muted);
+}
+
+.reset {
+  min-height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-text);
+  color: var(--rp-bg);
+  font-family: var(--rp-font-body);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}

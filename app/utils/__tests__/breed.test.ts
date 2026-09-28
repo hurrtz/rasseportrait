@@ -5,7 +5,9 @@ import {
   assignSlugs,
   breedSlug,
   fciGroupLabel,
+  getIllustrations,
   getListenUrl,
+  getNewestPortraitBreed,
   getPrimaryPortrait,
   toDisplayBreeds,
 } from "../breed";
@@ -193,5 +195,117 @@ describe("toDisplayBreeds with the real dataset", () => {
       expect(String(b.id)).toMatch(/^[a-z0-9]{4}$/);
       expect(b.originalId).toBeDefined();
     });
+  });
+});
+
+describe("getIllustrations", () => {
+  it("points a single breed to its folder by original id", () => {
+    const [display] = toDisplayBreeds([breed()]);
+
+    expect(getIllustrations(display)).toEqual([
+      {
+        thumbnail:
+          "/rasseportrait/illustrations/breeds/297/illustration_thumbnail.jpeg",
+        full: "/rasseportrait/illustrations/breeds/297/illustration.jpeg",
+        alt: "Border Collie",
+        variantName: undefined,
+      },
+    ]);
+  });
+
+  it("returns one illustration per variant", () => {
+    const [display] = toDisplayBreeds([
+      breed({
+        id: 172,
+        details: {
+          internal: "poodle",
+          public: ["Pudel"],
+          variants: [
+            { internal: "standard", public: "Großpudel" },
+            { internal: "toy", public: "Toy-Pudel" },
+          ],
+        },
+      }),
+    ]);
+
+    expect(getIllustrations(display)).toEqual([
+      {
+        thumbnail:
+          "/rasseportrait/illustrations/breeds/172/illustration_standard_thumbnail.jpeg",
+        full: "/rasseportrait/illustrations/breeds/172/illustration_standard.jpeg",
+        alt: "Pudel, Großpudel",
+        variantName: "Großpudel",
+      },
+      {
+        thumbnail:
+          "/rasseportrait/illustrations/breeds/172/illustration_toy_thumbnail.jpeg",
+        full: "/rasseportrait/illustrations/breeds/172/illustration_toy.jpeg",
+        alt: "Pudel, Toy-Pudel",
+        variantName: "Toy-Pudel",
+      },
+    ]);
+  });
+
+  it("uses each member's FCI folder for grouped breeds", () => {
+    const [corgi] = toDisplayBreeds([
+      breed({
+        id: 38,
+        classification: { fci: { group: 1, section: 1, standardNumber: 38 } },
+        details: {
+          internal: "corgi_cardigan",
+          public: ["Welsh Corgi Cardigan"],
+          groupAs: "Corgi",
+          variants: [{ internal: "cardigan", public: "Welsh Corgi Cardigan" }],
+        },
+      }),
+      breed({
+        id: 89,
+        classification: { fci: { group: 5, section: 7, standardNumber: 89 } },
+        details: {
+          internal: "podenco_ibicenco",
+          public: ["Podenco Ibicenco"],
+          groupAs: "Corgi",
+        },
+      }),
+    ]);
+
+    expect(
+      getIllustrations(corgi).map(({ thumbnail, alt }) => [thumbnail, alt]),
+    ).toEqual([
+      [
+        "/rasseportrait/illustrations/breeds/38/illustration_cardigan_thumbnail.jpeg",
+        "Corgi, Welsh Corgi Cardigan",
+      ],
+      [
+        "/rasseportrait/illustrations/breeds/89/illustration_podenco_ibicenco_thumbnail.jpeg",
+        "Corgi, Podenco Ibicenco",
+      ],
+    ]);
+  });
+});
+
+describe("getNewestPortraitBreed", () => {
+  it("picks the breed whose portrait aired last", () => {
+    const older = breed({ id: 1, podcast: [podcast()] });
+    const newest = breed({
+      id: 2,
+      podcast: [
+        podcast({ meta: { ...podcast().meta, airDate: "2026-06-04" } }),
+      ],
+    });
+    const anecdoteOnly = breed({
+      id: 3,
+      podcast: [
+        podcast({
+          meta: { ...podcast().meta, internal: "other", airDate: "2026-09-01" },
+        }),
+      ],
+    });
+
+    expect(getNewestPortraitBreed([older, anecdoteOnly, newest])).toBe(newest);
+  });
+
+  it("returns undefined for an empty list", () => {
+    expect(getNewestPortraitBreed([])).toBeUndefined();
   });
 });

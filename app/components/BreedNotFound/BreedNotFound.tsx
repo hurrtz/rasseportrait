@@ -1,66 +1,28 @@
 import React from "react";
-import {
-  Card,
-  Image,
-  Group,
-  Text,
-  Space,
-  AspectRatio,
-  Highlight,
-  Center,
-} from "@mantine/core";
+import { BASE_PATH } from "~/constants";
+import classes from "./BreedNotFound.module.css";
 
-export const BreedNotFound = ({ needle }: { needle: string }) => {
-  const { Section } = Card;
+interface Props {
+  needle: string;
+  onReset: () => void;
+}
 
-  return (
-    <Center>
-      <AspectRatio ratio={16 / 9}>
-        <Card
-          shadow="sm"
-          padding="lg"
-          radius="md"
-          withBorder
-          w="100%"
-          maw={600}
-          style={{ aspectRatio: "initial" }}
-        >
-          <Section>
-            <Image
-              src="illustrations/general_purpose/not_found_illustration.jpeg"
-              alt="Breed not found"
-              h={320}
-            />
-          </Section>
-
-          <Group justify="space-between" mt="md" mb="xs">
-            <Text fw={500}>Mich gibt es nicht. Noch nicht.</Text>
-          </Group>
-
-          <Text size="sm" c="dimmed">
-            Traurige Hundeaugen blicken dich an!
-          </Text>
-
-          <Space h={8} />
-
-          <Text size="sm" c="dimmed">
-            Zu deiner Sucheingabe{" "}
-            <Highlight highlight={needle} component="span" color="pink">
-              {needle}
-            </Highlight>{" "}
-            gibt es nichts zu finden. Das macht mich genauso traurig wie die
-            kleine Peppa. Aber es ist leider nicht zu ändern. Aber wer weiß, das
-            kann sich mit der nächsten Folge schon geändert haben.
-          </Text>
-
-          <Space h={8} />
-
-          <Text size="sm">
-            Bitte ändere deine Suche, oder lösche alles, damit du wieder alle
-            Rassen siehst.
-          </Text>
-        </Card>
-      </AspectRatio>
-    </Center>
-  );
-};
+export const BreedNotFound = ({ needle, onReset }: Props) => (
+  <div className={classes.notFound}>
+    <img
+      src={`${BASE_PATH}illustrations/general_purpose/not_found_illustration_thumbnail.jpeg`}
+      alt=""
+      className={classes.image}
+      loading="lazy"
+      decoding="async"
+    />
+    <h3 className={classes.title}>Keine Rasse gefunden</h3>
+    <p className={classes.text}>
+      Für »{needle}« gibt es noch kein Portrait. Suche nach einem anderen Namen
+      oder einer FCI-Nummer.
+    </p>
+    <button type="button" className={classes.reset} onClick={onReset}>
+      Suche zurücksetzen
+    </button>
+  </div>
+);

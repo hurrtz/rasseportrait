@@ -59,7 +59,17 @@ interface SearchEventProperties extends BaseEventProperties {
   hasResults: boolean;
 }
 
+interface PlayEventProperties extends BaseEventProperties {
+  breedId: string;
+  breedName: string;
+  placement: "hero" | "card" | "detail" | "sticky" | "more";
+  provider: string | undefined;
+  episodeNumber: number | string;
+  timecode: number;
+}
+
 type EventProperties =
+  | PlayEventProperties
   | BreedEventProperties
   | KnowledgeEventProperties
   | ErrorEventProperties

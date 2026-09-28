@@ -1,0 +1,32 @@
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.image,
+.name,
+.meta {
+  display: block;
+  background: var(--rp-surface-muted);
+}
+
+.image {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--rp-radius-image);
+}
+
+/* two text lines: 19px name and 13px meta with a 4px gap */
+.name {
+  width: 60%;
+  height: 18px;
+  margin-top: 1px;
+  border-radius: 6px;
+}
+
+.meta {
+  width: 40%;
+  height: 13px;
+  margin-top: -4px;
+  border-radius: 6px;
+}

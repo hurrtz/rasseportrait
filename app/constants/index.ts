@@ -15,7 +15,7 @@ export const SEARCH_DEBOUNCE_DELAY_MS = 300;
 /**
  * Placeholder text for the breed search input
  */
-export const SEARCH_PLACEHOLDER = "Suche nach Rassenamen oder FCI-Nummern";
+export const SEARCH_PLACEHOLDER = "Rasse oder FCI-Nummer";
 
 /**
  * ARIA label for the breed search input
@@ -82,7 +82,7 @@ export const LOADING_SPINNER_SIZE = 100;
 /**
  * Loading message displayed while breeds are being loaded
  */
-export const LOADING_MESSAGE = "Lädt Daten...";
+export const LOADING_MESSAGE = "Rassen werden geladen …";
 
 // ============================================================================
 // Keyboard Navigation

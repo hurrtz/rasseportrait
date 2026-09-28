@@ -79,7 +79,7 @@ export const mergeGroupedBreeds = (breeds: Breed[]): Breed[] => {
   return mergedBreeds;
 };
 
-type SortOrder = "asc" | "desc";
+export type SortOrder = "asc" | "desc";
 
 /**
  * Sorts breeds by air date of podcast
@@ -94,7 +94,7 @@ const sortBreedsByAirDate = ({
   breeds: Breed[];
   sortOrder: SortOrder;
 }): Breed[] =>
-  breeds.sort((a, b) => {
+  [...breeds].sort((a, b) => {
     const aAirDate = a.podcast.find(
       ({ meta: { internal } }) => internal === "portrait",
     )?.meta.airDate;
@@ -113,8 +113,10 @@ const sortBreedsByAirDate = ({
     return bDate - aDate;
   });
 
+const germanCollator = new Intl.Collator("de");
+
 /**
- * Sorts breeds by name (internal identifier)
+ * Sorts breeds by their German display name
  * @param breeds - An array of breeds
  * @param sortOrder - The direction to sort the breeds in ('asc' or 'desc')
  * @returns An array of sorted breeds
@@ -126,19 +128,13 @@ const sortBreedsByName = ({
   breeds: Breed[];
   sortOrder: SortOrder;
 }): Breed[] =>
-  breeds.sort((a, b) => {
-    const aName = a.details.internal;
-    const bName = b.details.internal;
+  [...breeds].sort((a, b) => {
+    const order = germanCollator.compare(
+      a.details.public[0],
+      b.details.public[0],
+    );
 
-    if (aName === bName) {
-      return 0;
-    }
-
-    if (sortOrder === "asc") {
-      return aName.localeCompare(bName);
-    }
-
-    return bName.localeCompare(aName);
+    return sortOrder === "asc" ? order : -order;
   });
 
 /**
@@ -155,7 +151,7 @@ const sortBreedsByFCI = ({
   breeds: Breed[];
   sortOrder: SortOrder;
 }): Breed[] =>
-  breeds.sort((a, b) => {
+  [...breeds].sort((a, b) => {
     const aFCI =
       a.classification.fci?.standardNumber ??
       a.details.variants?.[0]?.fci?.standardNumber;
@@ -183,7 +179,7 @@ const sortBreedsByFCI = ({
     return bFCI - aFCI;
   });
 
-type SortBy = "airDate" | "name" | "fci";
+export type SortBy = "airDate" | "name" | "fci";
 
 /**
  * Sorts breeds by the specified field and order

@@ -1,0 +1,14 @@
+.play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-accent);
+  color: var(--rp-on-accent);
+  transition: background-color 150ms ease;
+}
+
+.play:hover {
+  background: var(--rp-accent-hover);
+}

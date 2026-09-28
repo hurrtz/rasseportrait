@@ -1,0 +1,45 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 480px;
+  padding: 28px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-card);
+  background: var(--rp-surface);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  color: var(--rp-text-muted);
+}
+
+.retry {
+  min-height: 44px;
+  margin-top: 4px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-text);
+  color: var(--rp-bg);
+  font-family: var(--rp-font-body);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}

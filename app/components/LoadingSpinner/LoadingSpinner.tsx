@@ -1,26 +1,16 @@
 import React from "react";
-import { Loader, Stack, Text } from "@mantine/core";
-import "./styles.css";
+import { Loader } from "@mantine/core";
+import classes from "./LoadingSpinner.module.css";
 
 interface Props {
   message?: string;
-  size?: "xs" | "sm" | "md" | "lg" | "xl";
-  color?: string;
 }
 
-const LoadingSpinner = ({
-  message = "Loading...",
-  size = "md",
-  color = "blue",
-}: Props) => {
-  return (
-    <Stack align="center" gap="md" className="loading-spinner">
-      <Loader size={size} color={color} />
-      <Text size="sm" c="dimmed">
-        {message}
-      </Text>
-    </Stack>
-  );
-};
+const LoadingSpinner = ({ message = "Wird geladen …" }: Props) => (
+  <div role="status" className={classes.spinner}>
+    <Loader color="var(--rp-accent)" size="md" aria-hidden />
+    <span className={classes.message}>{message}</span>
+  </div>
+);
 
 export default LoadingSpinner;

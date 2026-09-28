@@ -52,6 +52,49 @@ describe("sortBreeds", () => {
       );
       expect(goldenRetrievers).toHaveLength(2);
     });
+
+    it("sorts by the German display name, not the internal id", () => {
+      const zwerg = {
+        ...mockBreed1,
+        details: { internal: "a_first_internally", public: ["Zwergspitz"] },
+      };
+      const aegypter = {
+        ...mockBreed2,
+        details: {
+          internal: "z_last_internally",
+          public: ["Ägyptischer Hund"],
+        },
+      };
+      const boxer = {
+        ...mockBreed1,
+        details: { internal: "m_boxer", public: ["Boxer"] },
+      };
+
+      const result = sortBreeds({
+        breeds: [zwerg, boxer, aegypter],
+        sortBy: "name",
+        sortOrder: "asc",
+      });
+
+      expect(result.map((b) => b.details.public[0])).toEqual([
+        "Ägyptischer Hund",
+        "Boxer",
+        "Zwergspitz",
+      ]);
+    });
+
+    it("returns a new array and leaves the input order untouched", () => {
+      const input = [mockBreed1, mockBreed2];
+
+      const result = sortBreeds({
+        breeds: input,
+        sortBy: "name",
+        sortOrder: "asc",
+      });
+
+      expect(result).not.toBe(input);
+      expect(input[0]).toBe(mockBreed1);
+    });
   });
 
   describe("sorting by FCI number", () => {
@@ -212,23 +255,6 @@ describe("sortBreeds", () => {
 
       expect(result).toHaveLength(1);
       expect(result[0]).toBe(mockBreed1);
-    });
-
-    it("should handle array sort mutation correctly", () => {
-      const original = [...testBreeds];
-      const originalIds = original.map((b) => b.id);
-
-      const result = sortBreeds({
-        breeds: original,
-        sortBy: "name",
-        sortOrder: "asc",
-      });
-
-      // Result should be sorted
-      expect(result[0].details.internal).toBe("australian_shepherd");
-      // Original array gets sorted in place by Array.prototype.sort
-      // This is expected behavior since we use .sort() directly
-      expect(result).toBe(original);
     });
   });
 });

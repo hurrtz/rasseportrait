@@ -1,392 +1,50 @@
 import React from "react";
-import { render, screen, waitFor, act } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
-import { MantineProvider } from "@mantine/core";
+import { act, fireEvent, screen } from "@testing-library/react";
+import useBreedsStore from "~/stores/breeds";
+import { renderWithProviders, resetBreedsStore } from "~/test-utils";
 import BreedSearch from "../BreedSearch";
-import * as breedsStore from "../../../stores/breeds";
 
-// Mock the breeds store
-jest.mock("../../../stores/breeds", () => ({
-  useBreedActions: jest.fn(),
-}));
+const query = () => useBreedsStore.getState().query;
 
 describe("BreedSearch", () => {
-  const mockSetSearch = jest.fn();
+  beforeEach(() => resetBreedsStore());
 
-  beforeEach(() => {
-    jest.clearAllMocks();
-    jest.useFakeTimers();
+  it("is a labelled search field with a German placeholder", () => {
+    renderWithProviders(<BreedSearch />);
 
-    (breedsStore.useBreedActions as jest.Mock).mockReturnValue({
-      setSearch: mockSetSearch,
-      initialize: jest.fn(),
-      setSelectedBreed: jest.fn(),
-      setRawBreeds: jest.fn(),
-      setBreeds: jest.fn(),
-      setBreed: jest.fn(),
-      addBreed: jest.fn(),
-      setSort: jest.fn(),
-    });
+    const input = screen.getByRole("searchbox", { name: "Rassen durchsuchen" });
+    expect(input).toHaveAttribute("placeholder", "Rasse oder FCI-Nummer");
   });
 
-  afterEach(() => {
-    act(() => {
-      jest.runOnlyPendingTimers();
+  it("writes what is typed into the store", () => {
+    renderWithProviders(<BreedSearch />);
+
+    fireEvent.change(screen.getByRole("searchbox"), {
+      target: { value: "Pudel" },
     });
-    jest.useRealTimers();
+
+    expect(query()).toBe("Pudel");
   });
 
-  const renderWithProvider = (ui: React.ReactElement) => {
-    return render(<MantineProvider>{ui}</MantineProvider>);
-  };
+  it("shows the stored query when it mounts again", () => {
+    act(() => useBreedsStore.getState().actions.setQuery("Collie"));
 
-  describe("Rendering", () => {
-    it("should render search input", () => {
-      renderWithProvider(<BreedSearch />);
+    renderWithProviders(<BreedSearch />);
 
-      const input = screen.getByRole("searchbox");
-      expect(input).toBeInTheDocument();
-    });
-
-    it("should have correct placeholder text", () => {
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByPlaceholderText(
-        "Suche nach Rassenamen oder FCI-Nummern",
-      );
-      expect(input).toBeInTheDocument();
-    });
-
-    it("should have correct aria-label for accessibility", () => {
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByLabelText("Rassen durchsuchen");
-      expect(input).toBeInTheDocument();
-    });
-
-    it("should label the clear button in German", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      await user.type(screen.getByRole("searchbox"), "Pudel");
-      await user.click(screen.getByRole("button", { name: "Suche leeren" }));
-
-      expect(screen.getByRole("searchbox")).toHaveValue("");
-    });
-
-    it("should start with empty value", () => {
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByRole("searchbox") as HTMLInputElement;
-      expect(input.value).toBe("");
-    });
+    expect(screen.getByRole("searchbox")).toHaveValue("Collie");
   });
 
-  describe("User Interaction", () => {
-    it("should update input value when user types", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
+  it("offers a clear button only while there is a query", () => {
+    renderWithProviders(<BreedSearch />);
+    expect(screen.queryByRole("button", { name: "Suche leeren" })).toBeNull();
 
-      const input = screen.getByRole("searchbox");
-      await user.type(input, "Golden");
-
-      expect(input).toHaveValue("Golden");
+    fireEvent.change(screen.getByRole("searchbox"), {
+      target: { value: "Pudel" },
     });
-
-    it("should allow clearing the input", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByRole("searchbox");
-      await user.type(input, "Golden");
-      expect(input).toHaveValue("Golden");
-
-      await user.clear(input);
-      expect(input).toHaveValue("");
-    });
-
-    it("should handle special characters in search", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByRole("searchbox");
-      await user.type(input, "Test-123 & More");
-
-      expect(input).toHaveValue("Test-123 & More");
-    });
-  });
-
-  describe("Debounced Search", () => {
-    it("should debounce search calls by 300ms", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      // Clear initial mount call
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
-      });
-      mockSetSearch.mockClear();
-
-      const input = screen.getByRole("searchbox");
-
-      // Type multiple characters quickly
-      await user.type(input, "Golden");
-
-      // Should not have called setSearch yet (debouncing)
-      expect(mockSetSearch).not.toHaveBeenCalled();
-
-      // Fast-forward time by 300ms
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      // Now it should have been called
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "Golden" });
-      });
-    });
-
-    it("should only call setSearch once after debounce delay", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      // Clear initial mount call
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
-      });
-      mockSetSearch.mockClear();
-
-      const input = screen.getByRole("searchbox");
-
-      await user.type(input, "Test");
-
-      // Fast-forward
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledTimes(1);
-      });
-    });
-
-    it("should reset debounce timer on new input", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      // Clear initial mount call
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
-      });
-      mockSetSearch.mockClear();
-
-      const input = screen.getByRole("searchbox");
-
-      // Type first character
-      await user.type(input, "G");
-
-      // Wait 200ms (not enough to trigger)
-      act(() => {
-        jest.advanceTimersByTime(200);
-      });
-      expect(mockSetSearch).not.toHaveBeenCalled();
-
-      // Type another character (should reset timer)
-      await user.type(input, "o");
-
-      // Wait another 200ms (still not 300ms since last input)
-      act(() => {
-        jest.advanceTimersByTime(200);
-      });
-      expect(mockSetSearch).not.toHaveBeenCalled();
-
-      // Wait remaining 100ms
-      act(() => {
-        jest.advanceTimersByTime(100);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "Go" });
-      });
-    });
-
-    it("should call setSearch with empty string after clearing", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByRole("searchbox");
-
-      // Type something
-      await user.type(input, "Test");
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "Test" });
-      });
-
-      mockSetSearch.mockClear();
-
-      // Clear the input
-      await user.clear(input);
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
-      });
-    });
-  });
-
-  describe("Search Functionality", () => {
-    it("should trigger search with partial breed name", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByRole("searchbox");
-      await user.type(input, "Gol");
-
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "Gol" });
-      });
-    });
-
-    it("should trigger search with FCI number", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByRole("searchbox");
-      await user.type(input, "111");
-
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "111" });
-      });
-    });
-
-    it("should handle rapid typing correctly", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      // Clear initial mount call
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "" });
-      });
-      mockSetSearch.mockClear();
-
-      const input = screen.getByRole("searchbox");
-
-      // Rapidly type a word
-      await user.type(input, "Golden Retriever");
-
-      // Only advance timer once after all typing
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({
-          needle: "Golden Retriever",
-        });
-        // Should only be called once despite multiple keystrokes
-        expect(mockSetSearch).toHaveBeenCalledTimes(1);
-      });
-    });
-  });
-
-  describe("Edge Cases", () => {
-    it("should handle spaces at the start and end", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByRole("searchbox");
-      await user.type(input, "  Golden  ");
-
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "  Golden  " });
-      });
-    });
-
-    it("should handle only spaces", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByRole("searchbox");
-      await user.type(input, "   ");
-
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: "   " });
-      });
-    });
-
-    it("should handle very long search strings", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      const longString = "A".repeat(200);
-      const input = screen.getByRole("searchbox");
-      await user.type(input, longString);
-
-      act(() => {
-        jest.advanceTimersByTime(300);
-      });
-
-      await waitFor(() => {
-        expect(mockSetSearch).toHaveBeenCalledWith({ needle: longString });
-      });
-    });
-  });
-
-  describe("Accessibility", () => {
-    it("should have proper role attribute", () => {
-      renderWithProvider(<BreedSearch />);
-
-      const searchbox = screen.getByRole("searchbox");
-      expect(searchbox).toBeInTheDocument();
-    });
-
-    it("should be keyboard accessible", async () => {
-      const user = userEvent.setup({ delay: null });
-      renderWithProvider(<BreedSearch />);
-
-      const input = screen.getByRole("searchbox");
-
-      // Should be able to tab to it
-      await user.tab();
-      expect(input).toHaveFocus();
-
-      // Should be able to type
-      await user.keyboard("Test");
-      expect(input).toHaveValue("Test");
-    });
+    fireEvent.click(screen.getByRole("button", { name: "Suche leeren" }));
+
+    expect(query()).toBe("");
+    expect(screen.getByRole("searchbox")).toHaveValue("");
+    expect(screen.getByRole("searchbox")).toHaveFocus();
   });
 });

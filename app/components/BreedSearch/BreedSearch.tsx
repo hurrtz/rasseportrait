@@ -1,58 +1,50 @@
-import React, {
-  useCallback,
-  useState,
-  useEffect,
-  type ChangeEvent,
-} from "react";
-import { Input, CloseButton } from "@mantine/core";
-import "./styles.css";
-import { useBreedActions } from "../../stores/breeds";
-import { useDebounce } from "../../hooks/useDebounce";
-import {
-  SEARCH_DEBOUNCE_DELAY_MS,
-  SEARCH_PLACEHOLDER,
-  SEARCH_ARIA_LABEL,
-  ROLE_SEARCHBOX,
-} from "~/constants";
+import React, { useId, useRef } from "react";
+import { IconSearch, IconX } from "@tabler/icons-react";
+import { useBreedActions, useQuery } from "~/stores/breeds";
+import { SEARCH_ARIA_LABEL, SEARCH_PLACEHOLDER } from "~/constants";
+import classes from "./BreedSearch.module.css";
 
+/**
+ * Search pill. The raw query lives in the store, so it survives a visit to a
+ * breed page; the overview debounces it before filtering.
+ */
 const BreedSearch = () => {
-  const { setSearch } = useBreedActions();
-  const [searchValue, setSearchValue] = useState("");
-  const debouncedSearchValue = useDebounce(
-    searchValue,
-    SEARCH_DEBOUNCE_DELAY_MS,
-  );
-
-  const handleChange = useCallback((event?: ChangeEvent<HTMLInputElement>) => {
-    if (event && event.currentTarget) {
-      setSearchValue(event.currentTarget.value);
-    }
-  }, []);
-
-  // Update search when debounced value changes
-  useEffect(() => {
-    setSearch({ needle: debouncedSearchValue });
-  }, [debouncedSearchValue, setSearch]);
+  const id = useId();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const query = useQuery();
+  const { setQuery } = useBreedActions();
 
   return (
-    <>
-      <Input
+    <div className={classes.search}>
+      <IconSearch size={18} className={classes.icon} aria-hidden />
+      <label htmlFor={id} className="rp-visually-hidden">
+        {SEARCH_ARIA_LABEL}
+      </label>
+      <input
+        ref={inputRef}
+        id={id}
+        type="search"
+        className={classes.input}
         placeholder={SEARCH_PLACEHOLDER}
-        value={searchValue}
-        onChange={handleChange}
-        size="lg"
-        aria-label={SEARCH_ARIA_LABEL}
-        role={ROLE_SEARCHBOX}
-        rightSectionPointerEvents="all"
-        rightSection={
-          <CloseButton
-            aria-label="Suche leeren"
-            onClick={() => setSearchValue("")}
-            style={{ display: searchValue ? undefined : "none" }}
-          />
-        }
+        value={query}
+        onChange={(event) => setQuery(event.currentTarget.value)}
+        autoComplete="off"
+        enterKeyHint="search"
       />
-    </>
+      {query && (
+        <button
+          type="button"
+          className={classes.clear}
+          aria-label="Suche leeren"
+          onClick={() => {
+            setQuery("");
+            inputRef.current?.focus();
+          }}
+        >
+          <IconX size={16} aria-hidden />
+        </button>
+      )}
+    </div>
   );
 };
 

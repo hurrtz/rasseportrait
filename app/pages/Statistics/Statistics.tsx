@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useNavigate } from "react-router";
 import "./styles.css";
 import {
   Group,
@@ -10,39 +11,20 @@ import {
   Button,
 } from "@mantine/core";
 import { getStatistics } from "../rasseportrait/utils";
-import {
-  useAllBreeds,
-  useBreedActions,
-  useRawBreeds,
-  useInitialized,
-  useLoading,
-} from "../../stores/breeds";
+import { useAllBreeds, useRawBreeds } from "../../stores/breeds";
+import { useEnsureBreeds } from "~/hooks/useEnsureBreeds";
 import {
   AMOUNT_OF_BREEDS_TOTAL,
   AMOUNT_OF_BREEDS_APPROVED,
   AMOUNT_OF_BREEDS_PROVISIONAL,
 } from "../rasseportrait/constants";
 import type { Breed } from "types/breed";
-import { useDisclosure } from "@mantine/hooks";
-import { Modal } from "../../components/Modal";
 
 const Statistics = () => {
   const rawBreeds = useRawBreeds();
   const allBreeds = useAllBreeds();
-  const initialized = useInitialized();
-  const loading = useLoading();
-
-  const [isModalOpen, { open: openModal, close: closeModal }] =
-    useDisclosure(false);
-
-  const { setSelectedBreed, initialize } = useBreedActions();
-
-  // Initialize breeds on mount if not already initialized
-  useEffect(() => {
-    if (!initialized && !loading) {
-      initialize();
-    }
-  }, [initialized, loading, initialize]);
+  const navigate = useNavigate();
+  useEnsureBreeds();
 
   const {
     amountBreedsPresented,
@@ -72,14 +54,8 @@ const Statistics = () => {
     );
 
     if (hashedBreed) {
-      setSelectedBreed(hashedBreed.id);
-      openModal();
+      navigate(`/rasse/${hashedBreed.slug}`);
     }
-  };
-
-  const onCloseModal = () => {
-    closeModal();
-    setSelectedBreed(undefined);
   };
 
   return (
@@ -286,8 +262,6 @@ const Statistics = () => {
           </Group>
         </Card>
       </Stack>
-
-      <Modal isOpen={isModalOpen} close={onCloseModal} />
     </>
   );
 };

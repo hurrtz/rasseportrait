@@ -1,0 +1,95 @@
+.card {
+  position: relative;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--rp-text);
+  border-radius: var(--rp-radius-image);
+}
+
+.frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: var(--rp-radius-image);
+  background: var(--rp-surface-muted);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 200ms ease;
+}
+
+.link:hover .image {
+  transform: scale(1.03);
+}
+
+.notPresented .image {
+  filter: grayscale(1);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  border-radius: var(--rp-radius-pill);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--rp-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-family: var(--rp-font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--rp-text-muted);
+}
+
+/* Same box as the image, so the play button sits on its corner */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+}
+
+.play {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transition: none;
+  }
+
+  .link:hover .image {
+    transform: none;
+  }
+}

@@ -13,3 +13,11 @@ global.importMeta = {
     VITE_AMPLITUDE_API_KEY: "test-api-key",
   },
 };
+
+// jsdom has no ResizeObserver; Mantine's SegmentedControl indicator needs one
+class ResizeObserverStub {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
+global.ResizeObserver = global.ResizeObserver || ResizeObserverStub;

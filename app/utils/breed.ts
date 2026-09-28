@@ -1,5 +1,6 @@
 import type { Breed, Podcast } from "types/breed";
 import { mergeGroupedBreeds } from "~/pages/rasseportrait/utils";
+import { BASE_PATH } from "~/constants";
 import { generateBreedHashes } from "./generateBreedHash";
 
 /** The breed's portrait appearance, else its first appearance */
@@ -119,3 +120,61 @@ export const toDisplayBreeds = (rawBreeds: Breed[]): Breed[] => {
     })),
   );
 };
+
+export interface Illustration {
+  thumbnail: string;
+  full: string;
+  alt: string;
+  variantName: string | undefined;
+}
+
+const illustration = (
+  folder: string | number,
+  suffix: string,
+  alt: string,
+  variantName?: string,
+): Illustration => {
+  const base = `${BASE_PATH}illustrations/breeds/${folder}/illustration${suffix}`;
+  return {
+    thumbnail: `${base}_thumbnail.jpeg`,
+    full: `${base}.jpeg`,
+    alt,
+    variantName,
+  };
+};
+
+/**
+ * The display breed's illustrations, one per variant (else one). Grouped
+ * breeds keep each member's files in the member's FCI folder; everything
+ * else lives in the folder named after the original breed id.
+ */
+export const getIllustrations = (breed: Breed): Illustration[] => {
+  const name = breed.details.public[0];
+  const folder = breed.originalId ?? breed.id;
+  const { variants } = breed.details;
+
+  if (!variants?.length) return [illustration(folder, "", name)];
+
+  return variants.map((variant) =>
+    illustration(
+      breed.details.isGrouped
+        ? (variant.fci?.standardNumber ?? folder)
+        : folder,
+      `_${variant.internal}`,
+      `${name}, ${variant.public}`,
+      variant.public,
+    ),
+  );
+};
+
+const portraitAirDate = (breed: Breed) =>
+  breed.podcast.find(({ meta }) => meta.internal === "portrait")?.meta.airDate;
+
+/** The breed with the most recently aired portrait (ISO dates sort as text) */
+export const getNewestPortraitBreed = (breeds: Breed[]): Breed | undefined =>
+  breeds.reduce<Breed | undefined>((newest, breed) => {
+    const date = portraitAirDate(breed);
+    if (!date) return newest;
+    const newestDate = newest && portraitAirDate(newest);
+    return !newestDate || date > newestDate ? breed : newest;
+  }, undefined);

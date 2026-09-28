@@ -7,6 +7,7 @@
   --rp-text-muted: #5e554a; /* meta lines, labels, secondary copy */
   --rp-line: #e0d5c6; /* 1px borders, dividers, outline pills */
   --rp-accent: #f58220; /* play buttons, progress fill, "Neues Portrait" pill, active topic tab */
+  --rp-accent-hover: #ff9d45; /* hover state of --rp-accent grounds (contrast with --rp-on-accent 8.3) */
   --rp-accent-text: #b4530a; /* orange used AS TEXT or icon on light grounds */
   --rp-on-accent: #1b1712; /* text/icons on --rp-accent */
   --rp-glass: rgba(250, 246, 240, 0.9); /* back button over the illustration */

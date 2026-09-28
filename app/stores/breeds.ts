@@ -1,84 +1,75 @@
 import { useMemo } from "react";
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
-import { type Breed } from "../../types/breed";
-import { getBreedVariantNames } from "./utils";
-import { sortBreeds } from "../pages/rasseportrait/utils";
+import type { Breed } from "../../types/breed";
+import {
+  sortBreeds,
+  type SortBy,
+  type SortOrder,
+} from "../pages/rasseportrait/utils";
 import { logger } from "~/utils/logger";
 import { toDisplayBreeds } from "~/utils/breed";
 import {
+  BASE_PATH,
   BREEDS_STORE_NAME,
   DEFAULT_SORT_BY,
   DEFAULT_SORT_ORDER,
-  DEFAULT_SEARCH_NEEDLE,
-  DEFAULT_SEARCH_RESULTS,
   ERROR_NO_BREEDS_FOUND,
   ERROR_UNKNOWN,
 } from "~/constants";
 
-type Search = {
-  needle?: string | null;
-  results?: Breed["id"][] | null;
+export type { SortBy, SortOrder };
+
+export type BreedsStatus = "idle" | "loading" | "ready" | "error";
+
+/** The three sort options of the UI, each with its fixed direction */
+export const SORT_ORDER_BY_FIELD: Record<SortBy, SortOrder> = {
+  airDate: "desc",
+  name: "asc",
+  fci: "asc",
 };
 
 interface BreedActions {
+  /** Loads breeds.json once; after an error it may be called again */
   initialize: () => Promise<void>;
-  setRawBreeds: (breeds: Breed[]) => void;
-  setBreeds: (breeds: Breed[]) => void;
-  setBreed: (breed: Breed) => void;
-  addBreed: (breed: Breed) => void;
-  setSelectedBreed: (id?: Breed["id"]) => void;
-  setSearch: (search: Search) => void;
-  setSort: (sort: {
-    sortBy: "name" | "fci" | "airDate";
-    sortOrder: "asc" | "desc";
-  }) => void;
-  resetSort: () => void;
-  reset: () => void;
+  setQuery: (query: string) => void;
+  setSort: (sort: { sortBy: SortBy; sortOrder: SortOrder }) => void;
 }
 
 interface State {
+  /** One entry per breed data file */
   rawBreeds: Breed[];
+  /** What the app shows: grouped breeds merged, hashed ids, slugs */
   breeds: Breed[];
-  selectedBreed?: Breed["id"];
-  loading: boolean;
+  status: BreedsStatus;
   error: string | null;
-  initialized: boolean;
+  /** The search input as typed (debounced by the page) */
+  query: string;
+  sortBy: SortBy;
+  sortOrder: SortOrder;
   actions: BreedActions;
-  search: Search;
-  sortBy: "name" | "fci" | "airDate";
-  sortOrder: "asc" | "desc";
 }
-
-const initialState: Omit<State, "actions"> = {
-  rawBreeds: [],
-  breeds: [],
-  loading: false,
-  error: null,
-  initialized: false,
-  search: {
-    needle: DEFAULT_SEARCH_NEEDLE,
-    results: DEFAULT_SEARCH_RESULTS,
-  },
-  sortBy: DEFAULT_SORT_BY,
-  sortOrder: DEFAULT_SORT_ORDER,
-};
 
 const useBreedsStore = create<State>()(
   devtools(
     persist(
-      (set) => ({
-        ...initialState,
+      (set, get) => ({
+        rawBreeds: [],
+        breeds: [],
+        status: "idle",
+        error: null,
+        query: "",
+        sortBy: DEFAULT_SORT_BY,
+        sortOrder: DEFAULT_SORT_ORDER,
         actions: {
           initialize: async () => {
-            const state = useBreedsStore.getState();
-            if (state.initialized || state.loading) return;
+            const { status } = get();
+            if (status === "loading" || status === "ready") return;
 
-            set({ loading: true, error: null }, undefined, "initialize:start");
+            set({ status: "loading", error: null }, undefined, "initialize");
 
             try {
-              // Fetch breed data from compiled JSON
-              const response = await fetch("/rasseportrait/data/breeds.json");
+              const response = await fetch(`${BASE_PATH}data/breeds.json`);
               if (!response.ok) {
                 throw new Error(
                   `Failed to load breeds: ${response.status} ${response.statusText}`,
@@ -86,232 +77,88 @@ const useBreedsStore = create<State>()(
               }
 
               const data = await response.json();
-              const breeds = data.breeds as Breed[];
-
-              if (!breeds || !breeds.length) {
+              const rawBreeds = data.breeds as Breed[] | undefined;
+              if (!rawBreeds?.length) {
                 throw new Error(ERROR_NO_BREEDS_FOUND);
               }
 
               logger.info(
-                `Loaded ${breeds.length} breeds from JSON (compiled: ${data.meta?.compiled})`,
+                `Loaded ${rawBreeds.length} breeds (compiled: ${data.meta?.compiled})`,
               );
-
-              const { setRawBreeds, setBreeds } =
-                useBreedsStore.getState().actions;
-              setRawBreeds(breeds);
-              setBreeds(toDisplayBreeds(breeds));
-
               set(
-                { initialized: true, loading: false },
+                {
+                  rawBreeds,
+                  breeds: toDisplayBreeds(rawBreeds),
+                  status: "ready",
+                },
                 undefined,
                 "initialize:success",
               );
             } catch (e) {
-              const error = e instanceof Error ? e.message : ERROR_UNKNOWN;
               logger.error("Failed to initialize breeds:", e);
               set(
-                { error, loading: false, initialized: false },
+                {
+                  status: "error",
+                  error: e instanceof Error ? e.message : ERROR_UNKNOWN,
+                },
                 undefined,
                 "initialize:error",
               );
             }
           },
-          setRawBreeds: (breeds: Breed[]) =>
-            set({ rawBreeds: breeds }, undefined, "setRawBreeds"),
-          setBreeds: (breeds: Breed[]) =>
-            set({ breeds }, undefined, "setBreeds"),
-          setBreed: (newBreed: Breed) =>
-            set(
-              (state) => ({
-                breeds: state.breeds.map((breed) =>
-                  breed.id === newBreed.id ? newBreed : breed,
-                ),
-              }),
-              undefined,
-              "setBreed",
-            ),
-          addBreed: (breed: Breed) =>
-            set(
-              (state) => ({ breeds: [...state.breeds, breed] }),
-              undefined,
-              "addBreed",
-            ),
-          setSelectedBreed: (id?: Breed["id"]) =>
-            set({ selectedBreed: id }, undefined, "setSelectedBreed"),
-          setSearch: ({ needle, results }: Search) =>
-            set(
-              (state) => ({
-                search: {
-                  needle:
-                    needle === null
-                      ? initialState.search.needle
-                      : (needle ?? state.search.needle),
-                  results:
-                    results === null
-                      ? initialState.search.results
-                      : (results ?? state.search.results),
-                },
-              }),
-              undefined,
-              "setSearch",
-            ),
-          setSort: ({
-            sortBy,
-            sortOrder,
-          }: {
-            sortBy: "name" | "fci" | "airDate";
-            sortOrder: "asc" | "desc";
-          }) =>
-            set(
-              (state) => ({
-                sortBy,
-                sortOrder:
-                  state.sortBy === sortBy
-                    ? state.sortOrder === "asc"
-                      ? "desc"
-                      : "asc"
-                    : sortOrder,
-              }),
-              undefined,
-              "setSort",
-            ),
-          resetSort: () =>
-            set(
-              {
-                sortBy: DEFAULT_SORT_BY,
-                sortOrder: DEFAULT_SORT_ORDER,
-              },
-              undefined,
-              "resetSort",
-            ),
-          reset: () =>
-            set(
-              (state) => ({
-                ...initialState,
-                actions: state.actions,
-              }),
-              true, // replace entire state
-              "reset",
-            ),
+          setQuery: (query) => set({ query }, undefined, "setQuery"),
+          setSort: ({ sortBy, sortOrder }) =>
+            set({ sortBy, sortOrder }, undefined, "setSort"),
         },
       }),
       {
         name: "rasseportrait-sort-settings",
-        partialize: (state) => ({
-          sortBy: state.sortBy,
-          sortOrder: state.sortOrder,
-        }),
-        version: 1,
-        storage:
-          typeof window !== "undefined"
-            ? {
-                getItem: (name) => {
-                  const item = localStorage.getItem(name);
-                  return item ? JSON.parse(item) : null;
-                },
-                setItem: (name, value) => {
-                  localStorage.setItem(name, JSON.stringify(value));
-                },
-                removeItem: (name) => {
-                  localStorage.removeItem(name);
-                },
-              }
-            : undefined,
+        version: 2,
+        partialize: ({ sortBy, sortOrder }) => ({ sortBy, sortOrder }),
+        // v1 let people pick any direction; v2 has one direction per field
+        migrate: (persisted, version) => {
+          const { sortBy } = (persisted ?? {}) as { sortBy?: SortBy };
+          const field =
+            sortBy && sortBy in SORT_ORDER_BY_FIELD ? sortBy : DEFAULT_SORT_BY;
+          return version < 2
+            ? { sortBy: field, sortOrder: SORT_ORDER_BY_FIELD[field] }
+            : (persisted as { sortBy: SortBy; sortOrder: SortOrder });
+        },
       },
     ),
-    {
-      name: BREEDS_STORE_NAME,
-      trace: true,
-    },
+    { name: BREEDS_STORE_NAME },
   ),
 );
 
-export const useRawBreeds = () =>
-  useBreedsStore((state: State) => state.rawBreeds);
+export const useBreedsStatus = () => useBreedsStore((state) => state.status);
 
-export const useAllBreeds = () =>
-  useBreedsStore((state: State) => state.breeds);
+export const useBreedsError = () => useBreedsStore((state) => state.error);
 
-export const useBreeds = () => {
-  const {
-    search: { needle, results },
-    breeds,
-    sortBy,
-    sortOrder,
-  } = useBreedsStore((state: State) => state);
+export const useRawBreeds = () => useBreedsStore((state) => state.rawBreeds);
 
-  const sortedBreeds = useMemo(() => {
-    return sortBreeds({ breeds, sortBy, sortOrder });
-  }, [breeds, sortBy, sortOrder]);
+export const useAllBreeds = () => useBreedsStore((state) => state.breeds);
 
-  if (needle && results) {
-    return sortedBreeds.filter((breed) => results.includes(breed.id));
-  }
+export const useBreedBySlug = (slug: string | undefined) =>
+  useBreedsStore((state) => state.breeds.find((breed) => breed.slug === slug));
 
-  return sortedBreeds;
-};
+export const useQuery = () => useBreedsStore((state) => state.query);
 
-export const useBreed = (id: Breed["id"]) =>
-  useBreedsStore((state: State) =>
-    state.breeds.find((breed) => breed.id === id),
-  );
+export const useSortBy = () => useBreedsStore((state) => state.sortBy);
 
-export const useSelectedBreedId = () =>
-  useBreedsStore((state: State) => state.selectedBreed);
+export const useSortOrder = () => useBreedsStore((state) => state.sortOrder);
 
-export const useBreedActions = () =>
-  useBreedsStore((state: State) => state.actions);
+export const useBreedActions = () => useBreedsStore((state) => state.actions);
 
-export const useBreedGroup = (groupAs: Breed["details"]["groupAs"]) =>
-  useBreedsStore((state: State) =>
-    state.breeds.filter((breed) => breed.details.groupAs === groupAs),
-  );
+/** All display breeds in the chosen sort order */
+export const useSortedBreeds = () => {
+  const breeds = useAllBreeds();
+  const sortBy = useSortBy();
+  const sortOrder = useSortOrder();
 
-export const useBreedVariantNames = (id: Breed["id"]) => {
-  const breeds = useBreedsStore((state: State) => state.breeds);
-
-  return useMemo(() => getBreedVariantNames(breeds, id), [breeds, id]);
-};
-
-// More granular selector for better performance
-export const useBreedById = (id: Breed["id"]) => {
-  return useBreedsStore((state: State) =>
-    state.breeds.find((breed) => breed.id === id),
+  return useMemo(
+    () => sortBreeds({ breeds, sortBy, sortOrder }),
+    [breeds, sortBy, sortOrder],
   );
 };
 
-export const useSearch = () => useBreedsStore((state: State) => state.search);
-
-export const useSelectedBreed = () => {
-  const { selectedBreed, breeds } = useBreedsStore((state: State) => state);
-
-  return useMemo(() => {
-    if (selectedBreed && breeds) {
-      return breeds.find(({ id }) => id === selectedBreed);
-    }
-
-    return undefined;
-  }, [selectedBreed, breeds]);
-};
-
-export const useSortBy = () => useBreedsStore((state: State) => state.sortBy);
-
-export const useSortOrder = () =>
-  useBreedsStore((state: State) => state.sortOrder);
-
-// Loading and error state selectors
-export const useLoading = () => useBreedsStore((state: State) => state.loading);
-
-export const useError = () => useBreedsStore((state: State) => state.error);
-
-export const useInitialized = () =>
-  useBreedsStore((state: State) => state.initialized);
-
-// Sort management hooks
-export const useResetSort = () => {
-  const resetSort = useBreedsStore((state: State) => state.actions.resetSort);
-  return resetSort;
-};
-
-// Export store for testing
 export default useBreedsStore;
