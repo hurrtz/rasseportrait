@@ -216,6 +216,7 @@
   background: var(--rp-surface-muted);
   font-size: 13px;
   font-weight: 700;
+  line-height: 16px;
 }
 
 .countIcon {
@@ -355,6 +356,11 @@
   width: 56px;
   height: 56px;
   border-radius: 12px;
+}
+
+.areaCard[data-compact] .areaPicture svg {
+  width: 24px;
+  height: 24px;
 }
 
 .areaCard[data-compact] .areaBody {
@@ -563,6 +569,11 @@
 
   .areaCard[data-compact][data-narrow] .areaPicture {
     height: 180px;
+  }
+
+  .areaCard[data-compact] .areaPicture svg {
+    width: 44px;
+    height: 44px;
   }
 
   .areaCard[data-compact] .areaBody {

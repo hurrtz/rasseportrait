@@ -2,6 +2,7 @@ import React, { useEffect, useId, useMemo, useState } from "react";
 import { Link, Navigate, useLocation, useParams } from "react-router";
 import {
   IconArrowLeft,
+  IconArrowRight,
   IconChevronRight,
   IconClock,
   IconHeadphones,
@@ -132,7 +133,7 @@ const FeaturedPlayer = ({ episode, entry, onPlay }: FeaturedProps) => {
 
   return (
     <section aria-labelledby={labelId} className={classes.featured}>
-      <span id={labelId} className={shared.eyebrow}>
+      <span id={labelId} className={`${shared.eyebrow} ${classes.featuredEyebrow}`}>
         Direkt zum Thema
       </span>
       <div className={classes.featuredRow}>
@@ -308,7 +309,7 @@ const Breeds = ({ topic }: { topic: HundewissenTopic }) => {
               {formatEpisode(breed.number)}
             </span>
           </span>
-          <IconChevronRight size={18} className={classes.arrow} aria-hidden />
+          <IconArrowRight size={18} className={classes.arrow} aria-hidden />
         </Link>
       ))}
     </aside>

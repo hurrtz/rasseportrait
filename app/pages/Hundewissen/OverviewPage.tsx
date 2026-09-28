@@ -1,6 +1,6 @@
 import React, { useId, useMemo, useState } from "react";
 import { Link, Navigate, useSearchParams } from "react-router";
-import { IconArrowRight, IconChevronRight, IconHeadphones } from "@tabler/icons-react";
+import { IconArrowRight, IconHeadphones } from "@tabler/icons-react";
 import type {
   HundewissenArea,
   HundewissenIndex,
@@ -162,7 +162,7 @@ const AreaCard = ({ area, topics, span, compact }: AreaCardProps) => {
             <IconArrowRight size={16} aria-hidden />
           </span>
         </span>
-        <IconChevronRight size={20} className={classes.compactArrow} aria-hidden />
+        <IconArrowRight size={18} className={classes.compactArrow} aria-hidden />
       </Link>
     </li>
   );

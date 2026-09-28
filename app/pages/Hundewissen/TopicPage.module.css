@@ -97,6 +97,11 @@
   background: var(--rp-surface-player);
 }
 
+/* orange text is 3.75:1 on the player surface; muted ink keeps 5.5:1 */
+.featured .featuredEyebrow {
+  color: var(--rp-text-muted);
+}
+
 .featuredRow {
   display: flex;
   align-items: center;
@@ -406,7 +411,6 @@
 }
 
 .arrow {
-  display: none;
   flex-shrink: 0;
   color: var(--rp-text-muted);
 }
@@ -629,7 +633,4 @@
     height: 56px;
   }
 
-  .arrow {
-    display: block;
-  }
 }
