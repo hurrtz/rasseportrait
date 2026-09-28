@@ -1,0 +1,1 @@
+import{a as t}from"./chunk-D4RADZKF-CA9kTsqn.js";import{z as r,a}from"./LoadingSpinner-BvokWtOM.js";const u=()=>{const s=r(),{initialize:e}=a();return t.useEffect(()=>{s==="idle"&&e()},[s,e]),s};export{u};

@@ -1,1 +1,0 @@
-import{a as o}from"./chunk-D4RADZKF-C53VzstT.js";import{u as m}from"./useAmplitude-PUPtUrhJ.js";const u=()=>{const{track:e}=m();return o.useCallback((r,t,a,i)=>e("Play Clicked",{breedId:String(r.id),breedName:r.details.public[0],placement:i,provider:a.provider,episodeNumber:t.number,timecode:t.meta.timecode}),[e])};export{u};

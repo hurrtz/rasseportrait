@@ -13,6 +13,13 @@ declare module "react-router" {
 type Params = {
   "/": {};
   "/hundewissen": {};
+  "/hundewissen/:area": {
+    "area": string;
+  };
+  "/hundewissen/:area/:topic": {
+    "area": string;
+    "topic": string;
+  };
   "/impressum": {};
   "/statistiken": {};
   "/rasse/:slug": {
