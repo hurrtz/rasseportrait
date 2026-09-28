@@ -1,4 +1,4 @@
-import { readFileSync } from "fs";
+import { existsSync, readFileSync } from "fs";
 import { join } from "path";
 import type { Breed, Podcast } from "types/breed";
 import {
@@ -186,6 +186,24 @@ describe("toDisplayBreeds with the real dataset", () => {
     const singles = raw.filter((b) => !b.details.groupAs).length;
 
     expect(display).toHaveLength(singles + groups.size);
+  });
+
+  it("has both illustration files for every breed and variant", () => {
+    const missing = display
+      .flatMap((b) => getIllustrations(b))
+      .flatMap(({ thumbnail, full }) => [thumbnail, full])
+      .filter(
+        (url) =>
+          !existsSync(
+            join(
+              __dirname,
+              "../../../public",
+              url.replace(/^\/rasseportrait\//, ""),
+            ),
+          ),
+      );
+
+    expect(missing).toEqual([]);
   });
 
   it("gives every display breed a unique slug and a 4-character id", () => {

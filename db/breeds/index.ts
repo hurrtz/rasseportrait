@@ -57,6 +57,7 @@ import EnglishCockerSpaniel from "./5";
 import EnglishSetter from "./2";
 import EnglishSpringerSpaniel from "./125";
 import EntlebucherMountainDog from "./47";
+import ErdelyiKopo from "./241";
 import Eurasier from "./291";
 import FlatCoatedRetriever from "./121";
 import FoxTerrierSmooth from "./12";
@@ -120,7 +121,7 @@ import Otterhound from "./294";
 import Papillon from "./77";
 import ParsonRussellTerrier from "./339";
 import PatterdaleTerrier from "./special_11";
-import Pekingese from './207'
+import Pekingese from "./207";
 import PetitBrabancon from "./82";
 import PodencoIbicenco from "./89";
 import PodencoPortugues from "./94";
@@ -168,7 +169,7 @@ import Weimaraner from "./99";
 import Westfalenterrier from "./special_5";
 import WestHighlandWhiteTerrier from "./85";
 import Wetterhoun from "./221";
-import Xoloitzcuintle from './234'
+import Xoloitzcuintle from "./234";
 import YorkshireTerrier from "./86";
 
 export default {
@@ -231,6 +232,7 @@ export default {
   EnglishSetter,
   EnglishSpringerSpaniel,
   EntlebucherMountainDog,
+  ErdelyiKopo,
   Eurasier,
   FlatCoatedRetriever,
   FoxTerrierSmooth,
