@@ -11,6 +11,7 @@
 .imageLink {
   display: block;
   overflow: hidden;
+  color: inherit;
   border-radius: 16px;
 }
 

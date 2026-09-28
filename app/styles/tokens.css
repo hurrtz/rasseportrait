@@ -45,7 +45,10 @@ body {
   font-family: var(--rp-font-body);
 }
 
-:focus-visible {
+:focus-visible,
+/* theme focusRing "never" removes Mantine's own ring with a stronger
+   selector; draw ours on Mantine controls (close buttons, menu items) too */
+.mantine-focus-never:focus-visible {
   outline: 2px solid var(--rp-accent-text);
   outline-offset: 2px;
 }

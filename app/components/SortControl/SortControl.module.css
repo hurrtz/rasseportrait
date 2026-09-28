@@ -3,6 +3,11 @@
 }
 
 .segmented {
+  /* Mantine paints the indicator (and, before measuring, the active label's
+     ::before) with --sc-color; keep both ink instead of white */
+  --sc-color: var(--rp-text);
+  --sc-label-color: var(--rp-bg);
+  --sc-shadow: none;
   display: none;
   padding: 4px;
   border-radius: var(--rp-radius-pill);

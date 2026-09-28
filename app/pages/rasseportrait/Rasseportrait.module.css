@@ -1,8 +1,10 @@
+/* padding, not margin: a top margin would collapse through <main> and
+   shift the whole page when the hero replaces the loader */
 .heroWrap {
   box-sizing: border-box;
   max-width: 1440px;
-  margin: 4px auto 0;
-  padding: 0 var(--rp-gutter);
+  margin: 0 auto;
+  padding: 4px var(--rp-gutter) 0;
 }
 
 .section {
@@ -51,8 +53,7 @@
 
 @media (min-width: 62em) {
   .heroWrap {
-    margin-top: 12px;
-    padding: 0 var(--rp-gutter-desktop);
+    padding: 12px var(--rp-gutter-desktop) 0;
   }
 
   .section {
