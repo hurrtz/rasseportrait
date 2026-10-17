@@ -39,27 +39,13 @@ const sevenAreas = () => {
 describe("Hundewissen overview", () => {
   beforeEach(() => mockTrack.mockClear());
 
-  it("introduces the page and the state of the analysis", () => {
+  it("introduces the page", () => {
     renderOverview();
 
     expect(screen.getByRole("heading", { level: 1, name: "Hundewissen" })).toBeInTheDocument();
     expect(
       screen.getByText(/Alles, was im Podcast neben den Rasseportraits besprochen wird/),
     ).toBeInTheDocument();
-
-    const status = screen.getByRole("region", { name: "Stand der Auswertung" });
-    expect(status).toHaveTextContent("8 von 260 Folgen");
-    expect(status).toHaveTextContent(
-      "4 Themen in 2 Bereichen. Die Sammlung wächst mit jeder ausgewerteten Folge.",
-    );
-  });
-
-  it("says when every episode has been analysed", () => {
-    renderOverview(makeIndex({ indexedEpisodes: 260 }));
-
-    const status = screen.getByRole("region", { name: "Alle Folgen ausgewertet" });
-    expect(status).toHaveTextContent("260 von 260 Folgen");
-    expect(status).not.toHaveTextContent("Die Sammlung wächst");
   });
 
   it("offers every area as a chip", () => {

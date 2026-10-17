@@ -16,7 +16,6 @@ import { episodes, topics as topicsLabel } from "./labels";
 import { bySize, useTopicSearch, useTrackTopicSearch } from "./search";
 import TopicRow from "./TopicRow";
 import { useEnsureHundewissen, type TopicLinkState } from "./useHundewissen";
-import shared from "./shared.module.css";
 import classes from "./OverviewPage.module.css";
 
 const INTRO =
@@ -40,32 +39,6 @@ export const areaSpans = (count: number) => {
     wide = !wide;
   }
   return spans;
-};
-
-const StatusCard = ({ index, topicCount }: { index: HundewissenIndex; topicCount: number }) => {
-  const titleId = useId();
-  const done = index.indexedEpisodes >= index.totalEpisodes;
-  const share = Math.max(3, (index.indexedEpisodes / index.totalEpisodes) * 100);
-
-  return (
-    <section aria-labelledby={titleId} className={classes.status}>
-      <span id={titleId} className={shared.eyebrow}>
-        {done ? "Alle Folgen ausgewertet" : "Stand der Auswertung"}
-      </span>
-      <div className={classes.statusValue}>
-        {index.indexedEpisodes}
-        <span className={classes.statusTotal}> von {index.totalEpisodes} Folgen</span>
-      </div>
-      <div className={classes.bar} aria-hidden>
-        <div className={classes.barFill} style={{ width: `${Math.min(100, share)}%` }} />
-      </div>
-      <span className={classes.statusText}>
-        {topicsLabel(topicCount)} in {index.areas.length}{" "}
-        {index.areas.length === 1 ? "Bereich" : "Bereichen"}.
-        {!done && " Die Sammlung wächst mit jeder ausgewerteten Folge."}
-      </span>
-    </section>
-  );
 };
 
 const AreaChips = ({ areas }: { areas: HundewissenArea[] }) => (
@@ -259,11 +232,8 @@ const Overview = ({ index }: { index: HundewissenIndex }) => {
   return (
     <div className={classes.page}>
       <section className={classes.head}>
-        <div className={classes.intro}>
-          <h1 className={classes.title}>Hundewissen</h1>
-          <p className={classes.lead}>{INTRO}</p>
-        </div>
-        <StatusCard index={index} topicCount={index.topics.length} />
+        <h1 className={classes.title}>Hundewissen</h1>
+        <p className={classes.lead}>{INTRO}</p>
       </section>
 
       <div className={classes.tools}>

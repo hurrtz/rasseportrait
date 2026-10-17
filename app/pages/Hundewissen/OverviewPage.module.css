@@ -13,12 +13,6 @@
   padding: 12px var(--rp-gutter) 14px;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
 .title {
   margin: 0;
   font-family: var(--rp-font-display);
@@ -32,51 +26,6 @@
   max-width: 620px;
   margin: 0;
   font-size: 15px;
-  line-height: 1.45;
-  color: var(--rp-text-muted);
-}
-
-/* ---------- status card ---------- */
-
-.status {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 20px;
-  border: 1px solid var(--rp-line);
-  border-radius: var(--rp-radius-card);
-  background: var(--rp-surface);
-}
-
-.statusValue {
-  font-family: var(--rp-font-display);
-  font-size: 40px;
-  font-weight: 800;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-}
-
-.statusTotal {
-  font-size: 18px;
-  color: var(--rp-text-muted);
-  letter-spacing: -0.01em;
-}
-
-.bar {
-  height: 10px;
-  overflow: hidden;
-  border-radius: var(--rp-radius-pill);
-  background: var(--rp-surface-muted);
-}
-
-.barFill {
-  height: 100%;
-  border-radius: var(--rp-radius-pill);
-  background: var(--rp-accent);
-}
-
-.statusText {
-  font-size: 14px;
   line-height: 1.45;
   color: var(--rp-text-muted);
 }
@@ -444,15 +393,8 @@
 
 @media (min-width: 62em) {
   .head {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 420px;
-    align-items: end;
-    gap: 48px;
-    padding: 28px var(--rp-gutter-desktop) 32px;
-  }
-
-  .intro {
     gap: 16px;
+    padding: 28px var(--rp-gutter-desktop) 32px;
   }
 
   .title {
@@ -463,18 +405,6 @@
   .lead {
     font-size: 19px;
     line-height: 1.5;
-  }
-
-  .status {
-    padding: 26px;
-  }
-
-  .statusValue {
-    font-size: 52px;
-  }
-
-  .statusTotal {
-    font-size: 24px;
   }
 
   .tools {
