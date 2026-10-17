@@ -93,9 +93,11 @@ const HeroPortrait = ({ breed }: Props) => {
                   Portrait ab {timecode} anhören
                 </span>
                 <span className={classes.playHint}>
-                  {listen.provider === "rtl"
-                    ? "Öffnet RTL+"
-                    : "Öffnet Spotify an der richtigen Stelle"}
+                  {listen.provider === "spotify"
+                    ? "Öffnet Spotify an der richtigen Stelle"
+                    : listen.provider === "rtl"
+                      ? "Öffnet RTL+"
+                      : "Öffnet den Podcast"}
                 </span>
               </span>
               {guess && (
