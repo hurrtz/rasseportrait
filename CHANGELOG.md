@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.18.3](https://github.com/hurrtz/rasseportrait/compare/v3.18.2...v3.18.3) (2026-10-17)
+
+
+### Bug Fixes
+
+* remove guessing result from portrait listening bar ([6d5e66b](https://github.com/hurrtz/rasseportrait/commit/6d5e66b5d930286512b1089cf8a5798fdd840164))
+
 ### [3.18.2](https://github.com/hurrtz/rasseportrait/compare/v3.18.1...v3.18.2) (2026-10-17)
 
 
