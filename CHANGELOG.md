@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.18.1](https://github.com/hurrtz/rasseportrait/compare/v3.18.0...v3.18.1) (2026-10-17)
+
+
+### Features
+
+* add Kai portrait from episode 17 ([7887530](https://github.com/hurrtz/rasseportrait/commit/788753019d1b27f398d75f4445b91959d0f48870))
+* index Hundewissen topics from episode 17 ([e74a81d](https://github.com/hurrtz/rasseportrait/commit/e74a81d85c47aed0d82dae00ced6ba500ece2656))
+
+
+### Bug Fixes
+
+* remove Hundewissen analysis status card ([ada7107](https://github.com/hurrtz/rasseportrait/commit/ada71070b57240b44b38db3ed58fd0830fc4cbdc))
+
 ## [3.18.0](https://github.com/hurrtz/rasseportrait/compare/v3.17.0...v3.18.0) (2026-09-28)
 
 
