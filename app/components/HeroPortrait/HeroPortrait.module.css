@@ -181,18 +181,6 @@
     font-size: 14px;
     color: var(--rp-text-muted);
   }
-
-  .guess {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
-    white-space: nowrap;
-  }
-
-  .guess svg {
-    color: var(--rp-accent-text);
-  }
 }
 
 @media (min-width: 80em) {

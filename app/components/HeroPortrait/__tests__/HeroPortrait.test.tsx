@@ -90,26 +90,26 @@ describe("HeroPortrait", () => {
     expect(screen.getByText("Öffnet RTL+")).toBeInTheDocument();
   });
 
-  it("tells whether the host guessed the breed", () => {
+  it("omits the guessing result from the listening bar", () => {
     renderHero();
 
-    expect(screen.getByText("Martin lag richtig")).toBeInTheDocument();
+    expect(screen.queryByText(/lag (richtig|daneben)/)).toBeNull();
   });
 
-  it("reports a wrong guess by Katharina", () => {
+  it("omits a wrong guess from the listening bar", () => {
     renderHero({
       podcast: [
         makePodcast({
           meta: {
             airDate: "2026-06-04",
-            guessedBy: "ka",
+            guessedBy: "mr",
             isGuessedCorrectly: false,
           } as never,
         }),
       ],
     });
 
-    expect(screen.getByText("Katharina lag daneben")).toBeInTheDocument();
+    expect(screen.queryByText("Martin lag daneben")).toBeNull();
   });
 
   it("leaves out guess and FCI when they do not apply", () => {

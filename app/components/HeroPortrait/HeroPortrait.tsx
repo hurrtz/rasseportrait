@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
-import { IconCheck, IconPlayerPlayFilled, IconX } from "@tabler/icons-react";
-import type { Breed, Podcast } from "types/breed";
+import { IconPlayerPlayFilled } from "@tabler/icons-react";
+import type { Breed } from "types/breed";
 import { PlayButton } from "~/components/PlayButton";
 import { useTrackPlay } from "~/hooks/useTrackPlay";
 import {
@@ -12,17 +12,6 @@ import {
 } from "~/utils/breed";
 import { formatDateLong, formatEpisode, formatTimecode } from "~/utils/format";
 import classes from "./HeroPortrait.module.css";
-
-const HOSTS = { mr: "Martin", ka: "Katharina" } as const;
-
-/** "Martin lag richtig" / "Katharina lag daneben", only for guessable breeds */
-const getGuess = ({ meta }: Podcast) => {
-  if (!meta.isGuessable || !meta.guessedBy) return undefined;
-  const host = HOSTS[meta.guessedBy];
-  return meta.isGuessedCorrectly
-    ? { correct: true, text: `${host} lag richtig` }
-    : { correct: false, text: `${host} lag daneben` };
-};
 
 interface Props {
   breed: Breed;
@@ -40,7 +29,6 @@ const HeroPortrait = ({ breed }: Props) => {
   const timecode = formatTimecode(portrait.meta.timecode);
   const fci = breed.classification.fci;
   const group = fci && fciGroupLabel(fci.group);
-  const guess = getGuess(portrait);
   const episode = formatEpisode(portrait.number);
   const onPlay = () => listen && trackPlay(breed, portrait, listen, "hero");
 
@@ -100,16 +88,6 @@ const HeroPortrait = ({ breed }: Props) => {
                       : "Öffnet den Podcast"}
                 </span>
               </span>
-              {guess && (
-                <span className={classes.guess}>
-                  {guess.correct ? (
-                    <IconCheck size={18} aria-hidden />
-                  ) : (
-                    <IconX size={18} aria-hidden />
-                  )}
-                  {guess.text}
-                </span>
-              )}
             </div>
 
             <a
