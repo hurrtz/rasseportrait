@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.18.2](https://github.com/hurrtz/rasseportrait/compare/v3.18.1...v3.18.2) (2026-10-17)
+
+
+### Bug Fixes
+
+* label direct podcast audio links accurately ([51a4a5f](https://github.com/hurrtz/rasseportrait/commit/51a4a5fe509c16102641540e660b0a0f1a468cfe))
+
 ### [3.18.1](https://github.com/hurrtz/rasseportrait/compare/v3.18.0...v3.18.1) (2026-10-17)
 
 
