@@ -1,7 +1,7 @@
 {
- "generated": "2026-09-29",
- "indexedEpisodes": 260,
- "totalEpisodes": 260,
+ "generated": "2026-10-17",
+ "indexedEpisodes": 261,
+ "totalEpisodes": 261,
  "episodes": {
   "rtl-240": {
    "feed": "rtl",
@@ -7210,6 +7210,25 @@
     "present": false,
     "breed": "",
     "start": ""
+   }
+  },
+  "mina-017": {
+   "feed": "mina",
+   "number": 17,
+   "title": "OnlyFans für Murmeltiere",
+   "published": "2026-10-15",
+   "duration": 3504,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1781-tierisch-menschlich/256558-new-episode.mp3?v=3&awCollectionId=julephosting_698de7bf5e693&awEpisodeId=256558",
+   "breeds": [
+    {
+     "name": "Kai",
+     "start": "0:38:35"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Kai",
+    "start": "0:38:35"
    }
   },
   "mina-016": {
@@ -27410,6 +27429,106 @@
    "episodeCount": 8
   },
   {
+   "id": "tierschutzhund-adoption",
+   "label": "Adoption eines Tierschutzhundes",
+   "category": "Tierschutz & Ethik",
+   "description": "Wie man über Tierheim, Verein oder Pflegestelle einen Hund aus dem Tierschutz kennenlernt, adoptiert und bei sich aufnimmt.",
+   "entries": [
+    {
+     "label": "Adoption eines Tierschutzhundes",
+     "episode": "rtl-232",
+     "number": 232,
+     "title": "Willkommen, Trudi!",
+     "start": "0:01:21",
+     "end": "0:05:25",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Katharina erzählt, wie die rumänische Pflegehündin Capri über einen Verein und eine Pflegestelle bei ihr einzog und welche Rolle die Pflegestelle in der Eingewöhnung spielte."
+     ]
+    },
+    {
+     "label": "Tiere aus dem Tierschutz aufnehmen",
+     "episode": "rtl-221",
+     "number": 221,
+     "title": "Gewissensgründe",
+     "start": "1:03:52",
+     "end": "1:04:38",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Annika Hansen erzählt von Katzen und einem Hund aus dem Tierschutz, geretteten Hühnern und Schafen, die sie vor der Schlachtung bewahrt hat."
+     ]
+    },
+    {
+     "label": "Betreuung bei der Adoption durch Verein und Pflegestelle",
+     "episode": "rtl-211",
+     "number": 211,
+     "title": "Reisebericht Tierschutz Rumänien",
+     "start": "0:26:02",
+     "end": "0:27:00",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Erläutert wird, dass Pflegestellen und Vereine den Hund vorab kennenlernen, die Lebenssituation der Interessenten prüfen und so eine intensive Begleitung der Adoption bieten."
+     ]
+    },
+    {
+     "label": "Über Gassigehen zum Tierheimhund",
+     "episode": "rtl-194",
+     "number": 194,
+     "title": "Akani, Igelnot & ein Gerichtsurteil",
+     "start": "0:29:04",
+     "end": "0:30:17",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Eine Hörerin berichtet, wie sie durch ehrenamtliches Gassigehen im Tierheim eine junge, dem Vorbesitzer entzogene Chow-Chow-Hündin kennenlernte und nun mit Probezeit adoptieren möchte."
+     ]
+    },
+    {
+     "label": "Hund aus dem Tierschutz statt Welpe",
+     "episode": "rtl-summer-b08",
+     "number": "Summer Edition #8",
+     "title": "Die schlauesten Tiere der Welt",
+     "start": "0:03:36",
+     "end": "0:04:56",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Eine Hörerin berichtet, dass sie sich nach langer Suche für einen Tierschutzhund statt eines Welpen entschieden hat, was zu Überlegungen über Wartezeiten bei seriösen Züchtern und die Alternative Tierheim führt."
+     ]
+    },
+    {
+     "label": "Adoptieren statt Welpenkauf",
+     "episode": "rtl-097",
+     "number": 97,
+     "title": "Blue Monday, warme Omas & Karnevalspferde",
+     "start": "0:16:36",
+     "end": "0:17:23",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Eine Familie entschied sich statt eines geplanten Bullmastiff-Welpen für die Adoption der Tierheimhündin Ivy."
+     ]
+    },
+    {
+     "label": "Ein Jahr nach Trudis Adoption",
+     "episode": "mina-017",
+     "number": 17,
+     "title": "OnlyFans für Murmeltiere",
+     "start": "0:48:44",
+     "end": "0:50:27",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Zum ersten Jahrestag von Trudis Einzug blickt Katharina auf ihre Entwicklung und das zunächst zögerliche Kennenlernen zurück."
+     ]
+    }
+   ],
+   "episodeCount": 7
+  },
+  {
    "id": "auslastung",
    "label": "Auslastung und Beschäftigung",
    "category": "Haltung & Pflege",
@@ -28864,91 +28983,121 @@
    "episodeCount": 7
   },
   {
-   "id": "tierschutzhund-adoption",
-   "label": "Adoption eines Tierschutzhundes",
-   "category": "Tierschutz & Ethik",
-   "description": "Wie man über Tierheim, Verein oder Pflegestelle einen Hund aus dem Tierschutz kennenlernt, adoptiert und bei sich aufnimmt.",
+   "id": "trauer-um-den-hund",
+   "label": "Trauer um den Hund",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Abschied und Trauer nach dem Tod des eigenen Hundes und wie Familien, auch Kinder, damit umgehen können.",
    "entries": [
     {
-     "label": "Adoption eines Tierschutzhundes",
-     "episode": "rtl-232",
-     "number": 232,
-     "title": "Willkommen, Trudi!",
-     "start": "0:01:21",
-     "end": "0:05:25",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Katharina erzählt, wie die rumänische Pflegehündin Capri über einen Verein und eine Pflegestelle bei ihr einzog und welche Rolle die Pflegestelle in der Eingewöhnung spielte."
-     ]
-    },
-    {
-     "label": "Tiere aus dem Tierschutz aufnehmen",
-     "episode": "rtl-221",
-     "number": 221,
-     "title": "Gewissensgründe",
-     "start": "1:03:52",
-     "end": "1:04:38",
-     "weight": "side",
-     "kind": "anecdote",
-     "summaries": [
-      "Annika Hansen erzählt von Katzen und einem Hund aus dem Tierschutz, geretteten Hühnern und Schafen, die sie vor der Schlachtung bewahrt hat."
-     ]
-    },
-    {
-     "label": "Betreuung bei der Adoption durch Verein und Pflegestelle",
-     "episode": "rtl-211",
-     "number": 211,
-     "title": "Reisebericht Tierschutz Rumänien",
-     "start": "0:26:02",
-     "end": "0:27:00",
+     "label": "Trauer nach dem Tod des Hundes",
+     "episode": "rtl-234",
+     "number": 234,
+     "title": "Martins Abschied von der Bühne",
+     "start": "0:18:10",
+     "end": "0:20:25",
      "weight": "main",
      "kind": "discussion",
      "summaries": [
-      "Erläutert wird, dass Pflegestellen und Vereine den Hund vorab kennenlernen, die Lebenssituation der Interessenten prüfen und so eine intensive Begleitung der Adoption bieten."
+      "Martin und Katharina sprechen über das Verwechseln von Namen nach dem Tod eines Hundes, anhaltende Trauer und wie schwer es fällt, einen fremden Hund im eigenen Zuhause zuzulassen."
      ]
     },
     {
-     "label": "Über Gassigehen zum Tierheimhund",
-     "episode": "rtl-194",
-     "number": 194,
-     "title": "Akani, Igelnot & ein Gerichtsurteil",
-     "start": "0:29:04",
-     "end": "0:30:17",
+     "label": "Vorbereitung auf den Abschied und praktische Abläufe",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:13:04",
+     "end": "0:22:56",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Es wird empfohlen, Fragen wie Bestattung, Kosten und Abläufe im Vorfeld zu klären, da Trauer körperlich stark belastet und Handlungsfähigkeit einschränkt.",
+      "Martin Rütter und Katharina Adick diskutieren, wie unterschiedlich Menschen trauern und dass gut gemeinte Beileidsbekundungen von Fremden oft unpassend sind.",
+      "Nach der ersten Phase mischt sich Dankbarkeit in die Trauer; Rütter reflektiert über Emmas Vorgeschichte als problematischer Hund und ihre mögliche Tierheimkarriere."
+     ]
+    },
+    {
+     "label": "Trauer nach dem Tod des eigenen Hundes",
+     "episode": "rtl-224",
+     "number": 224,
+     "title": "Abschied von Emma",
+     "start": "1:10:12",
+     "end": "1:16:16",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter spricht über den fehlenden Vorlauf zum Abschied, den Trost durch die Tierärztin, die öffentliche Anteilnahme und den Umgang mit Trauer in der Familie."
+     ]
+    },
+    {
+     "label": "Umgang mit dem bevorstehenden Verlust",
+     "episode": "rtl-127",
+     "number": 127,
+     "title": "Podcast live II: Achterbahn der Feelings",
+     "start": "0:53:31",
+     "end": "0:55:35",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Es wird darüber gesprochen, die letzten Lebensjahre mit dem Hund nicht durch Angst vor dem Abschied zu verlieren, sondern die gemeinsame Zeit bewusst zu genießen."
+     ]
+    },
+    {
+     "label": "Trauer um Haustiere und Vergleich mit menschlichem Verlust",
+     "episode": "rtl-023",
+     "number": 23,
+     "title": "Skandale im Reitsport",
+     "start": "0:01:38",
+     "end": "0:14:46",
      "weight": "main",
      "kind": "listener_question",
      "summaries": [
-      "Eine Hörerin berichtet, wie sie durch ehrenamtliches Gassigehen im Tierheim eine junge, dem Vorbesitzer entzogene Chow-Chow-Hündin kennenlernte und nun mit Probezeit adoptieren möchte."
+      "Nach der Folge über das Sterben von Haustieren diskutieren die beiden eine Hörernachricht, die den Vergleich von Hundetod und Kindstod zurückweist, und ordnen ein, wie Trauer um Tiere gemeint war.",
+      "Hörerreaktionen zur Sterbefolge werden besprochen, darunter die Frage, ob Kinder beim Einschläfern bzw. Abschied vom Familienhund aktiv dabei sein sollten."
      ]
     },
     {
-     "label": "Hund aus dem Tierschutz statt Welpe",
-     "episode": "rtl-summer-b08",
-     "number": "Summer Edition #8",
-     "title": "Die schlauesten Tiere der Welt",
-     "start": "0:03:36",
-     "end": "0:04:56",
+     "label": "Abschied vom Hund und Umgang mit Trauer",
+     "episode": "rtl-022",
+     "number": 22,
+     "title": "Abschied vom geliebten Hund",
+     "start": "0:00:18",
+     "end": "0:05:10",
      "weight": "main",
-     "kind": "listener_question",
+     "kind": "discussion",
      "summaries": [
-      "Eine Hörerin berichtet, dass sie sich nach langer Suche für einen Tierschutzhund statt eines Welpen entschieden hat, was zu Überlegungen über Wartezeiten bei seriösen Züchtern und die Alternative Tierheim führt."
+      "Einstieg ins Thema Abschied: Eine Hörerin schildert die plötzliche Erkrankung ihres Hundes, und Martin Rütter rät, dem Hund bis zum Ende möglichst Normalität und Ruhe zu geben.",
+      "Rütter beschreibt, wie sich der Verlust seiner Hündin Mina erst Wochen später mit voller Wucht zeigte und wie er den Tod zunächst nicht öffentlich machen wollte."
      ]
     },
     {
-     "label": "Adoptieren statt Welpenkauf",
-     "episode": "rtl-097",
-     "number": 97,
-     "title": "Blue Monday, warme Omas & Karnevalspferde",
-     "start": "0:16:36",
-     "end": "0:17:23",
+     "label": "Dauer der Trauer und wann Hilfe sinnvoll ist",
+     "episode": "rtl-022",
+     "number": 22,
+     "title": "Abschied vom geliebten Hund",
+     "start": "0:40:11",
+     "end": "0:42:07",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Es wird betont, dass Trauer um ein Tier jahrelang anhalten darf und erst dann professionelle Hilfe nötig ist, wenn der Alltag dauerhaft nicht mehr funktioniert."
+     ]
+    },
+    {
+     "label": "Einen neuen Hund trotz Trauer kennenlernen",
+     "episode": "mina-017",
+     "number": 17,
+     "title": "OnlyFans für Murmeltiere",
+     "start": "0:49:51",
+     "end": "0:50:06",
      "weight": "side",
      "kind": "anecdote",
      "summaries": [
-      "Eine Familie entschied sich statt eines geplanten Bullmastiff-Welpen für die Adoption der Tierheimhündin Ivy."
+      "Die Trauer um ihren vorherigen Hund erschwerte Katharina anfangs das Einlassen auf Trudi."
      ]
     }
    ],
-   "episodeCount": 6
+   "episodeCount": 7
   },
   {
    "id": "tierheimarbeit",
@@ -31403,110 +31552,6 @@
    "episodeCount": 6
   },
   {
-   "id": "trauer-um-den-hund",
-   "label": "Trauer um den Hund",
-   "category": "Mensch-Hund-Beziehung",
-   "description": "Abschied und Trauer nach dem Tod des eigenen Hundes und wie Familien, auch Kinder, damit umgehen können.",
-   "entries": [
-    {
-     "label": "Trauer nach dem Tod des Hundes",
-     "episode": "rtl-234",
-     "number": 234,
-     "title": "Martins Abschied von der Bühne",
-     "start": "0:18:10",
-     "end": "0:20:25",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Martin und Katharina sprechen über das Verwechseln von Namen nach dem Tod eines Hundes, anhaltende Trauer und wie schwer es fällt, einen fremden Hund im eigenen Zuhause zuzulassen."
-     ]
-    },
-    {
-     "label": "Vorbereitung auf den Abschied und praktische Abläufe",
-     "episode": "rtl-225",
-     "number": 225,
-     "title": "Abschied von Alma",
-     "start": "0:13:04",
-     "end": "0:22:56",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Es wird empfohlen, Fragen wie Bestattung, Kosten und Abläufe im Vorfeld zu klären, da Trauer körperlich stark belastet und Handlungsfähigkeit einschränkt.",
-      "Martin Rütter und Katharina Adick diskutieren, wie unterschiedlich Menschen trauern und dass gut gemeinte Beileidsbekundungen von Fremden oft unpassend sind.",
-      "Nach der ersten Phase mischt sich Dankbarkeit in die Trauer; Rütter reflektiert über Emmas Vorgeschichte als problematischer Hund und ihre mögliche Tierheimkarriere."
-     ]
-    },
-    {
-     "label": "Trauer nach dem Tod des eigenen Hundes",
-     "episode": "rtl-224",
-     "number": 224,
-     "title": "Abschied von Emma",
-     "start": "1:10:12",
-     "end": "1:16:16",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Rütter spricht über den fehlenden Vorlauf zum Abschied, den Trost durch die Tierärztin, die öffentliche Anteilnahme und den Umgang mit Trauer in der Familie."
-     ]
-    },
-    {
-     "label": "Umgang mit dem bevorstehenden Verlust",
-     "episode": "rtl-127",
-     "number": 127,
-     "title": "Podcast live II: Achterbahn der Feelings",
-     "start": "0:53:31",
-     "end": "0:55:35",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Es wird darüber gesprochen, die letzten Lebensjahre mit dem Hund nicht durch Angst vor dem Abschied zu verlieren, sondern die gemeinsame Zeit bewusst zu genießen."
-     ]
-    },
-    {
-     "label": "Trauer um Haustiere und Vergleich mit menschlichem Verlust",
-     "episode": "rtl-023",
-     "number": 23,
-     "title": "Skandale im Reitsport",
-     "start": "0:01:38",
-     "end": "0:14:46",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Nach der Folge über das Sterben von Haustieren diskutieren die beiden eine Hörernachricht, die den Vergleich von Hundetod und Kindstod zurückweist, und ordnen ein, wie Trauer um Tiere gemeint war.",
-      "Hörerreaktionen zur Sterbefolge werden besprochen, darunter die Frage, ob Kinder beim Einschläfern bzw. Abschied vom Familienhund aktiv dabei sein sollten."
-     ]
-    },
-    {
-     "label": "Abschied vom Hund und Umgang mit Trauer",
-     "episode": "rtl-022",
-     "number": 22,
-     "title": "Abschied vom geliebten Hund",
-     "start": "0:00:18",
-     "end": "0:05:10",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Einstieg ins Thema Abschied: Eine Hörerin schildert die plötzliche Erkrankung ihres Hundes, und Martin Rütter rät, dem Hund bis zum Ende möglichst Normalität und Ruhe zu geben.",
-      "Rütter beschreibt, wie sich der Verlust seiner Hündin Mina erst Wochen später mit voller Wucht zeigte und wie er den Tod zunächst nicht öffentlich machen wollte."
-     ]
-    },
-    {
-     "label": "Dauer der Trauer und wann Hilfe sinnvoll ist",
-     "episode": "rtl-022",
-     "number": 22,
-     "title": "Abschied vom geliebten Hund",
-     "start": "0:40:11",
-     "end": "0:42:07",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Es wird betont, dass Trauer um ein Tier jahrelang anhalten darf und erst dann professionelle Hilfe nötig ist, wenn der Alltag dauerhaft nicht mehr funktioniert."
-     ]
-    }
-   ],
-   "episodeCount": 6
-  },
-  {
    "id": "welpenerziehung",
    "label": "Welpenerziehung",
    "category": "Erziehung & Training",
@@ -32958,6 +33003,95 @@
      "kind": "discussion",
      "summaries": [
       "Martin erklärt, dass seine Hündin Emma Menschen gegenüber entspannt, gegenüber Hunden am Futter aber kompromisslos aggressiv reagiert, und Katharina berichtet von selektiver Futteraggression bei ihrer Hündin."
+     ]
+    }
+   ],
+   "episodeCount": 5
+  },
+  {
+   "id": "schweinehaltung",
+   "label": "Schweinehaltung",
+   "category": "Andere Tiere",
+   "description": "Artgerechte Haltung von Schweinen, gesetzliche Vorgaben für Mastschweine und Schweine im Tierheim.",
+   "entries": [
+    {
+     "label": "Hausschwein im Tierheim: Haltung und Verhalten",
+     "episode": "rtl-194",
+     "number": 194,
+     "title": "Akani, Igelnot & ein Gerichtsurteil",
+     "start": "0:05:21",
+     "end": "0:07:10",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Vorgestellt wird der Tierheimeber Norbert, dessen Stimmungswechsel vermutlich auf Langeweile und Unterforderung zurückgehen, und es wird erläutert, was artgerechte Schweinehaltung mit Suhlen, Graben und Beschäftigung bedeutet."
+     ]
+    },
+    {
+     "label": "Platzangebot und Bedingungen in der Schweinemast",
+     "episode": "rtl-143",
+     "number": 143,
+     "title": "Tierleid in der Nutztierhaltung - warum tut sich nichts?",
+     "start": "0:05:58",
+     "end": "0:09:15",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Konkrete Vorgaben werden erläutert: 0,75 Quadratmeter für ein ausgewachsenes Mastschwein von über 110 Kilo, bei Tierwohl-Label 0,95 Quadratmeter plus ein Beschäftigungsobjekt wie eine Eisenkette."
+     ]
+    },
+    {
+     "label": "Konventionelle Schweinehaltung und Tierwohl-Siegel",
+     "episode": "rtl-040",
+     "number": 40,
+     "title": "Die vergessenen Hühner",
+     "start": "0:05:48",
+     "end": "0:11:41",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Schilderung eines Ferkelzuchtbetriebs mit Kastenständen, minimalem Platzangebot, unerreichbarem Stroh und einer Eisenkette als angebliche Beschäftigung – und Kritik am Tierwohl-Siegel.",
+      "Gegenbild vom Lebenshof: Schweine brauchen Wühlen, Suhlen, Kauen, Sozialkontakt und Bewegungsfreiheit."
+     ]
+    },
+    {
+     "label": "Kastenstände und Agrarpolitik",
+     "episode": "rtl-011",
+     "number": 11,
+     "title": "Abhaken & Aufräumen",
+     "start": "0:53:07",
+     "end": "0:57:42",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Rückblick auf den öffentlichen Streit mit der Landwirtschaftsministerin über die Kastenstandhaltung von Sauen, bei der lediglich zehn Zentimeter mehr Platz durchgesetzt wurden.",
+      "Bericht vom Treffen mit einem Schweinehalter, der Sachzwänge, Preisdruck und gesellschaftliche Erwartungen schildert und einräumt, mit 300 gut gehaltenen Tieren ähnlich viel verdienen zu können wie mit 3.500."
+     ]
+    },
+    {
+     "label": "Haltungsbedingungen von Sauen",
+     "episode": "rtl-011",
+     "number": 11,
+     "title": "Abhaken & Aufräumen",
+     "start": "1:00:45",
+     "end": "1:01:35",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Beschrieben werden ausrutschende, überschwere Muttersauen auf Plastikgittern und Mastschweine auf Betonspalten ohne Möglichkeit, Individualdistanz zu halten."
+     ]
+    },
+    {
+     "label": "Platzangebot für Mastschweine",
+     "episode": "mina-017",
+     "number": 17,
+     "title": "OnlyFans für Murmeltiere",
+     "start": "0:24:32",
+     "end": "0:24:59",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Martin veranschaulicht Passanten anhand eines präparierten Schweins das geringe Platzangebot in der Schweinemast."
      ]
     }
    ],
@@ -36702,6 +36836,93 @@
    "episodeCount": 4
   },
   {
+   "id": "pflegestelle",
+   "label": "Pflegestellen",
+   "category": "Tierschutz & Ethik",
+   "description": "Wie private Pflegestellen Tierschutzhunde aufnehmen, auf ein neues Zuhause vorbereiten und die Vermittlung unterstützen.",
+   "entries": [
+    {
+     "label": "Pflegestellen im Tierschutz",
+     "episode": "rtl-227",
+     "number": 227,
+     "title": "Borstenwurm & Reizangel",
+     "start": "0:14:39",
+     "end": "0:16:22",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Katharina erzählt von einer Pflegehündin aus dem Auslandstierschutz und beschreibt, welche Verwandlung ein Hund auf einer Pflegestelle durchlaufen kann."
+     ]
+    },
+    {
+     "label": "Ehrenamt Pflegestelle",
+     "episode": "rtl-211",
+     "number": 211,
+     "title": "Reisebericht Tierschutz Rumänien",
+     "start": "0:42:12",
+     "end": "0:45:55",
+     "weight": "main",
+     "kind": "expert",
+     "summaries": [
+      "Johanna Henkel beschreibt Auswahl, Mitspracherecht, Betreuung durch den Verein und die Freude an Vermittlungserfolgen, während Martin Rütter das Ehrenamt Pflegestelle als Tipp empfiehlt."
+     ]
+    },
+    {
+     "label": "Kosten und Versicherung bei Pflegehunden",
+     "episode": "rtl-211",
+     "number": 211,
+     "title": "Reisebericht Tierschutz Rumänien",
+     "start": "0:47:43",
+     "end": "0:48:30",
+     "weight": "side",
+     "kind": "listener_question",
+     "summaries": [
+      "Erklärt wird, dass Verein Tierarztkosten, Haftpflichtversicherung und Sicherheitsgeschirr trägt und bei der Pflegestelle nur Futterkosten bleiben."
+     ]
+    },
+    {
+     "label": "Pflegestellenversager und der Nutzen für die Vermittlung",
+     "episode": "rtl-211",
+     "number": 211,
+     "title": "Reisebericht Tierschutz Rumänien",
+     "start": "0:49:31",
+     "end": "0:50:43",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskutiert wird, dass das Behalten eines Pflegehundes häufig der Einstieg in weitere Pflegestellendienste ist und Interessenten den Hund vorab im Alltag erleben können."
+     ]
+    },
+    {
+     "label": "Pflegestellen im Tierschutz",
+     "episode": "rtl-summer-b10",
+     "number": "Summer Edition #10",
+     "title": "Stabile Typen",
+     "start": "0:12:54",
+     "end": "0:13:56",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Hinweis auf die Bedeutung privater Pflegestellen, die sensible Tiere aus dem Tierheim aufnehmen und sie vermittelbar machen."
+     ]
+    },
+    {
+     "label": "Erfahrene Pflegestellen für weitere Hunde freihalten",
+     "episode": "mina-017",
+     "number": 17,
+     "title": "OnlyFans für Murmeltiere",
+     "start": "0:50:06",
+     "end": "0:50:27",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Katharina beschreibt, warum sie Johannas erfahrene Pflegestelle durch Trudis Adoption für weitere Hunde freihalten wollte."
+     ]
+    }
+   ],
+   "episodeCount": 4
+  },
+  {
    "id": "rassemischungen-genetik",
    "label": "Problematische Rassekreuzungen",
    "category": "Zucht & Rassen",
@@ -37001,82 +37222,6 @@
      "kind": "discussion",
      "summaries": [
       "Junge Border Collies und Australian Shepherds lernen bei Rütter vor allem Ruhe zu geben, weil das Hochfahren leicht, das Runterkommen aber die eigentliche Herausforderung ist."
-     ]
-    }
-   ],
-   "episodeCount": 4
-  },
-  {
-   "id": "schweinehaltung",
-   "label": "Schweinehaltung",
-   "category": "Andere Tiere",
-   "description": "Artgerechte Haltung von Schweinen, gesetzliche Vorgaben für Mastschweine und Schweine im Tierheim.",
-   "entries": [
-    {
-     "label": "Hausschwein im Tierheim: Haltung und Verhalten",
-     "episode": "rtl-194",
-     "number": 194,
-     "title": "Akani, Igelnot & ein Gerichtsurteil",
-     "start": "0:05:21",
-     "end": "0:07:10",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Vorgestellt wird der Tierheimeber Norbert, dessen Stimmungswechsel vermutlich auf Langeweile und Unterforderung zurückgehen, und es wird erläutert, was artgerechte Schweinehaltung mit Suhlen, Graben und Beschäftigung bedeutet."
-     ]
-    },
-    {
-     "label": "Platzangebot und Bedingungen in der Schweinemast",
-     "episode": "rtl-143",
-     "number": 143,
-     "title": "Tierleid in der Nutztierhaltung - warum tut sich nichts?",
-     "start": "0:05:58",
-     "end": "0:09:15",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Konkrete Vorgaben werden erläutert: 0,75 Quadratmeter für ein ausgewachsenes Mastschwein von über 110 Kilo, bei Tierwohl-Label 0,95 Quadratmeter plus ein Beschäftigungsobjekt wie eine Eisenkette."
-     ]
-    },
-    {
-     "label": "Konventionelle Schweinehaltung und Tierwohl-Siegel",
-     "episode": "rtl-040",
-     "number": 40,
-     "title": "Die vergessenen Hühner",
-     "start": "0:05:48",
-     "end": "0:11:41",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Schilderung eines Ferkelzuchtbetriebs mit Kastenständen, minimalem Platzangebot, unerreichbarem Stroh und einer Eisenkette als angebliche Beschäftigung – und Kritik am Tierwohl-Siegel.",
-      "Gegenbild vom Lebenshof: Schweine brauchen Wühlen, Suhlen, Kauen, Sozialkontakt und Bewegungsfreiheit."
-     ]
-    },
-    {
-     "label": "Kastenstände und Agrarpolitik",
-     "episode": "rtl-011",
-     "number": 11,
-     "title": "Abhaken & Aufräumen",
-     "start": "0:53:07",
-     "end": "0:57:42",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Rückblick auf den öffentlichen Streit mit der Landwirtschaftsministerin über die Kastenstandhaltung von Sauen, bei der lediglich zehn Zentimeter mehr Platz durchgesetzt wurden.",
-      "Bericht vom Treffen mit einem Schweinehalter, der Sachzwänge, Preisdruck und gesellschaftliche Erwartungen schildert und einräumt, mit 300 gut gehaltenen Tieren ähnlich viel verdienen zu können wie mit 3.500."
-     ]
-    },
-    {
-     "label": "Haltungsbedingungen von Sauen",
-     "episode": "rtl-011",
-     "number": 11,
-     "title": "Abhaken & Aufräumen",
-     "start": "1:00:45",
-     "end": "1:01:35",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Beschrieben werden ausrutschende, überschwere Muttersauen auf Plastikgittern und Mastschweine auf Betonspalten ohne Möglichkeit, Individualdistanz zu halten."
      ]
     }
    ],
@@ -41111,6 +41256,54 @@
    "episodeCount": 3
   },
   {
+   "id": "kognitive-dissonanz-tierkonsum",
+   "label": "Kognitive Dissonanz beim Tierkonsum",
+   "category": "Tierschutz & Ethik",
+   "description": "Die Lücke zwischen dem Mitgefühl für einzelne Tiere und dem eigenen Konsum von Fleisch, Fisch oder Pelz.",
+   "entries": [
+    {
+     "label": "Mitgefühl für Schweine und eigener Fleischkonsum",
+     "episode": "mina-017",
+     "number": 17,
+     "title": "OnlyFans für Murmeltiere",
+     "start": "0:25:02",
+     "end": "0:28:10",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Gespräche vor einer Metzgerei zeigen den Widerspruch zwischen Mitgefühl für Schweine und Fleischkonsum sowie veränderte Essgewohnheiten."
+     ]
+    },
+    {
+     "label": "Walrettung als Anlass für Nutztier- und Pelzdebatte",
+     "episode": "mina-012",
+     "number": 12,
+     "title": "Was geschah mit Timmy? Exklusive Sonderfolge mit Dr. Kirsten Tönnies",
+     "start": "1:33:42",
+     "end": "1:36:24",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Wie Tönnies Pressefragen nutzte, um über Echtpelz, Fischbrötchen, Tiertransporte und das Tierversuchsgesetz zu sprechen."
+     ]
+    },
+    {
+     "label": "Mitleid mit dem Wal und Fischkonsum",
+     "episode": "mina-007",
+     "number": 7,
+     "title": "Von Walen und Menschen",
+     "start": "0:23:04",
+     "end": "0:25:20",
+     "weight": "main",
+     "kind": "expert",
+     "summaries": [
+      "Thilo Maack und Rütter beschreiben die Lücke zwischen Mitgefühl für ein Einzeltier und dem eigenen Konsumverhalten, etwa Fischbrötchen essen direkt neben dem sterbenden Wal."
+     ]
+    }
+   ],
+   "episodeCount": 3
+  },
+  {
    "id": "kryptorchismus",
    "label": "Kryptorchismus",
    "category": "Gesundheit & Medizin",
@@ -41537,80 +41730,6 @@
      "kind": "discussion",
      "summaries": [
       "Tipp, Laubhaufen und abgestorbene Stauden über den Winter stehen zu lassen, weil Igel dort Winterschlaf halten und Insekten ihre Eier ablegen, die Vögeln als Nahrung dienen."
-     ]
-    }
-   ],
-   "episodeCount": 3
-  },
-  {
-   "id": "pflegestelle",
-   "label": "Pflegestellen",
-   "category": "Tierschutz & Ethik",
-   "description": "Wie private Pflegestellen Tierschutzhunde aufnehmen, auf ein neues Zuhause vorbereiten und die Vermittlung unterstützen.",
-   "entries": [
-    {
-     "label": "Pflegestellen im Tierschutz",
-     "episode": "rtl-227",
-     "number": 227,
-     "title": "Borstenwurm & Reizangel",
-     "start": "0:14:39",
-     "end": "0:16:22",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Katharina erzählt von einer Pflegehündin aus dem Auslandstierschutz und beschreibt, welche Verwandlung ein Hund auf einer Pflegestelle durchlaufen kann."
-     ]
-    },
-    {
-     "label": "Ehrenamt Pflegestelle",
-     "episode": "rtl-211",
-     "number": 211,
-     "title": "Reisebericht Tierschutz Rumänien",
-     "start": "0:42:12",
-     "end": "0:45:55",
-     "weight": "main",
-     "kind": "expert",
-     "summaries": [
-      "Johanna Henkel beschreibt Auswahl, Mitspracherecht, Betreuung durch den Verein und die Freude an Vermittlungserfolgen, während Martin Rütter das Ehrenamt Pflegestelle als Tipp empfiehlt."
-     ]
-    },
-    {
-     "label": "Kosten und Versicherung bei Pflegehunden",
-     "episode": "rtl-211",
-     "number": 211,
-     "title": "Reisebericht Tierschutz Rumänien",
-     "start": "0:47:43",
-     "end": "0:48:30",
-     "weight": "side",
-     "kind": "listener_question",
-     "summaries": [
-      "Erklärt wird, dass Verein Tierarztkosten, Haftpflichtversicherung und Sicherheitsgeschirr trägt und bei der Pflegestelle nur Futterkosten bleiben."
-     ]
-    },
-    {
-     "label": "Pflegestellenversager und der Nutzen für die Vermittlung",
-     "episode": "rtl-211",
-     "number": 211,
-     "title": "Reisebericht Tierschutz Rumänien",
-     "start": "0:49:31",
-     "end": "0:50:43",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Diskutiert wird, dass das Behalten eines Pflegehundes häufig der Einstieg in weitere Pflegestellendienste ist und Interessenten den Hund vorab im Alltag erleben können."
-     ]
-    },
-    {
-     "label": "Pflegestellen im Tierschutz",
-     "episode": "rtl-summer-b10",
-     "number": "Summer Edition #10",
-     "title": "Stabile Typen",
-     "start": "0:12:54",
-     "end": "0:13:56",
-     "weight": "side",
-     "kind": "discussion",
-     "summaries": [
-      "Hinweis auf die Bedeutung privater Pflegestellen, die sensible Tiere aus dem Tierheim aufnehmen und sie vermittelbar machen."
      ]
     }
    ],
@@ -47604,41 +47723,6 @@
      "kind": "discussion",
      "summaries": [
       "Martin Rütter erklärt, warum die verbreiteten weißlichen Kauknochen aus Büffelhaut keinen zahnreinigenden Effekt haben, am Gaumen kleben bleiben und sich Rückstände auf den Zähnen absetzen können."
-     ]
-    }
-   ],
-   "episodeCount": 2
-  },
-  {
-   "id": "kognitive-dissonanz-tierkonsum",
-   "label": "Kognitive Dissonanz beim Tierkonsum",
-   "category": "Tierschutz & Ethik",
-   "description": "Die Lücke zwischen dem Mitgefühl für einzelne Tiere und dem eigenen Konsum von Fleisch, Fisch oder Pelz.",
-   "entries": [
-    {
-     "label": "Walrettung als Anlass für Nutztier- und Pelzdebatte",
-     "episode": "mina-012",
-     "number": 12,
-     "title": "Was geschah mit Timmy? Exklusive Sonderfolge mit Dr. Kirsten Tönnies",
-     "start": "1:33:42",
-     "end": "1:36:24",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Wie Tönnies Pressefragen nutzte, um über Echtpelz, Fischbrötchen, Tiertransporte und das Tierversuchsgesetz zu sprechen."
-     ]
-    },
-    {
-     "label": "Mitleid mit dem Wal und Fischkonsum",
-     "episode": "mina-007",
-     "number": 7,
-     "title": "Von Walen und Menschen",
-     "start": "0:23:04",
-     "end": "0:25:20",
-     "weight": "main",
-     "kind": "expert",
-     "summaries": [
-      "Thilo Maack und Rütter beschreiben die Lücke zwischen Mitgefühl für ein Einzeltier und dem eigenen Konsumverhalten, etwa Fischbrötchen essen direkt neben dem sterbenden Wal."
      ]
     }
    ],
@@ -59500,6 +59584,28 @@
    "episodeCount": 1
   },
   {
+   "id": "murmeltierforschung",
+   "label": "Murmeltierforschung",
+   "category": "Wissenschaft & Forschung",
+   "description": "Forschung über Murmeltiere und ihre Finanzierung durch öffentliche Einblicke in den Tieralltag.",
+   "entries": [
+    {
+     "label": "Murmeltierforschung über Online-Einblicke finanzieren",
+     "episode": "mina-017",
+     "number": 17,
+     "title": "OnlyFans für Murmeltiere",
+     "start": "0:20:07",
+     "end": "0:20:50",
+     "weight": "side",
+     "kind": "news",
+     "summaries": [
+      "Ein Forschungsteam setzt nach gestrichenen Fördermitteln auf Online-Einblicke in den Alltag von Murmeltieren."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
    "id": "muskelkater-und-belastung",
    "label": "Muskelkater",
    "category": "Gesundheit & Medizin",
@@ -61565,6 +61671,28 @@
    "episodeCount": 1
   },
   {
+   "id": "wildtier-selfies",
+   "label": "Selfies mit Wildtieren",
+   "category": "Tierschutz & Ethik",
+   "description": "Risiken von Fotoaktionen in Wildtiergehegen und bei Begegnungen mit frei lebenden Tieren.",
+   "entries": [
+    {
+     "label": "Gefährliche Fotos mit Tigern und Bären",
+     "episode": "mina-017",
+     "number": 17,
+     "title": "OnlyFans für Murmeltiere",
+     "start": "0:21:31",
+     "end": "0:23:16",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Ein Bericht über einen Besucher im Tigergehege führt zur Kritik an gefährlichen Wildtierfotos und der Fehleinschätzung von Bären und Tigern."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
    "id": "hundewissen-seminar",
    "label": "Seminare für Hundehalter",
    "category": "Erziehung & Training",
@@ -63189,6 +63317,28 @@
      "kind": "discussion",
      "summaries": [
       "Über Verletzungsrisiken an Nassfutterdosen und Alternativen wie Tetra-Pak-Verpackungen für Hundefutter."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "videoanrufe-bei-tieren",
+   "label": "Videoanrufe bei Tieren",
+   "category": "Wissenschaft & Forschung",
+   "description": "Digitale Kontakte zwischen Artgenossen zur Partnerwahl und zum sozialen Austausch.",
+   "entries": [
+    {
+     "label": "Videoanrufe bei Affen und Papageien",
+     "episode": "mina-017",
+     "number": 17,
+     "title": "OnlyFans für Murmeltiere",
+     "start": "0:18:58",
+     "end": "0:20:07",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Katharina berichtet über digitale Partnerkontakte bei bedrohten Affen und selbst initiierte Videoanrufe als sozialen Austausch bei Papageien."
      ]
     }
    ],

@@ -1,6 +1,6 @@
 # Themen im Podcast „Tierisch Menschlich“
 
-Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitangaben gelten für Spotify und die Podcast-Feeds (identische Audiodateien). Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
+Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder abweichende Fassungen können Spotify-Zeitmarken abweichen. Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
 
 ## Übersicht
 
@@ -12,11 +12,11 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | Ernährung | 26 | 7 |
 | Haltung & Pflege | 95 | 30 |
 | Zucht & Rassen | 88 | 32 |
-| Tierschutz & Ethik | 160 | 68 |
+| Tierschutz & Ethik | 161 | 69 |
 | Recht & Politik | 43 | 13 |
 | Hundesport & Arbeitshunde | 37 | 14 |
 | Mensch-Hund-Beziehung | 55 | 18 |
-| Wissenschaft & Forschung | 111 | 11 |
+| Wissenschaft & Forschung | 113 | 11 |
 | Andere Tiere | 159 | 40 |
 
 ## Alle Themen nach Anzahl der Folgen
@@ -114,6 +114,7 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Wolf in Deutschland](#wolf) | Andere Tiere | 8 |
 | [Zoos und Wildparks](#zoohaltung) | Tierschutz & Ethik | 8 |
 | [Übergewicht beim Hund](#uebergewicht) | Ernährung | 8 |
+| [Adoption eines Tierschutzhundes](#tierschutzhund-adoption) | Tierschutz & Ethik | 7 |
 | [Auslastung und Beschäftigung](#auslastung) | Haltung & Pflege | 7 |
 | [Beißstatistiken und Bissrisiko](#beissstatistik) | Verhalten & Kommunikation | 7 |
 | [Demenz beim Hund](#demenz-beim-hund) | Gesundheit & Medizin | 7 |
@@ -128,7 +129,7 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Reisen und Urlaub mit Hund](#reisen-mit-hund) | Haltung & Pflege | 7 |
 | [Senioren als Hundehalter](#hundevermittlung-an-senioren) | Mensch-Hund-Beziehung | 7 |
 | [Tierarztkosten](#tierarztkosten) | Gesundheit & Medizin | 7 |
-| [Adoption eines Tierschutzhundes](#tierschutzhund-adoption) | Tierschutz & Ethik | 6 |
+| [Trauer um den Hund](#trauer-um-den-hund) | Mensch-Hund-Beziehung | 7 |
 | [Arbeit und Alltag im Tierheim](#tierheimarbeit) | Tierschutz & Ethik | 6 |
 | [Brachyzephalie](#brachyzephalie) | Zucht & Rassen | 6 |
 | [Erste Hilfe beim Hund](#erste-hilfe-hund) | Gesundheit & Medizin | 6 |
@@ -155,7 +156,6 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Tiergestützte Therapie](#tiergestuetzte-therapie) | Mensch-Hund-Beziehung | 6 |
 | [Tierkommunikation](#tierkommunikation) | Wissenschaft & Forschung | 6 |
 | [Tiermedizinische Hilfe für Bedürftige](#mobile-tierarztpraxis) | Tierschutz & Ethik | 6 |
-| [Trauer um den Hund](#trauer-um-den-hund) | Mensch-Hund-Beziehung | 6 |
 | [Welpenerziehung](#welpenerziehung) | Erziehung & Training | 6 |
 | [Zweithund](#zweithund) | Haltung & Pflege | 6 |
 | [Überzüchtung des Körperbaus](#hueftgelenksdysplasie) | Zucht & Rassen | 6 |
@@ -174,6 +174,7 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Orcas](#orcas) | Andere Tiere | 5 |
 | [Polizei- und Diensthunde](#diensthunde) | Hundesport & Arbeitshunde | 5 |
 | [Ressourcenverteidigung](#ressourcenverteidigung) | Verhalten & Kommunikation | 5 |
+| [Schweinehaltung](#schweinehaltung) | Andere Tiere | 5 |
 | [Seniorhunde aus dem Tierschutz](#tierschutz-vermittlung) | Tierschutz & Ethik | 5 |
 | [Spenden im Tierschutz](#tierschutz-spenden) | Tierschutz & Ethik | 5 |
 | [Sprachverständnis von Hunden](#wortverstaendnis-hund) | Wissenschaft & Forschung | 5 |
@@ -229,12 +230,12 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Maulkorb](#maulkorb) | Haltung & Pflege | 4 |
 | [Meeresschutz](#meeresschutz) | Andere Tiere | 4 |
 | [Nestbau bei Vögeln](#vogelnester) | Andere Tiere | 4 |
+| [Pflegestellen](#pflegestelle) | Tierschutz & Ethik | 4 |
 | [Problematische Rassekreuzungen](#rassemischungen-genetik) | Zucht & Rassen | 4 |
 | [Psychische Belastung im Tierschutz](#belastung-tierschutzarbeit) | Tierschutz & Ethik | 4 |
 | [Rattenjagd mit Hunden](#rattenbekaempfung-hunde) | Hundesport & Arbeitshunde | 4 |
 | [Riesenwuchs und Zucht auf Masse](#riesenwuchs) | Zucht & Rassen | 4 |
 | [Ruhe- und Abschalttraining](#abschalttraining) | Erziehung & Training | 4 |
-| [Schweinehaltung](#schweinehaltung) | Andere Tiere | 4 |
 | [Spürhunde](#spuerhunde) | Hundesport & Arbeitshunde | 4 |
 | [Stierkampf](#stierkampf) | Tierschutz & Ethik | 4 |
 | [Strafe und Korrektur](#strafreize-im-training) | Erziehung & Training | 4 |
@@ -310,6 +311,7 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Katzen](#katzen) | Andere Tiere | 3 |
 | [Kettenhaltung](#kettenhaltung) | Haltung & Pflege | 3 |
 | [Kindern die Nutztierhaltung erklären](#bildung-tierschutz-kinder) | Tierschutz & Ethik | 3 |
+| [Kognitive Dissonanz beim Tierkonsum](#kognitive-dissonanz-tierkonsum) | Tierschutz & Ethik | 3 |
 | [Kryptorchismus](#kryptorchismus) | Gesundheit & Medizin | 3 |
 | [Körperbau im Rassestandard](#koerperbau-hund) | Zucht & Rassen | 3 |
 | [Lebererkrankungen](#lebererkrankung) | Gesundheit & Medizin | 3 |
@@ -319,7 +321,6 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Nasenarbeit und Suchspiele](#nasenarbeit) | Hundesport & Arbeitshunde | 3 |
 | [Naturbeobachtung](#wildtierbeobachtung) | Andere Tiere | 3 |
 | [Naturnaher Garten](#artenvielfalt-garten) | Andere Tiere | 3 |
-| [Pflegestellen](#pflegestelle) | Tierschutz & Ethik | 3 |
 | [Positive Verstärkung und ihre Grenzen](#positive-verstaerkung) | Erziehung & Training | 3 |
 | [Pubertät beim Hund](#pubertaet) | Erziehung & Training | 3 |
 | [Rausch bei Tieren](#alkohol-bei-tieren) | Andere Tiere | 3 |
@@ -466,7 +467,6 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Kastanien und Eicheln](#kastanien-gefahr) | Gesundheit & Medizin | 2 |
 | [Kastenstand und Ferkelschutzkorb](#kastenstand) | Tierschutz & Ethik | 2 |
 | [Kauartikel](#kauartikel) | Ernährung | 2 |
-| [Kognitive Dissonanz beim Tierkonsum](#kognitive-dissonanz-tierkonsum) | Tierschutz & Ethik | 2 |
 | [Kommunikation von Katzen](#katzensprache) | Andere Tiere | 2 |
 | [Kopfhalfter und Führgeschirr](#halti-kopfhalfter) | Haltung & Pflege | 2 |
 | [Kopfschräglegen](#kopfschraeglegen) | Verhalten & Kommunikation | 2 |
@@ -915,6 +915,7 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Mittelmeerkrankheiten](#mittelmeerkrankheiten) | Gesundheit & Medizin | 1 |
 | [Molosser](#molosser-geschichte) | Zucht & Rassen | 1 |
 | [Mundgeruch](#mundgeruch) | Gesundheit & Medizin | 1 |
+| [Murmeltierforschung](#murmeltierforschung) | Wissenschaft & Forschung | 1 |
 | [Muskelkater](#muskelkater-und-belastung) | Gesundheit & Medizin | 1 |
 | [Mythos Lemminge](#lemminge-mythos) | Wissenschaft & Forschung | 1 |
 | [Mäusejagd](#maeusejagd) | Verhalten & Kommunikation | 1 |
@@ -1007,6 +1008,7 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Selbstmedikation bei Tieren](#selbstmedikation-tiere) | Wissenschaft & Forschung | 1 |
 | [Selbstwirksamkeit bei Hunden und Kindern](#selbstwirksamkeit) | Mensch-Hund-Beziehung | 1 |
 | [Selektion kranker Welpen durch die Mutter](#welpenaufzucht-muttertier) | Verhalten & Kommunikation | 1 |
+| [Selfies mit Wildtieren](#wildtier-selfies) | Tierschutz & Ethik | 1 |
 | [Seminare für Hundehalter](#hundewissen-seminar) | Erziehung & Training | 1 |
 | [Sender an Walen](#wal-tracking) | Wissenschaft & Forschung | 1 |
 | [Sensible Sozialisierungsphase](#sozialisierungsphase) | Verhalten & Kommunikation | 1 |
@@ -1078,6 +1080,7 @@ Automatisch erstellter Themenindex: 1103 Themen aus 260 von 260 Folgen. Zeitanga
 | [Verhalten von Fischen gegenüber Menschen](#fische-verhalten) | Andere Tiere | 1 |
 | [Vermittlung von Laborhunden](#laborhunde-vermittlung) | Tierschutz & Ethik | 1 |
 | [Verpackung von Hundefutter](#hundefutter-verpackung) | Ernährung | 1 |
+| [Videoanrufe bei Tieren](#videoanrufe-bei-tieren) | Wissenschaft & Forschung | 1 |
 | [Vogelschlag an Fensterscheiben](#vogelschlag-an-fensterscheiben) | Andere Tiere | 1 |
 | [Vogelstimmen](#vogelstimmen) | Andere Tiere | 1 |
 | [Vogelzug](#vogelzug) | Wissenschaft & Forschung | 1 |
@@ -6066,6 +6069,18 @@ _Chancen und Probleme der Wildtierhaltung in Zoos, Tier- und Wildparks, von Besc
 - Folge 12 „Was geschah mit Timmy? Exklusive Sonderfolge mit Dr. Kirsten Tönnies“ ab 0:04:45 (kurz): Kurzer Austausch über die Vertretbarkeit von Zoohaltung und darüber, welche Arten überhaupt zoogeeignet sein könnten.
 - Folge 11 „Zaun Ideologien“ ab 0:03:58: Erklärt wird das Konzept, Bären und Wölfe gemeinsam auf großer Fläche zu halten, um über Futterkonkurrenz und unkalkulierbare Fütterung Stereotypien abzubauen und natürliche Verhaltensweisen zu reaktivieren. Im Park werden die Tiere nicht angefasst oder mit Medical Training trainiert, sondern rein über Beobachtung kontrolliert; nur im Notfall wird narkotisiert.
 
+<a id="tierschutzhund-adoption"></a>
+#### Adoption eines Tierschutzhundes · 7 Folgen
+_Wie man über Tierheim, Verein oder Pflegestelle einen Hund aus dem Tierschutz kennenlernt, adoptiert und bei sich aufnimmt._
+
+- Folge 232 „Willkommen, Trudi!“ ab 0:01:21: Katharina erzählt, wie die rumänische Pflegehündin Capri über einen Verein und eine Pflegestelle bei ihr einzog und welche Rolle die Pflegestelle in der Eingewöhnung spielte.
+- Folge 221 „Gewissensgründe“ ab 1:03:52 (kurz): Annika Hansen erzählt von Katzen und einem Hund aus dem Tierschutz, geretteten Hühnern und Schafen, die sie vor der Schlachtung bewahrt hat.
+- Folge 211 „Reisebericht Tierschutz Rumänien“ ab 0:26:02: Erläutert wird, dass Pflegestellen und Vereine den Hund vorab kennenlernen, die Lebenssituation der Interessenten prüfen und so eine intensive Begleitung der Adoption bieten.
+- Folge 194 „Akani, Igelnot & ein Gerichtsurteil“ ab 0:29:04: Eine Hörerin berichtet, wie sie durch ehrenamtliches Gassigehen im Tierheim eine junge, dem Vorbesitzer entzogene Chow-Chow-Hündin kennenlernte und nun mit Probezeit adoptieren möchte.
+- Summer Edition #8 „Die schlauesten Tiere der Welt“ ab 0:03:36: Eine Hörerin berichtet, dass sie sich nach langer Suche für einen Tierschutzhund statt eines Welpen entschieden hat, was zu Überlegungen über Wartezeiten bei seriösen Züchtern und die Alternative Tierheim führt.
+- Folge 97 „Blue Monday, warme Omas & Karnevalspferde“ ab 0:16:36 (kurz): Eine Familie entschied sich statt eines geplanten Bullmastiff-Welpen für die Adoption der Tierheimhündin Ivy.
+- Folge 17 „OnlyFans für Murmeltiere“ ab 0:48:44: Zum ersten Jahrestag von Trudis Einzug blickt Katharina auf ihre Entwicklung und das zunächst zögerliche Kennenlernen zurück.
+
 <a id="tierheimhund-vermittlung"></a>
 #### Den passenden Tierheimhund finden · 7 Folgen
 _Wie man im Tierheim den passenden Hund findet, etwa durch Kennenlernen und Probezeiten, und wann Mensch und Hund wirklich zusammenpassen._
@@ -6101,17 +6116,6 @@ _Motive und Risiken von Hundediebstahl, etwa beim Anbinden vor Geschäften, und 
 - Folge 161 „Der Hundeprofi unterwegs & Eifersucht in der Podcast-Ehe“ ab 0:10:36: Suchmeldung für den gestohlenen Mischlingshund Räuber und die Warnung, Hunde nicht angebunden vor Geschäften warten zu lassen.
 - Folge 75 „Faultiere, Hitzschlag & Leben nach dem Tod“ ab 0:28:51: Der bewaffnete Raub der französischen Bulldoggen von Lady Gaga und die Verurteilung eines Täters wegen Raubüberfalls werden geschildert, samt Frage, wie ein reiner Hundediebstahl rechtlich bewertet würde.
 - Folge 15 „Fettige Ohren und Albtraumbabys“ ab 0:15:25 (kurz): Kurzer Hinweis darauf, dass angebundene Hunde vor Geschäften immer wieder gestohlen werden.
-
-<a id="tierschutzhund-adoption"></a>
-#### Adoption eines Tierschutzhundes · 6 Folgen
-_Wie man über Tierheim, Verein oder Pflegestelle einen Hund aus dem Tierschutz kennenlernt, adoptiert und bei sich aufnimmt._
-
-- Folge 232 „Willkommen, Trudi!“ ab 0:01:21: Katharina erzählt, wie die rumänische Pflegehündin Capri über einen Verein und eine Pflegestelle bei ihr einzog und welche Rolle die Pflegestelle in der Eingewöhnung spielte.
-- Folge 221 „Gewissensgründe“ ab 1:03:52 (kurz): Annika Hansen erzählt von Katzen und einem Hund aus dem Tierschutz, geretteten Hühnern und Schafen, die sie vor der Schlachtung bewahrt hat.
-- Folge 211 „Reisebericht Tierschutz Rumänien“ ab 0:26:02: Erläutert wird, dass Pflegestellen und Vereine den Hund vorab kennenlernen, die Lebenssituation der Interessenten prüfen und so eine intensive Begleitung der Adoption bieten.
-- Folge 194 „Akani, Igelnot & ein Gerichtsurteil“ ab 0:29:04: Eine Hörerin berichtet, wie sie durch ehrenamtliches Gassigehen im Tierheim eine junge, dem Vorbesitzer entzogene Chow-Chow-Hündin kennenlernte und nun mit Probezeit adoptieren möchte.
-- Summer Edition #8 „Die schlauesten Tiere der Welt“ ab 0:03:36: Eine Hörerin berichtet, dass sie sich nach langer Suche für einen Tierschutzhund statt eines Welpen entschieden hat, was zu Überlegungen über Wartezeiten bei seriösen Züchtern und die Alternative Tierheim führt.
-- Folge 97 „Blue Monday, warme Omas & Karnevalspferde“ ab 0:16:36 (kurz): Eine Familie entschied sich statt eines geplanten Bullmastiff-Welpen für die Adoption der Tierheimhündin Ivy.
 
 <a id="tierheimarbeit"></a>
 #### Arbeit und Alltag im Tierheim · 6 Folgen
@@ -6317,6 +6321,17 @@ _Der Streit um die Freigabe geschützter Fischotter zum Abschuss und der Konflik
 - Folge 157 „Otterjagd & Dackelkatzen“ ab 0:43:28: Diskussion über politische Forderungen, Fischotter zu bejagen, weil ein Tier bis zu 1,2 Kilo Fisch am Tag frisst und Teichwirte Schäden melden.
 - Folge 109 „Fliewatüüt, Fettfilter & Ferien“ ab 1:05:00 (kurz): Anekdote über eine absurde Bärenauswilderung, bei der das narkotisierte Tier von einem Tätowierer markiert wurde.
 
+<a id="pflegestelle"></a>
+#### Pflegestellen · 4 Folgen
+_Wie private Pflegestellen Tierschutzhunde aufnehmen, auf ein neues Zuhause vorbereiten und die Vermittlung unterstützen._
+
+- Folge 227 „Borstenwurm & Reizangel“ ab 0:14:39: Katharina erzählt von einer Pflegehündin aus dem Auslandstierschutz und beschreibt, welche Verwandlung ein Hund auf einer Pflegestelle durchlaufen kann.
+- Folge 211 „Reisebericht Tierschutz Rumänien“ ab 0:42:12: Johanna Henkel beschreibt Auswahl, Mitspracherecht, Betreuung durch den Verein und die Freude an Vermittlungserfolgen, während Martin Rütter das Ehrenamt Pflegestelle als Tipp empfiehlt.
+- Folge 211 „Reisebericht Tierschutz Rumänien“ ab 0:47:43 (kurz): Erklärt wird, dass Verein Tierarztkosten, Haftpflichtversicherung und Sicherheitsgeschirr trägt und bei der Pflegestelle nur Futterkosten bleiben.
+- Folge 211 „Reisebericht Tierschutz Rumänien“ ab 0:49:31: Diskutiert wird, dass das Behalten eines Pflegehundes häufig der Einstieg in weitere Pflegestellendienste ist und Interessenten den Hund vorab im Alltag erleben können.
+- Summer Edition #10 „Stabile Typen“ ab 0:12:54 (kurz): Hinweis auf die Bedeutung privater Pflegestellen, die sensible Tiere aus dem Tierheim aufnehmen und sie vermittelbar machen.
+- Folge 17 „OnlyFans für Murmeltiere“ ab 0:50:06 (kurz): Katharina beschreibt, warum sie Johannas erfahrene Pflegestelle durch Trudis Adoption für weitere Hunde freihalten wollte.
+
 <a id="belastung-tierschutzarbeit"></a>
 #### Psychische Belastung im Tierschutz · 4 Folgen
 _Die emotionale und psychische Belastung von Tierschützern, Rechercheuren und Helfern durch Tierleid, Einsätze und den Tod der betreuten Tiere._
@@ -6428,15 +6443,13 @@ _Wie und ab wann man Kindern ehrlich zeigt, wie Nutztiere gehalten werden und da
 - Folge 143 „Tierleid in der Nutztierhaltung - warum tut sich nichts?“ ab 0:16:26: Diskutiert wird, Kindern echte Tiere und reale Haltungsbedingungen altersgerecht zu zeigen, statt verklärte Bauernhofbilder in Kinderbüchern zu verwenden, damit sie Schweine als soziale Wesen begreifen.
 - Folge 67 „Hasskommentare, jaulende Hunde & Vogelnester“ ab 0:00:39: Ausgehend von einem Kind, das eine Nacktschnecke als Lebewesen erkennt, diskutieren die beiden, ab welchem Alter und wie man Kindern erklären sollte, dass für Wurst und Fleisch Tiere sterben, und kritisieren militante Aktionen gegen Fleischesser vor Metzgereien.
 
-<a id="pflegestelle"></a>
-#### Pflegestellen · 3 Folgen
-_Wie private Pflegestellen Tierschutzhunde aufnehmen, auf ein neues Zuhause vorbereiten und die Vermittlung unterstützen._
+<a id="kognitive-dissonanz-tierkonsum"></a>
+#### Kognitive Dissonanz beim Tierkonsum · 3 Folgen
+_Die Lücke zwischen dem Mitgefühl für einzelne Tiere und dem eigenen Konsum von Fleisch, Fisch oder Pelz._
 
-- Folge 227 „Borstenwurm & Reizangel“ ab 0:14:39: Katharina erzählt von einer Pflegehündin aus dem Auslandstierschutz und beschreibt, welche Verwandlung ein Hund auf einer Pflegestelle durchlaufen kann.
-- Folge 211 „Reisebericht Tierschutz Rumänien“ ab 0:42:12: Johanna Henkel beschreibt Auswahl, Mitspracherecht, Betreuung durch den Verein und die Freude an Vermittlungserfolgen, während Martin Rütter das Ehrenamt Pflegestelle als Tipp empfiehlt.
-- Folge 211 „Reisebericht Tierschutz Rumänien“ ab 0:47:43 (kurz): Erklärt wird, dass Verein Tierarztkosten, Haftpflichtversicherung und Sicherheitsgeschirr trägt und bei der Pflegestelle nur Futterkosten bleiben.
-- Folge 211 „Reisebericht Tierschutz Rumänien“ ab 0:49:31: Diskutiert wird, dass das Behalten eines Pflegehundes häufig der Einstieg in weitere Pflegestellendienste ist und Interessenten den Hund vorab im Alltag erleben können.
-- Summer Edition #10 „Stabile Typen“ ab 0:12:54 (kurz): Hinweis auf die Bedeutung privater Pflegestellen, die sensible Tiere aus dem Tierheim aufnehmen und sie vermittelbar machen.
+- Folge 17 „OnlyFans für Murmeltiere“ ab 0:25:02: Gespräche vor einer Metzgerei zeigen den Widerspruch zwischen Mitgefühl für Schweine und Fleischkonsum sowie veränderte Essgewohnheiten.
+- Folge 12 „Was geschah mit Timmy? Exklusive Sonderfolge mit Dr. Kirsten Tönnies“ ab 1:33:42: Wie Tönnies Pressefragen nutzte, um über Echtpelz, Fischbrötchen, Tiertransporte und das Tierversuchsgesetz zu sprechen.
+- Folge 7 „Von Walen und Menschen“ ab 0:23:04: Thilo Maack und Rütter beschreiben die Lücke zwischen Mitgefühl für ein Einzeltier und dem eigenen Konsumverhalten, etwa Fischbrötchen essen direkt neben dem sterbenden Wal.
 
 <a id="schlachtung"></a>
 #### Schlachtung · 3 Folgen
@@ -6639,13 +6652,6 @@ _Die Fixierung von Sauen in Kastenständen und Ferkelschutzkörben, einkalkulier
 
 - Folge 143 „Tierleid in der Nutztierhaltung - warum tut sich nichts?“ ab 0:36:29 (kurz): Studentinnen, die die Kastenstandhaltung von Schweinen an der Uni München öffentlich kritisierten, wurden massiv unter Druck gesetzt.
 - Folge 11 „Abhaken & Aufräumen“ ab 1:03:15: Diskutiert wird, dass einkalkulierte Verluste von rund zwölf Prozent der Ferkel und Maßnahmen wie Ferkelschutzkorb oder Schwanzkupieren Leid im System mindern sollen, das System selbst aber falsch sei.
-
-<a id="kognitive-dissonanz-tierkonsum"></a>
-#### Kognitive Dissonanz beim Tierkonsum · 2 Folgen
-_Die Lücke zwischen dem Mitgefühl für einzelne Tiere und dem eigenen Konsum von Fleisch, Fisch oder Pelz._
-
-- Folge 12 „Was geschah mit Timmy? Exklusive Sonderfolge mit Dr. Kirsten Tönnies“ ab 1:33:42: Wie Tönnies Pressefragen nutzte, um über Echtpelz, Fischbrötchen, Tiertransporte und das Tierversuchsgesetz zu sprechen.
-- Folge 7 „Von Walen und Menschen“ ab 0:23:04: Thilo Maack und Rütter beschreiben die Lücke zwischen Mitgefühl für ein Einzeltier und dem eigenen Konsumverhalten, etwa Fischbrötchen essen direkt neben dem sterbenden Wal.
 
 <a id="kaefighaltung"></a>
 #### Käfighaltung · 2 Folgen
@@ -7038,6 +7044,12 @@ _Warum Deutschland bei Schutzgebieten europaweit zurückliegt und Kulturlandscha
 _Schönheitswettbewerbe mit Tieren und Manipulationen wie Botox-Behandlungen bei Kamelen._
 
 - Folge 40 „Die vergessenen Hühner“ ab 0:53:44: Bei einem Kamelfestival in Saudi-Arabien wurden 40 Tiere wegen Botox, Nasenkorrekturen und aufgerichteter Höcker disqualifiziert; es geht um hohe Preisgelder.
+
+<a id="wildtier-selfies"></a>
+#### Selfies mit Wildtieren · 1 Folgen
+_Risiken von Fotoaktionen in Wildtiergehegen und bei Begegnungen mit frei lebenden Tieren._
+
+- Folge 17 „OnlyFans für Murmeltiere“ ab 0:21:31: Ein Bericht über einen Besucher im Tigergehege führt zur Kritik an gefährlichen Wildtierfotos und der Fehleinschätzung von Bären und Tigern.
 
 <a id="serioeser-tierschutzverein"></a>
 #### Seriöse Tierschutzvereine erkennen · 1 Folgen
@@ -7942,6 +7954,19 @@ _Warum ältere Menschen gute Hundehalter sein können, welche Absicherung sie br
 - Folge 75 „Faultiere, Hitzschlag & Leben nach dem Tod“ ab 0:47:07: Anekdote über eine hochbetagte Hundehalterin und ihren alten Wolfshund als Beispiel für die enge, symbiotische Bindung zwischen Senioren und ihren Hunden.
 - Folge 1 „Wie alles begann“ ab 0:44:48: Kritik daran, dass Tierheime Interessenten wegen Kleinigkeiten oder hohen Alters ablehnen, obwohl ältere Menschen gut zu älteren Hunden passen können.
 
+<a id="trauer-um-den-hund"></a>
+#### Trauer um den Hund · 7 Folgen
+_Abschied und Trauer nach dem Tod des eigenen Hundes und wie Familien, auch Kinder, damit umgehen können._
+
+- Folge 234 „Martins Abschied von der Bühne“ ab 0:18:10: Martin und Katharina sprechen über das Verwechseln von Namen nach dem Tod eines Hundes, anhaltende Trauer und wie schwer es fällt, einen fremden Hund im eigenen Zuhause zuzulassen.
+- Folge 225 „Abschied von Alma“ ab 0:13:04: Es wird empfohlen, Fragen wie Bestattung, Kosten und Abläufe im Vorfeld zu klären, da Trauer körperlich stark belastet und Handlungsfähigkeit einschränkt. Martin Rütter und Katharina Adick diskutieren, wie unterschiedlich Menschen trauern und dass gut gemeinte Beileidsbekundungen von Fremden oft unpassend sind. Nach der ersten Phase mischt sich Dankbarkeit in die Trauer; Rütter reflektiert über Emmas Vorgeschichte als problematischer Hund und ihre mögliche Tierheimkarriere.
+- Folge 224 „Abschied von Emma“ ab 1:10:12: Rütter spricht über den fehlenden Vorlauf zum Abschied, den Trost durch die Tierärztin, die öffentliche Anteilnahme und den Umgang mit Trauer in der Familie.
+- Folge 127 „Podcast live II: Achterbahn der Feelings“ ab 0:53:31: Es wird darüber gesprochen, die letzten Lebensjahre mit dem Hund nicht durch Angst vor dem Abschied zu verlieren, sondern die gemeinsame Zeit bewusst zu genießen.
+- Folge 23 „Skandale im Reitsport“ ab 0:01:38: Nach der Folge über das Sterben von Haustieren diskutieren die beiden eine Hörernachricht, die den Vergleich von Hundetod und Kindstod zurückweist, und ordnen ein, wie Trauer um Tiere gemeint war. Hörerreaktionen zur Sterbefolge werden besprochen, darunter die Frage, ob Kinder beim Einschläfern bzw. Abschied vom Familienhund aktiv dabei sein sollten.
+- Folge 22 „Abschied vom geliebten Hund“ ab 0:00:18: Einstieg ins Thema Abschied: Eine Hörerin schildert die plötzliche Erkrankung ihres Hundes, und Martin Rütter rät, dem Hund bis zum Ende möglichst Normalität und Ruhe zu geben. Rütter beschreibt, wie sich der Verlust seiner Hündin Mina erst Wochen später mit voller Wucht zeigte und wie er den Tod zunächst nicht öffentlich machen wollte.
+- Folge 22 „Abschied vom geliebten Hund“ ab 0:40:11: Es wird betont, dass Trauer um ein Tier jahrelang anhalten darf und erst dann professionelle Hilfe nötig ist, wenn der Alltag dauerhaft nicht mehr funktioniert.
+- Folge 17 „OnlyFans für Murmeltiere“ ab 0:49:51 (kurz): Die Trauer um ihren vorherigen Hund erschwerte Katharina anfangs das Einlassen auf Trudi.
+
 <a id="mensch-hund-beziehung"></a>
 #### Mensch-Hund-Beziehung im Wandel · 6 Folgen
 _Wie menschlicher Umgang Hunde prägt und wie sich Hundeerziehung und das Verständnis der Mensch-Hund-Beziehung seit früheren Jahrzehnten verändert haben._
@@ -7964,18 +7989,6 @@ _Therapeutisches Reiten und andere tiergestützte Angebote für Kinder und Mensc
 - Folge 75 „Faultiere, Hitzschlag & Leben nach dem Tod“ ab 0:15:15: Vorgestellt wird ein Verein, der therapeutisches Reiten für Kinder mit Behinderung, Heimkinder und geflüchtete Kinder anbietet und künftig den Rosenhof nutzt.
 - Folge 37 „Ein unfreiwilliger Held“ ab 1:05:40 (kurz): Markus Wipperfürth berichtet, dass für ihn zur Verarbeitung der Katastrophenerlebnisse eine Therapie mit Pferden vorbereitet wird, und ermutigt andere Helfer, sich ebenfalls Unterstützung zu holen.
 - Folge 19 „Handgemenge auf der Hundewiese, Ursachen für Aggression & Training mit einem misshandelten Hund“ ab 0:03:36 (kurz): Kurzer Hinweis auf einen Verein, der Reittherapie mit behinderten Kindern und Kindern in schwierigen Lebenslagen anbietet.
-
-<a id="trauer-um-den-hund"></a>
-#### Trauer um den Hund · 6 Folgen
-_Abschied und Trauer nach dem Tod des eigenen Hundes und wie Familien, auch Kinder, damit umgehen können._
-
-- Folge 234 „Martins Abschied von der Bühne“ ab 0:18:10: Martin und Katharina sprechen über das Verwechseln von Namen nach dem Tod eines Hundes, anhaltende Trauer und wie schwer es fällt, einen fremden Hund im eigenen Zuhause zuzulassen.
-- Folge 225 „Abschied von Alma“ ab 0:13:04: Es wird empfohlen, Fragen wie Bestattung, Kosten und Abläufe im Vorfeld zu klären, da Trauer körperlich stark belastet und Handlungsfähigkeit einschränkt. Martin Rütter und Katharina Adick diskutieren, wie unterschiedlich Menschen trauern und dass gut gemeinte Beileidsbekundungen von Fremden oft unpassend sind. Nach der ersten Phase mischt sich Dankbarkeit in die Trauer; Rütter reflektiert über Emmas Vorgeschichte als problematischer Hund und ihre mögliche Tierheimkarriere.
-- Folge 224 „Abschied von Emma“ ab 1:10:12: Rütter spricht über den fehlenden Vorlauf zum Abschied, den Trost durch die Tierärztin, die öffentliche Anteilnahme und den Umgang mit Trauer in der Familie.
-- Folge 127 „Podcast live II: Achterbahn der Feelings“ ab 0:53:31: Es wird darüber gesprochen, die letzten Lebensjahre mit dem Hund nicht durch Angst vor dem Abschied zu verlieren, sondern die gemeinsame Zeit bewusst zu genießen.
-- Folge 23 „Skandale im Reitsport“ ab 0:01:38: Nach der Folge über das Sterben von Haustieren diskutieren die beiden eine Hörernachricht, die den Vergleich von Hundetod und Kindstod zurückweist, und ordnen ein, wie Trauer um Tiere gemeint war. Hörerreaktionen zur Sterbefolge werden besprochen, darunter die Frage, ob Kinder beim Einschläfern bzw. Abschied vom Familienhund aktiv dabei sein sollten.
-- Folge 22 „Abschied vom geliebten Hund“ ab 0:00:18: Einstieg ins Thema Abschied: Eine Hörerin schildert die plötzliche Erkrankung ihres Hundes, und Martin Rütter rät, dem Hund bis zum Ende möglichst Normalität und Ruhe zu geben. Rütter beschreibt, wie sich der Verlust seiner Hündin Mina erst Wochen später mit voller Wucht zeigte und wie er den Tod zunächst nicht öffentlich machen wollte.
-- Folge 22 „Abschied vom geliebten Hund“ ab 0:40:11: Es wird betont, dass Trauer um ein Tier jahrelang anhalten darf und erst dann professionelle Hilfe nötig ist, wenn der Alltag dauerhaft nicht mehr funktioniert.
 
 <a id="neuer-hund-nach-verlust"></a>
 #### Neuer Hund nach dem Verlust · 5 Folgen
@@ -8901,6 +8914,12 @@ _Was Darmmikrobiom und Bodenbakterien gemeinsam haben und welche Wirkstoffe in M
 
 - Folge 148 „Wald & Jagd (mit Peter Wohlleben)“ ab 0:21:10 (kurz): Parallelen zwischen Darmmikrobiom und Waldboden sowie ein Bodenbakterium als möglicher Wirkstoff gegen resistente Erreger.
 
+<a id="murmeltierforschung"></a>
+#### Murmeltierforschung · 1 Folgen
+_Forschung über Murmeltiere und ihre Finanzierung durch öffentliche Einblicke in den Tieralltag._
+
+- Folge 17 „OnlyFans für Murmeltiere“ ab 0:20:07 (kurz): Ein Forschungsteam setzt nach gestrichenen Fördermitteln auf Online-Einblicke in den Alltag von Murmeltieren.
+
 <a id="lemminge-mythos"></a>
 #### Mythos Lemminge · 1 Folgen
 _Warum der angebliche Massenselbstmord der Lemminge eine Legende ist._
@@ -9009,6 +9028,12 @@ _Wie eiszeitliche Höhlenmalereien Wissen über Fortpflanzungszeiten und Aufenth
 _Ob Hunde vor Freude weinen und warum Studien dazu vorsichtig zu bewerten sind._
 
 - Folge 77 „Weinende Hunde, kognitive Flexibilität, & 2 Happy Ends“ ab 0:13:24: Katharina stellt eine viel zitierte Studie vor, laut der Hunde beim Wiedersehen mit dem Halter mehr Tränenflüssigkeit produzieren, und erklärt, warum das Studiendesign den Schluss auf Rührung nicht hergibt.
+
+<a id="videoanrufe-bei-tieren"></a>
+#### Videoanrufe bei Tieren · 1 Folgen
+_Digitale Kontakte zwischen Artgenossen zur Partnerwahl und zum sozialen Austausch._
+
+- Folge 17 „OnlyFans für Murmeltiere“ ab 0:18:58: Katharina berichtet über digitale Partnerkontakte bei bedrohten Affen und selbst initiierte Videoanrufe als sozialen Austausch bei Papageien.
 
 <a id="vogelzug"></a>
 #### Vogelzug · 1 Folgen
@@ -9272,6 +9297,17 @@ _Kultur, Werkzeuggebrauch, Jagdverhalten und überraschende Verhaltensweisen ver
 - Folge 117 „Wo bleibt der Hausverstand?“ ab 0:54:18: Anhand der Vorfälle in der Straße von Gibraltar wird die Forscherthese besprochen, dass ein traumatisiertes Weibchen das Verhalten initiierte und es sich als kulturell weitergegebene Verhaltensweise verbreitet.
 - Folge 7 „Ballverrückte Hunde“ ab 0:06:30: Die beiden sprechen über küstennahe Orca-Populationen, ihre Spezialisierung auf Königslachs, historische Fänge für Freizeitparks, den Rekordwal Granny sowie Überfischung und Umweltgifte als Bestandsrisiken.
 
+<a id="schweinehaltung"></a>
+#### Schweinehaltung · 5 Folgen
+_Artgerechte Haltung von Schweinen, gesetzliche Vorgaben für Mastschweine und Schweine im Tierheim._
+
+- Folge 194 „Akani, Igelnot & ein Gerichtsurteil“ ab 0:05:21: Vorgestellt wird der Tierheimeber Norbert, dessen Stimmungswechsel vermutlich auf Langeweile und Unterforderung zurückgehen, und es wird erläutert, was artgerechte Schweinehaltung mit Suhlen, Graben und Beschäftigung bedeutet.
+- Folge 143 „Tierleid in der Nutztierhaltung - warum tut sich nichts?“ ab 0:05:58: Konkrete Vorgaben werden erläutert: 0,75 Quadratmeter für ein ausgewachsenes Mastschwein von über 110 Kilo, bei Tierwohl-Label 0,95 Quadratmeter plus ein Beschäftigungsobjekt wie eine Eisenkette.
+- Folge 40 „Die vergessenen Hühner“ ab 0:05:48: Schilderung eines Ferkelzuchtbetriebs mit Kastenständen, minimalem Platzangebot, unerreichbarem Stroh und einer Eisenkette als angebliche Beschäftigung – und Kritik am Tierwohl-Siegel. Gegenbild vom Lebenshof: Schweine brauchen Wühlen, Suhlen, Kauen, Sozialkontakt und Bewegungsfreiheit.
+- Folge 11 „Abhaken & Aufräumen“ ab 0:53:07: Rückblick auf den öffentlichen Streit mit der Landwirtschaftsministerin über die Kastenstandhaltung von Sauen, bei der lediglich zehn Zentimeter mehr Platz durchgesetzt wurden. Bericht vom Treffen mit einem Schweinehalter, der Sachzwänge, Preisdruck und gesellschaftliche Erwartungen schildert und einräumt, mit 300 gut gehaltenen Tieren ähnlich viel verdienen zu können wie mit 3.500.
+- Folge 11 „Abhaken & Aufräumen“ ab 1:00:45: Beschrieben werden ausrutschende, überschwere Muttersauen auf Plastikgittern und Mastschweine auf Betonspalten ohne Möglichkeit, Individualdistanz zu halten.
+- Folge 17 „OnlyFans für Murmeltiere“ ab 0:24:32 (kurz): Martin veranschaulicht Passanten anhand eines präparierten Schweins das geringe Platzangebot in der Schweinemast.
+
 <a id="vogelverhalten"></a>
 #### Verhalten von Gartenvögeln · 5 Folgen
 _Beobachtungen zu Putz-, Fress-, Revier- und Balzverhalten von Vögeln im Garten im Lauf des Jahres._
@@ -9355,16 +9391,6 @@ _Wie unterschiedlich Vögel wie Tauben, Elstern oder Blässhühner ihre Nester b
 - Folge 116 „Martin startet Modelkarriere als „Curvy Best-Ager““ ab 1:26:42 (kurz): Beobachtung eines Blässhuhnnests, das komplett aus Plastikmüll gebaut war.
 - Folge 67 „Hasskommentare, jaulende Hunde & Vogelnester“ ab 0:17:10: Vergleich der nachlässigen Taubennester mit einem riesigen, überdachten Elsternnest im Hinterhof, inklusive Beobachtung, dass die Elster Nestmaterial gezielt wegtransportiert.
 - Folge 13 „Leben und leben lassen“ ab 1:06:43: Katharina Adick beschreibt ein extrem spärliches Taubennest am Balkon und den Ruf von Tauben, besonders schlechte Nester zu bauen.
-
-<a id="schweinehaltung"></a>
-#### Schweinehaltung · 4 Folgen
-_Artgerechte Haltung von Schweinen, gesetzliche Vorgaben für Mastschweine und Schweine im Tierheim._
-
-- Folge 194 „Akani, Igelnot & ein Gerichtsurteil“ ab 0:05:21: Vorgestellt wird der Tierheimeber Norbert, dessen Stimmungswechsel vermutlich auf Langeweile und Unterforderung zurückgehen, und es wird erläutert, was artgerechte Schweinehaltung mit Suhlen, Graben und Beschäftigung bedeutet.
-- Folge 143 „Tierleid in der Nutztierhaltung - warum tut sich nichts?“ ab 0:05:58: Konkrete Vorgaben werden erläutert: 0,75 Quadratmeter für ein ausgewachsenes Mastschwein von über 110 Kilo, bei Tierwohl-Label 0,95 Quadratmeter plus ein Beschäftigungsobjekt wie eine Eisenkette.
-- Folge 40 „Die vergessenen Hühner“ ab 0:05:48: Schilderung eines Ferkelzuchtbetriebs mit Kastenständen, minimalem Platzangebot, unerreichbarem Stroh und einer Eisenkette als angebliche Beschäftigung – und Kritik am Tierwohl-Siegel. Gegenbild vom Lebenshof: Schweine brauchen Wühlen, Suhlen, Kauen, Sozialkontakt und Bewegungsfreiheit.
-- Folge 11 „Abhaken & Aufräumen“ ab 0:53:07: Rückblick auf den öffentlichen Streit mit der Landwirtschaftsministerin über die Kastenstandhaltung von Sauen, bei der lediglich zehn Zentimeter mehr Platz durchgesetzt wurden. Bericht vom Treffen mit einem Schweinehalter, der Sachzwänge, Preisdruck und gesellschaftliche Erwartungen schildert und einräumt, mit 300 gut gehaltenen Tieren ähnlich viel verdienen zu können wie mit 3.500.
-- Folge 11 „Abhaken & Aufräumen“ ab 1:00:45: Beschrieben werden ausrutschende, überschwere Muttersauen auf Plastikgittern und Mastschweine auf Betonspalten ohne Möglichkeit, Individualdistanz zu halten.
 
 <a id="urzeitkrebse"></a>
 #### Urzeitkrebse und Garnelen als Heimtiere · 4 Folgen

@@ -21,7 +21,8 @@ def render(table: list[dict[str, Any]], indexed: int, total: int) -> str:
         "# Themen im Podcast „Tierisch Menschlich“",
         "",
         f"Automatisch erstellter Themenindex: {len(table)} Themen aus {indexed} von {total} Folgen. "
-        "Zeitangaben gelten für Spotify und die Podcast-Feeds (identische Audiodateien). "
+        "Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder "
+        "abweichende Fassungen können Spotify-Zeitmarken abweichen. "
         "Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).",
         "",
         "## Übersicht",
