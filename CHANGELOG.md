@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.18.4](https://github.com/hurrtz/rasseportrait/compare/v3.18.3...v3.18.4) (2026-10-22)
+
+
+### Features
+
+* add Tosa portrait from episode 18 ([c6df3d5](https://github.com/hurrtz/rasseportrait/commit/c6df3d54ee4d55b051629fbe5fee505ea3ca900e))
+* index Hundewissen topics from episode 18 ([43919ab](https://github.com/hurrtz/rasseportrait/commit/43919ab948a3ec540cf1832617136cb18ee3f6f3))
+
 ### [3.18.3](https://github.com/hurrtz/rasseportrait/compare/v3.18.2...v3.18.3) (2026-10-17)
 
 
