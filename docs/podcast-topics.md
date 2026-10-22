@@ -1,12 +1,12 @@
 # Themen im Podcast „Tierisch Menschlich“
 
-Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder abweichende Fassungen können Spotify-Zeitmarken abweichen. Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
+Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder abweichende Fassungen können Spotify-Zeitmarken abweichen. Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
 
 ## Übersicht
 
 | Kategorie | Themen | Themen mit ≥ 3 Folgen |
 |---|---|---|
-| Verhalten & Kommunikation | 122 | 38 |
+| Verhalten & Kommunikation | 122 | 39 |
 | Erziehung & Training | 95 | 38 |
 | Gesundheit & Medizin | 112 | 31 |
 | Ernährung | 26 | 7 |
@@ -17,7 +17,7 @@ Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitanga
 | Hundesport & Arbeitshunde | 37 | 14 |
 | Mensch-Hund-Beziehung | 55 | 18 |
 | Wissenschaft & Forschung | 113 | 11 |
-| Andere Tiere | 159 | 40 |
+| Andere Tiere | 160 | 40 |
 
 ## Alle Themen nach Anzahl der Folgen
 
@@ -36,10 +36,10 @@ Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitanga
 | [Tierschutzpolitik](#tierschutzpolitik) | Recht & Politik | 21 |
 | [Alte Hunde](#alte-hunde) | Haltung & Pflege | 19 |
 | [Kinder und Hunde](#kinder-und-hunde) | Mensch-Hund-Beziehung | 18 |
+| [Rückruf](#rueckruf) | Erziehung & Training | 17 |
 | [Auslandstierschutz](#auslandstierschutz) | Tierschutz & Ethik | 16 |
 | [Rasselisten und Listenhunde](#rasselisten) | Recht & Politik | 16 |
 | [Rassetypisches Verhalten](#rassetypisches-verhalten) | Zucht & Rassen | 16 |
-| [Rückruf](#rueckruf) | Erziehung & Training | 16 |
 | [Sozialisierung](#welpen-sozialisierung) | Verhalten & Kommunikation | 16 |
 | [Zuchtauswahl nach Wesen](#zuchtselektion-wesen) | Zucht & Rassen | 16 |
 | [Graureiher am Gartenteich](#reiher-am-gartenteich) | Andere Tiere | 15 |
@@ -190,6 +190,7 @@ Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitanga
 | [Verhalten von Gartenvögeln](#vogelverhalten) | Andere Tiere | 5 |
 | [Verzwergung und Teacup-Hunde](#verzwergung) | Zucht & Rassen | 5 |
 | [Vorurteile gegenüber Tierschutzhunden](#tierschutzhunde) | Tierschutz & Ethik | 5 |
+| [Wie Hunde Menschen lesen](#anpassung-an-menschen) | Verhalten & Kommunikation | 5 |
 | [Wildschweinbegegnungen](#wildschweine) | Andere Tiere | 5 |
 | [Wildtierrettung](#wildtierrettung) | Tierschutz & Ethik | 5 |
 | [Xylit-Vergiftung](#xylit-vergiftung) | Gesundheit & Medizin | 5 |
@@ -251,7 +252,6 @@ Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitanga
 | [Wachverhalten](#wachverhalten) | Verhalten & Kommunikation | 4 |
 | [Weißzucht und Scheckung](#scheckenzucht) | Zucht & Rassen | 4 |
 | [Welpenaufzucht](#welpenaufzucht) | Haltung & Pflege | 4 |
-| [Wie Hunde Menschen lesen](#anpassung-an-menschen) | Verhalten & Kommunikation | 4 |
 | [Wolfshunde und Wolfshybriden](#wolfshunde) | Zucht & Rassen | 4 |
 | [Zahnpflege und Zahngesundheit](#zahnpflege) | Haltung & Pflege | 4 |
 | [Abwesenheit der Bezugsperson](#trennungsangst) | Mensch-Hund-Beziehung | 3 |
@@ -282,6 +282,7 @@ Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitanga
 | [Ehrliche Rasseinformation von Züchtern](#zuechterauswahl) | Zucht & Rassen | 3 |
 | [Empathie bei Tieren](#empathie-bei-tieren) | Wissenschaft & Forschung | 3 |
 | [Erbrechen beim Hund](#erbrechen-beim-hund) | Gesundheit & Medizin | 3 |
+| [Fehlverknüpfungen](#fehlverknuepfung) | Verhalten & Kommunikation | 3 |
 | [Ferndiagnosen](#ferndiagnose) | Erziehung & Training | 3 |
 | [Fleischindustrie](#fleischindustrie) | Tierschutz & Ethik | 3 |
 | [Flexileine](#flexileine) | Erziehung & Training | 3 |
@@ -405,7 +406,6 @@ Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitanga
 | [Fahrradfahren mit Hund](#fahrradfahren-mit-hund) | Haltung & Pflege | 2 |
 | [Fake News über ein Haustierverbot](#fake-news-tierhaltung) | Recht & Politik | 2 |
 | [Farbwahrnehmung des Hundes](#farbwahrnehmung) | Wissenschaft & Forschung | 2 |
-| [Fehlverknüpfungen](#fehlverknuepfung) | Verhalten & Kommunikation | 2 |
 | [Fell und Klima](#fellstruktur-und-klima) | Zucht & Rassen | 2 |
 | [Fischkonsum](#fischkonsum-und-meere) | Tierschutz & Ethik | 2 |
 | [Fledermäuse](#fledermaeuse) | Andere Tiere | 2 |
@@ -534,6 +534,7 @@ Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitanga
 | [Stresssignale](#stresssignale) | Verhalten & Kommunikation | 2 |
 | [Stressverarbeitung](#stressverarbeitung-hund) | Verhalten & Kommunikation | 2 |
 | [Stubenreinheit](#stubenreinheit) | Erziehung & Training | 2 |
+| [Studienqualität in der Hundeforschung](#studienqualitaet-hundeforschung) | Wissenschaft & Forschung | 2 |
 | [Terrier](#terrier-wesen) | Zucht & Rassen | 2 |
 | [Theory of Mind bei Tieren](#theory-of-mind-hund) | Wissenschaft & Forschung | 2 |
 | [Tierheime unterstützen](#tierheim-unterstuetzen) | Tierschutz & Ethik | 2 |
@@ -692,6 +693,7 @@ Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitanga
 | [Erinnerung und Gedächtnis](#erinnerung-und-gedaechtnis) | Wissenschaft & Forschung | 1 |
 | [Erkrankungen bei Meerschweinchen](#meerschweinchen-gesundheit) | Andere Tiere | 1 |
 | [Ernährung und Verhalten](#fuetterung-und-verhalten) | Ernährung | 1 |
+| [Ernährung und Vorratshaltung von Eichhörnchen](#eichhoernchen-ernaehrung) | Andere Tiere | 1 |
 | [Ernährung von Kaninchen und Meerschweinchen](#kaninchen-ernaehrung) | Andere Tiere | 1 |
 | [Ernährung älterer Hunde](#seniorhund-ernaehrung) | Ernährung | 1 |
 | [Erste Hilfe beim Menschen](#erste-hilfe-mensch) | Gesundheit & Medizin | 1 |
@@ -1037,7 +1039,6 @@ Automatisch erstellter Themenindex: 1106 Themen aus 261 von 261 Folgen. Zeitanga
 | [Strategisches Denken bei Hunden](#kognition-hund) | Verhalten & Kommunikation | 1 |
 | [Stress bei Katzen](#katzenverhalten-stress) | Andere Tiere | 1 |
 | [Strukturen für Tierrettungen](#tierrettung-strukturen) | Tierschutz & Ethik | 1 |
-| [Studienqualität in der Hundeforschung](#studienqualitaet-hundeforschung) | Wissenschaft & Forschung | 1 |
 | [Tabletten eingeben](#tablettengabe) | Gesundheit & Medizin | 1 |
 | [Thermoregulation](#thermoregulation-hund) | Gesundheit & Medizin | 1 |
 | [Thundershirt und Angstwesten](#thundershirt-angstweste) | Verhalten & Kommunikation | 1 |
@@ -1437,6 +1438,17 @@ _Wenn Hunde Futter, Spielzeug oder Gegenstände gegenüber Menschen oder Artgeno
 - Folge 45 „ASMR, Beagle und Wombatkacke“ ab 0:19:51 (kurz): Beagle sind meist sozial verträglich, zeigen aber häufig stark ausgeprägte Futteraggression gegenüber Artgenossen und Menschen.
 - Folge 5 „Wolf & Hund, Futterbeuteltraining und eine besondere Gästin“ ab 0:17:47: Martin erklärt, dass seine Hündin Emma Menschen gegenüber entspannt, gegenüber Hunden am Futter aber kompromisslos aggressiv reagiert, und Katharina berichtet von selektiver Futteraggression bei ihrer Hündin.
 
+<a id="anpassung-an-menschen"></a>
+#### Wie Hunde Menschen lesen · 5 Folgen
+_Wie genau Hunde ihre Menschen beobachten, feinste Signale und Gesichtsausdrücke deuten und ihr Verhalten daran anpassen._
+
+- Folge 21 „Dogsharing, Dialekte & sprechende Hunde“ ab 0:13:54: Die Geschichte des Rechenpferds Kluger Hans zeigt, dass Tiere feinste mimische Veränderungen ihres Gegenübers lesen und darauf reagieren – eine Fähigkeit, die Hunde noch ausgeprägter besitzen.
+- Folge 10 „Hundeführerschein, Homöopathie & Matschbrötchen“ ab 0:49:22 (kurz): Am Beispiel von Luna wird erklärt, wie genau Hunde menschliche Signale wie Einschlafen beobachten und ihr Verhalten daran anpassen.
+- Folge 8 „Böse Hunde, gute Hunde“ ab 0:41:15: Eine Studie zeigt, dass Hunde Gesichtsausdrücke von Menschen auch nur anhand der Augenpartie zuverlässig als freundlich oder aggressiv einordnen.
+- Folge 1 „Wie alles begann“ ab 0:53:08: Hunde lernen individuell, welches Verhalten bei ihrem Menschen wirkt; Emma setzt gezielt Ruhe und Blickkontakt ein, während sie mit anderen Bezugspersonen über Dynamik interagiert.
+- Folge 18 „Chaos, Linsen, Leberwurst“ ab 0:33:47: Eine Wiener MRT-Studie liefert Hinweise auf Belohnungsreaktionen beim Anblick lächelnder Menschen und unterschiedliche Hirnaktivitätsmuster für Gesichtsausdrücke; Katharina und Martin diskutieren mögliche Deutungen und deren Grenzen.
+- Folge 18 „Chaos, Linsen, Leberwurst“ ab 0:42:09: Martin erzählt von einem wenig trainierten Pudel, der bei der Suche nach einem verlorenen Ball Blickkontakt aufnimmt und seinem ausgestreckten Arm folgt, obwohl beide sich noch kaum kennen.
+
 <a id="angst-beim-hund"></a>
 #### Angst beim Hund · 4 Folgen
 _Wie Angst entsteht, wie stark sie das Leben von Hund und Mensch bestimmen kann und warum auch souveräne Halter ängstliche Hunde haben können._
@@ -1483,15 +1495,6 @@ _Was Wachsamkeit bei Hunden bedeutet, vom bellfreudigen Melden bis zur ernsthaft
 - Folge 118 „Getreidefreie Folge“ ab 0:29:58 (kurz): Rütter beschreibt, wie seine Hündin Emma nur zur Straßenseite hin Alarm bellt und einmal einen unangemeldeten Gärtner biss, und erklärt, dass Wachsamkeit in seiner Anwesenheit ausbleibt.
 - Folge 92 „Erfolg gegen den illegalen Welpenhandel!“ ab 0:33:32: Rütter kritisiert die Einordnung des Hovawart als toleranter Familienhund, beschreibt anhand eigener Erlebnisse extreme Wachsamkeit und Schärfe, den Dauerstress für Halter und die Fehlselektion in Zuchttauglichkeitsprüfungen, die wehrhaftes und beutebetontes Verhalten belohnten.
 
-<a id="anpassung-an-menschen"></a>
-#### Wie Hunde Menschen lesen · 4 Folgen
-_Wie genau Hunde ihre Menschen beobachten, feinste Signale und Gesichtsausdrücke deuten und ihr Verhalten daran anpassen._
-
-- Folge 21 „Dogsharing, Dialekte & sprechende Hunde“ ab 0:13:54: Die Geschichte des Rechenpferds Kluger Hans zeigt, dass Tiere feinste mimische Veränderungen ihres Gegenübers lesen und darauf reagieren – eine Fähigkeit, die Hunde noch ausgeprägter besitzen.
-- Folge 10 „Hundeführerschein, Homöopathie & Matschbrötchen“ ab 0:49:22 (kurz): Am Beispiel von Luna wird erklärt, wie genau Hunde menschliche Signale wie Einschlafen beobachten und ihr Verhalten daran anpassen.
-- Folge 8 „Böse Hunde, gute Hunde“ ab 0:41:15: Eine Studie zeigt, dass Hunde Gesichtsausdrücke von Menschen auch nur anhand der Augenpartie zuverlässig als freundlich oder aggressiv einordnen.
-- Folge 1 „Wie alles begann“ ab 0:53:08: Hunde lernen individuell, welches Verhalten bei ihrem Menschen wirkt; Emma setzt gezielt Ruhe und Blickkontakt ein, während sie mit anderen Bezugspersonen über Dynamik interagiert.
-
 <a id="aggression-sozial"></a>
 #### Aggression gegenüber Artgenossen · 3 Folgen
 _Sozial motivierte Aggression zwischen Hunden, auch im eigenen Haushalt, und welche Rolle der Mensch dabei spielt._
@@ -1532,6 +1535,14 @@ _Wie Hunde drohen, welche subtilen Warnsignale einem Angriff vorausgehen und war
 - Folge 31 „Weihnachtstrauma, wenn Hunde Urlaub machen & ein extremer Fall von Angst“ ab 0:19:18: Martin erklärt am Beispiel des steifen Anschleichens mit gesenktem Kopf, dass solches Drohverhalten früh gestoppt werden muss, weil es sich sonst über Jahre zu echter Aggression auswachsen kann.
 - Folge 4 „Drohgebärden im Freilauf, eine Emma sieht rot & Beauty Tipps“ ab 0:16:05: Anschleichen mit tiefem Kopf, steifer Haltung und aufgestellter Rückenbürste ist eine territorial motivierte Drohung, auf die andere Hunde beschwichtigend reagieren; Rütter erklärt, warum man dieses Üben unterbrechen und über Rückruf mit Schleppleine kontrollieren sollte.
 - Folge 4 „Drohgebärden im Freilauf, eine Emma sieht rot & Beauty Tipps“ ab 0:21:35 (kurz): Vorboten wie Tempowechsel, Trippeln und langes Fixieren zeigen die beginnende Drohung an; Umlenken sollte über Bewegung statt Leckerchen erfolgen.
+
+<a id="fehlverknuepfung"></a>
+#### Fehlverknüpfungen · 3 Folgen
+_Wie Hunde negative Erlebnisse mit zufälligen Reizen oder Orten verknüpfen und wie man solche Verknüpfungen wieder positiv überlagert._
+
+- Folge 117 „Wo bleibt der Hausverstand?“ ab 0:43:26: Rütter erläutert, wie Hunde negative Erlebnisse mit zufälligen Reizen verknüpfen, etwa Radfahrer nach einem Weidezaunschlag, und wie Stromimpulsgeräte in der Jagdhundeausbildung falsche Verknüpfungen erzeugen.
+- Folge 74 „Martin als Hoteldieb, Almas Strandangst & kotzende Hunde“ ab 0:33:25: Anhand von Almas Strandangst nach lauten Kitesurfern wird erklärt, wie Hunde negative Erlebnisse mit Orten verknüpfen und wie man sie über Euphorie und Erfolgserlebnisse wieder an solche Orte gewöhnt.
+- Folge 18 „Chaos, Linsen, Leberwurst“ ab 0:22:53: Nach einem mutmaßlich durch statische Aufladung verursachten Schlag meidet Trudi die Futtertube; Katharina schildert die Sorge, dass das unangenehme Erlebnis auch den Rückruf negativ verknüpfen könnte.
 
 <a id="futterklau"></a>
 #### Futterklau · 3 Folgen
@@ -1626,13 +1637,6 @@ _Wie Hunde durch dauerhaften Druck in erlernte Hilflosigkeit geraten und wie das
 - Folge 14 „Gebrauchsanweisung fürs Gehirn“ ab 0:12:09: Martin Rütter beschreibt Hunde, die durch dauerhaften Druck in erlernte Hilflosigkeit geraten, für Laien unauffällig wirken und therapeutisch nur schwer erreichbar sind. Der Neuropsychologe erklärt, wie Konditionierungsexperimente mit Stromschlägen an Hunden in den 1960ern zur Entdeckung der erlernten Hilflosigkeit führten und wie das später bei Menschen untersucht wurde.
 - Folge 14 „Gebrauchsanweisung fürs Gehirn“ ab 0:20:14: Diskussion darüber, ob Rasse, Typ und Erfahrung beeinflussen, wie schnell ein Hund in erlernte Hilflosigkeit rutscht, und dass Trainer dies bei Jungtieren oft einschätzen können.
 - Folge 13 „Meeresungeheuer, Horrorwölfe und blinde Dackel“ ab 0:47:49 (kurz): Ankündigung eines Gesprächs mit einem Neurowissenschaftler, wobei erwähnt wird, dass die Forschung zur erlernten Hilflosigkeit mit Versuchen an Hunden begann.
-
-<a id="fehlverknuepfung"></a>
-#### Fehlverknüpfungen · 2 Folgen
-_Wie Hunde negative Erlebnisse mit zufälligen Reizen oder Orten verknüpfen und wie man solche Verknüpfungen wieder positiv überlagert._
-
-- Folge 117 „Wo bleibt der Hausverstand?“ ab 0:43:26: Rütter erläutert, wie Hunde negative Erlebnisse mit zufälligen Reizen verknüpfen, etwa Radfahrer nach einem Weidezaunschlag, und wie Stromimpulsgeräte in der Jagdhundeausbildung falsche Verknüpfungen erzeugen.
-- Folge 74 „Martin als Hoteldieb, Almas Strandangst & kotzende Hunde“ ab 0:33:25: Anhand von Almas Strandangst nach lauten Kitesurfern wird erklärt, wie Hunde negative Erlebnisse mit Orten verknüpfen und wie man sie über Euphorie und Erfolgserlebnisse wieder an solche Orte gewöhnt.
 
 <a id="frustrationstoleranz"></a>
 #### Frustrationstoleranz · 2 Folgen
@@ -2139,7 +2143,7 @@ _Wie sich Unsicherheit und Stress in übertriebener Aktivität und Übersprungsh
 ### Erziehung & Training
 
 <a id="rueckruf"></a>
-#### Rückruf · 16 Folgen
+#### Rückruf · 17 Folgen
 _Aufbau und Training eines zuverlässigen Rückrufs, auch unter Ablenkung, mit Pfeifsignal oder Lockruf._
 
 - Folge 239 „Platz im Podcast“ ab 0:32:35: Katharina berichtet, wie sie den Rückruf mit steigenden Reizen aufbaut, ihre Hündin aus dem Spiel mit einem anderen Hund über den Namen zurückholte und wie Hund und Mensch einander lesen lernen.
@@ -2159,6 +2163,7 @@ _Aufbau und Training eines zuverlässigen Rückrufs, auch unter Ablenkung, mit P
 - Folge 4 „Drohgebärden im Freilauf, eine Emma sieht rot & Beauty Tipps“ ab 0:42:22: Rütter erklärt, dass Hunde nur zurückkommen, wenn es sich lohnt, und dass Training in ablenkungsarmer Umgebung beginnt sowie das Anleinen nicht als Nachteil erlebt werden darf.
 - Folge 4 „Flaute für den Tierschutz“ ab 0:59:53: Anschauliche Schilderung, wie ein Hund lernt, durch Abstandhalten und Trödeln Aufmerksamkeit und Leckerchen zu erzielen, und wie man den Rückruf stattdessen kleinschrittig positiv aufbauen kann.
 - Folge 1 „Wir sind wieder da -  Tierisch Menschlich kehrt zurück!“ ab 0:28:31 (kurz): Katharina berichtet, dass Trudi sich in der Eifel trotz jagdlicher Ambitionen von Wiesel und Wasserhuhn abrufen ließ.
+- Folge 18 „Chaos, Linsen, Leberwurst“ ab 0:21:31: Katharina beschreibt Trudis Interesse an bewegten Tieren und die Suche nach einer besonders attraktiven Futterbelohnung für den Rückruf unter Ablenkung.
 
 <a id="jagdverhalten"></a>
 #### Jagdverhalten im Training · 14 Folgen
@@ -8556,6 +8561,13 @@ _Wie Stickstoffeinträge Ökosysteme überdüngen, spezialisierte Arten verdrän
 - Folge 80 „Ticketbetrug, Fakeprofile & Schadstoffe im Hundespielzeug“ ab 1:02:42: Vorstellung eines Sachbuchs über Stickstoffeinträge, die magerkraft-angepasste Arten verdrängen und so die Biodiversität und ganze Nahrungsketten schädigen.
 - Folge 48 „Zuchtverbote, Eutrophierung & Helmpflicht für Chihuahuas“ ab 1:13:10: Hinweis auf eine Radioreportage zum Stickstoffproblem, das Ökosysteme überdüngt, Pflanzen wie Blaubeeren verdrängt und zum Artensterben beiträgt.
 
+<a id="studienqualitaet-hundeforschung"></a>
+#### Studienqualität in der Hundeforschung · 2 Folgen
+_Woran man methodisch schwache Studien zum Verhalten von Hunden und Wölfen erkennt._
+
+- Folge 77 „Weinende Hunde, kognitive Flexibilität, & 2 Happy Ends“ ab 0:17:50: Am Beispiel von Straßenhund-Beobachtungen mit angefüttertem Futter kritisieren beide methodisch schwache Untersuchungen zu Hunde- und Wolfsverhalten.
+- Folge 18 „Chaos, Linsen, Leberwurst“ ab 0:36:02: Die kleine Stichprobe mit vorwiegend Border Collies, das Training für den Scanner und die besondere Versuchssituation begrenzen die Übertragbarkeit der Ergebnisse und erlauben keine eindeutigen Aussagen über das subjektive Erleben der Hunde.
+
 <a id="theory-of-mind-hund"></a>
 #### Theory of Mind bei Tieren · 2 Folgen
 _Ob Hunde und andere Tiere sich vorstellen können, was im Kopf anderer vorgeht._
@@ -9010,12 +9022,6 @@ _Wie Tiere Allianzen bilden und in der Gruppe Schutz suchen, etwa Bonobo-Weibche
 
 - Folge 125 „Kampf der Urzeitkrebse“ ab 1:04:06 (kurz): Bonobo-Weibchen bilden über Gruppen hinweg Allianzen, um lästige Männchen zu vertreiben, was auf tief verankertes Koalitionsverhalten hinweist.
 - Folge 125 „Kampf der Urzeitkrebse“ ab 1:05:58 (kurz): Erläuterung, dass Hunde und Menschen bei Unsicherheit Schutz in der Nähe anderer suchen, weil die Gruppe potenzielle Angreifer hemmt.
-
-<a id="studienqualitaet-hundeforschung"></a>
-#### Studienqualität in der Hundeforschung · 1 Folgen
-_Woran man methodisch schwache Studien zum Verhalten von Hunden und Wölfen erkennt._
-
-- Folge 77 „Weinende Hunde, kognitive Flexibilität, & 2 Happy Ends“ ab 0:17:50: Am Beispiel von Straßenhund-Beobachtungen mit angefüttertem Futter kritisieren beide methodisch schwache Untersuchungen zu Hunde- und Wolfsverhalten.
 
 <a id="tierwissen-hoehlenmalerei"></a>
 #### Tierwissen in Höhlenmalereien · 1 Folgen
@@ -9779,6 +9785,12 @@ _Wie Märchen und Erzählungen schon Kindern ein Bild vom gefährlichen Wolf ver
 _Welche Krankheiten wie Milbenbefall, Zahnprobleme und Blasensteine bei Meerschweinchen häufig sind._
 
 - Folge 78 „Mehr Herz für Kleinsäuger!“ ab 0:51:04: Häufig sind Milbenbefall mit Juckreiz, Zahnprobleme durch das besondere Gebiss sowie ernährungsbedingte Verdauungsstörungen und Blasensteine.
+
+<a id="eichhoernchen-ernaehrung"></a>
+#### Ernährung und Vorratshaltung von Eichhörnchen · 1 Folgen
+_Was Eichhörnchen fressen und wie sie Nahrung als Vorrat lagern, etwa durch das Trocknen von Pilzen._
+
+- Folge 18 „Chaos, Linsen, Leberwurst“ ab 0:25:12: Katharina berichtet, dass Eichhörnchen auch Jungvögel fressen und verschiedene Hörnchenarten Pilze zum Trocknen in Ästen ablegen, um Vorräte anzulegen.
 
 <a id="kaninchen-ernaehrung"></a>
 #### Ernährung von Kaninchen und Meerschweinchen · 1 Folgen

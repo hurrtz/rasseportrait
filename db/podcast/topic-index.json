@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-17",
- "indexedEpisodes": 261,
- "totalEpisodes": 261,
+ "generated": "2026-10-22",
+ "indexedEpisodes": 262,
+ "totalEpisodes": 262,
  "episodes": {
   "rtl-240": {
    "feed": "rtl",
@@ -7683,6 +7683,33 @@
     "breed": "Bullmastiff",
     "start": "0:16:18"
    }
+  },
+  "mina-018": {
+   "feed": "mina",
+   "number": 18,
+   "title": "Chaos, Linsen, Leberwurst",
+   "published": "2026-10-22",
+   "duration": 3500,
+   "audioUrl": "https://ais.audiorella.com/podcasts/1781-tierisch-menschlich/256995-new-episode.mp3?v=2&awCollectionId=julephosting_698de7bf5e693&awEpisodeId=256995",
+   "breeds": [
+    {
+     "name": "Tosa",
+     "start": "0:11:55"
+    },
+    {
+     "name": "Border Collie",
+     "start": "0:34:22"
+    },
+    {
+     "name": "Pudel",
+     "start": "0:40:44"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Tosa",
+    "start": "0:11:55"
+   }
   }
  },
  "topics": [
@@ -14819,6 +14846,250 @@
    "episodeCount": 18
   },
   {
+   "id": "rueckruf",
+   "label": "Rückruf",
+   "category": "Erziehung & Training",
+   "description": "Aufbau und Training eines zuverlässigen Rückrufs, auch unter Ablenkung, mit Pfeifsignal oder Lockruf.",
+   "entries": [
+    {
+     "label": "Rückruftraining mit Ablenkung",
+     "episode": "rtl-239",
+     "number": 239,
+     "title": "Platz im Podcast",
+     "start": "0:32:35",
+     "end": "0:33:47",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Katharina berichtet, wie sie den Rückruf mit steigenden Reizen aufbaut, ihre Hündin aus dem Spiel mit einem anderen Hund über den Namen zurückholte und wie Hund und Mensch einander lesen lernen."
+     ]
+    },
+    {
+     "label": "Rückruf und wachsender Radius im Wald",
+     "episode": "rtl-238",
+     "number": 238,
+     "title": "Faltenhund & Faktenflut",
+     "start": "0:13:09",
+     "end": "0:15:45",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Katharina berichtet, dass ihre Hündin den Radius vergrößert, um Rückruf-Leckerchen zu provozieren; Martin empfiehlt Richtungswechsel, Verstecken hinter Bäumen und kein Belohnen des Suchspiels."
+     ]
+    },
+    {
+     "label": "Rückruf und Apportieren als Trainingsprioritäten",
+     "episode": "rtl-232",
+     "number": 232,
+     "title": "Willkommen, Trudi!",
+     "start": "0:20:51",
+     "end": "0:21:44",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Empfohlen wird früh der Rückruf an der Schleppleine sowie Apportieren als Alternative zum Jagen."
+     ]
+    },
+    {
+     "label": "Hundepfeife als Rückrufsignal",
+     "episode": "rtl-232",
+     "number": 232,
+     "title": "Willkommen, Trudi!",
+     "start": "0:28:22",
+     "end": "0:31:09",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Bei mehreren Haltern empfiehlt Martin eine Pfeife statt Wortsignalen und rät, Pfeifen überall verfügbar zu haben."
+     ]
+    },
+    {
+     "label": "Rückruf bei starker Ablenkung",
+     "episode": "rtl-187",
+     "number": 187,
+     "title": "Tierbegegnungen",
+     "start": "0:02:45",
+     "end": "0:04:00",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Alma entdeckt beim Spaziergang zwei Katzenbabys und kommt trotz hoher Ablenkung zurück – ein Beispiel dafür, wie viel ein zuverlässiger Rückruf in solchen Momenten wert ist."
+     ]
+    },
+    {
+     "label": "Rückruftraining bei tauben Hunden mit Vibrationshalsband",
+     "episode": "rtl-164",
+     "number": 164,
+     "title": "Sofafolge",
+     "start": "0:18:13",
+     "end": "0:23:55",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Hörerfrage zum Abruf einer 14-jährigen tauben Hündin: Rütter empfiehlt ein echtes Vibrationshalsband (Abgrenzung zu verbotenen Stromreizgeräten), positive Konditionierung wie beim Pfiff, vorsichtiges Angewöhnen mit Tuch unter dem Halsband und einen engen Radius von maximal etwa 50 Metern bei sinnesbeeinträchtigten Hunden."
+     ]
+    },
+    {
+     "label": "Rückruf und Vorsitz",
+     "episode": "rtl-136",
+     "number": 136,
+     "title": "Positive Verstärkung, Männergrippe & Zurückrudern",
+     "start": "0:44:16",
+     "end": "0:45:05",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Am Beispiel des Rückrufs wird der Unterschied zwischen Jagd- und Imponiergalopp erläutert und kritisiert, dass das enge Vorsitz auf Hundeplätzen für Hunde distanzlos wirkt."
+     ]
+    },
+    {
+     "label": "Locken und Motivieren beim Rückruf",
+     "episode": "rtl-133",
+     "number": 133,
+     "title": "Ein bisschen Paloma",
+     "start": "0:27:20",
+     "end": "0:27:50",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter beschreibt, dass Frauen beim Locken oft deutlich euphorischer klingen als Männer, warnt aber vor dauerhaft übertriebenem Lockverhalten, das sich später nicht mehr steigern lässt."
+     ]
+    },
+    {
+     "label": "Wenn der Rückruf zur Verhandlung wird",
+     "episode": "rtl-126",
+     "number": 126,
+     "title": "Podcast live: Entenschnabelmaulkorb",
+     "start": "1:00:46",
+     "end": "1:01:58",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Anekdote über eine Hundehalterin im Park, die ihren Hund mit Drohungen und Erklärungen zurückrufen will – ein Beispiel für vermenschlichte Kommunikation."
+     ]
+    },
+    {
+     "label": "Einflussbereich und Stoppen des Hundes",
+     "episode": "rtl-124",
+     "number": 124,
+     "title": "Klimakleberstreit & Schattenhunde",
+     "start": "0:29:03",
+     "end": "0:31:25",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Wie man Hunde im Freilauf in einem Radius von etwa 30 Metern und damit im eigenen Einflussbereich hält, um sie bei Wildkontakt rechtzeitig stoppen zu können."
+     ]
+    },
+    {
+     "label": "Typische Fehler beim Rückruftraining",
+     "episode": "rtl-087",
+     "number": 87,
+     "title": "Tierisch menschlich auf dem Kilimandscharo",
+     "start": "0:33:18",
+     "end": "0:39:47",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Auf eine Hörerfrage erklärt Martin Rütter die häufigsten Fehler beim Rückruf: falsches Timing der Belohnung, zu viel Ablenkung am Anfang, fehlendes Jackpot-Leckerchen und zu große Berechenbarkeit.",
+      "Es wird erläutert, wie Hunde zum Trödeln erzogen werden, wenn sie nur bei großer Entfernung gerufen und belohnt werden, und dass auch Nähe belohnt werden sollte."
+     ]
+    },
+    {
+     "label": "Freilauf und Rückruf bei jagdlich motivierten Hunden",
+     "episode": "rtl-059",
+     "number": 59,
+     "title": "Glow down, Hund & Baby, Lösseler Waldgeist",
+     "start": "1:11:22",
+     "end": "1:13:05",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion darüber, dass Freilauf für Podencos nur mit viel Training und auf geeigneten Flächen möglich ist und dass auch gut erzogene Hunde wie Emma in kleinen Stadtparks nicht abgeleint werden sollten, weil der Punkt ohne Umkehr schnell verpasst wird."
+     ]
+    },
+    {
+     "label": "Erziehung und Rückruf beim Beagle",
+     "episode": "rtl-045",
+     "number": 45,
+     "title": "ASMR, Beagle und Wombatkacke",
+     "start": "0:23:00",
+     "end": "0:25:01",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Empfehlung, in den ersten Lebensjahren die Bindung zu den eigenen Menschen zu stärken, Fremdfütterung zu vermeiden und den Hund draußen durch Beschäftigung und Ansprache bei sich zu halten."
+     ]
+    },
+    {
+     "label": "Rückruf und soziale Orientierung",
+     "episode": "rtl-007",
+     "number": 7,
+     "title": "Ballverrückte Hunde",
+     "start": "0:16:53",
+     "end": "0:18:03",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Warum der Rückruf bei sozial orientierten Hütehunden besonders leicht funktioniert und weshalb Rütter seine Hündin im Wald immer im Auge behält."
+     ]
+    },
+    {
+     "label": "Rückruftraining: Warum Hunde nicht kommen",
+     "episode": "rtl-004",
+     "number": 4,
+     "title": "Drohgebärden im Freilauf, eine Emma sieht rot & Beauty Tipps",
+     "start": "0:42:22",
+     "end": "0:44:45",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Rütter erklärt, dass Hunde nur zurückkommen, wenn es sich lohnt, und dass Training in ablenkungsarmer Umgebung beginnt sowie das Anleinen nicht als Nachteil erlebt werden darf."
+     ]
+    },
+    {
+     "label": "Rückruf und Trödeln an der Belohnung",
+     "episode": "mina-004",
+     "number": 4,
+     "title": "Flaute für den Tierschutz",
+     "start": "0:59:53",
+     "end": "1:02:18",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Anschauliche Schilderung, wie ein Hund lernt, durch Abstandhalten und Trödeln Aufmerksamkeit und Leckerchen zu erzielen, und wie man den Rückruf stattdessen kleinschrittig positiv aufbauen kann."
+     ]
+    },
+    {
+     "label": "Rückruf",
+     "episode": "mina-001",
+     "number": 1,
+     "title": "Wir sind wieder da -  Tierisch Menschlich kehrt zurück!",
+     "start": "0:28:31",
+     "end": "0:29:22",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Katharina berichtet, dass Trudi sich in der Eifel trotz jagdlicher Ambitionen von Wiesel und Wasserhuhn abrufen ließ."
+     ]
+    },
+    {
+     "label": "Eine besondere Belohnung für den Rückruf",
+     "episode": "mina-018",
+     "number": 18,
+     "title": "Chaos, Linsen, Leberwurst",
+     "start": "0:21:31",
+     "end": "0:22:53",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Katharina beschreibt Trudis Interesse an bewegten Tieren und die Suche nach einer besonders attraktiven Futterbelohnung für den Rückruf unter Ablenkung."
+     ]
+    }
+   ],
+   "episodeCount": 17
+  },
+  {
    "id": "auslandstierschutz",
    "label": "Auslandstierschutz",
    "category": "Tierschutz & Ethik",
@@ -15531,237 +15802,6 @@
      "kind": "discussion",
      "summaries": [
       "Am Beispiel von Emma als Hütehund-Terrier-Mischling werden typische Wesensmerkmale beschrieben: Arbeitsfreude und Abwechslungsbedarf beim Hütehund, Ungeduld und Hartnäckigkeit beim Terrier."
-     ]
-    }
-   ],
-   "episodeCount": 16
-  },
-  {
-   "id": "rueckruf",
-   "label": "Rückruf",
-   "category": "Erziehung & Training",
-   "description": "Aufbau und Training eines zuverlässigen Rückrufs, auch unter Ablenkung, mit Pfeifsignal oder Lockruf.",
-   "entries": [
-    {
-     "label": "Rückruftraining mit Ablenkung",
-     "episode": "rtl-239",
-     "number": 239,
-     "title": "Platz im Podcast",
-     "start": "0:32:35",
-     "end": "0:33:47",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Katharina berichtet, wie sie den Rückruf mit steigenden Reizen aufbaut, ihre Hündin aus dem Spiel mit einem anderen Hund über den Namen zurückholte und wie Hund und Mensch einander lesen lernen."
-     ]
-    },
-    {
-     "label": "Rückruf und wachsender Radius im Wald",
-     "episode": "rtl-238",
-     "number": 238,
-     "title": "Faltenhund & Faktenflut",
-     "start": "0:13:09",
-     "end": "0:15:45",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Katharina berichtet, dass ihre Hündin den Radius vergrößert, um Rückruf-Leckerchen zu provozieren; Martin empfiehlt Richtungswechsel, Verstecken hinter Bäumen und kein Belohnen des Suchspiels."
-     ]
-    },
-    {
-     "label": "Rückruf und Apportieren als Trainingsprioritäten",
-     "episode": "rtl-232",
-     "number": 232,
-     "title": "Willkommen, Trudi!",
-     "start": "0:20:51",
-     "end": "0:21:44",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Empfohlen wird früh der Rückruf an der Schleppleine sowie Apportieren als Alternative zum Jagen."
-     ]
-    },
-    {
-     "label": "Hundepfeife als Rückrufsignal",
-     "episode": "rtl-232",
-     "number": 232,
-     "title": "Willkommen, Trudi!",
-     "start": "0:28:22",
-     "end": "0:31:09",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Bei mehreren Haltern empfiehlt Martin eine Pfeife statt Wortsignalen und rät, Pfeifen überall verfügbar zu haben."
-     ]
-    },
-    {
-     "label": "Rückruf bei starker Ablenkung",
-     "episode": "rtl-187",
-     "number": 187,
-     "title": "Tierbegegnungen",
-     "start": "0:02:45",
-     "end": "0:04:00",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Alma entdeckt beim Spaziergang zwei Katzenbabys und kommt trotz hoher Ablenkung zurück – ein Beispiel dafür, wie viel ein zuverlässiger Rückruf in solchen Momenten wert ist."
-     ]
-    },
-    {
-     "label": "Rückruftraining bei tauben Hunden mit Vibrationshalsband",
-     "episode": "rtl-164",
-     "number": 164,
-     "title": "Sofafolge",
-     "start": "0:18:13",
-     "end": "0:23:55",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Hörerfrage zum Abruf einer 14-jährigen tauben Hündin: Rütter empfiehlt ein echtes Vibrationshalsband (Abgrenzung zu verbotenen Stromreizgeräten), positive Konditionierung wie beim Pfiff, vorsichtiges Angewöhnen mit Tuch unter dem Halsband und einen engen Radius von maximal etwa 50 Metern bei sinnesbeeinträchtigten Hunden."
-     ]
-    },
-    {
-     "label": "Rückruf und Vorsitz",
-     "episode": "rtl-136",
-     "number": 136,
-     "title": "Positive Verstärkung, Männergrippe & Zurückrudern",
-     "start": "0:44:16",
-     "end": "0:45:05",
-     "weight": "side",
-     "kind": "discussion",
-     "summaries": [
-      "Am Beispiel des Rückrufs wird der Unterschied zwischen Jagd- und Imponiergalopp erläutert und kritisiert, dass das enge Vorsitz auf Hundeplätzen für Hunde distanzlos wirkt."
-     ]
-    },
-    {
-     "label": "Locken und Motivieren beim Rückruf",
-     "episode": "rtl-133",
-     "number": 133,
-     "title": "Ein bisschen Paloma",
-     "start": "0:27:20",
-     "end": "0:27:50",
-     "weight": "side",
-     "kind": "discussion",
-     "summaries": [
-      "Rütter beschreibt, dass Frauen beim Locken oft deutlich euphorischer klingen als Männer, warnt aber vor dauerhaft übertriebenem Lockverhalten, das sich später nicht mehr steigern lässt."
-     ]
-    },
-    {
-     "label": "Wenn der Rückruf zur Verhandlung wird",
-     "episode": "rtl-126",
-     "number": 126,
-     "title": "Podcast live: Entenschnabelmaulkorb",
-     "start": "1:00:46",
-     "end": "1:01:58",
-     "weight": "side",
-     "kind": "anecdote",
-     "summaries": [
-      "Anekdote über eine Hundehalterin im Park, die ihren Hund mit Drohungen und Erklärungen zurückrufen will – ein Beispiel für vermenschlichte Kommunikation."
-     ]
-    },
-    {
-     "label": "Einflussbereich und Stoppen des Hundes",
-     "episode": "rtl-124",
-     "number": 124,
-     "title": "Klimakleberstreit & Schattenhunde",
-     "start": "0:29:03",
-     "end": "0:31:25",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Wie man Hunde im Freilauf in einem Radius von etwa 30 Metern und damit im eigenen Einflussbereich hält, um sie bei Wildkontakt rechtzeitig stoppen zu können."
-     ]
-    },
-    {
-     "label": "Typische Fehler beim Rückruftraining",
-     "episode": "rtl-087",
-     "number": 87,
-     "title": "Tierisch menschlich auf dem Kilimandscharo",
-     "start": "0:33:18",
-     "end": "0:39:47",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Auf eine Hörerfrage erklärt Martin Rütter die häufigsten Fehler beim Rückruf: falsches Timing der Belohnung, zu viel Ablenkung am Anfang, fehlendes Jackpot-Leckerchen und zu große Berechenbarkeit.",
-      "Es wird erläutert, wie Hunde zum Trödeln erzogen werden, wenn sie nur bei großer Entfernung gerufen und belohnt werden, und dass auch Nähe belohnt werden sollte."
-     ]
-    },
-    {
-     "label": "Freilauf und Rückruf bei jagdlich motivierten Hunden",
-     "episode": "rtl-059",
-     "number": 59,
-     "title": "Glow down, Hund & Baby, Lösseler Waldgeist",
-     "start": "1:11:22",
-     "end": "1:13:05",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Diskussion darüber, dass Freilauf für Podencos nur mit viel Training und auf geeigneten Flächen möglich ist und dass auch gut erzogene Hunde wie Emma in kleinen Stadtparks nicht abgeleint werden sollten, weil der Punkt ohne Umkehr schnell verpasst wird."
-     ]
-    },
-    {
-     "label": "Erziehung und Rückruf beim Beagle",
-     "episode": "rtl-045",
-     "number": 45,
-     "title": "ASMR, Beagle und Wombatkacke",
-     "start": "0:23:00",
-     "end": "0:25:01",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Empfehlung, in den ersten Lebensjahren die Bindung zu den eigenen Menschen zu stärken, Fremdfütterung zu vermeiden und den Hund draußen durch Beschäftigung und Ansprache bei sich zu halten."
-     ]
-    },
-    {
-     "label": "Rückruf und soziale Orientierung",
-     "episode": "rtl-007",
-     "number": 7,
-     "title": "Ballverrückte Hunde",
-     "start": "0:16:53",
-     "end": "0:18:03",
-     "weight": "side",
-     "kind": "discussion",
-     "summaries": [
-      "Warum der Rückruf bei sozial orientierten Hütehunden besonders leicht funktioniert und weshalb Rütter seine Hündin im Wald immer im Auge behält."
-     ]
-    },
-    {
-     "label": "Rückruftraining: Warum Hunde nicht kommen",
-     "episode": "rtl-004",
-     "number": 4,
-     "title": "Drohgebärden im Freilauf, eine Emma sieht rot & Beauty Tipps",
-     "start": "0:42:22",
-     "end": "0:44:45",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Rütter erklärt, dass Hunde nur zurückkommen, wenn es sich lohnt, und dass Training in ablenkungsarmer Umgebung beginnt sowie das Anleinen nicht als Nachteil erlebt werden darf."
-     ]
-    },
-    {
-     "label": "Rückruf und Trödeln an der Belohnung",
-     "episode": "mina-004",
-     "number": 4,
-     "title": "Flaute für den Tierschutz",
-     "start": "0:59:53",
-     "end": "1:02:18",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Anschauliche Schilderung, wie ein Hund lernt, durch Abstandhalten und Trödeln Aufmerksamkeit und Leckerchen zu erzielen, und wie man den Rückruf stattdessen kleinschrittig positiv aufbauen kann."
-     ]
-    },
-    {
-     "label": "Rückruf",
-     "episode": "mina-001",
-     "number": 1,
-     "title": "Wir sind wieder da -  Tierisch Menschlich kehrt zurück!",
-     "start": "0:28:31",
-     "end": "0:29:22",
-     "weight": "side",
-     "kind": "anecdote",
-     "summaries": [
-      "Katharina berichtet, dass Trudi sich in der Eifel trotz jagdlicher Ambitionen von Wiesel und Wasserhuhn abrufen ließ."
      ]
     }
    ],
@@ -34248,6 +34288,93 @@
    "episodeCount": 5
   },
   {
+   "id": "anpassung-an-menschen",
+   "label": "Wie Hunde Menschen lesen",
+   "category": "Verhalten & Kommunikation",
+   "description": "Wie genau Hunde ihre Menschen beobachten, feinste Signale und Gesichtsausdrücke deuten und ihr Verhalten daran anpassen.",
+   "entries": [
+    {
+     "label": "Der kluge Hans und das Lesen menschlicher Signale",
+     "episode": "rtl-021",
+     "number": 21,
+     "title": "Dogsharing, Dialekte & sprechende Hunde",
+     "start": "0:13:54",
+     "end": "0:16:06",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Die Geschichte des Rechenpferds Kluger Hans zeigt, dass Tiere feinste mimische Veränderungen ihres Gegenübers lesen und darauf reagieren – eine Fähigkeit, die Hunde noch ausgeprägter besitzen."
+     ]
+    },
+    {
+     "label": "Hunde als Beobachter des Menschen",
+     "episode": "rtl-010",
+     "number": 10,
+     "title": "Hundeführerschein, Homöopathie & Matschbrötchen",
+     "start": "0:49:22",
+     "end": "0:50:41",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Am Beispiel von Luna wird erklärt, wie genau Hunde menschliche Signale wie Einschlafen beobachten und ihr Verhalten daran anpassen."
+     ]
+    },
+    {
+     "label": "Hunde lesen menschliche Gesichter",
+     "episode": "rtl-008",
+     "number": 8,
+     "title": "Böse Hunde, gute Hunde",
+     "start": "0:41:15",
+     "end": "0:42:10",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Eine Studie zeigt, dass Hunde Gesichtsausdrücke von Menschen auch nur anhand der Augenpartie zuverlässig als freundlich oder aggressiv einordnen."
+     ]
+    },
+    {
+     "label": "Wie Hunde ihre Menschen lesen",
+     "episode": "rtl-001",
+     "number": 1,
+     "title": "Wie alles begann",
+     "start": "0:53:08",
+     "end": "0:55:06",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Hunde lernen individuell, welches Verhalten bei ihrem Menschen wirkt; Emma setzt gezielt Ruhe und Blickkontakt ein, während sie mit anderen Bezugspersonen über Dynamik interagiert."
+     ]
+    },
+    {
+     "label": "Wie Hunde menschliche Gesichtsausdrücke verarbeiten",
+     "episode": "mina-018",
+     "number": 18,
+     "title": "Chaos, Linsen, Leberwurst",
+     "start": "0:33:47",
+     "end": "0:40:33",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Eine Wiener MRT-Studie liefert Hinweise auf Belohnungsreaktionen beim Anblick lächelnder Menschen und unterschiedliche Hirnaktivitätsmuster für Gesichtsausdrücke; Katharina und Martin diskutieren mögliche Deutungen und deren Grenzen."
+     ]
+    },
+    {
+     "label": "Ein Pudel nutzt Blickkontakt und Zeigegesten bei der Ballsuche",
+     "episode": "mina-018",
+     "number": 18,
+     "title": "Chaos, Linsen, Leberwurst",
+     "start": "0:42:09",
+     "end": "0:43:54",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Martin erzählt von einem wenig trainierten Pudel, der bei der Suche nach einem verlorenen Ball Blickkontakt aufnimmt und seinem ausgestreckten Arm folgt, obwohl beide sich noch kaum kennen."
+     ]
+    }
+   ],
+   "episodeCount": 5
+  },
+  {
    "id": "wildschweine",
    "label": "Wildschweinbegegnungen",
    "category": "Andere Tiere",
@@ -38158,67 +38285,6 @@
    "episodeCount": 4
   },
   {
-   "id": "anpassung-an-menschen",
-   "label": "Wie Hunde Menschen lesen",
-   "category": "Verhalten & Kommunikation",
-   "description": "Wie genau Hunde ihre Menschen beobachten, feinste Signale und Gesichtsausdrücke deuten und ihr Verhalten daran anpassen.",
-   "entries": [
-    {
-     "label": "Der kluge Hans und das Lesen menschlicher Signale",
-     "episode": "rtl-021",
-     "number": 21,
-     "title": "Dogsharing, Dialekte & sprechende Hunde",
-     "start": "0:13:54",
-     "end": "0:16:06",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Die Geschichte des Rechenpferds Kluger Hans zeigt, dass Tiere feinste mimische Veränderungen ihres Gegenübers lesen und darauf reagieren – eine Fähigkeit, die Hunde noch ausgeprägter besitzen."
-     ]
-    },
-    {
-     "label": "Hunde als Beobachter des Menschen",
-     "episode": "rtl-010",
-     "number": 10,
-     "title": "Hundeführerschein, Homöopathie & Matschbrötchen",
-     "start": "0:49:22",
-     "end": "0:50:41",
-     "weight": "side",
-     "kind": "anecdote",
-     "summaries": [
-      "Am Beispiel von Luna wird erklärt, wie genau Hunde menschliche Signale wie Einschlafen beobachten und ihr Verhalten daran anpassen."
-     ]
-    },
-    {
-     "label": "Hunde lesen menschliche Gesichter",
-     "episode": "rtl-008",
-     "number": 8,
-     "title": "Böse Hunde, gute Hunde",
-     "start": "0:41:15",
-     "end": "0:42:10",
-     "weight": "main",
-     "kind": "news",
-     "summaries": [
-      "Eine Studie zeigt, dass Hunde Gesichtsausdrücke von Menschen auch nur anhand der Augenpartie zuverlässig als freundlich oder aggressiv einordnen."
-     ]
-    },
-    {
-     "label": "Wie Hunde ihre Menschen lesen",
-     "episode": "rtl-001",
-     "number": 1,
-     "title": "Wie alles begann",
-     "start": "0:53:08",
-     "end": "0:55:06",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Hunde lernen individuell, welches Verhalten bei ihrem Menschen wirkt; Emma setzt gezielt Ruhe und Blickkontakt ein, während sie mit anderen Bezugspersonen über Dynamik interagiert."
-     ]
-    }
-   ],
-   "episodeCount": 4
-  },
-  {
    "id": "wolfshunde",
    "label": "Wolfshunde und Wolfshybriden",
    "category": "Zucht & Rassen",
@@ -39735,6 +39801,54 @@
      "kind": "listener_question",
      "summaries": [
       "Hörerzuschriften liefern Erklärungen, warum Hunde zum Erbrechen weichen Untergrund wählen – am plausibelsten erscheint der bessere Halt während der Krampfbewegungen."
+     ]
+    }
+   ],
+   "episodeCount": 3
+  },
+  {
+   "id": "fehlverknuepfung",
+   "label": "Fehlverknüpfungen",
+   "category": "Verhalten & Kommunikation",
+   "description": "Wie Hunde negative Erlebnisse mit zufälligen Reizen oder Orten verknüpfen und wie man solche Verknüpfungen wieder positiv überlagert.",
+   "entries": [
+    {
+     "label": "Fehlverknüpfungen und Stromreizgeräte",
+     "episode": "rtl-117",
+     "number": 117,
+     "title": "Wo bleibt der Hausverstand?",
+     "start": "0:43:26",
+     "end": "0:45:08",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter erläutert, wie Hunde negative Erlebnisse mit zufälligen Reizen verknüpfen, etwa Radfahrer nach einem Weidezaunschlag, und wie Stromimpulsgeräte in der Jagdhundeausbildung falsche Verknüpfungen erzeugen."
+     ]
+    },
+    {
+     "label": "Lokale Verknüpfung von Angst und Training über positive Emotionen",
+     "episode": "rtl-074",
+     "number": 74,
+     "title": "Martin als Hoteldieb, Almas Strandangst & kotzende Hunde",
+     "start": "0:33:25",
+     "end": "0:38:35",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Anhand von Almas Strandangst nach lauten Kitesurfern wird erklärt, wie Hunde negative Erlebnisse mit Orten verknüpfen und wie man sie über Euphorie und Erfolgserlebnisse wieder an solche Orte gewöhnt."
+     ]
+    },
+    {
+     "label": "Ein elektrischer Schlag an der Futtertube",
+     "episode": "mina-018",
+     "number": 18,
+     "title": "Chaos, Linsen, Leberwurst",
+     "start": "0:22:53",
+     "end": "0:24:21",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Nach einem mutmaßlich durch statische Aufladung verursachten Schlag meidet Trudi die Futtertube; Katharina schildert die Sorge, dass das unangenehme Erlebnis auch den Rückruf negativ verknüpfen könnte."
      ]
     }
    ],
@@ -45437,41 +45551,6 @@
    "episodeCount": 2
   },
   {
-   "id": "fehlverknuepfung",
-   "label": "Fehlverknüpfungen",
-   "category": "Verhalten & Kommunikation",
-   "description": "Wie Hunde negative Erlebnisse mit zufälligen Reizen oder Orten verknüpfen und wie man solche Verknüpfungen wieder positiv überlagert.",
-   "entries": [
-    {
-     "label": "Fehlverknüpfungen und Stromreizgeräte",
-     "episode": "rtl-117",
-     "number": 117,
-     "title": "Wo bleibt der Hausverstand?",
-     "start": "0:43:26",
-     "end": "0:45:08",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Rütter erläutert, wie Hunde negative Erlebnisse mit zufälligen Reizen verknüpfen, etwa Radfahrer nach einem Weidezaunschlag, und wie Stromimpulsgeräte in der Jagdhundeausbildung falsche Verknüpfungen erzeugen."
-     ]
-    },
-    {
-     "label": "Lokale Verknüpfung von Angst und Training über positive Emotionen",
-     "episode": "rtl-074",
-     "number": 74,
-     "title": "Martin als Hoteldieb, Almas Strandangst & kotzende Hunde",
-     "start": "0:33:25",
-     "end": "0:38:35",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Anhand von Almas Strandangst nach lauten Kitesurfern wird erklärt, wie Hunde negative Erlebnisse mit Orten verknüpfen und wie man sie über Euphorie und Erfolgserlebnisse wieder an solche Orte gewöhnt."
-     ]
-    }
-   ],
-   "episodeCount": 2
-  },
-  {
    "id": "fellstruktur-und-klima",
    "label": "Fell und Klima",
    "category": "Zucht & Rassen",
@@ -50193,6 +50272,41 @@
    "episodeCount": 2
   },
   {
+   "id": "studienqualitaet-hundeforschung",
+   "label": "Studienqualität in der Hundeforschung",
+   "category": "Wissenschaft & Forschung",
+   "description": "Woran man methodisch schwache Studien zum Verhalten von Hunden und Wölfen erkennt.",
+   "entries": [
+    {
+     "label": "Fragwürdige Studien zu Hunden und Wölfen",
+     "episode": "rtl-077",
+     "number": 77,
+     "title": "Weinende Hunde, kognitive Flexibilität, & 2 Happy Ends",
+     "start": "0:17:50",
+     "end": "0:20:06",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Am Beispiel von Straßenhund-Beobachtungen mit angefüttertem Futter kritisieren beide methodisch schwache Untersuchungen zu Hunde- und Wolfsverhalten."
+     ]
+    },
+    {
+     "label": "Grenzen kleiner MRT-Studien mit Hunden",
+     "episode": "mina-018",
+     "number": 18,
+     "title": "Chaos, Linsen, Leberwurst",
+     "start": "0:36:02",
+     "end": "0:38:57",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Die kleine Stichprobe mit vorwiegend Border Collies, das Training für den Scanner und die besondere Versuchssituation begrenzen die Übertragbarkeit der Ergebnisse und erlauben keine eindeutigen Aussagen über das subjektive Erleben der Hunde."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
    "id": "terrier-wesen",
    "label": "Terrier",
    "category": "Zucht & Rassen",
@@ -54518,6 +54632,28 @@
      "kind": "discussion",
      "summaries": [
       "Diskussion über Nahrungsergänzungsmittel, zu proteinreiches Hochleistungsfutter bei überdrehten Hunden, angepasste Fütterung alter Hunde und Futtermittelallergien als Ursache von Unruhe."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "eichhoernchen-ernaehrung",
+   "label": "Ernährung und Vorratshaltung von Eichhörnchen",
+   "category": "Andere Tiere",
+   "description": "Was Eichhörnchen fressen und wie sie Nahrung als Vorrat lagern, etwa durch das Trocknen von Pilzen.",
+   "entries": [
+    {
+     "label": "Eichhörnchen fressen Jungvögel und trocknen Pilze",
+     "episode": "mina-018",
+     "number": 18,
+     "title": "Chaos, Linsen, Leberwurst",
+     "start": "0:25:12",
+     "end": "0:28:55",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Katharina berichtet, dass Eichhörnchen auch Jungvögel fressen und verschiedene Hörnchenarten Pilze zum Trocknen in Ästen ablegen, um Vorräte anzulegen."
      ]
     }
    ],
@@ -62329,28 +62465,6 @@
      "kind": "discussion",
      "summaries": [
       "Debatte über sinnvolle Strukturen für künftige Strandungsfälle, Videodokumentation als Lernmittel und den Vergleich mit Kameras in Schlachthöfen."
-     ]
-    }
-   ],
-   "episodeCount": 1
-  },
-  {
-   "id": "studienqualitaet-hundeforschung",
-   "label": "Studienqualität in der Hundeforschung",
-   "category": "Wissenschaft & Forschung",
-   "description": "Woran man methodisch schwache Studien zum Verhalten von Hunden und Wölfen erkennt.",
-   "entries": [
-    {
-     "label": "Fragwürdige Studien zu Hunden und Wölfen",
-     "episode": "rtl-077",
-     "number": 77,
-     "title": "Weinende Hunde, kognitive Flexibilität, & 2 Happy Ends",
-     "start": "0:17:50",
-     "end": "0:20:06",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Am Beispiel von Straßenhund-Beobachtungen mit angefüttertem Futter kritisieren beide methodisch schwache Untersuchungen zu Hunde- und Wolfsverhalten."
      ]
     }
    ],
