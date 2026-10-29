@@ -23,11 +23,11 @@
 }
 
 .lead {
-  max-width: 620px;
   margin: 0;
   font-size: 15px;
   line-height: 1.45;
   color: var(--rp-text-muted);
+  text-wrap: pretty;
 }
 
 /* ---------- search and area chips ---------- */
@@ -37,6 +37,10 @@
   flex-direction: column;
   gap: 14px;
   padding: 0 var(--rp-gutter) 20px;
+}
+
+.search {
+  width: 100%;
 }
 
 /* a horizontal scroll row below md */
@@ -408,15 +412,8 @@
   }
 
   .tools {
-    flex-direction: row;
-    align-items: flex-start;
     gap: 16px;
     padding: 0 var(--rp-gutter-desktop) 28px;
-  }
-
-  .search {
-    flex-shrink: 0;
-    width: 300px;
   }
 
   .chips {
