@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.18.5](https://github.com/hurrtz/rasseportrait/compare/v3.18.4...v3.18.5) (2026-10-29)
+
+
+### Features
+
+* add English Pointer portrait from episode 19 ([1a23694](https://github.com/hurrtz/rasseportrait/commit/1a23694be30eb2b650d7365fe0575591468ef642))
+* index Hundewissen topics from episode 19 ([4eaf3e4](https://github.com/hurrtz/rasseportrait/commit/4eaf3e44ce33dfb5f709ea9b648d734844d947bf))
+
 ### [3.18.4](https://github.com/hurrtz/rasseportrait/compare/v3.18.3...v3.18.4) (2026-10-22)
 
 
