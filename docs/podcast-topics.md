@@ -1,16 +1,16 @@
 # Themen im Podcast „Tierisch Menschlich“
 
-Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder abweichende Fassungen können Spotify-Zeitmarken abweichen. Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
+Automatisch erstellter Themenindex: 1107 Themen aus 263 von 263 Folgen. Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder abweichende Fassungen können Spotify-Zeitmarken abweichen. Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
 
 ## Übersicht
 
 | Kategorie | Themen | Themen mit ≥ 3 Folgen |
 |---|---|---|
-| Verhalten & Kommunikation | 122 | 39 |
+| Verhalten & Kommunikation | 122 | 40 |
 | Erziehung & Training | 95 | 38 |
 | Gesundheit & Medizin | 112 | 31 |
 | Ernährung | 26 | 7 |
-| Haltung & Pflege | 95 | 30 |
+| Haltung & Pflege | 95 | 31 |
 | Zucht & Rassen | 88 | 32 |
 | Tierschutz & Ethik | 161 | 69 |
 | Recht & Politik | 43 | 13 |
@@ -25,7 +25,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 |---|---|---|
 | [Qualzuchten](#qualzuchten) | Zucht & Rassen | 109 |
 | [Illegaler Welpenhandel](#welpenhandel) | Tierschutz & Ethik | 54 |
-| [Erbkrankheiten und rassetypische Erkrankungen](#erbkrankheiten) | Gesundheit & Medizin | 39 |
+| [Erbkrankheiten und rassetypische Erkrankungen](#erbkrankheiten) | Gesundheit & Medizin | 40 |
 | [Jagdhunde](#jagdhunde) | Hundesport & Arbeitshunde | 38 |
 | [Schutzhunde](#schutzhunde) | Hundesport & Arbeitshunde | 31 |
 | [Unnötige Produkte für Hunde und Katzen](#unsinnige-hundeprodukte) | Haltung & Pflege | 28 |
@@ -36,10 +36,10 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Tierschutzpolitik](#tierschutzpolitik) | Recht & Politik | 21 |
 | [Alte Hunde](#alte-hunde) | Haltung & Pflege | 19 |
 | [Kinder und Hunde](#kinder-und-hunde) | Mensch-Hund-Beziehung | 18 |
+| [Rassetypisches Verhalten](#rassetypisches-verhalten) | Zucht & Rassen | 17 |
 | [Rückruf](#rueckruf) | Erziehung & Training | 17 |
 | [Auslandstierschutz](#auslandstierschutz) | Tierschutz & Ethik | 16 |
 | [Rasselisten und Listenhunde](#rasselisten) | Recht & Politik | 16 |
-| [Rassetypisches Verhalten](#rassetypisches-verhalten) | Zucht & Rassen | 16 |
 | [Sozialisierung](#welpen-sozialisierung) | Verhalten & Kommunikation | 16 |
 | [Zuchtauswahl nach Wesen](#zuchtselektion-wesen) | Zucht & Rassen | 16 |
 | [Graureiher am Gartenteich](#reiher-am-gartenteich) | Andere Tiere | 15 |
@@ -66,6 +66,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Welpenkauf und seriöse Züchter](#welpenkauf) | Zucht & Rassen | 11 |
 | [Wildtiere und Exoten in Privathaltung](#wildtiere-als-haustiere) | Tierschutz & Ethik | 11 |
 | [Zwingerhaltung](#zwingerhaltung) | Haltung & Pflege | 11 |
+| [Angst vor Hunden](#angst-vor-hunden) | Verhalten & Kommunikation | 10 |
 | [Bindung zwischen Mensch und Hund](#mensch-hund-bindung) | Mensch-Hund-Beziehung | 10 |
 | [Den passenden Hund auswählen](#hundeauswahl) | Mensch-Hund-Beziehung | 10 |
 | [Die passende Rasse wählen](#hundekauf-beratung) | Zucht & Rassen | 10 |
@@ -78,7 +79,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Straßenhunde](#strassenhunde) | Tierschutz & Ethik | 10 |
 | [Territorialverhalten](#territorialverhalten) | Verhalten & Kommunikation | 10 |
 | [Tierhilfe in Kriegsgebieten](#tierhilfe-ukraine) | Tierschutz & Ethik | 10 |
-| [Angst vor Hunden](#angst-vor-hunden) | Verhalten & Kommunikation | 9 |
 | [Blühflächen für Insekten](#insektenfreundlicher-garten) | Andere Tiere | 9 |
 | [Domestikation und Abstammung des Hundes](#domestikation) | Wissenschaft & Forschung | 9 |
 | [Geräuschangst](#geraeuschangst) | Verhalten & Kommunikation | 9 |
@@ -148,6 +148,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Merle-Faktor](#merle-faktor) | Zucht & Rassen | 6 |
 | [Pelz](#pelz) | Tierschutz & Ethik | 6 |
 | [Pferdetraining](#pferdetraining) | Andere Tiere | 6 |
+| [Polizei- und Diensthunde](#diensthunde) | Hundesport & Arbeitshunde | 6 |
 | [Rassebeschreibungen](#rassebeschreibungen-kritik) | Zucht & Rassen | 6 |
 | [Regeln, Grenzen und Konsequenz](#regeln-und-grenzen) | Erziehung & Training | 6 |
 | [Reizschwelle und Nervenstärke](#sensible-hunde) | Verhalten & Kommunikation | 6 |
@@ -166,18 +167,19 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Geschichte des Hundetrainings](#geschichte-hundetraining) | Erziehung & Training | 5 |
 | [Hundesportarten](#hundesport) | Hundesport & Arbeitshunde | 5 |
 | [Insektenstiche](#insektenstiche) | Gesundheit & Medizin | 5 |
+| [Invasive Arten](#invasive-arten) | Andere Tiere | 5 |
 | [Inzucht und kleiner Genpool](#genpool-inzucht) | Zucht & Rassen | 5 |
 | [Kleine Hunde](#kleinhunde-verhalten) | Haltung & Pflege | 5 |
 | [Kleintierhaltung](#kleintierhaltung) | Andere Tiere | 5 |
 | [Markierverhalten](#markierverhalten) | Verhalten & Kommunikation | 5 |
 | [Neuer Hund nach dem Verlust](#neuer-hund-nach-verlust) | Mensch-Hund-Beziehung | 5 |
 | [Orcas](#orcas) | Andere Tiere | 5 |
-| [Polizei- und Diensthunde](#diensthunde) | Hundesport & Arbeitshunde | 5 |
 | [Ressourcenverteidigung](#ressourcenverteidigung) | Verhalten & Kommunikation | 5 |
 | [Schweinehaltung](#schweinehaltung) | Andere Tiere | 5 |
 | [Seniorhunde aus dem Tierschutz](#tierschutz-vermittlung) | Tierschutz & Ethik | 5 |
 | [Spenden im Tierschutz](#tierschutz-spenden) | Tierschutz & Ethik | 5 |
 | [Sprachverständnis von Hunden](#wortverstaendnis-hund) | Wissenschaft & Forschung | 5 |
+| [Spürhunde](#spuerhunde) | Hundesport & Arbeitshunde | 5 |
 | [Therapie- und Besuchshunde](#therapiehunde) | Mensch-Hund-Beziehung | 5 |
 | [Tiere im Flugzeug](#tiertransport-flugzeug) | Haltung & Pflege | 5 |
 | [Tierleid in sozialen Medien](#tierquaelerei-social-media) | Tierschutz & Ethik | 5 |
@@ -199,8 +201,10 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Angst beim Hund](#angst-beim-hund) | Verhalten & Kommunikation | 4 |
 | [Apportieren](#apportieren) | Hundesport & Arbeitshunde | 4 |
 | [Artenschutz](#artenschutz) | Tierschutz & Ethik | 4 |
+| [Artenspürhunde in Naturschutz und Forschung](#artenspuerhunde) | Hundesport & Arbeitshunde | 4 |
 | [Aufreiten](#aufreiten) | Verhalten & Kommunikation | 4 |
 | [Aussetzen von Tieren](#tierschutz-aussetzen) | Tierschutz & Ethik | 4 |
+| [Belohnung mit Futter und Spiel](#motivation-belohnung) | Erziehung & Training | 4 |
 | [Beutefangverhalten](#beutefangverhalten) | Verhalten & Kommunikation | 4 |
 | [Bissverletzungen](#bissverletzungen) | Gesundheit & Medizin | 4 |
 | [Bundestierschutzbeauftragte](#tierschutzbeauftragte) | Recht & Politik | 4 |
@@ -223,7 +227,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Igelschutz](#igel) | Andere Tiere | 4 |
 | [Impfungen](#impfungen) | Gesundheit & Medizin | 4 |
 | [Impulskontrolle](#impulskontrolle) | Erziehung & Training | 4 |
-| [Invasive Arten](#invasive-arten) | Andere Tiere | 4 |
 | [Klimawandel und Tierwelt](#klimakrise-und-tiere) | Wissenschaft & Forschung | 4 |
 | [Kot- und Urinproben](#kotproben) | Gesundheit & Medizin | 4 |
 | [Lebensweise von Wölfen](#woelfe) | Andere Tiere | 4 |
@@ -237,7 +240,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Rattenjagd mit Hunden](#rattenbekaempfung-hunde) | Hundesport & Arbeitshunde | 4 |
 | [Riesenwuchs und Zucht auf Masse](#riesenwuchs) | Zucht & Rassen | 4 |
 | [Ruhe- und Abschalttraining](#abschalttraining) | Erziehung & Training | 4 |
-| [Spürhunde](#spuerhunde) | Hundesport & Arbeitshunde | 4 |
 | [Stierkampf](#stierkampf) | Tierschutz & Ethik | 4 |
 | [Strafe und Korrektur](#strafreize-im-training) | Erziehung & Training | 4 |
 | [Tiere bei Naturkatastrophen](#tierrettung-bei-katastrophen) | Tierschutz & Ethik | 4 |
@@ -259,16 +261,15 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Agrarpolitik und Nutztierhaltung](#agrarpolitik) | Recht & Politik | 3 |
 | [Alternativmedizin und Heilsversprechen](#alternativmedizin-tier) | Gesundheit & Medizin | 3 |
 | [Andere Hundehalter ansprechen](#beratung-fremder-halter) | Mensch-Hund-Beziehung | 3 |
+| [Angst vor dem Tierarzt](#tierarztbesuch) | Verhalten & Kommunikation | 3 |
 | [Angstaggression](#angstaggression) | Verhalten & Kommunikation | 3 |
 | [Anonyme Strafe](#anonyme-strafe) | Erziehung & Training | 3 |
 | [Anspringen](#anspringen) | Verhalten & Kommunikation | 3 |
 | [Argumentieren im Tierschutz](#tierschutz-argumentation) | Tierschutz & Ethik | 3 |
-| [Artenspürhunde in Naturschutz und Forschung](#artenspuerhunde) | Hundesport & Arbeitshunde | 3 |
 | [Aussagekraft von Rasseaussagen](#rasseklischees) | Zucht & Rassen | 3 |
 | [Bedrohte Rassen und Erhaltungszucht](#rasseerhalt) | Zucht & Rassen | 3 |
 | [Beliebte Hunderassen und Welpenstatistik](#beliebteste-hunderassen) | Zucht & Rassen | 3 |
 | [Bellen im Garten und am Zaun](#bellen-am-zaun) | Erziehung & Training | 3 |
-| [Belohnung mit Futter und Spiel](#motivation-belohnung) | Erziehung & Training | 3 |
 | [Beruf Hundetrainer](#hundetrainer-beruf) | Erziehung & Training | 3 |
 | [Betteln](#betteln-am-tisch) | Erziehung & Training | 3 |
 | [Biodiversität](#biodiversitaet) | Wissenschaft & Forschung | 3 |
@@ -314,6 +315,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Kindern die Nutztierhaltung erklären](#bildung-tierschutz-kinder) | Tierschutz & Ethik | 3 |
 | [Kognitive Dissonanz beim Tierkonsum](#kognitive-dissonanz-tierkonsum) | Tierschutz & Ethik | 3 |
 | [Kryptorchismus](#kryptorchismus) | Gesundheit & Medizin | 3 |
+| [Kälteschutz für Hunde](#hundemantel-kaelteschutz) | Haltung & Pflege | 3 |
 | [Körperbau im Rassestandard](#koerperbau-hund) | Zucht & Rassen | 3 |
 | [Lebererkrankungen](#lebererkrankung) | Gesundheit & Medizin | 3 |
 | [Mischlinge](#mischlinge) | Zucht & Rassen | 3 |
@@ -370,7 +372,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Anbindehaltung](#anbindehaltung) | Tierschutz & Ethik | 2 |
 | [Anfängerhund](#anfaengerhund) | Zucht & Rassen | 2 |
 | [Angeln](#angeln) | Tierschutz & Ethik | 2 |
-| [Angst vor dem Tierarzt](#tierarztbesuch) | Verhalten & Kommunikation | 2 |
 | [Animal Hoarding](#animal-hoarding) | Tierschutz & Ethik | 2 |
 | [Arbeit mit Hundehaltern im Training](#kundenarbeit-hundetraining) | Erziehung & Training | 2 |
 | [Artgerechte Hundehaltung](#artgerechte-haltung) | Haltung & Pflege | 2 |
@@ -464,6 +465,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Intelligenz von Tieren](#tierintelligenz) | Wissenschaft & Forschung | 2 |
 | [Intelligenz von Vögeln](#vogelintelligenz) | Andere Tiere | 2 |
 | [Jungvögel: Nestling oder Ästling](#jungvoegel-nestling-aestling) | Andere Tiere | 2 |
+| [Jägersprache](#jagdsprache) | Tierschutz & Ethik | 2 |
 | [Kastanien und Eicheln](#kastanien-gefahr) | Gesundheit & Medizin | 2 |
 | [Kastenstand und Ferkelschutzkorb](#kastenstand) | Tierschutz & Ethik | 2 |
 | [Kauartikel](#kauartikel) | Ernährung | 2 |
@@ -472,7 +474,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Kopfschräglegen](#kopfschraeglegen) | Verhalten & Kommunikation | 2 |
 | [Kreuzungszucht](#kreuzungszucht) | Zucht & Rassen | 2 |
 | [Käfighaltung](#kaefighaltung) | Tierschutz & Ethik | 2 |
-| [Kälteschutz für Hunde](#hundemantel-kaelteschutz) | Haltung & Pflege | 2 |
 | [Körpersprache des Menschen](#koerpersprache-mensch) | Verhalten & Kommunikation | 2 |
 | [Leckmatte](#leckmatte) | Erziehung & Training | 2 |
 | [Legehennenhaltung](#legehennen) | Tierschutz & Ethik | 2 |
@@ -482,6 +483,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Lerngesetze gelten für alle Hunde](#gebrauchshunde-vs-familienhunde) | Erziehung & Training | 2 |
 | [Libellen](#libellen) | Andere Tiere | 2 |
 | [Läufigkeit und Verhalten](#laeufigkeit) | Verhalten & Kommunikation | 2 |
+| [Medical Training](#medical-training) | Erziehung & Training | 2 |
 | [Menschen im Tierschutz](#tierschutzarbeit-mit-menschen) | Tierschutz & Ethik | 2 |
 | [Mondioring](#mondioring) | Hundesport & Arbeitshunde | 2 |
 | [Moorschutz](#moorschutz) | Wissenschaft & Forschung | 2 |
@@ -837,7 +839,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Jane Goodall und die Verhaltensforschung](#verhaltensforschung-geschichte) | Wissenschaft & Forschung | 1 |
 | [Junger oder erwachsener Hund](#jungerhund-energie) | Haltung & Pflege | 1 |
 | [Jungfernzeugung](#jungfernzeugung) | Wissenschaft & Forschung | 1 |
-| [Jägersprache](#jagdsprache) | Tierschutz & Ethik | 1 |
 | [KI als Informationsquelle](#ki-hundewissen) | Wissenschaft & Forschung | 1 |
 | [Kaninchen sind keine Nagetiere](#kaninchen-keine-nagetiere) | Wissenschaft & Forschung | 1 |
 | [Kaninchenzucht und Ausstellungen](#kaninchenzucht-markt) | Zucht & Rassen | 1 |
@@ -904,7 +905,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 262 von 262 Folgen. Zeitanga
 | [Mammutfunde](#palaeontologie-mammut) | Wissenschaft & Forschung | 1 |
 | [Marder am Haus](#marder) | Andere Tiere | 1 |
 | [Mauersegler](#mauersegler-nothilfe) | Andere Tiere | 1 |
-| [Medical Training](#medical-training) | Erziehung & Training | 1 |
 | [Medikamente gegen Angst](#medikamente-gegen-angst) | Gesundheit & Medizin | 1 |
 | [Mensch-Pferd-Beziehung](#mensch-pferd-beziehung) | Andere Tiere | 1 |
 | [Messbare Tierwohl-Indikatoren](#tierwohl-indikatoren-forschung) | Wissenschaft & Forschung | 1 |
@@ -1270,6 +1270,22 @@ _Wie man sich bei Begegnungen mit fremden oder aufdringlichen Hunden verhält un
 - Folge 12 „Die ganze Wahrheit“ ab 0:50:30: Marleen berichtet von einer engen Begegnung, bei der ihre junge Hündin einen Rüden bedrängte und der Halter spontan eine Verpaarung vorschlug; nebenbei wird die Geschlechtsreife von Welpen thematisiert.
 - Folge 9 „Verquerdenker, Hundepubertät & eine bittere Niederlage“ ab 0:47:28: Kritik am Satz, Hunde würden Konflikte selbst regeln: ohne Rudelverband gibt es nichts zu regeln, Mobbing führt zu defensiver und später offensiver Aggression, Halter sollten Hunde abrufen, anleinen und sich kurz absprechen.
 
+<a id="angst-vor-hunden"></a>
+#### Angst vor Hunden · 10 Folgen
+_Wie die Angst von Menschen und Hunden vor anderen Hunden entsteht und wie man sie abbaut, etwa indem man Hundekörpersprache lesen lernt._
+
+- Folge 237 „Der Pudelschreck von Italien“ ab 0:22:28: Katharina berichtet, wie ihre Hündin Trudi bei Begegnung mit einem kangalartigen Herdenschutzhund Angst zeigte und sie hochgenommen wurde – Martin weist darauf hin, dass Hochheben den Hund erst recht in Reichweite bringt.
+- Folge 141 „Giftwarnung, Zeckenspray & Hühner-Hacks“ ab 0:33:41: Angst vor Hunden entsteht meist durch Erschrecken statt durch Bisse; auch bei Hunden entscheidet der Charakter, ob ein Angriff zum Trauma wird, und beides ist gut therapierbar.
+- Folge 126 „Podcast live: Entenschnabelmaulkorb“ ab 1:44:14: Psychotherapeut Daniel Wagner und Martin schildern die Konfrontationstherapie eines Mannes mit massiver Hundeangst, inklusive Messung der Stressreaktionen und dem Abfall der Angst nach längerem Aushalten.
+- Folge 101 „Jubiläumsfolge live aus dem Walfisch“ ab 1:48:08: Erklärt wird, dass Hunde als unkalkulierbar empfunden werden, Körpersprachekenntnis hilft, Angst allein nicht zu Angriffen führt und übertriebenes Imponieren Hunde erst verunsichert.
+- Folge 86 „Helfen hilft!“ ab 0:54:44: Astrid Rütter schildert ihre jahrelange Hundeangst und appelliert an Halter, Rücksicht auf ängstliche Menschen zu nehmen; Rütter betont, dass Hunde reale Gefahren darstellen können und man Jogger oder Radfahrer durch Abrufen und Absitzen entlasten sollte.
+- Folge 86 „Helfen hilft!“ ab 0:58:51: Astrid erzählt von Panikreaktionen auf Bernhardiner und Golden-Retriever-Welpen, von der Konfrontation mit einer Staffordshire-Terrier-Hündin in einer Hundeprofi-Folge und davon, wie das Erlernen der Körpersprache ihr Lebensqualität zurückgab; dabei geht es auch um Klischeerassen und Kynophobie.
+- Folge 54 „Starke Frauen, eine blutige Nase & der American Staffordshire Terrier“ ab 0:26:52: Anekdote über die hundeängstliche Schwester, die bei einer Reportage eine Staffordshire-Hündin kennenlernt, und über die eindrucksvolle Kraft und Dynamik dieser Hunde.
+- Folge 20 „Popcornpfoten, Hirschlausfliege & Klickertraining für Kinder“ ab 1:03:31 (kurz): Bei der Arbeit mit einem Menschen mit Hundephobie half Wissensvermittlung über Hundeverhalten, aber nur in Begleitung eines Psychologen.
+- Folge 19 „Handgemenge auf der Hundewiese, Ursachen für Aggression & Training mit einem misshandelten Hund“ ab 0:32:36: Auf die Frage, ob es einen typischen Bissopfer-Typ gibt: Hunde beißen nicht gezielt ängstliche Menschen, problematisch ist widersprüchliche Körpersprache wie künstliches Großmachen; empfohlen wird deeskalierendes Stehenbleiben, seitliches Abwenden und Blick abwenden statt Weglaufen.
+- Folge 10 „Hundeführerschein, Homöopathie & Matschbrötchen“ ab 0:00:59: Martins Tochter Marleen berichtet, wie zwei Nachbarhunde durch den Zaun auf sie zurannten und sie seitdem Angst vor fremden Hunden hat; besprochen werden Generalisierung von Ängsten und der Umgang damit.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:31:34: Martin und Katharina besprechen, wie unkontrollierte Annäherung und Anspringen Ängste verstärken können, und betonen ruhige Hundeführung sowie verständliche Vorabinformationen bei Sucheinsätzen.
+
 <a id="mehrhundehaltung"></a>
 #### Mehrhundehaltung · 10 Folgen
 _Wie mehrere Hunde in einem Haushalt miteinander umgehen, wann Konflikte entstehen und wann der Mensch eingreifen sollte._
@@ -1300,21 +1316,6 @@ _Wie Hunde ihr Revier verteidigen, woran man territoriales Drohen erkennt und wi
 - Folge 3 „Spielverderber, Drogen und der Klimawandel“ ab 0:16:02 (kurz): Erklärung, wie aus Territorialaggression gegenüber dem wiederkehrenden Postboten Frustrationsaggression werden kann.
 - Folge 1 „Wie alles begann“ ab 0:03:30 (kurz): Katharina Adick beschreibt, wie ihre Hündin aufstehende Gäste sofort mit der Nase kontrolliert, was als territoriales bzw. maßregelndes Verhalten gedeutet wird.
 - Folge 1 „Wir sind wieder da -  Tierisch Menschlich kehrt zurück!“ ab 0:22:41: Wie sich territoriale Skepsis bei jungen Hunden zunächst unauffällig zeigt und erst mit der Reife zu vehementem Verhalten führen kann.
-
-<a id="angst-vor-hunden"></a>
-#### Angst vor Hunden · 9 Folgen
-_Wie die Angst von Menschen und Hunden vor anderen Hunden entsteht und wie man sie abbaut, etwa indem man Hundekörpersprache lesen lernt._
-
-- Folge 237 „Der Pudelschreck von Italien“ ab 0:22:28: Katharina berichtet, wie ihre Hündin Trudi bei Begegnung mit einem kangalartigen Herdenschutzhund Angst zeigte und sie hochgenommen wurde – Martin weist darauf hin, dass Hochheben den Hund erst recht in Reichweite bringt.
-- Folge 141 „Giftwarnung, Zeckenspray & Hühner-Hacks“ ab 0:33:41: Angst vor Hunden entsteht meist durch Erschrecken statt durch Bisse; auch bei Hunden entscheidet der Charakter, ob ein Angriff zum Trauma wird, und beides ist gut therapierbar.
-- Folge 126 „Podcast live: Entenschnabelmaulkorb“ ab 1:44:14: Psychotherapeut Daniel Wagner und Martin schildern die Konfrontationstherapie eines Mannes mit massiver Hundeangst, inklusive Messung der Stressreaktionen und dem Abfall der Angst nach längerem Aushalten.
-- Folge 101 „Jubiläumsfolge live aus dem Walfisch“ ab 1:48:08: Erklärt wird, dass Hunde als unkalkulierbar empfunden werden, Körpersprachekenntnis hilft, Angst allein nicht zu Angriffen führt und übertriebenes Imponieren Hunde erst verunsichert.
-- Folge 86 „Helfen hilft!“ ab 0:54:44: Astrid Rütter schildert ihre jahrelange Hundeangst und appelliert an Halter, Rücksicht auf ängstliche Menschen zu nehmen; Rütter betont, dass Hunde reale Gefahren darstellen können und man Jogger oder Radfahrer durch Abrufen und Absitzen entlasten sollte.
-- Folge 86 „Helfen hilft!“ ab 0:58:51: Astrid erzählt von Panikreaktionen auf Bernhardiner und Golden-Retriever-Welpen, von der Konfrontation mit einer Staffordshire-Terrier-Hündin in einer Hundeprofi-Folge und davon, wie das Erlernen der Körpersprache ihr Lebensqualität zurückgab; dabei geht es auch um Klischeerassen und Kynophobie.
-- Folge 54 „Starke Frauen, eine blutige Nase & der American Staffordshire Terrier“ ab 0:26:52: Anekdote über die hundeängstliche Schwester, die bei einer Reportage eine Staffordshire-Hündin kennenlernt, und über die eindrucksvolle Kraft und Dynamik dieser Hunde.
-- Folge 20 „Popcornpfoten, Hirschlausfliege & Klickertraining für Kinder“ ab 1:03:31 (kurz): Bei der Arbeit mit einem Menschen mit Hundephobie half Wissensvermittlung über Hundeverhalten, aber nur in Begleitung eines Psychologen.
-- Folge 19 „Handgemenge auf der Hundewiese, Ursachen für Aggression & Training mit einem misshandelten Hund“ ab 0:32:36: Auf die Frage, ob es einen typischen Bissopfer-Typ gibt: Hunde beißen nicht gezielt ängstliche Menschen, problematisch ist widersprüchliche Körpersprache wie künstliches Großmachen; empfohlen wird deeskalierendes Stehenbleiben, seitliches Abwenden und Blick abwenden statt Weglaufen.
-- Folge 10 „Hundeführerschein, Homöopathie & Matschbrötchen“ ab 0:00:59: Martins Tochter Marleen berichtet, wie zwei Nachbarhunde durch den Zaun auf sie zurannten und sie seitdem Angst vor fremden Hunden hat; besprochen werden Generalisierung von Ängsten und der Umgang damit.
 
 <a id="geraeuschangst"></a>
 #### Geräuschangst · 9 Folgen
@@ -1503,6 +1504,14 @@ _Sozial motivierte Aggression zwischen Hunden, auch im eigenen Haushalt, und wel
 - Folge 115 „Apple Store, Mottenbefall & Wasserrute“ ab 0:34:52 (kurz): Aus der Hundepension berichtet Rütter, dass angeblich unverträgliche Hunde ohne ihre Halter oft problemlos mit Artgenossen umgehen – ein Hinweis auf sozial motivierte, durch den Menschen mitbedingte Aggression.
 - Folge 18 „Zweithunde, Stachelhalsbänder und der Duft von Hundepfoten“ ab 0:29:22: Erklärt, dass Hunde unabhängig vom Geschlecht Kontakte des Partnerhundes zu Dritten nicht akzeptieren können und daraus draußen Dynamik entsteht.
 
+<a id="tierarztbesuch"></a>
+#### Angst vor dem Tierarzt · 3 Folgen
+_Wie man Hunden die Angst vor dem Tierarztbesuch nimmt und den Besuch in der Praxis schrittweise positiv aufbaut._
+
+- Folge 222 „Der schwere Duft von Ryanair“ ab 0:16:54: Hörerfrage über einen Australian Shepherd, der beim Tierarzt grob behandelt wurde; Rütter erklärt, wie man mit Wartezimmerbesuchen, Keksen und schrittweisen Untersuchungen positive Erfahrungen aufbaut, dass Angst nicht gelöscht, sondern nur überlagert werden kann, und dass das Vertrauen zu den Haltern durch ein einzelnes Erlebnis meist nicht dauerhaft leidet.
+- Folge 19 „Handgemenge auf der Hundewiese, Ursachen für Aggression & Training mit einem misshandelten Hund“ ab 0:52:43 (kurz): Ziel des Trainings ist nicht völlige Gelassenheit, sondern Lebensqualität und Krisenmanagement – etwa dem Hund den Ort Tierarztpraxis erträglicher zu machen.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:21:46 (kurz): Martin schlägt kurze Praxisbesuche ohne Behandlung vor, damit der Hund das Wartezimmer auch mit ruhigen, angenehmen Erlebnissen verknüpfen kann.
+
 <a id="angstaggression"></a>
 #### Angstaggression · 3 Folgen
 _Wie Angst und Unsicherheit zu aggressivem Verhalten führen und wie man sich ängstlichen Hunden richtig nähert._
@@ -1608,13 +1617,6 @@ _Wie Körperbau, Rutenhaltung oder Fell im Gesicht die Kommunikation unter Hunde
 - Folge 62 „Tierschutzhundeverordnung, Strohhalmtest & Zwingerhaltung“ ab 0:18:11: Rütter erklärt, dass stark behaarte Gesichter die Mimik verdecken, Hunde deshalb nicht kommunizieren können und häufiger in Auseinandersetzungen geraten.
 - Folge 62 „Tierschutzhundeverordnung, Strohhalmtest & Zwingerhaltung“ ab 0:26:13: Rütter erläutert, dass Hunde ohne Rute statistisch häufiger in Beißereien verwickelt sind, weil ihre Körpersprache für andere Hunde nicht lesbar ist, und illustriert das mit einer Rottweiler-Begegnung.
 - Folge 47 „Das traurige Schicksal der Galgos, Conny Reimann & Mythos Wildfutter“ ab 0:31:12: Rütter erklärt, dass die tief getragene Rute und der Körperbau der Windhunde von anderen Hunden als Unsicherheit gelesen werden, was zu Mobbing führt, und vergleicht dies mit Missverständnissen bei kupierten Ruten.
-
-<a id="tierarztbesuch"></a>
-#### Angst vor dem Tierarzt · 2 Folgen
-_Wie man Hunden die Angst vor dem Tierarztbesuch nimmt und den Besuch in der Praxis schrittweise positiv aufbaut._
-
-- Folge 222 „Der schwere Duft von Ryanair“ ab 0:16:54: Hörerfrage über einen Australian Shepherd, der beim Tierarzt grob behandelt wurde; Rütter erklärt, wie man mit Wartezimmerbesuchen, Keksen und schrittweisen Untersuchungen positive Erfahrungen aufbaut, dass Angst nicht gelöscht, sondern nur überlagert werden kann, und dass das Vertrauen zu den Haltern durch ein einzelnes Erlebnis meist nicht dauerhaft leidet.
-- Folge 19 „Handgemenge auf der Hundewiese, Ursachen für Aggression & Training mit einem misshandelten Hund“ ab 0:52:43 (kurz): Ziel des Trainings ist nicht völlige Gelassenheit, sondern Lebensqualität und Krisenmanagement – etwa dem Hund den Ort Tierarztpraxis erträglicher zu machen.
 
 <a id="distanzlosigkeit"></a>
 #### Distanzlosigkeit · 2 Folgen
@@ -2325,6 +2327,15 @@ _Wie sich das Hundetraining in Deutschland von Stachelhalsband und Zwang über d
 - Folge 31 „Weihnachtstrauma, wenn Hunde Urlaub machen & ein extremer Fall von Angst“ ab 0:32:24 (kurz): Martin nennt als größte Leistung, öffentlich klargemacht zu haben, dass Gewalt im Hundetraining unsinnig ist und dass man lesen muss, was der Hund kommuniziert, statt nur Sitz und Platz abzufragen.
 - Folge 3 „Spielverderber, Drogen und der Klimawandel“ ab 1:11:06: Rückblick auf 25 Jahre Trainingsgeschichte: harte Unterordnung mit Stachelhalsband, der Umbruch durch Verhaltensbiologie und Fernsehen, dann eine übertrieben weiche Phase, und warum Erziehung klare Grenzen braucht.
 
+<a id="motivation-belohnung"></a>
+#### Belohnung mit Futter und Spiel · 4 Folgen
+_Wie man Futter und Spiel je nach Hund gezielt als Belohnung einsetzt und besondere Leckerchen wertvoll hält._
+
+- Folge 96 „Schutzhunde, Ebay & Unvermittelbare“ ab 0:29:04: Erklärt wird, dass Hunde unterschiedlich über Futter oder Spielzeug motivierbar sind und extrem beutetriebige Hunde in Anwesenheit des Spielzeugs kaum noch sozial ansprechbar sind.
+- Folge 4 „Drohgebärden im Freilauf, eine Emma sieht rot & Beauty Tipps“ ab 0:44:45: Ein exklusives Highlight-Futter wie Joghurt aus der Tube sollte ausschließlich für den Rückruf reserviert bleiben, damit es seinen besonderen Wert nicht verliert.
+- Folge 15 „Fettige Ohren und Albtraumbabys“ ab 0:38:50 (kurz): Martin erzählt von Minas Gier an der Leckerli-Station und warum er es kritisch sieht, Hunde an der Kasse selbst auswählen zu lassen.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:26:22 (kurz): Martin erklärt, dass für arbeitsfreudige Hunde bereits die passende Tätigkeit belohnend sein kann und Futter nicht in jeder Situation der entscheidende Anreiz ist.
+
 <a id="eingewoehnung-neuer-hund"></a>
 #### Eingewöhnung eines neuen Hundes · 4 Folgen
 _Wie neu eingezogene Hunde, vor allem Tierschutzhunde aus dem Ausland, im neuen Zuhause ankommen und warum Sicherheit dabei vor Trainingszielen steht._
@@ -2412,14 +2423,6 @@ _Umgang mit Hunden, die im Garten oder am Zaun Passanten und Nachbarn anbellen._
 - Folge 218 „Reiherpfoten auf die Ohren – so war der ESC“ ab 0:22:13: Hörerfrage zu vier Hunden, die im neuen Garten bellen: Martin Rütter erklärt, warum Hunde nicht allein in den Garten sollten, wie Territorialverhalten und Jagdverhalten sich selbst belohnen, wie man Bellen über Aufmerksamkeitsverteilung, Rückruf und Vergesellschaftung mit dem Nachbarhund in den Griff bekommt.
 - Folge 46 „Landseer, Seepferdchen und der Hundeprofi in Seenot“ ab 0:10:53: Nachbesprechung einer Hörerfrage zu einem Hund, der Passanten am Zaun erschreckt: Gespräch mit den Haltern suchen oder den Hund mit Futter positiv konditionieren, und die Debatte über Rücksicht gegenüber Kindern.
 - Folge 45 „ASMR, Beagle und Wombatkacke“ ab 0:11:14: Hörerfrage zu einem Boxer, der beim Vorbeigehen am Zaun bellt: Empfehlung, mit den Haltern zu sprechen und den Hund über Futter und ein Signalwort positiv zu konditionieren.
-
-<a id="motivation-belohnung"></a>
-#### Belohnung mit Futter und Spiel · 3 Folgen
-_Wie man Futter und Spiel je nach Hund gezielt als Belohnung einsetzt und besondere Leckerchen wertvoll hält._
-
-- Folge 96 „Schutzhunde, Ebay & Unvermittelbare“ ab 0:29:04: Erklärt wird, dass Hunde unterschiedlich über Futter oder Spielzeug motivierbar sind und extrem beutetriebige Hunde in Anwesenheit des Spielzeugs kaum noch sozial ansprechbar sind.
-- Folge 4 „Drohgebärden im Freilauf, eine Emma sieht rot & Beauty Tipps“ ab 0:44:45: Ein exklusives Highlight-Futter wie Joghurt aus der Tube sollte ausschließlich für den Rückruf reserviert bleiben, damit es seinen besonderen Wert nicht verliert.
-- Folge 15 „Fettige Ohren und Albtraumbabys“ ab 0:38:50 (kurz): Martin erzählt von Minas Gier an der Leckerli-Station und warum er es kritisch sieht, Hunde an der Kasse selbst auswählen zu lassen.
 
 <a id="hundetrainer-beruf"></a>
 #### Beruf Hundetrainer · 3 Folgen
@@ -2597,6 +2600,14 @@ _Warum für Jagd-, Schutz- und Familienhunde ebenso wie für kräftige Rassen di
 
 - Folge 144 „Stark wie ein Regenwurm“ ab 0:57:43: Martin argumentiert, dass Lerngesetze, Gehirn und Emotionen bei Jagd-, Schutz- und Familienhunden gleich sind, schildert Strafmethoden wie eine Trainingsente mit Holzknüppeln und zeigt am Beispiel einer Kollegin, dass Jagdprüfungen auch ohne Zwang bestanden werden.
 - Folge 1 „Wir sind wieder da -  Tierisch Menschlich kehrt zurück!“ ab 0:18:47: Martin Rütter erklärt, dass kräftige Molosser wie der Bullmastiff trotz ihres gemächlichen Auftretens nicht härter angefasst werden dürfen, da für sie dieselben Lerngesetze gelten wie für alle Hunde.
+
+<a id="medical-training"></a>
+#### Medical Training · 2 Folgen
+_Wie man Hunde in kleinen Schritten an Zähneputzen, Untersuchungen, Verbände und andere Pflegesituationen gewöhnt._
+
+- Folge 125 „Kampf der Urzeitkrebse“ ab 0:45:50: Auf eine Hörerfrage erklärt Martin Rütter, wie man einen Hund von Welpenalter an in kleinen Schritten positiv an Untersuchungen und Zähneputzen mit Fingerzahnbürste gewöhnt. Empfehlung, prophylaktisch Verbände, Fellschnitt, Maulkorbgewöhnung und ähnliche Handlingsituationen in entspannten Momenten als Beschäftigung zu trainieren.
+- Folge 125 „Kampf der Urzeitkrebse“ ab 0:51:30 (kurz): Tipps zum Üben von Augentropfen mit Wasser, beginnend mit Tropfen auf Stirn und Nase, zügiges Handeln und sofortige Belohnung statt langer Überredung.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:17:16: Ausgehend von Trudis Tierarztbesuch erklärt Martin, wie Berührungen und Untersuchungen zunächst in entspannten Alltagssituationen und später mit weiteren Personen, Gegenständen und auf dem Behandlungstisch geübt werden können.
 
 <a id="reizueberflutung"></a>
 #### Reizüberflutung · 2 Folgen
@@ -2788,13 +2799,6 @@ _Warum auch ältere Hunde noch erfolgreich lernen können._
 
 - Folge 12 „Die ganze Wahrheit“ ab 0:35:51 (kurz): Auch mit vier, sechs oder acht Jahre alten Hunden sind Trainingserfolge möglich; entscheidend ist die geistige Beweglichkeit des Halters.
 
-<a id="medical-training"></a>
-#### Medical Training · 1 Folgen
-_Wie man Hunde in kleinen Schritten an Zähneputzen, Untersuchungen, Verbände und andere Pflegesituationen gewöhnt._
-
-- Folge 125 „Kampf der Urzeitkrebse“ ab 0:45:50: Auf eine Hörerfrage erklärt Martin Rütter, wie man einen Hund von Welpenalter an in kleinen Schritten positiv an Untersuchungen und Zähneputzen mit Fingerzahnbürste gewöhnt. Empfehlung, prophylaktisch Verbände, Fellschnitt, Maulkorbgewöhnung und ähnliche Handlingsituationen in entspannten Momenten als Beschäftigung zu trainieren.
-- Folge 125 „Kampf der Urzeitkrebse“ ab 0:51:30 (kurz): Tipps zum Üben von Augentropfen mit Wasser, beginnend mit Tropfen auf Stirn und Nase, zügiges Handeln und sofortige Belohnung statt langer Überredung.
-
 <a id="nackenschuetteln"></a>
 #### Nackenschütteln · 1 Folgen
 _Warum das Schütteln im Nackenfell keine soziale Korrektur ist, sondern aus dem Beutefangverhalten stammt._
@@ -2900,7 +2904,7 @@ _Warum ein Trainer beim Hausbesuch bewusst keinen Kontakt zum Hund aufnimmt, um 
 ### Gesundheit & Medizin
 
 <a id="erbkrankheiten"></a>
-#### Erbkrankheiten und rassetypische Erkrankungen · 39 Folgen
+#### Erbkrankheiten und rassetypische Erkrankungen · 40 Folgen
 _Welche erblichen Krankheiten wie PRA oder Herzerkrankungen in Rassezuchten gehäuft auftreten, wie sie sich verbreiten und welche Gesundheitstests es dafür gibt._
 
 - Folge 234 „Martins Abschied von der Bühne“ ab 0:41:12: Aufzählung gehäufter Erkrankungen: Augenerkrankungen wie Katarakt, Glaukom, PRA und Netzhautdysplasie, Ohrenentzündungen durch Hängeohren, Hautkrankheiten, Hüft- und Ellbogendysplasie, Arthrose, Epilepsie und Herzerkrankungen.
@@ -2943,6 +2947,7 @@ _Welche erblichen Krankheiten wie PRA oder Herzerkrankungen in Rassezuchten geh�
 - Folge 7 „Von Walen und Menschen“ ab 0:51:31: Neben Problemen durch den Merle-Faktor werden der MDR1-Defekt mit gefährlichen Medikamentenreaktionen, Hüftdysplasie und mehrere erbliche Augenerkrankungen genannt.
 - Folge 4 „Flaute für den Tierschutz“ ab 1:02:50 (kurz): Aufzählung typischer Gesundheitsprobleme wie Allergien, Hauterkrankungen, Kiefermissbildungen, Leber- und Harnleiterprobleme als Folge von Inzuchtdepression.
 - Folge 3 „Fremdscham im Bierkönig“ ab 0:24:23: Die beiden sprechen über die langen Krankheitslisten vieler Rassen, das Fehlen valider Studien zu Mischlingen und rufen Hörer auf, besonders gesunde Rassen zu nennen, wobei genetisch weniger eng gezüchtete Hütehundschläge als Beispiel dienen.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:12:05: Katharina erläutert am Beispiel des English Pointers das erbliche Akrale Mutilationssyndrom mit vermindertem Schmerzempfinden an den Pfoten und betont die Bedeutung genetischer Untersuchungen der Zuchttiere.
 
 <a id="medizin"></a>
 #### Medizin · 26 Folgen
@@ -4368,6 +4373,14 @@ _Die Haltung von Hunden an Kette oder Leine im Garten oder auf dem Hof und ihre 
 - Folge 44 „Geteiltes Sorgerecht für Tiere, falsches Mäusegulasch & Zwangspause für Polizeihunde“ ab 0:35:04 (kurz): Rütter kritisiert, dass in Spanien noch angekettete Hunde an kurzen Ketten zu sehen sind, und hält deren Abschaffung für dringlicher als Sorgerechtsfragen.
 - Folge 9 „Martins Tierschutzreise“ ab 0:49:46: Ein völlig verfilzter Hund muss nach Kastration und Schur narkotisiert in seinen verrosteten Zwinger zurückgebracht werden; Martin verweist darauf, dass Zwingerhaltung auch in Deutschland verbreitet ist.
 
+<a id="hundemantel-kaelteschutz"></a>
+#### Kälteschutz für Hunde · 3 Folgen
+_Welche Hunde bei Kälte frieren und wann Mantel, warme Unterlage oder beheizter Schlafplatz sinnvoll sind._
+
+- Folge 139 „Co-Ownership & Knochen knacken“ ab 0:45:14: Hörerfrage zum ungeheizten Schlafzimmer für einen Labrador-Senior ohne Unterwolle: Rassen ohne Unterwolle frieren schneller, 16-18 Grad sind meist unproblematisch, Höhlen, isolierende Unterlagen, Wärmemantel oder beheizbare Pads bei Arthrose können helfen.
+- Folge 91 „Vorsicht vor Weihnachten“ ab 0:03:30: Diskussion darüber, welche Hunde funktionale Mäntel oder Frottee-Bademäntel brauchen, etwa Rassen ohne Unterwolle und alte Hunde mit Arthrose, und warum Wärme kein modisches Accessoire ist.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:14:05 (kurz): Martin weist am Beispiel kurzhaariger Jagdhunde darauf hin, dass fehlende Unterwolle und Ruhepausen im Winter zusätzlichen Kälteschutz nötig machen können.
+
 <a id="artgerechte-haltung"></a>
 #### Artgerechte Hundehaltung · 2 Folgen
 _Was artgerechte Haltung beim Hund bedeuten kann, wenn Hunde in einer von Menschen geprägten Umwelt leben._
@@ -4461,13 +4474,6 @@ _Funktionsweise, Vor- und Nachteile und Risiken von Kopfhalftern wie dem Halti u
 
 - Folge 127 „Podcast live II: Achterbahn der Feelings“ ab 0:02:06: Rütter erklärt Funktionsweise, Ursprung und Risiken von Kopfhalftern wie dem Halti und kritisiert ein Billigprodukt ohne zweite Leinenbefestigung, das zu Halswirbelverletzungen und Dauerstress führen kann.
 - Folge 2 „Emmas Gummikuh, Internet-Pöbeleien und Lakritzschlümpfe“ ab 0:43:43 (kurz): Rütter erklärt das Halti als Nasenschlaufe, hält es in der Praxis meist für ungeeignet und bevorzugt ein Führgeschirr, bei dem der Kraftimpuls übers Brustbein läuft.
-
-<a id="hundemantel-kaelteschutz"></a>
-#### Kälteschutz für Hunde · 2 Folgen
-_Welche Hunde bei Kälte frieren und wann Mantel, warme Unterlage oder beheizter Schlafplatz sinnvoll sind._
-
-- Folge 139 „Co-Ownership & Knochen knacken“ ab 0:45:14: Hörerfrage zum ungeheizten Schlafzimmer für einen Labrador-Senior ohne Unterwolle: Rassen ohne Unterwolle frieren schneller, 16-18 Grad sind meist unproblematisch, Höhlen, isolierende Unterlagen, Wärmemantel oder beheizbare Pads bei Arthrose können helfen.
-- Folge 91 „Vorsicht vor Weihnachten“ ab 0:03:30: Diskussion darüber, welche Hunde funktionale Mäntel oder Frottee-Bademäntel brauchen, etwa Rassen ohne Unterwolle und alte Hunde mit Arthrose, und warum Wärme kein modisches Accessoire ist.
 
 <a id="leinen-und-halsbaender"></a>
 #### Leinenarten · 2 Folgen
@@ -4939,7 +4945,7 @@ _Zucht auf Merkmale, die den Tieren Schmerzen, Leiden oder Schäden verursachen,
 - Folge 1 „Wir sind wieder da -  Tierisch Menschlich kehrt zurück!“ ab 0:24:32 (kurz): Kurzköpfigkeit und übermäßige Gesichtsfalten als Qualzuchtmerkmale sowie Krankheitsdispositionen wie HD, Entropium, Magendrehung und Tumorerkrankungen.
 
 <a id="rassetypisches-verhalten"></a>
-#### Rassetypisches Verhalten · 16 Folgen
+#### Rassetypisches Verhalten · 17 Folgen
 _Wie der ursprüngliche Zuchtzweck Wesen und Verhalten einer Rasse prägt, was Studien dazu zeigen und was das für das Leben mit ihr bedeutet._
 
 - Folge 229 „Riesen, Hämorrhoiden & Essgeräusche“ ab 0:37:23: Widerspruch zum Bild vom sanften Riesen: Doggen setzen im Hundespiel massiv ihren Körper ein, sind Menschen gegenüber distanzlos und wachsam, brauchen also klare Führung.
@@ -4958,6 +4964,7 @@ _Wie der ursprüngliche Zuchtzweck Wesen und Verhalten einer Rasse prägt, was S
 - Folge 32 „Elos, eckige Hühner & blutrünstige Nutrias“ ab 0:18:37: Erklärt wird, dass Rassebeschreibungen immer nur Tendenzen abbilden, Wesensmerkmale wie Schärfe oder Sozialverträglichkeit aber in Zuchtstandards und Wesenstests festgelegt und geprüft werden.
 - Folge 11 „Abhaken & Aufräumen“ ab 0:12:48: Aus einer Hörerbeschwerde entwickelt sich die Erklärung, warum der zur Baujagd auf den Dachs gezüchtete Dackel zu den von Grund auf aggressiven und sehr selbstständig entscheidenden Rassen gehört und deshalb kein anspruchsloser Familienhund ist.
 - Folge 1 „Wie alles begann“ ab 0:05:28: Am Beispiel von Emma als Hütehund-Terrier-Mischling werden typische Wesensmerkmale beschrieben: Arbeitsfreude und Abwechslungsbedarf beim Hütehund, Ungeduld und Hartnäckigkeit beim Terrier.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:15:44 (kurz): Martin schildert, wie sich bei jungen Retrievern, Border Collies und Pointern bereits beim Spiel mit einem rollenden Ball Verhaltensweisen zeigen können, die zum jeweiligen Zuchtzweck passen.
 
 <a id="zuchtselektion-wesen"></a>
 #### Zuchtauswahl nach Wesen · 16 Folgen
@@ -6651,6 +6658,13 @@ _Wie Kinder im Reitstall lernen, Pferde zu dominieren und zu strafen, und warum 
 - Folge 240 „Weniger Tierschutz für Versuchstiere?“ ab 0:56:43: Anekdote über ein Kind, dem beigebracht wird, dem Pferd auf die Nase zu schlagen, und Kritik daran, Kinder zur Gewaltanwendung gegenüber Tieren zu erziehen.
 - Folge 23 „Skandale im Reitsport“ ab 0:56:23: Rütter fragt, wie aus kindlicher Faszination für Pferde ein Kampf um Durchsetzung wird, und beschreibt den Widerspruch zwischen Tierliebe und hartem Umgang.
 
+<a id="jagdsprache"></a>
+#### Jägersprache · 2 Folgen
+_Wie Begriffe der Jägersprache reale Vorgänge bei der Jagd beschönigen._
+
+- Folge 214 „Lasst mich bei den Affen!“ ab 0:32:10: Kritik an Begriffen der Jägersprache wie Schweiß, Aufbrechen oder Stück, die reale Vorgänge bei der Jagd verharmlosen.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:08:07 (kurz): Martin und Katharina kritisieren, wie jagdliche Fachbegriffe und beschönigende Formulierungen das Töten von Wildtieren verharmlosen können.
+
 <a id="kastenstand"></a>
 #### Kastenstand und Ferkelschutzkorb · 2 Folgen
 _Die Fixierung von Sauen in Kastenständen und Ferkelschutzkörben, einkalkulierte Ferkelverluste und der Umgang mit Kritik an diesen Haltungsformen._
@@ -6933,12 +6947,6 @@ _Wie extreme Hitze Wildtiere wie brütende Mauersegler gefährdet und wie man ih
 _Unter welchen Bedingungen Hunde in Forschungsstationen gehalten werden._
 
 - Folge 77 „Weinende Hunde, kognitive Flexibilität, & 2 Happy Ends“ ab 0:35:05 (kurz): Martin beschreibt, wie in einer bekannten Hundeforschungsstation Dutzende Hunde auf engstem Raum gehalten wurden, was ein Fall für den Tierschutz gewesen wäre.
-
-<a id="jagdsprache"></a>
-#### Jägersprache · 1 Folgen
-_Wie Begriffe der Jägersprache reale Vorgänge bei der Jagd beschönigen._
-
-- Folge 214 „Lasst mich bei den Affen!“ ab 0:32:10: Kritik an Begriffen der Jägersprache wie Schweiß, Aufbrechen oder Stück, die reale Vorgänge bei der Jagd verharmlosen.
 
 <a id="tierschutz-kompromisse"></a>
 #### Kleine Schritte im Tierschutz · 1 Folgen
@@ -7661,6 +7669,17 @@ _Wesen und Aufgabe von Herdenschutzhunden und der richtige Umgang mit ihnen, etw
 - Folge 2 „Emmas Gummikuh, Internet-Pöbeleien und Lakritzschlümpfe“ ab 0:42:04: Herdenschutzhunde wirken als Welpen flauschig, entwickeln aber nach etwa einem Jahr starkes Territorialverhalten, treffen eigenständige Entscheidungen, sind schwer erziehbar und landen häufig im Tierheim; sie brauchen einen passenden Lebensraum und keine Anfängerhände.
 - Folge 2 „Hälse, Hoffnung, Haarverlust“ ab 0:32:04: Rütter schildert Eigenschaften von Herdenschutzhunden am Beispiel des Maremmano-Abruzzese: Sozialisierung mit Menschen, Risiko mobiler Territorialität, Gesundheitsthemen wie HD/ED und Fellpflege.
 
+<a id="diensthunde"></a>
+#### Polizei- und Diensthunde · 6 Folgen
+_Auswahl, Ausbildung und Einsatz von Polizei- und Diensthunden, Beißvorfälle und die Kritik an Gewalt und Ausnahmeregelungen in ihrer Ausbildung._
+
+- Folge 185 „Genug ist genug“ ab 0:39:07: Ein Zeitungsartikel über einen Polizisten, dessen belgischer Schäferhund in der Freizeit eine 73-jährige Frau schwer im Kopfbereich verletzte, wird vorgelesen und rechtlich sowie ausbildungstechnisch eingeordnet.
+- Folge 96 „Schutzhunde, Ebay & Unvermittelbare“ ab 0:22:08: Aus einem NDR-Beitrag mit einem Verhaltensbiologen wird zitiert, dass Polizeihundeführer ihren Hunden im Einsatz einen Maulkorb anlegen, um Kollegen vor Fehlbissen im Erregungszustand zu schützen.
+- Folge 95 „Schutzhundesport“ ab 1:11:02: Tina erläutert, dass Diensthunde zivil beißen lernen, mit Kevlar-Anzügen und Stoßkorbarbeit trainiert werden und deutlich höhere Belastungen aushalten müssen als Sporthunde.
+- Folge 55 „Hundetraining aus der Sprühflasche, Maulkorb & der Deutsche Schäferhund“ ab 0:33:45: Kritik an der Rassewahl und Ausbildung deutscher Polizeihunde vom Schäferhund über den Rottweiler bis zum Malinois und an den fehlenden Kompetenzen bei der Selektion. Kurzer Hinweis auf die Bestrebungen der Polizei, Ausnahmeregelungen für den Einsatz von Gewalt in der Hundeausbildung zu erhalten, weil die Hunde anders kaum lenkbar seien.
+- Folge 6 „Was dürfen wir mit Tieren machen?“ ab 0:18:31: Diskussion eines Videos mit geschlagenen Diensthunden, Zucht auf übersteigertes Beutefangverhalten sowie Einsatz von Stromhalsbändern zum Abbruch am Beißärmel.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:27:49: Anhand einer Begegnung am Flughafen kritisiert Martin hektische, wenig kontrollierte Sucharbeit und plädiert dafür, Hunde entsprechend ihrer Anlagen gezielt für Such- oder Schutzaufgaben auszubilden.
+
 <a id="hundesport"></a>
 #### Hundesportarten · 5 Folgen
 _Überblick über Hundesportarten wie Agility, Obedience, Turnierhundesport und Begleithundeprüfung und welche zu welchem Hund passen._
@@ -7671,15 +7690,15 @@ _Überblick über Hundesportarten wie Agility, Obedience, Turnierhundesport und 
 - Folge 25 „Stress, Fellbutter & Schulsport“ ab 0:21:07 (kurz): Kurzer Überblick über Sportangebote wie Agility und Hoopers, wobei Hoopers stärker auf Koordination sowie Lenken und Leiten des Hundes abzielt.
 - Folge 6 „Was dürfen wir mit Tieren machen?“ ab 0:11:54: Rütter befürwortet Hundesport als Beschäftigung, kritisiert aber Leistungsdruck und das stundenlange Einsperren von Hunden in enge Aufbewahrungsboxen am Platz.
 
-<a id="diensthunde"></a>
-#### Polizei- und Diensthunde · 5 Folgen
-_Auswahl, Ausbildung und Einsatz von Polizei- und Diensthunden, Beißvorfälle und die Kritik an Gewalt und Ausnahmeregelungen in ihrer Ausbildung._
+<a id="spuerhunde"></a>
+#### Spürhunde · 5 Folgen
+_Hunde, die mit ihrer Nase gezielt Gerüche wie Schädlinge oder Tierspuren aufspüren, und die Grenzen solcher Einsätze._
 
-- Folge 185 „Genug ist genug“ ab 0:39:07: Ein Zeitungsartikel über einen Polizisten, dessen belgischer Schäferhund in der Freizeit eine 73-jährige Frau schwer im Kopfbereich verletzte, wird vorgelesen und rechtlich sowie ausbildungstechnisch eingeordnet.
-- Folge 96 „Schutzhunde, Ebay & Unvermittelbare“ ab 0:22:08: Aus einem NDR-Beitrag mit einem Verhaltensbiologen wird zitiert, dass Polizeihundeführer ihren Hunden im Einsatz einen Maulkorb anlegen, um Kollegen vor Fehlbissen im Erregungszustand zu schützen.
-- Folge 95 „Schutzhundesport“ ab 1:11:02: Tina erläutert, dass Diensthunde zivil beißen lernen, mit Kevlar-Anzügen und Stoßkorbarbeit trainiert werden und deutlich höhere Belastungen aushalten müssen als Sporthunde.
-- Folge 55 „Hundetraining aus der Sprühflasche, Maulkorb & der Deutsche Schäferhund“ ab 0:33:45: Kritik an der Rassewahl und Ausbildung deutscher Polizeihunde vom Schäferhund über den Rottweiler bis zum Malinois und an den fehlenden Kompetenzen bei der Selektion. Kurzer Hinweis auf die Bestrebungen der Polizei, Ausnahmeregelungen für den Einsatz von Gewalt in der Hundeausbildung zu erhalten, weil die Hunde anders kaum lenkbar seien.
-- Folge 6 „Was dürfen wir mit Tieren machen?“ ab 0:18:31: Diskussion eines Videos mit geschlagenen Diensthunden, Zucht auf übersteigertes Beutefangverhalten sowie Einsatz von Stromhalsbändern zum Abbruch am Beißärmel.
+- Folge 149 „Sexmonster, Filmtiere & Schildkröten-Urteil“ ab 0:24:28 (kurz): Ein NDR-Bericht über einen Dackel, der für einen Baumpfleger Schädlinge an Bäumen erschnüffelt, wird vorgestellt und Martins Skepsis gegenüber immer neuen Spürhundeinsätzen angesprochen.
+- Folge 101 „Jubiläumsfolge live aus dem Walfisch“ ab 0:17:20: Rückblick auf eine Recherchereise zu einem Orca-Forscher in Seattle, dessen Hund Tucker Walkot an der Wasseroberfläche aufspüren konnte, obwohl Wale nur selten dort ausscheiden.
+- Folge 7 „Ballverrückte Hunde“ ab 0:04:20: Am Beispiel des Labradors Tucker wird gezeigt, wie ein extrem ballfixierter Tierheimhund zum Spürhund für Walkot umtrainiert und seine Sucht in Suchverhalten kanalisiert wurde.
+- Folge 1 „Wie alles begann“ ab 0:43:44 (kurz): Bericht über einen Forschungshund in den USA, der auf der Wasseroberfläche Kot von Walen erschnüffelt und so Forschungsschiffe leitet.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:26:41: Martin beschreibt, wie Spürhunde Zielgerüche mit einer Spielbelohnung verknüpfen, und widerspricht dem Mythos, Drogenspürhunde würden von Drogen abhängig gemacht.
 
 <a id="apportieren"></a>
 #### Apportieren · 4 Folgen
@@ -7690,6 +7709,15 @@ _Wie man das Apportieren vom Futterbeutel bis zur Jagd aufbaut und als Beschäft
 - Folge 12 „Die ganze Wahrheit“ ab 0:09:24: Rückblick auf die Wette zum Futterbeutel-Apportieren mit Hündin Luna, inklusive der Bedeutung regelmäßigen Trainings für den Lernerfolg.
 - Folge 11 „Abhaken & Aufräumen“ ab 0:02:11: Anhand der Wette um Hündin Luna wird erklärt, wie man einen Hund, der den Futterbeutel verweigert, über bewegungsreizstarkes Spielzeug doch zum Apportieren motiviert.
 
+<a id="artenspuerhunde"></a>
+#### Artenspürhunde in Naturschutz und Forschung · 4 Folgen
+_Spürhunde, die seltene Tierarten oder den Kot von Wildtieren wie Walen aufspüren und so Artenschutz und Forschung unterstützen._
+
+- Folge 168 „R.I.P. Kuno“ ab 0:23:09: Die Deutsche Bahn setzt sechs speziell ausgebildete Hunde ein, die auf Bahngeländen seltene Arten wie Schlingnatter, Zauneidechse, Gelbbauchunke und Fledermäuse aufspüren, um Bauvorhaben artenschutzkonform zu beschleunigen.
+- Folge 144 „Stark wie ein Regenwurm“ ab 0:26:30: Der seit 1937 verschollene De-Wintons-Goldmull wurde in Südafrika von einer Border-Collie-Hündin erschnüffelt; besprochen werden die Arbeitsweise solcher Spürhunde mit anschließender DNA-Bodenanalyse und der Nutzen für Artenschutz und Schutzgebietsausweisung. Scherzhafte Überlegung, ob Hunde auch auf das Erschnüffeln einzelner Zeckenarten ausgebildet werden könnten.
+- Folge 7 „Ballverrückte Hunde“ ab 0:09:13: Sie schildern die Feldarbeit mit Forscher Samuel Wasser, bei der Tucker vom Bootsbug aus die Richtung zu Walkot anzeigte und Proben für wissenschaftliche Analysen gewonnen wurden.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:22:32: Katharina berichtet von der schottischen Labradorhündin Sgiath, die mit einer Meeresbiologin die als Meereskotze bekannte Art Didemnum vexillum aufspürt und dafür vom IFAW ausgezeichnet wurde.
+
 <a id="rattenbekaempfung-hunde"></a>
 #### Rattenjagd mit Hunden · 4 Folgen
 _Wie Terrier und andere kleine Rattler auf Höfen Ratten und Mäuse jagen und vergrämen und warum ihre Schärfe oft unterschätzt wird._
@@ -7698,23 +7726,6 @@ _Wie Terrier und andere kleine Rattler auf Höfen Ratten und Mäuse jagen und ve
 - Folge 190 „Hausfuchs! Ein Crosspodcast mit "Behind Science"“ ab 0:12:22 (kurz): Rütter weist darauf hin, dass zur Rattenjagd gezüchtete kleine Hunde deutlich heftiger und eigenständiger agieren, als viele Menschen annehmen.
 - Folge 158 „Rattenfänger“ ab 0:51:07: Rütter beschreibt, wie Kleinterrier und Katzen auf landwirtschaftlichen Betrieben Nager nicht nur jagen, sondern vor allem vergrämen, und warum Rattenpopulationen aus Hygienegründen kontrolliert werden müssen.
 - Folge 65 „Ein Keks mit Folgen, Körpersprache für Hunde & schöne Geschenke“ ab 0:48:25: Es wird erklärt, dass „Rattler“ ein Sammelbegriff für kleine, zur Ratten- und Mäusejagd gezüchtete Hunde ist und dass solche Rassen teils seit Dürers Zeiten kaum verändert sind.
-
-<a id="spuerhunde"></a>
-#### Spürhunde · 4 Folgen
-_Hunde, die mit ihrer Nase gezielt Gerüche wie Schädlinge oder Tierspuren aufspüren, und die Grenzen solcher Einsätze._
-
-- Folge 149 „Sexmonster, Filmtiere & Schildkröten-Urteil“ ab 0:24:28 (kurz): Ein NDR-Bericht über einen Dackel, der für einen Baumpfleger Schädlinge an Bäumen erschnüffelt, wird vorgestellt und Martins Skepsis gegenüber immer neuen Spürhundeinsätzen angesprochen.
-- Folge 101 „Jubiläumsfolge live aus dem Walfisch“ ab 0:17:20: Rückblick auf eine Recherchereise zu einem Orca-Forscher in Seattle, dessen Hund Tucker Walkot an der Wasseroberfläche aufspüren konnte, obwohl Wale nur selten dort ausscheiden.
-- Folge 7 „Ballverrückte Hunde“ ab 0:04:20: Am Beispiel des Labradors Tucker wird gezeigt, wie ein extrem ballfixierter Tierheimhund zum Spürhund für Walkot umtrainiert und seine Sucht in Suchverhalten kanalisiert wurde.
-- Folge 1 „Wie alles begann“ ab 0:43:44 (kurz): Bericht über einen Forschungshund in den USA, der auf der Wasseroberfläche Kot von Walen erschnüffelt und so Forschungsschiffe leitet.
-
-<a id="artenspuerhunde"></a>
-#### Artenspürhunde in Naturschutz und Forschung · 3 Folgen
-_Spürhunde, die seltene Tierarten oder den Kot von Wildtieren wie Walen aufspüren und so Artenschutz und Forschung unterstützen._
-
-- Folge 168 „R.I.P. Kuno“ ab 0:23:09: Die Deutsche Bahn setzt sechs speziell ausgebildete Hunde ein, die auf Bahngeländen seltene Arten wie Schlingnatter, Zauneidechse, Gelbbauchunke und Fledermäuse aufspüren, um Bauvorhaben artenschutzkonform zu beschleunigen.
-- Folge 144 „Stark wie ein Regenwurm“ ab 0:26:30: Der seit 1937 verschollene De-Wintons-Goldmull wurde in Südafrika von einer Border-Collie-Hündin erschnüffelt; besprochen werden die Arbeitsweise solcher Spürhunde mit anschließender DNA-Bodenanalyse und der Nutzen für Artenschutz und Schutzgebietsausweisung. Scherzhafte Überlegung, ob Hunde auch auf das Erschnüffeln einzelner Zeckenarten ausgebildet werden könnten.
-- Folge 7 „Ballverrückte Hunde“ ab 0:09:13: Sie schildern die Feldarbeit mit Forscher Samuel Wasser, bei der Tucker vom Bootsbug aus die Richtung zu Walkot anzeigte und Proben für wissenschaftliche Analysen gewonnen wurden.
 
 <a id="nasenarbeit"></a>
 #### Nasenarbeit und Suchspiele · 3 Folgen
@@ -9281,6 +9292,16 @@ _Krötenlaich und quakende Frösche im Gartenteich und warum das Entnehmen oder 
 - Folge 158 „Rattenfänger“ ab 1:00:17: Hörerhinweise klären, dass das Entnehmen oder Umsetzen von Frosch- und Krötenlaich gegen das Bundesnaturschutzgesetz verstößt; diskutiert werden praktikable Alternativen für einen überbevölkerten Gartenteich.
 - Folge 157 „Otterjagd & Dackelkatzen“ ab 0:52:22 (kurz): Erfahrungen mit massenhaftem Krötenlaich im Gartenteich, dem Umsetzen von Fröschen und Entenfamilien, die ihre Jungen dort aufzogen.
 
+<a id="invasive-arten"></a>
+#### Invasive Arten · 5 Folgen
+_Eingeschleppte Tierarten wie Agakröte oder Nosferatu-Spinne und ihre Folgen für heimische Ökosysteme._
+
+- Folge 98 „Toadzilla, Tierhandel bei Ebay & Fischloopings“ ab 0:03:04: Anhand einer knapp drei Kilo schweren Riesenkröte („Toadzilla“) wird besprochen, wie die 1935 zur Schädlingsbekämpfung eingeführte Agakröte in Australien selbst zur Plage wurde, warum sie giftig ist und welche Tötungsmethode (Kühlschrank, dann Gefrierfach) als vergleichsweise schonend gilt.
+- Folge 79 „Regenmäntel, wilde Widderzüchter:innen & Riesenhunde“ ab 0:00:40: Gespräch über die sich durch die Klimaerwärmung ausbreitende Nosferatu-Spinne und die Asiatische Tigermücke, deren Biss und Potenzial als Krankheitsüberträger.
+- Folge 14 „Gebrauchsanweisung fürs Gehirn“ ab 1:16:08 (kurz): Beispiel der auf Hawaii gegen Ratten eingeführten Mungos, die das Problem nicht lösten, als Bild für fehlgeschlagene Eingriffe.
+- Folge 11 „Zaun Ideologien“ ab 0:33:24: Zur Rattenbekämpfung eingeführte Mungos erwiesen sich als nutzlos, weil sie tagaktiv sind, und dezimierten stattdessen einheimische Vögel, Eier und Meeresschildkröten.
+- Folge 19 „Aufgespürt und ausgekotzt“ ab 0:24:57 (kurz): Katharina beschreibt die koloniebildende Meeresart Didemnum vexillum und erläutert, wie ihre Ausbreitung außerhalb des ursprünglichen Lebensraums heimische Arten und Nahrungsnetze beeinträchtigen kann.
+
 <a id="kleintierhaltung"></a>
 #### Kleintierhaltung · 5 Folgen
 _Wie Hamster, Meerschweinchen, Ratten und andere Kleintiere artgerecht gehalten werden und warum sie kein Kinderspielzeug sind._
@@ -9361,15 +9382,6 @@ _Gefährdung von Igeln durch Nahrungsmangel, Parasiten und Krankheiten und wie m
 - Folge 152 „Leuchtspray für alle!“ ab 0:23:56: Anlass ist der Igel als Tier des Jahres 2024: Es geht um Insektenschwund als Nahrungsproblem, die Gefahr durch Mähroboter und eine von einem Schüler entwickelte KI, die Igel erkennt und umfährt.
 - Folge 134 „Mischwesen & Cancelculture“ ab 0:17:19 (kurz): Weil Insekten und Laufkäfer fehlen, fressen Igel vermehrt Schnecken und nehmen dadurch Parasiten auf; Trockenheit begünstigt zudem Hautpilze und Stachelverlust.
 - Folge 119 „Bekiffte Schwäne, Hitzekollaps & „Fleischverbot"“ ab 0:57:19: Nach Begegnungen beim Dreh wird über die überraschende Wehrhaftigkeit und Kletterfähigkeit von Igeln gesprochen sowie über Insektensterben und Mähroboter als Gefahren – mit Tipps, Roboter nicht nachts laufen zu lassen und Wasser aufzustellen.
-
-<a id="invasive-arten"></a>
-#### Invasive Arten · 4 Folgen
-_Eingeschleppte Tierarten wie Agakröte oder Nosferatu-Spinne und ihre Folgen für heimische Ökosysteme._
-
-- Folge 98 „Toadzilla, Tierhandel bei Ebay & Fischloopings“ ab 0:03:04: Anhand einer knapp drei Kilo schweren Riesenkröte („Toadzilla“) wird besprochen, wie die 1935 zur Schädlingsbekämpfung eingeführte Agakröte in Australien selbst zur Plage wurde, warum sie giftig ist und welche Tötungsmethode (Kühlschrank, dann Gefrierfach) als vergleichsweise schonend gilt.
-- Folge 79 „Regenmäntel, wilde Widderzüchter:innen & Riesenhunde“ ab 0:00:40: Gespräch über die sich durch die Klimaerwärmung ausbreitende Nosferatu-Spinne und die Asiatische Tigermücke, deren Biss und Potenzial als Krankheitsüberträger.
-- Folge 14 „Gebrauchsanweisung fürs Gehirn“ ab 1:16:08 (kurz): Beispiel der auf Hawaii gegen Ratten eingeführten Mungos, die das Problem nicht lösten, als Bild für fehlgeschlagene Eingriffe.
-- Folge 11 „Zaun Ideologien“ ab 0:33:24: Zur Rattenbekämpfung eingeführte Mungos erwiesen sich als nutzlos, weil sie tagaktiv sind, und dezimierten stattdessen einheimische Vögel, Eier und Meeresschildkröten.
 
 <a id="woelfe"></a>
 #### Lebensweise von Wölfen · 4 Folgen

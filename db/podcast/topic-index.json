@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-22",
- "indexedEpisodes": 262,
- "totalEpisodes": 262,
+ "generated": "2026-10-29",
+ "indexedEpisodes": 263,
+ "totalEpisodes": 263,
  "episodes": {
   "rtl-240": {
    "feed": "rtl",
@@ -7710,6 +7710,41 @@
     "breed": "Tosa",
     "start": "0:11:55"
    }
+  },
+  "mina-019": {
+   "feed": "mina",
+   "number": 19,
+   "title": "Aufgespürt und ausgekotzt",
+   "published": "2026-10-29",
+   "duration": 3345,
+   "audioUrl": "https://cdn.audiorella.com/podcasts/1781-tierisch-menschlich/257461-new-episode.mp3?v=2",
+   "breeds": [
+    {
+     "name": "English Pointer",
+     "start": "0:04:08"
+    },
+    {
+     "name": "Golden Retriever",
+     "start": "0:15:55"
+    },
+    {
+     "name": "Border Collie",
+     "start": "0:16:02"
+    },
+    {
+     "name": "Labrador Retriever",
+     "start": "0:23:07"
+    },
+    {
+     "name": "Belgischer Schäferhund",
+     "start": "0:31:09"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "English Pointer",
+    "start": "0:04:08"
+   }
   }
  },
  "topics": [
@@ -10991,9 +11026,22 @@
      "summaries": [
       "Die beiden sprechen über die langen Krankheitslisten vieler Rassen, das Fehlen valider Studien zu Mischlingen und rufen Hörer auf, besonders gesunde Rassen zu nennen, wobei genetisch weniger eng gezüchtete Hütehundschläge als Beispiel dienen."
      ]
+    },
+    {
+     "label": "Akrales Mutilationssyndrom und Gentests in der Zucht",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:12:05",
+     "end": "0:13:55",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Katharina erläutert am Beispiel des English Pointers das erbliche Akrale Mutilationssyndrom mit vermindertem Schmerzempfinden an den Pfoten und betont die Bedeutung genetischer Untersuchungen der Zuchttiere."
+     ]
     }
    ],
-   "episodeCount": 39
+   "episodeCount": 40
   },
   {
    "id": "jagdhunde",
@@ -14846,6 +14894,236 @@
    "episodeCount": 18
   },
   {
+   "id": "rassetypisches-verhalten",
+   "label": "Rassetypisches Verhalten",
+   "category": "Zucht & Rassen",
+   "description": "Wie der ursprüngliche Zuchtzweck Wesen und Verhalten einer Rasse prägt, was Studien dazu zeigen und was das für das Leben mit ihr bedeutet.",
+   "entries": [
+    {
+     "label": "Verhalten der Deutschen Dogge",
+     "episode": "rtl-229",
+     "number": 229,
+     "title": "Riesen, Hämorrhoiden & Essgeräusche",
+     "start": "0:37:23",
+     "end": "0:38:43",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Widerspruch zum Bild vom sanften Riesen: Doggen setzen im Hundespiel massiv ihren Körper ein, sind Menschen gegenüber distanzlos und wachsam, brauchen also klare Führung."
+     ]
+    },
+    {
+     "label": "Wach- und Temperamentseigenschaften des Chow Chow",
+     "episode": "rtl-194",
+     "number": 194,
+     "title": "Akani, Igelnot & ein Gerichtsurteil",
+     "start": "0:27:30",
+     "end": "0:28:23",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Der Rassestandard beschreibt den Chow Chow als ruhig, wachsam, eigenwillig und zurückhaltend; erörtert wird, warum die Rasse mit ihrem dichten Fell und ihrer Wachbereitschaft heute seltener gehalten wird."
+     ]
+    },
+    {
+     "label": "Wesen und Erziehung eigenständiger Spitzartiger",
+     "episode": "rtl-summer-b07",
+     "number": "Summer Edition #7",
+     "title": "Hobby Horsing for Olympia!",
+     "start": "0:24:19",
+     "end": "0:26:27",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter beschreibt die Eigenständigkeit, Wachsamkeit und Rüdenunverträglichkeit von Akitas und empfiehlt, in den ersten Lebensmonaten ausschließlich positive Sozialkontakte zu ermöglichen."
+     ]
+    },
+    {
+     "label": "Wesen und Auslastung des Zwergschnauzers",
+     "episode": "rtl-169",
+     "number": 169,
+     "title": "Wichtige Updates",
+     "start": "0:41:08",
+     "end": "0:44:03",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin Rütter ordnet den Zwergschnauzer als temperamentvollen, mutigen und wachsamen Hund ein, der viel Beschäftigung braucht, zu Bellen und Unverträglichkeit neigen kann und aus der Ratten- und Mäusejagd stammt."
+     ]
+    },
+    {
+     "label": "Rassetypisches Verhalten und Lebensumfeld",
+     "episode": "rtl-146",
+     "number": 146,
+     "title": "Jahresrückblick (mit Conny Sporrer)",
+     "start": "0:44:00",
+     "end": "0:46:45",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Am Beispiel Islandhund, Australian Shepherd, Malinois und Deutscher Schäferhund wird erläutert, wie Zuchtselektion und fehlendes passendes Lebensumfeld Hunde überdrehen lassen."
+     ]
+    },
+    {
+     "label": "Wie stark prägt die Rasse das Verhalten?",
+     "episode": "rtl-132",
+     "number": 132,
+     "title": "Funkstille, Fliegen & Hochstaplersyndrom",
+     "start": "0:34:50",
+     "end": "0:36:13",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Am Beispiel einer freundlichen, völlig untypisch entspannten Kangal-Hündin auf dem Campingplatz erklärt Martin, dass man sich als Trainer von Rasseerwartungen lösen und den einzelnen Hund sehen muss."
+     ]
+    },
+    {
+     "label": "Rassetypische Charakterzuschreibungen",
+     "episode": "rtl-127",
+     "number": 127,
+     "title": "Podcast live II: Achterbahn der Feelings",
+     "start": "1:19:00",
+     "end": "1:20:20",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Im Spiel \"Welcher Hund wärst du?\" werden typische Eigenschaften von Hütehunden, Terriern, Labradoren und Bulldoggen humorvoll charakterisiert."
+     ]
+    },
+    {
+     "label": "Rassecharakter und Züchterpersönlichkeit",
+     "episode": "rtl-125",
+     "number": 125,
+     "title": "Kampf der Urzeitkrebse",
+     "start": "0:41:26",
+     "end": "0:42:48",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Scherzhaft-analytische Überlegung, dass Rassen wie Dobermann oder Russell Terrier den Eigenschaften und Zielen ihrer Begründer ähneln."
+     ]
+    },
+    {
+     "label": "Wesen und Erziehung von Spaniels",
+     "episode": "rtl-109",
+     "number": 109,
+     "title": "Fliewatüüt, Fettfilter & Ferien",
+     "start": "0:58:34",
+     "end": "1:01:31",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Einschätzung von Springer Spaniels als freundlich, reizoffen und dauerhaft aufgedreht, schwer lenkbar wegen starker Außenorientierung, mit Abgrenzung zum teils aggressiveren Cocker Spaniel."
+     ]
+    },
+    {
+     "label": "Infantilisierung und Reifegrad von Rassen",
+     "episode": "rtl-101",
+     "number": 101,
+     "title": "Jubiläumsfolge live aus dem Walfisch",
+     "start": "0:55:22",
+     "end": "0:57:47",
+     "weight": "main",
+     "kind": "expert",
+     "summaries": [
+      "Erläuterung, dass Retrieverrassen im Wesen kindlich bleiben und dadurch leichter führbar sind, während Rassen wie der Husky mit der Geschlechtsreife erwachsen werden und Anweisungen hinterfragen."
+     ]
+    },
+    {
+     "label": "Rassetypische Charaktereigenschaften",
+     "episode": "rtl-071",
+     "number": 71,
+     "title": "Martin hat Puls, Video aus Hundemaul & Nudelsalat „Mastschwein\"",
+     "start": "0:22:30",
+     "end": "0:25:46",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Spielerisch ordnet Martin Katharina Wesenszüge verschiedener Rassetypen zu und erklärt dabei typische Eigenschaften von Terriern, Hütehunden, Laufhunden wie dem Beagle sowie dem Malinois."
+     ]
+    },
+    {
+     "label": "Studie: Rasse und Verhalten",
+     "episode": "rtl-060",
+     "number": 60,
+     "title": "Lost in the Sauerland, Boris Becker & Hunderassen-Studie",
+     "start": "0:17:14",
+     "end": "0:26:03",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion einer vielbeachteten Studie zum Zusammenhang von Rassezugehörigkeit und Verhalten, ihrer verkürzten Medienrezeption und der Bedeutung angeborener rassetypischer Verhaltensmuster wie Hüte- oder Vorstehverhalten."
+     ]
+    },
+    {
+     "label": "Rassetypisches Verhalten und Kritik daran",
+     "episode": "rtl-045",
+     "number": 45,
+     "title": "ASMR, Beagle und Wombatkacke",
+     "start": "0:13:16",
+     "end": "0:15:22",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Über Reaktionen auf Rasseporträts, die Abgrenzung von Kritik an Zucht oder Verhalten gegenüber Rassefeindlichkeit und Beispiele wie Aggressionspotenzial oder Gesundheit beim Mops."
+     ]
+    },
+    {
+     "label": "Charaktermerkmale in Rassestandards",
+     "episode": "rtl-032",
+     "number": 32,
+     "title": "Elos, eckige Hühner & blutrünstige Nutrias",
+     "start": "0:18:37",
+     "end": "0:19:22",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Erklärt wird, dass Rassebeschreibungen immer nur Tendenzen abbilden, Wesensmerkmale wie Schärfe oder Sozialverträglichkeit aber in Zuchtstandards und Wesenstests festgelegt und geprüft werden."
+     ]
+    },
+    {
+     "label": "Dackel: Zuchtzweck und Schärfe",
+     "episode": "rtl-011",
+     "number": 11,
+     "title": "Abhaken & Aufräumen",
+     "start": "0:12:48",
+     "end": "0:15:44",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Aus einer Hörerbeschwerde entwickelt sich die Erklärung, warum der zur Baujagd auf den Dachs gezüchtete Dackel zu den von Grund auf aggressiven und sehr selbstständig entscheidenden Rassen gehört und deshalb kein anspruchsloser Familienhund ist."
+     ]
+    },
+    {
+     "label": "Wesenszüge von Hütehunden und Terriern",
+     "episode": "rtl-001",
+     "number": 1,
+     "title": "Wie alles begann",
+     "start": "0:05:28",
+     "end": "0:06:37",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Am Beispiel von Emma als Hütehund-Terrier-Mischling werden typische Wesensmerkmale beschrieben: Arbeitsfreude und Abwechslungsbedarf beim Hütehund, Ungeduld und Hartnäckigkeit beim Terrier."
+     ]
+    },
+    {
+     "label": "Vorstehen, Hüten und Apportieren schon im Welpenalter",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:15:44",
+     "end": "0:16:26",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Martin schildert, wie sich bei jungen Retrievern, Border Collies und Pointern bereits beim Spiel mit einem rollenden Ball Verhaltensweisen zeigen können, die zum jeweiligen Zuchtzweck passen."
+     ]
+    }
+   ],
+   "episodeCount": 17
+  },
+  {
    "id": "rueckruf",
    "label": "Rückruf",
    "category": "Erziehung & Training",
@@ -15585,223 +15863,6 @@
      "kind": "discussion",
      "summaries": [
       "Rütter kündigt einen Am-Staff-Welpen in seiner Sendung an und verweist auf den anderen Ruf und die andere Zuchttradition von Pitbull und Staffordshire in den USA."
-     ]
-    }
-   ],
-   "episodeCount": 16
-  },
-  {
-   "id": "rassetypisches-verhalten",
-   "label": "Rassetypisches Verhalten",
-   "category": "Zucht & Rassen",
-   "description": "Wie der ursprüngliche Zuchtzweck Wesen und Verhalten einer Rasse prägt, was Studien dazu zeigen und was das für das Leben mit ihr bedeutet.",
-   "entries": [
-    {
-     "label": "Verhalten der Deutschen Dogge",
-     "episode": "rtl-229",
-     "number": 229,
-     "title": "Riesen, Hämorrhoiden & Essgeräusche",
-     "start": "0:37:23",
-     "end": "0:38:43",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Widerspruch zum Bild vom sanften Riesen: Doggen setzen im Hundespiel massiv ihren Körper ein, sind Menschen gegenüber distanzlos und wachsam, brauchen also klare Führung."
-     ]
-    },
-    {
-     "label": "Wach- und Temperamentseigenschaften des Chow Chow",
-     "episode": "rtl-194",
-     "number": 194,
-     "title": "Akani, Igelnot & ein Gerichtsurteil",
-     "start": "0:27:30",
-     "end": "0:28:23",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Der Rassestandard beschreibt den Chow Chow als ruhig, wachsam, eigenwillig und zurückhaltend; erörtert wird, warum die Rasse mit ihrem dichten Fell und ihrer Wachbereitschaft heute seltener gehalten wird."
-     ]
-    },
-    {
-     "label": "Wesen und Erziehung eigenständiger Spitzartiger",
-     "episode": "rtl-summer-b07",
-     "number": "Summer Edition #7",
-     "title": "Hobby Horsing for Olympia!",
-     "start": "0:24:19",
-     "end": "0:26:27",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Rütter beschreibt die Eigenständigkeit, Wachsamkeit und Rüdenunverträglichkeit von Akitas und empfiehlt, in den ersten Lebensmonaten ausschließlich positive Sozialkontakte zu ermöglichen."
-     ]
-    },
-    {
-     "label": "Wesen und Auslastung des Zwergschnauzers",
-     "episode": "rtl-169",
-     "number": 169,
-     "title": "Wichtige Updates",
-     "start": "0:41:08",
-     "end": "0:44:03",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Martin Rütter ordnet den Zwergschnauzer als temperamentvollen, mutigen und wachsamen Hund ein, der viel Beschäftigung braucht, zu Bellen und Unverträglichkeit neigen kann und aus der Ratten- und Mäusejagd stammt."
-     ]
-    },
-    {
-     "label": "Rassetypisches Verhalten und Lebensumfeld",
-     "episode": "rtl-146",
-     "number": 146,
-     "title": "Jahresrückblick (mit Conny Sporrer)",
-     "start": "0:44:00",
-     "end": "0:46:45",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Am Beispiel Islandhund, Australian Shepherd, Malinois und Deutscher Schäferhund wird erläutert, wie Zuchtselektion und fehlendes passendes Lebensumfeld Hunde überdrehen lassen."
-     ]
-    },
-    {
-     "label": "Wie stark prägt die Rasse das Verhalten?",
-     "episode": "rtl-132",
-     "number": 132,
-     "title": "Funkstille, Fliegen & Hochstaplersyndrom",
-     "start": "0:34:50",
-     "end": "0:36:13",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Am Beispiel einer freundlichen, völlig untypisch entspannten Kangal-Hündin auf dem Campingplatz erklärt Martin, dass man sich als Trainer von Rasseerwartungen lösen und den einzelnen Hund sehen muss."
-     ]
-    },
-    {
-     "label": "Rassetypische Charakterzuschreibungen",
-     "episode": "rtl-127",
-     "number": 127,
-     "title": "Podcast live II: Achterbahn der Feelings",
-     "start": "1:19:00",
-     "end": "1:20:20",
-     "weight": "side",
-     "kind": "discussion",
-     "summaries": [
-      "Im Spiel \"Welcher Hund wärst du?\" werden typische Eigenschaften von Hütehunden, Terriern, Labradoren und Bulldoggen humorvoll charakterisiert."
-     ]
-    },
-    {
-     "label": "Rassecharakter und Züchterpersönlichkeit",
-     "episode": "rtl-125",
-     "number": 125,
-     "title": "Kampf der Urzeitkrebse",
-     "start": "0:41:26",
-     "end": "0:42:48",
-     "weight": "side",
-     "kind": "discussion",
-     "summaries": [
-      "Scherzhaft-analytische Überlegung, dass Rassen wie Dobermann oder Russell Terrier den Eigenschaften und Zielen ihrer Begründer ähneln."
-     ]
-    },
-    {
-     "label": "Wesen und Erziehung von Spaniels",
-     "episode": "rtl-109",
-     "number": 109,
-     "title": "Fliewatüüt, Fettfilter & Ferien",
-     "start": "0:58:34",
-     "end": "1:01:31",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Einschätzung von Springer Spaniels als freundlich, reizoffen und dauerhaft aufgedreht, schwer lenkbar wegen starker Außenorientierung, mit Abgrenzung zum teils aggressiveren Cocker Spaniel."
-     ]
-    },
-    {
-     "label": "Infantilisierung und Reifegrad von Rassen",
-     "episode": "rtl-101",
-     "number": 101,
-     "title": "Jubiläumsfolge live aus dem Walfisch",
-     "start": "0:55:22",
-     "end": "0:57:47",
-     "weight": "main",
-     "kind": "expert",
-     "summaries": [
-      "Erläuterung, dass Retrieverrassen im Wesen kindlich bleiben und dadurch leichter führbar sind, während Rassen wie der Husky mit der Geschlechtsreife erwachsen werden und Anweisungen hinterfragen."
-     ]
-    },
-    {
-     "label": "Rassetypische Charaktereigenschaften",
-     "episode": "rtl-071",
-     "number": 71,
-     "title": "Martin hat Puls, Video aus Hundemaul & Nudelsalat „Mastschwein\"",
-     "start": "0:22:30",
-     "end": "0:25:46",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Spielerisch ordnet Martin Katharina Wesenszüge verschiedener Rassetypen zu und erklärt dabei typische Eigenschaften von Terriern, Hütehunden, Laufhunden wie dem Beagle sowie dem Malinois."
-     ]
-    },
-    {
-     "label": "Studie: Rasse und Verhalten",
-     "episode": "rtl-060",
-     "number": 60,
-     "title": "Lost in the Sauerland, Boris Becker & Hunderassen-Studie",
-     "start": "0:17:14",
-     "end": "0:26:03",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Diskussion einer vielbeachteten Studie zum Zusammenhang von Rassezugehörigkeit und Verhalten, ihrer verkürzten Medienrezeption und der Bedeutung angeborener rassetypischer Verhaltensmuster wie Hüte- oder Vorstehverhalten."
-     ]
-    },
-    {
-     "label": "Rassetypisches Verhalten und Kritik daran",
-     "episode": "rtl-045",
-     "number": 45,
-     "title": "ASMR, Beagle und Wombatkacke",
-     "start": "0:13:16",
-     "end": "0:15:22",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Über Reaktionen auf Rasseporträts, die Abgrenzung von Kritik an Zucht oder Verhalten gegenüber Rassefeindlichkeit und Beispiele wie Aggressionspotenzial oder Gesundheit beim Mops."
-     ]
-    },
-    {
-     "label": "Charaktermerkmale in Rassestandards",
-     "episode": "rtl-032",
-     "number": 32,
-     "title": "Elos, eckige Hühner & blutrünstige Nutrias",
-     "start": "0:18:37",
-     "end": "0:19:22",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Erklärt wird, dass Rassebeschreibungen immer nur Tendenzen abbilden, Wesensmerkmale wie Schärfe oder Sozialverträglichkeit aber in Zuchtstandards und Wesenstests festgelegt und geprüft werden."
-     ]
-    },
-    {
-     "label": "Dackel: Zuchtzweck und Schärfe",
-     "episode": "rtl-011",
-     "number": 11,
-     "title": "Abhaken & Aufräumen",
-     "start": "0:12:48",
-     "end": "0:15:44",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Aus einer Hörerbeschwerde entwickelt sich die Erklärung, warum der zur Baujagd auf den Dachs gezüchtete Dackel zu den von Grund auf aggressiven und sehr selbstständig entscheidenden Rassen gehört und deshalb kein anspruchsloser Familienhund ist."
-     ]
-    },
-    {
-     "label": "Wesenszüge von Hütehunden und Terriern",
-     "episode": "rtl-001",
-     "number": 1,
-     "title": "Wie alles begann",
-     "start": "0:05:28",
-     "end": "0:06:37",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Am Beispiel von Emma als Hütehund-Terrier-Mischling werden typische Wesensmerkmale beschrieben: Arbeitsfreude und Abwechslungsbedarf beim Hütehund, Ungeduld und Hartnäckigkeit beim Terrier."
      ]
     }
    ],
@@ -20896,6 +20957,158 @@
    "episodeCount": 11
   },
   {
+   "id": "angst-vor-hunden",
+   "label": "Angst vor Hunden",
+   "category": "Verhalten & Kommunikation",
+   "description": "Wie die Angst von Menschen und Hunden vor anderen Hunden entsteht und wie man sie abbaut, etwa indem man Hundekörpersprache lesen lernt.",
+   "entries": [
+    {
+     "label": "Angst kleiner Hunde vor großen Hunden",
+     "episode": "rtl-237",
+     "number": 237,
+     "title": "Der Pudelschreck von Italien",
+     "start": "0:22:28",
+     "end": "0:24:15",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Katharina berichtet, wie ihre Hündin Trudi bei Begegnung mit einem kangalartigen Herdenschutzhund Angst zeigte und sie hochgenommen wurde – Martin weist darauf hin, dass Hochheben den Hund erst recht in Reichweite bringt."
+     ]
+    },
+    {
+     "label": "Kynophobie und Traumatisierung",
+     "episode": "rtl-141",
+     "number": 141,
+     "title": "Giftwarnung, Zeckenspray & Hühner-Hacks",
+     "start": "0:33:41",
+     "end": "0:35:44",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Angst vor Hunden entsteht meist durch Erschrecken statt durch Bisse; auch bei Hunden entscheidet der Charakter, ob ein Angriff zum Trauma wird, und beides ist gut therapierbar."
+     ]
+    },
+    {
+     "label": "Kynophobie: Therapie der Hundeangst",
+     "episode": "rtl-126",
+     "number": 126,
+     "title": "Podcast live: Entenschnabelmaulkorb",
+     "start": "1:44:14",
+     "end": "1:50:35",
+     "weight": "main",
+     "kind": "expert",
+     "summaries": [
+      "Psychotherapeut Daniel Wagner und Martin schildern die Konfrontationstherapie eines Mannes mit massiver Hundeangst, inklusive Messung der Stressreaktionen und dem Abfall der Angst nach längerem Aushalten."
+     ]
+    },
+    {
+     "label": "Angst vor Hunden abbauen",
+     "episode": "rtl-101",
+     "number": 101,
+     "title": "Jubiläumsfolge live aus dem Walfisch",
+     "start": "1:48:08",
+     "end": "1:52:03",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Erklärt wird, dass Hunde als unkalkulierbar empfunden werden, Körpersprachekenntnis hilft, Angst allein nicht zu Angriffen führt und übertriebenes Imponieren Hunde erst verunsichert."
+     ]
+    },
+    {
+     "label": "Angst vor Hunden und Rücksicht von Haltern",
+     "episode": "rtl-086",
+     "number": 86,
+     "title": "Helfen hilft!",
+     "start": "0:54:44",
+     "end": "0:58:51",
+     "weight": "main",
+     "kind": "expert",
+     "summaries": [
+      "Astrid Rütter schildert ihre jahrelange Hundeangst und appelliert an Halter, Rücksicht auf ängstliche Menschen zu nehmen; Rütter betont, dass Hunde reale Gefahren darstellen können und man Jogger oder Radfahrer durch Abrufen und Absitzen entlasten sollte."
+     ]
+    },
+    {
+     "label": "Hundeangst überwinden und Körpersprache lernen",
+     "episode": "rtl-086",
+     "number": 86,
+     "title": "Helfen hilft!",
+     "start": "0:58:51",
+     "end": "1:07:06",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Astrid erzählt von Panikreaktionen auf Bernhardiner und Golden-Retriever-Welpen, von der Konfrontation mit einer Staffordshire-Terrier-Hündin in einer Hundeprofi-Folge und davon, wie das Erlernen der Körpersprache ihr Lebensqualität zurückgab; dabei geht es auch um Klischeerassen und Kynophobie."
+     ]
+    },
+    {
+     "label": "Angst vor Hunden",
+     "episode": "rtl-054",
+     "number": 54,
+     "title": "Starke Frauen, eine blutige Nase & der American Staffordshire Terrier",
+     "start": "0:26:52",
+     "end": "0:29:16",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Anekdote über die hundeängstliche Schwester, die bei einer Reportage eine Staffordshire-Hündin kennenlernt, und über die eindrucksvolle Kraft und Dynamik dieser Hunde."
+     ]
+    },
+    {
+     "label": "Angst vor Hunden (Kynophobie)",
+     "episode": "rtl-020",
+     "number": 20,
+     "title": "Popcornpfoten, Hirschlausfliege & Klickertraining für Kinder",
+     "start": "1:03:31",
+     "end": "1:03:56",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Bei der Arbeit mit einem Menschen mit Hundephobie half Wissensvermittlung über Hundeverhalten, aber nur in Begleitung eines Psychologen."
+     ]
+    },
+    {
+     "label": "Angst vor Hunden und richtiges Verhalten",
+     "episode": "rtl-019",
+     "number": 19,
+     "title": "Handgemenge auf der Hundewiese, Ursachen für Aggression & Training mit einem misshandelten Hund",
+     "start": "0:32:36",
+     "end": "0:37:36",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Auf die Frage, ob es einen typischen Bissopfer-Typ gibt: Hunde beißen nicht gezielt ängstliche Menschen, problematisch ist widersprüchliche Körpersprache wie künstliches Großmachen; empfohlen wird deeskalierendes Stehenbleiben, seitliches Abwenden und Blick abwenden statt Weglaufen."
+     ]
+    },
+    {
+     "label": "Angst vor Hunden bei Kindern",
+     "episode": "rtl-010",
+     "number": 10,
+     "title": "Hundeführerschein, Homöopathie & Matschbrötchen",
+     "start": "0:00:59",
+     "end": "0:07:10",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Martins Tochter Marleen berichtet, wie zwei Nachbarhunde durch den Zaun auf sie zurannten und sie seitdem Angst vor fremden Hunden hat; besprochen werden Generalisierung von Ängsten und der Umgang damit."
+     ]
+    },
+    {
+     "label": "Rücksicht auf Menschen mit Angst vor Hunden",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:31:34",
+     "end": "0:33:01",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin und Katharina besprechen, wie unkontrollierte Annäherung und Anspringen Ängste verstärken können, und betonen ruhige Hundeführung sowie verständliche Vorabinformationen bei Sucheinsätzen."
+     ]
+    }
+   ],
+   "episodeCount": 10
+  },
+  {
    "id": "mensch-hund-bindung",
    "label": "Bindung zwischen Mensch und Hund",
    "category": "Mensch-Hund-Beziehung",
@@ -22782,145 +22995,6 @@
     }
    ],
    "episodeCount": 10
-  },
-  {
-   "id": "angst-vor-hunden",
-   "label": "Angst vor Hunden",
-   "category": "Verhalten & Kommunikation",
-   "description": "Wie die Angst von Menschen und Hunden vor anderen Hunden entsteht und wie man sie abbaut, etwa indem man Hundekörpersprache lesen lernt.",
-   "entries": [
-    {
-     "label": "Angst kleiner Hunde vor großen Hunden",
-     "episode": "rtl-237",
-     "number": 237,
-     "title": "Der Pudelschreck von Italien",
-     "start": "0:22:28",
-     "end": "0:24:15",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Katharina berichtet, wie ihre Hündin Trudi bei Begegnung mit einem kangalartigen Herdenschutzhund Angst zeigte und sie hochgenommen wurde – Martin weist darauf hin, dass Hochheben den Hund erst recht in Reichweite bringt."
-     ]
-    },
-    {
-     "label": "Kynophobie und Traumatisierung",
-     "episode": "rtl-141",
-     "number": 141,
-     "title": "Giftwarnung, Zeckenspray & Hühner-Hacks",
-     "start": "0:33:41",
-     "end": "0:35:44",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Angst vor Hunden entsteht meist durch Erschrecken statt durch Bisse; auch bei Hunden entscheidet der Charakter, ob ein Angriff zum Trauma wird, und beides ist gut therapierbar."
-     ]
-    },
-    {
-     "label": "Kynophobie: Therapie der Hundeangst",
-     "episode": "rtl-126",
-     "number": 126,
-     "title": "Podcast live: Entenschnabelmaulkorb",
-     "start": "1:44:14",
-     "end": "1:50:35",
-     "weight": "main",
-     "kind": "expert",
-     "summaries": [
-      "Psychotherapeut Daniel Wagner und Martin schildern die Konfrontationstherapie eines Mannes mit massiver Hundeangst, inklusive Messung der Stressreaktionen und dem Abfall der Angst nach längerem Aushalten."
-     ]
-    },
-    {
-     "label": "Angst vor Hunden abbauen",
-     "episode": "rtl-101",
-     "number": 101,
-     "title": "Jubiläumsfolge live aus dem Walfisch",
-     "start": "1:48:08",
-     "end": "1:52:03",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Erklärt wird, dass Hunde als unkalkulierbar empfunden werden, Körpersprachekenntnis hilft, Angst allein nicht zu Angriffen führt und übertriebenes Imponieren Hunde erst verunsichert."
-     ]
-    },
-    {
-     "label": "Angst vor Hunden und Rücksicht von Haltern",
-     "episode": "rtl-086",
-     "number": 86,
-     "title": "Helfen hilft!",
-     "start": "0:54:44",
-     "end": "0:58:51",
-     "weight": "main",
-     "kind": "expert",
-     "summaries": [
-      "Astrid Rütter schildert ihre jahrelange Hundeangst und appelliert an Halter, Rücksicht auf ängstliche Menschen zu nehmen; Rütter betont, dass Hunde reale Gefahren darstellen können und man Jogger oder Radfahrer durch Abrufen und Absitzen entlasten sollte."
-     ]
-    },
-    {
-     "label": "Hundeangst überwinden und Körpersprache lernen",
-     "episode": "rtl-086",
-     "number": 86,
-     "title": "Helfen hilft!",
-     "start": "0:58:51",
-     "end": "1:07:06",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Astrid erzählt von Panikreaktionen auf Bernhardiner und Golden-Retriever-Welpen, von der Konfrontation mit einer Staffordshire-Terrier-Hündin in einer Hundeprofi-Folge und davon, wie das Erlernen der Körpersprache ihr Lebensqualität zurückgab; dabei geht es auch um Klischeerassen und Kynophobie."
-     ]
-    },
-    {
-     "label": "Angst vor Hunden",
-     "episode": "rtl-054",
-     "number": 54,
-     "title": "Starke Frauen, eine blutige Nase & der American Staffordshire Terrier",
-     "start": "0:26:52",
-     "end": "0:29:16",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Anekdote über die hundeängstliche Schwester, die bei einer Reportage eine Staffordshire-Hündin kennenlernt, und über die eindrucksvolle Kraft und Dynamik dieser Hunde."
-     ]
-    },
-    {
-     "label": "Angst vor Hunden (Kynophobie)",
-     "episode": "rtl-020",
-     "number": 20,
-     "title": "Popcornpfoten, Hirschlausfliege & Klickertraining für Kinder",
-     "start": "1:03:31",
-     "end": "1:03:56",
-     "weight": "side",
-     "kind": "anecdote",
-     "summaries": [
-      "Bei der Arbeit mit einem Menschen mit Hundephobie half Wissensvermittlung über Hundeverhalten, aber nur in Begleitung eines Psychologen."
-     ]
-    },
-    {
-     "label": "Angst vor Hunden und richtiges Verhalten",
-     "episode": "rtl-019",
-     "number": 19,
-     "title": "Handgemenge auf der Hundewiese, Ursachen für Aggression & Training mit einem misshandelten Hund",
-     "start": "0:32:36",
-     "end": "0:37:36",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Auf die Frage, ob es einen typischen Bissopfer-Typ gibt: Hunde beißen nicht gezielt ängstliche Menschen, problematisch ist widersprüchliche Körpersprache wie künstliches Großmachen; empfohlen wird deeskalierendes Stehenbleiben, seitliches Abwenden und Blick abwenden statt Weglaufen."
-     ]
-    },
-    {
-     "label": "Angst vor Hunden bei Kindern",
-     "episode": "rtl-010",
-     "number": 10,
-     "title": "Hundeführerschein, Homöopathie & Matschbrötchen",
-     "start": "0:00:59",
-     "end": "0:07:10",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Martins Tochter Marleen berichtet, wie zwei Nachbarhunde durch den Zaun auf sie zurannten und sie seitdem Angst vor fremden Hunden hat; besprochen werden Generalisierung von Ängsten und der Umgang damit."
-     ]
-    }
-   ],
-   "episodeCount": 9
   },
   {
    "id": "insektenfreundlicher-garten",
@@ -30843,6 +30917,94 @@
    "episodeCount": 6
   },
   {
+   "id": "diensthunde",
+   "label": "Polizei- und Diensthunde",
+   "category": "Hundesport & Arbeitshunde",
+   "description": "Auswahl, Ausbildung und Einsatz von Polizei- und Diensthunden, Beißvorfälle und die Kritik an Gewalt und Ausnahmeregelungen in ihrer Ausbildung.",
+   "entries": [
+    {
+     "label": "Polizeihund beißt Passantin: Gerichtsfall",
+     "episode": "rtl-185",
+     "number": 185,
+     "title": "Genug ist genug",
+     "start": "0:39:07",
+     "end": "0:42:26",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Ein Zeitungsartikel über einen Polizisten, dessen belgischer Schäferhund in der Freizeit eine 73-jährige Frau schwer im Kopfbereich verletzte, wird vorgelesen und rechtlich sowie ausbildungstechnisch eingeordnet."
+     ]
+    },
+    {
+     "label": "Maulkorb bei Polizeihunden im Einsatz",
+     "episode": "rtl-096",
+     "number": 96,
+     "title": "Schutzhunde, Ebay & Unvermittelbare",
+     "start": "0:22:08",
+     "end": "0:23:09",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Aus einem NDR-Beitrag mit einem Verhaltensbiologen wird zitiert, dass Polizeihundeführer ihren Hunden im Einsatz einen Maulkorb anlegen, um Kollegen vor Fehlbissen im Erregungszustand zu schützen."
+     ]
+    },
+    {
+     "label": "Unterschied Sporthund und Polizeidiensthund",
+     "episode": "rtl-095",
+     "number": 95,
+     "title": "Schutzhundesport",
+     "start": "1:11:02",
+     "end": "1:14:15",
+     "weight": "main",
+     "kind": "expert",
+     "summaries": [
+      "Tina erläutert, dass Diensthunde zivil beißen lernen, mit Kevlar-Anzügen und Stoßkorbarbeit trainiert werden und deutlich höhere Belastungen aushalten müssen als Sporthunde."
+     ]
+    },
+    {
+     "label": "Polizeidiensthunde und ihre Auswahl",
+     "episode": "rtl-055",
+     "number": 55,
+     "title": "Hundetraining aus der Sprühflasche, Maulkorb & der Deutsche Schäferhund",
+     "start": "0:33:45",
+     "end": "0:34:52",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Kritik an der Rassewahl und Ausbildung deutscher Polizeihunde vom Schäferhund über den Rottweiler bis zum Malinois und an den fehlenden Kompetenzen bei der Selektion.",
+      "Kurzer Hinweis auf die Bestrebungen der Polizei, Ausnahmeregelungen für den Einsatz von Gewalt in der Hundeausbildung zu erhalten, weil die Hunde anders kaum lenkbar seien."
+     ]
+    },
+    {
+     "label": "Gewalt in der Polizeihundeausbildung",
+     "episode": "rtl-006",
+     "number": 6,
+     "title": "Was dürfen wir mit Tieren machen?",
+     "start": "0:18:31",
+     "end": "0:21:33",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion eines Videos mit geschlagenen Diensthunden, Zucht auf übersteigertes Beutefangverhalten sowie Einsatz von Stromhalsbändern zum Abbruch am Beißärmel."
+     ]
+    },
+    {
+     "label": "Grunderziehung und Spezialisierung bei Diensthunden",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:27:49",
+     "end": "0:31:34",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Anhand einer Begegnung am Flughafen kritisiert Martin hektische, wenig kontrollierte Sucharbeit und plädiert dafür, Hunde entsprechend ihrer Anlagen gezielt für Such- oder Schutzaufgaben auszubilden."
+     ]
+    }
+   ],
+   "episodeCount": 6
+  },
+  {
    "id": "rassebeschreibungen-kritik",
    "label": "Rassebeschreibungen",
    "category": "Zucht & Rassen",
@@ -32414,6 +32576,80 @@
    "episodeCount": 5
   },
   {
+   "id": "invasive-arten",
+   "label": "Invasive Arten",
+   "category": "Andere Tiere",
+   "description": "Eingeschleppte Tierarten wie Agakröte oder Nosferatu-Spinne und ihre Folgen für heimische Ökosysteme.",
+   "entries": [
+    {
+     "label": "Agakröten als invasive Art in Australien",
+     "episode": "rtl-098",
+     "number": 98,
+     "title": "Toadzilla, Tierhandel bei Ebay & Fischloopings",
+     "start": "0:03:04",
+     "end": "0:07:22",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Anhand einer knapp drei Kilo schweren Riesenkröte („Toadzilla“) wird besprochen, wie die 1935 zur Schädlingsbekämpfung eingeführte Agakröte in Australien selbst zur Plage wurde, warum sie giftig ist und welche Tötungsmethode (Kühlschrank, dann Gefrierfach) als vergleichsweise schonend gilt."
+     ]
+    },
+    {
+     "label": "Nosferatu-Spinne und Tigermücke",
+     "episode": "rtl-079",
+     "number": 79,
+     "title": "Regenmäntel, wilde Widderzüchter:innen & Riesenhunde",
+     "start": "0:00:40",
+     "end": "0:05:38",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Gespräch über die sich durch die Klimaerwärmung ausbreitende Nosferatu-Spinne und die Asiatische Tigermücke, deren Biss und Potenzial als Krankheitsüberträger."
+     ]
+    },
+    {
+     "label": "Mungos als eingeführte Art auf Hawaii",
+     "episode": "mina-014",
+     "number": 14,
+     "title": "Gebrauchsanweisung fürs Gehirn",
+     "start": "1:16:08",
+     "end": "1:16:30",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Beispiel der auf Hawaii gegen Ratten eingeführten Mungos, die das Problem nicht lösten, als Bild für fehlgeschlagene Eingriffe."
+     ]
+    },
+    {
+     "label": "Mungos auf Hawaii als Fehlschlag",
+     "episode": "mina-011",
+     "number": 11,
+     "title": "Zaun Ideologien",
+     "start": "0:33:24",
+     "end": "0:34:42",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Zur Rattenbekämpfung eingeführte Mungos erwiesen sich als nutzlos, weil sie tagaktiv sind, und dezimierten stattdessen einheimische Vögel, Eier und Meeresschildkröten."
+     ]
+    },
+    {
+     "label": "Wie Meereskotze heimische Ökosysteme bedroht",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:24:57",
+     "end": "0:25:35",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Katharina beschreibt die koloniebildende Meeresart Didemnum vexillum und erläutert, wie ihre Ausbreitung außerhalb des ursprünglichen Lebensraums heimische Arten und Nahrungsnetze beeinträchtigen kann."
+     ]
+    }
+   ],
+   "episodeCount": 5
+  },
+  {
    "id": "genpool-inzucht",
    "label": "Inzucht und kleiner Genpool",
    "category": "Zucht & Rassen",
@@ -32899,81 +33135,6 @@
    "episodeCount": 5
   },
   {
-   "id": "diensthunde",
-   "label": "Polizei- und Diensthunde",
-   "category": "Hundesport & Arbeitshunde",
-   "description": "Auswahl, Ausbildung und Einsatz von Polizei- und Diensthunden, Beißvorfälle und die Kritik an Gewalt und Ausnahmeregelungen in ihrer Ausbildung.",
-   "entries": [
-    {
-     "label": "Polizeihund beißt Passantin: Gerichtsfall",
-     "episode": "rtl-185",
-     "number": 185,
-     "title": "Genug ist genug",
-     "start": "0:39:07",
-     "end": "0:42:26",
-     "weight": "main",
-     "kind": "news",
-     "summaries": [
-      "Ein Zeitungsartikel über einen Polizisten, dessen belgischer Schäferhund in der Freizeit eine 73-jährige Frau schwer im Kopfbereich verletzte, wird vorgelesen und rechtlich sowie ausbildungstechnisch eingeordnet."
-     ]
-    },
-    {
-     "label": "Maulkorb bei Polizeihunden im Einsatz",
-     "episode": "rtl-096",
-     "number": 96,
-     "title": "Schutzhunde, Ebay & Unvermittelbare",
-     "start": "0:22:08",
-     "end": "0:23:09",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Aus einem NDR-Beitrag mit einem Verhaltensbiologen wird zitiert, dass Polizeihundeführer ihren Hunden im Einsatz einen Maulkorb anlegen, um Kollegen vor Fehlbissen im Erregungszustand zu schützen."
-     ]
-    },
-    {
-     "label": "Unterschied Sporthund und Polizeidiensthund",
-     "episode": "rtl-095",
-     "number": 95,
-     "title": "Schutzhundesport",
-     "start": "1:11:02",
-     "end": "1:14:15",
-     "weight": "main",
-     "kind": "expert",
-     "summaries": [
-      "Tina erläutert, dass Diensthunde zivil beißen lernen, mit Kevlar-Anzügen und Stoßkorbarbeit trainiert werden und deutlich höhere Belastungen aushalten müssen als Sporthunde."
-     ]
-    },
-    {
-     "label": "Polizeidiensthunde und ihre Auswahl",
-     "episode": "rtl-055",
-     "number": 55,
-     "title": "Hundetraining aus der Sprühflasche, Maulkorb & der Deutsche Schäferhund",
-     "start": "0:33:45",
-     "end": "0:34:52",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Kritik an der Rassewahl und Ausbildung deutscher Polizeihunde vom Schäferhund über den Rottweiler bis zum Malinois und an den fehlenden Kompetenzen bei der Selektion.",
-      "Kurzer Hinweis auf die Bestrebungen der Polizei, Ausnahmeregelungen für den Einsatz von Gewalt in der Hundeausbildung zu erhalten, weil die Hunde anders kaum lenkbar seien."
-     ]
-    },
-    {
-     "label": "Gewalt in der Polizeihundeausbildung",
-     "episode": "rtl-006",
-     "number": 6,
-     "title": "Was dürfen wir mit Tieren machen?",
-     "start": "0:18:31",
-     "end": "0:21:33",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Diskussion eines Videos mit geschlagenen Diensthunden, Zucht auf übersteigertes Beutefangverhalten sowie Einsatz von Stromhalsbändern zum Abbruch am Beißärmel."
-     ]
-    }
-   ],
-   "episodeCount": 5
-  },
-  {
    "id": "ressourcenverteidigung",
    "label": "Ressourcenverteidigung",
    "category": "Verhalten & Kommunikation",
@@ -33367,6 +33528,80 @@
      "kind": "news",
      "summaries": [
       "Eine Studie vergleicht den Begriffserwerb von Hunden mit dem von 18 Monate alten Kindern und zeigt, dass beide durch beiläufiges Mithören lernen – begleitet von sozialen Fähigkeiten wie Blickfolgen und Perspektivübernahme."
+     ]
+    }
+   ],
+   "episodeCount": 5
+  },
+  {
+   "id": "spuerhunde",
+   "label": "Spürhunde",
+   "category": "Hundesport & Arbeitshunde",
+   "description": "Hunde, die mit ihrer Nase gezielt Gerüche wie Schädlinge oder Tierspuren aufspüren, und die Grenzen solcher Einsätze.",
+   "entries": [
+    {
+     "label": "Dackel als Schädlingsspürhund",
+     "episode": "rtl-149",
+     "number": 149,
+     "title": "Sexmonster, Filmtiere & Schildkröten-Urteil",
+     "start": "0:24:28",
+     "end": "0:25:13",
+     "weight": "side",
+     "kind": "news",
+     "summaries": [
+      "Ein NDR-Bericht über einen Dackel, der für einen Baumpfleger Schädlinge an Bäumen erschnüffelt, wird vorgestellt und Martins Skepsis gegenüber immer neuen Spürhundeinsätzen angesprochen."
+     ]
+    },
+    {
+     "label": "Spürhund für Walkot in der Orca-Forschung",
+     "episode": "rtl-101",
+     "number": 101,
+     "title": "Jubiläumsfolge live aus dem Walfisch",
+     "start": "0:17:20",
+     "end": "0:18:32",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Rückblick auf eine Recherchereise zu einem Orca-Forscher in Seattle, dessen Hund Tucker Walkot an der Wasseroberfläche aufspüren konnte, obwohl Wale nur selten dort ausscheiden."
+     ]
+    },
+    {
+     "label": "Spürhunde und Geruchsarbeit",
+     "episode": "rtl-007",
+     "number": 7,
+     "title": "Ballverrückte Hunde",
+     "start": "0:04:20",
+     "end": "0:06:30",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Am Beispiel des Labradors Tucker wird gezeigt, wie ein extrem ballfixierter Tierheimhund zum Spürhund für Walkot umtrainiert und seine Sucht in Suchverhalten kanalisiert wurde."
+     ]
+    },
+    {
+     "label": "Hund erschnüffelt Walkot",
+     "episode": "rtl-001",
+     "number": 1,
+     "title": "Wie alles begann",
+     "start": "0:43:44",
+     "end": "0:44:32",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Bericht über einen Forschungshund in den USA, der auf der Wasseroberfläche Kot von Walen erschnüffelt und so Forschungsschiffe leitet."
+     ]
+    },
+    {
+     "label": "Spielzeug als Belohnung bei der Geruchssuche",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:26:41",
+     "end": "0:27:49",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin beschreibt, wie Spürhunde Zielgerüche mit einer Spielbelohnung verknüpfen, und widerspricht dem Mythos, Drogenspürhunde würden von Drogen abhängig gemacht."
      ]
     }
    ],
@@ -34942,6 +35177,68 @@
    "episodeCount": 4
   },
   {
+   "id": "artenspuerhunde",
+   "label": "Artenspürhunde in Naturschutz und Forschung",
+   "category": "Hundesport & Arbeitshunde",
+   "description": "Spürhunde, die seltene Tierarten oder den Kot von Wildtieren wie Walen aufspüren und so Artenschutz und Forschung unterstützen.",
+   "entries": [
+    {
+     "label": "Artenspürhunde und Biodiversität",
+     "episode": "rtl-168",
+     "number": 168,
+     "title": "R.I.P. Kuno",
+     "start": "0:23:09",
+     "end": "0:30:11",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Die Deutsche Bahn setzt sechs speziell ausgebildete Hunde ein, die auf Bahngeländen seltene Arten wie Schlingnatter, Zauneidechse, Gelbbauchunke und Fledermäuse aufspüren, um Bauvorhaben artenschutzkonform zu beschleunigen."
+     ]
+    },
+    {
+     "label": "Artenspürhunde und Wiederentdeckung des Goldmulls",
+     "episode": "rtl-144",
+     "number": 144,
+     "title": "Stark wie ein Regenwurm",
+     "start": "0:26:30",
+     "end": "0:32:31",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Der seit 1937 verschollene De-Wintons-Goldmull wurde in Südafrika von einer Border-Collie-Hündin erschnüffelt; besprochen werden die Arbeitsweise solcher Spürhunde mit anschließender DNA-Bodenanalyse und der Nutzen für Artenschutz und Schutzgebietsausweisung.",
+      "Scherzhafte Überlegung, ob Hunde auch auf das Erschnüffeln einzelner Zeckenarten ausgebildet werden könnten."
+     ]
+    },
+    {
+     "label": "Wildtierforschung mit Hundeeinsatz",
+     "episode": "rtl-007",
+     "number": 7,
+     "title": "Ballverrückte Hunde",
+     "start": "0:09:13",
+     "end": "0:13:16",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Sie schildern die Feldarbeit mit Forscher Samuel Wasser, bei der Tucker vom Bootsbug aus die Richtung zu Walkot anzeigte und Proben für wissenschaftliche Analysen gewonnen wurden."
+     ]
+    },
+    {
+     "label": "Labrador Sgiath erschnüffelt eine invasive Meeresart",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:22:32",
+     "end": "0:25:41",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Katharina berichtet von der schottischen Labradorhündin Sgiath, die mit einer Meeresbiologin die als Meereskotze bekannte Art Didemnum vexillum aufspürt und dafür vom IFAW ausgezeichnet wurde."
+     ]
+    }
+   ],
+   "episodeCount": 4
+  },
+  {
    "id": "aufreiten",
    "label": "Aufreiten",
    "category": "Verhalten & Kommunikation",
@@ -35071,6 +35368,67 @@
      "kind": "anecdote",
      "summaries": [
       "Nach Weihnachtsaufräumarbeiten setzen Menschen Hunde im Wald aus, weil sie die Tiere wie Abfall betrachten, sodass zuvor geleerte Gebiete wieder voll sind."
+     ]
+    }
+   ],
+   "episodeCount": 4
+  },
+  {
+   "id": "motivation-belohnung",
+   "label": "Belohnung mit Futter und Spiel",
+   "category": "Erziehung & Training",
+   "description": "Wie man Futter und Spiel je nach Hund gezielt als Belohnung einsetzt und besondere Leckerchen wertvoll hält.",
+   "entries": [
+    {
+     "label": "Belohnung: Futter, Spiel und Triebigkeit",
+     "episode": "rtl-096",
+     "number": 96,
+     "title": "Schutzhunde, Ebay & Unvermittelbare",
+     "start": "0:29:04",
+     "end": "0:31:14",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Erklärt wird, dass Hunde unterschiedlich über Futter oder Spielzeug motivierbar sind und extrem beutetriebige Hunde in Anwesenheit des Spielzeugs kaum noch sozial ansprechbar sind."
+     ]
+    },
+    {
+     "label": "Jackpot-Leckerchen richtig einsetzen",
+     "episode": "rtl-004",
+     "number": 4,
+     "title": "Drohgebärden im Freilauf, eine Emma sieht rot & Beauty Tipps",
+     "start": "0:44:45",
+     "end": "0:46:19",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Ein exklusives Highlight-Futter wie Joghurt aus der Tube sollte ausschließlich für den Rückruf reserviert bleiben, damit es seinen besonderen Wert nicht verliert."
+     ]
+    },
+    {
+     "label": "Leckerchen im Zoofachhandel",
+     "episode": "mina-015",
+     "number": 15,
+     "title": "Fettige Ohren und Albtraumbabys",
+     "start": "0:38:50",
+     "end": "0:39:13",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Martin erzählt von Minas Gier an der Leckerli-Station und warum er es kritisch sieht, Hunde an der Kasse selbst auswählen zu lassen."
+     ]
+    },
+    {
+     "label": "Wenn die Arbeit selbst zur Belohnung wird",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:26:22",
+     "end": "0:26:49",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Martin erklärt, dass für arbeitsfreudige Hunde bereits die passende Tätigkeit belohnend sein kann und Futter nicht in jeder Situation der entscheidende Anreiz ist."
      ]
     }
    ],
@@ -36445,67 +36803,6 @@
    "episodeCount": 4
   },
   {
-   "id": "invasive-arten",
-   "label": "Invasive Arten",
-   "category": "Andere Tiere",
-   "description": "Eingeschleppte Tierarten wie Agakröte oder Nosferatu-Spinne und ihre Folgen für heimische Ökosysteme.",
-   "entries": [
-    {
-     "label": "Agakröten als invasive Art in Australien",
-     "episode": "rtl-098",
-     "number": 98,
-     "title": "Toadzilla, Tierhandel bei Ebay & Fischloopings",
-     "start": "0:03:04",
-     "end": "0:07:22",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Anhand einer knapp drei Kilo schweren Riesenkröte („Toadzilla“) wird besprochen, wie die 1935 zur Schädlingsbekämpfung eingeführte Agakröte in Australien selbst zur Plage wurde, warum sie giftig ist und welche Tötungsmethode (Kühlschrank, dann Gefrierfach) als vergleichsweise schonend gilt."
-     ]
-    },
-    {
-     "label": "Nosferatu-Spinne und Tigermücke",
-     "episode": "rtl-079",
-     "number": 79,
-     "title": "Regenmäntel, wilde Widderzüchter:innen & Riesenhunde",
-     "start": "0:00:40",
-     "end": "0:05:38",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Gespräch über die sich durch die Klimaerwärmung ausbreitende Nosferatu-Spinne und die Asiatische Tigermücke, deren Biss und Potenzial als Krankheitsüberträger."
-     ]
-    },
-    {
-     "label": "Mungos als eingeführte Art auf Hawaii",
-     "episode": "mina-014",
-     "number": 14,
-     "title": "Gebrauchsanweisung fürs Gehirn",
-     "start": "1:16:08",
-     "end": "1:16:30",
-     "weight": "side",
-     "kind": "anecdote",
-     "summaries": [
-      "Beispiel der auf Hawaii gegen Ratten eingeführten Mungos, die das Problem nicht lösten, als Bild für fehlgeschlagene Eingriffe."
-     ]
-    },
-    {
-     "label": "Mungos auf Hawaii als Fehlschlag",
-     "episode": "mina-011",
-     "number": 11,
-     "title": "Zaun Ideologien",
-     "start": "0:33:24",
-     "end": "0:34:42",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Zur Rattenbekämpfung eingeführte Mungos erwiesen sich als nutzlos, weil sie tagaktiv sind, und dezimierten stattdessen einheimische Vögel, Eier und Meeresschildkröten."
-     ]
-    }
-   ],
-   "episodeCount": 4
-  },
-  {
    "id": "klimakrise-und-tiere",
    "label": "Klimawandel und Tierwelt",
    "category": "Wissenschaft & Forschung",
@@ -37349,67 +37646,6 @@
      "kind": "discussion",
      "summaries": [
       "Junge Border Collies und Australian Shepherds lernen bei Rütter vor allem Ruhe zu geben, weil das Hochfahren leicht, das Runterkommen aber die eigentliche Herausforderung ist."
-     ]
-    }
-   ],
-   "episodeCount": 4
-  },
-  {
-   "id": "spuerhunde",
-   "label": "Spürhunde",
-   "category": "Hundesport & Arbeitshunde",
-   "description": "Hunde, die mit ihrer Nase gezielt Gerüche wie Schädlinge oder Tierspuren aufspüren, und die Grenzen solcher Einsätze.",
-   "entries": [
-    {
-     "label": "Dackel als Schädlingsspürhund",
-     "episode": "rtl-149",
-     "number": 149,
-     "title": "Sexmonster, Filmtiere & Schildkröten-Urteil",
-     "start": "0:24:28",
-     "end": "0:25:13",
-     "weight": "side",
-     "kind": "news",
-     "summaries": [
-      "Ein NDR-Bericht über einen Dackel, der für einen Baumpfleger Schädlinge an Bäumen erschnüffelt, wird vorgestellt und Martins Skepsis gegenüber immer neuen Spürhundeinsätzen angesprochen."
-     ]
-    },
-    {
-     "label": "Spürhund für Walkot in der Orca-Forschung",
-     "episode": "rtl-101",
-     "number": 101,
-     "title": "Jubiläumsfolge live aus dem Walfisch",
-     "start": "0:17:20",
-     "end": "0:18:32",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Rückblick auf eine Recherchereise zu einem Orca-Forscher in Seattle, dessen Hund Tucker Walkot an der Wasseroberfläche aufspüren konnte, obwohl Wale nur selten dort ausscheiden."
-     ]
-    },
-    {
-     "label": "Spürhunde und Geruchsarbeit",
-     "episode": "rtl-007",
-     "number": 7,
-     "title": "Ballverrückte Hunde",
-     "start": "0:04:20",
-     "end": "0:06:30",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Am Beispiel des Labradors Tucker wird gezeigt, wie ein extrem ballfixierter Tierheimhund zum Spürhund für Walkot umtrainiert und seine Sucht in Suchverhalten kanalisiert wurde."
-     ]
-    },
-    {
-     "label": "Hund erschnüffelt Walkot",
-     "episode": "rtl-001",
-     "number": 1,
-     "title": "Wie alles begann",
-     "start": "0:43:44",
-     "end": "0:44:32",
-     "weight": "side",
-     "kind": "anecdote",
-     "summaries": [
-      "Bericht über einen Forschungshund in den USA, der auf der Wasseroberfläche Kot von Walen erschnüffelt und so Forschungsschiffe leitet."
      ]
     }
    ],
@@ -38660,6 +38896,54 @@
    "episodeCount": 3
   },
   {
+   "id": "tierarztbesuch",
+   "label": "Angst vor dem Tierarzt",
+   "category": "Verhalten & Kommunikation",
+   "description": "Wie man Hunden die Angst vor dem Tierarztbesuch nimmt und den Besuch in der Praxis schrittweise positiv aufbaut.",
+   "entries": [
+    {
+     "label": "Angst vor dem Tierarztbesuch und Aufbautraining",
+     "episode": "rtl-222",
+     "number": 222,
+     "title": "Der schwere Duft von Ryanair",
+     "start": "0:16:54",
+     "end": "0:28:53",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Hörerfrage über einen Australian Shepherd, der beim Tierarzt grob behandelt wurde; Rütter erklärt, wie man mit Wartezimmerbesuchen, Keksen und schrittweisen Untersuchungen positive Erfahrungen aufbaut, dass Angst nicht gelöscht, sondern nur überlagert werden kann, und dass das Vertrauen zu den Haltern durch ein einzelnes Erlebnis meist nicht dauerhaft leidet."
+     ]
+    },
+    {
+     "label": "Angst vor dem Tierarzt trainieren",
+     "episode": "rtl-019",
+     "number": 19,
+     "title": "Handgemenge auf der Hundewiese, Ursachen für Aggression & Training mit einem misshandelten Hund",
+     "start": "0:52:43",
+     "end": "0:53:21",
+     "weight": "side",
+     "kind": "expert",
+     "summaries": [
+      "Ziel des Trainings ist nicht völlige Gelassenheit, sondern Lebensqualität und Krisenmanagement – etwa dem Hund den Ort Tierarztpraxis erträglicher zu machen."
+     ]
+    },
+    {
+     "label": "Die Tierarztpraxis ohne Behandlung kennenlernen",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:21:46",
+     "end": "0:22:01",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Martin schlägt kurze Praxisbesuche ohne Behandlung vor, damit der Hund das Wartezimmer auch mit ruhigen, angenehmen Erlebnissen verknüpfen kann."
+     ]
+    }
+   ],
+   "episodeCount": 3
+  },
+  {
    "id": "angstaggression",
    "label": "Angstaggression",
    "category": "Verhalten & Kommunikation",
@@ -38853,55 +39137,6 @@
    "episodeCount": 3
   },
   {
-   "id": "artenspuerhunde",
-   "label": "Artenspürhunde in Naturschutz und Forschung",
-   "category": "Hundesport & Arbeitshunde",
-   "description": "Spürhunde, die seltene Tierarten oder den Kot von Wildtieren wie Walen aufspüren und so Artenschutz und Forschung unterstützen.",
-   "entries": [
-    {
-     "label": "Artenspürhunde und Biodiversität",
-     "episode": "rtl-168",
-     "number": 168,
-     "title": "R.I.P. Kuno",
-     "start": "0:23:09",
-     "end": "0:30:11",
-     "weight": "main",
-     "kind": "news",
-     "summaries": [
-      "Die Deutsche Bahn setzt sechs speziell ausgebildete Hunde ein, die auf Bahngeländen seltene Arten wie Schlingnatter, Zauneidechse, Gelbbauchunke und Fledermäuse aufspüren, um Bauvorhaben artenschutzkonform zu beschleunigen."
-     ]
-    },
-    {
-     "label": "Artenspürhunde und Wiederentdeckung des Goldmulls",
-     "episode": "rtl-144",
-     "number": 144,
-     "title": "Stark wie ein Regenwurm",
-     "start": "0:26:30",
-     "end": "0:32:31",
-     "weight": "main",
-     "kind": "news",
-     "summaries": [
-      "Der seit 1937 verschollene De-Wintons-Goldmull wurde in Südafrika von einer Border-Collie-Hündin erschnüffelt; besprochen werden die Arbeitsweise solcher Spürhunde mit anschließender DNA-Bodenanalyse und der Nutzen für Artenschutz und Schutzgebietsausweisung.",
-      "Scherzhafte Überlegung, ob Hunde auch auf das Erschnüffeln einzelner Zeckenarten ausgebildet werden könnten."
-     ]
-    },
-    {
-     "label": "Wildtierforschung mit Hundeeinsatz",
-     "episode": "rtl-007",
-     "number": 7,
-     "title": "Ballverrückte Hunde",
-     "start": "0:09:13",
-     "end": "0:13:16",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Sie schildern die Feldarbeit mit Forscher Samuel Wasser, bei der Tucker vom Bootsbug aus die Richtung zu Walkot anzeigte und Proben für wissenschaftliche Analysen gewonnen wurden."
-     ]
-    }
-   ],
-   "episodeCount": 3
-  },
-  {
    "id": "rasseklischees",
    "label": "Aussagekraft von Rasseaussagen",
    "category": "Zucht & Rassen",
@@ -39088,54 +39323,6 @@
      "kind": "listener_question",
      "summaries": [
       "Hörerfrage zu einem Boxer, der beim Vorbeigehen am Zaun bellt: Empfehlung, mit den Haltern zu sprechen und den Hund über Futter und ein Signalwort positiv zu konditionieren."
-     ]
-    }
-   ],
-   "episodeCount": 3
-  },
-  {
-   "id": "motivation-belohnung",
-   "label": "Belohnung mit Futter und Spiel",
-   "category": "Erziehung & Training",
-   "description": "Wie man Futter und Spiel je nach Hund gezielt als Belohnung einsetzt und besondere Leckerchen wertvoll hält.",
-   "entries": [
-    {
-     "label": "Belohnung: Futter, Spiel und Triebigkeit",
-     "episode": "rtl-096",
-     "number": 96,
-     "title": "Schutzhunde, Ebay & Unvermittelbare",
-     "start": "0:29:04",
-     "end": "0:31:14",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Erklärt wird, dass Hunde unterschiedlich über Futter oder Spielzeug motivierbar sind und extrem beutetriebige Hunde in Anwesenheit des Spielzeugs kaum noch sozial ansprechbar sind."
-     ]
-    },
-    {
-     "label": "Jackpot-Leckerchen richtig einsetzen",
-     "episode": "rtl-004",
-     "number": 4,
-     "title": "Drohgebärden im Freilauf, eine Emma sieht rot & Beauty Tipps",
-     "start": "0:44:45",
-     "end": "0:46:19",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Ein exklusives Highlight-Futter wie Joghurt aus der Tube sollte ausschließlich für den Rückruf reserviert bleiben, damit es seinen besonderen Wert nicht verliert."
-     ]
-    },
-    {
-     "label": "Leckerchen im Zoofachhandel",
-     "episode": "mina-015",
-     "number": 15,
-     "title": "Fettige Ohren und Albtraumbabys",
-     "start": "0:38:50",
-     "end": "0:39:13",
-     "weight": "side",
-     "kind": "anecdote",
-     "summaries": [
-      "Martin erzählt von Minas Gier an der Leckerli-Station und warum er es kritisch sieht, Hunde an der Kasse selbst auswählen zu lassen."
      ]
     }
    ],
@@ -41460,6 +41647,54 @@
      "kind": "discussion",
      "summaries": [
       "Erläuterung, dass bei Rüden mit verzögertem Hodenabstieg die höhere Körpertemperatur die Testosteronproduktion steigern und zu gesteigertem Sexualverhalten führen kann."
+     ]
+    }
+   ],
+   "episodeCount": 3
+  },
+  {
+   "id": "hundemantel-kaelteschutz",
+   "label": "Kälteschutz für Hunde",
+   "category": "Haltung & Pflege",
+   "description": "Welche Hunde bei Kälte frieren und wann Mantel, warme Unterlage oder beheizter Schlafplatz sinnvoll sind.",
+   "entries": [
+    {
+     "label": "Kälteempfindlichkeit und Schlafplatz",
+     "episode": "rtl-139",
+     "number": 139,
+     "title": "Co-Ownership & Knochen knacken",
+     "start": "0:45:14",
+     "end": "0:50:15",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Hörerfrage zum ungeheizten Schlafzimmer für einen Labrador-Senior ohne Unterwolle: Rassen ohne Unterwolle frieren schneller, 16-18 Grad sind meist unproblematisch, Höhlen, isolierende Unterlagen, Wärmemantel oder beheizbare Pads bei Arthrose können helfen."
+     ]
+    },
+    {
+     "label": "Hundemäntel, Kälteschutz und Arthrose",
+     "episode": "rtl-091",
+     "number": 91,
+     "title": "Vorsicht vor Weihnachten",
+     "start": "0:03:30",
+     "end": "0:07:05",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion darüber, welche Hunde funktionale Mäntel oder Frottee-Bademäntel brauchen, etwa Rassen ohne Unterwolle und alte Hunde mit Arthrose, und warum Wärme kein modisches Accessoire ist."
+     ]
+    },
+    {
+     "label": "Kälteschutz für Hunde ohne Unterwolle",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:14:05",
+     "end": "0:14:26",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Martin weist am Beispiel kurzhaariger Jagdhunde darauf hin, dass fehlende Unterwolle und Ruhepausen im Winter zusätzlichen Kälteschutz nötig machen können."
      ]
     }
    ],
@@ -44216,41 +44451,6 @@
      "kind": "discussion",
      "summaries": [
       "Anekdoten vom Angeln mit den Kindern und in Island führen zur Unterscheidung zwischen Angeln als Freizeitsport und Fang zum Verzehr sowie zur Entfremdung von der Herkunft von Fischprodukten."
-     ]
-    }
-   ],
-   "episodeCount": 2
-  },
-  {
-   "id": "tierarztbesuch",
-   "label": "Angst vor dem Tierarzt",
-   "category": "Verhalten & Kommunikation",
-   "description": "Wie man Hunden die Angst vor dem Tierarztbesuch nimmt und den Besuch in der Praxis schrittweise positiv aufbaut.",
-   "entries": [
-    {
-     "label": "Angst vor dem Tierarztbesuch und Aufbautraining",
-     "episode": "rtl-222",
-     "number": 222,
-     "title": "Der schwere Duft von Ryanair",
-     "start": "0:16:54",
-     "end": "0:28:53",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Hörerfrage über einen Australian Shepherd, der beim Tierarzt grob behandelt wurde; Rütter erklärt, wie man mit Wartezimmerbesuchen, Keksen und schrittweisen Untersuchungen positive Erfahrungen aufbaut, dass Angst nicht gelöscht, sondern nur überlagert werden kann, und dass das Vertrauen zu den Haltern durch ein einzelnes Erlebnis meist nicht dauerhaft leidet."
-     ]
-    },
-    {
-     "label": "Angst vor dem Tierarzt trainieren",
-     "episode": "rtl-019",
-     "number": 19,
-     "title": "Handgemenge auf der Hundewiese, Ursachen für Aggression & Training mit einem misshandelten Hund",
-     "start": "0:52:43",
-     "end": "0:53:21",
-     "weight": "side",
-     "kind": "expert",
-     "summaries": [
-      "Ziel des Trainings ist nicht völlige Gelassenheit, sondern Lebensqualität und Krisenmanagement – etwa dem Hund den Ort Tierarztpraxis erträglicher zu machen."
      ]
     }
    ],
@@ -47701,6 +47901,41 @@
    "episodeCount": 2
   },
   {
+   "id": "jagdsprache",
+   "label": "Jägersprache",
+   "category": "Tierschutz & Ethik",
+   "description": "Wie Begriffe der Jägersprache reale Vorgänge bei der Jagd beschönigen.",
+   "entries": [
+    {
+     "label": "Beschönigende Jägersprache",
+     "episode": "rtl-214",
+     "number": 214,
+     "title": "Lasst mich bei den Affen!",
+     "start": "0:32:10",
+     "end": "0:33:26",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Kritik an Begriffen der Jägersprache wie Schweiß, Aufbrechen oder Stück, die reale Vorgänge bei der Jagd verharmlosen."
+     ]
+    },
+    {
+     "label": "Beschönigende Begriffe in der Jägersprache",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:08:07",
+     "end": "0:08:49",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Martin und Katharina kritisieren, wie jagdliche Fachbegriffe und beschönigende Formulierungen das Töten von Wildtieren verharmlosen können."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
    "id": "kastanien-gefahr",
    "label": "Kastanien und Eicheln",
    "category": "Gesundheit & Medizin",
@@ -47977,41 +48212,6 @@
      "kind": "news",
      "summaries": [
       "Hinweis auf Nachrichten zum Tierschutz, unter anderem das für 2027 angekündigte Ende der Käfigtierhaltung."
-     ]
-    }
-   ],
-   "episodeCount": 2
-  },
-  {
-   "id": "hundemantel-kaelteschutz",
-   "label": "Kälteschutz für Hunde",
-   "category": "Haltung & Pflege",
-   "description": "Welche Hunde bei Kälte frieren und wann Mantel, warme Unterlage oder beheizter Schlafplatz sinnvoll sind.",
-   "entries": [
-    {
-     "label": "Kälteempfindlichkeit und Schlafplatz",
-     "episode": "rtl-139",
-     "number": 139,
-     "title": "Co-Ownership & Knochen knacken",
-     "start": "0:45:14",
-     "end": "0:50:15",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Hörerfrage zum ungeheizten Schlafzimmer für einen Labrador-Senior ohne Unterwolle: Rassen ohne Unterwolle frieren schneller, 16-18 Grad sind meist unproblematisch, Höhlen, isolierende Unterlagen, Wärmemantel oder beheizbare Pads bei Arthrose können helfen."
-     ]
-    },
-    {
-     "label": "Hundemäntel, Kälteschutz und Arthrose",
-     "episode": "rtl-091",
-     "number": 91,
-     "title": "Vorsicht vor Weihnachten",
-     "start": "0:03:30",
-     "end": "0:07:05",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Diskussion darüber, welche Hunde funktionale Mäntel oder Frottee-Bademäntel brauchen, etwa Rassen ohne Unterwolle und alte Hunde mit Arthrose, und warum Wärme kein modisches Accessoire ist."
      ]
     }
    ],
@@ -48327,6 +48527,55 @@
      "kind": "discussion",
      "summaries": [
       "Kritik an einem Jägervideo: Das Halten intakter Rüden und Hündinnen bedeutet wochenlangen Stress vor und nach der Standhitze, Probleme in der Artgenossenverträglichkeit, und das Vorführen der läufigen Hündin vor dem eingezwingerten Rüden ist Quälerei."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
+   "id": "medical-training",
+   "label": "Medical Training",
+   "category": "Erziehung & Training",
+   "description": "Wie man Hunde in kleinen Schritten an Zähneputzen, Untersuchungen, Verbände und andere Pflegesituationen gewöhnt.",
+   "entries": [
+    {
+     "label": "Zähneputzen beim Hund trainieren",
+     "episode": "rtl-125",
+     "number": 125,
+     "title": "Kampf der Urzeitkrebse",
+     "start": "0:45:50",
+     "end": "0:49:16",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Auf eine Hörerfrage erklärt Martin Rütter, wie man einen Hund von Welpenalter an in kleinen Schritten positiv an Untersuchungen und Zähneputzen mit Fingerzahnbürste gewöhnt.",
+      "Empfehlung, prophylaktisch Verbände, Fellschnitt, Maulkorbgewöhnung und ähnliche Handlingsituationen in entspannten Momenten als Beschäftigung zu trainieren."
+     ]
+    },
+    {
+     "label": "Augentropfen beim Hund geben",
+     "episode": "rtl-125",
+     "number": 125,
+     "title": "Kampf der Urzeitkrebse",
+     "start": "0:51:30",
+     "end": "0:52:30",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Tipps zum Üben von Augentropfen mit Wasser, beginnend mit Tropfen auf Stirn und Nase, zügiges Handeln und sofortige Belohnung statt langer Überredung."
+     ]
+    },
+    {
+     "label": "Untersuchungen in kleinen Schritten vorbereiten",
+     "episode": "mina-019",
+     "number": 19,
+     "title": "Aufgespürt und ausgekotzt",
+     "start": "0:17:16",
+     "end": "0:21:46",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Ausgehend von Trudis Tierarztbesuch erklärt Martin, wie Berührungen und Untersuchungen zunächst in entspannten Alltagssituationen und später mit weiteren Personen, Gegenständen und auf dem Behandlungstisch geübt werden können."
      ]
     }
    ],
@@ -57863,28 +58112,6 @@
    "episodeCount": 1
   },
   {
-   "id": "jagdsprache",
-   "label": "Jägersprache",
-   "category": "Tierschutz & Ethik",
-   "description": "Wie Begriffe der Jägersprache reale Vorgänge bei der Jagd beschönigen.",
-   "entries": [
-    {
-     "label": "Beschönigende Jägersprache",
-     "episode": "rtl-214",
-     "number": 214,
-     "title": "Lasst mich bei den Affen!",
-     "start": "0:32:10",
-     "end": "0:33:26",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Kritik an Begriffen der Jägersprache wie Schweiß, Aufbrechen oder Stück, die reale Vorgänge bei der Jagd verharmlosen."
-     ]
-    }
-   ],
-   "episodeCount": 1
-  },
-  {
    "id": "ki-hundewissen",
    "label": "KI als Informationsquelle",
    "category": "Wissenschaft & Forschung",
@@ -59375,42 +59602,6 @@
      "summaries": [
       "Katharina erzählt vom Fund eines flugunfähigen Mauerseglers und erklärt, dass am Boden sitzende Mauersegler immer Hilfe brauchen, nicht getränkt oder zwangsgefüttert werden dürfen und über spezialisierte Netzwerke und Auffangstationen vermittelt werden können.",
       "Erläutert wird, dass Mauersegler monatelang in der Luft bleiben, im Flug schlafen und sich paaren, nur zum Brüten landen und trotz Ähnlichkeit nicht mit Schwalben verwandt sind."
-     ]
-    }
-   ],
-   "episodeCount": 1
-  },
-  {
-   "id": "medical-training",
-   "label": "Medical Training",
-   "category": "Erziehung & Training",
-   "description": "Wie man Hunde in kleinen Schritten an Zähneputzen, Untersuchungen, Verbände und andere Pflegesituationen gewöhnt.",
-   "entries": [
-    {
-     "label": "Zähneputzen beim Hund trainieren",
-     "episode": "rtl-125",
-     "number": 125,
-     "title": "Kampf der Urzeitkrebse",
-     "start": "0:45:50",
-     "end": "0:49:16",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Auf eine Hörerfrage erklärt Martin Rütter, wie man einen Hund von Welpenalter an in kleinen Schritten positiv an Untersuchungen und Zähneputzen mit Fingerzahnbürste gewöhnt.",
-      "Empfehlung, prophylaktisch Verbände, Fellschnitt, Maulkorbgewöhnung und ähnliche Handlingsituationen in entspannten Momenten als Beschäftigung zu trainieren."
-     ]
-    },
-    {
-     "label": "Augentropfen beim Hund geben",
-     "episode": "rtl-125",
-     "number": 125,
-     "title": "Kampf der Urzeitkrebse",
-     "start": "0:51:30",
-     "end": "0:52:30",
-     "weight": "side",
-     "kind": "discussion",
-     "summaries": [
-      "Tipps zum Üben von Augentropfen mit Wasser, beginnend mit Tropfen auf Stirn und Nase, zügiges Handeln und sofortige Belohnung statt langer Überredung."
      ]
     }
    ],
