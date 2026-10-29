@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.19.0](https://github.com/hurrtz/rasseportrait/compare/v3.18.5...v3.19.0) (2026-10-29)
+
+
+### Features
+
+* index podcast transcripts for static full-text search ([21a6534](https://github.com/hurrtz/rasseportrait/commit/21a6534f483a30d883b7541fb9af265979359cba))
+* search all Hundewissen episodes with timed excerpts ([7754bed](https://github.com/hurrtz/rasseportrait/commit/7754bed47ec93e9620dea5658ecb20c04b45aa9d))
+
 ### [3.18.5](https://github.com/hurrtz/rasseportrait/compare/v3.18.4...v3.18.5) (2026-10-29)
 
 
