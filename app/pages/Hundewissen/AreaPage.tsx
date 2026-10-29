@@ -123,6 +123,20 @@ const AreaView = ({
               className={classes.search}
             />
           )}
+          <p>
+            <Link
+              className={shared.backLink}
+              to={
+                query.trim()
+                  ? `/hundewissen?q=${encodeURIComponent(query.trim())}`
+                  : "/hundewissen"
+              }
+            >
+              {query.trim()
+                ? `Alle Folgen nach »${query.trim()}« durchsuchen`
+                : "Alle Folgen durchsuchen"}
+            </Link>
+          </p>
           {hits && !hits.length ? (
             <p className={classes.empty}>Kein Thema gefunden</p>
           ) : (

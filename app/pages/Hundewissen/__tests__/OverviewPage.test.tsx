@@ -9,13 +9,25 @@ const mockTrack = jest.fn();
 jest.mock("~/hooks/useAmplitude", () => ({
   useAmplitude: () => ({ track: mockTrack }),
 }));
+jest.mock("../TranscriptResults", () => ({
+  __esModule: true,
+  default: ({ query }: { query: string }) => (
+    <div data-testid="transcript-query">{query}</div>
+  ),
+}));
 
-const renderOverview = (index: HundewissenIndex = makeIndex(), route = "/hundewissen") => {
+const renderOverview = (
+  index: HundewissenIndex = makeIndex(),
+  route = "/hundewissen",
+) => {
   seedHundewissen(index);
   return renderWithProviders(<OverviewPage />, { path: "/hundewissen", route });
 };
 
-const areaCards = () => within(screen.getByRole("list", { name: "Alle Bereiche" })).getAllByRole("link");
+const areaCards = () =>
+  within(screen.getByRole("list", { name: "Alle Bereiche" })).getAllByRole(
+    "link",
+  );
 
 /** Seven areas with 7, 6, … 1 topics */
 const sevenAreas = () => {
@@ -31,7 +43,9 @@ const sevenAreas = () => {
   return makeIndex({
     areas: names.map(([slug, name], i) => area(slug, name, 7 - i)),
     topics: names.flatMap(([slug], i) =>
-      Array.from({ length: 7 - i }, (_, j) => summary(`${slug}-${j}`, `${slug} ${j}`, slug)),
+      Array.from({ length: 7 - i }, (_, j) =>
+        summary(`${slug}-${j}`, `${slug} ${j}`, slug),
+      ),
     ),
   });
 };
@@ -42,9 +56,13 @@ describe("Hundewissen overview", () => {
   it("introduces the page", () => {
     renderOverview();
 
-    expect(screen.getByRole("heading", { level: 1, name: "Hundewissen" })).toBeInTheDocument();
     expect(
-      screen.getByText(/Alles, was im Podcast neben den Rasseportraits besprochen wird/),
+      screen.getByRole("heading", { level: 1, name: "Hundewissen" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        /Alles, was im Podcast neben den Rasseportraits besprochen wird/,
+      ),
     ).toBeInTheDocument();
   });
 
@@ -79,24 +97,36 @@ describe("Hundewissen overview", () => {
       }),
     );
 
-    const frequent = screen.getByRole("region", { name: "Am häufigsten besprochen" });
+    const frequent = screen.getByRole("region", {
+      name: "Am häufigsten besprochen",
+    });
     expect(
       within(frequent)
         .getAllByRole("link")
         .map((link) => [link.textContent, link.getAttribute("href")]),
     ).toEqual([
       ["Zucht & RassenHäufig5 Folgen", "/hundewissen/zucht-rassen/b"],
-      ["Gesundheit & MedizinMittel, mehr Stellen3 Folgen", "/hundewissen/gesundheit-medizin/c"],
+      [
+        "Gesundheit & MedizinMittel, mehr Stellen3 Folgen",
+        "/hundewissen/gesundheit-medizin/c",
+      ],
       ["Zucht & RassenMittel3 Folgen", "/hundewissen/zucht-rassen/d"],
     ]);
   });
 
   it("has no most discussed topics while every topic has one episode", () => {
     renderOverview(
-      makeIndex({ topics: [summary("a", "A", "zucht-rassen"), summary("b", "B", "zucht-rassen")] }),
+      makeIndex({
+        topics: [
+          summary("a", "A", "zucht-rassen"),
+          summary("b", "B", "zucht-rassen"),
+        ],
+      }),
     );
 
-    expect(screen.queryByText("Am häufigsten besprochen")).not.toBeInTheDocument();
+    expect(
+      screen.queryByText("Am häufigsten besprochen"),
+    ).not.toBeInTheDocument();
   });
 
   it("shows each area with its biggest topics", () => {
@@ -110,7 +140,11 @@ describe("Hundewissen overview", () => {
       within(first)
         .getAllByRole("listitem")
         .map(({ textContent }) => textContent),
-    ).toEqual(["Qualzuchten4 Folgen", "Rasseerhalt2 Folgen", "Zuchtverbände1 Folge"]);
+    ).toEqual([
+      "Qualzuchten4 Folgen",
+      "Rasseerhalt2 Folgen",
+      "Zuchtverbände1 Folge",
+    ]);
     expect(within(first).getByText("Alle 3 Themen")).toBeInTheDocument();
   });
 
@@ -142,7 +176,10 @@ describe("Hundewissen overview", () => {
     renderOverview(index);
 
     const source = areaCards()[3].querySelector("picture source");
-    expect(source).toHaveAttribute("srcset", "/x/erziehung-training/illustration_thumbnail.jpeg");
+    expect(source).toHaveAttribute(
+      "srcset",
+      "/x/erziehung-training/illustration_thumbnail.jpeg",
+    );
     expect(source).toHaveAttribute("media", "(max-width: 61.99em)");
   });
 
@@ -150,7 +187,13 @@ describe("Hundewissen overview", () => {
     renderOverview(sevenAreas());
 
     expect(areaCards().map((card) => card.getAttribute("data-span"))).toEqual([
-      "6", "6", "4", "4", "4", "6", "6",
+      "6",
+      "6",
+      "4",
+      "4",
+      "4",
+      "6",
+      "6",
     ]);
   });
 
@@ -171,15 +214,19 @@ describe("Hundewissen overview", () => {
       }),
     );
 
-    expect(areaCards().map((card) => card.getAttribute("data-span"))).toEqual(["6", "6", "12"]);
+    expect(areaCards().map((card) => card.getAttribute("data-span"))).toEqual([
+      "6",
+      "6",
+      "12",
+    ]);
   });
 
   it("marks areas after the third as compact rows for small screens", () => {
     renderOverview(sevenAreas());
 
-    expect(areaCards().map((card) => card.hasAttribute("data-compact"))).toEqual([
-      false, false, false, true, true, true, true,
-    ]);
+    expect(
+      areaCards().map((card) => card.hasAttribute("data-compact")),
+    ).toEqual([false, false, false, true, true, true, true]);
   });
 
   describe("search", () => {
@@ -187,9 +234,12 @@ describe("Hundewissen overview", () => {
     afterEach(() => jest.useRealTimers());
 
     const search = (value: string) => {
-      fireEvent.change(screen.getByRole("searchbox", { name: "Themen durchsuchen" }), {
-        target: { value },
-      });
+      fireEvent.change(
+        screen.getByRole("searchbox", { name: "Alle Folgen durchsuchen" }),
+        {
+          target: { value },
+        },
+      );
       act(() => {
         jest.advanceTimersByTime(300);
       });
@@ -201,7 +251,10 @@ describe("Hundewissen overview", () => {
       search("Qualzucht");
 
       expect(
-        screen.getByRole("heading", { level: 2, name: "1 Thema für »Qualzucht«" }),
+        screen.getByRole("heading", {
+          level: 2,
+          name: "1 Thema für »Qualzucht«",
+        }),
       ).toBeInTheDocument();
       expect(screen.getByRole("link", { name: /Qualzuchten/ })).toHaveAttribute(
         "href",
@@ -219,20 +272,32 @@ describe("Hundewissen overview", () => {
 
       search("Gesundheit");
 
-      expect(screen.getByRole("link", { name: /Gelenkprobleme/ })).toBeInTheDocument();
+      expect(
+        screen.getByRole("link", { name: /Gelenkprobleme/ }),
+      ).toBeInTheDocument();
     });
 
-    it("says when nothing matches and can reset", () => {
+    it("searches transcripts even without a matching topic and can reset", () => {
       renderOverview();
 
       search("Xylophon");
 
-      expect(screen.getByText("Kein Thema gefunden")).toBeInTheDocument();
-      fireEvent.click(screen.getByRole("button", { name: "Suche zurücksetzen" }));
+      expect(screen.getByTestId("transcript-query")).toHaveTextContent(
+        "Xylophon",
+      );
+      fireEvent.click(screen.getByRole("button", { name: "Suche leeren" }));
       act(() => {
         jest.advanceTimersByTime(300);
       });
       expect(screen.getByText("Alle Bereiche")).toBeInTheDocument();
+    });
+
+    it("restores a shared full-text query from the URL", () => {
+      renderOverview(makeIndex(), "/hundewissen?q=french%20bulldog");
+      expect(screen.getByRole("searchbox")).toHaveValue("french bulldog");
+      expect(screen.getByTestId("transcript-query")).toHaveTextContent(
+        "french bulldog",
+      );
     });
   });
 

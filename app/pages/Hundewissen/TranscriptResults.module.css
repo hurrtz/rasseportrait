@@ -1,0 +1,139 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 var(--rp-gutter) 32px;
+  max-width: 980px;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--rp-font-display);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.hint,
+.meta {
+  color: var(--rp-text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.hint {
+  margin: 8px 0 0;
+}
+.meta {
+  margin: 0 0 6px;
+}
+
+.episode {
+  border: 1px solid var(--rp-line);
+  border-radius: 20px;
+  padding: 24px;
+  background: var(--rp-surface);
+  min-width: 0;
+}
+
+.title {
+  margin: 0 0 20px;
+  font-family: var(--rp-font-display);
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.passages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.passage + .passage {
+  border-top: 1px solid var(--rp-line);
+  margin-top: 20px;
+  padding-top: 16px;
+}
+.listen {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--rp-accent-text);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.listen:hover {
+  text-decoration: underline;
+}
+.source {
+  display: block;
+  color: var(--rp-text-muted);
+  font-size: 12px;
+  margin-top: 6px;
+}
+.excerpt {
+  margin: 6px 0 12px;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.excerpt mark {
+  background: var(--rp-accent);
+  color: var(--rp-on-accent);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+.topics a {
+  color: var(--rp-text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+  text-underline-offset: 3px;
+}
+.more {
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 10px 18px;
+  min-height: 44px;
+  border: 1px solid var(--rp-line);
+  border-radius: var(--rp-radius-pill);
+  background: var(--rp-surface-muted);
+  color: var(--rp-text);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.more:hover {
+  background: var(--rp-surface-player);
+}
+.more:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+@media (min-width: 62em) {
+  .results {
+    padding: 12px var(--rp-gutter-desktop) 56px;
+  }
+}
+
+@media (max-width: 48em) {
+  .episode {
+    padding: 18px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .heading {
+    font-size: 24px;
+  }
+}

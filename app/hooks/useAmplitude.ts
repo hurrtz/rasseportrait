@@ -53,6 +53,16 @@ export interface AnalyticsEvents {
     referrer: TopicReferrer;
   };
   "Hundewissen Search Performed": { searchTerm: string; resultsCount: number };
+  "Hundewissen Full Text Search Performed": {
+    searchTerm: string;
+    resultsCount: number;
+  };
+  "Hundewissen Search Result Played": {
+    searchTerm: string;
+    episodeId: string;
+    timecode: number;
+    position: number;
+  };
   "Related Topic Clicked": { fromTopicId: string; toTopicId: string };
 }
 

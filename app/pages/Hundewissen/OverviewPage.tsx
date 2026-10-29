@@ -15,6 +15,7 @@ import AreaPicture from "./AreaPicture";
 import { episodes, topics as topicsLabel } from "./labels";
 import { bySize, useTopicSearch, useTrackTopicSearch } from "./search";
 import TopicRow from "./TopicRow";
+import TranscriptResults from "./TranscriptResults";
 import { useEnsureHundewissen, type TopicLinkState } from "./useHundewissen";
 import classes from "./OverviewPage.module.css";
 
@@ -47,7 +48,11 @@ const AreaChips = ({ areas }: { areas: HundewissenArea[] }) => (
       Alle
     </Link>
     {areas.map((area) => (
-      <Link key={area.slug} to={`/hundewissen/${area.slug}`} className={classes.chip}>
+      <Link
+        key={area.slug}
+        to={`/hundewissen/${area.slug}`}
+        className={classes.chip}
+      >
         {area.name}
       </Link>
     ))}
@@ -80,7 +85,11 @@ const Frequent = ({ index }: { index: HundewissenIndex }) => {
             </span>
             <span className={classes.frequentFoot}>
               <span className={classes.count}>
-                <IconHeadphones size={14} className={classes.countIcon} aria-hidden />
+                <IconHeadphones
+                  size={14}
+                  className={classes.countIcon}
+                  aria-hidden
+                />
                 {episodes(topic.episodeCount)}
               </span>
               <IconArrowRight size={18} className={classes.muted} aria-hidden />
@@ -121,7 +130,9 @@ const AreaCard = ({ area, topics, span, compact }: AreaCardProps) => {
         <span className={classes.areaBody}>
           <span className={classes.areaHead}>
             <span className={classes.areaName}>{area.name}</span>
-            <span className={classes.areaCount}>{topicsLabel(area.topicCount)}</span>
+            <span className={classes.areaCount}>
+              {topicsLabel(area.topicCount)}
+            </span>
           </span>
           <ul className={classes.areaTopics}>
             {topics.slice(0, narrow ? 4 : 5).map((topic) => (
@@ -137,11 +148,17 @@ const AreaCard = ({ area, topics, span, compact }: AreaCardProps) => {
             ))}
           </ul>
           <span className={classes.areaMore}>
-            {area.topicCount === 1 ? "Zum Thema" : `Alle ${area.topicCount} Themen`}
+            {area.topicCount === 1
+              ? "Zum Thema"
+              : `Alle ${area.topicCount} Themen`}
             <IconArrowRight size={16} aria-hidden />
           </span>
         </span>
-        <IconArrowRight size={18} className={classes.compactArrow} aria-hidden />
+        <IconArrowRight
+          size={18}
+          className={classes.compactArrow}
+          aria-hidden
+        />
       </Link>
     </li>
   );
@@ -181,25 +198,13 @@ const Areas = ({ index }: { index: HundewissenIndex }) => {
 interface ResultsProps {
   needle: string;
   hits: HundewissenTopicSummary[];
-  onReset: () => void;
 }
 
-const SearchResults = ({ needle, hits, onReset }: ResultsProps) => {
+const SearchResults = ({ needle, hits }: ResultsProps) => {
   const titleId = useId();
+  const [showAll, setShowAll] = useState(false);
 
-  if (!hits.length) {
-    return (
-      <div className={classes.empty}>
-        <p className={classes.emptyTitle}>Kein Thema gefunden</p>
-        <p className={classes.emptyText}>
-          Für »{needle}« gibt es noch kein Thema. Versuche ein anderes Wort.
-        </p>
-        <button type="button" className={classes.reset} onClick={onReset}>
-          Suche zurücksetzen
-        </button>
-      </div>
-    );
-  }
+  if (!hits.length) return null;
 
   return (
     <section aria-labelledby={titleId} className={classes.section}>
@@ -207,16 +212,32 @@ const SearchResults = ({ needle, hits, onReset }: ResultsProps) => {
         {topicsLabel(hits.length)} für »{needle}«
       </h2>
       <ul aria-labelledby={titleId} className={classes.results}>
-        {hits.map((topic) => (
+        {(showAll ? hits : hits.slice(0, 5)).map((topic) => (
           <TopicRow key={topic.id} topic={topic} from="search" />
         ))}
       </ul>
+      {!showAll && hits.length > 5 && (
+        <button
+          type="button"
+          className={classes.reset}
+          onClick={() => setShowAll(true)}
+        >
+          Alle {hits.length} passenden Themen zeigen
+        </button>
+      )}
     </section>
   );
 };
 
 const Overview = ({ index }: { index: HundewissenIndex }) => {
-  const [query, setQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get("q") ?? "";
+  const setQuery = (value: string) => {
+    const next = new URLSearchParams(searchParams);
+    if (value) next.set("q", value);
+    else next.delete("q");
+    setSearchParams(next, { replace: true, preventScrollReset: true });
+  };
   const needle = useDebounce(query.trim(), SEARCH_DEBOUNCE_DELAY_MS);
   const searchable = useMemo(
     () =>
@@ -240,15 +261,18 @@ const Overview = ({ index }: { index: HundewissenIndex }) => {
         <SearchPill
           value={query}
           onChange={setQuery}
-          label="Themen durchsuchen"
-          placeholder="Thema suchen"
+          label="Alle Folgen durchsuchen"
+          placeholder="Rasse, Thema oder Stichwort"
           className={classes.search}
         />
         <AreaChips areas={index.areas} />
       </div>
 
       {hits ? (
-        <SearchResults needle={needle} hits={hits} onReset={() => setQuery("")} />
+        <>
+          <SearchResults key={needle} needle={needle} hits={hits} />
+          <TranscriptResults query={needle} />
+        </>
       ) : (
         <>
           <Frequent index={index} />
@@ -266,14 +290,22 @@ const OverviewPage = () => {
   const requested = searchParams.get("topic");
 
   if (status === "error") {
-    return <LoadError title="Hundewissen konnte nicht geladen werden." onRetry={retry} />;
+    return (
+      <LoadError
+        title="Hundewissen konnte nicht geladen werden."
+        onRetry={retry}
+      />
+    );
   }
   if (!index) return <LoadingSpinner message="Themen werden geladen …" />;
 
   if (requested) {
     const topic = index.topics.find(({ id }) => id === requested);
     return (
-      <Navigate replace to={topic ? `/hundewissen/${topic.area}/${topic.id}` : "/hundewissen"} />
+      <Navigate
+        replace
+        to={topic ? `/hundewissen/${topic.area}/${topic.id}` : "/hundewissen"}
+      />
     );
   }
 
