@@ -33,6 +33,7 @@ db/hundewissen/**/*.jpeg
 
 # Podcast topic index working data (audio, transcripts, raw results)
 /.podcast/
+/public/hundewissen-search.tmp/
 
 # Python
 __pycache__/
