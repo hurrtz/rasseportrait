@@ -106,7 +106,7 @@ The live list shows the first label seen for an id ("Riesenwuchs als Qualzucht" 
 New script, run in `prebuild` after `build:data` (it reads `public/data/breeds.json`) and replacing `build:knowledge`:
 
 ```json
-"prebuild": "npm run build:images && npm run build:data && npm run build:hundewissen"
+"prebuild": "npm run build:images && npm run build:data && npm run build:hundewissen && npm run build:search"
 ```
 
 Inputs: `db/podcast/topic-index.json` (committed; it contains no transcripts), `public/data/breeds.json`, `db/knowledge/*/index.ts` (optional editorial overlay, § 5.3), area images (§ 5.4). Outputs:
@@ -172,12 +172,24 @@ Inputs: `db/podcast/topic-index.json` (committed; it contains no transcripts), `
 
 Everything in [hundewissen-bilder.md](hundewissen-bilder.md) § 2 applies with **area slugs instead of topic ids**: sources at `db/hundewissen/areas/<slug>/illustration.png` (gitignored), processed by `copyIllustrations.cjs` to `public/illustrations/hundewissen/<slug>/illustration.jpeg` (1600×900) and `illustration_thumbnail.jpeg` (400×400), alt text and focal position in `app/pages/Hundewissen/areas.ts`. Compile sets `image` only when the file exists. The Midjourney style and the rules for sensitive subjects (§ 6 there) still apply; write one prompt per area.
 
+### 5.5 Static full-text search
+
+`npm run build:search` runs `scripts/compileHundewissenSearch.ts`. It indexes every episode's local `.podcast/transcripts/<id>.txt` plus the committed topic summaries using Pagefind 1.5.2. One virtual document per recording contains short, timestamped transcript sections and separate summary sections with their curated ranges. The virtual HTML is not published as pages. Output lives in `public/hundewissen-search/`, ready to commit and publish with the normal GitHub Pages build. No runtime backend or external search service is involved.
+
+- `app/pages/Hundewissen/searchAliases.ts` is the shared build/query alias dictionary. It currently covers French/English Bulldogs, Mops/Pug, Dackel/Dachshund/Teckel, German Shepherd, Great Dane, Irish Wolfhound and English Pointer, including common German inflections. Only actual passage mentions receive alias terms; episode-level breed metadata does not tag unrelated passages. Health conditions are not breed aliases.
+- The browser loads Pagefind on the first nonempty search and hydrates six recording fragments at a time. Neighboring matching ranges merge, with a summary preferred over a transcript excerpt when they overlap. Additional passages within an episode can be expanded. Reruns retain their own edition labels, audio URLs and timecodes.
+- The original transcript TXT files remain ignored. The generated search fragments contain their text and are public when deployed. Keep local transcripts backed up separately.
+- The manifest fingerprints source data, compiler code, aliases and available transcripts. An unchanged checkout without local transcripts reuses generated assets. Changed inputs or missing generated files require a rebuild with all transcripts available; the build fails rather than silently publishing a partial or stale index. Set `PODCAST_TRANSCRIPTS_DIR` to use another local transcript directory; `npm run build:search -- --rebuild` forces regeneration.
+- `npm run check:search` exercises the generated engine, alias equivalence, all locally available French Bulldog transcript mentions, safe excerpts and timed results. It enforces a 1 MB budget for a cold query plus six episode fragments; its timing is a local engine measurement, not mobile rendering time.
+- Search requires complete words before Pagefind's broader ranked matching. Unknown words must not silently fall back to unrelated short prefixes. Quoted queries use exact phrase matching. Multiple words narrow matching recordings; snippets may show those terms in separate passages of the recording.
+
 ## 6. Overview `/hundewissen`
 
 Reference: `mockups/hundewissen-bereiche.html`, `…-mobil.html`.
 
-- **Head** (column, gap 16, padding `28px 56px 32px`): "Hundewissen" (display-page) + intro (19/1.5 muted, max 620): "Alles, was im Podcast neben den Rasseportraits besprochen wird: Verhalten, Training, Gesundheit, Zucht und Tierschutz. Jedes Thema führt direkt zur Stelle in der Folge."
-- **Tools** (padding `0 56px 28px`, flex, gap 16, `align-items: flex-start`): search pill 300px, placeholder "Thema suchen", label "Themen durchsuchen"; area chips wrapping (`flex-wrap: wrap`, gap 8): "Alle" + each area, active = `--rp-accent`/`--rp-on-accent`, others `--rp-surface-muted`, 15/700, padding `9px 16px`.
+- **Head** (column, gap 16, padding `28px 56px 32px`): "Hundewissen" (display-page) + intro (19/1.5 muted, full content width): "Alles, was im Podcast neben den Rasseportraits besprochen wird: Verhalten, Training, Gesundheit, Zucht und Tierschutz. Jedes Thema führt direkt zur Stelle in der Folge."
+- **Tools** (padding `0 56px 28px`, flex column, gap 16): full-width search pill on its own row, placeholder "Rasse, Thema oder Stichwort", label "Alle Folgen durchsuchen"; area chips beneath, wrapping across the full content width (`flex-wrap: wrap`, gap 8): "Alle" + each area, active = `--rp-accent`/`--rp-on-accent`, others `--rp-surface-muted`, 15/700, padding `9px 16px`. Intro, search, categories and topic results share the same horizontal alignment.
+- **Full-text results**: `/hundewissen?q=<query>` restores and shares the search. Matching topic links remain available (five initially), followed by episode cards with highlighted excerpts, summary/transcript labels and timed publisher-audio links. Show loading, retry and no-match states; ignore stale responses after query changes. Clearing the query restores category browsing. Area pages link to the same global search with their current query.
   - Search: Fuse.js over topic `label` (and area name), threshold 0.3, debounced 300ms. With a needle, the page replaces "Am häufigsten" and the area cards with a result list in the area-page row style (§ 7), header "{n} Themen für »{needle}«"; empty → "Kein Thema gefunden" with a reset pill.
   - Area chip: navigates to `/hundewissen/<slug>` ("Alle" = this page).
 - **"Am häufigsten besprochen"** (h2 display 32/800): the 3 topics with the highest `episodeCount` (ties: `entryCount`, then label). Cards: `--rp-surface`, 1px `--rp-line`, radius 20, padding `20px 22px`; area eyebrow (12, `--rp-accent-text`), label (display 21/700), bottom row: count pill (`IconHeadphones` 14 in `--rp-accent-text` + "{n} Folgen", 13/700 on `--rp-surface-muted`) and an arrow. Hidden when no topic has more than one episode.
@@ -237,6 +249,8 @@ Replace the `Knowledge …` events:
 | `Hundewissen Area Viewed` | `area` |
 | `Hundewissen Topic Viewed` | `topicId`, `area`, `referrer` (`overview` / `frequent` / `area` / `search` / `related` / `breed` / `direct`) |
 | `Hundewissen Search Performed` | `searchTerm`, `resultsCount` |
+| `Hundewissen Full Text Search Performed` | `searchTerm`, `resultsCount` (recordings; emitted after successful loading) |
+| `Hundewissen Search Result Played` | `searchTerm`, `episodeId`, `timecode`, `position` (1-based recording rank) |
 | `Play Clicked` (existing) | add `placement: "topic-featured" \| "topic-entry" \| "topic-sticky"`, `topicId`, `episodeId`, `timecode` |
 | `Related Topic Clicked` | `fromTopicId`, `toTopicId` |
 
