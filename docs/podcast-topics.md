@@ -1,6 +1,6 @@
 # Themen im Podcast „Tierisch Menschlich“
 
-Automatisch erstellter Themenindex: 1107 Themen aus 263 von 263 Folgen. Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder abweichende Fassungen können Spotify-Zeitmarken abweichen. Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
+Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder abweichende Fassungen können Spotify-Zeitmarken abweichen. Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
 
 ## Übersicht
 
@@ -107,6 +107,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 263 von 263 Folgen. Zeitanga
 | [Hundesteuer](#hundesteuer) | Recht & Politik | 8 |
 | [Katzenverhalten](#katzenverhalten) | Andere Tiere | 8 |
 | [Konditionierung](#konditionierung) | Verhalten & Kommunikation | 8 |
+| [Senioren als Hundehalter](#hundevermittlung-an-senioren) | Mensch-Hund-Beziehung | 8 |
 | [Starkzwangmittel](#aversive-hilfsmittel) | Erziehung & Training | 8 |
 | [Tierschutz im Reitsport](#reitsport-tierschutz) | Tierschutz & Ethik | 8 |
 | [Vegane Ernährung und Fleischersatz](#vegane-ernaehrung) | Ernährung | 8 |
@@ -127,7 +128,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 263 von 263 Folgen. Zeitanga
 | [Lebenserwartung](#lebenserwartung-hund) | Gesundheit & Medizin | 7 |
 | [Medizinische Ursachen von Verhaltensproblemen](#verhaltensdiagnostik-medizin) | Gesundheit & Medizin | 7 |
 | [Reisen und Urlaub mit Hund](#reisen-mit-hund) | Haltung & Pflege | 7 |
-| [Senioren als Hundehalter](#hundevermittlung-an-senioren) | Mensch-Hund-Beziehung | 7 |
 | [Tierarztkosten](#tierarztkosten) | Gesundheit & Medizin | 7 |
 | [Trauer um den Hund](#trauer-um-den-hund) | Mensch-Hund-Beziehung | 7 |
 | [Arbeit und Alltag im Tierheim](#tierheimarbeit) | Tierschutz & Ethik | 6 |
@@ -469,6 +469,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 263 von 263 Folgen. Zeitanga
 | [Kastanien und Eicheln](#kastanien-gefahr) | Gesundheit & Medizin | 2 |
 | [Kastenstand und Ferkelschutzkorb](#kastenstand) | Tierschutz & Ethik | 2 |
 | [Kauartikel](#kauartikel) | Ernährung | 2 |
+| [Kindchenschema](#kindchenschema) | Zucht & Rassen | 2 |
 | [Kommunikation von Katzen](#katzensprache) | Andere Tiere | 2 |
 | [Kopfhalfter und Führgeschirr](#halti-kopfhalfter) | Haltung & Pflege | 2 |
 | [Kopfschräglegen](#kopfschraeglegen) | Verhalten & Kommunikation | 2 |
@@ -856,7 +857,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 263 von 263 Folgen. Zeitanga
 | [Katzenerziehung](#katzenverhalten-training) | Andere Tiere | 1 |
 | [Kaufentscheidung für Qualzuchtrassen](#kaufentscheidung-rassewahl) | Zucht & Rassen | 1 |
 | [Kennzeichnungs- und Registrierungspflicht](#kennzeichnungspflicht-hunde) | Recht & Politik | 1 |
-| [Kindchenschema](#kindchenschema) | Zucht & Rassen | 1 |
 | [Kinder auf den Hundeeinzug vorbereiten](#kind-und-hund-einzug) | Mensch-Hund-Beziehung | 1 |
 | [Kinder beim Gassigehen](#kinder-gassi) | Haltung & Pflege | 1 |
 | [Kinder und Welpen](#welpen-kommen-sendung) | Mensch-Hund-Beziehung | 1 |
@@ -5370,6 +5370,13 @@ _Die Geschichte von Hunde- und Tierkämpfen und wie sie die Zucht bestimmter Ras
 - Folge 236 „Sternzeichen Bergziege“ ab 0:18:22: Historischer Abriss zum Mastiff als Kriegs- und Kampfhund, seiner Verwendung in römischen Arenen sowie zu Bären- und Bullenkämpfen im England des 16. Jahrhunderts.
 - Folge 54 „Starke Frauen, eine blutige Nase & der American Staffordshire Terrier“ ab 0:21:47 (kurz): Herkunft des American Staffordshire Terrier aus importierten Bull Terriern für Hundekämpfe in den USA und Veränderung der Zuchtauswahl nach dem Verbot um 1900.
 
+<a id="kindchenschema"></a>
+#### Kindchenschema · 2 Folgen
+_Wie runde Köpfe und große Augen menschliches Fürsorgeverhalten auslösen und so die Nachfrage nach kurzköpfigen Hunden antreiben._
+
+- Folge 71 „Martin hat Puls, Video aus Hundemaul & Nudelsalat „Mastschwein"“ ab 0:58:17 (kurz): Katharina erklärt, dass runde Köpfe und große Augen den Schlüsselreiz Kindchenschema auslösen und menschliches Fürsorgeverhalten wecken, was die Nachfrage nach kurzköpfigen Hunden befeuert.
+- Folge 20 „Rien ne va plus“ ab 0:21:40: Katharina beschreibt den Impuls, niedliche Tiere zu drücken, und bespricht mögliche Erklärungen als Emotionsregulation. Sie betont die unsichere Beweislage evolutionärer Deutungen und berichtet von Experimenten zu niedlichen Tierbildern und Konzentration. Martin unterscheidet solche Bilder vom bedrängenden Anfassen eines Lebewesens.
+
 <a id="kreuzungszucht"></a>
 #### Kreuzungszucht · 2 Folgen
 _Das Einkreuzen anderer Rassen, um gesündere Anatomie und einen größeren Genpool zurückzugewinnen._
@@ -5538,12 +5545,6 @@ _Wie Ausstellungen und Trends extreme Farb- und Ohrenvarianten bei Kaninchen fö
 _Warum Menschen trotz Leid und hoher Tierarztkosten erneut Hunde kranker Rassen kaufen._
 
 - Folge 145 „Wahnsinn Reinrassigkeit (mit Prof. Achim Gruber)“ ab 0:18:04 (kurz): Beispiel einer Halterin, die trotz hoher Tierarztkosten und Leiden ihres Cavalier King Charles Spaniels dieselbe Rasse erneut kaufen würde.
-
-<a id="kindchenschema"></a>
-#### Kindchenschema · 1 Folgen
-_Wie runde Köpfe und große Augen menschliches Fürsorgeverhalten auslösen und so die Nachfrage nach kurzköpfigen Hunden antreiben._
-
-- Folge 71 „Martin hat Puls, Video aus Hundemaul & Nudelsalat „Mastschwein"“ ab 0:58:17 (kurz): Katharina erklärt, dass runde Köpfe und große Augen den Schlüsselreiz Kindchenschema auslösen und menschliches Fürsorgeverhalten wecken, was die Nachfrage nach kurzköpfigen Hunden befeuert.
 
 <a id="brachyzephalie-kaninchen"></a>
 #### Kurzköpfigkeit bei Kaninchen · 1 Folgen
@@ -7959,7 +7960,7 @@ _Worauf es bei der Wahl eines Hundes ankommt, warum Wesen wichtiger ist als Opti
 - Folge 2 „Hälse, Hoffnung, Haarverlust“ ab 0:36:17: Diskussion über einen Vermittlungsaufruf mit klaren Kriterien und die These, dass ehrliche Selbsteinschätzung bei der Hundeauswahl aktiver Tierschutz ist.
 
 <a id="hundevermittlung-an-senioren"></a>
-#### Senioren als Hundehalter · 7 Folgen
+#### Senioren als Hundehalter · 8 Folgen
 _Warum ältere Menschen gute Hundehalter sein können, welche Absicherung sie brauchen und warum starre Altersgrenzen von Tierheimen in der Kritik stehen._
 
 - Folge 225 „Abschied von Alma“ ab 0:22:56: Rütter kritisiert die Praxis vieler Tierheime, Menschen über 65 keine Hunde mehr zu vermitteln, und plädiert für passende Vermittlungen statt Altersgrenzen.
@@ -7969,6 +7970,7 @@ _Warum ältere Menschen gute Hundehalter sein können, welche Absicherung sie br
 - Folge 112 „Brüten & Setzen!“ ab 0:33:06: Kritik daran, dass Tierschutzvereine älteren Menschen oft keine Hunde vermitteln, obwohl Senioren viel Zeit haben und bei passender Größe und Aktivität gut geeignet sind.
 - Folge 75 „Faultiere, Hitzschlag & Leben nach dem Tod“ ab 0:47:07: Anekdote über eine hochbetagte Hundehalterin und ihren alten Wolfshund als Beispiel für die enge, symbiotische Bindung zwischen Senioren und ihren Hunden.
 - Folge 1 „Wie alles begann“ ab 0:44:48: Kritik daran, dass Tierheime Interessenten wegen Kleinigkeiten oder hohen Alters ablehnen, obwohl ältere Menschen gut zu älteren Hunden passen können.
+- Folge 20 „Rien ne va plus“ ab 0:19:24: Eine fast 70-jährige Hörerin berichtet von einer abgelehnten Adoption. Martin plädiert dafür, Fitness und die Passung zwischen Mensch und Hund individuell zu beurteilen, und bietet an, den Kontakt zum Tierheim zu unterstützen.
 
 <a id="trauer-um-den-hund"></a>
 #### Trauer um den Hund · 7 Folgen

@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-29",
- "indexedEpisodes": 263,
- "totalEpisodes": 263,
+ "generated": "2026-11-05",
+ "indexedEpisodes": 264,
+ "totalEpisodes": 264,
  "episodes": {
   "rtl-240": {
    "feed": "rtl",
@@ -7744,6 +7744,33 @@
     "present": true,
     "breed": "English Pointer",
     "start": "0:04:08"
+   }
+  },
+  "mina-020": {
+   "feed": "mina",
+   "number": 20,
+   "title": "Rien ne va plus",
+   "published": "2026-11-05",
+   "duration": 2538,
+   "audioUrl": "https://cdn.audiorella.com/podcasts/1781-tierisch-menschlich/257878-new-episode.mp3?v=2",
+   "breeds": [
+    {
+     "name": "Dreifarbiger Serbischer Laufhund",
+     "start": "0:29:19"
+    },
+    {
+     "name": "Dackel",
+     "start": "0:19:49"
+    },
+    {
+     "name": "Mexikanischer Nackthund",
+     "start": "0:29:31"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Dreifarbiger Serbischer Laufhund",
+    "start": "0:29:19"
    }
   }
  },
@@ -26550,6 +26577,119 @@
    "episodeCount": 8
   },
   {
+   "id": "hundevermittlung-an-senioren",
+   "label": "Senioren als Hundehalter",
+   "category": "Mensch-Hund-Beziehung",
+   "description": "Warum ältere Menschen gute Hundehalter sein können, welche Absicherung sie brauchen und warum starre Altersgrenzen von Tierheimen in der Kritik stehen.",
+   "entries": [
+    {
+     "label": "Vermittlung von Hunden an ältere Menschen",
+     "episode": "rtl-225",
+     "number": 225,
+     "title": "Abschied von Alma",
+     "start": "0:22:56",
+     "end": "0:25:22",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Rütter kritisiert die Praxis vieler Tierheime, Menschen über 65 keine Hunde mehr zu vermitteln, und plädiert für passende Vermittlungen statt Altersgrenzen."
+     ]
+    },
+    {
+     "label": "Hundevermittlung an ältere Menschen",
+     "episode": "rtl-summer-b03",
+     "number": "Summer Edition #3",
+     "title": "Martins Solo-Folge",
+     "start": "0:02:49",
+     "end": "0:05:26",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Martin Rütter kritisiert, dass ein Züchter einer 84-jährigen Frau einen Schäferhundwelpen verkauft hat, plädiert aber zugleich dafür, älteren Menschen im Tierschutz passende, ruhigere Hunde zu vermitteln statt sie pauschal abzulehnen."
+     ]
+    },
+    {
+     "label": "Vermittlung alter Hunde an ältere Menschen",
+     "episode": "rtl-144",
+     "number": 144,
+     "title": "Stark wie ein Regenwurm",
+     "start": "1:17:10",
+     "end": "1:18:34",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Vorstellung eines Tierheimkonzepts für Seniorhunde und ältere Interessenten samt Kritik daran, dass Menschen über 65 im Tierschutz kaum noch Hunde vermittelt bekommen."
+     ]
+    },
+    {
+     "label": "Hundehaltung im Alter",
+     "episode": "rtl-130",
+     "number": 130,
+     "title": "Dackelfreunde gesucht!",
+     "start": "0:25:04",
+     "end": "0:26:45",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Diskussion über das Projekt „Senioren für Senioren“ und die Kritik daran, dass Tierheime Menschen ab 65 keine Hunde mehr vermitteln, obwohl Rentner viel Zeit haben und Hunde dadurch gute Jahre gewinnen."
+     ]
+    },
+    {
+     "label": "Hundehaltung im höheren Alter",
+     "episode": "rtl-112",
+     "number": 112,
+     "title": "Brüten & Setzen!",
+     "start": "0:33:06",
+     "end": "0:36:51",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Kritik daran, dass Tierschutzvereine älteren Menschen oft keine Hunde vermitteln, obwohl Senioren viel Zeit haben und bei passender Größe und Aktivität gut geeignet sind."
+     ]
+    },
+    {
+     "label": "Alte Menschen und ihre Hunde",
+     "episode": "rtl-075",
+     "number": 75,
+     "title": "Faultiere, Hitzschlag & Leben nach dem Tod",
+     "start": "0:47:07",
+     "end": "0:49:14",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Anekdote über eine hochbetagte Hundehalterin und ihren alten Wolfshund als Beispiel für die enge, symbiotische Bindung zwischen Senioren und ihren Hunden."
+     ]
+    },
+    {
+     "label": "Zu strenge Vermittlungskriterien",
+     "episode": "rtl-001",
+     "number": 1,
+     "title": "Wie alles begann",
+     "start": "0:44:48",
+     "end": "0:45:45",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Kritik daran, dass Tierheime Interessenten wegen Kleinigkeiten oder hohen Alters ablehnen, obwohl ältere Menschen gut zu älteren Hunden passen können."
+     ]
+    },
+    {
+     "label": "Hunde vermitteln ohne starre Altersgrenze",
+     "episode": "mina-020",
+     "number": 20,
+     "title": "Rien ne va plus",
+     "start": "0:19:24",
+     "end": "0:21:37",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Eine fast 70-jährige Hörerin berichtet von einer abgelehnten Adoption. Martin plädiert dafür, Fitness und die Passung zwischen Mensch und Hund individuell zu beurteilen, und bietet an, den Kontakt zum Tierheim zu unterstützen."
+     ]
+    }
+   ],
+   "episodeCount": 8
+  },
+  {
    "id": "aversive-hilfsmittel",
    "label": "Starkzwangmittel",
    "category": "Erziehung & Training",
@@ -28891,106 +29031,6 @@
      "kind": "discussion",
      "summaries": [
       "Martin beschreibt, wie er Emma in Ferienhaus oder Hotel erst umsehen lässt und dann klar eingrenzt, damit sie nicht die Verantwortung übernimmt und selbst einen entspannten Urlaub hat."
-     ]
-    }
-   ],
-   "episodeCount": 7
-  },
-  {
-   "id": "hundevermittlung-an-senioren",
-   "label": "Senioren als Hundehalter",
-   "category": "Mensch-Hund-Beziehung",
-   "description": "Warum ältere Menschen gute Hundehalter sein können, welche Absicherung sie brauchen und warum starre Altersgrenzen von Tierheimen in der Kritik stehen.",
-   "entries": [
-    {
-     "label": "Vermittlung von Hunden an ältere Menschen",
-     "episode": "rtl-225",
-     "number": 225,
-     "title": "Abschied von Alma",
-     "start": "0:22:56",
-     "end": "0:25:22",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Rütter kritisiert die Praxis vieler Tierheime, Menschen über 65 keine Hunde mehr zu vermitteln, und plädiert für passende Vermittlungen statt Altersgrenzen."
-     ]
-    },
-    {
-     "label": "Hundevermittlung an ältere Menschen",
-     "episode": "rtl-summer-b03",
-     "number": "Summer Edition #3",
-     "title": "Martins Solo-Folge",
-     "start": "0:02:49",
-     "end": "0:05:26",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Martin Rütter kritisiert, dass ein Züchter einer 84-jährigen Frau einen Schäferhundwelpen verkauft hat, plädiert aber zugleich dafür, älteren Menschen im Tierschutz passende, ruhigere Hunde zu vermitteln statt sie pauschal abzulehnen."
-     ]
-    },
-    {
-     "label": "Vermittlung alter Hunde an ältere Menschen",
-     "episode": "rtl-144",
-     "number": 144,
-     "title": "Stark wie ein Regenwurm",
-     "start": "1:17:10",
-     "end": "1:18:34",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Vorstellung eines Tierheimkonzepts für Seniorhunde und ältere Interessenten samt Kritik daran, dass Menschen über 65 im Tierschutz kaum noch Hunde vermittelt bekommen."
-     ]
-    },
-    {
-     "label": "Hundehaltung im Alter",
-     "episode": "rtl-130",
-     "number": 130,
-     "title": "Dackelfreunde gesucht!",
-     "start": "0:25:04",
-     "end": "0:26:45",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Diskussion über das Projekt „Senioren für Senioren“ und die Kritik daran, dass Tierheime Menschen ab 65 keine Hunde mehr vermitteln, obwohl Rentner viel Zeit haben und Hunde dadurch gute Jahre gewinnen."
-     ]
-    },
-    {
-     "label": "Hundehaltung im höheren Alter",
-     "episode": "rtl-112",
-     "number": 112,
-     "title": "Brüten & Setzen!",
-     "start": "0:33:06",
-     "end": "0:36:51",
-     "weight": "main",
-     "kind": "listener_question",
-     "summaries": [
-      "Kritik daran, dass Tierschutzvereine älteren Menschen oft keine Hunde vermitteln, obwohl Senioren viel Zeit haben und bei passender Größe und Aktivität gut geeignet sind."
-     ]
-    },
-    {
-     "label": "Alte Menschen und ihre Hunde",
-     "episode": "rtl-075",
-     "number": 75,
-     "title": "Faultiere, Hitzschlag & Leben nach dem Tod",
-     "start": "0:47:07",
-     "end": "0:49:14",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Anekdote über eine hochbetagte Hundehalterin und ihren alten Wolfshund als Beispiel für die enge, symbiotische Bindung zwischen Senioren und ihren Hunden."
-     ]
-    },
-    {
-     "label": "Zu strenge Vermittlungskriterien",
-     "episode": "rtl-001",
-     "number": 1,
-     "title": "Wie alles begann",
-     "start": "0:44:48",
-     "end": "0:45:45",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Kritik daran, dass Tierheime Interessenten wegen Kleinigkeiten oder hohen Alters ablehnen, obwohl ältere Menschen gut zu älteren Hunden passen können."
      ]
     }
    ],
@@ -48043,6 +48083,41 @@
    "episodeCount": 2
   },
   {
+   "id": "kindchenschema",
+   "label": "Kindchenschema",
+   "category": "Zucht & Rassen",
+   "description": "Wie runde Köpfe und große Augen menschliches Fürsorgeverhalten auslösen und so die Nachfrage nach kurzköpfigen Hunden antreiben.",
+   "entries": [
+    {
+     "label": "Kindchenschema als Zuchtmotiv",
+     "episode": "rtl-071",
+     "number": 71,
+     "title": "Martin hat Puls, Video aus Hundemaul & Nudelsalat „Mastschwein\"",
+     "start": "0:58:17",
+     "end": "0:59:05",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Katharina erklärt, dass runde Köpfe und große Augen den Schlüsselreiz Kindchenschema auslösen und menschliches Fürsorgeverhalten wecken, was die Nachfrage nach kurzköpfigen Hunden befeuert."
+     ]
+    },
+    {
+     "label": "Cute Aggression: Wenn Niedlichkeit überwältigt",
+     "episode": "mina-020",
+     "number": 20,
+     "title": "Rien ne va plus",
+     "start": "0:21:40",
+     "end": "0:24:49",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Katharina beschreibt den Impuls, niedliche Tiere zu drücken, und bespricht mögliche Erklärungen als Emotionsregulation. Sie betont die unsichere Beweislage evolutionärer Deutungen und berichtet von Experimenten zu niedlichen Tierbildern und Konzentration. Martin unterscheidet solche Bilder vom bedrängenden Anfassen eines Lebewesens."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
    "id": "katzensprache",
    "label": "Kommunikation von Katzen",
    "category": "Andere Tiere",
@@ -58507,28 +58582,6 @@
      "kind": "discussion",
      "summaries": [
       "Erläutert wird, dass es in Deutschland keine verpflichtende Registrierung von Hunden gibt: Chippen allein ermöglicht keine Nachverfolgung, obwohl jedes Stück Fleisch rückverfolgbar ist."
-     ]
-    }
-   ],
-   "episodeCount": 1
-  },
-  {
-   "id": "kindchenschema",
-   "label": "Kindchenschema",
-   "category": "Zucht & Rassen",
-   "description": "Wie runde Köpfe und große Augen menschliches Fürsorgeverhalten auslösen und so die Nachfrage nach kurzköpfigen Hunden antreiben.",
-   "entries": [
-    {
-     "label": "Kindchenschema als Zuchtmotiv",
-     "episode": "rtl-071",
-     "number": 71,
-     "title": "Martin hat Puls, Video aus Hundemaul & Nudelsalat „Mastschwein\"",
-     "start": "0:58:17",
-     "end": "0:59:05",
-     "weight": "side",
-     "kind": "discussion",
-     "summaries": [
-      "Katharina erklärt, dass runde Köpfe und große Augen den Schlüsselreiz Kindchenschema auslösen und menschliches Fürsorgeverhalten wecken, was die Nachfrage nach kurzköpfigen Hunden befeuert."
      ]
     }
    ],
