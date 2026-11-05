@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.19.1](https://github.com/hurrtz/rasseportrait/compare/v3.19.0...v3.19.1) (2026-11-05)
+
+
+### Features
+
+* add Serbian tricolour hound from episode 020 ([60c0f89](https://github.com/hurrtz/rasseportrait/commit/60c0f89bad1d2fccc81060d7ff197179364c6a71))
+* index episode 020 Hundewissen topics ([29caf39](https://github.com/hurrtz/rasseportrait/commit/29caf3976f7ee00919f22dc2466e1082b3afc149))
+
 ## [3.19.0](https://github.com/hurrtz/rasseportrait/compare/v3.18.5...v3.19.0) (2026-10-29)
 
 
