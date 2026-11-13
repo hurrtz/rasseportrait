@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-05",
- "indexedEpisodes": 264,
- "totalEpisodes": 264,
+ "generated": "2026-11-13",
+ "indexedEpisodes": 265,
+ "totalEpisodes": 265,
  "episodes": {
   "rtl-240": {
    "feed": "rtl",
@@ -7771,6 +7771,33 @@
     "present": true,
     "breed": "Dreifarbiger Serbischer Laufhund",
     "start": "0:29:19"
+   }
+  },
+  "mina-021": {
+   "feed": "mina",
+   "number": 21,
+   "title": "Gute Nachbarn, schlechte Nachbarn",
+   "published": "2026-11-12",
+   "duration": 4038,
+   "audioUrl": "https://cdn.audiorella.com/podcasts/1781-tierisch-menschlich/258146-new-episode.mp3?v=2",
+   "breeds": [
+    {
+     "name": "Westfälische Dachsbracke",
+     "start": "0:24:51"
+    },
+    {
+     "name": "West Highland White Terrier",
+     "start": "0:20:27"
+    },
+    {
+     "name": "Pudel",
+     "start": "0:06:17"
+    }
+   ],
+   "portrait": {
+    "present": true,
+    "breed": "Westfälische Dachsbracke",
+    "start": "0:24:51"
    }
   }
  },
@@ -23277,6 +23304,133 @@
    "episodeCount": 9
   },
   {
+   "id": "entlaufene-hunde",
+   "label": "Entlaufene Hunde",
+   "category": "Haltung & Pflege",
+   "description": "Warum Hunde und Katzen entlaufen, wie sie draußen überleben und wie man sie sucht, sicher einfängt und über Chip und Registrierung wiederfindet.",
+   "entries": [
+    {
+     "label": "Entlaufener Hund und GPS-Tracker",
+     "episode": "rtl-summer-a02",
+     "number": "Summer Edition #2",
+     "title": "16 - Tipps für heiße Tage, ein Hitzeexperiment mit Joey Kelly & Martins erster Kuss",
+     "start": "0:44:20",
+     "end": "0:52:31",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Martin erzählt von seiner demenzkranken Hündin und der entlaufenen Luna, erklärt typische Auslöser für Weglaufen (Schreck, Läufigkeit, Spurverfolgung, Verknoten im Gestrüpp) und empfiehlt Chip-Registrierung sowie GPS-Tracker mit Live-Tracking."
+     ]
+    },
+    {
+     "label": "Entlaufene Hunde suchen und einfangen",
+     "episode": "rtl-216",
+     "number": 216,
+     "title": "Missing Dog Syndrome",
+     "start": "0:02:03",
+     "end": "0:09:44",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Am Fall der Dackelhündin Valerie, die über 500 Tage in der Wildnis von Kangaroo Island überlebte, wird das sogenannte Missing Dog Syndrome erklärt und diskutiert, warum man entlaufene Hunde nicht aktiv verfolgen, sondern mit Futterstellen, vertrauten Gerüchen und Lebendfallen behutsam zurückholen sollte."
+     ]
+    },
+    {
+     "label": "Entlaufener Hund und GPS-Tracker",
+     "episode": "rtl-126",
+     "number": 126,
+     "title": "Podcast live: Entenschnabelmaulkorb",
+     "start": "1:37:41",
+     "end": "1:38:40",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Nachdem ein Hund fünf Stunden verschwunden war, empfiehlt Martin GPS-Tracker und konsequentes Sichern statt Vertrauen auf Rückkehr."
+     ]
+    },
+    {
+     "label": "Suchaufruf für einen vermissten Kater",
+     "episode": "rtl-113",
+     "number": 113,
+     "title": "Welpenhandel, Wolfsbegegnung & Ölkäfer",
+     "start": "0:56:51",
+     "end": "0:58:00",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Aufruf zur Suche nach einem vermissten schwarz-weißen Kater mit markanter Zeichnung unter der Nase, zuletzt in Köln gesehen."
+     ]
+    },
+    {
+     "label": "Entlaufener Hütehund in Alaska",
+     "episode": "rtl-110",
+     "number": 110,
+     "title": "Bulette & Bier",
+     "start": "0:02:18",
+     "end": "0:04:35",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Ein australischer Hütehund büxte auf der St.-Lorenz-Insel aus und tauchte rund 240 Kilometer entfernt auf dem alaskischen Festland wieder auf, offenbar über Meereis gewandert, mit einer schweren Bisswunde und selbst erjagter Nahrung."
+     ]
+    },
+    {
+     "label": "Entlaufene Hunde an Silvester",
+     "episode": "rtl-096",
+     "number": 96,
+     "title": "Schutzhunde, Ebay & Unvermittelbare",
+     "start": "0:04:57",
+     "end": "0:07:12",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Rund um den Jahreswechsel wurden 667 Hunde als vermisst gemeldet, gegenüber durchschnittlich 88 pro Tag, was auch mit der gestiegenen Hundezahl zusammenhängt.",
+      "Ein im Urlaub entlaufener Hund wurde durch die Reichweite eines Social-Media-Aufrufs von einem Helfer gefunden, während Kommentare vorschnell Schuld zuwiesen."
+     ]
+    },
+    {
+     "label": "Entlaufenen Hund suchen und Mantrailing",
+     "episode": "rtl-095",
+     "number": 95,
+     "title": "Schutzhundesport",
+     "start": "0:06:11",
+     "end": "0:08:50",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Ein an Neujahr entlaufener Hund in Südtirol wird per Social-Media-Aufruf und mithilfe eines Mantrailers gefunden; besprochen wird auch das Vorgehen beim Einfangen."
+     ]
+    },
+    {
+     "label": "Entlaufene Hunde: Ursachen und Erfahrungen",
+     "episode": "rtl-016",
+     "number": 16,
+     "title": "Tipps für heiße Tage, ein Hitzeexperiment mit Joey Kelly & Martins erster Kuss",
+     "start": "0:14:11",
+     "end": "0:20:02",
+     "weight": "main",
+     "kind": "anecdote",
+     "summaries": [
+      "Martin erzählt, wie seine demente Hündin Mina und später Luna entlaufen sind, und dass auch gut erzogene Hunde durch Schreck, Läufigkeit oder Spuren weglaufen können."
+     ]
+    },
+    {
+     "label": "Einen scheuen Fundhund sichern",
+     "episode": "mina-021",
+     "number": 21,
+     "title": "Gute Nachbarn, schlechte Nachbarn",
+     "start": "0:08:26",
+     "end": "0:13:16",
+     "weight": "main",
+     "kind": "listener_question",
+     "summaries": [
+      "Eine Hörerin fragt nach einem allein laufenden Hund nahe einer viel befahrenen Straße. Martin rät, ihn möglichst im Blick zu behalten, Fotos für eine Meldung an Tierheim oder Polizei zu machen und ihn nicht durch Hinterherlaufen weiter zu vertreiben; eine Sicherung erfordert Ruhe und Erfahrung."
+     ]
+    }
+   ],
+   "episodeCount": 9
+  },
+  {
    "id": "geraeuschangst",
    "label": "Geräuschangst",
    "category": "Verhalten & Kommunikation",
@@ -25160,120 +25314,6 @@
      "kind": "news",
      "summaries": [
       "Ausgehend von einem Fall in Österreich, in dem ein Mann seinen eigenen Hund biss und dafür angezeigt wurde, kritisiert Martin verbreitete Trainingsratschläge wie Anknurren oder Welpen ins Ohr beißen."
-     ]
-    }
-   ],
-   "episodeCount": 8
-  },
-  {
-   "id": "entlaufene-hunde",
-   "label": "Entlaufene Hunde",
-   "category": "Haltung & Pflege",
-   "description": "Warum Hunde und Katzen entlaufen, wie sie draußen überleben und wie man sie sucht, sicher einfängt und über Chip und Registrierung wiederfindet.",
-   "entries": [
-    {
-     "label": "Entlaufener Hund und GPS-Tracker",
-     "episode": "rtl-summer-a02",
-     "number": "Summer Edition #2",
-     "title": "16 - Tipps für heiße Tage, ein Hitzeexperiment mit Joey Kelly & Martins erster Kuss",
-     "start": "0:44:20",
-     "end": "0:52:31",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Martin erzählt von seiner demenzkranken Hündin und der entlaufenen Luna, erklärt typische Auslöser für Weglaufen (Schreck, Läufigkeit, Spurverfolgung, Verknoten im Gestrüpp) und empfiehlt Chip-Registrierung sowie GPS-Tracker mit Live-Tracking."
-     ]
-    },
-    {
-     "label": "Entlaufene Hunde suchen und einfangen",
-     "episode": "rtl-216",
-     "number": 216,
-     "title": "Missing Dog Syndrome",
-     "start": "0:02:03",
-     "end": "0:09:44",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Am Fall der Dackelhündin Valerie, die über 500 Tage in der Wildnis von Kangaroo Island überlebte, wird das sogenannte Missing Dog Syndrome erklärt und diskutiert, warum man entlaufene Hunde nicht aktiv verfolgen, sondern mit Futterstellen, vertrauten Gerüchen und Lebendfallen behutsam zurückholen sollte."
-     ]
-    },
-    {
-     "label": "Entlaufener Hund und GPS-Tracker",
-     "episode": "rtl-126",
-     "number": 126,
-     "title": "Podcast live: Entenschnabelmaulkorb",
-     "start": "1:37:41",
-     "end": "1:38:40",
-     "weight": "side",
-     "kind": "discussion",
-     "summaries": [
-      "Nachdem ein Hund fünf Stunden verschwunden war, empfiehlt Martin GPS-Tracker und konsequentes Sichern statt Vertrauen auf Rückkehr."
-     ]
-    },
-    {
-     "label": "Suchaufruf für einen vermissten Kater",
-     "episode": "rtl-113",
-     "number": 113,
-     "title": "Welpenhandel, Wolfsbegegnung & Ölkäfer",
-     "start": "0:56:51",
-     "end": "0:58:00",
-     "weight": "side",
-     "kind": "anecdote",
-     "summaries": [
-      "Aufruf zur Suche nach einem vermissten schwarz-weißen Kater mit markanter Zeichnung unter der Nase, zuletzt in Köln gesehen."
-     ]
-    },
-    {
-     "label": "Entlaufener Hütehund in Alaska",
-     "episode": "rtl-110",
-     "number": 110,
-     "title": "Bulette & Bier",
-     "start": "0:02:18",
-     "end": "0:04:35",
-     "weight": "main",
-     "kind": "news",
-     "summaries": [
-      "Ein australischer Hütehund büxte auf der St.-Lorenz-Insel aus und tauchte rund 240 Kilometer entfernt auf dem alaskischen Festland wieder auf, offenbar über Meereis gewandert, mit einer schweren Bisswunde und selbst erjagter Nahrung."
-     ]
-    },
-    {
-     "label": "Entlaufene Hunde an Silvester",
-     "episode": "rtl-096",
-     "number": 96,
-     "title": "Schutzhunde, Ebay & Unvermittelbare",
-     "start": "0:04:57",
-     "end": "0:07:12",
-     "weight": "main",
-     "kind": "news",
-     "summaries": [
-      "Rund um den Jahreswechsel wurden 667 Hunde als vermisst gemeldet, gegenüber durchschnittlich 88 pro Tag, was auch mit der gestiegenen Hundezahl zusammenhängt.",
-      "Ein im Urlaub entlaufener Hund wurde durch die Reichweite eines Social-Media-Aufrufs von einem Helfer gefunden, während Kommentare vorschnell Schuld zuwiesen."
-     ]
-    },
-    {
-     "label": "Entlaufenen Hund suchen und Mantrailing",
-     "episode": "rtl-095",
-     "number": 95,
-     "title": "Schutzhundesport",
-     "start": "0:06:11",
-     "end": "0:08:50",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Ein an Neujahr entlaufener Hund in Südtirol wird per Social-Media-Aufruf und mithilfe eines Mantrailers gefunden; besprochen wird auch das Vorgehen beim Einfangen."
-     ]
-    },
-    {
-     "label": "Entlaufene Hunde: Ursachen und Erfahrungen",
-     "episode": "rtl-016",
-     "number": 16,
-     "title": "Tipps für heiße Tage, ein Hitzeexperiment mit Joey Kelly & Martins erster Kuss",
-     "start": "0:14:11",
-     "end": "0:20:02",
-     "weight": "main",
-     "kind": "anecdote",
-     "summaries": [
-      "Martin erzählt, wie seine demente Hündin Mina und später Luna entlaufen sind, und dass auch gut erzogene Hunde durch Schreck, Läufigkeit oder Spuren weglaufen können."
      ]
     }
    ],
@@ -47473,6 +47513,41 @@
    "episodeCount": 2
   },
   {
+   "id": "hundehaltung-mietwohnung",
+   "label": "Hundehaltung in der Mietwohnung",
+   "category": "Recht & Politik",
+   "description": "Was Vermieter bei der Hundehaltung erlauben oder verbieten dürfen und welche Vorteile Hunde für eine Hausgemeinschaft haben.",
+   "entries": [
+    {
+     "label": "Hundehaltung in der Mietwohnung",
+     "episode": "rtl-150",
+     "number": 150,
+     "title": "Eine Laune der Natur",
+     "start": "0:54:16",
+     "end": "1:00:14",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Familien dürfen wegen Vermieterverboten keinen Hund halten; Diskussion über Rechtslage, Ängste von Vermietern und positive Effekte von Hunden auf Hausgemeinschaft und Einbruchsschutz."
+     ]
+    },
+    {
+     "label": "Wohnungssuche mit Hund",
+     "episode": "mina-021",
+     "number": 21,
+     "title": "Gute Nachbarn, schlechte Nachbarn",
+     "start": "0:05:55",
+     "end": "0:07:04",
+     "weight": "side",
+     "kind": "discussion",
+     "summaries": [
+      "Martin schildert Schwierigkeiten bei der Wohnungssuche mit Hund und seinen Wunsch, Konflikte mit Vermietern zu vermeiden. Katharina verweist im Gespräch auf die Rechtsprechung zur Hundehaltung in Mietwohnungen."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
    "id": "hund-und-menschliche-gesundheit",
    "label": "Hundehaltung und menschliche Gesundheit",
    "category": "Wissenschaft & Forschung",
@@ -48048,6 +48123,41 @@
    "episodeCount": 2
   },
   {
+   "id": "katzen-einfangen",
+   "label": "Katzen einfangen und sichern",
+   "category": "Andere Tiere",
+   "description": "Wie entlaufene, verwilderte oder aggressive Katzen schonend eingefangen und fixiert werden können.",
+   "entries": [
+    {
+     "label": "Katzen sichern und einfangen",
+     "episode": "rtl-063",
+     "number": 63,
+     "title": "Hundepension, Katzenfänger & Let´s Dance",
+     "start": "0:55:17",
+     "end": "0:57:22",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Anlass eines kuriosen Produkts ist der Katzenkescher, mit dem entlaufene, verwilderte oder aggressive Katzen schonend fixiert werden können, damit sie sich nicht selbst verletzen; außerdem geht es um Katzen, die im Flugzeug aus der Transportbox entkommen."
+     ]
+    },
+    {
+     "label": "Eine verängstigte Katze vom Baum retten",
+     "episode": "mina-021",
+     "number": 21,
+     "title": "Gute Nachbarn, schlechte Nachbarn",
+     "start": "0:13:16",
+     "end": "0:14:55",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Katharina beschreibt die Arbeit eines professionellen Katzenretters, der sich gesichert und geduldig einer Katze auf einem Baum nähert und sie für den Abstieg in einer Tasche sichert."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
    "id": "kauartikel",
    "label": "Kauartikel",
    "category": "Ernährung",
@@ -48112,6 +48222,41 @@
      "kind": "discussion",
      "summaries": [
       "Katharina beschreibt den Impuls, niedliche Tiere zu drücken, und bespricht mögliche Erklärungen als Emotionsregulation. Sie betont die unsichere Beweislage evolutionärer Deutungen und berichtet von Experimenten zu niedlichen Tierbildern und Konzentration. Martin unterscheidet solche Bilder vom bedrängenden Anfassen eines Lebewesens."
+     ]
+    }
+   ],
+   "episodeCount": 2
+  },
+  {
+   "id": "kognitionsforschung-hund",
+   "label": "Kognitionsforschung beim Hund",
+   "category": "Wissenschaft & Forschung",
+   "description": "Wie Studien etwa per Eye-Tracking untersuchen, was Hunde vom Verhalten der Menschen erwarten und verstehen.",
+   "entries": [
+    {
+     "label": "Studie: Hunde erkennen regelwidriges Verhalten",
+     "episode": "mina-015",
+     "number": 15,
+     "title": "Fettige Ohren und Albtraumbabys",
+     "start": "0:15:49",
+     "end": "0:19:26",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Katharina stellt eine Eye-Tracking-Studie vor, in der Hunde per Pupillenreaktion zeigten, dass sie merken, wenn Menschen nicht erwartungsgemäß auf Gesten reagieren; beide diskutieren Aussagekraft und Interesse der Hunde an menschlichen Strukturen."
+     ]
+    },
+    {
+     "label": "Bouba-Kiki-Effekt bei Hunden",
+     "episode": "mina-021",
+     "number": 21,
+     "title": "Gute Nachbarn, schlechte Nachbarn",
+     "start": "0:37:33",
+     "end": "0:40:31",
+     "weight": "main",
+     "kind": "news",
+     "summaries": [
+      "Katharina berichtet über eine Studie zur Zuordnung von Lauten und Formen bei Hunden und erklärt, wie eine unbewusste Beeinflussung durch die Halter vermieden werden sollte. Die beiden besprechen den Kluge-Hans-Effekt und mögliche Gemeinsamkeiten der Wahrnehmung verschiedener Tierarten."
      ]
     }
    ],
@@ -56305,6 +56450,28 @@
    "episodeCount": 1
   },
   {
+   "id": "greifvoegel-und-hunde",
+   "label": "Greifvögel und Hunde",
+   "category": "Andere Tiere",
+   "description": "Begegnungen von Hunden mit Greifvögeln und mögliche Gefahren für sehr kleine Hunde.",
+   "entries": [
+    {
+     "label": "Greifvögel und sehr kleine Hunde",
+     "episode": "mina-021",
+     "number": 21,
+     "title": "Gute Nachbarn, schlechte Nachbarn",
+     "start": "0:20:18",
+     "end": "0:22:29",
+     "weight": "side",
+     "kind": "anecdote",
+     "summaries": [
+      "Martin erinnert sich an einen Bussardangriff auf einen West-Highland-White-Terrier-Welpen. Die beiden diskutieren, wie die Größe eines Hundes bei Begegnungen mit Greifvögeln eine Rolle spielen kann."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
    "id": "wildtiere-zaehmung",
    "label": "Grenzen der Zähmung von Wildtieren",
    "category": "Andere Tiere",
@@ -57479,28 +57646,6 @@
    "episodeCount": 1
   },
   {
-   "id": "hundehaltung-mietwohnung",
-   "label": "Hundehaltung in der Mietwohnung",
-   "category": "Recht & Politik",
-   "description": "Was Vermieter bei der Hundehaltung erlauben oder verbieten dürfen und welche Vorteile Hunde für eine Hausgemeinschaft haben.",
-   "entries": [
-    {
-     "label": "Hundehaltung in der Mietwohnung",
-     "episode": "rtl-150",
-     "number": 150,
-     "title": "Eine Laune der Natur",
-     "start": "0:54:16",
-     "end": "1:00:14",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Familien dürfen wegen Vermieterverboten keinen Hund halten; Diskussion über Rechtslage, Ängste von Vermietern und positive Effekte von Hunden auf Hausgemeinschaft und Einbruchsschutz."
-     ]
-    }
-   ],
-   "episodeCount": 1
-  },
-  {
    "id": "hundekot-umwelt",
    "label": "Hundekot und Überdüngung",
    "category": "Wissenschaft & Forschung",
@@ -58500,28 +58645,6 @@
    "episodeCount": 1
   },
   {
-   "id": "katzen-einfangen",
-   "label": "Katzen einfangen und sichern",
-   "category": "Andere Tiere",
-   "description": "Wie entlaufene, verwilderte oder aggressive Katzen schonend eingefangen und fixiert werden können.",
-   "entries": [
-    {
-     "label": "Katzen sichern und einfangen",
-     "episode": "rtl-063",
-     "number": 63,
-     "title": "Hundepension, Katzenfänger & Let´s Dance",
-     "start": "0:55:17",
-     "end": "0:57:22",
-     "weight": "main",
-     "kind": "discussion",
-     "summaries": [
-      "Anlass eines kuriosen Produkts ist der Katzenkescher, mit dem entlaufene, verwilderte oder aggressive Katzen schonend fixiert werden können, damit sie sich nicht selbst verletzen; außerdem geht es um Katzen, die im Flugzeug aus der Transportbox entkommen."
-     ]
-    }
-   ],
-   "episodeCount": 1
-  },
-  {
    "id": "katzenverhalten-training",
    "label": "Katzenerziehung",
    "category": "Andere Tiere",
@@ -58782,28 +58905,6 @@
      "kind": "news",
      "summaries": [
       "Martin Rütter erklärt, warum er einen offenen Brief an den Kanzler für mehr Klimaschutz als Erstunterzeichner mit dem Zusatz \"vor allem Vater\" unterschrieben hat."
-     ]
-    }
-   ],
-   "episodeCount": 1
-  },
-  {
-   "id": "kognitionsforschung-hund",
-   "label": "Kognitionsforschung beim Hund",
-   "category": "Wissenschaft & Forschung",
-   "description": "Wie Studien etwa per Eye-Tracking untersuchen, was Hunde vom Verhalten der Menschen erwarten und verstehen.",
-   "entries": [
-    {
-     "label": "Studie: Hunde erkennen regelwidriges Verhalten",
-     "episode": "mina-015",
-     "number": 15,
-     "title": "Fettige Ohren und Albtraumbabys",
-     "start": "0:15:49",
-     "end": "0:19:26",
-     "weight": "main",
-     "kind": "news",
-     "summaries": [
-      "Katharina stellt eine Eye-Tracking-Studie vor, in der Hunde per Pupillenreaktion zeigten, dass sie merken, wenn Menschen nicht erwartungsgemäß auf Gesten reagieren; beide diskutieren Aussagekraft und Interesse der Hunde an menschlichen Strukturen."
      ]
     }
    ],
@@ -63286,6 +63387,28 @@
      "kind": "listener_question",
      "summaries": [
       "Eine Hörerin fragt, wie ihr Hund lernen kann, in ihrer Nähe zu bleiben; erklärt wird, dass Trödeln meist antrainiert ist, weil Zurückbleiben Aufmerksamkeit und Leckerli bringt, und dass Tempowechsel, Verschwinden und echte Attraktivität des Halters helfen."
+     ]
+    }
+   ],
+   "episodeCount": 1
+  },
+  {
+   "id": "uhus",
+   "label": "Uhus",
+   "category": "Andere Tiere",
+   "description": "Lebensweise, Rufe, Jagdverhalten und Schutz des Uhus.",
+   "entries": [
+    {
+     "label": "Uhus: Rufe, Lebensweise und Schutz",
+     "episode": "mina-021",
+     "number": 21,
+     "title": "Gute Nachbarn, schlechte Nachbarn",
+     "start": "0:16:27",
+     "end": "0:20:18",
+     "weight": "main",
+     "kind": "discussion",
+     "summaries": [
+      "Katharina stellt den Uhu vor und spricht über Größenunterschiede zwischen Weibchen und Männchen, die Rufe, die Herbstbalz, das nächtliche Jagen und die Erholung der Bestände durch Schutzmaßnahmen."
      ]
     }
    ],

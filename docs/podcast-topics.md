@@ -1,6 +1,6 @@
 # Themen im Podcast „Tierisch Menschlich“
 
-Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder abweichende Fassungen können Spotify-Zeitmarken abweichen. Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
+Automatisch erstellter Themenindex: 1109 Themen aus 265 von 265 Folgen. Zeitangaben beziehen sich auf die ausgewertete Audiofassung; durch Werbung oder abweichende Fassungen können Spotify-Zeitmarken abweichen. Erzeugt mit `scripts/podcast_index` (`python -m podcast_index build`).
 
 ## Übersicht
 
@@ -17,7 +17,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | Hundesport & Arbeitshunde | 37 | 14 |
 | Mensch-Hund-Beziehung | 55 | 18 |
 | Wissenschaft & Forschung | 113 | 11 |
-| Andere Tiere | 160 | 40 |
+| Andere Tiere | 162 | 40 |
 
 ## Alle Themen nach Anzahl der Folgen
 
@@ -81,6 +81,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | [Tierhilfe in Kriegsgebieten](#tierhilfe-ukraine) | Tierschutz & Ethik | 10 |
 | [Blühflächen für Insekten](#insektenfreundlicher-garten) | Andere Tiere | 9 |
 | [Domestikation und Abstammung des Hundes](#domestikation) | Wissenschaft & Forschung | 9 |
+| [Entlaufene Hunde](#entlaufene-hunde) | Haltung & Pflege | 9 |
 | [Geräuschangst](#geraeuschangst) | Verhalten & Kommunikation | 9 |
 | [Hundeführerschein](#hundefuehrerschein) | Recht & Politik | 9 |
 | [Hundekot und Kotbeutel](#hundekot-entsorgung) | Haltung & Pflege | 9 |
@@ -95,7 +96,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | [Bellen](#bellen) | Verhalten & Kommunikation | 8 |
 | [Brut- und Setzzeit](#brut-und-setzzeit) | Haltung & Pflege | 8 |
 | [Dominanz und Alpha-Mythos](#dominanz) | Verhalten & Kommunikation | 8 |
-| [Entlaufene Hunde](#entlaufene-hunde) | Haltung & Pflege | 8 |
 | [Entstehung von Hunderassen](#rassegeschichte) | Zucht & Rassen | 8 |
 | [Geruch von Hunden](#hundegeruch) | Wissenschaft & Forschung | 8 |
 | [Herdenschutzhunde](#herdenschutzhunde) | Hundesport & Arbeitshunde | 8 |
@@ -452,6 +452,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | [Hunde und psychische Gesundheit](#hund-und-psyche) | Mensch-Hund-Beziehung | 2 |
 | [Hundeauslaufflächen](#hundeauslaufflaechen) | Haltung & Pflege | 2 |
 | [Hundeblick](#hundeblick) | Wissenschaft & Forschung | 2 |
+| [Hundehaltung in der Mietwohnung](#hundehaltung-mietwohnung) | Recht & Politik | 2 |
 | [Hundehaltung und menschliche Gesundheit](#hund-und-menschliche-gesundheit) | Wissenschaft & Forschung | 2 |
 | [Hundekämpfe in der Zuchtgeschichte](#hundekaempfe) | Zucht & Rassen | 2 |
 | [Hundekämpfe trennen](#hundekaempfe-trennen) | Verhalten & Kommunikation | 2 |
@@ -468,8 +469,10 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | [Jägersprache](#jagdsprache) | Tierschutz & Ethik | 2 |
 | [Kastanien und Eicheln](#kastanien-gefahr) | Gesundheit & Medizin | 2 |
 | [Kastenstand und Ferkelschutzkorb](#kastenstand) | Tierschutz & Ethik | 2 |
+| [Katzen einfangen und sichern](#katzen-einfangen) | Andere Tiere | 2 |
 | [Kauartikel](#kauartikel) | Ernährung | 2 |
 | [Kindchenschema](#kindchenschema) | Zucht & Rassen | 2 |
+| [Kognitionsforschung beim Hund](#kognitionsforschung-hund) | Wissenschaft & Forschung | 2 |
 | [Kommunikation von Katzen](#katzensprache) | Andere Tiere | 2 |
 | [Kopfhalfter und Führgeschirr](#halti-kopfhalfter) | Haltung & Pflege | 2 |
 | [Kopfschräglegen](#kopfschraeglegen) | Verhalten & Kommunikation | 2 |
@@ -757,6 +760,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | [Glühwürmchen](#gluehwuermchen) | Andere Tiere | 1 |
 | [Goldschakal](#goldschakal) | Andere Tiere | 1 |
 | [Grasfressen](#grasfressen-beim-hund) | Verhalten & Kommunikation | 1 |
+| [Greifvögel und Hunde](#greifvoegel-und-hunde) | Andere Tiere | 1 |
 | [Grenzen der Zähmung von Wildtieren](#wildtiere-zaehmung) | Andere Tiere | 1 |
 | [Grundlagen der Vererbung](#vererbung-grundlagen) | Wissenschaft & Forschung | 1 |
 | [Grundschleppnetzfischerei](#fischerei) | Andere Tiere | 1 |
@@ -809,7 +813,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | [Hundegerichtete Sprache](#hundegerichtete-sprache) | Wissenschaft & Forschung | 1 |
 | [Hundehaftpflichtversicherung](#hundehaftpflicht) | Recht & Politik | 1 |
 | [Hundehaltung in Forschungseinrichtungen](#hundehaltung-bedingungen) | Tierschutz & Ethik | 1 |
-| [Hundehaltung in der Mietwohnung](#hundehaltung-mietwohnung) | Recht & Politik | 1 |
 | [Hundekot und Überdüngung](#hundekot-umwelt) | Wissenschaft & Forschung | 1 |
 | [Hundemarken](#hundemarken-und-zubehoer) | Haltung & Pflege | 1 |
 | [Hundenase als Wärmesensor](#hundenase-geruchssinn) | Wissenschaft & Forschung | 1 |
@@ -853,7 +856,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | [Kastration und Verhalten](#kastration-rueden) | Verhalten & Kommunikation | 1 |
 | [Kastrationschip](#kastrationschip) | Gesundheit & Medizin | 1 |
 | [Kastrationszeitpunkt](#kastrationszeitpunkt) | Gesundheit & Medizin | 1 |
-| [Katzen einfangen und sichern](#katzen-einfangen) | Andere Tiere | 1 |
 | [Katzenerziehung](#katzenverhalten-training) | Andere Tiere | 1 |
 | [Kaufentscheidung für Qualzuchtrassen](#kaufentscheidung-rassewahl) | Zucht & Rassen | 1 |
 | [Kennzeichnungs- und Registrierungspflicht](#kennzeichnungspflicht-hunde) | Recht & Politik | 1 |
@@ -866,7 +868,6 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | [Klickertraining](#klicker-alternativen) | Erziehung & Training | 1 |
 | [Klimaresiliente Wälder](#klimaresiliente-waelder) | Wissenschaft & Forschung | 1 |
 | [Klimaschutz](#klimaschutz-und-tiere) | Recht & Politik | 1 |
-| [Kognitionsforschung beim Hund](#kognitionsforschung-hund) | Wissenschaft & Forschung | 1 |
 | [Kommunikation über Kotgeruch](#kot-geruch-kommunikation) | Wissenschaft & Forschung | 1 |
 | [Kontrolle bei Turnieren und Shows](#oeffentlichkeit-und-kontrolle-im-tiersport) | Tierschutz & Ethik | 1 |
 | [Kontrollerfahrung und Resilienz](#resilienz-und-kontrollerfahrung) | Wissenschaft & Forschung | 1 |
@@ -1064,6 +1065,7 @@ Automatisch erstellter Themenindex: 1107 Themen aus 264 von 264 Folgen. Zeitanga
 | [Tränen bei Hunden](#weinende-hunde) | Wissenschaft & Forschung | 1 |
 | [Tränenkanäle](#traenenkanaele) | Gesundheit & Medizin | 1 |
 | [Trödeln im Freilauf](#troedeln-im-freilauf) | Erziehung & Training | 1 |
+| [Uhus](#uhus) | Andere Tiere | 1 |
 | [Umdenken bei Qualzucht-Haltern](#umdenken-halter) | Zucht & Rassen | 1 |
 | [Umgang mit Rindern in der Tiermedizin](#rinderbehandlung) | Tierschutz & Ethik | 1 |
 | [Umwelteinflüsse auf den Charakter](#praegung-und-umwelteinfluss) | Verhalten & Kommunikation | 1 |
@@ -4097,6 +4099,20 @@ _Wie man Hunde im Sommer vor Überhitzung schützt, warum zunehmende Hitzetage f
 - Folge 16 „Tipps für heiße Tage, ein Hitzeexperiment mit Joey Kelly & Martins erster Kuss“ ab 1:10:26: Auf eine Hörerfrage hin erklärt Martin, dass Hunde bei Hitze am besten ruhen und dass erwachsene Hunde ohnehin 18 bis 20 Stunden Ruhe brauchen.
 - Folge 16 „Das Letzte vor dem Sommer“ ab 0:22:10 (kurz): Hinweis auf die schnelle Erwärmung Europas und die Gefahr von Hitzetagen, verbunden mit dem Appell, auf gefährdete Lebewesen im Sommer besonders zu achten.
 
+<a id="entlaufene-hunde"></a>
+#### Entlaufene Hunde · 9 Folgen
+_Warum Hunde und Katzen entlaufen, wie sie draußen überleben und wie man sie sucht, sicher einfängt und über Chip und Registrierung wiederfindet._
+
+- Summer Edition #2 „16 - Tipps für heiße Tage, ein Hitzeexperiment mit Joey Kelly & Martins erster Kuss“ ab 0:44:20: Martin erzählt von seiner demenzkranken Hündin und der entlaufenen Luna, erklärt typische Auslöser für Weglaufen (Schreck, Läufigkeit, Spurverfolgung, Verknoten im Gestrüpp) und empfiehlt Chip-Registrierung sowie GPS-Tracker mit Live-Tracking.
+- Folge 216 „Missing Dog Syndrome“ ab 0:02:03: Am Fall der Dackelhündin Valerie, die über 500 Tage in der Wildnis von Kangaroo Island überlebte, wird das sogenannte Missing Dog Syndrome erklärt und diskutiert, warum man entlaufene Hunde nicht aktiv verfolgen, sondern mit Futterstellen, vertrauten Gerüchen und Lebendfallen behutsam zurückholen sollte.
+- Folge 126 „Podcast live: Entenschnabelmaulkorb“ ab 1:37:41 (kurz): Nachdem ein Hund fünf Stunden verschwunden war, empfiehlt Martin GPS-Tracker und konsequentes Sichern statt Vertrauen auf Rückkehr.
+- Folge 113 „Welpenhandel, Wolfsbegegnung & Ölkäfer“ ab 0:56:51 (kurz): Aufruf zur Suche nach einem vermissten schwarz-weißen Kater mit markanter Zeichnung unter der Nase, zuletzt in Köln gesehen.
+- Folge 110 „Bulette & Bier“ ab 0:02:18: Ein australischer Hütehund büxte auf der St.-Lorenz-Insel aus und tauchte rund 240 Kilometer entfernt auf dem alaskischen Festland wieder auf, offenbar über Meereis gewandert, mit einer schweren Bisswunde und selbst erjagter Nahrung.
+- Folge 96 „Schutzhunde, Ebay & Unvermittelbare“ ab 0:04:57: Rund um den Jahreswechsel wurden 667 Hunde als vermisst gemeldet, gegenüber durchschnittlich 88 pro Tag, was auch mit der gestiegenen Hundezahl zusammenhängt. Ein im Urlaub entlaufener Hund wurde durch die Reichweite eines Social-Media-Aufrufs von einem Helfer gefunden, während Kommentare vorschnell Schuld zuwiesen.
+- Folge 95 „Schutzhundesport“ ab 0:06:11: Ein an Neujahr entlaufener Hund in Südtirol wird per Social-Media-Aufruf und mithilfe eines Mantrailers gefunden; besprochen wird auch das Vorgehen beim Einfangen.
+- Folge 16 „Tipps für heiße Tage, ein Hitzeexperiment mit Joey Kelly & Martins erster Kuss“ ab 0:14:11: Martin erzählt, wie seine demente Hündin Mina und später Luna entlaufen sind, und dass auch gut erzogene Hunde durch Schreck, Läufigkeit oder Spuren weglaufen können.
+- Folge 21 „Gute Nachbarn, schlechte Nachbarn“ ab 0:08:26: Eine Hörerin fragt nach einem allein laufenden Hund nahe einer viel befahrenen Straße. Martin rät, ihn möglichst im Blick zu behalten, Fotos für eine Meldung an Tierheim oder Polizei zu machen und ihn nicht durch Hinterherlaufen weiter zu vertreiben; eine Sicherung erfordert Ruhe und Erfahrung.
+
 <a id="hundekot-entsorgung"></a>
 #### Hundekot und Kotbeutel · 9 Folgen
 _Wie man Hundekot aufsammelt und richtig entsorgt, welche Kotbeutel taugen und warum liegen gelassene Beutel ein Problem sind._
@@ -4138,19 +4154,6 @@ _Warum Hunde während der Brut- und Setzzeit im Frühjahr in Wald und Feld beson
 - Folge 13 „Meeresungeheuer, Horrorwölfe und blinde Dackel“ ab 0:25:15: Empfehlung, Hunde während der bis Mitte Juli reichenden Brut- und Setzzeit an der Leine zu führen, auf Wegen zu bleiben, außerdem Hinweis auf Mäuse als Reiz im Wald.
 - Folge 7 „Von Walen und Menschen“ ab 0:40:13 (kurz): Beim Spaziergang mit angeleinten Hunden während der Brut- und Setzzeit trifft Adick den aus der Sendung bekannten Beagle Emil samt seiner pubertären Marotten.
 - Folge 6 „In der Kürze liegt die Würze“ ab 0:04:03: Aufruf, Hunde während der Brut- und Setzzeit in Wald und Feld anzuleinen, mit Kritik an Jagd-Influencern, die ihre Hunde frei durch Felder laufen lassen.
-
-<a id="entlaufene-hunde"></a>
-#### Entlaufene Hunde · 8 Folgen
-_Warum Hunde und Katzen entlaufen, wie sie draußen überleben und wie man sie sucht, sicher einfängt und über Chip und Registrierung wiederfindet._
-
-- Summer Edition #2 „16 - Tipps für heiße Tage, ein Hitzeexperiment mit Joey Kelly & Martins erster Kuss“ ab 0:44:20: Martin erzählt von seiner demenzkranken Hündin und der entlaufenen Luna, erklärt typische Auslöser für Weglaufen (Schreck, Läufigkeit, Spurverfolgung, Verknoten im Gestrüpp) und empfiehlt Chip-Registrierung sowie GPS-Tracker mit Live-Tracking.
-- Folge 216 „Missing Dog Syndrome“ ab 0:02:03: Am Fall der Dackelhündin Valerie, die über 500 Tage in der Wildnis von Kangaroo Island überlebte, wird das sogenannte Missing Dog Syndrome erklärt und diskutiert, warum man entlaufene Hunde nicht aktiv verfolgen, sondern mit Futterstellen, vertrauten Gerüchen und Lebendfallen behutsam zurückholen sollte.
-- Folge 126 „Podcast live: Entenschnabelmaulkorb“ ab 1:37:41 (kurz): Nachdem ein Hund fünf Stunden verschwunden war, empfiehlt Martin GPS-Tracker und konsequentes Sichern statt Vertrauen auf Rückkehr.
-- Folge 113 „Welpenhandel, Wolfsbegegnung & Ölkäfer“ ab 0:56:51 (kurz): Aufruf zur Suche nach einem vermissten schwarz-weißen Kater mit markanter Zeichnung unter der Nase, zuletzt in Köln gesehen.
-- Folge 110 „Bulette & Bier“ ab 0:02:18: Ein australischer Hütehund büxte auf der St.-Lorenz-Insel aus und tauchte rund 240 Kilometer entfernt auf dem alaskischen Festland wieder auf, offenbar über Meereis gewandert, mit einer schweren Bisswunde und selbst erjagter Nahrung.
-- Folge 96 „Schutzhunde, Ebay & Unvermittelbare“ ab 0:04:57: Rund um den Jahreswechsel wurden 667 Hunde als vermisst gemeldet, gegenüber durchschnittlich 88 pro Tag, was auch mit der gestiegenen Hundezahl zusammenhängt. Ein im Urlaub entlaufener Hund wurde durch die Reichweite eines Social-Media-Aufrufs von einem Helfer gefunden, während Kommentare vorschnell Schuld zuwiesen.
-- Folge 95 „Schutzhundesport“ ab 0:06:11: Ein an Neujahr entlaufener Hund in Südtirol wird per Social-Media-Aufruf und mithilfe eines Mantrailers gefunden; besprochen wird auch das Vorgehen beim Einfangen.
-- Folge 16 „Tipps für heiße Tage, ein Hitzeexperiment mit Joey Kelly & Martins erster Kuss“ ab 0:14:11: Martin erzählt, wie seine demente Hündin Mina und später Luna entlaufen sind, und dass auch gut erzogene Hunde durch Schreck, Läufigkeit oder Spuren weglaufen können.
 
 <a id="hund-im-auto"></a>
 #### Hund im heißen Auto · 8 Folgen
@@ -7361,6 +7364,13 @@ _Das Qualzuchtverbot nach § 11b Tierschutzgesetz, seine mangelhafte Umsetzung u
 - Folge 145 „Wahnsinn Reinrassigkeit (mit Prof. Achim Gruber)“ ab 0:18:43: Erklärung des Paragrafen 11b, seiner mangelhaften Umsetzung seit 2013, der Rolle der Veterinärämter, Kaiserschnittraten bei Rassen mit großen Köpfen und dem Vergleich zu Niederlanden, Schweiz und Österreich.
 - Folge 67 „Hasskommentare, jaulende Hunde & Vogelnester“ ab 0:43:44: Diskussion über bestehende Zuchtverbote in Skandinavien, den Aufruf britischer Veterinäre, Kurznasenrassen nicht mehr zu bewerben, und die Hoffnung auf einen Durchbruch bei Qualzucht und Welpenhandel.
 
+<a id="hundehaltung-mietwohnung"></a>
+#### Hundehaltung in der Mietwohnung · 2 Folgen
+_Was Vermieter bei der Hundehaltung erlauben oder verbieten dürfen und welche Vorteile Hunde für eine Hausgemeinschaft haben._
+
+- Folge 150 „Eine Laune der Natur“ ab 0:54:16: Familien dürfen wegen Vermieterverboten keinen Hund halten; Diskussion über Rechtslage, Ängste von Vermietern und positive Effekte von Hunden auf Hausgemeinschaft und Einbruchsschutz.
+- Folge 21 „Gute Nachbarn, schlechte Nachbarn“ ab 0:05:55 (kurz): Martin schildert Schwierigkeiten bei der Wohnungssuche mit Hund und seinen Wunsch, Konflikte mit Vermietern zu vermeiden. Katharina verweist im Gespräch auf die Rechtsprechung zur Hundehaltung in Mietwohnungen.
+
 <a id="sachkunde-tierhaltung"></a>
 #### Sachkundenachweis für Tierhalter · 2 Folgen
 _Die Forderung, die Anschaffung von Hunden, Exoten und anderen Haustieren an einen Nachweis von Wissen über ihre Haltung zu binden._
@@ -7452,12 +7462,6 @@ _Welche Regeln zu Leine, Maulkorb und Fahrkarte für Hunde in Bahn und öffentli
 _Wofür eine Hundehaftpflichtversicherung aufkommt und wie man mit Schäden umgeht, die der Hund verursacht._
 
 - Folge 223 „Hirschkäfer, flieg!“ ab 0:04:47: Anlässlich eines Erbrochenen-Flecks auf dem Teppich sprechen beide über Hundehaftpflichtversicherung und den Umgang mit von Hunden verursachten Schäden.
-
-<a id="hundehaltung-mietwohnung"></a>
-#### Hundehaltung in der Mietwohnung · 1 Folgen
-_Was Vermieter bei der Hundehaltung erlauben oder verbieten dürfen und welche Vorteile Hunde für eine Hausgemeinschaft haben._
-
-- Folge 150 „Eine Laune der Natur“ ab 0:54:16: Familien dürfen wegen Vermieterverboten keinen Hund halten; Diskussion über Rechtslage, Ängste von Vermietern und positive Effekte von Hunden auf Hausgemeinschaft und Einbruchsschutz.
 
 <a id="kastration-rechtslage"></a>
 #### Kastration und Tierschutzgesetz · 1 Folgen
@@ -8539,6 +8543,13 @@ _Wie klug Tiere sind und ob Menschen überhaupt in der Lage sind, tierische Inte
 - Folge 182 „Blümerle“ ab 0:19:10 (kurz): Hinweis auf ein Gespräch mit dem Kognitionsbiologen Ludwig Huber über die Frage, ob Menschen klug genug sind, tierische Intelligenz zu beurteilen, samt Beispiel schlauer Ziegen.
 - Folge 163 „Gute Reflexe, schlechte Reflexe“ ab 0:44:42 (kurz): Ankündigung einer TV-Sendung mit Dirk Steffens über clevere Überlebensstrategien von Tieren und über beobachtbare Veränderungen der Natur.
 
+<a id="kognitionsforschung-hund"></a>
+#### Kognitionsforschung beim Hund · 2 Folgen
+_Wie Studien etwa per Eye-Tracking untersuchen, was Hunde vom Verhalten der Menschen erwarten und verstehen._
+
+- Folge 15 „Fettige Ohren und Albtraumbabys“ ab 0:15:49: Katharina stellt eine Eye-Tracking-Studie vor, in der Hunde per Pupillenreaktion zeigten, dass sie merken, wenn Menschen nicht erwartungsgemäß auf Gesten reagieren; beide diskutieren Aussagekraft und Interesse der Hunde an menschlichen Strukturen.
+- Folge 21 „Gute Nachbarn, schlechte Nachbarn“ ab 0:37:33: Katharina berichtet über eine Studie zur Zuordnung von Lauten und Formen bei Hunden und erklärt, wie eine unbewusste Beeinflussung durch die Halter vermieden werden sollte. Die beiden besprechen den Kluge-Hans-Effekt und mögliche Gemeinsamkeiten der Wahrnehmung verschiedener Tierarten.
+
 <a id="moorschutz"></a>
 #### Moorschutz · 2 Folgen
 _Warum Moore für Klima und Artenvielfalt wichtig sind und wie man ihren Schutz unterstützen kann._
@@ -8865,12 +8876,6 @@ _Was Studien über erhöhte Risiken für Tumore und Kreuzbandrisse nach einer Ka
 _Ob man Wälder pflanzen kann, die dem Klimawandel standhalten, und welche Risiken fremde Baumarten bergen._
 
 - Folge 148 „Wald & Jagd (mit Peter Wohlleben)“ ab 0:43:37: Diskussion, ob man klimaresiliente Wälder pflanzen kann; Epigenetik, Anpassungsstrategien heimischer Bäume und Risiken fremder Baumarten für die heimische Artengemeinschaft.
-
-<a id="kognitionsforschung-hund"></a>
-#### Kognitionsforschung beim Hund · 1 Folgen
-_Wie Studien etwa per Eye-Tracking untersuchen, was Hunde vom Verhalten der Menschen erwarten und verstehen._
-
-- Folge 15 „Fettige Ohren und Albtraumbabys“ ab 0:15:49: Katharina stellt eine Eye-Tracking-Studie vor, in der Hunde per Pupillenreaktion zeigten, dass sie merken, wenn Menschen nicht erwartungsgemäß auf Gesten reagieren; beide diskutieren Aussagekraft und Interesse der Hunde an menschlichen Strukturen.
 
 <a id="kot-geruch-kommunikation"></a>
 #### Kommunikation über Kotgeruch · 1 Folgen
@@ -9626,6 +9631,13 @@ _Wann ein gefundener Jungvogel Hilfe braucht und wann man ihn besser in Ruhe lä
 - Folge 63 „Hundepension, Katzenfänger & Let´s Dance“ ab 1:05:02: Erklärt wird der Unterschied zwischen Nestlingen, die zurück ins Nest oder in eine Auffangstation gehören, und Ästlingen, die noch von den Eltern versorgt werden und in Ruhe gelassen werden sollten; Anfassen ist erlaubt, der Mythos der Ablehnung durch die Eltern stimmt nicht.
 - Folge 21 „Dogsharing, Dialekte & sprechende Hunde“ ab 0:57:51 (kurz): Kurzer Hinweis auf den Unterschied zwischen Nestling und Ästling und darauf, wann ein gefundener Jungvogel Hilfe braucht und wann man ihn besser in Ruhe lässt.
 
+<a id="katzen-einfangen"></a>
+#### Katzen einfangen und sichern · 2 Folgen
+_Wie entlaufene, verwilderte oder aggressive Katzen schonend eingefangen und fixiert werden können._
+
+- Folge 63 „Hundepension, Katzenfänger & Let´s Dance“ ab 0:55:17: Anlass eines kuriosen Produkts ist der Katzenkescher, mit dem entlaufene, verwilderte oder aggressive Katzen schonend fixiert werden können, damit sie sich nicht selbst verletzen; außerdem geht es um Katzen, die im Flugzeug aus der Transportbox entkommen.
+- Folge 21 „Gute Nachbarn, schlechte Nachbarn“ ab 0:13:16 (kurz): Katharina beschreibt die Arbeit eines professionellen Katzenretters, der sich gesichert und geduldig einer Katze auf einem Baum nähert und sie für den Abstieg in einer Tasche sichert.
+
 <a id="katzensprache"></a>
 #### Kommunikation von Katzen · 2 Folgen
 _Wie Katzen über Blick, Körpersprache und Laute mit Menschen und Artgenossen kommunizieren._
@@ -9878,6 +9890,12 @@ _Die Ausbreitung des Goldschakals in Deutschland und seine Abgrenzung zu Wolf, M
 
 - Folge 39 „Leinenaggression, Hundeklopapier & Goldschakale in Deutschland“ ab 0:37:04: Erstmals nachgewiesene Fortpflanzung von Goldschakalen in Baden-Württemberg, Größe und Nahrungsspektrum der Tiere, Abgrenzung zu Wolf, Marderhund und Waschbär, Neubesiedlung aus Ungarn sowie erwartbare Nutzungskonflikte mit Menschen.
 
+<a id="greifvoegel-und-hunde"></a>
+#### Greifvögel und Hunde · 1 Folgen
+_Begegnungen von Hunden mit Greifvögeln und mögliche Gefahren für sehr kleine Hunde._
+
+- Folge 21 „Gute Nachbarn, schlechte Nachbarn“ ab 0:20:18 (kurz): Martin erinnert sich an einen Bussardangriff auf einen West-Highland-White-Terrier-Welpen. Die beiden diskutieren, wie die Größe eines Hundes bei Begegnungen mit Greifvögeln eine Rolle spielen kann.
+
 <a id="wildtiere-zaehmung"></a>
 #### Grenzen der Zähmung von Wildtieren · 1 Folgen
 _Warum auch handaufgezogene Wildtiere wie Affen, Wölfe oder Dingos wild bleiben und Respekt verlangen._
@@ -9943,12 +9961,6 @@ _Hindernislauf mit Kaninchen und unter welchen Bedingungen er eine sinnvolle Bes
 _Das Karibu, die nordamerikanische Form des Rentiers._
 
 - Folge 54 „Starke Frauen, eine blutige Nase & der American Staffordshire Terrier“ ab 1:28:44 (kurz): Kurze Bemerkung, dass der Bandname Caribou auf das Rentier bzw. Karibu zurückgeht.
-
-<a id="katzen-einfangen"></a>
-#### Katzen einfangen und sichern · 1 Folgen
-_Wie entlaufene, verwilderte oder aggressive Katzen schonend eingefangen und fixiert werden können._
-
-- Folge 63 „Hundepension, Katzenfänger & Let´s Dance“ ab 0:55:17: Anlass eines kuriosen Produkts ist der Katzenkescher, mit dem entlaufene, verwilderte oder aggressive Katzen schonend fixiert werden können, damit sie sich nicht selbst verletzen; außerdem geht es um Katzen, die im Flugzeug aus der Transportbox entkommen.
 
 <a id="katzenverhalten-training"></a>
 #### Katzenerziehung · 1 Folgen
@@ -10191,6 +10203,12 @@ _Weite Wanderungen im Tierreich und mögliche Gründe wie Partnersuche oder Nahr
 _Die Tierwelt der Antarktis mit Pinguinen und Seeleoparden und die Frage, ob Tourismus dort vertretbar ist._
 
 - Folge 189 „Die 30.000 Euro Frage“ ab 0:05:12 (kurz): Kurzer Austausch über die Tierwelt der Antarktis, fehlende Landraubtiere, Seeleoparden als Pinguinjäger und die Frage, ob Tourismus dort ethisch vertretbar ist.
+
+<a id="uhus"></a>
+#### Uhus · 1 Folgen
+_Lebensweise, Rufe, Jagdverhalten und Schutz des Uhus._
+
+- Folge 21 „Gute Nachbarn, schlechte Nachbarn“ ab 0:16:27: Katharina stellt den Uhu vor und spricht über Größenunterschiede zwischen Weibchen und Männchen, die Rufe, die Herbstbalz, das nächtliche Jagen und die Erholung der Bestände durch Schutzmaßnahmen.
 
 <a id="katzen-unsauberkeit"></a>
 #### Unsauberkeit bei Katzen · 1 Folgen
