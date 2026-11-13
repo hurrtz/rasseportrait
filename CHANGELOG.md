@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.19.2](https://github.com/hurrtz/rasseportrait/compare/v3.19.1...v3.19.2) (2026-11-13)
+
+
+### Features
+
+* add Westphalian Dachsbracke from episode 021 ([b6639fa](https://github.com/hurrtz/rasseportrait/commit/b6639fa3f83129cdca417aeb201c8f2ff8b768f3))
+* index episode 021 Hundewissen passages ([ca6430e](https://github.com/hurrtz/rasseportrait/commit/ca6430ed7d6994f341b2c67760c4c766abff4426))
+
 ### [3.19.1](https://github.com/hurrtz/rasseportrait/compare/v3.19.0...v3.19.1) (2026-11-05)
 
 
